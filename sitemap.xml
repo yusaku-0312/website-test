@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- トップページ -->
   <url>
-    <loc>https://miraina-ai.com/index.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <loc>https://miraina-ai.com/</loc>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- About ページ -->
   <url>
-    <loc>https://miraina-ai.com/services.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <loc>https://miraina-ai.com/about.html</loc>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Blogs 一覧ページ -->
   <url>
-    <loc>https://miraina-ai.com/contact.html</loc>
-    <lastmod>2025-05-26</lastmod>
+    <loc>https://miraina-ai.com/blogs.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Services ページ -->
+  <url>
+    <loc>https://miraina-ai.com/services.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Works ページ -->
+  <url>
+    <loc>https://miraina-ai.com/works.html</loc>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset> 
+  <!-- Contact ページ -->
+  <url>
+    <loc>https://miraina-ai.com/contact.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
