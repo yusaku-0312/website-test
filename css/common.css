@@ -5,7 +5,7 @@
 
 :root {
     /* Main colors */
-    --primary-blue: #1E90FF;
+    --primary-blue: #0072e0;
     --neo-green: #39FF14;
     --white: #FFFFFF;
     --black: #000000;
@@ -14,7 +14,7 @@
     --light-gray: #F0F0F0;
     
     /* Accent colors */
-    --primary-blue-dark: #0066CC;
+    --primary-blue-dark: #005bb5;
     --primary-blue-light: #6AB7FF;
     --neo-green-dark: #2CBE0E;
     --neo-green-light: #7AFF5A;
@@ -279,8 +279,10 @@
   }
   
   .global-nav .contact-btn:hover {
+    color: var(--white);
     background-color: var(--primary-blue-dark);
   }
+  
   
   .global-nav .contact-btn:before {
     display: none;
