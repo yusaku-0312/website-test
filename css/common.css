@@ -355,8 +355,8 @@
   
   /* Footer */
   .site-footer {
-    background-color: var(--dark-gray);
-    color: var(--white);
+    background-color: #1a1a1a;
+    color: #f5f5f5;
     padding: var(--space-l) 0;
   }
   
@@ -377,12 +377,12 @@
   }
   
   .footer-logo a {
-    color: var(--white);
+    color: #ffffff;
     transition: color var(--transition-normal);
   }
   
   .footer-logo a:hover {
-    color: var(--primary-blue-light);
+    color: #60aaff;
   }
   
   .footer-nav ul {
@@ -392,18 +392,18 @@
   }
   
   .footer-nav a {
-    color: var(--light-gray);
+    color: #e0e0e0;
     transition: color var(--transition-normal);
   }
   
   .footer-nav a:hover {
-    color: var(--primary-blue-light);
+    color: #60aaff;
   }
   
   .copyright {
     width: 100%;
     text-align: center;
-    color: var(--text-light);
+    color: #d0d0d0;
     margin-top: var(--space-l);
     font-size: var(--font-xs);
   }
