@@ -212,36 +212,31 @@
     padding: 0 var(--container-padding);
   }
   
-  .site-logo {
-    font-size: var(--font-l);
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-  }
-  
-  .site-logo a {
-    display: flex;
-    align-items: center;
-  }
-  
-  .site-logo .logo-img {
-    max-width: 200px;
-    max-height: 50px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-  
-  .site-logo a {
-    color: var(--black);
-    letter-spacing: 1px;
-    transition: color var(--transition-normal);
-  }
-  
-  .site-logo a:hover {
-    color: var(--primary-blue);
-  }
+/* ロゴ周辺スタイル */
+.site-logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo a {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  letter-spacing: 1px;
+  transition: color var(--transition-normal);
+}
+
+.site-logo a:hover {
+  color: var(--primary-blue);
+}
+
+.logo-img {
+  width: 200px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
   
   .global-nav ul {
     display: flex;
