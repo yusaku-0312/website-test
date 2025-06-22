@@ -175,6 +175,8 @@
     padding: 30px 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding-bottom: 60px; /* ボタン用のスペースを確保 */
 }
 
 .service-item:hover {
@@ -195,6 +197,28 @@
     font-size: 16px;
     color: #555;
     line-height: 1.8;
+}
+
+/* サービスカードの詳細ボタン */
+.service-detail-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.service-detail-btn:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
 }
   
   /* ===== Responsive Styles ===== */
