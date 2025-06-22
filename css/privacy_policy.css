@@ -1,0 +1,184 @@
+/*
+* Privacy Policy Page Styles
+* MIRAINA website
+*/
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: var(--white);
+    padding: var(--space-xl) 0;
+    margin-bottom: var(--space-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.page-title {
+    font-size: var(--font-xxl);
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+/* Privacy Content */
+.privacy-content {
+    padding: var(--space-xl) 0;
+    background-color: var(--white);
+}
+
+.privacy-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.last-updated {
+    background-color: var(--light-gray);
+    padding: var(--space-s);
+    border-radius: 4px;
+    margin-bottom: var(--space-l);
+    font-weight: 600;
+    color: var(--text-medium);
+    text-align: center;
+}
+
+.privacy-text h2 {
+    font-size: var(--font-l);
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: var(--space-l) 0 var(--space-s) 0;
+    padding-bottom: var(--space-xxs);
+    border-bottom: 2px solid var(--primary-blue-light);
+}
+
+.privacy-text h2:first-of-type {
+    margin-top: 0;
+}
+
+.privacy-text p {
+    margin-bottom: var(--space-s);
+    color: var(--text-dark);
+    font-size: var(--font-s);
+}
+
+.privacy-text ul {
+    margin: var(--space-s) 0 var(--space-m) var(--space-m);
+    padding-left: var(--space-s);
+    list-style-type: disc;
+}
+
+.privacy-text li {
+    margin-bottom: var(--space-xxs);
+    color: var(--text-dark);
+    font-size: var(--font-s);
+    line-height: 1.6;
+    list-style-color: var(--black);
+}
+
+.contact-info {
+    background-color: var(--light-gray);
+    padding: var(--space-m);
+    border-radius: 8px;
+    margin: var(--space-m) 0;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.contact-info p {
+    margin-bottom: var(--space-xxs);
+    font-size: var(--font-s);
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info strong {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: var(--font-xl);
+    }
+    
+    .privacy-text {
+        padding: 0 var(--space-s);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: var(--space-l) 0;
+        margin-bottom: var(--space-l);
+        min-height: 150px;
+    }
+    
+    .page-title {
+        font-size: var(--font-l);
+    }
+    
+    .privacy-content {
+        padding: var(--space-l) 0;
+    }
+    
+    .privacy-text h2 {
+        font-size: var(--font-m);
+    }
+    
+    .privacy-text p,
+    .privacy-text li {
+        font-size: 1.4rem;
+    }
+    
+    .contact-info {
+        padding: var(--space-s);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: var(--space-m) 0;
+        margin-bottom: var(--space-m);
+        min-height: 120px;
+    }
+    
+    .page-title {
+        font-size: var(--font-m);
+    }
+    
+    .privacy-content {
+        padding: var(--space-m) 0;
+    }
+    
+    .privacy-text {
+        padding: 0 var(--space-xs);
+    }
+    
+    .privacy-text h2 {
+        font-size: 1.6rem;
+        margin: var(--space-m) 0 var(--space-xs) 0;
+    }
+    
+    .privacy-text p,
+    .privacy-text li {
+        font-size: 1.3rem;
+    }
+    
+    .last-updated {
+        padding: var(--space-xs);
+        font-size: 1.3rem;
+    }
+    
+    .contact-info {
+        padding: var(--space-xs);
+        margin: var(--space-s) 0;
+    }
+    
+    .contact-info p {
+        font-size: 1.3rem;
+    }
+}
