@@ -259,19 +259,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
     font-weight: bold;
-    z-index: 1; /* 数字の丸は線の上に表示 */
-    flex-shrink: 0; /* スマホ対応：縮小を防止 */
-    position: relative; /* 位置調整のために追加 */
-    left: -29px; /* 縦線の中央に丸を配置するための調整 */
+    font-size: 1.2rem;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1; /* 中心線より前面に表示 */
+    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
 }
 
 .step-content {
-    margin-left: 0; /* 元の余白をリセット */
-    padding: 10px 0;
+    flex: 1;
+    padding-top: 10px;
 }
-/* FAQ */
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* FAQセクション */
 .faq-section {
     padding: 80px 0;
     background-color: #fff;
@@ -279,20 +291,18 @@
 
 .faq-list {
     max-width: 800px;
-    margin: 40px auto 0;
+    margin: 0 auto;
     padding: 0 20px; /* スマホ対応：余白追加 */
 }
 
 .faq-item {
+    border-bottom: 1px solid #eee;
     margin-bottom: 20px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .faq-question {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 20px 0;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -301,22 +311,21 @@
 }
 
 .faq-question:hover {
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
 }
 
 .faq-question h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0;
+    color: #333;
     font-weight: 600;
-    flex: 1; /* スマホ対応：テキスト領域の確保 */
-    padding-right: 15px; /* スマホ対応：アイコンとの間隔 */
 }
 
 .faq-icon {
-    position: relative;
     width: 20px;
     height: 20px;
-    flex-shrink: 0; /* スマホ対応：縮小を防止 */
+    position: relative;
+    transition: transform 0.3s;
 }
 
 .faq-icon::before,
@@ -324,55 +333,57 @@
     content: "";
     position: absolute;
     background-color: #1E90FF;
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .faq-icon::before {
-    top: 9px;
-    left: 0;
-    right: 0;
+    width: 100%;
     height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 .faq-icon::after {
-    left: 9px;
-    top: 0;
-    bottom: 0;
     width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
 .faq-item.active .faq-icon::after {
-    transform: rotate(90deg);
+    transform: translateX(-50%) rotate(90deg);
 }
 
 .faq-answer {
-    padding: 0;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: padding 0.3s, height 0.3s;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
 }
 
 .faq-item.active .faq-answer {
+    max-height: 200px;
     padding: 20px;
-    height: auto;
 }
 
 .faq-answer p {
     margin: 0;
+    color: #666;
     line-height: 1.6;
-    color: #555;
 }
 
-/* CTA */
+/* CTAセクション */
 .cta-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #0f2b4c 20%, #1e90ff 80%, #67c6ff 100%);
+    background: linear-gradient(135deg, #1E90FF, #4e74ff);
     color: white;
+    padding: 80px 0;
     text-align: center;
 }
 
 .cta-content {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 20px; /* スマホ対応：余白追加 */
 }
@@ -380,7 +391,6 @@
 .cta-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    font-weight: 700;
 }
 
 .cta-content p {
@@ -391,49 +401,44 @@
 
 .btn-accent {
     display: inline-block;
-    padding: 18px 40px;
-    background: linear-gradient(45deg, #1E90FF, #4e74ff);
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 600;
+    padding: 15px 40px;
+    background-color: #39FF14;
+    color: #000;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.5s ease;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    z-index: 1;
-    width: auto; /* スマホ対応：幅を自動調整 */
-    max-width: 100%; /* スマホ対応：はみ出し防止 */
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
 }
-  
+
 .btn-accent::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(45deg, #4E74FF, #87CEFA);
-    transition: width 0.5s ease;
-    z-index: -1;
-}
-  
-.btn-accent:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(30, 144, 255, 0.5);
-}
-  
-.btn-accent:hover::before {
+    left: -100%;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
 }
 
-/* スマホ対応：コンテナに共通のパディングを追加 */
+.btn-accent:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(57, 255, 20, 0.4);
+}
+
+.btn-accent:hover::before {
+    left: 100%;
+}
+
+/* コンテナ */
 .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* スマホ対応：余白追加 */
 }
 
 /* レスポンシブデザイン */
@@ -607,6 +612,7 @@
     .services-hero-section {
         height: 10vh;
     }
+    
     .services-title {
         font-size: 1.6rem;
     }
@@ -619,6 +625,4 @@
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-}
-
-/* 2e26543b8a5ea2079816eecd3b546d06 */
+} 

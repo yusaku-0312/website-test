@@ -199,8 +199,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: var(--space-xs) 0;
     z-index: var(--z-header);
-    backdrop-filter: blur(8px);
-    transition: background-color var(--transition-normal), padding var(--transition-normal);
+    backdrop-filter: blur(10px);
   }
   
   .header-container {
@@ -699,4 +698,17 @@ body.about-page .section-header { display: none !important; }
   .about-vision-catch {
     font-size: 0.95rem;
   }
+}
+
+/* ヘッダーロゴのh1タグをオフスクリーンに移動 */
+.site-logo a h1 {
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
 }
