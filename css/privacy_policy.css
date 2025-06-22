@@ -74,7 +74,6 @@
     color: var(--text-dark);
     font-size: var(--font-s);
     line-height: 1.6;
-    list-style-color: var(--black);
 }
 
 .contact-info {
