@@ -103,7 +103,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
-            <div class="hero-animation-container" id="animation-container"></div>
+            <div class="hero-animation-container" id="animation-container" style="display:none;"></div>
             <div class="hero-content">
                 <h2 class="hero-title">MIRAINAとは</h2>
                 <p class="hero-subtitle">中小企業に特化した生成AI導入支援から<br>AI開発・AI人材育成まで、AIに特化したサービスです。</p>
@@ -256,8 +256,16 @@
         </div>
     </footer>
     <script src="/js/common.js" defer></script>
-    <!-- <script src="/js/hero-animation.js" defer></script> -->
-    <script src="/js/index.js" defer></script>
+    <script>
+    window.addEventListener('load', function() {
+      var anim = document.getElementById('animation-container');
+      if(anim) anim.style.display = '';
+      var script = document.createElement('script');
+      script.src = '/js/hero-animation.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
