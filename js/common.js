@@ -122,4 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.match(/about\.html$/)) {
       document.body.classList.add('about-page');
     }
+    
+    function updateOverviewArrows() {
+      var arrows = document.querySelectorAll('.ai-overview-arrow');
+      var isMobile = window.innerWidth <= 900;
+      arrows.forEach(function(arrow) {
+        arrow.textContent = isMobile ? '↓' : '→';
+      });
+    }
+    window.addEventListener('load', updateOverviewArrows);
+    window.addEventListener('resize', updateOverviewArrows);
   });

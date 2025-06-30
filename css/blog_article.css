@@ -131,6 +131,11 @@
     font-size: 1.2rem;
     margin: 0 0 0 0;
   }
+  .ai-overview-arrow {
+    font-size: 1.2em;
+    content: '↓';
+    display: inline-block;
+  }
 }
 @media (max-width: 600px) {
   .blog-article-main {
