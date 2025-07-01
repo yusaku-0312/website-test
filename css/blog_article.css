@@ -20,14 +20,14 @@
   letter-spacing: 0.02em;
 }
 .blog-article-header .blog-article-lead {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   color: var(--text-medium);
   margin-bottom: 28px;
 }
 .blog-article-toc {
   background: var(--light-gray);
   border-radius: 8px;
-  padding: 20px 24px;
+  padding: 5px 24px;
   margin-bottom: 36px;
   box-shadow: 0 2px 8px rgba(0,114,224,0.04);
 }
@@ -42,7 +42,8 @@
   color: var(--primary-blue);
   font-size: 1.6rem;
 }
-.blog-article-toc li {
+.blog-article-toc li, .blog-article-toc a {
+  font-size: 1.4rem;
   margin-bottom: 6px;
 }
 .blog-article section {
@@ -57,13 +58,13 @@
   margin: 2.2em 0 1em 0;
 }
 .blog-article h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--primary-blue);
   font-weight: 600;
   margin: 1.5em 0 0.7em 0;
 }
 .blog-article p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--text-dark);
   line-height: 1.9;
   margin-bottom: 18px;
@@ -143,12 +144,16 @@
   }
   .blog-article h2 {
     font-size: 2.0rem;
+    padding-left: 8px;
   }
   .blog-article h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .blog-article p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+  .blog-article-toc li, .blog-article-toc a {
+    font-size: 1.15rem;
   }
 }
 @media (max-width: 600px) {
@@ -166,10 +171,10 @@
     padding-left: 8px;
   }
   .blog-article h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .blog-article p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .ai-type-grid, .ai-case-grid {
     grid-template-columns: 1fr;
