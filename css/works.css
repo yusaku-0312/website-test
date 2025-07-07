@@ -149,10 +149,11 @@ section {
 }
 
 .case-studies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 32px;
+    justify-content: center;
+    padding: 40px 0 40px 0;
 }
 
 .case-study-card {
@@ -490,4 +491,116 @@ section {
     .case-title {
         font-size: 1.1rem;
     }
+}
+
+@media (min-width: 1025px) {
+    .case-studies-grid {
+        justify-content: flex-start;
+    }
+}
+
+/* 保護者向けAIリテラシー研修カード専用デザイン */
+.literacy-card {
+    border: 2px solid #1E90FF;
+    box-shadow: 0 6px 24px rgba(30, 144, 255, 0.12);
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(135deg, #f5faff 80%, #e3f0ff 100%);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.literacy-card:hover {
+    box-shadow: 0 12px 32px rgba(30, 144, 255, 0.18);
+    border-color: #39FF14;
+}
+.literacy-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #39FF14;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(57,255,20,0.15);
+    letter-spacing: 1px;
+}
+.literacy-card .icon {
+    font-size: 1.4em;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.literacy-card .case-title {
+    color: #1E90FF;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.literacy-card .highlight {
+    background: linear-gradient(90deg, #e3f0ff 60%, #f5faff 100%);
+    border-left: 4px solid #1E90FF;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 18px;
+}
+.literacy-card .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* works.html用 実績カードデザイン */
+.works-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(30, 144, 255, 0.10);
+    border: 1.5px solid #e3f0ff;
+    overflow: hidden;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    margin-bottom: 32px;
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+}
+.works-card:hover {
+    box-shadow: 0 8px 32px rgba(30, 144, 255, 0.18);
+    border-color: #1E90FF;
+}
+.works-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.works-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f9ff;
+    padding: 16px 0 0 0;
+}
+.works-card-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin: 0 auto;
+}
+.works-card-content {
+    padding: 24px 20px 20px 20px;
+}
+.works-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #1E90FF;
+}
+.works-card-date {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 8px;
 }

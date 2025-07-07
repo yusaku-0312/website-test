@@ -1,0 +1,131 @@
+/* works詳細記事ページ用CSS */
+
+body {
+    background: #f8fbff;
+}
+
+.work-detail-article {
+    max-width: 720px;
+    margin: 48px auto 48px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(30,144,255,0.10);
+    padding: 40px 32px 32px 32px;
+}
+
+.work-detail-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.work-detail-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+.work-detail-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E90FF;
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+}
+.work-detail-mainimg {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 18px auto;
+    box-shadow: 0 2px 12px rgba(30,144,255,0.08);
+    display: block;
+}
+
+.work-detail-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0056b3;
+    margin: 32px 0 16px 0;
+    border-left: 5px solid #1E90FF;
+    padding-left: 12px;
+    background: linear-gradient(90deg, #e3f0ff 60%, #fff 100%);
+}
+
+.work-detail-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+.work-detail-info li {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.work-detail-list {
+    margin: 0 0 12px 18px;
+    padding: 0 0 0 12px;
+    color: #222;
+    font-size: 1rem;
+}
+.work-detail-list li {
+    margin-bottom: 6px;
+    line-height: 1.7;
+}
+
+.work-detail-voices {
+    margin-top: 36px;
+}
+.work-detail-voice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.work-detail-voice {
+    background: #f5f9ff;
+    border-left: 5px solid #1E90FF;
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-size: 16px;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.06);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.work-detail-article p,
+.work-detail-article li,
+.work-detail-voice {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.work-detail-article strong {
+    font-weight: bold;
+    color: #000000;
+}
+
+@media (max-width: 900px) {
+    .work-detail-article {
+        max-width: 98vw;
+        padding: 24px 4vw 24px 4vw;
+    }
+    .work-detail-mainimg {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .work-detail-article {
+        padding: 12px 2vw 18px 2vw;
+    }
+    .work-detail-title {
+        font-size: 20px;
+    }
+    .work-detail-section-title {
+        font-size: 18px;
+        padding-left: 7px;
+    }
+} 
