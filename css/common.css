@@ -712,3 +712,27 @@ body.about-page .section-header { display: none !important; }
     border: 0;
     clip: rect(0, 0, 0, 0);
 }
+
+.work-card {
+    background: #fff;
+    border: 1.5px solid #e3f0ff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(30, 144, 255, 0.08);
+    overflow: hidden;
+    margin-bottom: 32px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.work-card:hover {
+    box-shadow: 0 8px 32px rgba(30, 144, 255, 0.16);
+    border-color: #1E90FF;
+}
+.work-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.work-content {
+    padding: 22px 18px 18px 18px;
+}
