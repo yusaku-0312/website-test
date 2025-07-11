@@ -716,23 +716,62 @@ body.about-page .section-header { display: none !important; }
 .work-card {
     background: #fff;
     border: 1.5px solid #e3f0ff;
-    border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(30, 144, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     margin-bottom: 32px;
     transition: box-shadow 0.3s, border-color 0.3s;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 0 32px 0;
+    float: left;
+}
+@media (max-width: 768px) {
+  .work-card {
+    float: none;
+    margin: 0 auto 32px auto;
+  }
 }
 .work-card:hover {
-    box-shadow: 0 8px 32px rgba(30, 144, 255, 0.16);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* ブログカードと同じhover影に */
     border-color: #1E90FF;
 }
 .work-image img {
     width: 100%;
-    height: auto;
+    height: 180px; /* 枠いっぱいに固定 */
     display: block;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover; /* 枠いっぱいに広げる */
+    margin: 0;
 }
 .work-content {
-    padding: 22px 18px 18px 18px;
+    padding: 20px; /* ブログカードと同じpaddingに */
+}
+
+.more-link-container {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+.more-link {
+    display: inline-block;
+    background: #1E90FF;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(30, 144, 255, 0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+    margin: 0 auto;
+}
+.more-link:hover {
+    background: #0056b3;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.18);
 }
