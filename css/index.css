@@ -366,8 +366,8 @@
 .contact-section .section-header {
   text-align: center;
   margin-bottom: 60px;
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1; /* もともと0→1に修正 */
+  transform: translateY(0); /* もともと30px→0に修正 */
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -426,8 +426,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  transform: translateX(-50px);
-  opacity: 0;
+  transform: translateX(0); /* 初期値を0に */
+  opacity: 1; /* 初期値を1に */
   transition: opacity 0.8s ease, transform 0.8s ease;
   text-align: center;
 }
@@ -457,8 +457,8 @@
   text-align: center;
   color: #CCCCCC;
   font-size: 16px;
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 1; /* 初期値を1に */
+  transform: translateY(0); /* 初期値を0に */
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
@@ -485,8 +485,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(50px);
-  opacity: 0;
+  transform: translateX(0); /* 初期値を0に */
+  opacity: 1; /* 初期値を1に */
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
