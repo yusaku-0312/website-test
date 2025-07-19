@@ -771,6 +771,7 @@ body.about-page .section-header { display: none !important; }
     padding-left: var(--space-m);
     padding-right: var(--space-m);
   }
+  
 }
 
 .card {
@@ -782,6 +783,7 @@ body.about-page .section-header { display: none !important; }
   overflow: hidden;
   width: 100%;
   max-width: 320px;
+  height: 280px;
   min-width: 0;
   margin: 0 auto;
   transition: box-shadow var(--transition-normal);
@@ -792,10 +794,11 @@ body.about-page .section-header { display: none !important; }
 
 .card-image {
   width: 100%;
-  aspect-ratio: 21/9;
+  height: 120px;
   object-fit: cover;
   display: block;
   background: var(--light-gray);
+  flex-shrink: 0;
 }
 
 .card-content {
@@ -804,6 +807,7 @@ body.about-page .section-header { display: none !important; }
   flex-direction: column;
   justify-content: center;
   flex: 1 1 0;
+  min-height: 0;
 }
 
 .card-title {
