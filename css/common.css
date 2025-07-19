@@ -753,7 +753,7 @@ body.about-page .section-header { display: none !important; }
   padding-right: var(--space-xxl);
   box-sizing: border-box;
   margin-bottom: var(--space-xxl);
-  max-width: 800px;
+  max-width: 1500px;
 }
 
 @media (max-width: 900px) {
