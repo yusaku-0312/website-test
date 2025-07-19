@@ -24,13 +24,13 @@
     --text-medium: #555555;
     --text-light: #888888;
     
-    /* Font sizes */
-    --font-xxl: 3.2rem;  /* 51.2px */
-    --font-xl: 2.4rem;   /* 38.4px */
-    --font-l: 1.8rem;    /* 28.8px */
-    --font-m: 1.5rem;    /* 24px */
+    /* Font sizes（全体的に1段階大きく） */
+    --font-xxl: 3.6rem;  /* 57.6px */
+    --font-xl: 2.8rem;   /* 44.8px */
+    --font-l: 2.1rem;    /* 33.6px */
+    --font-m: 1.7rem;    /* 27.2px */
     --font-s: 1.3rem;    /* 20.8px */
-    --font-xs: 1rem;     /* 16px */
+    --font-xs: 1.1rem;   /* 17.6px */
     
     /* Spacing */
     --space-xxl: 8rem;   /* 128px */
@@ -713,42 +713,6 @@ body.about-page .section-header { display: none !important; }
     clip: rect(0, 0, 0, 0);
 }
 
-.work-card {
-    background: #fff;
-    border: 1.5px solid #e3f0ff;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    margin-bottom: 32px;
-    transition: box-shadow 0.3s, border-color 0.3s;
-    max-width: 320px;
-    width: 100%;
-    margin: 0 0 32px 0;
-    float: left;
-}
-@media (max-width: 768px) {
-  .work-card {
-    float: none;
-    margin: 0 auto 32px auto;
-  }
-}
-.work-card:hover {
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* ブログカードと同じhover影に */
-    border-color: #1E90FF;
-}
-.work-image img {
-    width: 100%;
-    height: 180px; /* 枠いっぱいに固定 */
-    display: block;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    object-fit: cover; /* 枠いっぱいに広げる */
-    margin: 0;
-}
-.work-content {
-    padding: 20px; /* ブログカードと同じpaddingに */
-}
-
 .more-link-container {
     clear: both;
     display: flex;
@@ -774,4 +738,110 @@ body.about-page .section-header { display: none !important; }
     background: #0056b3;
     color: #fff;
     box-shadow: 0 8px 24px rgba(30, 144, 255, 0.18);
+}
+
+/* =====================
+   カード共通スタイル
+   ===================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+  margin: 0 auto;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  box-sizing: border-box;
+  margin-bottom: var(--space-xl);
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+  }
+}
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-s);
+    padding-left: var(--space-s);
+    padding-right: var(--space-s);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--space-s);
+  box-shadow: 0 4px 16px rgba(30,144,255,0.10);
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  min-width: 0;
+  margin: 0 auto;
+  transition: box-shadow var(--transition-normal);
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(30,144,255,0.18);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  background: var(--light-gray);
+}
+
+.card-content {
+  padding: var(--space-s) var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 0;
+}
+
+.card-title {
+  font-size: var(--font-m);
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: var(--space-xxs);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-description {
+  font-size: var(--font-m);
+  color: var(--text-medium);
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 96vw;
+  }
+  .card-content {
+    padding: var(--space-xs) var(--space-xxs);
+  }
+  .card-title {
+    font-size: var(--font-s);
+  }
+  .card-description {
+    font-size: var(--font-s);
+  }
+}
+
+/* ブログセクションの見出し（.blog-header）とカード（.card-grid）の間に十分な隙間ができるよう、.blog-headerの下にmargin-bottomを追加 */
+.blog-header {
+  margin-bottom: var(--space-l);
 }

@@ -1,21 +1,21 @@
 /* about.html専用: Vision, Mission, Values セクション */
 .about-section-block {
   text-align: center;
-  margin: 60px 0 40px 0;
+  margin: var(--space-xl) 0 var(--space-l) 0;
 }
 .about-section-block .about-section-title {
-  font-size: 2.4rem;
-  color: #1976d2;
-  margin-bottom: 1.2rem;
+  font-size: var(--font-xl);
+  color: var(--primary-blue);
+  margin-bottom: var(--space-s);
 }
 .about-section-block .about-section-catch {
-  font-size: 1.4rem;
-  color: #333;
+  font-size: var(--font-m);
+  color: var(--dark-gray);
   font-weight: bold;
 }
 .about-section-block .about-section-desc {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: var(--font-s);
+  color: var(--text-medium);
   margin-top: 0.7em;
   max-width: 700px;
   margin-left: auto;
@@ -26,28 +26,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  gap: var(--space-l);
 }
 .about-values-card {
-  background: #fff;
-  border-radius: 18px;
+  background: var(--white);
+  border-radius: var(--space-l);
   box-shadow: 0 4px 16px rgba(30,144,255,0.08);
   width: 340px;
-  padding: 28px 22px;
+  padding: var(--space-l) var(--space-m);
   text-align: left;
 }
 .about-values-card-title {
-  color: #1976d2;
-  font-size: 1.3rem;
-  margin-bottom: 0.7em;
+  color: var(--primary-blue);
+  font-size: var(--font-m);
+  margin-bottom: var(--space-xs);
 }
 .about-values-card-strong {
-  font-size: 1.05rem;
+  font-size: var(--font-s);
 }
 .about-values-card-list {
-  font-size: 0.98rem;
+  font-size: var(--font-xs);
   margin: 0.7em 0 0 1.1em;
-  color: #444;
+  color: var(--text-medium);
 }
 
 .about-main-visual {
@@ -55,8 +55,8 @@
   max-width: 1200px;
   height: auto;
   display: block;
-  margin: 0 auto 40px auto;
-  border-radius: 18px;
+  margin: 0 auto var(--space-l) auto;
+  border-radius: var(--space-l);
   box-shadow: 0 8px 32px rgba(30,144,255,0.10);
 }
 
@@ -66,55 +66,55 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px; /* 適度な隙間を設定 */
-  margin: 80px auto 60px auto;
+  gap: var(--space-s);
+  margin: var(--space-xxl) auto var(--space-xl) auto;
   max-width: 1000px;
-  padding: 0 40px;
+  padding: 0 var(--space-l);
 }
 
 /* 左側：会社情報ブロック - 幅をコンテンツに合わせて最小化 */
 .about-company-content {
-  flex: 0 0 auto; /* flexを無効化してコンテンツ幅に合わせる */
-  width: auto; /* 自動幅 */
-  min-width: 200px; /* 最小幅を設定 */
-  max-width: 300px; /* 最大幅を小さく */
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
   text-align: left;
   margin: 0;
   padding: 0;
 }
 
 .about-company-title {
-  font-size: 2.4rem;
+  font-size: var(--font-xl);
   font-weight: 700;
-  color: #222;
-  margin: 0 0 1.5rem 0;
+  color: var(--text-dark);
+  margin: 0 0 var(--space-m) 0;
   text-align: left;
-  white-space: nowrap; /* タイトルの改行を防ぐ */
+  white-space: nowrap;
 }
 
 .about-company-table {
-  width: auto; /* テーブル幅を内容に合わせる */
+  width: auto;
   border-collapse: separate;
   border-spacing: 0 12px;
-  font-size: 1.1rem;
+  font-size: var(--font-s);
   margin: 0;
 }
 
 .about-company-table th {
   text-align: left;
   font-weight: 600;
-  padding: 0 1.5rem 0 0; /* 右側のパディングを調整 */
-  color: #666;
+  padding: 0 var(--space-m) 0 0;
+  color: var(--medium-gray);
   white-space: nowrap;
   margin: 0;
 }
 
 .about-company-table td {
   font-weight: 500;
-  color: #222;
+  color: var(--text-dark);
   padding: 0;
   margin: 0;
-  white-space: nowrap; /* テキストの改行を防ぐ */
+  white-space: nowrap;
 }
 
 /* 右側：会社写真ブロック */
@@ -130,7 +130,7 @@
   width: 100%;
   height: auto;
   max-height: 280px;
-  border-radius: 12px;
+  border-radius: var(--space-m);
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   object-fit: cover;
   display: block;

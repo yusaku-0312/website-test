@@ -106,7 +106,7 @@
             <div class="hero-animation-container" id="animation-container" style="display:none;"></div>
             <div class="hero-content">
                 <h2 class="hero-title">MIRAINAとは</h2>
-                <p class="hero-subtitle">中小企業に特化した生成AI導入支援から<br>AI開発・AI人材育成まで、AIに特化したサービスです。</p>
+                <p class="hero-subtitle">中小企業に特化した<br>生成AI導入支援からAI開発・AI人材育成まで、<br>AIに特化したサービスです。</p>
                 <div class="hero-cta">
                     <a href="/contact.html" class="cta-button">導入相談をする</a>
                 </div>
@@ -143,44 +143,16 @@
                     <h2 class="section-title">事例紹介</h2>
                     <p class="section-description">様々な業種・業界のAI導入を<br>成功に導いた事例をご紹介します</p>
                 </div>
-                <div class="works-grid">
-                    <a href="/works/work001.html" class="work-card" style="text-decoration:none;color:inherit;display:block;">
-                        <div class="work-image">
-                            <img src="/images/work001.webp" alt="保護者向けAIリテラシー講演" width="400" height="240">
-                        </div>
-                        <div class="work-content">
-                            <p class="work-category"><strong>教育・講演</strong></p>
-                            <h3 class="work-title">保護者向けAIリテラシー講演</h3>
-                            <p class="work-description">福岡市で開催。AI時代の子どもたちの危険性や安全なAI活用法について、保護者様向けに分かりやすく解説しました。</p>
-                            <ul class="work-features">
-                                <li>AI犯罪の増加とAI格差の現状</li>
-                                <li>子どもが安全にAIを使うためのポイント</li>
-                                <li>保護者のためのネットリテラシー教育</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <!-- <div class="work-card">
-                        <div class="work-image">
-                            <img src="/static/images/work-2.jpg" alt="小売業B社の事例" width="400" height="260" loading="lazy">
-                        </div>
-                        <div class="work-content">
-                            <p class="work-category">小売業</p>
-                            <h3 class="work-title">顧客体験向上のためのAIチャットボット導入</h3>
-                            <p class="work-description">24時間対応のAIチャットボットにより、顧客満足度が25%向上し、問い合わせ対応コストを削減。</p>
-                            <a href="/works/retail-case" class="work-link">詳細を見る</a>
-                        </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="/works/work001.html" class="card-link">
+                            <img class="card-image" src="/images/work001.webp" alt="保護者向けAIリテラシー講演">
+                            <div class="card-content">
+                                <h3 class="card-title">保護者向けAIリテラシー講演</h3>
+                                <p class="card-description">福岡市で開催。AI時代の子どもたちの危険性や安全なAI活用法について、保護者様向けに分かりやすく解説しました。</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="work-card">
-                        <div class="work-image">
-                            <img src="/static/images/work-3.jpg" alt="サービス業C社の事例" width="400" height="260" loading="lazy">
-                        </div>
-                        <div class="work-content">
-                            <p class="work-category">サービス業</p>
-                            <h3 class="work-title">社内ナレッジ管理システムの構築</h3>
-                            <p class="work-description">大量の社内ドキュメントをAIで分析・整理し、検索効率を10倍に改善。情報共有が活性化しました。</p>
-                            <a href="/works/service-case" class="work-link">詳細を見る</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="more-link-container">
                     <a href="/works.html" class="more-link">AI導入による業務効率化事例一覧を見る</a>
@@ -198,20 +170,15 @@
                 </div>
             </div>
             <!-- Blog Cards -->
-            <div class="container">
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <a href="/blogs/ai_development_guide.html" class="blog-link">
-                            <div class="blog-image">
-                                <img src="/images/blog_card1.webp" alt="AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法" width="400" height="240">
-                            </div>
-                            <div class="blog-content">
-                                <p class="blog-date">2025.06.30</p>
-                                <h3 class="blog-card-title">AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法</h3>
-                                <p class="blog-excerpt">AI開発の基本から実際の開発手順、ビジネスでの活用方法まで、初心者にもわかりやすく解説。AI導入を検討している方におすすめの入門記事です。</p>
-                            </div>
-                        </a>
-                    </div>
+            <div class="card-grid">
+                <div class="card">
+                    <a href="/blogs/ai_development_guide.html" class="card-link">
+                        <img class="card-image" src="/images/blog_card1.webp" alt="AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法">
+                        <div class="card-content">
+                            <h3 class="card-title">AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法</h3>
+                            <p class="card-description">AI開発の基本から実際の開発手順、ビジネスでの活用方法まで、初心者にもわかりやすく解説。</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -268,13 +235,10 @@
       scriptAnim.src = '/js/hero-animation.js';
       scriptAnim.defer = true;
       document.body.appendChild(scriptAnim);
-      // common.jsの遅延読み込み
-      var scriptCommon = document.createElement('script');
-      scriptCommon.src = '/js/common.js';
-      scriptCommon.defer = true;
-      document.body.appendChild(scriptCommon);
     });
     </script>
+    <!-- common.jsはdeferで直接読み込む -->
+    <script src="/js/common.js" defer></script>
     <!-- Google tag (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
