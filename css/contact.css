@@ -1,20 +1,21 @@
 /* ===== Contact Hero Section ===== */
 .contact-hero {
-  padding: 100px 0 60px;
-  background: linear-gradient(135deg, #0f2b4c, #1e90ff);
-  color: #fff;
+  padding: var(--space-xl) 0 var(--space-l);
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+  color: var(--white);
   text-align: center;
 }
 
 .contact-title {
-  font-size: 40px;
+  font-size: var(--font-xl);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: var(--space-s);
 }
 
 .contact-subtitle {
-  font-size: 18px;
+  font-size: var(--font-m);
   opacity: 0.9;
+  line-height: 1.6;
 }
 
 /* ===== Contact Form Section ===== */

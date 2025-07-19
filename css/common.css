@@ -43,7 +43,7 @@
     
     /* Container width */
     --container-width: 1200px;
-    --container-padding: 1.5rem;
+    --container-padding: 1.5px;
     
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -752,22 +752,24 @@ body.about-page .section-header { display: none !important; }
   padding-left: var(--space-xl);
   padding-right: var(--space-xl);
   box-sizing: border-box;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+  max-width: 800px;
 }
 
 @media (max-width: 900px) {
   .card-grid {
     grid-template-columns: 1fr 1fr;
-    padding-left: var(--space-m);
-    padding-right: var(--space-m);
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    gap: var(--space-s);
   }
 }
 @media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-s);
-    padding-left: var(--space-s);
-    padding-right: var(--space-s);
+    gap: var(--space-xs);
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
   }
 }
 
@@ -779,7 +781,7 @@ body.about-page .section-header { display: none !important; }
   box-shadow: 0 4px 16px rgba(30,144,255,0.10);
   overflow: hidden;
   width: 100%;
-  max-width: 280px;
+  max-width: 180px;
   min-width: 0;
   margin: 0 auto;
   transition: box-shadow var(--transition-normal);
@@ -790,14 +792,14 @@ body.about-page .section-header { display: none !important; }
 
 .card-image {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 21/9;
   object-fit: cover;
   display: block;
   background: var(--light-gray);
 }
 
 .card-content {
-  padding: var(--space-s) var(--space-xs);
+  padding: var(--space-xs) var(--space-xxs);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -805,7 +807,7 @@ body.about-page .section-header { display: none !important; }
 }
 
 .card-title {
-  font-size: var(--font-m);
+  font-size: var(--font-xs);
   font-weight: 700;
   color: var(--primary-blue);
   margin-bottom: var(--space-xxs);
@@ -816,13 +818,13 @@ body.about-page .section-header { display: none !important; }
 }
 
 .card-description {
-  font-size: var(--font-m);
+  font-size: var(--font-xs);
   color: var(--text-medium);
-  line-height: 1.6;
+  line-height: 1.5;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
