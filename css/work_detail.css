@@ -1,7 +1,7 @@
 /* works詳細記事ページ用CSS */
 
 body {
-    background: #f8fbff;
+    background: var(--light-blue);
 }
 
 .work-detail-article {

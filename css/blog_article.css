@@ -1,6 +1,6 @@
 /* ブログ記事ページ用CSS */
 .blog-article-main {
-  background: var(--light-gray);
+  background: var(--light-blue);
   padding: 48px 0 32px 0;
 }
 .blog-article.container {
