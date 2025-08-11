@@ -34,46 +34,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* パンくずリスト */
-.breadcrumb {
-    background-color: var(--light-gray);
-    padding: var(--space-s) 0;
-    border-bottom: 1px solid var(--light-gray);
-}
 
-.breadcrumb ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.breadcrumb li {
-    display: flex;
-    align-items: center;
-    color: var(--text-medium);
-    font-size: var(--font-xs);
-}
-
-.breadcrumb li:not(:last-child)::after {
-    content: ">";
-    margin: 0 var(--space-xxs);
-    color: var(--text-light);
-    font-weight: 600;
-}
-
-.breadcrumb a {
-    color: var(--primary-blue);
-    text-decoration: none;
-    transition: color var(--transition-normal);
-    font-weight: 500;
-}
-
-.breadcrumb a:hover {
-    color: var(--primary-blue-dark);
-}
 
 /* サービス概要 */
 .services-overview {
@@ -587,7 +548,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .services-hero-section {
         padding: var(--space-xl) 0;
     }
@@ -642,7 +603,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .services-hero-section {
         padding: var(--space-l) 0;
     }

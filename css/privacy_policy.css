@@ -108,7 +108,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .page-header {
         padding: var(--space-l) 0;
         margin-bottom: var(--space-l);

@@ -81,12 +81,12 @@
 }
 @media (max-width: 900px) {
   .blog-article.container {
-    padding: 28px 4vw 24px 4vw;
+    padding: 32px 6vw 28px 6vw;
   }
   .ai-type-grid, .ai-case-grid, .ai-flow-steps {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 12px;
     align-items: stretch;
     justify-items: center;
   }
@@ -94,8 +94,8 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
-    gap: 6px;
-    padding: 12px 0;
+    gap: 8px;
+    padding: 16px 0;
     font-size: 1rem;
     justify-content: flex-start;
   }
@@ -107,24 +107,24 @@
   }
   .ai-overview-box {
     flex-direction: column;
-    gap: 6px;
-    padding: 12px 8px;
+    gap: 8px;
+    padding: 16px 12px;
     font-size: 1rem;
   }
   .ai-overview-label {
     font-size: 0.98rem;
-    padding: 4px 10px;
+    padding: 6px 12px;
   }
   .ai-type-item, .ai-case-item {
     min-width: 80vw;
     max-width: 98vw;
-    padding: 14px 8px;
+    padding: 18px 12px;
     font-size: 1rem;
   }
   .ai-flow-step {
     min-width: 80vw;
     max-width: 98vw;
-    padding: 10px 8px;
+    padding: 14px 12px;
     font-size: 1rem;
   }
   .ai-flow-arrow {
@@ -144,7 +144,7 @@
   }
   .blog-article h2 {
     font-size: 2.0rem;
-    padding-left: 8px;
+    padding-left: 12px;
   }
   .blog-article h3 {
     font-size: 1.8rem;
@@ -158,17 +158,17 @@
 }
 @media (max-width: 600px) {
   .blog-article-main {
-    padding: 18px 0 8px 0;
+    padding: 24px 0 16px 0;
   }
   .blog-article.container {
-    padding: 10px 2vw 8px 2vw;
+    padding: 20px 4vw 16px 4vw;
   }
   .blog-article-header h1 {
     font-size: 2.5rem;
   }
   .blog-article h2 {
     font-size: 2.0rem;
-    padding-left: 8px;
+    padding-left: 12px;
   }
   .blog-article h3 {
     font-size: 1.8rem;
@@ -178,27 +178,27 @@
   }
   .ai-type-grid, .ai-case-grid {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 12px;
   }
   .ai-type-item, .ai-case-item {
     width: 99%;
     font-size: 0.98rem;
   }
   .ai-overview-box, .ai-flow-steps {
-    gap: 4px;
-    padding: 8px 0;
+    gap: 6px;
+    padding: 12px 0;
     font-size: 0.98rem;
   }
   .ai-overview-label {
     font-size: 0.98rem;
-    padding: 4px 10px;
+    padding: 6px 12px;
   }
   .ai-flow-step {
     font-size: 0.98rem;
   }
   .ai-flow-step span {
     font-size: 0.98em;
-    margin-right: 4px;
+    margin-right: 6px;
     width: 1.3em;
     height: 1.3em;
   }
