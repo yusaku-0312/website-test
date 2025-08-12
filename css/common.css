@@ -44,7 +44,7 @@
   
   /* Container width */
   --container-width: 1200px;
-  --container-padding: 1.5px;
+  --container-padding: 1.5rem;
   
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -83,7 +83,7 @@ body {
 
 main {
   flex: 1;
-  margin-top: 80px; /* Space for fixed header */
+  margin-top: 70px; /* Space for fixed header */
   overflow: hidden;
 }
 
@@ -166,6 +166,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
+  height: 70px;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: var(--space-xs) 0;
@@ -384,7 +385,6 @@ display: block;
 .breadcrumb {
   background-color: var(--light-gray);
   padding: var(--space-s) 0;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .breadcrumb .container {
