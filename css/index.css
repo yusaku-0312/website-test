@@ -209,13 +209,14 @@
   border-radius: var(--space-xs);
   font-size: var(--font-xs);
   font-weight: 500;
-  transition: background-color var(--transition-normal);
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 .service-detail-btn:hover {
-  background-color: var(--primary-blue-dark);
-  color: var(--white);
-  text-decoration: none;
+  background: linear-gradient(45deg, var(--primary-blue-light), var(--primary-blue));
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(95, 168, 255, 0.4);
 }
 
 /* ===== Responsive Styles ===== */
@@ -692,12 +693,15 @@ width: 100%;
   color: var(--white);
   border-radius: var(--space-s);
   text-decoration: none;
-  transition: background var(--transition-normal);
+  transition: all var(--transition-normal);
   font-size: var(--font-m);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 .more-link:hover {
-  background: var(--primary-blue-dark);
+  background: linear-gradient(45deg, var(--primary-blue-light), var(--primary-blue));
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(95, 168, 255, 0.4);
 }
 
 @media (max-width: 480px) {

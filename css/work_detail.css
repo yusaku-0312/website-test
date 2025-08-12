@@ -74,6 +74,15 @@ body {
 
 .work-detail-contact {
     margin-top: 16px;
+    text-align: center;
+}
+
+.consultation-text {
+    color: var(--primary-blue);
+    font-size: var(--font-s);
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 .work-detail-mainimg {
@@ -167,6 +176,15 @@ body {
     /* モバイル用お問い合わせボタンを表示 */
     .work-detail-contact-mobile {
         display: block;
+        text-align: center;
+    }
+    
+    .work-detail-contact-mobile .consultation-text {
+        color: var(--primary-blue);
+        font-size: var(--font-s);
+        font-weight: 600;
+        margin-bottom: 12px;
+        text-align: center;
     }
     
     .work-detail-meta {

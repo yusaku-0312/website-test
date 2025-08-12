@@ -120,31 +120,17 @@ p {
   font-size: var(--font-s);
   border-radius: 4px;
   text-align: center;
-  transition: background-color var(--transition-normal), transform var(--transition-fast);
+  transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
-
-.cta-button:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: var(--transition-normal);
-  z-index: -1;
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 .cta-button:hover {
-  background-color: var(--primary-blue-dark);
-  transform: translateY(-2px);
-}
-
-.cta-button:hover:before {
-  left: 100%;
+  background: linear-gradient(45deg, var(--primary-blue-light), var(--primary-blue));
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(95, 168, 255, 0.4);
 }
 
 .more-link {
@@ -158,31 +144,15 @@ p {
   text-decoration: none;
   font-size: 1.6rem;
   letter-spacing: 0.05em;
-  transition: all 0.5s ease;
+  transition: all var(--transition-normal);
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.2);
-}
-
-.more-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(45deg, #4E74FF, #87CEFA);
-  transition: width 0.5s ease;
-  z-index: -1;
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 .more-link:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(30, 144, 255, 0.3);
-}
-
-.more-link:hover::before {
-  width: 100%;
+  box-shadow: 0 8px 25px rgba(95, 168, 255, 0.4);
 }
 
 .more-link-container {
