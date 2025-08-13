@@ -233,6 +233,24 @@ body {
     box-shadow: 0 2px 8px rgba(30,144,255,0.12);
 }
 
+/* 挿入画像（事例紹介）の中央配置＆レスポンシブ */
+.work-detail-subimg {
+    display: flex;                 /* フレックスで中央寄せ */
+    justify-content: center;       /* 水平方向センター */
+    align-items: center;           /* （高さが出た場合に）垂直方向もセンター */
+    margin: 24px 0;                /* 前後余白 */
+  }
+  
+.work-detail-subimg-1 {
+width: 100%;                   /* 親幅に追従して縮小 */
+max-width: 600px;              /* 画像の最大幅（HTMLのwidth=600に揃える） */
+height: auto;                  /* アスペクト比維持 */
+display: block;                /* 余計な隙間防止 */
+border-radius: 12px;           /* メイン画像と同一の角丸 */
+box-shadow: 0 2px 12px rgba(30,144,255,0.08); /* メイン画像と同テイストの影 */
+}
+  
+
 /* ===== レスポンシブ対応版 ===== */
 @media (max-width: 900px) {
     .work-detail-article {
