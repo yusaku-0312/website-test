@@ -275,7 +275,10 @@ body {
     }
 
     /* 行コンテナ内だけは強制表示＋縮小して横並び維持 */
-    .work-detail-contact-row { gap: 12px; }
+    .work-detail-contact-row { 
+        gap: 12px;
+        margin-bottom: 16px; 
+    }
     .work-detail-contact-row .work-detail-contact { display: flex !important; }
     .work-detail-contact-row .consultation-text { font-size: 13px; }
     .work-detail-contact-row .cta-button {
