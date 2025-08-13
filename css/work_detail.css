@@ -66,12 +66,39 @@ body {
     font-size: 28px;
     font-weight: 700;
     color: #1E90FF;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     letter-spacing: 0.02em;
     text-align: left;
     line-height: 1.4;
 }
 
+/* 見出し上のアイブロウ（肩書き/導入文） */
+.work-detail-eyebrow {
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin: 0 0 25px 0;
+    padding: 6px 10px;
+    display: inline-block;
+    border-left: 4px solid #1E90FF;
+    background: linear-gradient(90deg, #e3f0ff 60%, #fff 100%);
+    border-radius: 4px;
+  }
+  
+  /* タイトル直下のリード文（強調帯） */
+  .work-detail-lead {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #222;
+    margin: 0px 0 10px 0;
+    line-height: 1.6;
+    padding: 8px 12px;
+    background: #f5f9ff;
+    border: 1px solid rgba(30,144,255,0.15);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.06);
+  }
 /* 既存の単体ブロック：中央揃え（行レイアウトは .work-detail-contact-row 内で制御） */
 .work-detail-contact {
     margin-top: 16px;
@@ -268,7 +295,12 @@ body {
         font-size: 24px;
         margin-bottom: 20px;
     }
-
+    .work-detail-eyebrow { 
+        font-size: 0.9rem;
+        padding: 5px 8px;
+        margin: 0 0 5px 0;
+    }
+    .work-detail-lead    { font-size: 0.98rem; padding: 8px 10px; }
     /* 既存仕様：デスクトップ用お問い合わせボタンは非表示 */
     .work-detail-contact {
         display: none;
@@ -298,7 +330,8 @@ body {
     .work-detail-title {
         font-size: 20px;
     }
-
+    .work-detail-eyebrow { font-size: 0.85rem; }
+    .work-detail-lead    { font-size: 0.95rem; }
     .work-detail-section-title {
         font-size: 18px;
         padding-left: 7px;
