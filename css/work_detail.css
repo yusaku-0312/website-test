@@ -217,7 +217,7 @@ body {
     .work-detail-meta-container {
         margin-bottom: 24px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: flex-start;
     }
 
