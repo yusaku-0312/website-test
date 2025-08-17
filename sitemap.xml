@@ -13,13 +13,13 @@
     <loc>https://miraina.com/services.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/blogs.html</loc>
+    <loc>https://miraina.com/services/ai_consulting.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/contact.html</loc>
+    <loc>https://miraina.com/services/ai_training.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/privacy_policy.html</loc>
+    <loc>https://miraina.com/services/ai_development.html</loc>
   </url>
   <url>
     <loc>https://miraina.com/works.html</loc>
@@ -29,5 +29,20 @@
   </url>
   <url>
     <loc>https://miraina.com/works/work002.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina.com/blogs.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina.com/blogs/blog001.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina.com/blogs/blog002.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina.com/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina.com/privacy_policy.html</loc>
   </url>
 </urlset>
