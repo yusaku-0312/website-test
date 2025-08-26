@@ -120,6 +120,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(30,144,255,0.08);
     display: block;
+    
 }
 
 .work-detail-section-title {
@@ -243,7 +244,7 @@ body {
   
 .work-detail-subimg-1 {
 width: 100%;                   /* 親幅に追従して縮小 */
-max-width: 600px;              /* 画像の最大幅（HTMLのwidth=600に揃える） */
+max-width: 500px;              /* 画像の最大幅（HTMLのwidth=600に揃える） */
 height: auto;                  /* アスペクト比維持 */
 display: block;                /* 余計な隙間防止 */
 border-radius: 12px;           /* メイン画像と同一の角丸 */
@@ -406,6 +407,10 @@ border: 1px solid var(--light-gray);
     .work-detail-header-right {
         order: 1;
         align-items: center;
+        width: auto;                     /* ← 100% をやめる */
+        max-width: min(600px, 98vw);     /* 画面に収まる最大幅 */
+        margin: 0 auto;                  /* 中央寄せ */
+        display: block;
     }
 
     /* 3番目のコンテナにタイトルを配置 */
@@ -413,6 +418,7 @@ border: 1px solid var(--light-gray);
         order: 1;
         max-width: 98vw;
         margin-bottom: 16px;
+        justify-content: center; 
     }
 
     .work-detail-title {
@@ -499,8 +505,10 @@ border: 1px solid var(--light-gray);
         gap: 16px;
     }
 
-    .work-detail-mainimg {
-        max-width: 100%;
+    .work-detail-header-right .work-detail-mainimg {
+        width: auto;            /* 念のため再指定（上書き死守） */
+        max-width: 96vw;        /* さらに余白を取りたい場合 */
+        margin: 0 auto;
     }
 
     .work-detail-meta {
