@@ -809,7 +809,8 @@ box-shadow: 0 4px 16px rgba(30,144,255,0.10);
 overflow: hidden;
 width: 100%;
 max-width: 320px;
-height: 270px;
+min-height: 270px;
+height: auto;
 min-width: 0;
 margin: 0 auto;
 transition: box-shadow var(--transition-normal);
@@ -857,6 +858,9 @@ text-overflow: ellipsis;
 display: -webkit-box;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;
+line-clamp: 3;
+white-space: normal;
+overflow-wrap: anywhere;
 }
 
 @media (max-width: 600px) {
