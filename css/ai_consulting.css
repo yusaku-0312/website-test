@@ -7,14 +7,14 @@
   border-bottom: 1px solid var(--primary-blue-light);
 }
 .refined-title {
-  font-size: 2.6rem;
+  font-size: var(--font-l);
   font-weight: 800;
   letter-spacing: 0.04em;
   margin-bottom: 12px;
   color: var(--white);
 }
 .refined-lead {
-  font-size: 1.2rem;
+  font-size: var(--font-xs);
   color: var(--white);
   opacity: 0.95;
   margin-bottom: 0;
@@ -37,7 +37,7 @@
 }
 
 .refined-h2 {
-  font-size: 1.6rem;
+  font-size:var(--font-m);
   font-weight: 700;
   color: var(--primary-blue-dark);
   border-left: 6px solid var(--primary-blue);
@@ -56,7 +56,7 @@
   min-width: 220px;
 }
 .refined-desc {
-  font-size: 1.05rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
   line-height: 1.8;
   padding-left: 16px;
@@ -65,7 +65,7 @@
 
 .refined-list {
   list-style: disc inside;
-  font-size: 1.1rem;
+  font-size: var(--font-s);
   color: var(--text-dark);
   margin-bottom: 0;
   padding-left: 0;
@@ -73,6 +73,7 @@
 .refined-list li {
   margin-bottom: 12px;
   line-height: 1.7;
+  font-size: var(--font-s);
 }
 
 .refined-feature-list {
@@ -81,7 +82,7 @@
   margin: 0;
 }
 .refined-feature-list li {
-  font-size: 1.1rem;
+  font-size: var(--font-s);
   color: var(--text-dark);
   margin-bottom: 14px;
   padding-left: 0;
@@ -92,11 +93,12 @@
   font-weight: 700;
   color: var(--primary-blue);
   margin-right: 8px;
+  font-size: var(--font-s);
 }
 
 .refined-flow-list {
   list-style: decimal inside;
-  font-size: 1.1rem;
+  font-size: var(--font-s);
   color: var(--text-dark);
   margin: 0;
   padding: 0 0 0 8px;
@@ -104,11 +106,13 @@
 .refined-flow-list li {
   margin-bottom: 12px;
   line-height: 1.7;
+  font-size: var(--font-s);
 }
 .refined-flow-step {
   font-weight: 700;
   color: var(--primary-blue-dark);
   margin-right: 8px;
+  font-size: var(--font-s);
 }
 
 .refined-faq-block {
@@ -122,12 +126,12 @@
 .refined-faq-q {
   font-weight: 700;
   color: var(--primary-blue-dark);
-  font-size: 1.08rem;
+  font-size: var(--font-s);
   margin-bottom: 10px;
 }
 .refined-faq-a {
   color: var(--text-dark);
-  font-size: 1rem;
+  font-size: var(--font-xs);
   line-height: 1.8;
 }
 

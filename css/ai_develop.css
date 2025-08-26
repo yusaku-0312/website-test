@@ -9,7 +9,7 @@
   box-shadow: 0 8px 32px rgba(0, 51, 51, 0.10);
 }
 .ai-develop-title {
-  font-size: 3rem;
+  font-size: var(--font-xl);
   font-weight: 800;
   letter-spacing: 0.06em;
   margin-bottom: 0;
@@ -29,7 +29,7 @@
 }
 .ai-develop-section h2 {
   color: var(--primary-blue-dark);
-  font-size: 2rem;
+  font-size: var(--font-m);
   font-weight: 700;
   margin-top: 32px;
   margin-bottom: 12px;
@@ -41,7 +41,7 @@
   margin-left: 2em;
   margin-bottom: 1.5em;
   color: var(--text-dark);
-  font-size: 1.2rem;
+  font-size: var(--font-s);
   line-height: 2;
 }
 
@@ -54,13 +54,14 @@
 }
 .implementation-flow .section-title {
   color: var(--primary-blue-dark);
-  font-size: 1.7rem;
   font-weight: 700;
   margin-bottom: 8px;
+  font-size: var(--font-s);
 }
 .implementation-flow .section-description {
   color: var(--text-medium);
   margin-bottom: 24px;
+  font-size: var(--font-xs);
 }
 .flow-steps {
   display: flex;
@@ -85,19 +86,19 @@
   box-shadow: 0 8px 24px rgba(0,51,51,0.13);
 }
 .step-number {
-  font-size: 2.2rem;
+  font-size: var(--font-l);
   font-weight: 800;
   color: var(--primary-blue-light);
   margin-bottom: 8px;
 }
 .step-content h3 {
-  font-size: 1.2rem;
+  font-size: var(--font-s);
   color: var(--primary-blue);
   font-weight: 700;
   margin-bottom: 6px;
 }
 .step-content p {
-  font-size: 1rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
 }
 
@@ -112,12 +113,12 @@
 .faq-question {
   font-weight: 700;
   color: var(--primary-blue-dark);
-  font-size: 1.1rem;
+  font-size: var(--font-s);
   margin-bottom: 10px;
 }
 .faq-answer {
   color: var(--text-dark);
-  font-size: 1rem;
+  font-size: var(--font-xs);
   line-height: 1.8;
 }
 
@@ -139,7 +140,7 @@
     padding: 36px 0 18px 0;
   }
   .ai-develop-title {
-    font-size: 1.7rem;
+    font-size: var(--font-m);
   }
   .ai-develop-section {
     padding: 18px 2vw 12px 2vw;
