@@ -59,11 +59,10 @@
   opacity: 1;
   transform: none;
   animation: none;
-  -webkit-text-stroke: 0.8px white; /* 縁の太さ、色 */
 }
 
 .hero-subtitle {
-  font-size: var(--font-xl);
+  font-size: var(--font-m);
   font-weight: 500;
   color: var(--black);
   margin-bottom: var(--space-xl);
