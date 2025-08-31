@@ -59,6 +59,42 @@
   border-radius: var(--space-l);
   box-shadow: 0 8px 32px rgba(30,144,255,0.10);
 }
+/* 代表挨拶ブロック */
+.about-message-block {
+  max-width: 900px;
+  margin: var(--space-xxl) auto var(--space-xl) auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--space-m);
+}
+
+.about-message-image img {
+  width: 100%;
+  max-width: 720px; /* 横長長方形イメージ */
+  height: auto;
+  border-radius: var(--space-m);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  margin-bottom: var(--space-l);
+  object-fit: cover;
+}
+
+.about-message-title {
+  font-size: var(--font-l);
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-bottom: var(--space-m);
+}
+
+.about-message-text {
+  font-size: var(--font-s);
+  color: var(--text-dark);
+  line-height: 1.9;
+  text-align: left; /* 本文は左寄せ */
+  max-width: 90%;
+  margin: 0 auto;
+}
 
 /* 会社概要ブロック - コンテンツ幅を最適化 */
 .about-company-block {
@@ -176,6 +212,16 @@
     padding: 0;
     margin: 0;
   }
+  .about-message-block {
+    margin: var(--space-xl) auto var(--space-l) auto;
+    padding: 0 var(--space-s);
+  }
+  .about-message-title {
+    font-size: var(--font-m);
+  }
+  .about-message-text {
+    font-size: var(--font-xs);
+  }
 }
 
 /* レスポンシブ対応 - モバイル */
@@ -192,5 +238,15 @@
   .about-company-block {
     gap: 12px;
     margin: 40px auto 30px auto;
+  }
+  .about-message-image img {
+    max-width: 100%;
+    margin-bottom: var(--space-m);
+  }
+  .about-message-title {
+    font-size: 1.6rem;
+  }
+  .about-message-text {
+    font-size: 1.4rem;
   }
 }

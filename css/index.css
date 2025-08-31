@@ -256,11 +256,11 @@
   }
 
   .hero-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-xxl);
   }
 
   .hero-subtitle {
-    font-size: var(--font-l);
+    font-size: var(--font-m);
   }
 
   .cta-button {
@@ -624,7 +624,7 @@
   }
 
   .hero-subtitle {
-    font-size: var(--font-m);
+    font-size: var(--font-s);
   }
 
   .cta-button {
