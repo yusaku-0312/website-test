@@ -1,7 +1,7 @@
 /* ブログ記事ページ用CSS */
 .blog-article-main {
   background: var(--light-blue);
-  padding: 48px 0 32px 0;
+  padding: var(--space-l) 0 var(--space-m) 0;
 }
 .blog-article.container {
   background: #fff;
@@ -9,84 +9,87 @@
   box-shadow: 0 4px 24px rgba(30,144,255,0.07);
   max-width: 820px;
   margin: 0 auto;
-  padding: 48px 32px 40px 32px;
+  padding: var(--space-l) var(--space-m) var(--space-m) var(--space-m);
 }
 .blog-article-header h1 {
-  font-size: 3.2rem;
+  font-size: var(--font-l);
   font-weight: 800;
   color: var(--primary-blue);
-  margin-bottom: 18px;
-  line-height: 1.13;
+  margin-bottom: var(--space-xs);
+  line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 .blog-article-header .blog-article-lead {
-  font-size: 1.4rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
-  margin-bottom: 28px;
+  margin-bottom: var(--space-m);
 }
 .blog-article-toc {
   background: var(--light-gray);
   border-radius: 8px;
-  padding: 5px 24px;
-  margin-bottom: 36px;
+  padding: var(--space-xxs) var(--space-m);
+  margin-bottom: var(--space-l);
   box-shadow: 0 2px 8px rgba(0,114,224,0.04);
 }
 .blog-article-toc h2 {
-  font-size: 1.6rem;
+  font-size: var(--font-s);
   color: var(--primary-blue-dark);
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-xxs);
 }
 .blog-article-toc ol {
-  padding-left: 18px;
+  padding-left: var(--space-s);
   color: var(--primary-blue);
-  font-size: 1.6rem;
+  font-size: var(--font-s);
 }
 .blog-article-toc li, .blog-article-toc a {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
+  font-size: var(--font-xs);
+  margin-bottom: var(--space-xxs);
 }
 .blog-article section {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-l);
 }
 .blog-article h2 {
-  font-size: 2.0rem;
+  font-size: var(--font-m);
   color: var(--primary-blue-dark);
   font-weight: 700;
   border-left: 5px solid var(--primary-blue);
-  padding-left: 14px;
+  padding-left: var(--space-s);
   margin: 2.2em 0 1em 0;
 }
 .blog-article h3 {
-  font-size: 1.8rem;
+  font-size: var(--font-s);
   color: var(--primary-blue);
   font-weight: 600;
   margin: 1.5em 0 0.7em 0;
 }
 .blog-article p {
-  font-size: 1.5rem;
+  font-size: var(--font-xs);
   color: var(--text-dark);
   line-height: 1.9;
-  margin-bottom: 18px;
+  margin-bottom: var(--space-xs);
 }
 .blog-article ul, .blog-article ol {
-  margin-bottom: 18px;
-  padding-left: 24px;
+  margin-bottom: var(--space-xs);
+  padding-left: var(--space-m);
 }
 .blog-article li {
-  font-size: 1.05rem;
+  font-size: var(--font-xs);
   color: var(--text-dark);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-xxs);
   line-height: 1.7;
 }
+
+/* レスポンシブ調整 */
 @media (max-width: 900px) {
   .blog-article.container {
-    padding: 32px 6vw 28px 6vw;
+    padding: var(--space-m) 6vw var(--space-s) 6vw;
   }
   .ai-type-grid, .ai-case-grid, .ai-flow-steps {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: var(--space-xs);
     align-items: stretch;
     justify-items: center;
   }
@@ -94,160 +97,165 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
-    gap: 8px;
-    padding: 16px 0;
-    font-size: 1rem;
+    gap: var(--space-xxs);
+    padding: var(--space-s) 0;
+    font-size: var(--font-xs);
     justify-content: flex-start;
   }
   .ai-type-item, .ai-case-item {
     min-width: 0;
     max-width: 98vw;
     width: 98%;
-    font-size: 1rem;
+    font-size: var(--font-xs);
   }
   .ai-overview-box {
     flex-direction: column;
-    gap: 8px;
-    padding: 16px 12px;
-    font-size: 1rem;
+    gap: var(--space-xxs);
+    padding: var(--space-s) var(--space-xs);
+    font-size: var(--font-xs);
   }
   .ai-overview-label {
-    font-size: 0.98rem;
-    padding: 6px 12px;
+    font-size: var(--font-xs);
+    padding: var(--space-xxs) var(--space-s);
   }
   .ai-type-item, .ai-case-item {
     min-width: 80vw;
     max-width: 98vw;
-    padding: 18px 12px;
-    font-size: 1rem;
+    padding: var(--space-s) var(--space-xs);
+    font-size: var(--font-xs);
   }
   .ai-flow-step {
     min-width: 80vw;
     max-width: 98vw;
-    padding: 14px 12px;
-    font-size: 1rem;
+    padding: var(--space-s) var(--space-xs);
+    font-size: var(--font-xs);
   }
   .ai-flow-arrow {
-    font-size: 1.2rem;
-    margin: 0 0 0 0;
+    font-size: var(--font-s);
+    margin: 0;
   }
   .ai-overview-arrow {
-    font-size: 1.2em;
+    font-size: var(--font-s);
     content: '↓';
     display: inline-block;
   }
   body, .blog-article {
-    font-size: 1.3rem;
+    font-size: var(--font-xs);
   }
   .blog-article-header h1 {
-    font-size: 3.2rem;
+    font-size: var(--font-l);
   }
   .blog-article h2 {
-    font-size: 2.0rem;
-    padding-left: 12px;
+    font-size: var(--font-m);
+    padding-left: var(--space-xs);
   }
   .blog-article h3 {
-    font-size: 1.8rem;
+    font-size: var(--font-s);
   }
   .blog-article p {
-    font-size: 1.4rem;
+    font-size: var(--font-xs);
   }
   .blog-article-toc li, .blog-article-toc a {
-    font-size: 1.15rem;
+    font-size: var(--font-xs);
   }
 }
+
 @media (max-width: 600px) {
   .blog-article-main {
-    padding: 24px 0 16px 0;
+    padding: var(--space-s) 0 var(--space-xs) 0;
   }
   .blog-article.container {
-    padding: 20px 4vw 16px 4vw;
+    padding: var(--space-s) 4vw var(--space-xs) 4vw;
   }
   .blog-article-header h1 {
-    font-size: 2.5rem;
+    font-size: var(--font-m);
   }
   .blog-article h2 {
-    font-size: 2.0rem;
-    padding-left: 12px;
+    font-size: var(--font-m);
+    padding-left: var(--space-xs);
   }
   .blog-article h3 {
-    font-size: 1.8rem;
+    font-size: var(--font-s);
   }
   .blog-article p {
-    font-size: 1.4rem;
+    font-size: var(--font-xs);
   }
   .ai-type-grid, .ai-case-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: var(--space-xs);
   }
   .ai-type-item, .ai-case-item {
     width: 99%;
-    font-size: 0.98rem;
+    font-size: var(--font-xs);
   }
   .ai-overview-box, .ai-flow-steps {
-    gap: 6px;
-    padding: 12px 0;
-    font-size: 0.98rem;
+    gap: var(--space-xxs);
+    padding: var(--space-xs) 0;
+    font-size: var(--font-xs);
   }
   .ai-overview-label {
-    font-size: 0.98rem;
-    padding: 6px 12px;
+    font-size: var(--font-xs);
+    padding: var(--space-xxs) var(--space-s);
   }
   .ai-flow-step {
-    font-size: 0.98rem;
+    font-size: var(--font-xs);
   }
   .ai-flow-step span {
-    font-size: 0.98em;
-    margin-right: 6px;
+    font-size: var(--font-xs);
+    margin-right: var(--space-xxs);
     width: 1.3em;
     height: 1.3em;
   }
   .ai-flow-arrow {
-    font-size: 1rem;
+    font-size: var(--font-xs);
     margin: 0;
   }
   .ai-case-icon {
-    font-size: 1.5rem;
+    font-size: var(--font-m);
   }
 }
 
+/* 図版 */
 .blog-figure {
-  margin: 28px 0 24px 0;
+  margin: var(--space-m) 0 var(--space-s) 0;
   text-align: center;
 }
+
+/* AI概要ボックス */
 .ai-overview-box {
   display: inline-flex;
   align-items: center;
   background: #f0f8ff;
   border-radius: 8px;
-  padding: 16px 24px;
+  padding: var(--space-s) var(--space-m);
   box-shadow: 0 2px 8px rgba(0,114,224,0.06);
-  font-size: 1.1rem;
+  font-size: var(--font-xs);
   font-weight: 600;
-  gap: 12px;
+  gap: var(--space-s);
 }
 .ai-overview-label {
   color: var(--primary-blue-dark);
   background: #fff;
   border-radius: 6px;
-  padding: 6px 16px;
+  padding: var(--space-xxs) var(--space-s);
   border: 1.5px solid var(--primary-blue-light);
-  font-size: 1.08rem;
+  font-size: var(--font-xs);
 }
 .ai-overview-arrow {
   color: var(--primary-blue);
-  font-size: 1.3rem;
+  font-size: var(--font-s);
   font-weight: 700;
 }
 .ai-overview-caption {
-  font-size: 0.98rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
-  margin-top: 8px;
+  margin-top: var(--space-xxs);
 }
 
+/* AIタイプ */
 .ai-type-grid {
   display: flex;
-  gap: 18px;
+  gap: var(--space-s);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -255,7 +263,7 @@
   background: #f8fafd;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,114,224,0.05);
-  padding: 18px 20px;
+  padding: var(--space-s) var(--space-m);
   min-width: 140px;
   max-width: 200px;
   text-align: center;
@@ -264,23 +272,24 @@
 .ai-type-title {
   color: var(--primary-blue);
   font-weight: 700;
-  font-size: 1.08rem;
-  margin-bottom: 6px;
+  font-size: var(--font-xs);
+  margin-bottom: var(--space-xxs);
 }
 .ai-type-desc {
   color: var(--text-dark);
-  font-size: 0.98rem;
+  font-size: var(--font-xs);
 }
 .ai-type-caption {
-  font-size: 0.98rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
-  margin-top: 8px;
+  margin-top: var(--space-xxs);
 }
 
+/* AIフロー */
 .ai-flow-steps {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-xs);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -290,14 +299,14 @@
   border: 1.5px solid var(--neo-green-light);
   color: var(--primary-blue-dark);
   font-weight: 700;
-  font-size: 1.05rem;
-  padding: 12px 18px;
+  font-size: var(--font-xs);
+  padding: var(--space-xs) var(--space-m);
   min-width: 120px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(39,255,20,0.04);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-xxs);
 }
 .ai-flow-step span {
   background: var(--neo-green-light);
@@ -308,23 +317,24 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.05em;
-  margin-right: 8px;
+  font-size: var(--font-xs);
+  margin-right: var(--space-xxs);
 }
 .ai-flow-arrow {
-  font-size: 1.5rem;
+  font-size: var(--font-s);
   color: var(--primary-blue);
   font-weight: 700;
 }
 .ai-flow-caption {
-  font-size: 0.98rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
-  margin-top: 8px;
+  margin-top: var(--space-xxs);
 }
 
+/* AIケース */
 .ai-case-grid {
   display: flex;
-  gap: 18px;
+  gap: var(--space-s);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -332,7 +342,7 @@
   background: #f8fafd;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,114,224,0.05);
-  padding: 18px 14px 12px 14px;
+  padding: var(--space-s) var(--space-xs) var(--space-xxs) var(--space-xs);
   min-width: 120px;
   max-width: 160px;
   text-align: center;
@@ -342,25 +352,26 @@
   align-items: center;
 }
 .ai-case-icon {
-  font-size: 2.1rem;
-  margin-bottom: 6px;
+  font-size: var(--font-m);
+  margin-bottom: var(--space-xxs);
 }
 .ai-case-title {
   color: var(--primary-blue);
   font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 2px;
+  font-size: var(--font-xs);
+  margin-bottom: var(--space-xxs);
 }
 .ai-case-desc {
   color: var(--text-dark);
-  font-size: 0.97rem;
+  font-size: var(--font-xs);
 }
 .ai-case-caption {
-  font-size: 0.98rem;
+  font-size: var(--font-xs);
   color: var(--text-medium);
-  margin-top: 8px;
+  margin-top: var(--space-xxs);
 }
 
+/* スクロール調整 */
 .ai-overview-box, .ai-flow-steps {
   overflow-x: auto;
   white-space: nowrap;
@@ -378,4 +389,64 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-} 
+}
+
+/* =========================
+   Representative photo (simple)
+   ========================= */
+   .rep-figure {
+    margin: 0 0 var(--space-m) 0;       /* セクション見出しとの余白 */
+    text-align: center;                 /* 画像を中央寄せ */
+  }
+  
+  .rep-photo {
+    display: inline-block;              /* 中央寄せのためinline-block */
+    width: 100%;
+    max-width: 640px;                   /* 記事幅に馴染む上限。必要に応じて調整可 */
+    height: auto;                       /* アスペクト比維持 */
+    border-radius: 0;                   /* 丸めなし（四角） */
+    background: var(--light-gray);      /* ローディング時の下地 */
+    box-shadow: 0 6px 20px rgba(0, 114, 224, 0.10);
+  }
+  
+  /* 記事コンテナ内でのセンタリングを確実に */
+  .blog-article .rep-figure {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* モバイル最適化 */
+  @media (max-width: 600px) {
+    .rep-photo {
+      max-width: 100%;
+      box-shadow: 0 4px 14px rgba(0, 114, 224, 0.10);
+    }
+  }
+  
+  /* =========================
+   Page thumbnail in header
+   ========================= */
+.blog-article-header .blog-article-thumb {
+  margin: var(--space-s) 0 var(--space-s) 0; /* 見出しと本文導入の間を確保 */
+  text-align: center;                        /* 画像を中央配置 */
+}
+
+.blog-article-header .blog-article-thumb-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;        /* 記事コンテナ幅にフィット */
+  height: auto;       /* アスペクト比維持 */
+  border-radius: 0;   /* 角丸なし（四角のまま） */
+  background: var(--light-gray);
+  box-shadow: 0 6px 20px rgba(0, 114, 224, 0.10);
+}
+
+/* モバイル微調整 */
+@media (max-width: 600px) {
+  .blog-article-header .blog-article-thumb {
+    margin: var(--space-xs) 0 var(--space-xs) 0;
+  }
+  .blog-article-header .blog-article-thumb-img {
+    box-shadow: 0 4px 14px rgba(0, 114, 224, 0.10);
+  }
+}
