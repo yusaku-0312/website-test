@@ -1,7 +1,7 @@
 /* ブログ記事ページ用CSS */
 .blog-article-main {
   background: var(--light-blue);
-  padding: var(--space-l) 0 var(--space-m) 0;
+  padding: 0 0 var(--space-m) 0;
 }
 .blog-article.container {
   background: #fff;
