@@ -528,7 +528,7 @@ p {
 }
 .footer-nav a:hover { color: #60aaff; }
 
-/* SNSリンク（テキストのみ） */
+/* SNS（テキストのみ） */
 .footer-sns-list {
   margin: 0; padding: 0; list-style: none;
   display: flex; flex-direction: column; gap: var(--space-xxs);
