@@ -425,6 +425,7 @@ p {
 
 
 /* Footer */
+
 .site-footer {
   background-color: #1a1a1a;
   color: #f5f5f5;
@@ -477,6 +478,83 @@ p {
   color: #d0d0d0;
   margin-top: var(--space-l);
   font-size: var(--font-xs);
+}
+/* ===== Footer 4カラムレイアウト ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr; /* 左ロゴ / 空白 / リンク / SNS */
+  gap: var(--space-l);
+  width: 100%;
+}
+
+/* 各カラムの縦積み */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* 見出し */
+.footer-heading {
+  font-size: var(--font-s);
+  font-weight: 700;
+  margin: 0 0 var(--space-xxs) 0;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* 既存 .footer-logo をリンク要素にも適用できるよう微調整 */
+.footer-logo {
+  font-size: var(--font-l);
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+.footer-logo:hover { color: #60aaff; }
+
+/* サイトリンク（既存 .footer-nav を再利用） */
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  margin: 0; padding: 0; list-style: none;
+}
+.footer-nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+.footer-nav a:hover { color: #60aaff; }
+
+/* SNSリンク（テキストのみ） */
+.footer-sns-list {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: var(--space-xxs);
+}
+.footer-sns-list a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-normal);
+}
+.footer-sns-list a:hover { color: #60aaff; }
+
+/* レスポンシブ：タブレット以下は2カラム、スマホは1カラム */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* [左：ロゴ+空白] / [右：リンク+SNS] */
+  }
+  .footer-col--spacer { display: none; }           /* 空白は非表示 */
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;     /* 1カラム縦積み */
+    text-align: center;
+  }
+  .footer-nav ul, .footer-sns-list { align-items: center; }
 }
 
 /* Breadcrumb */
