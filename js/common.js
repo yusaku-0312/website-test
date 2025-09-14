@@ -27,11 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (scrollTop > 50) {
         header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
         header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        header.style.padding = '0.8rem 0';
       } else {
         header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
         header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-        header.style.padding = '1rem 0';
       }
       
       lastScrollTop = scrollTop;

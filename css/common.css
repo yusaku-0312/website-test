@@ -204,6 +204,7 @@ p {
 }
 
 /* ロゴ周辺スタイル */
+
 .site-logo {
   display: flex;
   align-items: center;
@@ -220,6 +221,7 @@ p {
 .site-logo a:hover {
   color: var(--primary-blue);
 }
+
 
 .logo-img {
   width: 200px;
