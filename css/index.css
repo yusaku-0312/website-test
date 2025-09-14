@@ -83,7 +83,7 @@
   padding: var(--space-xs) var(--space-xl);
   background-color: var(--primary-blue);
   color: var(--white);
-  font-size: var(--font-l);
+  font-size: var(--font-s);
   font-weight: 600;
   text-decoration: none;
   border-radius: var(--space-xs);
@@ -119,7 +119,7 @@
 }
 
 .scroll-text {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   margin-top: 5px;
   color: var(--light-gray);
 }
@@ -172,7 +172,7 @@
 }
 
 .services-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -209,7 +209,7 @@
 
 /* 小見出し */
 .service-heading {
-  font-size: var(--font-l);
+  font-size: var(--font-m);
   font-weight: 600;
   margin-bottom: var(--space-xs);
   color: var(--primary-blue-dark);
@@ -237,7 +237,7 @@
   color: var(--white);
   text-decoration: none;
   border-radius: var(--space-xs);
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   font-weight: 500;
   transition: all var(--transition-normal);
   box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
@@ -260,7 +260,7 @@
   }
 
   .hero-subtitle {
-    font-size: var(--font-m);
+    font-size: var(--font-l);
   }
 
   .cta-button {
@@ -303,7 +303,7 @@
 }
 
 .work-category {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   color: var(--primary-blue-dark);
   margin-bottom: 4px;
   font-weight: 600;
@@ -380,7 +380,7 @@
 }
 
 .blog-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-m);
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -421,7 +421,7 @@
 }
 
 .contact-section .section-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-m);
   font-weight: 700;
   margin-bottom: var(--space-xs);
   color: var(--white);
@@ -446,7 +446,7 @@
 }
 
 .contact-section .section-description {
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   color: var(--light-gray);
   margin-top: var(--space-s);
   line-height: 1.6;
@@ -541,7 +541,7 @@
   padding: var(--space-m) var(--space-xl);
   background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-light));
   color: var(--white);
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   font-weight: 600;
   text-decoration: none;
   border-radius: var(--space-s);
@@ -608,7 +608,7 @@
   border-radius: var(--space-s);
   text-decoration: none;
   transition: all var(--transition-normal);
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
@@ -620,15 +620,15 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-xxl);
   }
 
   .hero-subtitle {
-    font-size: var(--font-s);
+    font-size: var(--font-m);
   }
 
   .cta-button {
     padding: var(--space-xxs) var(--space-m);
-    font-size: var(--font-xs);
+    font-size: var(--font-s);
   }
 }

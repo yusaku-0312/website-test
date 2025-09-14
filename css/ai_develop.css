@@ -9,7 +9,7 @@
   box-shadow: 0 8px 32px rgba(0, 51, 51, 0.10);
 }
 .ai-develop-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   font-weight: 800;
   letter-spacing: 0.06em;
   margin-bottom: 0;
@@ -61,7 +61,7 @@
 .implementation-flow .section-description {
   color: var(--text-medium);
   margin-bottom: 24px;
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
 }
 .flow-steps {
   display: flex;
@@ -98,7 +98,7 @@
   margin-bottom: 6px;
 }
 .step-content p {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   color: var(--text-medium);
 }
 
@@ -118,7 +118,7 @@
 }
 .faq-answer {
   color: var(--text-dark);
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   line-height: 1.8;
 }
 

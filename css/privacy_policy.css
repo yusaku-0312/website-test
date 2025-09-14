@@ -100,7 +100,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .page-title {
-        font-size: var(--font-xl);
+        font-size: var(--font-l);
     }
     
     .privacy-text {

@@ -34,7 +34,7 @@
 }
 
 .section-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     text-align: center;
     margin-bottom: var(--space-m);
     font-weight: 700;
@@ -191,7 +191,7 @@
 }
 
 .service-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     margin: 0;
     color: var(--primary-blue);
     font-weight: 700;
@@ -462,7 +462,7 @@
 }
 
 .cta-content h2 {
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     margin-bottom: var(--space-m);
     font-weight: 700;
 }
@@ -498,7 +498,7 @@
     }
 
     .services-title {
-        font-size: var(--font-xl);
+        font-size: var(--font-l);
     }
 
     .section-title {
@@ -547,7 +547,7 @@
     }
 
     .step-content p {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
     }
 }
 
@@ -565,7 +565,7 @@
     }
 
     .section-description {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
         padding: 0 var(--space-xxs);
     }
 
@@ -578,7 +578,7 @@
     }
 
     .category-item p {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
     }
 
     .category-icon img {
@@ -587,7 +587,7 @@
     }
 
     .service-description {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
     }
 
     .service-image {
@@ -596,7 +596,7 @@
     }
 
     .service-features li {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
         padding-left: var(--space-m);
     }
 
@@ -615,7 +615,7 @@
     }
 
     .step-content p {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
     }
 
     .faq-question h3 {
@@ -623,7 +623,7 @@
     }
 
     .faq-answer p {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
     }
 
     .cta-content h2 {
@@ -635,7 +635,7 @@
     }
 
     .btn-accent {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
         padding: var(--space-s) var(--space-l);
     }
 }
@@ -654,7 +654,7 @@
     }
 
     .btn-accent {
-        font-size: var(--font-xs);
+        font-size: var(--font-s);
         padding: var(--space-xs) var(--space-m);
     }
 }

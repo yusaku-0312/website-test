@@ -5,7 +5,7 @@
 }
 
 .about-section-block .about-section-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   color: var(--primary-blue);
   margin-bottom: var(--space-s);
 }
@@ -52,7 +52,7 @@
 }
 
 .about-values-card-list {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   margin: 0.7em 0 0 1.1em;
   color: var(--text-medium);
 }
@@ -130,7 +130,7 @@
 }
 
 .about-company-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   font-weight: 700;
   color: var(--text-dark);
   margin: 0 0 var(--space-m) 0;
@@ -266,7 +266,7 @@
   }
 
   .about-message-text {
-    font-size: var(--font-xs);
+    font-size: var(--font-s);
   }
 }
 

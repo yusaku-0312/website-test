@@ -14,7 +14,7 @@
   color: var(--white);
 }
 .refined-lead {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   color: var(--white);
   opacity: 0.95;
   margin-bottom: 0;
@@ -56,7 +56,7 @@
   min-width: 220px;
 }
 .refined-desc {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   color: var(--text-medium);
   line-height: 1.8;
   padding-left: 16px;
@@ -131,7 +131,7 @@
 }
 .refined-faq-a {
   color: var(--text-dark);
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   line-height: 1.8;
 }
 
