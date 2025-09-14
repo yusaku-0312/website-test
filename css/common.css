@@ -26,17 +26,22 @@
   --text-light: #888888;
 
   /* Font sizes（全体的に1段階大きく） */
-  --font-xxl: 3.6rem;
+  --font-xxl: 4.5rem;
   /* 57.6px */
-  --font-xl: 2.8rem;
+  /* --font-l: 2.8rem; */
+  /* xl→l */
   /* 44.8px */
-  --font-l: 2.3rem;
+  /* --font-l: 2.3rem; */
+  --font-l: 3.3rem;
   /* 33.6px */
-  --font-m: 1.9rem;
+  /* --font-m: 1.9rem; */
+  --font-m: 2.6rem;
+  /* l→m*/
   /* 27.2px */
   --font-s: 1.7rem;
   /* 20.8px */
-  --font-xs: 1.5rem;
+  /* --font-s: 1.5rem; */
+  /* xs→s */
   /* 17.6px */
 
   /* Spacing */
@@ -78,7 +83,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Noto Sans JP', '游ゴシック体', 'Yu Gothic', 'Meiryo', sans-serif;
   font-size: var(--font-s);
   color: var(--text-dark);
   background-color: var(--white);
@@ -114,7 +119,7 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-xl);
+  font-size: var(--font-xxl);
 }
 
 h2 {
@@ -367,7 +372,7 @@ p {
     url('/images/blog_background.webp');
   /* 全ページ共通背景 */
   color: var(--white);
-  margin-bottom: var(--space-xl); 
+  margin-bottom: var(--space-xl);
 }
 
 .page-hero-content {
@@ -379,7 +384,7 @@ p {
 }
 
 .page-hero-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   /* 2.5rem → 共通変数 */
   font-weight: 700;
   margin-bottom: var(--space-xs);
@@ -392,9 +397,15 @@ p {
   opacity: 0.9;
   margin-top: 0;
 }
+
 @media (max-width: 900px) {
-  .page-hero { margin-bottom: var(--space-l); } /* モバイルは少し小さく */
+  .page-hero {
+    margin-bottom: var(--space-l);
+  }
+
+  /* モバイルは少し小さく */
 }
+
 /* ------------------------------
    ページ別の修飾クラス
 ------------------------------ */
@@ -479,12 +490,14 @@ p {
   text-align: center;
   color: #d0d0d0;
   margin-top: var(--space-l);
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
 }
+
 /* ===== Footer 4カラムレイアウト ===== */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr; /* 左ロゴ / 空白 / リンク / SNS */
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+  /* 左ロゴ / 空白 / リンク / SNS */
   gap: var(--space-l);
   width: 100%;
 }
@@ -514,49 +527,76 @@ p {
   transition: color var(--transition-normal);
 }
 
-.footer-logo:hover { color: #60aaff; }
+.footer-logo:hover {
+  color: #60aaff;
+}
 
 /* サイトリンク（既存 .footer-nav を再利用） */
 .footer-nav ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-xxs);
-  margin: 0; padding: 0; list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
 .footer-nav a {
   color: #e0e0e0;
   text-decoration: none;
   transition: color var(--transition-normal);
 }
-.footer-nav a:hover { color: #60aaff; }
+
+.footer-nav a:hover {
+  color: #60aaff;
+}
 
 /* SNS（テキストのみ） */
 .footer-sns-list {
-  margin: 0; padding: 0; list-style: none;
-  display: flex; flex-direction: column; gap: var(--space-xxs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
 }
+
 .footer-sns-list a {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: 600;
   transition: color var(--transition-normal);
 }
-.footer-sns-list a:hover { color: #60aaff; }
+
+.footer-sns-list a:hover {
+  color: #60aaff;
+}
 
 /* レスポンシブ：タブレット以下は2カラム、スマホは1カラム */
 @media (max-width: 1024px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr; /* [左：ロゴ+空白] / [右：リンク+SNS] */
+    grid-template-columns: 1fr 1fr;
+    /* [左：ロゴ+空白] / [右：リンク+SNS] */
   }
-  .footer-col--spacer { display: none; }           /* 空白は非表示 */
+
+  .footer-col--spacer {
+    display: none;
+  }
+
+  /* 空白は非表示 */
 }
 
 @media (max-width: 900px) {
   .footer-grid {
-    grid-template-columns: 1fr;     /* 1カラム縦積み */
+    grid-template-columns: 1fr;
+    /* 1カラム縦積み */
     text-align: center;
   }
-  .footer-nav ul, .footer-sns-list { align-items: center; }
+
+  .footer-nav ul,
+  .footer-sns-list {
+    align-items: center;
+  }
 }
 
 /* Breadcrumb */
@@ -583,7 +623,7 @@ p {
 
 .breadcrumb li {
   position: relative;
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   color: var(--text-medium);
   line-height: 1.8;
 }
@@ -641,7 +681,7 @@ p {
   }
 
   .breadcrumb li {
-    font-size: var(--font-xs);
+    font-size: var(--font-s);
   }
 
   .breadcrumb li:not(:first-child):before {
@@ -656,7 +696,7 @@ p {
 }
 
 .section-title {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   margin-bottom: var(--space-xs);
   position: relative;
   display: inline-block;
@@ -692,9 +732,10 @@ p {
 
 @media (max-width: 900px) {
   :root {
-    --font-xxl: 2.8rem;
-    --font-xl: 2.2rem;
-    --font-l: 1.6rem;
+    --font-xxl: 3.5rem;
+    --font-l: 2.4rem;
+    --font-m: 2.0rem;
+    --font-s: 1.8rem;
     --space-xxl: 6rem;
     --space-xl: 4rem;
   }
@@ -724,9 +765,10 @@ p {
 
 @media (max-width: 480px) {
   :root {
-    --font-xxl: 2.4rem;
-    --font-xl: 2rem;
-    --font-l: 1.5rem;
+    --font-xxl: 2.6rem;
+    --font-l: 2.0rem;
+    --font-m: 1.9rem;
+    --font-s: 1.7rem;
     --space-xl: 3rem;
     --space-l: 2rem;
     --container-padding: 1.5rem;
@@ -1044,7 +1086,7 @@ body.about-page .section-header {
 }
 
 .card-title {
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   font-weight: 700;
   color: var(--primary-blue);
   margin-bottom: var(--space-xs);
