@@ -25,6 +25,10 @@
   margin-right: auto;
 }
 
+.about-section-block .about-section-message {
+  text-align: left;
+}
+
 .about-values-cards {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +56,7 @@
 }
 
 .about-values-card-list {
-  font-size: var(--font-s);
+  font-size: var(--font-xs);
   margin: 0.7em 0 0 1.1em;
   color: var(--text-medium);
 }
@@ -67,45 +71,6 @@
   box-shadow: 0 8px 32px rgba(30, 144, 255, 0.10);
 }
 
-/* 代表挨拶ブロック */
-.about-message-block {
-  max-width: 900px;
-  margin: var(--space-xxl) auto var(--space-xl) auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 var(--space-m);
-}
-
-.about-message-image img {
-  width: 100%;
-  max-width: 720px;
-  /* 横長長方形イメージ */
-  height: auto;
-  border-radius: var(--space-m);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-  margin-bottom: var(--space-l);
-  object-fit: cover;
-}
-
-.about-message-title {
-  font-size: var(--font-l);
-  color: var(--primary-blue);
-  font-weight: 700;
-  margin-bottom: var(--space-m);
-}
-
-.about-message-text {
-  font-size: var(--font-s);
-  color: var(--text-dark);
-  line-height: 1.9;
-  text-align: left;
-  /* 本文は左寄せ */
-  max-width: 90%;
-  margin: 0 auto;
-}
-
 /* 会社概要ブロック - コンテンツ幅を最適化 */
 .about-company-block {
   display: flex;
@@ -115,7 +80,7 @@
   gap: var(--space-s);
   margin: var(--space-xxl) auto var(--space-xl) auto;
   max-width: 1000px;
-  padding: 0 var(--space-l);
+  padding: var(--space-l) var(--space-l);
 }
 
 /* 左側：会社情報ブロック - 幅をコンテンツに合わせて最小化 */
@@ -130,7 +95,7 @@
 }
 
 .about-company-title {
-  font-size: var(--font-l);
+  font-size: var(--font-m);
   font-weight: 700;
   color: var(--text-dark);
   margin: 0 0 var(--space-m) 0;
@@ -183,17 +148,6 @@
   margin: 0;
 }
 
-.about-company-sns {
-  margin-top: var(--space-m);
-}
-
-.about-company-subtitle {
-  font-size: var(--font-m);
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
-  color: #222;
-}
-
 .sns-list {
   list-style: none;
   margin: 0;
@@ -233,7 +187,7 @@
   }
 
   .about-company-title {
-    font-size: 2rem;
+    font-size: var(--font-l);
     text-align: center;
     margin: 0 0 1.2rem 0;
     white-space: normal;
@@ -241,7 +195,7 @@
   }
 
   .about-company-table {
-    font-size: 1.1rem;
+    font-size: var(--font-s);
     margin: 0 auto;
     width: auto;
   }
@@ -266,36 +220,23 @@
   }
 
   .about-message-text {
-    font-size: var(--font-s);
+    font-size: var(--font-xs);
   }
 }
 
 /* レスポンシブ対応 - モバイル */
 @media (max-width: 600px) {
   .about-company-title {
-    font-size: 1.8rem;
+    font-size: var(--font-l);
     margin: 0 0 1rem 0;
   }
 
   .about-company-table {
-    font-size: 1rem;
+    font-size: var(--font-s);
   }
 
   .about-company-block {
     gap: 12px;
     margin: 40px auto 30px auto;
-  }
-
-  .about-message-image img {
-    max-width: 100%;
-    margin-bottom: var(--space-m);
-  }
-
-  .about-message-title {
-    font-size: 1.6rem;
-  }
-
-  .about-message-text {
-    font-size: 1.4rem;
   }
 }

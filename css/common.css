@@ -26,7 +26,7 @@
   --text-light: #888888;
 
   /* Font sizes（全体的に1段階大きく） */
-  --font-xxl: 4.5rem;
+  --font-xl: 4.5rem;
   /* 57.6px */
   /* --font-l: 2.8rem; */
   /* xl→l */
@@ -35,17 +35,17 @@
   --font-l: 3.3rem;
   /* 33.6px */
   /* --font-m: 1.9rem; */
-  --font-m: 2.6rem;
+  --font-m: 2.4rem;
   /* l→m*/
   /* 27.2px */
-  --font-s: 1.7rem;
+  --font-s: 1.8rem;
   /* 20.8px */
   /* --font-s: 1.5rem; */
   /* xs→s */
   /* 17.6px */
 
   /* Spacing */
-  --space-xxl: 8rem;
+  --space-xl: 8rem;
   /* 128px */
   --space-xl: 5rem;
   /* 80px */
@@ -119,7 +119,7 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-xxl);
+  font-size: var(--font-xl);
 }
 
 h2 {
@@ -364,7 +364,7 @@ p {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  padding: var(--space-xxl) 0;
+  padding: var(--space-xl) 0;
   /* デフォルトの縦余白を統一 */
   background-size: cover;
   background-position: center;
@@ -392,7 +392,7 @@ p {
 }
 
 .page-hero-subtitle {
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   /* 1rem → 共通変数 */
   opacity: 0.9;
   margin-top: 0;
@@ -418,7 +418,7 @@ p {
 /* services */
 .page-hero--services {
   /* デフォルトより縦余白を広めに */
-  padding: var(--space-xxl) 0;
+  padding: var(--space-xl) 0;
 }
 
 /* blogs */
@@ -520,7 +520,7 @@ p {
 
 /* 既存 .footer-logo をリンク要素にも適用できるよう微調整 */
 .footer-logo {
-  font-size: var(--font-l);
+  font-size: 2.7rem;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
@@ -732,11 +732,11 @@ p {
 
 @media (max-width: 900px) {
   :root {
-    --font-xxl: 3.5rem;
+    --font-xl: 3.5rem;
     --font-l: 2.4rem;
     --font-m: 2.0rem;
     --font-s: 1.8rem;
-    --space-xxl: 6rem;
+    --space-xl: 6rem;
     --space-xl: 4rem;
   }
 
@@ -765,7 +765,7 @@ p {
 
 @media (max-width: 480px) {
   :root {
-    --font-xxl: 2.6rem;
+    --font-xl: 2.6rem;
     --font-l: 2.0rem;
     --font-m: 1.9rem;
     --font-s: 1.7rem;
@@ -1020,10 +1020,10 @@ body.about-page .section-header {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-m);
   margin: 0 auto;
-  padding-left: var(--space-xxl);
-  padding-right: var(--space-xxl);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
   box-sizing: border-box;
-  margin-bottom: var(--space-xxl);
+  margin-bottom: var(--space-xl);
   max-width: 1500px;
 }
 

@@ -48,7 +48,7 @@
 }
 
 .hero-title {
-  font-size: var(--font-xxl);
+  font-size: var(--font-xl);
   font-weight: 800;
   margin-bottom: var(--space-s);
   line-height: 1.15;
@@ -256,7 +256,7 @@
   }
 
   .hero-title {
-    font-size: var(--font-xxl);
+    font-size: var(--font-xl);
   }
 
   .hero-subtitle {
@@ -620,7 +620,7 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: var(--font-xxl);
+    font-size: var(--font-xl);
   }
 
   .hero-subtitle {
