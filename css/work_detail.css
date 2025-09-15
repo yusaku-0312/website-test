@@ -21,7 +21,7 @@ body {
 }
 
 .work-detail-meta {
-    font-size: var(--font-xs);
+    font-size: 14px;
     color: #888;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body {
 
 .work-detail-date,
 .work-detail-update {
-    font-size: var(--font-xs);
+    font-size: 14px;
     color: #888;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .work-detail-title {
-    font-size: 3.2rem;
+    font-size: var(--font-xl);
     font-weight: 700;
     color: #1E90FF;
     margin-bottom: 10px;
@@ -126,6 +126,7 @@ body {
 
 .work-detail-section-title {
     font-size: var(--font-l);
+    font-weight: 600;
     color: #0056b3;
     margin: 32px 0 16px 0;
     border-left: 5px solid #1E90FF;
@@ -133,10 +134,6 @@ body {
     background: linear-gradient(90deg, #e3f0ff 60%, #fff 100%);
 }
 
-.work-detail-summary .client-info-title {
-    font-size: var(--font-m);
-    font-weight: 600;
-}
 .work-detail-info {
     list-style: none;
     padding: 0;
@@ -307,9 +304,14 @@ body {
     margin: 0;
 }
 
+.work-detail-figure-caption {
+    font-size: var(--font-s);
+    color: #888;
+    margin-top: 6px;
+    text-align: right;
+}
 
-.work-sample-section-title {
-    font-size: var(--font-m);
+h3.work-detail-section-title {
     position: relative;
     display: flex;
     align-items: center;
@@ -357,6 +359,7 @@ h3.work-detail-section-title::after {
 
 .work-detail-two-col-text {
     text-align: left;
+    font-size: var(--font-s);
 }
 
 
@@ -370,7 +373,31 @@ h3.work-detail-section-title::after {
     border: 1px solid var(--light-gray);
 }
 
+.work-detail-figure-caption {
+    font-size: var(--font-s);
+    color: #888;
+    margin-top: 6px;
+    text-align: right;
+}
 
+.work-sample-section-title {
+    font-size: var(--font-m);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #0b4ea2;
+
+    margin: 28px 0 14px 0;
+    padding: 10px 14px;
+
+    background: #f7fbff;
+    border: 1px solid rgba(30, 144, 255, 0.20);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.06);
+}
 
 /* ===== レスポンシブ対応版 ===== */
 @media (max-width: 900px) {
@@ -421,15 +448,11 @@ h3.work-detail-section-title::after {
         order: 1;
         align-items: center;
         width: auto;
-        /* ← 100% をやめる */
         max-width: min(600px, 98vw);
-        /* 画面に収まる最大幅 */
         margin: 0 auto;
-        /* 中央寄せ */
         display: block;
     }
 
-    /* 3番目のコンテナにタイトルを配置 */
     .work-detail-mainimg {
         order: 1;
         max-width: 98vw;
@@ -439,7 +462,7 @@ h3.work-detail-section-title::after {
 
     .work-detail-title {
         order: 2;
-        font-size: var(--font-xl);
+        font-size: 24px;
         margin-bottom: 20px;
     }
 
@@ -454,12 +477,10 @@ h3.work-detail-section-title::after {
         padding: 8px 10px;
     }
 
-    /* 既存仕様：デスクトップ用お問い合わせボタンは非表示 */
     .work-detail-contact {
         display: none;
     }
 
-    /* 行コンテナ内だけは強制表示＋縮小して横並び維持 */
     .work-detail-contact-row {
         gap: 12px;
         margin-bottom: 16px;
@@ -477,10 +498,8 @@ h3.work-detail-section-title::after {
         font-size: var(--font-s);
         padding: 9px 12px;
         max-width: 45vw;
-        /* 2つ並べて画面幅内に収める */
         overflow: hidden;
         text-overflow: ellipsis;
-        /* 長すぎる文言は省略 */
     }
 
     .work-detail-two-col {
@@ -561,9 +580,7 @@ h3.work-detail-section-title::after {
 
     .work-detail-header-right .work-detail-mainimg {
         width: auto;
-        /* 念のため再指定（上書き死守） */
         max-width: 96vw;
-        /* さらに余白を取りたい場合 */
         margin: 0 auto;
     }
 
@@ -576,20 +593,38 @@ h3.work-detail-section-title::after {
         font-size: var(--font-xs);
     }
 
-    /* 行コンテナのさらなる縮小調整 */
+    /* ▼▼ ここからボタン2つを縦並びに＆テキスト改行で途切れ対策 ▼▼ */
     .work-detail-contact-row {
-        gap: 8px;
+        flex-direction: column !important;
+        gap: 12px;
+        margin-bottom: 16px;
+        align-items: stretch;
     }
 
-    .work-detail-contact-row .consultation-text {
-        font-size: var(--font-s);
+    .work-detail-contact-row .work-detail-contact {
+        width: 100%;
+        align-items: stretch;
     }
 
     .work-detail-contact-row .cta-button {
         font-size: var(--font-s);
-        padding: 6px 10px;
-        max-width: 44vw;
-        /* 2つでほぼ100vw */
+        padding: 13px 8px;
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.3;
+        text-align: center;
+        border-radius: 9999px;
+    }
+
+    .work-detail-contact-row .consultation-text {
+        font-size: var(--font-s);
+        margin-bottom: 7px;
+        text-align: center;
+        white-space: normal;
     }
 
     h3.work-detail-section-title {
