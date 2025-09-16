@@ -77,7 +77,8 @@ section {
 .client-logos {
     display: flex;
     animation: scroll 30s linear infinite;
-    width: calc(180px * 12); /* ロゴの数 × ロゴの幅 */
+    width: calc(180px * 12);
+    /* ロゴの数 × ロゴの幅 */
 }
 
 .client-logo {
@@ -105,8 +106,10 @@ section {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(calc(-180px * 6)); /* ロゴの数の半分 × ロゴの幅 */
+        transform: translateX(calc(-180px * 6));
+        /* ロゴの数の半分 × ロゴの幅 */
     }
 }
 
@@ -386,45 +389,45 @@ section {
     section {
         padding: 60px 0;
     }
-    
+
     .page-header {
         padding: 60px 0 30px;
     }
-    
+
     .page-title {
         font-size: 2rem;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .case-studies-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .cta-title {
         font-size: 1.8rem;
     }
-    
+
     .cta-description {
         font-size: 1rem;
     }
-    
+
     .cta-button {
         font-size: 1rem;
         padding: 12px 30px;
     }
-    
+
     .testimonial-nav {
         width: 36px;
         height: 36px;
     }
-    
+
     .testimonial-nav.prev {
         left: 10px;
     }
-    
+
     .testimonial-nav.next {
         right: 10px;
     }
@@ -434,28 +437,28 @@ section {
     .page-title {
         font-size: 1.8rem;
     }
-    
+
     .section-title {
         font-size: 1.5rem;
     }
-    
+
     .testimonial-card {
         padding: 20px;
     }
-    
+
     .testimonial-avatar {
         width: 50px;
         height: 50px;
     }
-    
+
     .testimonial-name {
         font-size: 1rem;
     }
-    
+
     .case-logo {
         height: 70px;
     }
-    
+
     .case-title {
         font-size: 1.1rem;
     }
@@ -476,10 +479,12 @@ section {
     background: linear-gradient(135deg, #f5faff 80%, #e3f0ff 100%);
     transition: box-shadow 0.3s, border-color 0.3s;
 }
+
 .literacy-card:hover {
     box-shadow: 0 12px 32px rgba(30, 144, 255, 0.18);
     border-color: #39FF14;
 }
+
 .literacy-card .badge {
     position: absolute;
     top: 10px;
@@ -490,20 +495,23 @@ section {
     font-size: 0.85rem;
     padding: 4px 12px;
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(57,255,20,0.15);
+    box-shadow: 0 2px 8px rgba(57, 255, 20, 0.15);
     letter-spacing: 1px;
 }
+
 .literacy-card .icon {
     font-size: 1.4em;
     margin-right: 8px;
     vertical-align: middle;
 }
+
 .literacy-card .case-title {
     color: #1E90FF;
     display: flex;
     align-items: center;
     gap: 6px;
 }
+
 .literacy-card .highlight {
     background: linear-gradient(90deg, #e3f0ff 60%, #f5faff 100%);
     border-left: 4px solid #1E90FF;
@@ -513,6 +521,7 @@ section {
     color: #222;
     margin-bottom: 18px;
 }
+
 .literacy-card .card-link {
     text-decoration: none;
     color: inherit;
