@@ -604,7 +604,7 @@ p {
 /* Breadcrumb */
 .breadcrumb {
   background-color: var(--light-gray);
-  padding: var(--space-s) 0;
+  padding: var(--space-xxs) 0;
 }
 
 .breadcrumb .container {
@@ -625,7 +625,7 @@ p {
 
 .breadcrumb li {
   position: relative;
-  font-size: var(--font-s);
+  font-size: var(--font-xs);
   color: var(--text-medium);
   line-height: 1.8;
 }
@@ -657,7 +657,7 @@ p {
 /* Responsive breadcrumb */
 @media (max-width: 900px) {
   .breadcrumb {
-    padding: var(--space-xs) 0;
+    padding: var(--space-xxs) 0;
   }
 
   .breadcrumb ul {
@@ -665,7 +665,7 @@ p {
   }
 
   .breadcrumb li {
-    font-size: var(--font-s);
+    font-size: var(--font-xs);
   }
 
   .breadcrumb li:not(:first-child):before {
@@ -683,7 +683,7 @@ p {
   }
 
   .breadcrumb li {
-    font-size: var(--font-s);
+    font-size: var(--font-xs);
   }
 
   .breadcrumb li:not(:first-child):before {
