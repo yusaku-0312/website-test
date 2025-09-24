@@ -66,7 +66,7 @@
   font-weight: 700;
   border-left: 5px solid var(--primary-blue);
   padding-left: var(--space-s);
-  margin: 2.2em 0 1em 0;
+  margin: 1.0em 0 1em 0;
 }
 
 .blog-article h3 {
@@ -195,6 +195,123 @@
   .blog-article-toc a {
     font-size: var(--font-s);
   }
+
+  .reviewer-card {
+    grid-template-columns: 80px 1fr;
+    padding: var(--space-s);
+  }
+
+  .reviewer-avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* =========================
+   Reviewer (監修者情報)
+   ========================= */
+.reviewer-section {
+  background: var(--light-blue);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(30, 144, 255, 0.07);
+  padding: var(--space-m);
+  margin: var(--space-l) 0 0 0;
+}
+
+.reviewer-card {
+  display: grid;
+  gap: var(--space-m);
+  align-items: start;
+  background: #fff;
+  border: 1.5px solid var(--primary-blue-light);
+  border-radius: 12px;
+  padding: var(--space-m);
+}
+
+/* 画像なしカード用 */
+.reviewer-card.no-avatar {
+  grid-template-columns: 1fr;
+  /* 1カラムで中央寄せ */
+}
+
+.reviewer-content {
+  min-width: 0;
+  margin-top: 0px;
+}
+
+.reviewer-title {
+  font-size: var(--font-m);
+  color: var(--primary-blue-dark);
+  font-weight: 700;
+  border-left: 5px solid var(--primary-blue);
+  padding-left: var(--space-s);
+  margin: 1.2em 0 1em 0;
+}
+
+.reviewer-name {
+  font-size: var(--font-m);
+  color: var(--primary-blue);
+  font-weight: 800;
+  margin: 0 0 var(--space-xxs) 0;
+  line-height: 1.2;
+}
+
+.reviewer-roles {
+  font-size: var(--font-s);
+  color: var(--text-medium);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.reviewer-bio {
+  font-size: var(--font-s);
+  color: var(--text-dark);
+  margin: 0 0 var(--space-s) 0;
+  line-height: 1.9;
+}
+
+.reviewer-meta {
+  display: flex;
+  gap: var(--space-m);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reviewer-more {
+  display: inline-block;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary-blue);
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: background var(--transition-normal), transform var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+}
+
+.reviewer-more:hover,
+.reviewer-more:focus-visible {
+  background: var(--primary-blue-dark);
+  transform: translateY(-2px);
+}
+
+
+.reviewer-sns {
+  margin-top: var(--space-xs);
+  display: flex;
+  gap: var(--space-s);
+}
+
+.reviewer-sns a {
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.reviewer-sns a:hover,
+.reviewer-sns a:focus-visible {
+  color: var(--primary-blue-dark);
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
@@ -345,56 +462,6 @@
   margin-top: var(--space-xxs);
 }
 
-/* AIフロー */
-.ai-flow-steps {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.ai-flow-step {
-  background: #f0fff8;
-  border-radius: 8px;
-  border: 1.5px solid var(--neo-green-light);
-  color: var(--primary-blue-dark);
-  font-weight: 700;
-  font-size: var(--font-s);
-  padding: var(--space-xs) var(--space-m);
-  min-width: 120px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(39, 255, 20, 0.04);
-  display: flex;
-  align-items: center;
-  gap: var(--space-xxs);
-}
-
-.ai-flow-step span {
-  background: var(--neo-green-light);
-  color: #fff;
-  border-radius: 50%;
-  width: 1.7em;
-  height: 1.7em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-s);
-  margin-right: var(--space-xxs);
-}
-
-.ai-flow-arrow {
-  font-size: var(--font-s);
-  color: var(--primary-blue);
-  font-weight: 700;
-}
-
-.ai-flow-caption {
-  font-size: var(--font-s);
-  color: var(--text-medium);
-  margin-top: var(--space-xxs);
-}
-
 /* AIケース */
 .ai-case-grid {
   display: flex;
@@ -535,5 +602,14 @@
 
   .blog-article-header .blog-article-thumb-img {
     box-shadow: 0 4px 14px rgba(0, 114, 224, 0.10);
+  }
+
+  .reviewer-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .reviewer-media {
+    justify-content: flex-start;
   }
 }
