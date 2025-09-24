@@ -714,7 +714,7 @@ p {
   background-color: var(--primary-blue);
 }
 
-.section-description {
+.section-description-faq {
   font-size: var(--font-m);
   color: var(--text-medium);
   margin-top: var(--space-s);
@@ -1133,3 +1133,151 @@ body.about-page .section-header {
 .blog-header {
   margin-bottom: var(--space-l);
 }
+
+/* =====================
+   FAQ (Accordion) — Common
+   再利用可：index.html / services.html など
+===================== */
+.faq-section {
+  background: var(--light-blue);
+  padding: var(--space-xl) 0;
+  margin-top: 20px;
+}
+
+.faq-section .section-header {
+  text-align: center;
+  margin-bottom: var(--space-l);
+}
+
+.faq {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  gap: var(--space-s);
+}
+
+/* 各アイテム */
+.faq-item {
+  background: var(--light-gray);
+  border-radius: var(--space-xs);
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.10);
+  overflow: hidden;
+}
+
+/* 見出しボタン（質問） */
+.faq-q {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-m);
+  background: var(--white);
+  color: var(--text-dark);
+  font-size: var(--font-s);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-s);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-q:hover,
+.faq-item[open] .faq-q {
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(30, 144, 255, 0.12);
+}
+
+/* プラス/マイナスアイコン */
+.faq-q .faq-icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.faq-q .faq-icon::before,
+.faq-q .faq-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--primary-blue);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform var(--transition-normal);
+}
+
+.faq-q .faq-icon::before {
+  /* 縦線 */
+  width: 2px;
+  height: 16px;
+}
+
+.faq-q .faq-icon::after {
+  /* 横線 */
+  width: 16px;
+  height: 2px;
+}
+
+.faq-item[open] .faq-q .faq-icon::before {
+  /* 開いたら縦線を回転して消す */
+  transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+}
+
+/* 答え部分（パネル） */
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 var(--space-m);
+  background: var(--light-blue);
+  transition: max-height var(--transition-slow), padding var(--transition-slow);
+  will-change: max-height;
+}
+
+.faq-item[opening] .faq-a,
+.faq-item[closing] .faq-a {
+  /* アニメ中のスムーズ感 */
+  overflow: hidden;
+}
+
+.faq-item[open] .faq-a {
+  padding: 0 var(--space-m) var(--space-m) var(--space-m);
+}
+
+/* 答えテキスト */
+.faq-a p,
+.faq-a ul {
+  font-size: var(--font-s);
+  color: var(--text-medium);
+  line-height: 1.8;
+  margin: var(--space-xs) 0 0 0;
+}
+
+/* アクセシビリティ＆動き控えめ設定 */
+@media (prefers-reduced-motion: reduce) {
+  .faq-a {
+    transition: none;
+  }
+
+  .faq-q .faq-icon::before,
+  .faq-q .faq-icon::after {
+    transition: none;
+  }
+}
+
+/* レスポンシブ微調整 */
+@media (max-width: 600px) {
+  .faq-q {
+    padding: var(--space-s);
+  }
+
+  .faq-a {
+    padding: 0 var(--space-s);
+  }
+
+  .faq-item[open] .faq-a {
+    padding: 0 var(--space-s) var(--space-s) var(--space-s);
+  }
+}
+
