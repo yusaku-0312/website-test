@@ -340,8 +340,10 @@
   }
 
   .ai-consulting-hero-right img {
-    width: 80%;
-    margin: 0 auto;
+    width: 60%;          /* 80% → 60% に縮小 */
+    max-width: 260px;    /* 上限を明示して調整 */
+    margin: 0 auto;      /* 中央配置 */
+    display: block;
   }
 
   /* 特徴セクションも縦積み */
@@ -358,7 +360,7 @@
   }
 
   .ai-feature-visual img {
-    width: min(80vw, 360px);
+    width: min(60vw, 360px);
   }
 }
 
@@ -375,7 +377,7 @@
   }
 
   .section-title {
-    font-size: 1.6rem;
+    font-size: var(--font-l);
   }
 
   /* カード1列 */
@@ -387,15 +389,10 @@
     height: 160px;
   }
 
-  /* タイムラインの縮小（崩れ防止は変数で統一） */
   .flow-list {
     --flow-col: 56px;
-    /* 列幅を少し狭く */
     --line-w: 3px;
-    /* 線を細く */
     --node-d: 36px;
-    /* ノードを小さく */
-    /* --node-b, --item-pt, --item-pb は既存のまま */
   }
 
   .flow-item {
@@ -437,4 +434,48 @@
   .flow-item:last-child::after {
     display: none;
   }
+}
+/* ====================
+   無料相談CTAセクション
+   ====================*/
+.consultation-cta {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.consultation-cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.consultation-cta-title {
+  font-size: var(--font-l);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.consultation-cta-lead {
+  font-size: var(--font-s);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  color: var(--white);
+}
+
+.cta-button--primary {
+  background: var(--white);
+  color: var(--primary-blue);
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.cta-button--primary:hover {
+  background: var(--primary-blue-light);
+  color: var(--white);
 }
