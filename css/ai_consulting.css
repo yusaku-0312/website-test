@@ -1,183 +1,440 @@
-.refined-hero {
-  background: linear-gradient(120deg, var(--primary-blue-light), var(--primary-blue));
-  color: var(--white);
-  padding: 72px 0 48px 0;
-  text-align: center;
-  border-bottom: 1px solid var(--primary-blue-light);
+/* ====================
+      ヒーローセクション
+   ====================*/
+.ai-consulting-hero {
+  padding: 60px 20px;
+  background: #edf5ff;
 }
 
-.refined-title {
-  font-size: var(--font-l);
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  margin-bottom: 12px;
-  color: var(--white);
-}
-
-.refined-lead {
-  font-size: var(--font-s);
-  color: var(--white);
-  opacity: 0.95;
-  margin-bottom: 0;
-}
-
-.refined-section {
-  background: #fff;
-  border-radius: 0;
-  box-shadow: none;
-  margin: 0 auto 48px auto;
-  max-width: 900px;
-  padding: 48px 0 32px 0;
-  border-bottom: 1px solid var(--light-gray);
-}
-
-.refined-section:last-child {
-  border-bottom: none;
-}
-
-.refined-bg {
-  background: var(--light-gray);
-}
-
-.refined-h2 {
-  font-size: var(--font-m);
-  font-weight: 700;
-  color: var(--primary-blue-dark);
-  border-left: 6px solid var(--primary-blue);
-  padding-left: 16px;
-  margin-bottom: 24px;
-}
-
-.refined-two-col {
+.ai-consulting-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.refined-col {
-  flex: 1 1 0;
-  min-width: 220px;
-}
-
-.refined-desc {
-  font-size: var(--font-s);
-  color: var(--text-medium);
-  line-height: 1.8;
-  padding-left: 16px;
-  border-left: 2px solid var(--light-gray);
-}
-
-.refined-list {
-  list-style: disc inside;
-  font-size: var(--font-s);
-  color: var(--text-dark);
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.refined-list li {
-  margin-bottom: 12px;
-  line-height: 1.7;
-  font-size: var(--font-s);
-}
-
-.refined-feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.refined-feature-list li {
-  font-size: var(--font-s);
-  color: var(--text-dark);
-  margin-bottom: 14px;
-  padding-left: 0;
-  border-left: 4px solid var(--primary-blue-light);
-  padding-left: 14px;
-}
-
-.refined-feature-title {
-  font-weight: 700;
-  color: var(--primary-blue);
-  margin-right: 8px;
-  font-size: var(--font-s);
-}
-
-.refined-flow-list {
-  list-style: decimal inside;
-  font-size: var(--font-s);
-  color: var(--text-dark);
-  margin: 0;
-  padding: 0 0 0 8px;
-}
-
-.refined-flow-list li {
-  margin-bottom: 12px;
-  line-height: 1.7;
-  font-size: var(--font-s);
-}
-
-.refined-flow-step {
-  font-weight: 700;
-  color: var(--primary-blue-dark);
-  margin-right: 8px;
-  font-size: var(--font-s);
-}
-
-.refined-faq-block {
-  background: #f8fafd;
-  border: 1px solid var(--light-gray);
-  border-radius: 8px;
-  padding: 24px 24px 18px 24px;
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.refined-faq-q {
-  font-weight: 700;
-  color: var(--primary-blue-dark);
-  font-size: var(--font-s);
-  margin-bottom: 10px;
+.ai-consulting-hero-left {
+  flex: 0 0 50%;
+  padding-left: 20px;
 }
 
-.refined-faq-a {
+.ai-consulting-hero-right {
+  flex: 0 0 40%;
+}
+
+.ai-consulting-hero-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 90%;
+}
+
+.ai-consulting-title {
+  font-size: var(--font-xl);
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 16px;
+}
+
+.ai-consulting-subtitle {
+  font-size: var(--font-m);
+  font-weight: 600;
   color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.ai-consulting-lead {
+  font-size: var(--font-s);
+  color: var(--text-medium);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* ====================
+    サービス概要セクション
+   ====================*/
+.service-overview {
+  background: var(--light-blue);
+  padding: 60px 20px;
+}
+
+.service-overview-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: var(--font-l);
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  border-left: 4px solid var(--primary-blue);
+  padding-left: 12px;
+}
+
+.service-overview-text {
+  font-size: var(--font-s);
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ====================
+    サービス内容セクション
+   ====================*/
+.service-contents {
+  background: var(--white);
+  padding: 64px 20px;
+}
+
+.service-contents-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-points {
+  margin: 0 0 20px 0;
+  padding-left: 1.2em;
+  color: var(--text-dark);
+  line-height: 1.8;
+  font-size: var(--font-s);
+}
+
+.service-points li+li {
+  margin-top: 6px;
+}
+
+.works-intro {
+  margin: 8px 0 20px;
+}
+
+.link-inline {
+  color: var(--primary-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ====================
+    サービス特徴セクション
+   ====================*/
+.ai-feature {
+  background: var(--light-blue);
+  padding: 64px 20px;
+}
+
+.ai-feature-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.ai-feature-text {
+  flex: 1 1 55%;
+  min-width: 0;
+}
+
+.ai-feature-subtitle {
+  font-size: var(--font-m);
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 16px 0 10px;
+}
+
+.ai-feature-lead {
+  font-size: var(--font-s);
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-top: 12px;
+}
+
+.ai-feature-list {
+  margin: 0;
+  padding-left: 1.2em;
+  list-style: decimal;
+  color: var(--text-dark);
+  line-height: 1.8;
+  font-size: var(--font-s);
+}
+
+.ai-feature-list li+li {
+  margin-top: 6px;
+}
+
+.ai-feature-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-feature-visual img {
+  width: min(100%, 420px);
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+  background: var(--light-blue);
+  padding: 16px;
+  box-shadow: 0 6px 24px rgba(0, 114, 224, 0.12);
+}
+
+/* ====================
+   導入の流れ（タイムライン）
+   ====================*/
+.onboarding-flow {
+  background: var(--white);
+  padding: 64px 20px;
+}
+
+.onboarding-flow-container {
+  max-width: var(--container-max, 1100px);
+  margin: 0 auto;
+}
+
+.flow-list {
+  /* ここを縮小用に可変化しておく（ブレークポイントで上書き） */
+  --flow-col: 72px;
+  /* 左の縦ライン列幅 */
+  --line-w: 4px;
+  /* 縦ライン太さ */
+  --node-d: 44px;
+  /* 丸ノード直径 */
+  --node-b: 3px;
+  /* ノードの外枠（border） */
+  --item-pt: 14px;
+  /* アイテム上パディング */
+  --item-pb: 18px;
+  /* アイテム下パディング */
+
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.flow-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--flow-col) 1fr;
+  column-gap: 24px;
+  align-items: start;
+  padding: var(--item-pt) 0 var(--item-pb);
+}
+
+.flow-item::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--flow-col)/2 - var(--line-w)/2);
+  top: 0;
+  bottom: 0;
+  width: var(--line-w);
+  background: var(--primary-blue-light);
+  opacity: .35;
+  border-radius: 2px;
+  z-index: 0;
+}
+
+/* 最初/最後の項目でライン端をノード半径分だけ内側に調整 */
+.flow-item:first-child::before {
+  top: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
+}
+
+.flow-item:last-child::before {
+  bottom: calc(var(--item-pb) + var(--node-d)/2 + var(--node-b));
+}
+
+.flow-node {
+  grid-column: 1;
+  justify-self: center;
+  width: var(--node-d);
+  height: var(--node-d);
+  border-radius: 50%;
+  background: var(--primary-blue-light);
+  border: 3px solid #fff;
+  box-shadow: 0 6px 22px rgba(0, 114, 224, .15);
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.flow-node span {
+  color: var(--white);
+  font-weight: 700;
+  font-size: var(--font-xs);
+  line-height: 1;
+}
+
+.flow-content {
+  grid-column: 2;
+}
+
+.flow-step {
+  margin: 4px 0;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: var(--font-s);
+}
+
+.flow-desc {
+  margin: 0;
+  color: var(--text-medium);
   font-size: var(--font-s);
   line-height: 1.8;
 }
 
-@media (max-width: 900px) {
-  .refined-section {
-    padding: 32px 0 20px 0;
+/* ====================
+        FAQ
+   ====================*/
+.qa-section {
+  background: var(--light-blue);
+  padding: 64px 20px;
+}
+
+.qa-header,
+.qa-section .faq {
+  max-width: var(--container-max, 1100px);
+  margin: 0 auto;
+}
+
+.qa-lead {
+  color: var(--text-medium);
+  margin: 6px 0 16px;
+  line-height: 1.7;
+  font-size: var(--font-s);
+}
+
+/* =========================
+  ここからレスポンシブ一括管理
+   1024 / 768 / 640
+========================= */
+
+/* ====== ≤1024px（タブレット横〜） ====== */
+@media (max-width: 1024px) {
+
+  /* カード2列など、共通UIの縮小 */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .refined-two-col {
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .refined-desc {
-    padding-left: 0;
-    border-left: none;
-    margin-top: 10px;
+  .card-image {
+    height: 170px;
   }
 }
 
-@media (max-width: 600px) {
-  .refined-hero {
-    padding: 32px 0 16px 0;
+/* ====== ≤768px（タブレット縦・小型端末） ====== */
+@media (max-width: 768px) {
+
+  /* ヒーローは縦積み */
+  .ai-consulting-container {
+    flex-direction: column;
+    gap: 24px;
   }
 
-  .refined-title {
-    font-size: 1.3rem;
+  .ai-consulting-hero-right,
+  .ai-consulting-hero-left {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
   }
 
-  .refined-section {
-    padding: 16px 0 8px 0;
+  .ai-consulting-hero-right img {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .refined-faq-block {
-    padding: 12px 8px 8px 8px;
+  /* 特徴セクションも縦積み */
+  .ai-feature-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ai-feature-text,
+  .ai-feature-visual {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ai-feature-visual img {
+    width: min(80vw, 360px);
+  }
+}
+
+/* ====== ≤640px（スマホ） ====== */
+@media (max-width: 640px) {
+
+  /* 余白・文字サイズの微調整 */
+  .service-contents {
+    padding: 48px 16px;
+  }
+
+  .qa-section {
+    padding: 48px 16px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* カード1列 */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  /* タイムラインの縮小（崩れ防止は変数で統一） */
+  .flow-list {
+    --flow-col: 56px;
+    /* 列幅を少し狭く */
+    --line-w: 3px;
+    /* 線を細く */
+    --node-d: 36px;
+    /* ノードを小さく */
+    /* --node-b, --item-pt, --item-pb は既存のまま */
+  }
+
+  .flow-item {
+    column-gap: 16px;
+  }
+
+  .flow-item::before {
+    /* 既存の bottom:0; を無効化して「上半分」だけ描く */
+    left: calc(var(--flow-col)/2 - var(--line-w)/2);
+    width: var(--line-w);
+    background: var(--primary-blue-light);
+    opacity: .35;
+    border-radius: 2px;
+    top: 0;
+    bottom: auto;
+    height: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
+    content: "";
+  }
+
+  /* 先頭は上半分の線を非表示 */
+  .flow-item:first-child::before {
+    display: none;
+  }
+
+  /* 下半分は ::after で描く（最後の項目は非表示） */
+  .flow-item::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--flow-col)/2 - var(--line-w)/2);
+    top: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
+    bottom: 0;
+    /* アイテム下端まで（次のノード中心まで繋がる） */
+    width: var(--line-w);
+    background: var(--primary-blue-light);
+    opacity: .35;
+    border-radius: 2px;
+  }
+
+  .flow-item:last-child::after {
+    display: none;
   }
 }

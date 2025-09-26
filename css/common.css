@@ -26,18 +26,9 @@
 
   /* Font sizes（全体的に1段階大きく） */
   --font-xl: 4.0rem;
-  /* 57.6px */
-  /* --font-l: 2.8rem; */
-  /* xl→l */
-  /* 44.8px */
-  /* --font-l: 2.3rem; */
   --font-l: 2.8rem;
-  /* 33.6px */
-  /* --font-m: 1.9rem; */
   --font-m: 2.2rem;
-  /* l→m*/
-  /* 27.2px */
-  --font-s: 1.8rem;
+  --font-s: 1.65rem;
   --font-xs: 1.2rem;
   /* 記載日・更新日用*/
   /* 20.8px */
@@ -144,7 +135,7 @@ p {
   color: var(--white);
   font-weight: 700;
   font-size: var(--font-s);
-  border-radius: 4px;
+  border-radius: 100px;
   text-align: center;
   transition: all var(--transition-normal);
   position: relative;
@@ -1280,4 +1271,3 @@ body.about-page .section-header {
     padding: 0 var(--space-s) var(--space-s) var(--space-s);
   }
 }
-
