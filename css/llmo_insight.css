@@ -335,26 +335,6 @@
     z-index: 0;
 }
 
-.llmo-overview-visual::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -80px;
-    /* 左に広げる */
-    right: -80px;
-    /* 右にも広げる */
-    bottom: -10px;
-    background-image: url("/images/wave-bg.png");
-    /* 例: 透明PNG推奨 */
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover;
-    /* 端まで馴染ませる */
-    opacity: 0.85;
-    pointer-events: none;
-    z-index: 1;
-}
-
 .llmo-overview-lead {
     position: relative;
     z-index: 2;
@@ -402,7 +382,6 @@
 .llmo-overview-box-grid {
     display: grid;
     grid-template-columns: 1.6fr 1.2fr;
-    /* 左テキスト広め（初段） */
     gap: 28px;
     align-items: center;
 }
@@ -413,33 +392,24 @@
 
 .llmo-overview-box-text {
     font-size: var(--font-m);
-    color: var(--text-medium);
-    line-height: 1.8;
 }
 
 .llmo-overview-list {
     display: block !important;
-    /* flex/inline の影響を完全リセット */
     list-style: none !important;
-    /* ・マークを削除 */
     padding-left: 0 !important;
-    /* インデント解除 */
     margin: 0;
     white-space: normal !important;
-    /* nowrapの影響を無効化 */
+    font-weight: 400;
 }
 
 .llmo-overview-list>li {
     display: list-item !important;
-    /* 各liをブロック扱いに戻す → 改行される */
     line-height: 1.8;
-    /* 行間を確保 */
     margin-bottom: 8px;
-    /* 改行間隔を明確に */
-    color: var(--text-medium);
-    /* テキスト色統一 */
     font-size: var(--font-s);
-    /* 段落とトーンを揃える */
+    /* font-weight: 400 !important;   */
+    font-weight: 400;  
 }
 
 
@@ -475,7 +445,6 @@
 .llmo-overview-box-text ul,
 .llmo-overview-box-text li {
     font-size: var(--font-s);
-    color: var(--text-medium);
     line-height: 1.9;
 }
 
