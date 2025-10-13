@@ -1,57 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://miraina.com/</loc>
+    <loc>https://miraina-ai.com/</loc>
   </url>
   <url>
-    <loc>https://miraina.com/index.html</loc>
+    <loc>https://miraina-ai.com/index.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/about.html</loc>
+    <loc>https://miraina-ai.com/about.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/services.html</loc>
+    <loc>https://miraina-ai.com/services.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/services/ai_consulting.html</loc>
+    <loc>https://miraina-ai.com/services/ai_consulting.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/services/ai_training.html</loc>
+    <loc>https://miraina-ai.com/services/ai_training.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/services/ai_development.html</loc>
+    <loc>https://miraina-ai.com/services/ai_development.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/works.html</loc>
+    <loc>https://miraina-ai.com/services/llmo_insight.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/works/work001.html</loc>
+    <loc>https://miraina-ai.com/works.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/works/work002.html</loc>
+    <loc>https://miraina-ai.com/works/work001.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/works/work003.html</loc>
+    <loc>https://miraina-ai.com/works/work002.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/blogs.html</loc>
+    <loc>https://miraina-ai.com/works/work003.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/blogs/blog001.html</loc>
+    <loc>https://miraina-ai.com/blogs.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/blogs/blog002.html</loc>
+    <loc>https://miraina-ai.com/blogs/blog001.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/blogs/blog003.html</loc>
+    <loc>https://miraina-ai.com/blogs/blog002.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/blogs/blog004.html</loc>
+    <loc>https://miraina-ai.com/blogs/blog003.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/contact.html</loc>
+    <loc>https://miraina-ai.com/blogs/blog004.html</loc>
   </url>
   <url>
-    <loc>https://miraina.com/privacy_policy.html</loc>
+    <loc>https://miraina-ai.com/blogs/blog005.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina-ai.com/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://miraina-ai.com/privacy_policy.html</loc>
   </url>
 </urlset>

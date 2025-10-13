@@ -55,6 +55,31 @@
   font-size: var(--font-s);
   margin-bottom: var(--space-xxs);
 }
+/* 目次リンク：文字色も下線も青 */
+.blog-article-toc a {
+  color: #2563eb !important;                 /* テキストを青に */
+  text-decoration: underline !important;     /* 常時下線 */
+  text-decoration-color: #2563eb;            /* 下線も青に */
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* ホバー/フォーカス時は少し濃くして視認性UP */
+.blog-article-toc a:hover,
+.blog-article-toc a:focus-visible {
+  color: #1d4ed8 !important;
+  text-decoration-color: #1d4ed8;
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* 訪問済みの色も統一したい場合（任意） */
+.blog-article-toc a:visited {
+  color: #2563eb !important;
+  text-decoration-color: #2563eb;
+}
+
 
 .blog-article section {
   margin-bottom: var(--space-l);
@@ -612,4 +637,164 @@
   .reviewer-media {
     justify-content: flex-start;
   }
+}
+
+
+/* =============== テーブルデザイン（修正版） =============== */
+/* カラートークン（サイトの雰囲気に馴染む中間トーン） */
+:root {
+  --tbl-bg: #ffffff;
+  --tbl-text: #1e293b;           /* slate-800 */
+  --tbl-muted: #64748b;          /* slate-500 */
+  --tbl-border: #e2e8f0;         /* slate-200 */
+  --tbl-accent: #eef2ff;         /* indigo-50 */
+  --tbl-accent-strong: #e0e7ff;  /* indigo-100 */
+  --tbl-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tbl-bg: #0b1220;
+    --tbl-text: #e5e7eb;         /* gray-200 */
+    --tbl-muted: #94a3b8;        /* slate-400 */
+    --tbl-border: #1f2937;       /* gray-800 */
+    --tbl-accent: #111827;       /* gray-900 */
+    --tbl-accent-strong: #0f172a;/* slate-950 */
+    --tbl-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  }
+}
+
+/* ラッパー（横スクロール＆カード風） */
+.blog-figure { margin: 1.5rem 0 2rem; }
+.blog-figure .table-compare-wrapper {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 16px;
+  box-shadow: var(--tbl-shadow);
+  padding: clamp(12px, 2vw, 20px);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* テーブル本体 */
+.blog-figure .table-compare {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: clamp(14px, 1.6vw, 15.5px);
+  color: var(--tbl-text);
+  min-width: 680px; /* PCで列幅が詰まりすぎるのを防止 */
+  background-clip: padding-box;
+}
+
+/* ヘッダー */
+.blog-figure .table-compare thead th {
+  position: sticky; /* モバイルでの可読性向上 */
+  top: 0;
+  background: linear-gradient(180deg, var(--tbl-accent-strong), var(--tbl-accent));
+  color: var(--tbl-text);
+  text-align: left;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--tbl-border);
+  white-space: nowrap;
+  background-clip: padding-box;
+}
+/* PCではstickyを無効化して角丸と馴染ませる */
+@media (min-width: 768px) {
+  .blog-figure .table-compare thead th { position: static; }
+}
+
+/* 先頭列（観点）を見やすく。トーンは控えめに */
+.blog-figure .table-compare tbody td:first-child,
+.blog-figure .table-compare thead th:first-child {
+  background: color-mix(in oklab, var(--tbl-accent) 22%, transparent);
+  font-weight: 600;
+}
+
+/* セル共通 */
+.blog-figure .table-compare td,
+.blog-figure .table-compare th {
+  border-right: 1px solid var(--tbl-border);
+  background-clip: padding-box;
+}
+.blog-figure .table-compare td:last-child,
+.blog-figure .table-compare th:last-child { border-right: none; }
+
+.blog-figure .table-compare tbody td {
+  padding: 14px 16px;
+  vertical-align: top;
+  line-height: 1.7;
+  color: var(--tbl-text);
+}
+
+/* 行の区切り＆ゼブラ */
+.blog-figure .table-compare tbody tr { border-bottom: 1px solid var(--tbl-border); }
+.blog-figure .table-compare tbody tr:nth-child(odd) td {
+  background: color-mix(in oklab, var(--tbl-accent) 35%, transparent);
+}
+
+/* ホバー（モバイル非対応でもOK） */
+@media (hover:hover) {
+  .blog-figure .table-compare tbody tr:hover td {
+    background: color-mix(in oklab, var(--tbl-accent-strong) 55%, transparent);
+  }
+}
+
+/* “謎の強調”対策：バッジはデフォルトで目立たせない */
+.blog-figure .table-compare .badge {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: 600; /* 太字寄りの通常強調に */
+}
+
+/* テーブル内のリンク等も過度に青くならないよう調整 */
+.blog-figure .table-compare a {
+  color: var(--tbl-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+.blog-figure .table-compare a:hover {
+  color: color-mix(in oklab, var(--tbl-text) 80%, #6366f1);
+}
+.blog-figure .table-compare em { font-style: normal; color: var(--tbl-muted); }
+.blog-figure .table-compare strong { font-weight: 650; }
+
+/* 小画面時の読みやすさ（字間と余白を微調整） */
+@media (max-width: 640px) {
+  .blog-figure .table-compare {
+    font-size: 14px;
+    min-width: 560px;
+  }
+  .blog-figure .table-compare thead th,
+  .blog-figure .table-compare tbody td {
+    padding: 12px 12px;
+  }
+}
+
+/* 角丸＆ボーダーの処理（カード感をキレイに） */
+.blog-figure .table-compare thead th:first-child { border-top-left-radius: 12px; }
+.blog-figure .table-compare thead th:last-child  { border-top-right-radius: 12px; }
+.blog-figure .table-compare tbody tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+.blog-figure .table-compare tbody tr:last-child td:last-child  { border-bottom-right-radius: 12px; }
+
+/* 見出しアイコン（ドット）はデフォルトOFFにする */
+.blog-figure .table-compare thead th::before { content: none; }
+
+/* 列幅の目安 */
+.blog-figure .table-compare .col-axis { width: 18%; }
+.blog-figure .table-compare .col-seo  { width: 41%; }
+.blog-figure .table-compare .col-llmo { width: 41%; }
+
+/* キャプション */
+.blog-figure .table-compare-caption {
+  text-align: left;
+  font-weight: 600;
+  color: var(--tbl-muted);
+  margin-bottom: 6px;
 }
