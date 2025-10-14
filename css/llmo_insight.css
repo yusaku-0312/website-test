@@ -218,7 +218,7 @@
 .llmo-depth-turn {
     margin: 42px 0 20px;
     font-size: var(--font-m);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-dark);
     letter-spacing: -0.01em;
 }
@@ -241,7 +241,7 @@
     text-align: center;
     color: var(--white);
     font-size: var(--font-l);
-    font-weight: 700;
+    font-weight: 650;
     line-height: 1.4;
 }
 
@@ -301,7 +301,7 @@
 .llmo-solution-point-title {
     font-size: var(--font-m);
     color: var(--text-dark);
-    font-weight: 800;
+    font-weight: 700;
     margin: 0 0 10px 0;
     line-height: 1.3;
 }
