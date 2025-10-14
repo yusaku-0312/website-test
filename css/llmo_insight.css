@@ -4,7 +4,7 @@
 
 .section-title {
     font-size: var(--font-l);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-blue);
     margin-bottom: 20px;
     border-left: 4px solid var(--primary-blue);
@@ -39,7 +39,7 @@
 /* H1（大きめ） */
 .llmo-hero__title {
     font-size: var(--font-xl);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--primary-blue);
     margin: 0 0 24px 0;
     line-height: 1;
@@ -128,7 +128,7 @@
 /* h3 は青系で太め */
 .llmo-problem-title {
     font-size: var(--font-m);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--primary-blue);
     margin: 0 0 20px 0;
     line-height: 1.2;
@@ -158,7 +158,7 @@
 .llmo-problem-lead {
     font-size: var(--font-s);
     color: var(--text-dark);
-    font-weight: 800;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -166,7 +166,7 @@
 .llmo-problems-body {
     margin-top: 36px;
     max-width: 1000px;
-    font-weight: 800;
+    font-weight: 600;
     font-size: var(--font-s);
     color: var(--text-medium);
     line-height: 1.9;
@@ -205,20 +205,20 @@
 }
 
 .llmo-depth-answer-lead {
-    font-weight: 800;
+    font-weight: 700;
     margin: 0 0 6px 0;
 }
 
 .llmo-depth-mark {
     color: #d94a4a;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 /* 太字メッセージ */
 .llmo-depth-turn {
     margin: 42px 0 20px;
     font-size: var(--font-m);
-    font-weight: 900;
+    font-weight: 800;
     color: var(--text-dark);
     letter-spacing: -0.01em;
 }
@@ -241,7 +241,7 @@
     text-align: center;
     color: var(--white);
     font-size: var(--font-l);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.4;
 }
 
@@ -301,7 +301,7 @@
 .llmo-solution-point-title {
     font-size: var(--font-m);
     color: var(--text-dark);
-    font-weight: 900;
+    font-weight: 800;
     margin: 0 0 10px 0;
     line-height: 1.3;
 }
@@ -366,14 +366,14 @@
 
 .llmo-overview-kicker {
     font-size: var(--font-m);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--primary-blue-light);
     margin: 0 0 6px 0;
 }
 
 .llmo-overview-box-title {
     font-size: var(--font-m);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--text-dark);
     margin: 0;
     line-height: 1.4;
@@ -504,7 +504,7 @@
 
 .llmo-benefit-heading {
     font-size: var(--font-m);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--text-dark);
     margin: 0 0 12px 0;
     line-height: 1.3;
@@ -613,7 +613,7 @@
 
 .llmo-flow-node span {
     color: var(--white);
-    font-weight: 800;
+    font-weight: 700;
     font-size: var(--font-s);
     line-height: 1;
 }
@@ -624,7 +624,7 @@
 
 .llmo-flow-step {
     margin: 4px 0 4px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-dark);
     font-size: var(--font-s);
 }
@@ -681,7 +681,7 @@
     background: #2a6382;
     /* 見出し帯の濃いブルー（例） */
     color: #fff;
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
     font-size: var(--font-s);
     padding: 18px 16px;
@@ -698,7 +698,7 @@
     background: #f9fefe;
     color: var(--text-dark);
     text-align: left;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* 本文セル */
@@ -732,7 +732,7 @@
 .llmo-pricing-term span {
     display: inline-block;
     font-size: var(--font-l);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--primary-blue);
 }
 
@@ -789,7 +789,7 @@
     /* ← 月額費用と同じ大きさに */
     color: var(--text-dark);
     /* ← 月額費用と同じカラーに */
-    font-weight: 700;
+    font-weight: 600;
     /* ← 少し強調（他セルと統一） */
 }
 
@@ -797,7 +797,7 @@
     display: inline-block;
     font-size: var(--font-s);
     /* ← var(--font-l) から変更 */
-    font-weight: 700;
+    font-weight: 600;
     /* ← boldすぎないように調整 */
     color: var(--text-dark);
     /* ← 統一 */
@@ -1279,7 +1279,7 @@
     position: absolute;
     left: 14px;
     top: 10px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: var(--font-s);
     color: var(--primary-blue);
     letter-spacing: .01em;
@@ -1303,7 +1303,7 @@
     position: absolute;
     left: 14px;
     top: 10px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: var(--font-s);
     color: var(--primary-blue);
     letter-spacing: .01em;
@@ -1314,7 +1314,7 @@
     position: absolute;
     left: 14px;
     top: 34px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: var(--font-s);
     color: var(--primary-blue);
     letter-spacing: .01em;
