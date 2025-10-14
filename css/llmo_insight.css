@@ -945,18 +945,6 @@
   gap: 18px 20px;
 }
 
-/* --- スマホ時（既存のままでOK） --- */
-@media (max-width: 768px) {
-  .llmo-final-cta-container {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .llmo-final-cta-copy,
-  .llmo-final-cta-visual {
-    width: 100%;
-  }
-}
-
 /* ====================
    まとめ：@media (max-width: 1024px)
    ==================== */
@@ -1355,33 +1343,14 @@
     }
 
     /* ---------- 最終CTAセクション ---------- */
-    .llmo-final-cta {
-        padding: 36px 0 48px;
-    }
-
-    .llmo-final-cta__copy {
-        padding: 18px 16px;
-        border-radius: 16px;
-    }
-
-    .llmo-final-cta__title {
-        font-size: var(--font-m);
-    }
-
-    .llmo-final-cta__lead {
-        font-size: var(--font-s);
-    }
-
-    .llmo-final-cta__actions {
-        gap: 10px;
-    }
-
-    .llmo-final-cta__btn {
-        width: 100%;
-        text-align: center;
-        padding: 12px 0;
-        font-size: var(--font-s);
-    }
+      .llmo-final-cta-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .llmo-final-cta-copy,
+  .llmo-final-cta-visual {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1622,32 +1591,4 @@
         padding: 0 var(--space-s);
     }
 
-    /* ---------- 最終CTAセクション ---------- */
-    .llmo-final-cta {
-        padding: 36px 0 48px;
-    }
-
-    .llmo-final-cta__copy {
-        padding: 18px 16px;
-        border-radius: 16px;
-    }
-
-    .llmo-final-cta__title {
-        font-size: var(--font-m);
-    }
-
-    .llmo-final-cta__lead {
-        font-size: var(--font-s);
-    }
-
-    .llmo-final-cta__actions {
-        gap: 10px;
-    }
-
-    .llmo-final-cta__btn {
-        width: 100%;
-        text-align: center;
-        padding: 12px 0;
-        font-size: var(--font-s);
-    }
 }
