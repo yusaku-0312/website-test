@@ -15,7 +15,7 @@
 
 .blog-article-header h1 {
   font-size: var(--font-l);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--primary-blue);
   margin-bottom: var(--space-xs);
   line-height: 1.2;
