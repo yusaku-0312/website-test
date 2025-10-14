@@ -863,198 +863,98 @@
     font-size: var(--font-s);
     line-height: 1.8;
 }
-
 /* ====================
-   最終CTA（非対称レイアウト＋グラスモーフィズム）
+   最終CTAセクション（中央寄せ調整版）
    ====================*/
 .llmo-final-cta {
-    position: relative;
-    overflow: hidden;
-    padding: clamp(48px, 7vw, 96px) 0;
-    background: linear-gradient(180deg, #f6fbff 0%, #eef7ff 100%);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 120px) 0;
+  background: linear-gradient(180deg, #f7fbff 0%, #e8f4ff 100%);
 }
 
-/* 背景の有機ブロブ（装飾） */
+/* 背景装飾ブロブ */
 .llmo-final-cta::before,
 .llmo-final-cta::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.18;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .llmo-final-cta::before {
-    width: 520px;
-    height: 520px;
-    left: -160px;
-    top: -120px;
-    background: radial-gradient(closest-side, var(--primary-blue-light), transparent 70%);
+  background: radial-gradient(closest-side, var(--primary-blue-light), transparent 70%);
+  top: -100px;
+  left: -150px;
 }
 
 .llmo-final-cta::after {
-    width: 520px;
-    height: 520px;
-    right: -160px;
-    bottom: -140px;
-    background: radial-gradient(closest-side, #9ee7ff, transparent 70%);
+  background: radial-gradient(closest-side, #9ee7ff, transparent 70%);
+  bottom: -120px;
+  right: -160px;
 }
 
-.llmo-final-cta__container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: clamp(24px, 4vw, 48px);
-    align-items: center;
+/* コンテナ：中央寄せ＋幅広め */
+.llmo-final-cta-container {
+  max-width: 1280px; /* 以前より広く */
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(40px, 6vw, 80px);
 }
 
-/* 左カラム */
-.llmo-final-cta__copy {
-    position: relative;
-    padding: clamp(18px, 2.2vw, 28px) clamp(18px, 2.4vw, 32px);
-    border-radius: 20px;
-    backdrop-filter: saturate(140%) blur(8px);
-    background: linear-gradient(180deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, .70));
-    box-shadow: 0 18px 40px rgba(0, 114, 224, 0.08);
+/* 左側コピー（中央寄せバランス重視） */
+.llmo-final-cta-copy {
+  flex: 1 1 55%;
+  position: relative;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75));
+  backdrop-filter: blur(10px) saturate(150%);
+  box-shadow: 0 20px 40px rgba(0, 114, 224, 0.08);
 }
 
-/* 斜めのアクセントバー */
-.llmo-final-cta__copy::before {
-    content: "";
-    position: absolute;
-    left: -8px;
-    top: 18px;
-    width: 6px;
-    height: 64px;
-    background: linear-gradient(180deg, var(--primary-blue), #6AB7FF);
-    border-radius: 6px;
-    box-shadow: 0 10px 24px rgba(0, 114, 224, .25);
+/* 右側ビジュアル */
+.llmo-final-cta-visual {
+  flex: 1 1 45%;
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(106, 183, 255, 0.18), rgba(0, 114, 224, 0.08));
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 114, 224, 0.1);
 }
 
-.llmo-final-cta__eyebrow {
-    margin: 0 0 6px 0;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: rgba(0, 114, 224, .10);
-    color: var(--primary-blue);
-    font-weight: 800;
-    font-size: var(--font-xs);
-    letter-spacing: .02em;
+/* テキスト中央寄せ気味の微調整 */
+.llmo-final-cta-title,
+.llmo-final-cta-lead,
+.llmo-final-cta-actions {
+  text-align: left;
+  max-width: 100%;
 }
 
-.llmo-final-cta__title {
-    margin: 6px 0 10px;
-    font-size: clamp(2.0rem, 3.4vw, var(--font-l));
-    line-height: 1.2;
-    font-weight: 900;
-    color: var(--text-dark);
-    letter-spacing: -0.01em;
+/* ボタンを少し広く配置 */
+.llmo-final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 20px;
 }
 
-.llmo-final-cta__lead {
-    margin: 0 0 18px 0;
-    font-size: var(--font-s);
-    color: var(--text-medium);
-    line-height: 1.9;
-}
-
-/* ボタン群 */
-.llmo-final-cta__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px 16px;
-    margin: 6px 0 8px;
-}
-
-.llmo-final-cta__btn {
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 999px;
-    padding: 14px 26px;
-    font-weight: 800;
-    font-size: var(--font-s);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-    will-change: transform;
-}
-
-.llmo-final-cta__btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 114, 224, .16);
-}
-
-.llmo-final-cta__btn--primary {
-    background: var(--primary-blue);
-    color: #fff;
-}
-
-.llmo-final-cta__btn--secondary {
-    background: linear-gradient(180deg, rgba(0, 114, 224, .12), rgba(0, 114, 224, .10));
-    color: var(--primary-blue);
-    border: 1px solid rgba(0, 114, 224, .25);
-}
-
-.llmo-final-cta__btn--ghost {
-    background: #fff;
-    color: var(--text-dark);
-    border: 1px solid rgba(0, 0, 0, .08);
-}
-
-.llmo-final-cta__notes {
-    margin: 6px 0 0;
-    font-size: var(--font-xs);
-    color: var(--text-light);
-}
-
-/* 右カラム：ビジュアル */
-.llmo-final-cta__visual {
-    margin: 0;
-    position: relative;
-    border-radius: 20px;
-    padding: 10px;
-    background: linear-gradient(180deg, rgba(106, 183, 255, .18), rgba(0, 114, 224, .08));
-    box-shadow: 0 18px 40px rgba(0, 114, 224, 0.10);
-}
-
-.llmo-final-cta__visual img {
-    display: block;
+/* --- スマホ時（既存のままでOK） --- */
+@media (max-width: 768px) {
+  .llmo-final-cta-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .llmo-final-cta-copy,
+  .llmo-final-cta-visual {
     width: 100%;
-    height: auto;
-    border-radius: 14px;
-    object-fit: cover;
-    background: var(--primary-blue-light);
-}
-
-.llmo-final-cta__cap {
-    font-size: var(--font-xs);
-    color: var(--text-light);
-    margin-top: 6px;
-    text-align: right;
-}
-
-.llmo-final-cta__cap a {
-    color: var(--primary-blue);
-    text-decoration: underline;
-}
-
-/* 装飾のドット（右上に浮遊） */
-.llmo-final-cta__visual::after {
-    content: "";
-    position: absolute;
-    right: 12px;
-    top: -10px;
-    width: 82px;
-    height: 82px;
-    background:
-        radial-gradient(var(--primary-blue) 1.6px, transparent 1.8px) 0 0/16px 16px,
-        radial-gradient(var(--primary-blue) 1.6px, transparent 1.8px) 8px 8px/16px 16px;
-    opacity: .35;
-    filter: blur(.2px);
-    border-radius: 12px;
+  }
 }
 
 /* ====================
