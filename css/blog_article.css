@@ -857,3 +857,116 @@
   color: var(--tbl-muted);
   margin-bottom: 6px;
 }
+
+/* =========================
+   強調（<strong>）の可視スタイル
+   ========================= */
+
+/* 本文全体での <strong> を太字＆色強調 */
+.blog-article strong {
+  font-weight: 700 !important;
+  /* 確実に太字化 */
+  color: var(--primary-blue-dark) !important;
+  /* 強めのコントラスト */
+}
+
+/* 見出し内の <strong>（h1〜h3）も明瞭に */
+.blog-article h1 strong,
+.blog-article h2 strong,
+.blog-article h3 strong {
+  font-weight: 800 !important;
+}
+
+/* テーブル内（既存で 550 指定があるため、上書き） */
+.blog-figure .table-compare td strong,
+.blog-figure .table-compare th strong {
+  font-weight: 700 !important;
+  color: var(--primary-blue-dark) !important;
+}
+
+/* strong の中や strong を含むリンクの下線はそのまま尊重 */
+.blog-article a strong,
+.blog-article strong a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* =========================
+   Component: Use Case (活用例)
+   再利用しやすい汎用コンポーネント
+   ========================= */
+.c-usecase {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f8fafd;
+  border: 1.5px solid var(--primary-blue-light);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 0.5em 0 var(--space-xs);
+  box-shadow: 0 2px 10px rgba(0, 114, 224, 0.06);
+}
+
+.c-usecase__label {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--primary-blue);
+  border-radius: 999px;
+  padding: 0.2em 0.7em;
+  line-height: 1.6;
+}
+
+.c-usecase__label::before {
+  content: "💡";
+  /* 必要なら `"💼"` や `"⚙️"` に差し替え可 */
+}
+
+.c-usecase__text {
+  margin: 0;
+  font-size: var(--font-s);
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+/* 箇条書きにも対応（複数例を並べたい時） */
+.c-usecase-list {
+  margin: 0.25em 0 0;
+  padding-left: 1.2em;
+}
+
+.c-usecase-item {
+  margin: 0 0 0.35em 0;
+}
+
+/* リンクの視認性（既存の方針に合わせて下線） */
+.c-usecase a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* 余白を抑えたバリエーション（1行想定） */
+.c-usecase--compact {
+  padding: 10px 12px;
+  gap: 8px;
+}
+
+/* ダークモード配慮 */
+@media (prefers-color-scheme: dark) {
+  .c-usecase {
+    background: #0e1526;
+    border-color: #1f2a44;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .c-usecase__text {
+    color: var(--text-dark);
+  }
+}
