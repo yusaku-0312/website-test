@@ -957,16 +957,3 @@
   padding: 10px 12px;
   gap: 8px;
 }
-
-/* ダークモード配慮 */
-@media (prefers-color-scheme: dark) {
-  .c-usecase {
-    background: #0e1526;
-    border-color: #1f2a44;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-  }
-
-  .c-usecase__text {
-    color: var(--text-dark);
-  }
-}
