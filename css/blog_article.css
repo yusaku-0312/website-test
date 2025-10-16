@@ -661,22 +661,6 @@
   --tbl-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tbl-bg: #0b1220;
-    --tbl-text: #e5e7eb;
-    /* gray-200 */
-    --tbl-muted: #94a3b8;
-    /* slate-400 */
-    --tbl-border: #1f2937;
-    /* gray-800 */
-    --tbl-accent: #111827;
-    /* gray-900 */
-    --tbl-accent-strong: #0f172a;
-    /* slate-950 */
-    --tbl-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
-  }
-}
 
 /* ラッパー（横スクロール＆カード風） */
 .blog-figure {
