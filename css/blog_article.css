@@ -941,3 +941,97 @@
   padding: 10px 12px;
   gap: 8px;
 }
+
+/* ================================================
+   記事内リンクの下線表示（最終修正版）
+   CTAボタンは完全に除外
+================================================ */
+
+/* 目次リンクのスタイル（そのまま） */
+.blog-article-toc a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  text-decoration-color: #2563eb;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.blog-article-toc a:hover,
+.blog-article-toc a:focus-visible {
+  color: #1d4ed8 !important;
+  text-decoration-color: #1d4ed8;
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.blog-article-toc a:visited {
+  color: #2563eb !important;
+  text-decoration-color: #2563eb;
+}
+
+/* 本文内の通常リンク（CTAボタンとmore-linkを除外） */
+.blog-article p a:not(.cta-button):not(.more-link):not(.reviewer-more),
+.blog-article li a:not(.cta-button):not(.more-link):not(.reviewer-more) {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  text-decoration-color: #2563eb;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+/* 本文リンクのホバー/フォーカス */
+.blog-article p a:not(.cta-button):not(.more-link):not(.reviewer-more):hover,
+.blog-article li a:not(.cta-button):not(.more-link):not(.reviewer-more):hover,
+.blog-article p a:not(.cta-button):not(.more-link):not(.reviewer-more):focus-visible,
+.blog-article li a:not(.cta-button):not(.more-link):not(.reviewer-more):focus-visible {
+  color: #1d4ed8 !important;
+  text-decoration-color: #1d4ed8;
+}
+
+/* 本文リンクのフォーカス時アウトライン */
+.blog-article p a:not(.cta-button):not(.more-link):not(.reviewer-more):focus-visible,
+.blog-article li a:not(.cta-button):not(.more-link):not(.reviewer-more):focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 訪問済みリンク */
+.blog-article p a:not(.cta-button):not(.more-link):not(.reviewer-more):visited,
+.blog-article li a:not(.cta-button):not(.more-link):not(.reviewer-more):visited {
+  color: #2563eb !important;
+  text-decoration-color: #2563eb;
+}
+
+/* CTAボタン・more-link・reviewer-moreは常に白文字 */
+.blog-article .cta-button,
+.blog-article .cta-button:hover,
+.blog-article .cta-button:visited,
+.blog-article .cta-button:focus,
+.blog-article .cta-button:active,
+.blog-article p .cta-button,
+.blog-article li .cta-button,
+.blog-article .more-link,
+.blog-article .more-link:hover,
+.blog-article .more-link:visited,
+.blog-article .more-link:focus,
+.blog-article .more-link:active,
+.blog-article p .more-link,
+.blog-article li .more-link,
+.blog-article .reviewer-more,
+.blog-article .reviewer-more:hover,
+.blog-article .reviewer-more:visited,
+.blog-article .reviewer-more:focus,
+.blog-article .reviewer-more:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* blog-figure内のリンクは元のスタイルを維持 */
+.blog-article .blog-figure a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
