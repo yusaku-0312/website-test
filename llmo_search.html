@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMO無料診断ツール | MIRAINA</title>
+    <meta name="description" content="MIRAINAのLLMO無料診断ツールです。生成AI上での自社の露出状況を診断します。">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Tool Specific Styles */
+        .llmo-tool-section {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+            min-height: 80vh;
+        }
+
+        .tool-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .tool-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tool-title {
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .tool-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .input-group {
+            margin-bottom: 24px;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn-start {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-start:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Progress Bar */
+        .progress-area {
+            margin-top: 40px;
+            display: none;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #28a745;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .status-text {
+            text-align: center;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Lead Form Area (New) */
+        .lead-form-area {
+            margin-top: 30px;
+            padding: 30px;
+            background-color: #f0f7ff;
+            border: 2px solid #cce5ff;
+            border-radius: 12px;
+            display: none;
+            /* 初期非表示 */
+            animation: fadeIn 0.5s ease;
+        }
+
+        .lead-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .lead-desc {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn-submit-lead {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit-lead:hover {
+            background: #218838;
+        }
+
+        .btn-submit-lead:disabled {
+            background: #95c9a0;
+            cursor: not-allowed;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Results */
+        .result-area {
+            margin-top: 50px;
+            display: none;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+
+        .persona-result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f3f5;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+
+        .persona-result h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .persona-content {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .warning-text {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #dc3545;
+            text-align: center;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #cce5ff;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+        }
+
+        .cta-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 16px;
+        }
+
+        .cta-description {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(255, 119, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 119, 0, 0.4);
+            opacity: 0.95;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-logo">
+                <a href="https://miraina-ai.com">
+                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
+                        loading="eager" decoding="async">
+                    <h1>MIRAINA（ミライナ）</h1>
+                </a>
+            </div>
+            <nav class="global-nav">
+                <ul>
+                    <li><a href="/services.html" class="nav-link">サービス</a></li>
+                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
+                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
+                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
+                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="llmo-tool-section">
+            <div class="tool-container">
+                <div class="tool-header">
+                    <h2 class="tool-title">LLMO無料診断ツール</h2>
+                    <p class="tool-description">
+                        生成AI上での自社の露出状況を診断します。<br>
+                        企業ドメインと企業名を入力して、診断を開始してください。
+                    </p>
+                </div>
+
+                <div class="input-form" id="initialForm">
+                    <div class="input-group">
+                        <label for="companyDomain" class="input-label">企業URL（ドメイン）</label>
+                        <input type="text" id="companyDomain" class="input-field" placeholder="例: miraina-ai.com"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <label for="companyName" class="input-label">企業名（正式名称）</label>
+                        <input type="text" id="companyName" class="input-field" placeholder="例: 株式会社MIRAINA" required>
+                    </div>
+                    <button id="startBtn" class="btn-start">診断を開始する</button>
+                    <p class="warning-text">※診断には3〜5分程度かかります。ブラウザを閉じずにお待ちください。</p>
+                </div>
+
+                <div id="progressArea" class="progress-area">
+                    <div class="progress-info">
+                        <span id="progressStep">準備中...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <p id="statusText" class="status-text">開始待機中...</p>
+                </div>
+
+                <div id="leadFormArea" class="lead-form-area">
+                    <h3 class="lead-title">診断結果を受け取るために</h3>
+                    <p class="lead-desc">
+                        診断の待ち時間を利用して、担当者情報をご入力ください。<br>
+                        診断完了後、送信ボタンを押すと結果が表示されます。
+                    </p>
+                    <div class="input-group">
+                        <label for="contactName" class="input-label">担当者名 <span style="color:red">*</span></label>
+                        <input type="text" id="contactName" class="input-field" placeholder="例: 未来 太郎" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="contactEmail" class="input-label">メールアドレス <span style="color:red">*</span></label>
+                        <input type="email" id="contactEmail" class="input-field" placeholder="例: taro@example.com"
+                            required>
+                    </div>
+                    <button id="leadSubmitBtn" class="btn-submit-lead">情報を送信して結果を待機</button>
+                </div>
+
+                <div id="resultArea" class="result-area">
+                    <div class="tool-header">
+                        <h3 class="tool-title" style="font-size: 1.8rem;">診断結果</h3>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="resultChart"></canvas>
+                    </div>
+
+                    <div class="cta-section">
+                        <h4 class="cta-title">AI検索からの流入を最大化するために</h4>
+                        <p class="cta-description">
+                            「表示率」や「引用率」が低い場合、将来的な集客機会を大きく損なっている可能性があります。<br>
+                            MIRAINAは、生成AIに選ばれるための「LLMO（Large Language Model Optimization）」対策を専門的に支援しています。<br>
+                            まずは無料相談で、貴社サイトの具体的な改善ポテンシャルをご確認ください。
+                        </p>
+                        <a href="/contact.html" class="cta-button">LLMO対策の無料相談を申し込む</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-col--brand">
+                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
+                </div>
+                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
+                <div class="footer-col footer-col--links">
+                    <p class="footer-heading">サイトメニュー</p>
+                    <nav class="footer-nav" aria-label="フッターナビゲーション">
+                        <ul>
+                            <li><a href="/services.html">サービス</a></li>
+                            <li><a href="/about.html">MIRAINAについて</a></li>
+                            <li><a href="/works.html">導入事例</a></li>
+                            <li><a href="/blogs.html">ブログ</a></li>
+                            <li><a href="/contact.html">問い合わせ</a></li>
+                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-col footer-col--sns">
+                    <p class="footer-heading">SNS</p>
+                    <ul class="footer-sns-list">
+                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                        </li>
+                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 MIRAINA All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
