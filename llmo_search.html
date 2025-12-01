@@ -274,6 +274,40 @@
             box-shadow: 0 6px 15px rgba(255, 119, 0, 0.4);
             opacity: 0.95;
         }
+
+        /* Debug Log */
+        #debug-log-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-top: 2px solid #ccc;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #debug-log-header {
+            padding: 5px 10px;
+            background-color: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #debug-log-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -414,6 +448,9 @@
             </div>
             <div class="copyright">
                 <p>&copy;2025 MIRAINA All rights reserved.</p>
+                <button onclick="downloadLogs()"
+                    style="margin-top: 10px; padding: 5px 10px; font-size: 0.8rem; background: #eee; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">Download
+                    Logs</button>
             </div>
         </div>
     </footer>
