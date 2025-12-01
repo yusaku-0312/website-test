@@ -6,67 +6,15 @@
 // CONFIGURATION
 // ==========================================
 
-// サーバー側で環境変数を出力させる
-// NOTE: Static file environment. Please set these values manually.
-const GAS_WEB_APP_URL = "<%= process.env.GAS_WEB_APP_URL %>";
+// TODO: ここにGASのウェブアプリURLを貼り付けてください
+const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxYgCD2SLlDbpOGH7RzVqvDl6m2wSB7i9cz_ELWRVaABwyFnkCNVA38RQOcHG3sTazs/exec";
+
+// TODO: 有効なGemini APIキーを設定 (Render環境変数の場合はプレースホルダー)
 const API_KEYS = [
-    "<%= process.env.GEMINI_API_KEY_1 %>",
-    "<%= process.env.GEMINI_API_KEY_2 %>",
-    "<%= process.env.GEMINI_API_KEY_3 %>"
+    "AIzaSyDYsm00lpOYbISvPoeq-lsnpWBm-7cORw81",
+    "AIzaSyCQO8crJ1-2nycABecFMdYCEbxx_cBjd6k",
+    "AIzaSyChYTcnGDui8_IDnhHebajRjet0D0M2-V8"
 ];
-// --- Visual Logging Setup ---
-function logToScreen(message, type = 'info') {
-    const logContainer = document.getElementById('debug-log-content');
-    if (!logContainer) return;
-
-    const entry = document.createElement('div');
-    entry.style.marginBottom = '4px';
-    entry.style.borderBottom = '1px solid #eee';
-    entry.style.paddingBottom = '2px';
-    entry.style.fontFamily = 'monospace';
-    entry.style.fontSize = '12px';
-
-    const timestamp = new Date().toLocaleTimeString();
-    entry.textContent = `[${timestamp}] ${message}`;
-
-    if (type === 'error') {
-        entry.style.color = 'red';
-        entry.style.backgroundColor = '#ffeeee';
-    } else if (type === 'warn') {
-        entry.style.color = 'orange';
-    } else {
-        entry.style.color = '#333';
-    }
-
-    logContainer.appendChild(entry);
-    logContainer.scrollTop = logContainer.scrollHeight;
-}
-
-// Override console methods
-const originalLog = console.log;
-const originalWarn = console.warn;
-const originalError = console.error;
-
-console.log = function (...args) {
-    originalLog.apply(console, args);
-    logToScreen(args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' '), 'info');
-};
-
-console.warn = function (...args) {
-    originalWarn.apply(console, args);
-    logToScreen(args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' '), 'warn');
-};
-
-console.error = function (...args) {
-    originalError.apply(console, args);
-    logToScreen(args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' '), 'error');
-};
-
-window.onerror = function (message, source, lineno, colno, error) {
-    logToScreen(`Global Error: ${message} at ${source}:${lineno}:${colno}`, 'error');
-    return false;
-};
-// ----------------------------
 
 // 使用するモデル
 const MODEL_REASONING = "gemini-2.5-flash";
