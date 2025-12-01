@@ -6,14 +6,12 @@
 // CONFIGURATION
 // ==========================================
 
-// TODO: ここにGASのウェブアプリURLを貼り付けてください
-const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxYgCD2SLlDbpOGH7RzVqvDl6m2wSB7i9cz_ELWRVaABwyFnkCNVA38RQOcHG3sTazs/exec";
-
-// TODO: 有効なGemini APIキーを設定 (Render環境変数の場合はプレースホルダー)
+// サーバー側で環境変数を出力させる
+const GAS_WEB_APP_URL = "<%= process.env.GAS_WEB_APP_URL %>";
 const API_KEYS = [
-    "GEMINI_API_KEY_1",
-    "GEMINI_API_KEY_2",
-    "GEMINI_API_KEY_3"
+    "<%= process.env.GEMINI_API_KEY_1 %>",
+    "<%= process.env.GEMINI_API_KEY_2 %>",
+    "<%= process.env.GEMINI_API_KEY_3 %>"
 ];
 
 // 使用するモデル
