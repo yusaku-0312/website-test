@@ -11,9 +11,9 @@ const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxYgCD2SLlDbpOG
 
 // TODO: 有効なGemini APIキーを設定 (Render環境変数の場合はプレースホルダー)
 const API_KEYS = [
-    "AIzaSyCQO8crJ1-2nycABecFMdYCEbxx_cBjd6k",
-    "AIzaSyDYsm00lpOYbISvPoeq-lsnpWBm-7cORw8",
-    "__API_KEYS_PLACEHOLDER_3__"
+    "GEMINI_API_KEY_1",
+    "GEMINI_API_KEY_2",
+    "GEMINI_API_KEY_3"
 ];
 
 // 使用するモデル
