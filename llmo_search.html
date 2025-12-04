@@ -343,75 +343,17 @@
             <div class="tool-container">
                 <div class="tool-header">
                     <h2 class="tool-title">LLMO無料診断ツール</h2>
-                    <p class="tool-description">
-                        生成AI上での自社の露出状況を診断します。<br>
-                        企業ドメインと企業名を入力して、診断を開始してください。
-                    </p>
-                </div>
-
-                <div class="input-form" id="initialForm">
-                    <div class="input-group">
-                        <label for="companyDomain" class="input-label">企業URL（ドメイン）</label>
-                        <input type="text" id="companyDomain" class="input-field" placeholder="例: miraina-ai.com"
-                            required>
-                    </div>
-                    <div class="input-group">
-                        <label for="companyName" class="input-label">企業名（正式名称）</label>
-                        <input type="text" id="companyName" class="input-field" placeholder="例: 株式会社MIRAINA" required>
-                    </div>
-                    <button id="startBtn" class="btn-start">診断を開始する</button>
-                    <p class="warning-text">※診断には3〜5分程度かかります。ブラウザを閉じずにお待ちください。</p>
-                </div>
-
-                <div id="progressArea" class="progress-area">
-                    <div class="progress-info">
-                        <span id="progressStep">準備中...</span>
-                        <span id="progressPercent">0%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div id="progressBar" class="progress-bar"></div>
-                    </div>
-                    <p id="statusText" class="status-text">開始待機中...</p>
-                </div>
-
-                <div id="leadFormArea" class="lead-form-area">
-                    <h3 class="lead-title">診断結果を受け取るために</h3>
-                    <p class="lead-desc">
-                        診断の待ち時間を利用して、担当者情報をご入力ください。<br>
-                        診断完了後、送信ボタンを押すと結果が表示されます。
-                    </p>
-                    <div class="input-group">
-                        <label for="contactName" class="input-label">担当者名 <span style="color:red">*</span></label>
-                        <input type="text" id="contactName" class="input-field" placeholder="例: 未来 太郎" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="contactEmail" class="input-label">メールアドレス <span style="color:red">*</span></label>
-                        <input type="email" id="contactEmail" class="input-field" placeholder="例: taro@example.com"
-                            required>
-                    </div>
-                    <button id="leadSubmitBtn" class="btn-submit-lead">情報を送信して結果を待機</button>
-                </div>
-
-                <div id="resultArea" class="result-area">
-                    <div class="tool-header">
-                        <h3 class="tool-title" style="font-size: 1.8rem;">診断結果</h3>
-                    </div>
-
-                    <div class="chart-container">
-                        <canvas id="resultChart"></canvas>
-                    </div>
-
-                    <div class="cta-section">
-                        <h4 class="cta-title">AI検索からの流入を最大化するために</h4>
-                        <p class="cta-description">
-                            「表示率」や「引用率」が低い場合、将来的な集客機会を大きく損なっている可能性があります。<br>
-                            MIRAINAは、生成AIに選ばれるための「LLMO（Large Language Model Optimization）」対策を専門的に支援しています。<br>
-                            まずは無料相談で、貴社サイトの具体的な改善ポテンシャルをご確認ください。
+                    <div class="maintenance-message" style="text-align: center; padding: 40px 0;">
+                        <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px;">現在、ツール改修中です</p>
+                        <p style="margin-bottom: 30px;">
+                            より正確な診断結果をご提供するため、現在システムのアップデートを行っております。<br>
+                            再開まで今しばらくお待ちください。
                         </p>
-                        <a href="/contact.html" class="cta-button">LLMO対策の無料相談を申し込む</a>
+                        <p>
+                            LLMO診断をご希望の方は、お手数ですが<a href="/contact.html"
+                                style="color: #007bff; text-decoration: underline;">お問い合わせフォーム</a>よりご連絡ください。
+                        </p>
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -454,7 +396,7 @@
             </div>
         </div>
     </footer>
-    <script src="/js/main.js"></script>
+
 </body>
 
 </html>
