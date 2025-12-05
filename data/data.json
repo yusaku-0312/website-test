@@ -1,0 +1,213 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法",
+            "description": "AI開発の基礎知識から実践的な開発手法まで、初心者向けにわかりやすく解説。",
+            "thumbnail": "/images/blog-card001.webp",
+            "alt": "AI開発とは？",
+            "link": "/blogs/blog001.html",
+            "date": "2025-09-01"
+        },
+        {
+            "id": 2,
+            "title": "Gemini活用で経営とマーケティングを革新する実践ガイド",
+            "description": "Googleが開発した高性能AIモデルであるGeminiを活用し、経営戦略の策定やマーケティング施策の立案を革新する実践的なガイドです。プロンプトエンジニアリングから他AIツールとの連携まで、ビジネスでの活用方法を詳しく解説します。",
+            "thumbnail": "/images/blog-card002.webp",
+            "alt": "Gemini活用で経営とマーケティングを革新する実践ガイド",
+            "link": "/blogs/blog002.html",
+            "date": "2025-09-05"
+        },
+        {
+            "id": 3,
+            "title": "パーソナルコーチ Arist 様との業務提携のお知らせ",
+            "description": "MIRAINAは、家庭教師・オンライン個別学習を行う「パーソナルコーチ Arist（アリスト）」様と業務提携いたしました。本提携により、MIRAINAのAI活用ノウハウを掛け合わせた学習体験の質向上を共同で推進します。",
+            "thumbnail": "/images/blog-card003.webp",
+            "alt": "パーソナルコーチ Arist 様との業務提携のお知らせ",
+            "link": "/blogs/blog003.html",
+            "date": "2025-09-10"
+        },
+        {
+            "id": 4,
+            "title": "【2026年版】AI研修おすすめ徹底比較！あなたの目的に合う講座を見つけよう",
+            "description": "最新のAI研修を徹底比較！学習目的や形式、サポート体制に応じたおすすめ講座をわかりやすく紹介。AI活用を加速させたい企業や個人必見の内容です。",
+            "thumbnail": "/images/blog-card004.webp",
+            "alt": "【2026年版】AI研修おすすめ徹底比較！あなたの目的に合う講座を見つけよう",
+            "link": "/blogs/blog004.html",
+            "date": "2025-09-15"
+        },
+        {
+            "id": 5,
+            "title": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
+            "description": "AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。SEO担当者が今日から動ける完全ガイドです。",
+            "thumbnail": "/images/blog-card005.webp",
+            "alt": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
+            "link": "/blogs/blog005.html",
+            "date": "2025-09-20"
+        },
+        {
+            "id": 6,
+            "title": "LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説",
+            "description": "ChatGPTやGemini以後に変化する情報設計の最前線。AIに“選ばれる”ための<strong>LLMO（大規模言語モデル最適化）</strong>を、研究と実務の両面からわかりやすく解説。SEO担当者の次の一手が見える内容です。",
+            "thumbnail": "/images/blog-card006.webp",
+            "alt": "LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説",
+            "link": "/blogs/blog006.html",
+            "date": "2025-09-25"
+        },
+        {
+            "id": 7,
+            "title": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
+            "description": "生成AIが検索の主役となる時代に必須のAIO（AI検索最適化）を解説。SEOとの違いから具体的ステップまで、AIに“引用される”ための実践ノウハウを体系的にまとめています。",
+            "thumbnail": "/images/blog-card007.webp",
+            "alt": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
+            "link": "/blogs/blog007.html",
+            "date": "2025-10-01"
+        },
+        {
+            "id": 8,
+            "title": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
+            "description": "Google検索に導入されたAIモード（AI Mode）とは何かを、特徴・AI Overviewsとの違い・日本語対応の背景・企業が直面する課題・LLMO最適化の考え方まで体系的に解説。AI検索時代に備える実務ガイドです。",
+            "thumbnail": "/images/blog008-1.webp",
+            "alt": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
+            "link": "/blogs/blog008.html",
+            "date": "2025-10-05"
+        },
+        {
+            "id": 9,
+            "title": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
+            "description": "総合対話・文章生成・画像生成・動画生成・業務効率化まで、用途別に“本当に使える”AIを厳選紹介。 選び方の6基準、導入時の注意点、研究動向と今後の展望もまとめた実務ガイドです。",
+            "thumbnail": "/images/blog009-1.webp",
+            "alt": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
+            "link": "/blogs/blog009.html",
+            "date": "2025-10-10"
+        },
+        {
+            "id": 10,
+            "title": "Sprout Design 工房 様との業務提携のお知らせ",
+            "description": "MIRAINAは、成果につながるホームページ制作を行うSprout Design 工房と業務提携しました。AI導入支援とWeb制作を組み合わせ、中小企業のデジタルマーケティングを強力にサポートします。",
+            "thumbnail": "/images/blog-card010.webp",
+            "alt": "Sprout Design 工房 様との業務提携のお知らせ",
+            "link": "/blogs/blog010.html",
+            "date": "2025-10-15"
+        },
+        {
+            "id": 11,
+            "title": "【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
+            "description": "AI時代に注目されるllms.txt（LLMs.txt）とは何かを、SEO・AIO・LLMOの観点から徹底解説。メリット、注意点、活用シーン、導入判断などを専門家視点でまとめた2025年最新ガイド。",
+            "thumbnail": "/images/blog-card011.webp",
+            "alt": "【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
+            "link": "/blogs/blog011.html",
+            "date": "2025-10-20"
+        },
+        {
+            "id": 12,
+            "title": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
+            "description": "Google Deepmindが開発した次世代AIエディター「Antigravity」とは何かを徹底解説。Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。",
+            "thumbnail": "/images/blog-card012.png",
+            "alt": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
+            "link": "/blogs/blog012.html",
+            "date": "2025-10-25"
+        },
+        {
+            "id": 13,
+            "title": "【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説",
+            "description": "Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。",
+            "thumbnail": "/images/blog013-1.webp",
+            "alt": "【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説",
+            "link": "/blogs/blog013.html",
+            "date": "2025-10-30"
+        },
+        {
+            "id": 14,
+            "title": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
+            "description": "LLMO（大規模言語モデル最適化）とSEOは対立するものではなく、相互に補完し合う関係です。本記事では、両者の構造的な違い、共通点、そしてこれからのマーケティングに求められる統合的な戦略について、中級者向けに深掘り解説します。",
+            "thumbnail": "/images/blog014-1.webp",
+            "alt": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
+            "link": "/blogs/blog014.html",
+            "date": "2025-11-05"
+        },
+        {
+            "id": 15,
+            "title": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
+            "description": "広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。",
+            "thumbnail": "/images/blog015-1.webp",
+            "alt": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
+            "link": "/blogs/blog015.html",
+            "date": "2025-11-10"
+        },
+        {
+            "id": 16,
+            "title": "AI活用事例5選：業界別・職種別の成功事例と導入の基本",
+            "description": "AI活用の基本から、製造・サービス・医療・金融・マーケティングの業界別成功事例5選、そして導入の具体的ステップまでを徹底解説。ビジネスでのAI活用に役立つ情報満載です。",
+            "thumbnail": "/images/blog-card016.webp",
+            "alt": "AI活用事例5選：業界別・職種別の成功事例と導入の基本",
+            "link": "/blogs/blog016.html",
+            "date": "2025-11-15"
+        },
+        {
+            "id": 17,
+            "title": "LLMOの導入効果とは？─AI流入増加の事例と具体的な対策",
+            "description": "LLMO（大規模言語モデル最適化）を導入することで得られる具体的な効果、AI流入増加の事例、そして今すぐ始められる対策ステップを解説。AI検索時代に勝ち残るためのマーケティング戦略です。",
+            "thumbnail": "/images/blog-card017.webp",
+            "alt": "LLMOの導入効果とは？─AI流入増加の事例と具体的な対策",
+            "link": "/blogs/blog017.html",
+            "date": "2025-11-20"
+        },
+        {
+            "id": 18,
+            "title": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
+            "description": "2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。",
+            "thumbnail": "/images/blog018-1.webp",
+            "alt": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
+            "link": "/blogs/blog018.html",
+            "date": "2025-11-28"
+        },
+        {
+            "id": 19,
+            "title": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
+            "description": "Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。",
+            "thumbnail": "/images/blog019-1.webp",
+            "alt": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
+            "link": "/blogs/blog019.html",
+            "date": "2025-12-05"
+        }
+    ],
+    "works": [
+        {
+            "id": 1,
+            "title": "保護者向けAIリテラシー講演",
+            "description": "福岡市で開催。AI時代の子どもたちの危険性や安全なAI活用法について、保護者様向けに分かりやすく解説しました。",
+            "thumbnail": "./images/works_images/work001-1.webp",
+            "alt": "保護者向けAIリテラシー講演",
+            "link": "/works/work001.html",
+            "date": "2025-07-05"
+        },
+        {
+            "id": 2,
+            "title": "株式会社Niarail様：n8n × SlackでDM送信自動化",
+            "description": "n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。約15時間の作業削減・約3万円のコスト削減を実現。",
+            "thumbnail": "./images/work-card002.webp",
+            "alt": "株式会社Niarail様：n8n × SlackでDM送信自動化",
+            "link": "/works/work002.html",
+            "date": "2025-08-10"
+        },
+        {
+            "id": 3,
+            "title": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
+            "description": "n8nを用いてLP分析のための要素抽出を自動化。LP１件あたり約40分・合計約70時間以上の業務時間削減を実現。",
+            "thumbnail": "/images/work-card003.webp",
+            "alt": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
+            "link": "/works/work003.html",
+            "date": "2025-09-15"
+        },
+        {
+            "id": 4,
+            "title": "株式会社LiaN様：応募メール自動転記",
+            "description": "Gmailに届く応募メールを自動解析し、スプレッドシートに転記。対応スピード向上と手作業削減を実現しました。",
+            "thumbnail": "./images/works_images/work004-1.webp",
+            "alt": "株式会社LiaN様：応募メール自動転記システム導入",
+            "link": "/works/work004.html",
+            "date": "2025-10-20"
+        }
+    ]
+}

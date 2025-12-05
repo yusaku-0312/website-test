@@ -1,0 +1,152 @@
+/* Listing Container */
+#listing-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    /* Reset common.css margins/paddings if any */
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Responsive: Mobile (1 column) */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Card Styles */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Override common.css max-width/min-height if needed */
+    max-width: none;
+    min-height: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    /* Ensure image displays correctly */
+    display: block;
+    height: auto;
+}
+
+.card-content {
+    padding: 24px;
+    /* Increased padding slightly for better balance with larger text */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* Override common.css flex: 1 1 0 and min-height: 0 */
+    flex-basis: auto;
+    min-height: auto;
+}
+
+.card-title {
+    font-size: var(--font-s);
+    /* Increased from 1.25rem (~12% larger) */
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #333;
+    /* Override common.css white-space: nowrap */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.card-description {
+    font-size: 1.3rem;
+    /* Increased for better readability on desktop */
+    color: #666;
+    line-height: 1.7;
+    flex-grow: 1;
+    /* Override common.css line-clamp */
+    display: block;
+    -webkit-line-clamp: none;
+    -webkit-box-orient: horizontal;
+    /* Reset box orient */
+    overflow: visible;
+    white-space: normal;
+}
+
+/* Pagination */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    /* Increased from 40px */
+    margin-bottom: 100px;
+    /* Added bottom margin as requested */
+    gap: 10px;
+}
+
+.pagination-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    /* Slightly larger buttons */
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.pagination-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.pagination-btn.active {
+    background-color: #007bff;
+    /* Primary Color */
+    color: #fff;
+    border-color: #007bff;
+    pointer-events: none;
+}
+
+.pagination-btn.disabled {
+    color: #ccc;
+    border-color: #eee;
+    cursor: not-allowed;
+    pointer-events: none;
+}
