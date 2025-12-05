@@ -3,11 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const paginationContainer = document.getElementById('pagination');
     const category = document.body.dataset.category; // 'blogs' or 'works'
     const ITEMS_PER_PAGE = 9;
-    let currentPage = 1;
     let allItems = [];
 
     // Initialize
     init();
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', (event) => {
+        const page = event.state ? event.state.page : 1;
+        renderPage(page, false); // Don't push state on popstate
+    });
 
     async function init() {
         if (!category) {
@@ -28,21 +33,65 @@ document.addEventListener('DOMContentLoaded', () => {
             // Sort by date descending
             allItems = data[category].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            renderPage(currentPage);
+            // Get initial page from URL or default to 1
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialPage = parseInt(urlParams.get('page')) || 1;
+
+            renderPage(initialPage, false); // Don't push state on initial load
         } catch (error) {
             console.error('Error initializing listing:', error);
             listingContainer.innerHTML = '<p>データの読み込みに失敗しました。</p>';
         }
     }
 
-    function renderPage(page) {
-        currentPage = page;
+    /**
+     * Renders the specified page of items.
+     * @param {number} page - The page number to render.
+     * @param {boolean} [pushState=true] - Whether to update the URL history.
+     */
+    function renderPage(page, pushState = true) {
+        const totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE);
+
+        // Validate page number
+        if (page < 1) page = 1;
+        if (page > totalPages && totalPages > 0) page = totalPages;
+
         const start = (page - 1) * ITEMS_PER_PAGE;
         const end = start + ITEMS_PER_PAGE;
         const pageItems = allItems.slice(start, end);
 
         renderCards(pageItems);
-        renderPagination(Math.ceil(allItems.length / ITEMS_PER_PAGE), currentPage);
+        renderPagination(totalPages, page);
+
+        if (pushState) {
+            updateUrl(page);
+        }
+        updateCanonical(page);
+    }
+
+    function updateUrl(page) {
+        const url = new URL(window.location);
+        if (page === 1) {
+            url.searchParams.delete('page');
+        } else {
+            url.searchParams.set('page', page);
+        }
+        window.history.pushState({ page: page }, '', url);
+    }
+
+    function updateCanonical(page) {
+        let link = document.querySelector('link[rel="canonical"]');
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'canonical';
+            document.head.appendChild(link);
+        }
+
+        const url = new URL(window.location.href.split('?')[0]); // Base URL without query params
+        if (page > 1) {
+            url.searchParams.set('page', page);
+        }
+        link.href = url.toString();
     }
 
     function renderCards(items) {

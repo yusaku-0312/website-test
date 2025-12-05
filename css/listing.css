@@ -101,15 +101,25 @@
     white-space: normal;
 }
 
+/* Mobile Typography Adjustments */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-description {
+        font-size: 0.95rem;
+    }
+}
+
 /* Pagination */
 #pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-    /* Increased from 40px */
-    margin-bottom: 100px;
-    /* Added bottom margin as requested */
+    margin-bottom: 120px;
+    /* Ensure ample space from footer */
     gap: 10px;
 }
 
