@@ -4,478 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLMO無料診断ツール | MIRAINA</title>
-    <meta name="description" content="MIRAINAのLLMO無料診断ツールです。生成AI上での自社の露出状況を診断します。">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
+    <title>LLMO 無料診断ツール | MIRAINA</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* Tool Specific Styles */
-        .llmo-tool-section {
-            padding: 80px 20px;
-            background-color: #f8f9fa;
-            min-height: 80vh;
-        }
-
-        .tool-container {
+        .llmo-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 40px auto;
+            padding: 20px;
             background: #fff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
-        .tool-header {
+        .llmo-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        .tool-title {
-            font-size: 2.4rem;
+        .llmo-header h1 {
+            font-size: 24px;
             font-weight: bold;
             color: #333;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
-        .tool-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
+        .llmo-form-group {
+            margin-bottom: 20px;
         }
 
-        .input-group {
-            margin-bottom: 24px;
-        }
-
-        .input-label {
+        .llmo-form-group label {
             display: block;
-            font-weight: bold;
             margin-bottom: 8px;
-            color: #333;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .input-field:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-        .btn-start {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
             font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-start:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-        }
-
-        .btn-start:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        /* Progress Bar */
-        .progress-area {
-            margin-top: 40px;
-            display: none;
-        }
-
-        .progress-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
             color: #555;
         }
 
-        .progress-bar-container {
+        .llmo-input {
             width: 100%;
-            height: 10px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-            overflow: hidden;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
         }
 
-        .progress-bar {
-            height: 100%;
-            background-color: #28a745;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .status-text {
-            text-align: center;
-            margin-top: 12px;
-            font-weight: bold;
-            color: #007bff;
-        }
-
-        /* Lead Form Area (New) */
-        .lead-form-area {
-            margin-top: 30px;
-            padding: 30px;
-            background-color: #f0f7ff;
-            border: 2px solid #cce5ff;
-            border-radius: 12px;
-            display: none;
-            /* 初期非表示 */
-            animation: fadeIn 0.5s ease;
-        }
-
-        .lead-title {
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #0056b3;
-            margin-bottom: 20px;
-        }
-
-        .lead-desc {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .btn-submit-lead {
+        .llmo-btn {
             display: block;
             width: 100%;
             padding: 14px;
-            background: #28a745;
-            color: white;
+            background: #007bff;
+            color: #fff;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 6px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
         }
 
-        .btn-submit-lead:hover {
-            background: #218838;
+        .llmo-btn:hover {
+            background: #0056b3;
         }
 
-        .btn-submit-lead:disabled {
-            background: #95c9a0;
+        .llmo-btn:disabled {
+            background: #ccc;
             cursor: not-allowed;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Progress Bar */
+        .progress-container {
+            margin: 30px 0;
+            display: none;
         }
 
-        /* Results */
-        .result-area {
-            margin-top: 50px;
+        .progress-bar-bg {
+            width: 100%;
+            height: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: #28a745;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Results Area */
+        .results-area {
             display: none;
+            margin-top: 40px;
+        }
+
+        .persona-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #007bff;
+        }
+
+        .persona-box h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
         }
 
         .chart-container {
             position: relative;
-            height: 400px;
-            width: 100%;
-        }
-
-        .persona-result {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #f1f3f5;
-            border-radius: 8px;
-            border-left: 4px solid #007bff;
-        }
-
-        .persona-result h3 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .persona-content {
-            white-space: pre-wrap;
-            font-family: monospace;
-            font-size: 0.9rem;
-        }
-
-        .warning-text {
-            margin-top: 20px;
-            font-size: 0.85rem;
-            color: #dc3545;
-            text-align: center;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            margin-top: 40px;
-            padding: 40px;
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #cce5ff;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
-        }
-
-        .cta-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #0056b3;
-            margin-bottom: 16px;
-        }
-
-        .cta-description {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.8;
+            height: 300px;
             margin-bottom: 30px;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 16px 40px;
-            background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%);
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 10px rgba(255, 119, 0, 0.3);
+        /* Lead Form */
+        .lead-form {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(255, 119, 0, 0.4);
-            opacity: 0.95;
+        .lead-form h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
         }
 
-        /* Debug Log */
-        #debug-log-container {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-top: 2px solid #ccc;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #debug-log-header {
-            padding: 5px 10px;
-            background-color: #eee;
-            border-bottom: 1px solid #ddd;
-            font-weight: bold;
-            font-size: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #debug-log-content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 10px;
+        /* Debug Console */
+        .debug-console {
+            margin-top: 50px;
+            background: #222;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 6px;
             font-family: monospace;
             font-size: 12px;
-            white-space: pre-wrap;
+            height: 200px;
+            overflow-y: auto;
         }
 
-        .log-entry {
+        .debug-entry {
             margin-bottom: 4px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #333;
             padding-bottom: 2px;
         }
 
-        .log-error {
-            color: red;
-            background-color: #fff0f0;
-        }
-
-        .log-info {
-            color: #333;
+        .error-msg {
+            color: #ff4444;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ffe6e6;
+            border: 1px solid #ffcccc;
+            border-radius: 4px;
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                    <h1>MIRAINA（ミライナ）</h1>
-                </a>
+
+    <div class="llmo-container">
+        <div class="llmo-header">
+            <h1>LLMO 無料診断ツール</h1>
+            <p>AI検索における自社の表示状況を診断します</p>
+        </div>
+
+        <div id="input-section">
+            <div class="llmo-form-group">
+                <label for="companyUrl">企業URL (ドメイン)</label>
+                <input type="url" id="companyUrl" class="llmo-input" placeholder="https://example.com" required>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="llmo-form-group">
+                <label for="companyName">企業名</label>
+                <input type="text" id="companyName" class="llmo-input" placeholder="株式会社Example" required>
+            </div>
+            <button id="startBtn" class="llmo-btn">診断を開始する</button>
+            <div id="errorArea" class="error-msg"></div>
+        </div>
+
+        <div id="progress-section" class="progress-container">
+            <div class="progress-bar-bg">
+                <div id="progressBar" class="progress-bar-fill"></div>
+            </div>
+            <div id="progressText" class="progress-text">準備中...</div>
+        </div>
+
+        <div id="results-section" class="results-area">
+            <!-- Persona display removed as per user request -->
+
+            <div class="chart-container">
+                <canvas id="resultChart"></canvas>
+            </div>
+
+            <div class="lead-form">
+                <h3>診断結果を保存する</h3>
+                <div class="llmo-form-group">
+                    <label>お名前</label>
+                    <input type="text" id="userName" class="llmo-input">
+                </div>
+                <div class="llmo-form-group">
+                    <label>メールアドレス</label>
+                    <input type="email" id="userEmail" class="llmo-input">
+                </div>
+                <button id="saveBtn" class="llmo-btn">結果を送信</button>
             </div>
         </div>
-    </header>
 
-    <main>
-        <section class="llmo-tool-section">
-            <div class="tool-container">
-                <div class="tool-header">
-                    <h2 class="tool-title">LLMO無料診断ツール</h2>
-                    <p class="tool-description">
-                        あなたの会社やサービスが、生成AI（Gemini等）からどのように認識されているか診断します。<br>
-                        企業URLと企業名を入力して、診断を開始してください。
-                    </p>
-                </div>
-
-                <!-- Initial Input Form -->
-                <div id="initialForm">
-                    <div class="input-group">
-                        <label class="input-label" for="companyDomain">企業URL (ドメイン)</label>
-                        <input type="text" id="companyDomain" class="input-field" placeholder="example.com">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label" for="companyName">企業名</label>
-                        <input type="text" id="companyName" class="input-field" placeholder="株式会社MIRAINA">
-                    </div>
-                    <button id="startBtn" class="btn-start">診断を開始する</button>
-                </div>
-
-                <!-- Progress Area -->
-                <div id="progressArea" class="progress-area">
-                    <div class="progress-info">
-                        <span id="statusText">準備中...</span>
-                        <span id="progressPercent">0%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div id="progressBar" class="progress-bar"></div>
-                    </div>
-                </div>
-
-                <!-- Lead Generation Form -->
-                <div id="leadFormArea" class="lead-form-area">
-                    <div class="lead-title">診断結果の準備ができました</div>
-                    <p class="lead-desc">詳細なレポートをご覧いただくために、ご連絡先を入力してください。</p>
-                    <div class="input-group">
-                        <label class="input-label" for="contactName">担当者名</label>
-                        <input type="text" id="contactName" class="input-field" placeholder="山田 太郎">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label" for="contactEmail">メールアドレス</label>
-                        <input type="email" id="contactEmail" class="input-field" placeholder="taro.yamada@example.com">
-                    </div>
-                    <button id="leadSubmitBtn" class="btn-submit-lead">結果を見る</button>
-                </div>
-
-                <!-- Result Area -->
-                <div id="resultArea" class="result-area">
-                    <div class="chart-container">
-                        <canvas id="resultChart"></canvas>
-                    </div>
-
-                    <div class="persona-result">
-                        <h3>推定されたペルソナ</h3>
-                        <div id="personaText" class="persona-content"></div>
-                    </div>
-
-                    <div class="cta-section">
-                        <h3 class="cta-title">LLM最適化(LLMO)で、AI検索からの流入を増やしませんか？</h3>
-                        <p class="cta-description">
-                            MIRAINAでは、貴社のブランドが生成AIに正しく認識され、推奨されるための対策を支援します。<br>
-                            まずは無料相談で、貴社の課題をお聞かせください。
-                        </p>
-                        <a href="/contact.html" class="cta-button">無料相談を申し込む</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
-                <button onclick="downloadLogs()"
-                    style="margin-top: 10px; padding: 5px 10px; font-size: 0.8rem; background: #eee; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">Download
-                    Logs</button>
-            </div>
+        <div class="debug-console" id="debugConsole">
+            <div class="debug-entry">Ready.</div>
         </div>
-    </footer>
-
-    <script src="/js/llmo_search.js"></script>
-
-    <!-- Debug Console -->
-    <div id="debug-log-container">
-        <div id="debug-log-header">
-            <span>Debug Console</span>
-            <button onclick="document.getElementById('debug-log-content').innerHTML = ''">Clear</button>
-        </div>
-        <div id="debug-log-content"></div>
     </div>
+
+    <script src="js/llmo_search.js"></script>
 </body>
 
 </html>
