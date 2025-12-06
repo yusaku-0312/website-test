@@ -142,25 +142,6 @@
             text-align: center;
         }
 
-        /* Debug Console */
-        .debug-console {
-            margin-top: 50px;
-            background: #222;
-            color: #0f0;
-            padding: 15px;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 12px;
-            height: 200px;
-            overflow-y: auto;
-        }
-
-        .debug-entry {
-            margin-bottom: 4px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 2px;
-        }
-
         .error-msg {
             color: #ff4444;
             margin-top: 10px;
@@ -174,59 +155,140 @@
 </head>
 
 <body>
-
-    <div class="llmo-container">
-        <div class="llmo-header">
-            <h1>LLMO 無料診断ツール</h1>
-            <p>AI検索における自社の表示状況を診断します</p>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-logo">
+                <a href="https://miraina-ai.com">
+                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
+                        loading="eager" decoding="async">
+                    <h1>MIRAINA（ミライナ）</h1>
+                </a>
+            </div>
+            <nav class="global-nav">
+                <ul>
+                    <li><a href="/services.html" class="nav-link">サービス</a></li>
+                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
+                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
+                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
+                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+    </header>
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="/services.html">サービス</a></li>
+            <li><a href="/about.html">MIRAINAについて</a></li>
+            <li><a href="/works.html">導入事例</a></li>
+            <li><a href="/blogs.html">ブログ</a></li>
+            <li><a href="/contact.html">問い合わせ</a></li>
+        </ul>
+    </nav>
 
-        <div id="input-section">
-            <div class="llmo-form-group">
-                <label for="companyUrl">企業URL (ドメイン)</label>
-                <input type="url" id="companyUrl" class="llmo-input" placeholder="https://example.com" required>
-            </div>
-            <div class="llmo-form-group">
-                <label for="companyName">企業名</label>
-                <input type="text" id="companyName" class="llmo-input" placeholder="株式会社Example" required>
-            </div>
-            <button id="startBtn" class="llmo-btn">診断を開始する</button>
-            <div id="errorArea" class="error-msg"></div>
-        </div>
-
-        <div id="progress-section" class="progress-container">
-            <div class="progress-bar-bg">
-                <div id="progressBar" class="progress-bar-fill"></div>
-            </div>
-            <div id="progressText" class="progress-text">準備中...</div>
-        </div>
-
-        <div id="results-section" class="results-area">
-            <!-- Persona display removed as per user request -->
-
-            <div class="chart-container">
-                <canvas id="resultChart"></canvas>
+    <main>
+        <div class="llmo-container">
+            <div class="llmo-header">
+                <h1>LLMO 無料診断ツール</h1>
+                <p>AI検索における自社の表示状況を診断します</p>
             </div>
 
-            <div class="lead-form">
-                <h3>診断結果を保存する</h3>
+            <div id="input-section">
                 <div class="llmo-form-group">
-                    <label>お名前</label>
-                    <input type="text" id="userName" class="llmo-input">
+                    <label for="companyUrl">企業URL (ドメイン)</label>
+                    <input type="url" id="companyUrl" class="llmo-input" placeholder="https://example.com" required>
                 </div>
                 <div class="llmo-form-group">
-                    <label>メールアドレス</label>
-                    <input type="email" id="userEmail" class="llmo-input">
+                    <label for="companyName">企業名</label>
+                    <input type="text" id="companyName" class="llmo-input" placeholder="株式会社Example" required>
                 </div>
-                <button id="saveBtn" class="llmo-btn">結果を送信</button>
+                <button id="startBtn" class="llmo-btn">診断を開始する</button>
+                <div id="errorArea" class="error-msg"></div>
+            </div>
+
+            <div id="progress-section" class="progress-container">
+                <div class="progress-bar-bg">
+                    <div id="progressBar" class="progress-bar-fill"></div>
+                </div>
+                <div id="progressText" class="progress-text">準備中...</div>
+            </div>
+
+            <div id="results-section" class="results-area">
+                <!-- Persona display removed as per user request -->
+
+                <div class="chart-container">
+                    <canvas id="resultChart"></canvas>
+                </div>
+
+                <div class="lead-form">
+                    <h3>診断結果を保存する</h3>
+                    <div class="llmo-form-group">
+                        <label>お名前</label>
+                        <input type="text" id="userName" class="llmo-input">
+                    </div>
+                    <div class="llmo-form-group">
+                        <label>メールアドレス</label>
+                        <input type="email" id="userEmail" class="llmo-input">
+                    </div>
+                    <button id="saveBtn" class="llmo-btn">結果を送信</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- 1) 左：ブランド -->
+                <div class="footer-col footer-col--brand">
+                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
+                </div>
+
+                <!-- 2) 中左：空白スペース（装飾用） -->
+                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
+
+                <!-- 3) 中右：サイトリンク -->
+                <div class="footer-col footer-col--links">
+                    <p class="footer-heading">サイトメニュー</p>
+                    <nav class="footer-nav" aria-label="フッターナビゲーション">
+                        <ul>
+                            <li><a href="/services.html">サービス</a></li>
+                            <li><a href="/about.html">MIRAINAについて</a></li>
+                            <li><a href="/works.html">導入事例</a></li>
+                            <li><a href="/blogs.html">ブログ</a></li>
+                            <li><a href="/contact.html">問い合わせ</a></li>
+                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- 4) 右：SNS（テキストのみ） -->
+                <div class="footer-col footer-col--sns">
+                    <p class="footer-heading">SNS</p>
+                    <ul class="footer-sns-list">
+                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
+                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                        </li>
+                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                        </li>
+                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 MIRAINA All rights reserved.</p>
             </div>
         </div>
+    </footer>
 
-        <div class="debug-console" id="debugConsole">
-            <div class="debug-entry">Ready.</div>
-        </div>
-    </div>
-
+    <!-- common.jsはdeferで直接読み込む -->
+    <script src="/js/common.js" defer></script>
     <script src="js/llmo_search.js"></script>
 </body>
 

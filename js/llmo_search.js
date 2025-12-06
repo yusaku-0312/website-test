@@ -35,7 +35,6 @@ const els = {
     progressBar: document.getElementById('progressBar'),
     progressText: document.getElementById('progressText'),
     resultsSection: document.getElementById('results-section'),
-    debugConsole: document.getElementById('debugConsole'),
     saveBtn: document.getElementById('saveBtn'),
     userName: document.getElementById('userName'),
     userEmail: document.getElementById('userEmail'),
@@ -322,11 +321,7 @@ function updateProgress(percent, text) {
 }
 
 function log(msg) {
-    const div = document.createElement('div');
-    div.className = 'debug-entry';
-    div.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
-    els.debugConsole.appendChild(div);
-    els.debugConsole.scrollTop = els.debugConsole.scrollHeight;
+    console.log(`[${new Date().toLocaleTimeString()}] ${msg}`);
 }
 
 function showError(msg) {
