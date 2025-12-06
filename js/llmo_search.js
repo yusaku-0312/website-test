@@ -3,27 +3,19 @@
  */
 
 // ==========================================
+// ==========================================
 // CONFIGURATION
 // ==========================================
 
-// TODO: ここにGASのウェブアプリURLを貼り付けてください
+// TODO: ここにGASのウェブアプリURLを貼り付けてください (スプレッドシート記録用)
 const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxYgCD2SLlDbpOGH7RzVqvDl6m2wSB7i9cz_ELWRVaABwyFnkCNVA38RQOcHG3sTazs/exec";
 
-// TODO: 有効なGemini APIキーを設定 (Render環境変数の場合はプレースホルダー)
-const API_KEYS = [
-    // "__API_KEYS_PLACEHOLDER_3__"
-];
-
-// 使用するモデル
-const MODEL_REASONING = "gemini-2.5-flash";
-const MODEL_SEARCH = "gemini-2.5-flash";
-
-const API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models";
+// TODO: 診断用プロキシURLを設定
+const GAS_PROXY_URL = "https://script.google.com/macros/s/AKfycbx8rd0CzTSGVW0sA28STxRbAi5b7FlRTp5tfN4rhM5WItW4N8EJgcMZpI4YIAwVAMd_/exec";
 
 // ==========================================
 // STATE MANAGEMENT
 // ==========================================
-let currentKeyIndex = 0;
 let isRunning = false;
 
 // 同期用フラグ
@@ -51,56 +43,56 @@ let results = {
 // UTILITY FUNCTIONS
 // ==========================================
 
-function getApiKey() {
-    return API_KEYS[currentKeyIndex];
-}
-
-function rotateApiKey() {
-    currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length;
-    console.log(`[System] Switched to API Key Index: ${currentKeyIndex}`);
-}
-
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
 function sanitizeDomain(input) {
     return input.trim().replace(/^https?:\/\//, '').split('/')[0];
 }
 
-async function callGeminiApi(modelName, payload, retryCount = 0) {
-    const apiKey = getApiKey();
-    const url = `${API_BASE_URL}/${modelName}:generateContent?key=${apiKey}`;
+function addLog(message, isError = false) {
+    const consoleEl = document.getElementById("debug-log-content");
+    if (!consoleEl) return;
+
+    const entry = document.createElement("div");
+    entry.className = isError ? "log-entry log-error" : "log-entry log-info";
+
+    const time = new Date().toLocaleTimeString();
+    entry.textContent = `[${time}] ${message}`;
+
+    consoleEl.appendChild(entry);
+    consoleEl.scrollTop = consoleEl.scrollHeight;
+}
+
+async function callProxy(type, payload) {
+    const body = { type, ...payload };
+    addLog(`[REQ] type=${type}`);
 
     try {
-        const response = await fetch(url, {
+        const res = await fetch(GAS_PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(body),
         });
 
-        if (response.ok) {
-            return await response.json();
+        if (!res.ok) {
+            throw new Error(`Proxy Error: ${res.status} ${res.statusText}`);
         }
 
-        if (response.status === 429) {
-            console.warn("[API] 429 Too Many Requests. Rotating key...");
-            rotateApiKey();
-            if (retryCount < 1) {
-                await sleep(1000);
-                return callGeminiApi(modelName, payload, retryCount + 1);
-            }
-        } else if (response.status >= 500) {
-            console.warn(`[API] Server Error ${response.status}. Retrying...`);
-            if (retryCount < 1) {
-                await sleep(2000);
-                return callGeminiApi(modelName, payload, retryCount + 1);
-            }
+        const data = await res.json();
+
+        // GAS側からのデバッグログを表示
+        if (data.debugLog && Array.isArray(data.debugLog)) {
+            data.debugLog.forEach(log => addLog(`[GAS] ${log}`));
         }
 
-        throw new Error(`API Error: ${response.status} ${response.statusText}`);
+        if (!data.ok) {
+            throw new Error(`Proxy Logic Error: ${data.errorMessage || data.error || "unknown error"}`);
+        }
 
-    } catch (error) {
-        console.error("[API] Request Failed:", error);
-        throw error;
+        addLog(`[RES] OK`);
+        return data;
+
+    } catch (e) {
+        addLog(`[ERR] ${e.message}`, true);
+        throw e;
     }
 }
 
@@ -110,101 +102,29 @@ async function callGeminiApi(modelName, payload, retryCount = 0) {
 
 async function estimatePersona(domain) {
     updateStatus("企業分析中... (ペルソナ推定)", 5);
-    const prompt = `
-## 企業URL
-${domain}
 
-## 指示
-上記の企業URLからこの企業について調査し、最終的にこの企業がどんなペルソナをターゲットとしているか予測し以下の形式で出力してください。
+    const data = await callProxy("persona", { domain });
+    const text = data.personaText || "ペルソナ推定に失敗しました。";
 
-## 注意点
-- 出力形式以外の属性は追加しないでください。
-- 任意項目は不要なら省略してください。
-- 任意の項目の中で不要と判定したものは出力の中にラベルすら含めないてください。
-- 「ニーズ」は3つ必須。
-
-## 出力形式
-"""
-##基本情報
-性別（任意）：
-年代（任意）：
-居住地（任意）：
-職種（任意）：
-業種（任意）：
-趣味（任意）：
-家族構成（任意）：
-ニーズ（３つ必須）：
-・〜〜〜
-・〜〜〜
-・〜〜〜
-"""
-    `;
-
-    const payload = {
-        contents: [{ parts: [{ text: prompt }] }],
-        tools: [{ google_search: {} }]
-    };
-
-    const data = await callGeminiApi(MODEL_REASONING, payload);
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "ペルソナ推定に失敗しました。";
     results.personaText = text;
+
+    updateStatus("ペルソナ推定が完了しました", 20);
     return text;
 }
 
 async function generateQuestions(personaText) {
-    const TOTAL_QUESTIONS = 100;
-    const BATCH_COUNT = 5;
-    const QUESTIONS_PER_BATCH = 20;
-    let allQuestions = [];
+    updateStatus("検索シミュレーション用質問を生成中...", 20);
 
-    for (let i = 0; i < BATCH_COUNT; i++) {
-        updateStatus(`検索シミュレーション用質問を生成中... (${i + 1}/${BATCH_COUNT}セット目)`, 10 + (i * 2)); // 10% -> 20% range
+    const data = await callProxy("questions", { personaText });
+    const questions = Array.isArray(data.questions) ? data.questions : [];
 
-        const prompt = `
-以下の人がAIで検索する場面を想像してその人がAIに聞く可能性がある代表的な質問を作って。
-本当に作るかを考えたいので基本的に簡潔にして（質問は${QUESTIONS_PER_BATCH}個のみで）。
-質問を生成するときにニーズを参照する場合は、複数のニーズの中からランダムにどれか１つを選んでそれを参照するようにして。
-
-${personaText}
-
-出力形式（JSONのみ出力すること）
-{
-  "prompt": [
-    "質問1",
-    "質問2",
-    ...,
-    "質問${QUESTIONS_PER_BATCH}"
-  ]
-}
-        `;
-
-        const payload = { contents: [{ parts: [{ text: prompt }] }] };
-
-        try {
-            const data = await callGeminiApi(MODEL_REASONING, payload);
-            let text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-            text = text.replace(/```json/g, "").replace(/```/g, "").trim();
-
-            const json = JSON.parse(text);
-            if (Array.isArray(json.prompt)) {
-                allQuestions = allQuestions.concat(json.prompt);
-            }
-        } catch (e) {
-            console.error(`Question generation batch ${i + 1} failed:`, e);
-            // Continue to next batch even if one fails, to try to get some questions
-        }
-
-        // Short delay between generation batches
-        await sleep(500);
-    }
-
-    if (allQuestions.length === 0) {
+    if (questions.length === 0) {
         alert("質問生成に失敗しました。もう一度お試しください。");
-        throw new Error("Failed to generate any questions");
+        throw new Error("Failed to generate questions");
     }
 
-    // Ensure we don't exceed 100 if API returns more
-    return allQuestions.slice(0, TOTAL_QUESTIONS);
+    updateStatus("質問生成が完了しました", 30);
+    return questions;
 }
 
 async function executeSearchLoop(questions, domain, companyName) {
@@ -214,62 +134,31 @@ async function executeSearchLoop(questions, domain, companyName) {
     results.mentions = 0;
     results.citations = 0;
 
-    const BATCH_SIZE = 5;
+    for (let i = 0; i < total; i++) {
+        const question = questions[i];
 
-    for (let i = 0; i < total; i += BATCH_SIZE) {
-        const batch = questions.slice(i, i + BATCH_SIZE);
-        const promises = batch.map(async (question, index) => {
-            const currentIdx = i + index;
-            const progressPercent = Math.round(((currentIdx + 1) / total) * 80) + 20;
-            updateStatus(`検索実行中... (${currentIdx + 1}/${total})`, progressPercent);
+        const progressPercent = 30 + Math.round(((i + 1) / total) * 70);
+        updateStatus(`検索実行中... (${i + 1}/${total})`, progressPercent);
 
-            try {
-                const payload = {
-                    contents: [{ parts: [{ text: question }] }],
-                    tools: [{ google_search: {} }],
-                    safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
-                    ]
-                };
+        try {
+            const data = await callProxy("search", {
+                question,
+                domain,
+                companyName,
+            });
 
-                const data = await callGeminiApi(MODEL_SEARCH, payload);
+            results.success++;
 
-                if (data.candidates?.[0]?.finishReason === "SAFETY") {
-                    return;
-                }
-
-                const candidate = data.candidates?.[0];
-                if (!candidate) return;
-
-                results.success++;
-
-                const responseText = candidate.content?.parts?.map(p => p.text).join("") || "";
-                if (responseText.includes(companyName)) {
-                    results.mentions++;
-                }
-
-                const groundingChunks = candidate.groundingMetadata?.groundingChunks || [];
-                let isCited = false;
-                for (const chunk of groundingChunks) {
-                    if (chunk.web?.uri && chunk.web.uri.includes(domain)) {
-                        isCited = true;
-                        break;
-                    }
-                }
-                if (isCited) {
-                    results.citations++;
-                }
-
-            } catch (e) {
-                console.error(`Error processing question ${currentIdx}:`, e);
+            if (data.mentioned) {
+                results.mentions++;
             }
-        });
-
-        await Promise.all(promises);
-        await sleep(200);
+            if (data.cited) {
+                results.citations++;
+            }
+        } catch (e) {
+            console.error(`Error processing question ${i}:`, e);
+            // エラー時はスキップして次へ
+        }
     }
 }
 
@@ -416,6 +305,8 @@ document.getElementById("startBtn").addEventListener("click", async () => {
     // リードフォーム表示 (アニメーション付き)
     const leadArea = document.getElementById("leadFormArea");
     leadArea.style.display = "block";
+
+    addLog("Diagnosis started for: " + userData.domain);
 
     try {
         // --- 非同期で診断実行 ---
