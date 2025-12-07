@@ -20,7 +20,11 @@ const state = {
         mentioned: 0,
         cited: 0
     },
-    isProcessing: false
+    isProcessing: false,
+    analysisComplete: false,
+    userInfoSubmitted: false,
+    userName: "",
+    userEmail: ""
 };
 
 // ==========================================
@@ -31,6 +35,8 @@ const els = {
     companyUrl: document.getElementById('companyUrl'),
     companyName: document.getElementById('companyName'),
     errorArea: document.getElementById('errorArea'),
+    inputSection: document.getElementById('input-section'),
+    waitingSection: document.getElementById('waiting-section'),
     progressSection: document.getElementById('progress-section'),
     progressBar: document.getElementById('progressBar'),
     progressText: document.getElementById('progressText'),
@@ -45,7 +51,7 @@ const els = {
 // EVENT LISTENERS
 // ==========================================
 els.startBtn.addEventListener('click', startDiagnostic);
-els.saveBtn.addEventListener('click', submitRecord);
+els.saveBtn.addEventListener('click', handleUserInfoSubmit);
 
 // ==========================================
 // CORE FUNCTIONS
@@ -70,15 +76,27 @@ async function startDiagnostic() {
     state.questions = [];
     state.results = { total: 0, mentioned: 0, cited: 0 };
     state.isProcessing = true;
+    state.analysisComplete = false;
+    state.userInfoSubmitted = false;
+    state.userName = "";
+    state.userEmail = "";
 
     // UI Reset
     els.errorArea.style.display = 'none';
-    els.startBtn.disabled = true;
-    els.progressSection.style.display = 'block';
+    els.inputSection.style.display = 'none';
+    els.waitingSection.style.display = 'block';
     els.resultsSection.style.display = 'none';
+    els.saveBtn.disabled = false;
+    els.saveBtn.textContent = "結果を表示する";
+
     updateProgress(5, "初期化中...");
     log("Diagnostic started for: " + name);
 
+    // Start Analysis in Background
+    runAnalysisFlow();
+}
+
+async function runAnalysisFlow() {
     try {
         // Step 1: Persona Estimation
         await stepPersona();
@@ -89,17 +107,75 @@ async function startDiagnostic() {
         // Step 3: Search Loop
         await stepSearchLoop();
 
-        // Step 4: Finalize
-        showResults();
+        // Mark Analysis as Complete
+        state.analysisComplete = true;
+        updateProgress(100, "分析完了。情報を入力して結果をご覧ください。");
+        log("Analysis flow completed.");
+
+        // Try to finalize if user info is already submitted
+        checkAndFinalize();
 
     } catch (e) {
         showError("エラーが発生しました: " + e.message);
         log("CRITICAL ERROR: " + e.message);
-    } finally {
         state.isProcessing = false;
-        els.startBtn.disabled = false;
+        // Show input section again to allow retry
+        els.inputSection.style.display = 'block';
+        els.waitingSection.style.display = 'none';
     }
 }
+
+async function handleUserInfoSubmit() {
+    const name = els.userName.value.trim();
+    const email = els.userEmail.value.trim();
+
+    if (!name || !email) {
+        alert("お名前とメールアドレスを入力してください。");
+        return;
+    }
+
+    state.userName = name;
+    state.userEmail = email;
+    state.userInfoSubmitted = true;
+
+    els.saveBtn.disabled = true;
+    els.saveBtn.textContent = "分析完了を待っています...";
+
+    log("User info submitted.");
+    checkAndFinalize();
+}
+
+function checkAndFinalize() {
+    if (state.analysisComplete && state.userInfoSubmitted) {
+        finalize();
+    } else if (state.userInfoSubmitted && !state.analysisComplete) {
+        // User is waiting for analysis
+        els.saveBtn.textContent = "分析中...しばらくお待ちください";
+    } else if (state.analysisComplete && !state.userInfoSubmitted) {
+        // Analysis done, waiting for user input
+        els.saveBtn.textContent = "結果を表示する (分析完了)";
+        els.saveBtn.disabled = false;
+    }
+}
+
+async function finalize() {
+    // Both conditions met
+    log("Finalizing results...");
+
+    // Save Record
+    await submitRecord();
+
+    // Show Results
+    els.waitingSection.style.display = 'none';
+    els.resultsSection.style.display = 'block';
+    renderCharts();
+
+    state.isProcessing = false;
+}
+
+// ------------------------------------------
+// Analysis Steps
+// ------------------------------------------
 
 async function stepPersona() {
     updateProgress(10, "企業サイトを分析中...");
@@ -115,24 +191,12 @@ async function stepPersona() {
     if (!res.ok) throw new Error("Persona analysis failed");
 
     state.persona = res.personaText;
-    log("Persona estimated: " + state.persona.substring(0, 50) + "...");
+    log("Persona estimated.");
 }
 
 async function stepQuestions() {
     updateProgress(30, "検索質問を生成中...");
     log("Generating questions...");
-
-    // 100問生成するために10回リクエストする仕様だが、
-    // ここではデモとして1回のリクエストで10問生成し、それを繰り返す実装にするか、
-    // GAS側でまとめてやるか。要件では「GAS側で100個の質問全てを...」とあるが、
-    // フロントからの制御でループさせる方が進捗が見えやすい。
-    // ここでは要件「type = "questions" ... 10個生成」に従い、
-    // フロント側でループして合計数を確保する実装とする。
-
-    // とりあえず1バッチ(10問)だけ取得してデモ動作させる（要件の30-100問に対応するためループも可）
-    // 今回はシンプルに1回呼び出しで10問取得する形にする（要件3-2に「10個生成」とあるため）
-    // ※要件の「全質問（例 30〜100問）」に対応するため、複数回呼ぶのがベターだが、
-    // GAS Proxyのタイムアウトを避けるため、小分けにする。
 
     const payload = {
         type: "questions",
@@ -143,7 +207,7 @@ async function stepQuestions() {
     const res = await callProxy(payload);
     if (!res.ok) throw new Error("Question generation failed");
 
-    state.questions = res.questions; // Array of strings
+    state.questions = res.questions;
     log(`Generated ${state.questions.length} questions.`);
 }
 
@@ -172,7 +236,6 @@ async function stepSearchLoop() {
 
             log(`[${i + 1}/${total}] Mentioned: ${res.mentioned}, Cited: ${res.cited}`);
 
-            // Wait a bit to be nice to the API (and visual pacing)
             await new Promise(r => setTimeout(r, 500));
 
         } catch (e) {
@@ -181,18 +244,9 @@ async function stepSearchLoop() {
     }
 }
 
-function showResults() {
-    updateProgress(100, "診断完了");
-    els.resultsSection.style.display = 'block';
-    // Persona display removed
-
-    renderCharts();
-    log("Results rendered.");
-}
-
 function renderCharts() {
     const ctx = els.chartCanvas.getContext('2d');
-    const total = state.results.total || 1; // avoid division by zero
+    const total = state.results.total || 1;
     const mentionRate = Math.round((state.results.mentioned / total) * 100);
     const citationRate = Math.round((state.results.cited / total) * 100);
 
@@ -228,53 +282,29 @@ function renderCharts() {
 }
 
 async function submitRecord() {
-    const name = els.userName.value.trim();
-    const email = els.userEmail.value.trim();
-
-    if (!name || !email) {
-        alert("お名前とメールアドレスを入力してください。");
-        return;
-    }
-
-    els.saveBtn.disabled = true;
-    els.saveBtn.textContent = "送信中...";
-
     const payload = {
         timestamp: new Date().toISOString(),
         companyName: state.companyName,
         domain: state.domain,
-        email: email,
-        userName: name,
+        email: state.userEmail,
+        userName: state.userName,
         mentionRate: (state.results.mentioned / state.results.total),
         citationRate: (state.results.cited / state.results.total)
     };
 
     try {
-        // GAS Record Web App への送信
-        // Note: GAS Web App must allow CORS or we use no-cors (but can't read response)
-        // Usually for simple logging, fetch with default mode is fine if GAS handles OPTIONS.
-        // Or we use the Proxy to forward this too if CORS is an issue.
-        // Here we assume direct call to Record App works (or via Proxy if needed).
-        // Let's try direct first.
-
-        const response = await fetch(GAS_RECORD_URL, {
+        await fetch(GAS_RECORD_URL, {
             method: 'POST',
-            mode: 'no-cors', // GAS often requires this for simple POSTs from browser
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
         });
-
-        // Since mode is no-cors, we can't check response.ok
-        alert("送信しました。");
-        els.saveBtn.textContent = "送信完了";
-
+        log("Record submitted.");
     } catch (e) {
         console.error(e);
-        alert("送信に失敗しました。");
-        els.saveBtn.disabled = false;
-        els.saveBtn.textContent = "結果を送信";
+        log("Failed to submit record.");
     }
 }
 
@@ -283,15 +313,15 @@ async function submitRecord() {
 // ==========================================
 
 async function callProxy(payload) {
-    if (GAS_PROXY_URL === "YOUR_GAS_PROXY_WEB_APP_URL") {
-        throw new Error("GAS Proxy URLが設定されていません。jsファイルを編集してください。");
+    if (GAS_PROXY_URL.includes("YOUR_GAS_PROXY")) {
+        throw new Error("GAS Proxy URLが設定されていません。");
     }
 
     try {
         const response = await fetch(GAS_PROXY_URL, {
             method: 'POST',
             headers: {
-                'Content-Type': 'text/plain;charset=utf-8' // GAS requires text/plain for doPost
+                'Content-Type': 'text/plain;charset=utf-8'
             },
             body: JSON.stringify(payload)
         });
@@ -302,7 +332,6 @@ async function callProxy(payload) {
 
         const data = await response.json();
 
-        // Handle Debug Logs from Server
         if (data.debugLog && Array.isArray(data.debugLog)) {
             data.debugLog.forEach(l => log("[GAS] " + l));
         }

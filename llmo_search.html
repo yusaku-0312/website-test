@@ -210,11 +210,28 @@
                 <div id="errorArea" class="error-msg"></div>
             </div>
 
-            <div id="progress-section" class="progress-container">
-                <div class="progress-bar-bg">
-                    <div id="progressBar" class="progress-bar-fill"></div>
+            <div id="waiting-section" style="display:none;">
+                <div id="progress-section" class="progress-container" style="display:block;">
+                    <div class="progress-bar-bg">
+                        <div id="progressBar" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progressText" class="progress-text">準備中...</div>
                 </div>
-                <div id="progressText" class="progress-text">準備中...</div>
+
+                <div class="lead-form">
+                    <h3>診断結果を受け取る</h3>
+                    <p style="margin-bottom: 15px; font-size: 14px; color: #666;">
+                        分析には時間がかかります。完了時にお知らせしますので、情報を入力してお待ちください。</p>
+                    <div class="llmo-form-group">
+                        <label>お名前</label>
+                        <input type="text" id="userName" class="llmo-input">
+                    </div>
+                    <div class="llmo-form-group">
+                        <label>メールアドレス</label>
+                        <input type="email" id="userEmail" class="llmo-input">
+                    </div>
+                    <button id="saveBtn" class="llmo-btn">結果を表示する</button>
+                </div>
             </div>
 
             <div id="results-section" class="results-area">
@@ -224,17 +241,8 @@
                     <canvas id="resultChart"></canvas>
                 </div>
 
-                <div class="lead-form">
-                    <h3>診断結果を保存する</h3>
-                    <div class="llmo-form-group">
-                        <label>お名前</label>
-                        <input type="text" id="userName" class="llmo-input">
-                    </div>
-                    <div class="llmo-form-group">
-                        <label>メールアドレス</label>
-                        <input type="email" id="userEmail" class="llmo-input">
-                    </div>
-                    <button id="saveBtn" class="llmo-btn">結果を送信</button>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="font-weight: bold; color: #28a745;">診断完了！結果は上記グラフをご確認ください。</p>
                 </div>
             </div>
 
