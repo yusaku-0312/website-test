@@ -253,17 +253,15 @@ function renderCharts() {
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['自社名言及率', '自社サイト引用率'],
+            labels: ['自社名言及率'],
             datasets: [{
                 label: 'スコア (%)',
-                data: [mentionRate, citationRate],
+                data: [mentionRate],
                 backgroundColor: [
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(75, 192, 192, 0.6)'
+                    'rgba(54, 162, 235, 0.6)'
                 ],
                 borderColor: [
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(75, 192, 192, 1)'
+                    'rgba(54, 162, 235, 1)'
                 ],
                 borderWidth: 1
             }]
