@@ -2,172 +2,159 @@
 <html lang="ja">
 
 <head>
-    <!-- =============================
-       基本メタ
-  ============================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="MIRAINA" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- =============================
-       タイトル / ディスクリプション
-  ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド | MIRAINAブログ</title>
     <meta name="description"
-        content="AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。E-E-A-Tの明文化や一次データの整備、90日ロードマップまで、SEO担当者が今日から動ける完全ガイド。" />
+        content="AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。E-E-A-Tの明文化や一次データの整備、90日ロードマップまで、SEO担当者が今日から動ける完全ガイド。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog005.html">
+    <meta property="og:image" content="/images/blogs_images/blog-card005.webp">
+    <meta property="og:description" content="AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。">
 
-    <!-- =============================
-       Canonical / OGP
-  ============================== -->
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog005.html" />
-    <meta property="og:title" content="LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド | MIRAINAブログ" />
-    <meta property="og:description"
-        content="AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。E-E-A-Tの明文化や一次データ整備、90日ロードマップまで。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://miraina-ai.com/blogs/blog005.html" />
-    <meta property="og:site_name" content="MIRAINA" />
-    <meta property="og:image" content="https://miraina-ai.com/images/blog-card005.webp" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <link rel="icon" href="/images/favicon.ico" />
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
 
-    <!-- =============================
-       CSS
-  ============================== -->
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/blog_article.css" />
-
-    <!-- =============================
-       構造化データ（Article）
-  ============================== -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
-    "description": "AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。E-E-A-Tの明文化や一次データの整備、90日ロードマップまで、SEO担当者が今日から動ける完全ガイド。",
-    "author": {
-      "@type": "Person",
-      "name": "芝優作"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MIRAINA",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://miraina-ai.com/images/company-logo.webp",
-        "width": 200,
-        "height": 50
-      }
-    },
-    "image": "https://miraina-ai.com/images/blog-card005.webp",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://miraina-ai.com/blogs/blog005.html"
-    },
-    "url": "https://miraina-ai.com/blogs/blog005.html",
-    "datePublished": "2025-10-14",
-    "dateModified": "2025-10-14"
-  }
-  </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
 </head>
 
 <body>
-    <!-- =============================
-       共通ヘッダー
-  ============================== -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async" />
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu"><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
 
-    <!-- =============================
-       本文
-  ============================== -->
-    <main class="blog-article-main">
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド</li>
-                </ul>
-            </div>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド</li>
+            </ul>
         </div>
 
-        <article class="blog-article container">
-            <header class="blog-article-header">
-                <h1>LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド</h1>
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年10月14日</div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.10.14</span>
+                    <div class="article-tags">
+                        <p class="article-tag">LLMO</p>
+                        <p class="article-tag">SEO</p>
+                        <p class="article-tag">AI検索</p>
+                    </div>
                 </div>
-                <figure class="blog-article-thumb">
-                    <img src="/images/blog005-1.webp" alt="LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイドのサムネイル画像"
-                        width="1000" height="630" class="blog-article-thumb-img" />
-                </figure>
-                <p class="blog-article-lead">
-                    「AI検索での露出」が企業にとって当たり前の競争軸になりつつあります。本稿では、LLMOの本質と実践手順を、SEO担当者が“懐疑的である前提”から理解できるよう丁寧に解説します。
-                </p>
+                <h1 class="article-title">LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog005-1.webp" alt="LLMO完全ガイド" width="800" height="450">
+                </div>
             </header>
 
-            <!-- 目次 -->
-            <nav class="blog-article-toc" aria-label="目次">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#intro">🧭 はじめに：なぜSEOだけでは足りないのか</a></li>
-                    <li><a href="#what-is-llmo">LLMOとは？SEOとの違いを整理する</a></li>
-                    <li><a href="#why-now">なぜ「今」LLMOをやるべきか？ — 5つの理由</a></li>
-                    <li><a href="#foundations">SEOマーケターが理解しておくべき LLMO 設計の“5つの土台”</a></li>
-                    <li><a href="#roadmap">実践ロードマップ（90日プラン）</a></li>
-                    <li><a href="#faq">よくある疑問と実務的回答</a></li>
-                    <li><a href="#summary">まとめ：SEO時代からAI時代への移行を乗り越える鍵</a></li>
-                    <li><a href="#service">サービスご紹介：LLMO Insight（LLMO インサイト）</a></li>
-                </ol>
-            </nav>
-
-            <!-- =============================
-           コンテンツ本体（Markdown→HTML）
-      ============================== -->
-            <section id="intro">
-                <h2>🧭 はじめに：なぜSEOだけでは足りないのか</h2>
-                <p>多くのサイト運営者が「検索順位1位を取れば流入は安定する」と信じてきました。しかし、近年登場した<strong>AI要約（AI
-                        Overviews）</strong>は、検索結果画面上に要点を直接表示することで、<strong>上位表示されてもクリックされない</strong>状況を生み出しています。</p>
-                <p>実際、Ahrefsの分析では、AI Overviewsが出現するクエリでは<strong>1位のCTR（クリック率）が約34.5%低下</strong>したとの報告があります。<a
-                        href="https://ahrefs.com/blog/ai-overviews-reduce-clicks/" target="_blank"
-                        rel="noopener">出典：Ahrefs</a><br>
-                    また、Search Engine Landも、AI Overviewsによりオーガニック流入が損なわれるケースを多数指摘しています。</p>
-                <p>このような変化を前に、SEO（検索エンジン最適化）だけに依存する戦略は<strong>リスクを伴う時代</strong>になりつつあるのです。</p>
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「AI検索での露出」が企業にとって当たり前の競争軸になりつつあります。本稿では、LLMOの本質と実践手順を、SEO担当者が“懐疑的である前提”から理解できるよう丁寧に解説します。
+                </p>
             </section>
 
-            <section id="what-is-llmo">
-                <h2>LLMOとは？SEOとの違いを整理する</h2>
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#intro">1. はじめに：なぜSEOだけでは足りないのか</a></li>
+                    <li><a href="#what-is-llmo">2. LLMOとは？SEOとの違いを整理する</a></li>
+                    <li><a href="#why-now">3. なぜ「今」LLMOをやるべきか？ — 5つの理由</a></li>
+                    <li><a href="#foundations">4. SEOマーケターが理解しておくべき LLMO 設計の“5つの土台”</a></li>
+                    <li><a href="#roadmap">5. 実践ロードマップ（90日プラン）</a></li>
+                    <li><a href="#faq">6. よくある疑問と実務的回答</a></li>
+                    <li><a href="#summary">7. まとめ：SEO時代からAI時代への移行を乗り越える鍵</a></li>
+                    <li><a href="#service">8. サービスご紹介：LLMO Insight</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="intro">1. はじめに：なぜSEOだけでは足りないのか</h2>
+                <p>
+                    多くのサイト運営者が「検索順位1位を取れば流入は安定する」と信じてきました。しかし、近年登場した<strong>AI要約（AI
+                        Overviews）</strong>は、検索結果画面上に要点を直接表示することで、<strong>上位表示されてもクリックされない</strong>状況を生み出しています。
+                </p>
+                <p>
+                    実際、Ahrefsの分析では、AI Overviewsが出現するクエリでは<strong>1位のCTR（クリック率）が約34.5%低下</strong>したとの報告があります。（<a
+                        href="https://ahrefs.com/blog/ai-overviews-reduce-clicks/" target="_blank"
+                        rel="noopener">出典：Ahrefs</a>）<br>
+                    また、Search Engine Landも、AI Overviewsによりオーガニック流入が損なわれるケースを多数指摘しています。
+                </p>
+                <p>
+                    このような変化を前に、SEO（検索エンジン最適化）だけに依存する戦略は<strong>リスクを伴う時代</strong>になりつつあるのです。
+                </p>
+
+                <h2 id="what-is-llmo">2. LLMOとは？SEOとの違いを整理する</h2>
 
                 <h3>LLMO（Large Language Model Optimization）の定義</h3>
                 <ul>
@@ -178,83 +165,74 @@
                 </ul>
 
                 <h3>SEO と LLMO の主な違い（比較）</h3>
-                <div class="blog-figure">
-                    <div class="table-compare-wrapper">
-                        <table class="table-compare" aria-describedby="compare-caption">
-                            <caption id="compare-caption" class="table-compare-caption">
-                                SEO と LLMO の比較表
-                            </caption>
-
-                            <!-- 列幅の目安：観点はやや狭め、説明列は広め -->
-                            <colgroup>
-                                <col class="col-axis" />
-                                <col class="col-seo" />
-                                <col class="col-llmo" />
-                            </colgroup>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">観点</th>
-                                    <th scope="col">SEO最適化</th>
-                                    <th scope="col">LLMO最適化</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="axis">主な対象</td>
-                                    <td>Google／Bing などの検索エンジン</td>
-                                    <td>大規模言語モデル（生成AI）</td>
-                                </tr>
-                                <tr>
-                                    <td class="axis">KPI</td>
-                                    <td>検索順位、オーガニック流入</td>
-                                    <td>
-                                        AI回答での
-                                        <span class="badge">引用・言及率</span>、
-                                        AI検索チャネルからの流入
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="axis">最適化の手法</td>
-                                    <td>キーワード、内部リンク、被リンク</td>
-                                    <td>論理構造・根拠明示、著者信頼性、要約文整備</td>
-                                </tr>
-                                <tr>
-                                    <td class="axis">資産</td>
-                                    <td>ページ・記事</td>
-                                    <td>ブランドとしての根拠群（実績、データ、著者保証など）</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <caption style="text-align: left; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem;">
+                            SEO と LLMO の比較</caption>
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>SEO最適化</th>
+                                <th>LLMO最適化</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>主な対象</th>
+                                <td>Google／Bing などの検索エンジン</td>
+                                <td>大規模言語モデル（生成AI）</td>
+                            </tr>
+                            <tr>
+                                <th>KPI</th>
+                                <td>検索順位、オーガニック流入</td>
+                                <td>AI回答での引用・言及率、AI検索チャネルからの流入</td>
+                            </tr>
+                            <tr>
+                                <th>最適化の手法</th>
+                                <td>キーワード、内部リンク、被リンク</td>
+                                <td>論理構造・根拠明示、著者信頼性、要約文整備</td>
+                            </tr>
+                            <tr>
+                                <th>資産</th>
+                                <td>ページ・記事</td>
+                                <td>ブランドとしての根拠群（実績、データ、著者保証など）</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <p>「検索に強い＝AIに強い」とは限らない時代に、SEOを<strong>下地に据えながらAI向け設計を追加する</strong>のが現実的な戦略と言えます。</p>
-            </section>
+                <p>
+                    「検索に強い＝AIに強い」とは限らない時代に、SEOを<strong>下地に据えながらAI向け設計を追加する</strong>のが現実的な戦略と言えます。
+                </p>
 
-            <section id="why-now">
-                <h2>なぜ「今」LLMOをやるべきか？ — 5つの理由</h2>
+                <h2 id="why-now">3. なぜ「今」LLMOをやるべきか？ — 5つの理由</h2>
 
                 <h3>1. AI要約によるクリック減少リスクの回避</h3>
-                <p>前述のCTR低下傾向は、単なる仮説ではなく多くのクエリで観測されています。AI要約が出ると、上位でもクリックが奪われやすくなるため、従来SEOだけでは流入を確保できない局面が出てきています。</p>
+                <p>
+                    前述のCTR低下傾向は、単なる仮説ではなく多くのクエリで観測されています。AI要約が出ると、上位でもクリックが奪われやすくなるため、従来SEOだけでは流入を確保できない局面が出てきています。
+                </p>
 
                 <h3>2. ユーザーが“AIに直接質問する”体験が増えている</h3>
-                <p>検索ではなく <strong>ChatGPT に聞く、AIに相談する</strong>
-                    という行動をとる人が増えています。生成AIは前処理的な調査や知識確認の場としても使われ、<strong>最初の接点としてAI回答が使われる機会</strong>が拡大中です。</p>
+                <p>
+                    検索ではなく <strong>ChatGPT に聞く、AIに相談する</strong>
+                    という行動をとる人が増えています。生成AIは前処理的な調査や知識確認の場としても使われ、<strong>最初の接点としてAI回答が使われる機会</strong>が拡大中です。
+                </p>
 
                 <h3>3. AI回答に“引用される”価値が生まれる</h3>
-                <p>AIが回答文中で<strong>自社のWebページやブランド名を根拠・引用として使う</strong>と、流入だけでなく<strong>ブランド想起・信頼性の強化</strong>にもつながります。
+                <p>
+                    AIが回答文中で<strong>自社のWebページやブランド名を根拠・引用として使う</strong>と、流入だけでなく<strong>ブランド想起・信頼性の強化</strong>にもつながります。
                 </p>
 
                 <h3>4. 競争優位を作れるフェーズ</h3>
-                <p>LLMOはまだベストプラクティスが定まっていない領域のため、<strong>早めに取り組むことで他社に先行できる</strong>可能性があります。</p>
+                <p>
+                    LLMOはまだベストプラクティスが定まっていない領域のため、<strong>早めに取り組むことで他社に先行できる</strong>可能性があります。
+                </p>
 
                 <h3>5. SEOを否定せず補完できる</h3>
-                <p>LLMOはSEOを否定するものではなく、<strong>SEOを基盤とした“AI世代対応の拡張”</strong>とみなすべきです。</p>
-            </section>
+                <p>
+                    LLMOはSEOを否定するものではなく、<strong>SEOを基盤とした“AI世代対応の拡張”</strong>とみなすべきです。
+                </p>
 
-            <section id="foundations">
-                <h2>SEOマーケターが理解しておくべき LLMO 設計の“5つの土台”</h2>
+                <h2 id="foundations">4. SEOマーケターが理解しておくべき LLMO 設計の“5つの土台”</h2>
 
                 <h3>1. E-E-A-Tを“AIにも解釈しやすく”明文化する</h3>
                 <ul>
@@ -263,10 +241,13 @@
                 </ul>
 
                 <h3>2. 段落構造を“問い → 要約 → 根拠 → 詳細”型に整える</h3>
-                <blockquote>
-                    <p>見出し（問い） → 結論要約 → 裏付け根拠 → 補足・注意点</p>
-                </blockquote>
-                <p>AIは冒頭要約や見出しから情報を抜き出しやすいため、<strong>結論を最初に示す形式</strong>が有効です。</p>
+                <div
+                    style="background-color: #f9f9f9; padding: 1.5rem; border-left: 4px solid #333; margin-bottom: 2rem;">
+                    見出し（問い） → 結論要約 → 裏付け根拠 → 補足・注意点
+                </div>
+                <p>
+                    AIは冒頭要約や見出しから情報を抜き出しやすいため、<strong>結論を最初に示す形式</strong>が有効です。
+                </p>
 
                 <h3>3. 固有名詞・数値・日付を具体的に記載する</h3>
                 <ul>
@@ -286,10 +267,8 @@
                     <li>技術フォーラム・Q&amp;Aサイト・登壇資料・論文などで“検証ログ・方法論”を公開</li>
                     <li>他サイトの引用／サイテーションを得に行く</li>
                 </ul>
-            </section>
 
-            <section id="roadmap">
-                <h2>実践ロードマップ（90日プラン）</h2>
+                <h2 id="roadmap">5. 実践ロードマップ（90日プラン）</h2>
 
                 <h3>0〜2週：現状観測とベンチマーク</h3>
                 <ul>
@@ -318,17 +297,18 @@
                     <li>自社名・URL出現頻度のトレンドをモニタ</li>
                     <li>AI要約がよく出るクエリには“要約バージョン”を準備</li>
                 </ul>
-                <p><em>補足：</em>AIは頻繁に更新されるため、「最適解」は流動的です。小さく試して学び、改善を続けるマインドが不可欠です。</p>
-            </section>
 
-            <section id="faq">
-                <h2>よくある疑問と実務的回答</h2>
+                <h2 id="faq">6. よくある疑問と実務的回答</h2>
 
                 <h3>Q1：AIは必ず出典を載せるのか？</h3>
-                <p><strong>A：いいえ、必ずではありません。</strong> プロダクトや文脈に依存。出典を示さない場合も多いため、「引用される可能性を高める設計」を目指します。</p>
+                <p>
+                    <strong>A：いいえ、必ずではありません。</strong> プロダクトや文脈に依存。出典を示さない場合も多いため、「引用される可能性を高める設計」を目指します。
+                </p>
 
                 <h3>Q2：SEOをやめてLLMOに全部移すべきか？</h3>
-                <p><strong>A：移しません。</strong> 「SEO + LLMO拡張」が現実的な道です。</p>
+                <p>
+                    <strong>A：いいえ。</strong> 「SEO + LLMO拡張」が現実的な道です。
+                </p>
 
                 <h3>Q3：LLMOの効果はどう測る？</h3>
                 <p><strong>A：代理KPIで傾向を捉えます。</strong></p>
@@ -340,86 +320,134 @@
                 </ul>
 
                 <h3>Q4：どんなテーマでAI要約が出やすい？</h3>
-                <p>一般に「what／how 型」「比較型」「手順型」などで出やすい傾向。ただし日本語・テーマ依存性が大きく、<strong>すべてで必ず出るわけではありません</strong>。</p>
-            </section>
+                <p>
+                    一般に「what／how 型」「比較型」「手順型」などで出やすい傾向。ただし日本語・テーマ依存性が大きく、<strong>すべてで必ず出るわけではありません</strong>。
+                </p>
 
-            <section id="summary">
-                <h2>まとめ：SEO時代からAI時代への移行を乗り越える鍵</h2>
-                <ul>
-                    <li>SEOは依然大事。しかし「AI に引用されるかどうか」が<strong>AI時代の新しい勝ち筋</strong>に。</li>
-                    <li>完璧な最適化手法は未確立。だからこそ<strong>観測・仮説検証型運用</strong>が重要。</li>
-                    <li>ブランドとしての根拠群（実績・データ・著者体制など）を整えつつ、SEO資産をベースにAI最適化を追加。</li>
-                </ul>
-            </section>
+                <h2 id="summary">7. まとめ：SEO時代からAI時代への移行を乗り越える鍵</h2>
+                <p>
+                    SEOは依然大事ですが、「AI
+                    に引用されるかどうか」が<strong>AI時代の新しい勝ち筋</strong>になります。完璧な最適化手法は未確立だからこそ、<strong>観測・仮説検証型運用</strong>が重要です。ブランドとしての根拠群を整えつつ、SEO資産をベースにAI最適化を追加していきましょう。
+                </p>
 
-            <section id="service">
-                <h2>サービスご紹介：LLMO Insight（LLMO インサイト）</h2>
-                <p>AI検索における自社・競合の“見られ方”を、<strong>定量・可視化</strong>できるのが <strong>LLMO Insight</strong> です。</p>
-                <blockquote>
-                    <p>“ChatGPTで自社がどう扱われているか”
-                        をデータで捉えたい方に。AI回答文中での<strong>自社言及頻度・競合との並び・引用文脈</strong>を定点観測し、改善施策を導くレポーティングサービスです。</p>
-                </blockquote>
-                <p><a href="/services/llmo_insight.html" class="cta-button">LLMO Insightの詳細を見る</a></p>
-            </section>
-            <!-- Reviewer / 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <p class="reviewer-name">芝 優作（しば ゆうさく）</p>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
+                <h2 id="service">8. サービスご紹介：LLMO Insight（LLMO インサイト）</h2>
+                <p>
+                    AI検索における自社・競合の“見られ方”を、<strong>定量・可視化</strong>できるのが <strong>LLMO Insight</strong> です。
+                </p>
+                <div
+                    style="background-color: #f0f7ff; padding: 2rem; border-radius: 8px; text-align: center; margin: 2rem 0;">
+                    <p style="font-weight: bold; margin-bottom: 1rem;">“ChatGPTで自社がどう扱われているか”をデータで捉えたい方に</p>
+                    <p style="margin-bottom: 2rem;">AI回答文中での自社言及頻度・競合との並び・引用文脈を定点観測し、改善施策を導くレポーティングサービスです。</p>
+                    <a href="..//services/llmo_insight.html" class="btn btn-black-fill">LLMO Insightの詳細を見る</a>
+                </div>
 
-                        <p class="reviewer-bio">
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">AI導入・LLMO対策でお悩みですか？</h3>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog004.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card004.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.29</div>
+                            <div class="related-text">AI研修おすすめ7選！選び方や費用について解説</div>
+                        </div>
+                    </a>
+                    <a href="blog002.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card002.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.20</div>
+                            <div class="related-text">Gemini活用で経営とマーケティングを革新する実践ガイド</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         </article>
     </main>
 
-    <!-- =============================
-       フッター（共通）
-  ============================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

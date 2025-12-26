@@ -1,47 +1,24 @@
-/* ===== Contact Hero Section ===== */
-.contact-hero {
-  padding: var(--space-xl) 0 var(--space-l);
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
-  color: var(--white);
-  text-align: center;
+@charset "UTF-8";
+
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+
+.section-contact-form {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-16);
 }
 
-.contact-title {
-  font-size: var(--font-l);
-  font-weight: 700;
-  margin-bottom: var(--space-s);
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    /* border: 1px solid rgba(0, 0, 0, 0.05); */
+    /* Google forms often have their own style, so simple container is best */
+    overflow: hidden;
 }
 
-.contact-subtitle {
-  font-size: var(--font-m);
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-/* ===== Contact Form Section ===== */
-.contact-form-section {
-  background-color: #f5f5f5;
-  padding: 60px 20px;
-}
-
-.form-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .contact-title {
-    font-size: 28px;
-  }
-  .contact-subtitle {
-    font-size: 16px;
-  }
-  .form-wrapper {
-    padding: 20px;
-  }
+.google-form-iframe {
+    width: 100%;
+    display: block;
 }

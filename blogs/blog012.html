@@ -2,348 +2,367 @@
 <html lang="ja">
 
 <head>
-    <!-- =============================
-       基本メタ
-    ============================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="MIRAINA" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- =============================
-       タイトル / ディスクリプション（SEO）
-    ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説 | MIRAINAブログ</title>
     <meta name="description"
-        content="Google Deepmindが開発した次世代AIエディター「Antigravity」とは何かを徹底解説。Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。" />
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog012.html" />
-
-    <!-- =============================
-       OGP
-    ============================== -->
-    <meta property="og:title" content="【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説 | MIRAINAブログ" />
+        content="Google Deepmindが開発した次世代AIエディター「Antigravity」とは何かを徹底解説。Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog012.html">
+    <meta property="og:image" content="/images/blogs_images/blog012-1.png">
     <meta property="og:description"
-        content="Google Deepmindが開発した次世代AIエディター「Antigravity」とは何か？Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://miraina-ai.com/blogs/blog012.html" />
-    <meta property="og:site_name" content="MIRAINA" />
-    <meta property="og:image" content="https://miraina-ai.com/images/blog012-1.png" />
-    <link rel="icon" href="/images/favicon.ico" />
+        content="Google Deepmindが開発した次世代AIエディター「Antigravity」とは何か？Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。">
 
-    <!-- =============================
-       CSS
-    ============================== -->
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/blog_article.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- =============================
-       構造化データ（Article）
-    ============================== -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Article",
-      "headline":"【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
-      "description":"Google Deepmindが開発した次世代AIエディター「Antigravity」とは何か？Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。",
-      "author":{"@type":"Person","name":"芝優作"},
-      "publisher":{
-        "@type":"Organization",
-        "name":"MIRAINA",
-        "logo":{"@type":"ImageObject","url":"https://miraina-ai.com/images/company-logo.webp","width":200,"height":50}
-      },
-      "image":"https://miraina-ai.com/images/blog012-1.png",
-      "mainEntityOfPage":{"@type":"WebPage","@id":"https://miraina-ai.com/blogs/blog012.html"},
-      "url":"https://miraina-ai.com/blogs/blog012.html",
-      "datePublished":"2025-11-21",
-      "dateModified":"2025-11-21"
-    }
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
 </head>
 
 <body>
-    <!-- =============================
-       共通ヘッダー
-    ============================== -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="/index.html">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu"><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
 
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <!-- =============================
-       本文
-    ============================== -->
-    <main class="blog-article-main">
-
-        <!-- パンくず -->
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="/index.html">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説</li>
-                </ul>
-            </div>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説</li>
+            </ul>
         </div>
 
-        <article class="blog-article container">
-
-            <!-- 記事ヘッダー -->
-            <header class="blog-article-header">
-                <h1>【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説</h1>
-
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年11月21日</div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.11.21</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Antigravity</p>
+                        <p class="article-tag">AIエディター</p>
+                        <p class="article-tag">開発ツール</p>
+                    </div>
                 </div>
+                <h1 class="article-title">【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog012-1.png" alt="Google Antigravityの解説サムネイル画像" width="800"
+                        height="450">
+                </div>
+            </header>
 
-                <figure class="blog-article-thumb">
-                    <img src="/images/blog012-1.png" alt="Google Antigravityの解説サムネイル画像" width="1000" height="630"
-                        class="blog-article-thumb-img" />
-                </figure>
-
-                <p class="blog-article-lead">
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
                     AIコーディングアシスタントの進化が止まりません。GitHub CopilotやCursorの登場に続き、Google
                     Deepmindが満を持して送り出したのが<strong>「Antigravity」</strong>です。本記事では、単なる補完ツールを超えた「Agentic
                     AI」としてのAntigravityについて、その革新的な機能と開発体験への影響を徹底解説します。
                 </p>
-            </header>
-
-            <!-- 目次 -->
-            <nav class="blog-article-toc" aria-label="目次">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#intro">はじめに</a></li>
-                    <li><a href="#what">Google Antigravityとは何か</a></li>
-                    <li><a href="#features">Antigravityの革新的な機能</a></li>
-                    <li><a href="#comparison">既存エディター（Cursor/Copilot）との違い</a></li>
-                    <li><a href="#future">開発フローはどう変わるのか</a></li>
-                    <li><a href="#summary">まとめ</a></li>
-                </ol>
-            </nav>
-
-            <!-- セクション：はじめに -->
-            <section id="intro">
-                <h2>はじめに</h2>
-                <p>これまでのAIコーディングツールは、あくまで「人間の指示に従ってコードを書く」サポーターでした。しかし、Google
-                    Deepmindが開発した<strong>Antigravity</strong>は、その概念を大きく覆そうとしています。
-                </p>
-                <p>Antigravityは、自律的にタスクを計画し、実行し、検証する<strong>「Agentic（エージェンティック）な振る舞い」</strong>を特徴としています。
-                </p>
-                <p>本記事では、この新しいエディターがエンジニアの働き方をどう変えるのか、詳細に見ていきます。</p>
             </section>
 
-            <!-- セクション：Google Antigravityとは何か -->
-            <section id="what">
-                <h2>Google Antigravityとは何か</h2>
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#intro">1. はじめに</a></li>
+                    <li><a href="#what">2. Google Antigravityとは何か</a></li>
+                    <li><a href="#features">3. Antigravityの革新的な機能</a></li>
+                    <li><a href="#comparison">4. 既存エディター（Cursor/Copilot）との違い</a></li>
+                    <li><a href="#future">5. 開発フローはどう変わるのか</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
 
-                <p>Antigravityは、Google Deepmindチームによって開発された、高度なAIエージェント機能を統合した次世代のコードエディターです。</p>
+            <!-- Main Content Body -->
+            <div class="article-body">
 
-                <p>公式サイト：<a href="https://antigravity.google/" target="_blank"
-                        rel="noopener">https://antigravity.google/</a></p>
+                <h2 id="intro">1. はじめに</h2>
+                <p>
+                    これまでのAIコーディングツールは、あくまで「人間の指示に従ってコードを書く」サポーターでした。しかし、Google
+                    Deepmindが開発した<strong>Antigravity</strong>は、その概念を大きく覆そうとしています。
+                </p>
+                <p>
+                    Antigravityは、自律的にタスクを計画し、実行し、検証する<strong>「Agentic（エージェンティック）な振る舞い」</strong>を特徴としています。本記事では、この新しいエディターがエンジニアの働き方をどう変えるのか、詳細に見ていきます。
+                </p>
 
-                <h3>● "Agentic" なコーディング体験</h3>
-                <p>最大の特徴は、ユーザーと「ペアプログラミング」をするだけでなく、ユーザーに代わって複雑なタスクを自律的に遂行できる点です。</p>
+                <h2 id="what">2. Google Antigravityとは何か</h2>
+                <p>
+                    Antigravityは、Google Deepmindチームによって開発された、高度なAIエージェント機能を統合した次世代のコードエディターです。
+                </p>
+                <p><a href="https://antigravity.google/" target="_blank" rel="noopener">Google Antigravity 公式サイト</a></p>
+
+                <h3>"Agentic" なコーディング体験</h3>
+                <p>
+                    最大の特徴は、ユーザーと「ペアプログラミング」をするだけでなく、ユーザーに代わって複雑なタスクを自律的に遂行できる点です。
+                </p>
                 <ul>
                     <li>タスクの計画立案（Implementation Plan）</li>
                     <li>複数ファイルにまたがる変更の実行</li>
                     <li>変更後の検証と修正</li>
                 </ul>
                 <p>これらを一連の流れとしてAIが主導（または協調）して行うことができます。</p>
-            </section>
 
-            <!-- セクション：Antigravityの革新的な機能 -->
-            <section id="features">
-                <h2>Antigravityの革新的な機能</h2>
+                <h2 id="features">3. Antigravityの革新的な機能</h2>
 
                 <h3>Task Boundary（タスク境界）</h3>
-                <figure class="blog-article-figure">
-                    <img src="/images/blog012-2.png" alt="Task BoundaryのUIイメージ" width="800" height="450" loading="lazy">
-                    <figcaption>タスクの進行状況を可視化するTask Boundary</figcaption>
-                </figure>
-                <p>Antigravityは、作業を明確な「タスク」として管理します。ユーザーが漠然とした指示を出しても、AIがそれを具体的なタスクに分解し、進捗を可視化しながら進めてくれます。</p>
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog012-2.png" alt="Task BoundaryのUIイメージ">
+                    <p class="figure-caption">タスクの進行状況を可視化するTask Boundary</p>
+                </div>
+                <p>
+                    Antigravityは、作業を明確な「タスク」として管理します。ユーザーが漠然とした指示を出しても、AIがそれを具体的なタスクに分解し、進捗を可視化しながら進めてくれます。
+                </p>
 
                 <h3>Artifacts（成果物）の管理</h3>
-                <figure class="blog-article-figure">
-                    <img src="/images/blog012-3.png" alt="Artifactsの概念イメージ" width="800" height="450" loading="lazy">
-                    <figcaption>成果物を構造化して管理するArtifacts</figcaption>
-                </figure>
-                <p>計画書（Implementation Plan）や作業ログ（Task
-                    List）、検証レポート（Walkthrough）などを、Markdown形式の「Artifact」として生成・管理します。これにより、AIが何をしたのか、なぜそうしたのかが透明化されます。</p>
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog012-3.png" alt="Artifactsの概念イメージ">
+                    <p class="figure-caption">成果物を構造化して管理するArtifacts</p>
+                </div>
+                <p>
+                    計画書（Implementation Plan）や作業ログ（Task
+                    List）、検証レポート（Walkthrough）などを、Markdown形式の「Artifact」として生成・管理します。これにより、AIが何をしたのか、なぜそうしたのかが透明化されます。
+                </p>
 
                 <h3>Agentic Mode</h3>
-                <p>複雑な実装を行う際、AIが「計画→実行→検証」のサイクルを回すモードです。ユーザーはマネージャーのようにAIの提案を承認・レビューする役割に回ることができます。</p>
-            </section>
+                <p>
+                    複雑な実装を行う際、AIが「計画→実行→検証」のサイクルを回すモードです。ユーザーはマネージャーのようにAIの提案を承認・レビューする役割に回ることができます。
+                </p>
 
-            <!-- セクション：既存エディターとの違い -->
-            <section id="comparison">
-                <h2>既存エディター（Cursor/Copilot）との違い</h2>
-
-                <!-- 比較テーブル（アクセシブル＋レスポンシブ） -->
-                <div class="blog-figure">
-                    <div class="table-compare-wrapper" role="region" aria-labelledby="compare-caption" tabindex="0">
-                        <table class="table-compare" aria-describedby="compare-caption">
-                            <caption id="compare-caption" class="table-compare-caption">Antigravity と
-                                既存エディター（Cursor/Copilot） の違い
-                            </caption>
-                            <colgroup>
-                                <col class="col-axis" />
-                                <col class="col-seo" />
-                                <col class="col-llmo" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">機能</th>
-                                    <th scope="col">Antigravity</th>
-                                    <th scope="col">Cursor / Copilot</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">主体性</th>
-                                    <td>自律的（計画〜検証まで提案）</td>
-                                    <td>受動的（指示待ち・補完）</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">コンテキスト理解</th>
-                                    <td>プロジェクト全体・タスク状況</td>
-                                    <td>開いているファイル・周辺コード</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">対話スタイル</th>
-                                    <td>パートナー／エージェント型</td>
-                                    <td>チャットボット型</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <h2 id="comparison">4. 既存エディター（Cursor/Copilot）との違い</h2>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <caption>Antigravity と 既存エディター（Cursor/Copilot） の違い</caption>
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>Antigravity</th>
+                                <th>Cursor / Copilot</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>主体性</th>
+                                <td>自律的（計画〜検証まで提案）</td>
+                                <td>受動的（指示待ち・補完）</td>
+                            </tr>
+                            <tr>
+                                <th>コンテキスト理解</th>
+                                <td>プロジェクト全体・タスク状況</td>
+                                <td>開いているファイル・周辺コード</td>
+                            </tr>
+                            <tr>
+                                <th>対話スタイル</th>
+                                <td>パートナー／エージェント型</td>
+                                <td>チャットボット型</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <p>
+                    従来のツールが「高速なタイピング」を助けるものだとすれば、Antigravityは「思考とエンジニアリング」を助けるツールと言えます。
+                </p>
 
-                <p>従来のツールが「高速なタイピング」を助けるものだとすれば、Antigravityは「思考とエンジニアリング」を助けるツールと言えます。</p>
-            </section>
-
-            <!-- セクション：開発フローはどう変わるのか -->
-            <section id="future">
-                <h2>開発フローはどう変わるのか</h2>
+                <h2 id="future">5. 開発フローはどう変わるのか</h2>
 
                 <h3>要件定義とレビューが中心に</h3>
-                <p>エンジニアの仕事は、コードを書くことから、AIに「何を解決すべきか」を伝え、AIが出してきた「解決策」をレビューすることにシフトしていきます。</p>
+                <p>
+                    エンジニアの仕事は、コードを書くことから、AIに「何を解決すべきか」を伝え、AIが出してきた「解決策」をレビューすることにシフトしていきます。
+                </p>
 
                 <h3>ドキュメント駆動開発の加速</h3>
-                <p>Antigravityはドキュメント（Artifact）を重視するため、自然とドキュメントを残す文化が定着しやすくなります。これはチーム開発においても大きなメリットです。</p>
-            </section>
+                <p>
+                    Antigravityはドキュメント（Artifact）を重視するため、自然とドキュメントを残す文化が定着しやすくなります。これはチーム開発においても大きなメリットです。
+                </p>
 
-            <!-- セクション：まとめ -->
-            <section id="summary">
-                <h2>まとめ</h2>
-
-                <p>Google Antigravityは、AIコーディングアシスタントの新しい基準となるツールです。</p>
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    Google Antigravityは、AIコーディングアシスタントの新しい基準となるツールです。
+                </p>
                 <ul>
                     <li>自律的なタスク遂行能力</li>
                     <li>透明性の高いプロセス管理</li>
                     <li>エンジニアを「実装者」から「設計者」へ</li>
                 </ul>
-                <p>これからのソフトウェア開発において、AntigravityのようなAgentic AIを使いこなせるかどうかが、エンジニアの生産性を大きく左右することになるでしょう。</p>
-            </section>
+                <p>
+                    これからのソフトウェア開発において、AntigravityのようなAgentic AIを使いこなせるかどうかが、エンジニアの生産性を大きく左右することになるでしょう。
+                </p>
 
-            <section id="service">
-                <h2>AI導入・開発支援について</h2>
-                <p>MIRAINAでは、最新のAIツールを活用した開発プロセスの最適化や、AIを組み込んだプロダクト開発の支援を行っています。</p>
-                <p>「自社開発にAIを取り入れたい」「エンジニアの生産性を上げたい」という企業様は、ぜひお気軽にご相談ください。</p>
-                <p><a href="/contact.html" class="cta-button">お問い合わせはこちら</a></p>
-            </section>
+            </div>
 
-            <!-- 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <p class="reviewer-name">芝 優作（しば ゆうさく）</p>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">AI導入・開発支援について</h3>
+                    <p class="cta-text">
+                        MIRAINAでは、最新のAIツールを活用した開発プロセスの最適化や、<br>
+                        AIを組み込んだプロダクト開発の支援を行っています。<br>
+                        「自社開発にAIを取り入れたい」「エンジニアの生産性を上げたい」という企業様は、ぜひご相談ください。
+                    </p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
 
-                        <p class="reviewer-bio">
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog009.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog009-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.17</div>
+                            <div class="related-text">【2025年版】AIおすすめツール完全ガイド｜目的別に最適なAIを徹底比較</div>
+                        </div>
+                    </a>
+                    <a href="blog008.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog008-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.16</div>
+                            <div class="related-text">AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
         </article>
     </main>
 
-    <!-- =============================
-       共通フッター
-    ============================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="/index.html" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
             </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

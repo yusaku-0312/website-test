@@ -2,160 +2,144 @@
 <html lang="ja">
 
 <head>
-  <!-- =============================
-       基本メタ
-  ============================== -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="MIRAINA" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- =============================
-       タイトル / ディスクリプション
-  ============================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略 | MIRAINAブログ</title>
   <meta name="description"
-    content="AI検索時代に必須のAIO（AI検索最適化）をSEOとの違いから具体的ステップまで解説。構造化データ、一次情報の整備、更新運用のコツをまとめ、生成AIの回答内で“引用される”ための実務知識を提供します。" />
+    content="AI検索時代に必須のAIO（AI検索最適化）をSEOとの違いから具体的ステップまで解説。構造化データ、一次情報の整備、更新運用のコツをまとめ、生成AIの回答内で“引用される”ための実務知識を提供します。">
+  <!-- OGP Tags -->
+  <meta property="og:title" content="AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://miraina-ai.com/blogs/blog007.html">
+  <meta property="og:image" content="/images/blogs_images/blog-card007.webp">
+  <meta property="og:description" content="AI検索時代に必須のAIO（AI検索最適化）をSEOとの違いから具体的ステップまで解説。">
 
-  <!-- =============================
-       Canonical / OGP
-  ============================== -->
-  <link rel="canonical" href="https://miraina-ai.com/blogs/blog007.html" />
-  <meta property="og:title" content="AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略 | MIRAINAブログ" />
-  <meta property="og:description"
-    content="AI検索最適化（AIO）の全体像と実践ステップを解説。生成AIの回答内で引用・言及されるための要点を、SEO担当者視点でまとめました。" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://miraina-ai.com/blogs/blog007.html" />
-  <meta property="og:site_name" content="MIRAINA" />
-  <meta property="og:image" content="https://miraina-ai.com/images/blog-card007.webp" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
-  <link rel="icon" href="/images/favicon.ico" />
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico">
 
-  <!-- =============================
-       CSS
-  ============================== -->
-  <link rel="stylesheet" href="/css/reset.css" />
-  <link rel="stylesheet" href="/css/common.css" />
-  <link rel="stylesheet" href="/css/blog_article.css" />
-
-  <!-- =============================
-       構造化データ（Article）
-  ============================== -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
-      "description": "AI検索時代に必須のAIO（AI検索最適化）をSEOとの違いから具体的ステップまで解説。構造化データ、一次情報の整備、更新運用のコツをまとめ、生成AIの回答内で“引用される”ための実務知識を提供します。",
-      "author": {
-        "@type": "Person",
-        "name": "芝優作"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "MIRAINA",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://miraina-ai.com/images/company-logo.webp",
-          "width": 200,
-          "height": 50
-        }
-      },
-      "image": "https://miraina-ai.com/images/blog-card007.webp",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://miraina-ai.com/blogs/blog007.html"
-      },
-      "url": "https://miraina-ai.com/blogs/blog007.html",
-      "datePublished": "2025-10-15",
-      "dateModified": "2025-10-15"
-    }
-  </script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/blog_article.css">
 </head>
 
 <body>
-  <!-- =============================
-       共通ヘッダー
-  ============================== -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="site-logo">
-        <a href="https://miraina-ai.com">
-          <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50" loading="eager"
-            decoding="async" />
-        </a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="header-logo">
+        <!-- Assuming logo exists or using text fallback for now if image broken -->
+        <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+        <h1>MIRAINA</h1>
+      </a>
+
+      <div class="hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <nav class="global-nav">
-        <ul>
-          <li><a href="/services.html" class="nav-link">サービス</a></li>
-          <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-          <li><a href="/works.html" class="nav-link">導入事例</a></li>
-          <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-          <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-        </ul>
+
+      <nav class="header-nav">
+        <div class="nav-item has-dropdown">
+          <a href="/services.html" class="nav-link">サービス</a>
+          <div class="dropdown-menu">
+            <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+            <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+            <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+            <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+          </div>
+        </div>
+        <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+        <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+        <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+        <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+        <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+        <div class="nav-item">
+          <a href="llms.txt" class="nav-link" aria-label="AI info">
+            <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+              <path
+                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+            </svg>
+          </a>
+        </div>
       </nav>
-      <div class="hamburger-menu"><span></span><span></span><span></span></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="js-mobile-menu">
+      <nav class="mobile-nav">
+        <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+        <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+        <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+        <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+        <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+      </nav>
     </div>
   </header>
-  <nav class="mobile-nav">
-    <ul>
-      <li><a href="/services.html">サービス</a></li>
-      <li><a href="/about.html">MIRAINAについて</a></li>
-      <li><a href="/works.html">導入事例</a></li>
-      <li><a href="/blogs.html">ブログ</a></li>
-      <li><a href="/contact.html">問い合わせ</a></li>
-    </ul>
-  </nav>
 
-  <!-- =============================
-       本文
-  ============================== -->
-  <main class="blog-article-main">
-    <!-- パンくず -->
-    <div class="breadcrumb">
-      <div class="container">
-        <ul>
-          <li><a href="https://miraina-ai.com">ホーム</a></li>
-          <li><a href="/blogs.html">ブログ一覧</a></li>
-          <li>AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略</li>
-        </ul>
-      </div>
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="container breadcrumbs">
+      <ul>
+        <li><a href="..//">ホーム</a></li>
+        <li><a href="..//blogs.html">ブログ</a></li>
+        <li>AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略</li>
+      </ul>
     </div>
 
-    <article class="blog-article container">
-      <!-- 記事ヘッダー -->
-      <header class="blog-article-header">
-        <h1>AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略</h1>
-        <div class="blog-article-meta" style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-          <div>更新日：2025年10月15日</div>
+    <article class="article-container">
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="article-date">2025.10.15</span>
+          <div class="article-tags">
+            <p class="article-tag">AIO</p>
+            <p class="article-tag">SEO</p>
+            <p class="article-tag">マーケティング</p>
+          </div>
         </div>
-        <figure class="blog-article-thumb">
-          <img src="/images/blog007-1.webp" alt="AIO（AI検索最適化）解説のサムネイル画像" width="1000" height="630"
-            class="blog-article-thumb-img" />
-        </figure>
-        <p class="blog-article-lead">
-          生成AIが回答を直接提示する“AI検索時代”では、<strong>AIO（AI検索最適化）</strong>が新たな競争領域です。本記事では、AIOの定義、SEOとの違い、実務に落とし込むステップまでを、マーケター視点でわかりやすく解説します。
-        </p>
+        <h1 class="article-title">AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略</h1>
+        <div class="article-thumbnail">
+          <img src="/images/blogs_images/blog007-1.webp" alt="AIO（AI検索最適化）" width="800" height="450">
+        </div>
       </header>
 
-      <!-- 目次 -->
-      <nav class="blog-article-toc" aria-label="目次">
-        <h2>目次</h2>
-        <ol>
-          <li><a href="#intro">はじめに：検索の主役は“AI”へ</a></li>
-          <li><a href="#what-is-aio">AIOとは？AI時代の新しい「見られ方」を最適化する施策</a></li>
-          <li><a href="#diff-seo">SEOとの違い（概要）</a></li>
-          <li><a href="#reasons">AIOが注目される理由</a></li>
-          <li><a href="#steps">AIO対策の具体的ステップ</a></li>
-          <li><a href="#coexist">AIOとSEOは共存する戦略</a></li>
-          <li><a href="#summary">まとめ：AIに“選ばれる”ための時代へ</a></li>
-          <li><a href="#insight">自社の「AI検索内での見られ方」を把握するには</a></li>
-        </ol>
-      </nav>
+      <!-- Summary -->
+      <section class="article-summary">
+        <h2 class="sr-only">記事の概要</h2>
+        <p>
+          生成AIが回答を直接提示する“AI検索時代”では、<strong>AIO（AI検索最適化）</strong>が新たな競争領域です。本記事では、AIOの定義、SEOとの違い、実務に落とし込むステップまでを、マーケター視点でわかりやすく解説します。
+        </p>
+      </section>
 
-      <!-- コンテンツ -->
-      <section id="intro">
-        <h2>はじめに：検索の主役は“AI”へ</h2>
+      <!-- Table of Contents -->
+      <div class="article-toc">
+        <div class="toc-title">目次</div>
+        <ul>
+          <li><a href="#intro">1. はじめに：検索の主役は“AI”へ</a></li>
+          <li><a href="#what-is-aio">2. AIOとは？AI時代の新しい「見られ方」を最適化する施策</a></li>
+          <li><a href="#diff-seo">3. SEOとの違い（概要）</a></li>
+          <li><a href="#reasons">4. AIOが注目される理由</a></li>
+          <li><a href="#steps">5. AIO対策の具体的ステップ</a></li>
+          <li><a href="#coexist">6. AIOとSEOは共存する戦略</a></li>
+          <li><a href="#summary">7. まとめ：AIに“選ばれる”ための時代へ</a></li>
+          <li><a href="#insight">8. 自社の「AI検索内での見られ方」を把握するには</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content Body -->
+      <div class="article-body">
+
+        <h2 id="intro">1. はじめに：検索の主役は“AI”へ</h2>
         <p>
           いま、検索の世界に大きな変化が起きています。従来のSEO（検索エンジン最適化）が「検索エンジンで上位表示されること」を目的としていたのに対し、ChatGPTやGemini、Perplexity
           AIなど、<strong>生成AIが直接回答を提供する“AI検索時代”</strong>が到来しました。
@@ -164,76 +148,59 @@
           ユーザーはもはや「クリックして情報を探す」のではなく、AIの生成する“要約”や“概要回答”から情報を得ています。ここで重要になるのが、<strong>AIO（AI
             Optimization／AI検索最適化）</strong>です。AIOは、AIがあなたの企業サイトやコンテンツをどのように理解し、引用・要約するかを最適化する新しいマーケティング手法です。
         </p>
-      </section>
 
-      <section id="what-is-aio">
-        <h2>AIOとは？AI時代の新しい「見られ方」を最適化する施策</h2>
+        <h2 id="what-is-aio">2. AIOとは？AI時代の新しい「見られ方」を最適化する施策</h2>
         <p>
-          AIO（AI Optimization）とは、<strong>AIが生成する回答・要約の中で、自社の情報が正確に理解され、引用されるように最適化する施策</strong>を指します。AIが提供する情報環境では、Googleのような検索順位ではなく、ChatGPTやGeminiなどのAIが「どの情報を引用して回答を作るか」が新しい“競争の場”になります。
+          AIO（AI
+          Optimization）とは、<strong>AIが生成する回答・要約の中で、自社の情報が正確に理解され、引用されるように最適化する施策</strong>を指します。AIが提供する情報環境では、Googleのような検索順位ではなく、ChatGPTやGeminiなどのAIが「どの情報を引用して回答を作るか」が新しい“競争の場”になります。
         </p>
-      </section>
 
-      <section id="diff-seo">
-        <h3>SEOとの違い（概要）</h3>
+        <h2 id="diff-seo">3. SEOとの違い（概要）</h2>
 
-        <!-- 比較表（テンプレ反映／AIO版） -->
-        <div class="blog-figure">
-          <div class="table-compare-wrapper">
-            <table class="table-compare" aria-describedby="compare-caption">
-              <caption id="compare-caption" class="table-compare-caption">
-                SEO と AIO の比較表
-              </caption>
-
-              <colgroup>
-                <col class="col-axis" />
-                <col class="col-seo" />
-                <col class="col-llmo" />
-              </colgroup>
-
-              <thead>
-                <tr>
-                  <th scope="col">観点</th>
-                  <th scope="col">SEO最適化</th>
-                  <th scope="col">AIO最適化</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td class="axis">主な目的</td>
-                  <td>検索結果ページで上位表示し、クリックを促す</td>
-                  <td>AI生成の回答内で<strong>引用・言及</strong>され、認知を高める</td>
-                </tr>
-                <tr>
-                  <td class="axis">評価対象</td>
-                  <td>検索アルゴリズム（キーワード、被リンク、速度など）</td>
-                  <td>AIの理解精度（情報構造・一次性・信頼性）</td>
-                </tr>
-                <tr>
-                  <td class="axis">接点</td>
-                  <td>検索結果からサイトへ誘導</td>
-                  <td>AIの要約・回答文中に情報が直接表示</td>
-                </tr>
-                <tr>
-                  <td class="axis">成功の指標</td>
-                  <td>CTR（クリック率）</td>
-                  <td><span class="badge">AI引用率・AI認知スコア</span></td>
-                </tr>
-                <tr>
-                  <td class="axis">将来性</td>
-                  <td>検索市場の競争が成熟</td>
-                  <td>AI生成市場が急拡大中</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="article-table-wrapper">
+          <table class="article-table">
+            <caption style="text-align: left; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem;">SEO と AIO
+              の比較表</caption>
+            <thead>
+              <tr>
+                <th>観点</th>
+                <th>SEO最適化</th>
+                <th>AIO最適化</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>主な目的</th>
+                <td>検索結果ページで上位表示し、クリックを促す</td>
+                <td>AI生成の回答内で<strong>引用・言及</strong>され、認知を高める</td>
+              </tr>
+              <tr>
+                <th>評価対象</th>
+                <td>検索アルゴリズム（キーワード、被リンク、速度など）</td>
+                <td>AIの理解精度（情報構造・一次性・信頼性）</td>
+              </tr>
+              <tr>
+                <th>接点</th>
+                <td>検索結果からサイトへ誘導</td>
+                <td>AIの要約・回答文中に情報が直接表示</td>
+              </tr>
+              <tr>
+                <th>成功の指標</th>
+                <td>CTR（クリック率）</td>
+                <td>AI引用率・AI認知スコア</td>
+              </tr>
+              <tr>
+                <th>将来性</th>
+                <td>検索市場の競争が成熟</td>
+                <td>AI生成市場が急拡大中</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <p>つまり、AIOは“AIが読むためのSEO”。AIの内部モデルに「正しく理解されること」こそが、これからのブランド露出の鍵となります。</p>
-      </section>
 
-      <section id="reasons">
-        <h2>AIOが注目される理由</h2>
+        <h2 id="reasons">4. AIOが注目される理由</h2>
         <h3>1. 検索行動の変化</h3>
         <p>ユーザーは検索結果をクリックするよりも、AIアシスタントに直接質問して答えを得る傾向が強まっています。AIが引用する情報源に自社が含まれていなければ、ユーザーの目に触れる機会自体が失われます。</p>
 
@@ -242,10 +209,8 @@
 
         <h3>3. 新しいブランド認知の場</h3>
         <p>AI検索結果の要約や回答部分は、もはや新しい「ブランド露出面」。ここに登場するか否かが、今後のBtoB・BtoCいずれのビジネスでも競争力を左右します。</p>
-      </section>
 
-      <section id="steps">
-        <h2>AIO対策の具体的ステップ</h2>
+        <h2 id="steps">5. AIO対策の具体的ステップ</h2>
         <h3>1. 構造化データを活用する</h3>
         <p>AIが正しく理解できるよう、FAQスキーマやArticleスキーマなどの構造化データを設定しましょう。「質問 → 回答」の形を明確にすると、AIはその構造を認識しやすくなります。</p>
 
@@ -257,94 +222,134 @@
 
         <h3>4. 定期的に更新する</h3>
         <p>AIは最新情報を優先して引用します。記事やデータを継続的にアップデートし、新鮮な状態を保つことで、AIからの信頼性を維持できます。</p>
-      </section>
 
-      <section id="coexist">
-        <h2>AIOとSEOは共存する戦略</h2>
+        <h2 id="coexist">6. AIOとSEOは共存する戦略</h2>
         <p>
           AIOはSEOの代替ではありません。SEOが“検索エンジン最適化”なら、AIOは“生成AI最適化”。<strong>検索と生成、両方の経路でブランド露出を最大化</strong>するのが次世代マーケティング戦略です。SEOで流入を確保しながら、AIOでAI回答内に自社が登場する仕組みを整える——この二軸がこれからの集客の基本になります。
         </p>
-      </section>
 
-      <section id="summary">
-        <h2>まとめ：AIに“選ばれる”ための時代へ</h2>
+        <h2 id="summary">7. まとめ：AIに“選ばれる”ための時代へ</h2>
         <p>
           AIが情報のゲートキーパーとなる時代には、「AIが自社をどう理解しているか」「どんな文脈で引用しているか」を把握することが欠かせません。AIが認識しやすいコンテンツ設計と一次情報の提供を徹底し、AI検索の中で<strong>信頼される情報源</strong>を目指しましょう。
         </p>
-      </section>
 
-      <section id="insight">
-        <h2>自社の「AI検索内での見られ方」を把握するには</h2>
-        <p>
-          「ChatGPTで自社がどう扱われているか」を気にしたことはありますか？ 近年、検索の主役はAIに移りつつあります。しかし、そのAIが“何を根拠にどんな企業を引用しているのか”は見えません。
-        </p>
-        <p>
-          <strong>LLMO Insight</strong>では、AIが引用・言及する構造を再現し、貴社の“AI検索内での立ち位置”を数値で可視化。戦略的なLLMO施策立案に役立ちます。
-        </p>
-        <p><a href="/services/llmo_insight.html" class="cta-button">自社の「AI検索順位」を可視化する</a></p>
-      </section>
+        <h2 id="insight">8. 自社の「AI検索内での見られ方」を把握するには</h2>
+        <div style="background-color: #f0f7ff; padding: 2rem; border-radius: 8px; text-align: center; margin: 2rem 0;">
+          <p style="font-weight: bold; margin-bottom: 1rem;">ChatGPTで自社がどう扱われているか知っていますか？</p>
+          <p style="margin-bottom: 2rem;">
+            近年、検索の主役はAIに移りつつあります。しかし、そのAIが“何を根拠にどんな企業を引用しているのか”は見えません。<br>
+            <strong>LLMO Insight</strong>では、AIが引用・言及する構造を再現し、貴社の“AI検索内での立ち位置”を数値で可視化します。
+          </p>
+          <a href="..//services/llmo_insight.html" class="btn btn-black-fill">LLMO Insightの詳細を見る</a>
+        </div>
 
-      <!-- Reviewer / 監修者情報 -->
-      <section class="reviewer-section" aria-labelledby="reviewer-heading">
-        <div class="reviewer-card no-avatar">
-          <div class="reviewer-content">
-            <p class="reviewer-title">この記事の監修者</p>
-            <p class="reviewer-name">芝 優作（しば ゆうさく）</p>
-            <p class="reviewer-roles">
-              MIRAINA 代表／生成AIコンサルタント
-            </p>
-            <p class="reviewer-bio">
-              中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。
+      </div>
+
+      <!-- CTA Button -->
+      <div class="article-cta">
+        <div class="cta-box">
+          <h3 class="cta-title">AI導入・AIO対策でお悩みですか？</h3>
+          <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+          <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+        </div>
+      </div>
+
+      <!-- Editorial Information -->
+      <div class="article-editor">
+        <div class="editor-header">この記事を監修した人</div>
+        <div class="editor-profile">
+          <div class="editor-image">
+            <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+          </div>
+          <div class="editor-info">
+            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+            <p class="editor-desc">
+              中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+              九州大学大学院でLLMに関する研究にも従事。
             </p>
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="article-related">
+        <h3 class="related-title">関連記事</h3>
+        <div class="related-grid">
+          <a href="blog006.html" class="related-card">
+            <div class="related-img">
+              <img src="/images/blogs_images/blog006-1.webp" alt="関連画像">
+            </div>
+            <div class="related-content">
+              <div class="related-date">2025.10.15</div>
+              <div class="related-text">LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説</div>
+            </div>
+          </a>
+          <a href="blog005.html" class="related-card">
+            <div class="related-img">
+              <img src="/images/blogs_images/blog005-1.webp" alt="関連画像">
+            </div>
+            <div class="related-content">
+              <div class="related-date">2025.10.14</div>
+              <div class="related-text">LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
     </article>
   </main>
 
-  <!-- =============================
-       フッター
-  ============================== -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <!-- 1) 左：ブランド -->
-        <div class="footer-col footer-col--brand">
-          <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-        </div>
-
-        <!-- 2) 中左：空白スペース（装飾用） -->
-        <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-        <!-- 3) 中右：サイトリンク -->
-        <div class="footer-col footer-col--links">
-          <p class="footer-heading">サイトメニュー</p>
-          <nav class="footer-nav" aria-label="フッターナビゲーション">
-            <ul>
-              <li><a href="/services.html">サービス</a></li>
-              <li><a href="/about.html">MIRAINAについて</a></li>
-              <li><a href="/works.html">導入事例</a></li>
-              <li><a href="/blogs.html">ブログ</a></li>
-              <li><a href="/contact.html">問い合わせ</a></li>
-              <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <!-- 4) 右：SNS（テキストのみ） -->
-        <div class="footer-col footer-col--sns">
-          <p class="footer-heading">SNS</p>
-          <ul class="footer-sns-list">
-            <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a></li>
-          </ul>
-        </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/">
+          <p class="footer-brand-text">MIRAINA</p>
+        </a>
       </div>
-      <div class="copyright">
-        <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+      <div class="footer-center">
+        <!-- Empty as requested -->
+      </div>
+
+      <div class="footer-menu">
+        <ul class="footer-menu-list">
+          <li><a href="/about.html">MIRAINAについて</a></li>
+          <li><a href="/works.html">事例紹介</a></li>
+          <li><a href="/blogs.html">ブログ</a></li>
+          <li><a href="/contact.html">お問い合わせ</a></li>
+          <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+        </div>
       </div>
     </div>
+
+    <div class="footer-bottom">
+      <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+        <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+        </svg>
+      </a>
+      <p>&copy; MIRAINA All Rights Reserved.</p>
+    </div>
   </footer>
+
+  <script src="../js/common.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('js-hamburger');
+      const mobileMenu = document.getElementById('js-mobile-menu');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

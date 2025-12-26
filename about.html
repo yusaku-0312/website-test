@@ -4,223 +4,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
-    <title>About Us | MIRAINA（ミライナ）</title>
-    <meta name="description" content="MIRAINAの会社概要・ビジョン・メンバー紹介ページ。生成AI導入支援・AI開発・AI人材育成を通じて中小企業の未来を創造します。">
-    <link rel="canonical" href="https://miraina-ai.com/about.html">
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/about.css">
+    <title>MIRAINAについて | MIRAINA</title>
+    <meta name="description" content="AI導入で「週休4日制」が当たり前になる未来を、九州から全国へ。MIRAINAの理念、ビジョン、代表挨拶、会社概要をご紹介します。">
+    <link rel="canonical" href="https://miraina-ai.com//about.html">
+
+    <!-- Design System: Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="//images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- OGP -->
+    <meta property="og:title" content="MIRAINAについて | MIRAINA">
+    <meta property="og:description" content="MIRAINAの理念とビジョン。AI導入で「週休4日制」が当たり前になる未来を。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com//about.html">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta property="og:image" content="https://miraina-ai.com//images/ogp.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MIRAINAについて | MIRAINA">
+    <meta name="twitter:description" content="MIRAINAの理念とビジョン。AI導入で「週休4日制」が当たり前になる未来を。">
+    <meta name="twitter:image" content="https://miraina-ai.com//images/ogp.jpg">
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
+
     <main>
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li>MIRAINAについて</li>
-                </ul>
-            </div>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li>MIRAINAについて</li>
+            </ul>
         </div>
-        <section class="page-hero page-hero--about">
-            <div class="page-hero-content">
+
+        <!-- Page Hero -->
+        <section class="page-hero fade-in-section">
+            <div class="container">
                 <h1 class="page-hero-title">MIRAINAについて</h1>
-                <p class="page-hero-subtitle">私たちの理念とビジョンをご紹介します</p>
+                <p class="page-hero-desc">私たちの理念とビジョンをご紹介します</p>
             </div>
         </section>
-        <div class="about-section-block">
-            <h2 class="about-section-title">Our Vision</h2>
-            <p class="about-section-catch">AI導入で「週休4日制」が当たり前になる未来を、九州から全国へ。</p>
-            <p class="about-section-desc">
-                MIRAINAは、AIの力で働き方を根本から変革し、<br>誰もが豊かな人生を謳歌できる環境をつくることを目指しています。<br>
-                九州から全国へ、新しい未来の働き方を広げていきます。
-            </p>
-        </div>
 
-        <div class="about-section-block">
-            <h2 class="about-section-title">Our Mission</h2>
-            <p class="about-section-catch">「AIで利益と効率を両立し、成長を加速するパートナーに」</p>
-            <p class="about-section-desc">
-                AI活用で利益の最大化と業務効率化を行い、<br>
-                それによって生み出された社内リソースを戦略的活動に再配分することで、<br>
-                組織全体の成長を加速させる
-            </p>
-        </div>
-
-        <div class="about-section-block">
-            <h2 class="about-section-title">OUR VALUES</h2>
-            <p class="about-section-catch">MIRAINAの3つの価値観</p>
-            <div class="about-values-cards">
-                <div class="about-values-card">
-                    <h3 class="about-values-card-title">Judicious Efficiency</h3>
-                    <strong class="about-values-card-strong">効率化の優先順位を見極める</strong>
-                    <ul class="about-values-card-list">
-                        <li>本当に自動化すべき業務かを確認し、必要ない部分は手作業で残す</li>
-                        <li>業務を減らしてもサービス品質や人間関係が損なわれないよう配慮する</li>
-                    </ul>
+        <!-- Vision -->
+        <section class="section-vision py-section fade-in-section">
+            <div class="container text-center">
+                <div class="vision-header mb-8">
+                    <span class="eng-heading tracking-widest font-mincho">Our Vision</span>
                 </div>
-                <div class="about-values-card">
-                    <h3 class="about-values-card-title">Empathy & Respect</h3>
-                    <strong class="about-values-card-strong">相手の立場に立ち、信頼を大切に</strong>
-                    <ul class="about-values-card-list">
-                        <li>クライアントの価値観や企業文化をしっかり理解して提案する</li>
-                        <li>AI導入が人間関係に悪影響を与えないよう、やさしいコミュニケーションを心がける</li>
-                    </ul>
-                </div>
-                <div class="about-values-card">
-                    <h3 class="about-values-card-title">Passionate Learning</h3>
-                    <strong class="about-values-card-strong">学びを大切に、成長を追求する</strong>
-                    <ul class="about-values-card-list">
-                        <li>好奇心を原動力に、新しい知識や技術を積極的に吸収する</li>
-                        <li>自己成長を通じて提供価値を高め、組織やクライアントに還元する</li>
-                    </ul>
+                <h2 class="vision-title font-mincho">
+                    AI導入で「週休4日制」が当たり前になる未来を、<br>
+                    九州から全国へ。
+                </h2>
+                <div class="vision-desc mt-8">
+                    <p>
+                        MIRAINAは、AIの力で働き方を根本から変革し、<br>
+                        誰もが豊かな人生を謳歌できる環境をつくることを目指しています。<br>
+                        九州から全国へ、新しい未来の働き方を広げていきます。
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="about-section-block">
-            <h2 class="about-section-title">代表挨拶</h2>
-            <p class="about-section-desc about-section-message">
-                MIRAINAのページをご覧いただきありがとうございます。代表の芝優作です。<br><br>
-                私たちは「<strong>AI導入</strong>で週休4日制が当たり前になる未来を、<strong>九州</strong>から全国へ」というビジョンを掲げています。
-                AIは単なる効率化のツールではなく、働き方そのものを変革し、一人ひとりがより豊かな人生を謳歌できる社会を実現する力を持っています。
-                私はこの可能性を、地域の中小企業から広げていくことこそが日本全体の成長に直結すると信じています。<br><br>
-                AI導入支援を行う中で、経営者や社員の方々からよく聞くのは「AIをどう使えばいいか分からない」「導入したがうまく定着しない」といった声です。
-                テクノロジーの進化がどれほど早くても、現場で活用されなければ意味がありません。
-                だからこそMIRAINAは、単にツールを提供するのではなく、「利益と効率の両立」を実現し、余剰リソースを戦略的な活動へと再配分することで、組織全体の成長を加速させるパートナーでありたいと考えています。<br><br>
-                AIは人を置き換えるためのものではなく、人の可能性を広げるものです。社員一人ひとりがAIを活用できるようになれば、「人手不足」はすぐに解消できなくても、「人材不足」は解消できます。
-                そしてその変化は、週休4日制といった新しい働き方を現実のものとします。<br><br>
-                九州から全国へ。MIRAINAは、AIの力で中小企業の挑戦に寄り添い、新しい未来を共につくっていきます。
-            </p>
-        </div>
-        <!-- 会社概要ブロック ここから追加 -->
-        <div class="about-company-block">
-            <div class="about-company-content">
-                <h2 class="about-company-title">事業者概要</h2>
-                <table class="about-company-table">
-                    <tr>
-                        <th>屋号</th>
-                        <td>MIRAINA</td>
-                    </tr>
-                    <tr>
-                        <th>代表</th>
-                        <td>芝 優作</td>
-                    </tr>
-                </table>
+        </section>
 
-                <!-- 代表SNSアカウント -->
-                <div class="about-company-sns">
-                    <p class="about-company-subtitle">代表SNSアカウント</p>
-                    <ul class="sns-list">
-                        <li><a href="https://www.instagram.com/giri.tomo" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.net/@giri.tomo" target="_blank" rel="noopener">Threads</a></li>
-                    </ul>
+        <!-- Mission -->
+        <section class="section-mission py-section fade-in-section bg-paper">
+            <div class="container text-center">
+                <div class="vision-header mb-8">
+                    <span class="eng-heading tracking-widest font-mincho">Our Mission</span>
+                </div>
+                <h2 class="mission-title font-mincho">
+                    「AIで利益と効率を両立し、<br>成長を加速するパートナーに」
+                </h2>
+                <div class="mission-desc mt-8">
+                    <p>
+                        AI活用で利益の最大化と業務効率化を行い、<br>
+                        それによって生み出された社内リソースを戦略的活動に再配分することで、<br>
+                        組織全体の成長を加速させる
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div class="about-company-image">
-                <img src="images/service-card003.webp" alt="MIRAINA本社ビルのイメージ" />
-            </div>
-        </div>
-
-        <!-- 会社概要ブロック ここまで追加 -->
-    </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
+        <!-- Values -->
+        <section class="section-values py-section fade-in-section">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <span class="eng-heading tracking-widest font-mincho block mb-4">OUR VALUES</span>
+                    <h2 class="section-title">MIRAINAの3つの価値観</h2>
                 </div>
 
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                <div class="values-grid">
+                    <!-- Value 1 -->
+                    <div class="value-card">
+                        <h3 class="value-card-title font-mincho">Judicious Efficiency</h3>
+                        <p class="value-card-sub">効率化の優先順位を見極める</p>
+                        <ul class="value-card-list">
+                            <li>本当に自動化すべき業務かを確認し、必要ない部分は手作業で残す</li>
+                            <li>業務を減らしてもサービス品質や人間関係が損なわれないよう配慮する</li>
                         </ul>
-                    </nav>
-                </div>
+                    </div>
 
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
+                    <!-- Value 2 -->
+                    <div class="value-card">
+                        <h3 class="value-card-title font-mincho">Empathy & Respect</h3>
+                        <p class="value-card-sub">相手の立場に立ち、信頼を大切に</p>
+                        <ul class="value-card-list">
+                            <li>クライアントの価値観や企業文化をしっかり理解して提案する</li>
+                            <li>AI導入が人間関係に悪影響を与えないよう、やさしいコミュニケーションを心がける</li>
+                        </ul>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="value-card">
+                        <h3 class="value-card-title font-mincho">Passionate Learning</h3>
+                        <p class="value-card-sub">学びを大切に、成長を追求する</p>
+                        <ul class="value-card-list">
+                            <li>好奇心を原動力に、新しい知識や技術を積極的に吸収する</li>
+                            <li>自己成長を通じて提供価値を高め、組織やクライアントに還元する</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+        </section>
+
+        <!-- CEO Message -->
+        <section class="section-message py-section fade-in-section bg-paper">
+            <div class="container">
+                <div class="message-layout">
+                    <div class="message-content">
+                        <h2 class="section-title mb-8 font-mincho">代表挨拶</h2>
+                        <div class="message-body">
+                            <p>MIRAINAのページをご覧いただきありがとうございます。代表の芝優作です。</p>
+
+                            <p>私たちは<br>
+                                「AI導入」で週休4日制が当たり前になる未来を、九州から全国へ<br>
+                                というビジョンを掲げています。</p>
+
+                            <p>AIは単なる効率化のツールではなく、働き方そのものを変革し、<br>
+                                一人ひとりがより豊かな人生を謳歌できる社会を実現する力を持っています。<br>
+                                私はこの可能性を、地域の中小企業から広げていくことこそが、<br>
+                                日本全体の成長に直結すると信じています。</p>
+
+                            <p>AI導入支援を行う中で、経営者や社員の方々からよく聞くのは、<br>
+                                「AIをどう使えばいいか分からない」<br>
+                                「導入したがうまく定着しない」<br>
+                                といった声です。</p>
+
+                            <p>テクノロジーの進化がどれほど早くても、<br>
+                                現場で活用されなければ意味がありません。</p>
+
+                            <p>だからこそMIRAINAは、<br>
+                                単にツールを提供するのではなく、<br>
+                                <strong>「利益と効率の両立」</strong>を実現し、<br>
+                                余剰リソースを戦略的な活動へと再配分することで、<br>
+                                組織全体の成長を加速させるパートナーでありたいと考えています。
+                            </p>
+
+                            <p>AIは人を置き換えるためのものではなく、人の可能性を広げるものです。<br>
+                                社員一人ひとりがAIを活用できるようになれば、<br>
+                                「人手不足」はすぐに解消できなくても、<br>
+                                「人材不足」は解消できます。</p>
+
+                            <p>そしてその変化は、<br>
+                                週休4日制といった新しい働き方を現実のものとします。</p>
+
+                            <p>九州から全国へ。<br>
+                                MIRAINAは、AIの力で中小企業の挑戦に寄り添い、<br>
+                                新しい未来を共につくっていきます。</p>
+
+                            <p class="text-right mt-8 font-mincho">MIRAINA 代表 芝 優作</p>
+                        </div>
+                    </div>
+                    <!-- Optional: Add CEO Image if available, currently text focused layout -->
+                </div>
             </div>
+        </section>
+
+        <!-- Company Overview -->
+        <section class="section-overview py-section fade-in-section">
+            <div class="container">
+                <h2 class="section-title mb-8 font-mincho">事業者概要</h2>
+
+                <div class="dl-horizontal">
+                    <div class="dl-row">
+                        <dt>屋号</dt>
+                        <dd>MIRAINA</dd>
+                    </div>
+                    <div class="dl-row">
+                        <dt>代表</dt>
+                        <dd>芝 優作</dd>
+                    </div>
+                    <div class="dl-row">
+                        <dt>代表SNSアカウント</dt>
+                        <dd>
+                            <div class="mb-2"><a href="https://www.instagram.com/giri.tomo" target="_blank"
+                                    rel="noopener" class="link-underline">Instagram</a></div>
+                            <div><a href="https://www.threads.net/@giri.tomo" target="_blank" rel="noopener"
+                                    class="link-underline">Threads</a></div>
+                        </dd>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        // Simple script until common.js is fully integrated
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
 
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                var script = document.createElement('script');
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4';
-                script.async = true;
-                document.head.appendChild(script);
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
 
-                gtag('js', new Date());
-                gtag('config', 'G-W9BLFVJ8E4');
-            }, 1000); // 1000ms（1秒）後に読み込む → 適宜調整可能
+            // Fade in Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
         });
     </script>
 </body>

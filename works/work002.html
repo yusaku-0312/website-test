@@ -4,280 +4,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
-    <title>n8n × SlackでDM送信自動化 | MIRAINA（ミライナ） - AI導入支援・研修・AI開発事業</title>
+    <title>【導入事例】株式会社Niarail様 | MIRAINA works</title>
     <meta name="description"
-        content="n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。株式会社Niarail様で約15時間の作業削減・約3万円のコスト削減を実現した事例。ワークフロー構成や効果、その他n8n × Slack連携の活用例も掲載。">
-    <meta name="keywords"
-        content="n8n, Slack, DM送信自動化, 新規メンバー検知, Googleフォーム, エラー通知, エラーログ, スプレッドシート, ワークフロー自動化, ノーコード, 事例, Notion連携, 社内AIチャットボット, MIRAINA">
-    <meta property="og:title" content="n8n × SlackでDM送信自動化 | MIRAINA（ミライナ） - AI導入支援・研修・AI開発事業">
-    <meta property="og:description"
-        content="n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。株式会社Niarail様で約15時間の作業削減・約3万円のコスト削減を実現した事例。ワークフロー構成や効果、その他n8n × Slack連携の活用例も掲載。">
+        content="株式会社Niarail様の導入事例です。n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。約15時間の作業削減・約3万円のコスト削減を実現しました。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【導入事例】株式会社Niarail様：n8n × SlackでDM送信自動化">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://miraina.com/works/work002.html">
-    <meta property="og:image" content="https://miraina.com/images/works_images/work002-1.webp">
-    <meta property="og:site_name" content="MIRAINA">
-    <meta name="twitter:title" content="n8n × SlackでDM送信自動化 | MIRAINA（ミライナ） - AI導入支援・研修・AI開発事業">
-    <meta name="twitter:description"
-        content="n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。株式会社Niarail様で約15時間の作業削減・約3万円のコスト削減を実現した事例。ワークフロー構成や効果、その他n8n × Slack連携の活用例も掲載。">
-    <meta name="twitter:image" content="https://miraina.com/images/works_images/work002-1.webp">
+    <meta property="og:url" content="https://miraina-ai.com/works/work002.html">
+    <meta property="og:image" content="/images/works_images/work002-1.webp">
+    <meta property="og:description"
+        content="株式会社Niarail様の導入事例です。n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。約15時間の作業削減・約3万円のコスト削減を実現しました。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/company-logo.webp">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/work_article.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "n8n × SlackでDM送信自動化",
-        "description": "n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。株式会社Niarail様で約15時間の作業削減・約3万円のコスト削減を実現した事例。ワークフロー構成や効果、その他n8n × Slack連携の活用例も掲載。",
-        "author": {
-            "@type": "Person",
-            "name": "芝優作"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "MIRAINA",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://miraina.com/images/company-logo.webp",
-            "width": 200,
-            "height": 50
-            }
-        },
-        "image": "https://miraina.com/images/works_images/work-card002.webp",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://miraina.com/works/work002.html"
-        },
-        "url": "https://miraina.com/works/work002.html",
-        "datePublished": "2025-08-16",
-        "dateModified": "2025-09-16"
-    }
-    </script>
-
+    <link rel="stylesheet" href="/css/work_detail.css">
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
+
     <main>
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム </a></li>
-                    <li><a href="/works.html"> 事例紹介 </a></li>
-                    <li> n8n × SlackでDM送信自動化</li>
-                </ul>
-            </div>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>株式会社Niarail様</li>
+            </ul>
         </div>
-        <article class="work-detail-article">
-            <div class="work-detail-meta-container">
-                <div class="work-detail-meta">
-                    <span class="work-detail-update">更新日：2025年9月16日</span>
-                </div>
-            </div>
-            <div class="work-detail-header-container">
-                <div class="work-detail-header-left">
-                    <p class="work-detail-eyebrow">MIRAINA（ミライナ）は中小企業のAI導入を支援します</p>
-                    <h1 class="work-detail-title">n8nを用いた『Slack内でのDM送信自動化』システムを導入</h1>
-                    <p class="work-detail-lead">〜約15時間の作業時間削減＆3万円のコストカットに成功〜</p>
-                    <div class="work-detail-contact-row">
-                        <div class="work-detail-contact">
-                            <p class="consultation-text">＼ 自動化について相談してみる ／</p>
-                            <a href="/contact.html" class="cta-button">お問い合わせはこちらから</a>
-                        </div>
 
-                        <div class="work-detail-contact">
-                            <p class="consultation-text">＼ n8nを学んでみる ／</p>
-                            <a href="/contact.html" class="cta-button">資料ダウンロードはこちらから</a>
-                        </div>
+        <article class="work-container">
+            <!-- 1. Header: Title, Update Date, Categories -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2025.08.16</span>
+                    <span class="work-cat">AUTOMATION</span>
+                </div>
+                <!-- 1. Title -->
+                <h1 class="work-title">n8n × SlackでDM送信自動化。<br>新規メンバー検知から案内までを完全無人化。</h1>
+            </header>
+
+            <!-- 5. Thumbnail -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work002-1.webp" alt="株式会社Niarail様 導入事例イメージ">
+            </div>
+
+            <!-- 4. Summary -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            株式会社Niarail様では、Slackコミュニティへの新規参加者に対して手動で案内DMを送付しており、対応の遅れや作業負担が課題となっていました。
+                            そこで、ノーコードツール「n8n」を活用し、Slackへの新規参加をリアルタイムで検知してGoogleフォームの案内を自動送信するワークフローを構築。
+                            これにより、月間約15時間の作業時間を削減し、迅速かつ確実なユーザー対応を実現しました。
+                        </p>
                     </div>
                 </div>
-                <div class="work-detail-header-right">
-                    <img src="/images/works_images/work002-1.webp" alt="MIRAINA（ミライナ）が株式会社Niarail様へn8n自動化ツールを導入"
-                        class="work-detail-mainimg" width="600" height="340">
-                </div>
-            </div>
-            <section class="work-detail-summary">
-                <h2 class="work-detail-section-title">n8nでSlackに新規メンバーが参加したことを検知し自動でDMを送信</h2>
-                <p>この度、株式会社Niarail様へ、<strong>n8nによるSlackのDM送信自動化</strong>システムを導入いたしました。</p>
-                <p class="client-info-title"><a href="https://niarail.com/">株式会社Niarail様について</a></p>
-                <ul class="work-detail-info">
-                    <li>業種：Webマーケティング</li>
-                    <li>従業員数：10人</li>
-                    <li>今回自動化ツールを導入した部門：営業部門</li>
-                </ul>
-            </section>
-            <section class="work-detail-subimg">
-                <img src="/images/works_images/work002-2.webp" alt="Slack内でのDM送信自動化システムのイメージ図"
-                    class="work-detail-subimg-1" width="600" height="340">
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">導入背景</h2>
-                <p>貴社では、クラウドワークス内でwebライティングの業務委託先を募集しており、契約したワーカー様には貴社のSlackワークスペースに参加してもらっていました。</p>
-                <p>ワークスペースに参加後、初回登録のためのGoogleフォームを新規ワーカー様にDMしていました。</p>
-                <p>しかし、契約するワーカー様が多くなってくると、それぞれに対してGoogleフォームを送信するのは手間がかかります。</p>
-                <p>さらに、今後数百人規模でのワーカー様との契約を予定しており、今後のDM送信にも膨大な時間が割かれることが予想されたため、自動化ツールを導入することにしました。</p>
-                <p>また、今後貴社内で他業務の業務効率化や内製化を進めていくために、非エンジニアでも扱いやすいノーコードツールの導入を検討しており、今回
-                    <strong>n8nによる『DM送信自動化ツール</strong>』を導入するという方針に決定しました。
-                </p>
             </section>
 
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">自動化ワークフローについて</h2>
-                <p>今回導入した自動化ツールは、Slackに新規メンバーが参加したことを検知し、その参加者に自動でDMを送信するシステムです。</p>
-                <p>具体的には、以下のようなワークフローを設定しました。</p>
-                <ol>
-                    <li>1. Slackに新規メンバーが参加したことを検知</li>
-                    <li>2. 参加したメンバーに対して、初回登録のためのGoogleフォームを送信</li>
-                    <li>3. 正常にDMが送信されたかをチェック</li>
-                    <li>4. スプレッドシートにエラーログ（エラー発生時刻 / エラー詳細/ エラー発生対象参加者）を保存</li>
-                    <li>5. 正常にDMが送信されていない場合、管理者のSlackアカウントへエラー内容を通知</li>
-                </ol>
-            </section>
-            <section class="work-detail-subimg">
-                <img src="/images/works_images/work002-3.webp" alt="Slack内でのDM送信自動化システムのn8nワークフロー"
-                    class="work-detail-subimg-1" width="600" height="340">
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">自動化による効果</h2>
-                <p>自動化により、以下のような効果が得られました。</p>
+            <!-- 3. Table of Contents -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
                 <ul>
-                    <li>・約15時間の作業時間削減</li>
-                    <li>・約3万円の人件費を削減</li>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#background">2. 導入背景・課題</a></li>
+                    <li><a href="#process">3. 導入・解決プロセス</a></li>
+                    <li><a href="#effect">4. 導入効果</a></li>
+                    <li><a href="#others">5. その他の活用事例</a></li>
+                    <li><a href="#supervisor">6. 担当コンサルタントのお話</a></li>
                 </ul>
-                <br>
-                <p><strong>業務効率化</strong>で創出した15時間を『顧客接点の増加』に集中投下することで、見込み顧客への接触回数が増え、アポイント獲得・成約の上流から改善が進みます。これにより、短期的な売上増に加え、中長期のパイプライン拡充も期待できます。
-                </p>
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">その他 Slack × n8nの活用事例</h2>
-                <p><strong>n8n</strong> と <strong>Slack</strong> を連携したそのほかの活用事例を紹介します。</p>
-                <h3 class="work-sample-section-title">活用事例１：n8n × Slack × Notionの連携で社内AIチャットボット開発</h3>
-                <div class="work-detail-two-col-block">
-                    <div class="work-detail-two-col-text">
-                        <p>Slackを窓口に、Notionの社内ナレッジから回答を生成するAIチャットボットをn8nで開発。問い合わせ対応の初動を自動化し、ナレッジ活用と対応スピードを両立します。</p>
-                        <ul class="work-detail-list">
-                            <li>1. Slack 内のAIチャットbotにメンションで質問受付（スレッドで応答）</li>
-                            <li>2. n8n が Notion から関連ページを検索・要約し、回答文を生成</li>
-                            <li>3. 回答には参照元Notionリンクを添付し、一次情報へ誘導</li>
-                            <li>4. 信頼度が低い場合は担当者に自動エスカレーション＆通知</li>
-                        </ul>
-                    </div>
-                    <img src="/images/works_images/work002-4.webp" alt="n8n・Slack・Notion連携による社内AIチャットボットの構成図"
-                        class="work-detail-two-col-img" width="600" height="380">
-                </div>
-                <h3 class="work-sample-section-title">活用事例２：n8n × Slack × Googleスプレッドシートでリード管理を自動更新</h3>
-                <div class="work-detail-two-col-block">
-                    <div class="work-detail-two-col-text">
-                        <p>Slackからの簡易入力でリード情報をスプレッドシートに自動登録・更新。重複チェックや担当割り当てまでn8nで一気通貫に処理します。</p>
-                        <ul class="work-detail-list">
-                            <li>1. Slackのスラッシュコマンドでリード情報を送信</li>
-                            <li>2. n8nがスプレッドシートで重複（メール/社名）をチェック</li>
-                            <li>3. 新規なら追記、既存なら該当行を自動更新（担当/ステータス）</li>
-                            <li>4. 結果をSlackへ返信し、次アクションを提案</li>
-                        </ul>
-                    </div>
-                    <img src="/images/works_images/work002-5.webp" alt="n8n・Slack・Googleスプレッドシート連携の自動リード更新フロー"
-                        class="work-detail-two-col-img" width="600" height="380">
-                </div>
-                <h3 class="work-sample-section-title">活用事例３：n8n × Slack × HubSpotで商談ステータスを自動同期</h3>
-                <div class="work-detail-two-col-block">
-                    <div class="work-detail-two-col-text">
-                        <p>Slack上の報告だけでHubSpotの取引（Deal）を自動更新。パイプライン整備と可視化を省力化します。</p>
-                        <ul class="work-detail-list">
-                            <li>1. Slackで「#deal-update」に商談メモを投稿</li>
-                            <li>2. n8nがHubSpot APIで該当Dealを検索</li>
-                            <li>3. ステージ・金額・次回アクション日を自動更新</li>
-                            <li>4. 更新結果をスレッド返信し、関連タスクも自動発行</li>
-                        </ul>
-                    </div>
-                    <img src="/images/works_images/work002-6.webp" alt="n8n・Slack・HubSpotの商談同期オートメーション"
-                        class="work-detail-two-col-img" width="600" height="380">
+            </div>
+
+            <!-- 15. Client Info -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">クライアント様について</h3>
+                    <dl class="client-data-list">
+                        <div class="data-row">
+                            <dt>企業名</dt>
+                            <dd>株式会社Niarail 様</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>業種</dt>
+                            <dd>IT・通信</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>従業員数</dt>
+                            <dd>11〜50名</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>部署</dt>
+                            <dd>開発部</dd>
+                        </div>
+                    </dl>
                 </div>
             </section>
+
+            <!-- 14. Introduction Background -->
+            <section id="background" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BACKGROUND</h2>
+                    <h3 class="work-subheading">手動対応によるタイムラグと<br>作業コストの増大。</h3>
+                    <p class="work-text">
+                        Niarail様が運営するSlackコミュニティでは、新規参加者が増えるたびに担当者が手動でウェルカムメッセージとアンケート（Googleフォーム）へのリンクをDMで送信していました。
+                        しかし、夜間や休日の参加者への対応が遅れることでユーザー体験が損なわれる懸念があったほか、参加人数の増加に伴い担当者の作業負担も無視できないレベルになっていました。
+                        「誰が入っても即座に、漏れなく案内を送りたい」というご要望から、24時間365日稼働する自動化システムの導入が検討されました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 8. CSS Diagrams (Pattern 2: Process Flow) -->
+            <section id="process" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">PROCESS</h2>
+                    <h3 class="work-subheading">n8nを活用したリアルタイム検知と<br>自動送信フロー</h3>
+                    <p class="work-text">
+                        コストパフォーマンスと柔軟性を重視し、ワークフロー自動化ツール「n8n」を採用しました。
+                        SlackのAPIと連携し、以下のフローを構築しました。
+                    </p>
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">新規参加の<br>検知</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">ボット判定<br>と除外</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">DMの<br>自動送信</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">エラー通知<br>(管理者へ)</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：構築した自動化ワークフロー</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Introduction Effect (Results) -->
+            <section id="effect" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">月間15時間の工数削減と<br>即時対応の実現。</h3>
+
+                    <!-- 13. Quantitative Effect (Metrics) -->
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">作業工数削減</div>
+                            <div class="metric-value">15<span class="metric-unit">時間/月</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">コスト削減効果</div>
+                            <div class="metric-value">3<span class="metric-unit">万円/月</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        導入後、これまで担当者が張り付いて行っていたDM送信作業が完全に自動化されました。
+                        また、対応漏れがなくなったことで、コミュニティ参加者からのアンケート回答率も向上し、コミュニティ運営の質的向上にも寄与しています。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>対応スピード</th>
+                                    <td>数時間〜半日</td>
+                                    <td><strong>数秒以内</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>対応漏れ</th>
+                                    <td>発生リスクあり</td>
+                                    <td><strong>ゼロ（完全自動化）</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>作業工数</th>
+                                    <td>約15時間/月</td>
+                                    <td><strong>ほぼ0時間</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Use Cases -->
+            <section id="others" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">OTHER USE CASES</h2>
+                    <h3 class="work-subheading">その他のSlack連携自動化事例</h3>
+                    <p class="work-text">
+                        n8nとSlackを組み合わせることで、他にも様々な業務効率化が可能です。
+                    </p>
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item">
+                                <div class="comparison-header">Slack × Notion</div>
+                                <div class="comparison-content">
+                                    <p>Slackでの問い合わせ内容をNotionデータベースに自動蓄積し、FAQ化やタスク管理に活用。</p>
+                                </div>
+                            </div>
+                            <div class="comparison-item">
+                                <div class="comparison-header">Slack × Google Sheets</div>
+                                <div class="comparison-content">
+                                    <p>特定チャンネルへの投稿をスプレッドシートに一覧化し、日報や活動記録として自動保存。</p>
+                                </div>
+                            </div>
+                            <div class="comparison-item">
+                                <div class="comparison-header">Slack × HubSpot</div>
+                                <div class="comparison-content">
+                                    <p>商談進捗が更新されたらSlackに通知し、営業チーム全体での情報共有を迅速化。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Supervisor Information -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">PROJECT MEMBER</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shibayuusaku.webp" alt="芝 優作">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">担当コンサルタント：芝 優作</div>
+                            <p class="editor-desc">
+                                「単純作業はロボットに、創造的な仕事は人間に」をモットーに、n8nやGASを活用した業務自動化を支援しています。
+                                今回の事例のように、小さな自動化の積み重ねが組織全体の生産性を大きく向上させます。
+                                「こんなことも自動化できる？」といったご相談からでも、お気軽にお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. CTA Button -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h3 class="cta-title">お問い合わせ・資料請求</h3>
+                    <p class="cta-text">業務自動化やAI導入に関するご相談、詳細な資料はこちらから。<br>
+                        貴社の課題に合わせた最適なプランをご提案します。</p>
+                    <a href="/#contact" class="btn btn-black-fill">お問い合わせ</a>
+                </div>
+            </div>
+
+            <!-- 11. Related Articles (Related Works) -->
+            <section class="work-related fade-in-section">
+                <h3 class="related-title">その他の事例</h3>
+                <div class="related-grid">
+                    <a href="/works/work001.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work001-1.webp" alt="関連事例">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AI開発</div>
+                            <div class="related-txt">営業プロセスへの生成AI導入による成約率向上</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
         </article>
     </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
 
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

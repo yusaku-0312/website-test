@@ -2,260 +2,311 @@
 <html lang="ja">
 
 <head>
-    <!-- 基本メタ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
-
-    <!-- タイトル/ディスクリプション -->
     <title>Aristとの業務提携のお知らせ | MIRAINAブログ</title>
     <meta name="description"
         content="MIRAINAは、家庭教師・個別学習支援を行うArist（アリスト）と業務提携しました。本提携の背景・取り組み内容・今後の展望、ならびにAristの紹介をお知らせします。">
-
-    <!-- Canonical / OGP（blog001.htmlの方針を踏襲） -->
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog003.html">
-    <meta property="og:title" content="Aristとの業務提携のお知らせ | MIRAINAブログ">
-    <meta property="og:description" content="MIRAINAはAristと業務提携しました。提携の背景・内容・今後の展望、ならびにAristの紹介をご案内します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="Aristとの業務提携のお知らせ">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://miraina-ai.com/blogs/blog003.html">
-    <meta property="og:site_name" content="MIRAINA">
+    <meta property="og:image" content="/images/blogs_images/blog003-1.webp">
+    <meta property="og:description" content="MIRAINAはAristと業務提携しました。提携の背景・内容・今後の展望、ならびにAristの紹介をご案内します。">
 
-    <!-- Favicon / CSS -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/blog_article.css">
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Aristとの業務提携のお知らせ",
-        "description": "MIRAINAは、家庭教師・個別学習支援を行うArist（アリスト）と業務提携しました。本提携の背景・取り組み内容・今後の展望、ならびにAristの紹介をお知らせします。",
-        "author": {
-            "@type": "Person",
-            "name": "芝優作"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "MIRAINA",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://miraina-ai.com/images/company-logo.webp",
-            "width": 200,
-            "height": 50
-            }
-        },
-        "image": "https://miraina-ai.com/images/blog_card003.webp",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://miraina-ai.com/blogs/blog003.html"
-        },
-        "url": "https://miraina-ai.com/blogs/blog003.html",
-        "datePublished": "2025-09-06",
-        "dateModified": "2025-11-20"
-        }
-    </script>
-
 </head>
 
 <body>
-    <!-- 共通ヘッダー（既存のナビ構造に合わせて最小構成） -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span><span></span><span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
 
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <main class="blog-article-main">
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>パーソナルコーチ Arist 様との業務提携のお知らせ</li>
-                </ul>
-            </div>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>Aristとの業務提携のお知らせ</li>
+            </ul>
         </div>
 
-        <article class="blog-article container">
-            <header class="blog-article-header">
-                <h1>パーソナルコーチ Arist 様との業務提携のお知らせ</h1>
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年11月20日</div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.11.20</span>
+                    <div class="article-tags">
+                        <p class="article-tag">業務提携</p>
+                        <p class="article-tag">お知らせ</p>
+                        <p class="article-tag">教育支援</p>
+                    </div>
                 </div>
-                <figure class="blog-article-thumb">
-                    <img src="/images/blog003-1.webp" alt="パーソナルコーチ Arist 様との業務提携のお知らせのサムネイル画像" width="1000"
-                        height="630" class="blog-article-thumb-img" />
-                </figure>
+                <h1 class="article-title">パーソナルコーチ Arist 様との業務提携のお知らせ</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog003-1.webp" alt="Arist様との業務提携" width="800" height="450">
+                </div>
             </header>
 
-            <nav class="blog-article-toc" aria-label="目次">
-                <h2>目次</h2>
-                <ol>
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    MIRAINAは、「学ぶ楽しさ」を核に学力と自律性の育成をめざすマンツーマン指導を提供する「パーソナルコーチ Arist（アリスト）」様と提携しました。
+                    本提携により、MIRAINAが持つAI導入・運用の知見を活用し、学習設計の最適化や子どものAI活用力育成などを共同で進めてまいります。
+                </p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
                     <li><a href="#summary">1. 概要</a></li>
                     <li><a href="#background">2. 提携の背景</a></li>
-                    <li><a href="#background">3. 提携先 パーソナルコーチ Arist 様について</a></li>
-                    <li><a href="#about-arist">4. 代表者紹介</a></li>
-                    <li><a href="#next">5. 今後の展望</a></li>
-                </ol>
-            </nav>
+                    <li><a href="#about-arist">3. 提携先 パーソナルコーチ Arist 様について</a></li>
+                    <li><a href="#representative">4. 代表者紹介</a></li>
+                    <li><a href="#future">5. 今後の展望</a></li>
+                </ul>
+            </div>
 
-            <section id="summary">
-                <h2>概要</h2>
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="summary">1. 概要</h2>
                 <p>
                     MIRAINAは、「学ぶ楽しさ」を核に学力と自律性の育成をめざすマンツーマン指導を提供する
-                    <a href="https://personal-coach-arist-lt.com/">「パーソナルコーチ
-                        Arist（アリスト）」</a>様と提携しました。MIRAINAが持つAI導入・運用の知見を活用し、学習設計の最適化や子どものAI活用力育成などを共同で進めてまいります。
+                    <a href="https://personal-coach-arist-lt.com/" target="_blank" rel="noopener">「パーソナルコーチ
+                        Arist（アリスト）」</a>様と提携しました。
+                    MIRAINAが持つAI導入・運用の知見を活用し、学習設計の最適化や子どものAI活用力育成などを共同で進めてまいります。
                 </p>
-            </section>
 
-            <section id="background">
-                <h2>提携の背景</h2>
+                <h2 id="background">2. 提携の背景</h2>
                 <p>
-                    MIRAINAは「AIで利益と効率を両立し、成長を加速する」というミッションのもと、
-                    教育分野でも“人”の可能性を最大化する取り組みを重視しています。
-                    Aristの「暗記偏重ではなく、本質的な思考力や自律性を育む」という思想に共感し、
-                    学習の動機づけと継続を支える仕組みづくりを共創するため、本提携に至りました。
+                    MIRAINAは「AIで利益と効率を両立し、成長を加速する」というミッションのもと、教育分野でも“人”の可能性を最大化する取り組みを重視しています。
+                    Aristの「暗記偏重ではなく、本質的な思考力や自律性を育む」という思想に共感し、学習の動機づけと継続を支える仕組みづくりを共創するため、本提携に至りました。
                 </p>
-            </section>
 
-            <section id="about-arist">
-                <h2>提携先 パーソナルコーチ Arist 様について</h2>
+                <h2 id="about-arist">3. 提携先 パーソナルコーチ Arist 様について</h2>
                 <p>
-                    パーソナルコーチ Arist 様は、受験合格にとどまらず「学ぶ楽しさ」を通じて学力と自律性の両立を目指す
-                    家庭教師／個別指導サービスを提供しております。生徒の理解度ややりやすさを尊重し、教材選定や
-                    カリキュラムを個々に合わせて共同設計。暗記偏重ではなく「なぜ、これを学ぶ必要があるのか？」「なぜこうなるのか？」を対話で腹落ちさせ、
-                    自ら学びたくなる状態づくりを重視します。対応エリアは福岡市内とその周辺（糟屋郡・久留米・小郡・春日・
-                    大野城・太宰府・筑紫野 など）で、その他はオンラインにて対応しています。
+                    パーソナルコーチ Arist 様は、受験合格にとどまらず「学ぶ楽しさ」を通じて学力と自律性の両立を目指す家庭教師／個別指導サービスを提供しております。
                 </p>
-                <p class="blog-figure">
-                    <a class="more-link" href="http://www.personal-coach-arist.com/" target="_blank"
-                        rel="noopener">パーソナルコーチ Arist 様公式サイト</a>
-                </p>
-            </section>
-            <section id="rep">
-                <h2>代表者紹介</h2>
-                <figure class="rep-figure">
-                    <img src="/images/suzuki.webp" alt="パーソナルコーチ Arist 代表 鈴木 祐人 様の写真" class="rep-photo" />
-                </figure>
-                <p>
-                    鈴木 祐人様（パーソナルコーチ Arist 代表）：学びの動機づけを起点に、対話とコーチングを通じて
-                    「自ら学びたくなる状態」を育てる教育を実践。生徒の理解度・やりやすさに合わせて教材や計画を共に設計し、
-                    楽しく継続できる学習習慣づくりを支援します。
-                </p>
-                <ul>
-                    <li>理念：才能を見つけ、開発し、育むことで、どんな個性も天才にする</li>
-                    <li>特徴：対話重視・指導の個別最適設計</li>
-                    <li>対象：家庭教師・個別指導（詳細は下のボタンから公式サイトをご確認ください）</li>
-                </ul>
-            </section>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <tbody>
+                            <tr>
+                                <th>サービス特徴</th>
+                                <td>生徒の理解度ややりやすさを尊重し、教材選定やカリキュラムを個々に合わせて共同設計。対話で腹落ちさせ、自ら学びたくなる状態づくりを重視。</td>
+                            </tr>
+                            <tr>
+                                <th>対応エリア</th>
+                                <td>福岡市内とその周辺（糟屋郡・久留米・小郡・春日・大野城・太宰府・筑紫野 など）。オンライン対応もあり。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <a href="http://www.personal-coach-arist.com/" target="_blank" rel="noopener"
+                        class="text-link">パーソナルコーチ Arist 様公式サイト &rarr;</a>
+                </div>
 
-            <section id="next">
-                <h2>今後の展望</h2>
-                <p>
-                    MIRAINAは、教育現場の価値観を尊重しつつ、AIの適切な活用で学びの体験を支える取り組みを
-                    さらに拡充します。本提携を起点に、地域から全国へ、より良い学習の循環を生み出していきます。
-                </p>
-                <p class="blog-figure">
-                    <a class="more-link" href="/contact.html">本件に関するお問い合わせ</a>
-                </p>
-            </section>
-            <!-- Reviewer / 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <h3 class="reviewer-name">芝 優作（しば ゆうさく）</h3>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
+                <h2 id="representative">4. 代表者紹介</h2>
+                <div style="display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div style="flex: 0 0 200px; max-width: 100%;">
+                        <img src="/images/suzuki.webp" alt="鈴木 祐人 様" style="width: 100%; border-radius: 8px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="margin-top: 0; font-size: 1.2rem; margin-bottom: 0.5rem;">鈴木 祐人 様 <span
+                                style="font-size: 0.9rem; font-weight: normal; margin-left: 0.5rem;">(パーソナルコーチ Arist
+                                代表)</span></h3>
+                        <p>
+                            学びの動機づけを起点に、対話とコーチングを通じて「自ら学びたくなる状態」を育てる教育を実践。
+                            生徒の理解度・やりやすさに合わせて教材や計画を共に設計し、楽しく継続できる学習習慣づくりを支援します。
                         </p>
+                        <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 1rem;">
+                            <li><strong>理念</strong>：才能を見つけ、開発し、育むことで、どんな個性も天才にする</li>
+                            <li><strong>特徴</strong>：対話重視・指導の個別最適設計</li>
+                        </ul>
+                    </div>
+                </div>
 
-                        <p class="reviewer-bio">
+                <h2 id="future">5. 今後の展望</h2>
+                <p>
+                    MIRAINAは、教育現場の価値観を尊重しつつ、AIの適切な活用で学びの体験を支える取り組みをさらに拡充します。
+                    本提携を起点に、地域から全国へ、より良い学習の循環を生み出していきます。
+                </p>
+
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">本件に関するお問い合わせ</h3>
+                    <p class="cta-text">業務提携や取材に関するお問い合わせは<br>下記フォームよりお願いいたします。</p>
+                    <a href="..//contact.html" class="btn btn-black-fill">お問い合わせフォームへ</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog001.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card001.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.15</div>
+                            <div class="related-text">【決定版】社内AIチャットボットの作り方と導入効果を徹底解説</div>
+                        </div>
+                    </a>
+                    <a href="blog002.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card002.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.20</div>
+                            <div class="related-text">Gemini活用で経営とマーケティングを革新する実践ガイド</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         </article>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
 
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
 
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
-            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="/js/common.js" defer></script>
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

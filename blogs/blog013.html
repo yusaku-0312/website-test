@@ -2,232 +2,228 @@
 <html lang="ja">
 
 <head>
-    <!-- =============================
-       基本メタ
-    ============================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="MIRAINA" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- =============================
-       タイトル / ディスクリプション（SEO）
-    ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説 | MIRAINAブログ</title>
     <meta name="description"
-        content="Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。" />
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog013.html" />
-
-    <!-- =============================
-       OGP
-    ============================== -->
-    <meta property="og:title" content="【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説 | MIRAINAブログ" />
+        content="Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog013.html">
+    <meta property="og:image" content="/images/blogs_images/blog013-1.webp">
     <meta property="og:description"
-        content="Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://miraina-ai.com/blogs/blog013.html" />
-    <meta property="og:site_name" content="MIRAINA" />
-    <meta property="og:image" content="https://miraina-ai.com/images/blog013-1.webp" />
-    <link rel="icon" href="/images/favicon.ico" />
+        content="Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。">
 
-    <!-- =============================
-       CSS
-    ============================== -->
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/blog_article.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- =============================
-       構造化データ（Article）
-    ============================== -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Article",
-      "headline":"【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説",
-      "description":"Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。",
-      "author":{"@type":"Person","name":"芝優作"},
-      "publisher":{
-        "@type":"Organization",
-        "name":"MIRAINA",
-        "logo":{"@type":"ImageObject","url":"https://miraina-ai.com/images/company-logo.webp","width":200,"height":50}
-      },
-      "image":"https://miraina-ai.com/images/blog013-1.png",
-      "mainEntityOfPage":{"@type":"WebPage","@id":"https://miraina-ai.com/blogs/blog013.html"},
-      "url":"https://miraina-ai.com/blogs/blog013.html",
-      "datePublished":"2025-11-23",
-      "dateModified":"2025-11-23"
-    }
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
 </head>
 
 <body>
-    <!-- =============================
-       共通ヘッダー
-    ============================== -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="/index.html">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu"><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
 
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <!-- =============================
-       本文
-    ============================== -->
-    <main class="blog-article-main">
-
-        <!-- パンくず -->
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="/index.html">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</li>
-                </ul>
-            </div>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</li>
+            </ul>
         </div>
 
-        <article class="blog-article container">
-
-            <!-- 記事ヘッダー -->
-            <header class="blog-article-header">
-                <h1>【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</h1>
-
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年11月23日</div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.11.23</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">Google</p>
+                        <p class="article-tag">最新AI</p>
+                    </div>
                 </div>
+                <h1 class="article-title">【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog013-1.webp" alt="Gemini 3.0の解説サムネイル画像" width="800" height="450">
+                </div>
+            </header>
 
-                <figure class="blog-article-thumb">
-                    <img src="/images/blog013-1.webp" alt="Gemini 3.0の解説サムネイル画像" width="1000" height="630"
-                        class="blog-article-thumb-img" />
-                </figure>
-
-                <p class="blog-article-lead">
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
                     2025年11月、Googleがついに最新AIモデル<strong>「Gemini 3.0」</strong>をリリースしました。
                     「Deep Think」による推論能力の向上や、自律的にタスクをこなす「Agentic」な機能など、ビジネスの現場を大きく変える可能性を秘めています。
                     本記事では、Gemini 3.0の革新的な機能と、明日から使える具体的な活用事例を徹底解説します。
                 </p>
-            </header>
-
-            <!-- 目次 -->
-            <nav class="blog-article-toc" aria-label="目次">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#intro">はじめに</a></li>
-                    <li><a href="#features">Gemini 3.0の革新的な新機能</a></li>
-                    <li><a href="#cases">業界別・Gemini 3.0 活用事例</a></li>
-                    <li><a href="#plans">料金プランと利用開始方法</a></li>
-                    <li><a href="#summary">まとめ</a></li>
-                </ol>
-            </nav>
-
-            <!-- セクション：はじめに -->
-            <section id="intro">
-                <h2>はじめに</h2>
-                <p>AI技術の進化は止まることを知りません。Gemini 1.5 Proの登場からわずか数ヶ月、Googleはさらなる進化を遂げた<strong>Gemini 3.0</strong>を発表しました。
-                </p>
-                <p>Sundar Pichai CEOが「マルチモーダル理解において世界最高のモデル」と語る通り、Gemini
-                    3.0は単なるテキスト生成AIを超え、視覚・聴覚・推論を統合した真のパートナーへと進化しています。</p>
             </section>
 
-            <!-- セクション：Gemini 3.0の革新的な新機能 -->
-            <section id="features">
-                <h2>Gemini 3.0の革新的な新機能</h2>
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#intro">1. はじめに</a></li>
+                    <li><a href="#features">2. Gemini 3.0の革新的な新機能</a></li>
+                    <li><a href="#cases">3. 業界別・Gemini 3.0 活用事例</a></li>
+                    <li><a href="#plans">4. 料金プランと利用開始方法</a></li>
+                    <li><a href="#summary">5. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="intro">1. はじめに</h2>
+                <p>
+                    AI技術の進化は止まることを知りません。Gemini 1.5 Proの登場からわずか数ヶ月、Googleはさらなる進化を遂げた<strong>Gemini 3.0</strong>を発表しました。
+                </p>
+                <p>
+                    Sundar Pichai CEOが「マルチモーダル理解において世界最高のモデル」と語る通り、Gemini
+                    3.0は単なるテキスト生成AIを超え、視覚・聴覚・推論を統合した真のパートナーへと進化しています。
+                </p>
+
+                <h2 id="features">2. Gemini 3.0の革新的な新機能</h2>
 
                 <h3>1. Deep Think Mode（深層思考モード）</h3>
-                <p>Gemini 3.0の最大の特徴は、複雑な問題をステップバイステップで論理的に解き明かす<strong>「Deep Think Mode」</strong>です。</p>
-                <p>従来のモデルが確率的に「それらしい答え」を出していたのに対し、Deep Think Modeでは思考の過程をシミュレーションし、数学的な難問や複雑なロジックの検証において圧倒的な精度を発揮します。
+                <p>
+                    Gemini 3.0の最大の特徴は、複雑な問題をステップバイステップで論理的に解き明かす<strong>「Deep Think Mode」</strong>です。
+                </p>
+                <p>
+                    従来のモデルが確率的に「それらしい答え」を出していたのに対し、Deep Think Modeでは思考の過程をシミュレーションし、数学的な難問や複雑なロジックの検証において圧倒的な精度を発揮します。
                 </p>
 
                 <h3>2. Agentic Capabilities（エージェント機能）</h3>
-                <figure class="blog-article-figure">
-                    <img src="/images/blog013-2.webp" alt="Agentic AIのイメージ" width="800" height="450" loading="lazy">
-                    <figcaption>自律的にタスクを遂行するAgentic AIのイメージ</figcaption>
-                </figure>
-                <p>「指示待ち」から「自律実行」へ。Gemini 3.0は、ユーザーの曖昧なゴール設定に対して、自ら必要なツールを選定し、タスクを分解して実行する能力が飛躍的に向上しました。</p>
-                <p>特に、同時に発表された開発環境<strong>「Google Antigravity」</strong>との連携により、コーディングやデバッグを自律的に行うことが可能です。</p>
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog013-2.webp" alt="Agentic AIのイメージ">
+                    <p class="figure-caption">自律的にタスクを遂行するAgentic AIのイメージ</p>
+                </div>
+                <p>
+                    「指示待ち」から「自律実行」へ。Gemini 3.0は、ユーザーの曖昧なゴール設定に対して、自ら必要なツールを選定し、タスクを分解して実行する能力が飛躍的に向上しました。
+                </p>
+                <p>
+                    特に、同時に発表された開発環境<strong>「Google Antigravity」</strong>との連携により、コーディングやデバッグを自律的に行うことが可能です。
+                </p>
 
                 <h3>3. 圧倒的なマルチモーダル性能</h3>
-                <p>テキストだけでなく、画像、音声、動画をリアルタイムに理解します。Project Astraの技術統合により、スマートフォンのカメラを通して見た世界について、遅延なく会話することが可能になりました。
+                <p>
+                    テキストだけでなく、画像、音声、動画をリアルタイムに理解します。Project Astraの技術統合により、スマートフォンのカメラを通して見た世界について、遅延なく会話することが可能になりました。
                 </p>
-            </section>
 
-            <!-- セクション：業界別・Gemini 3.0 活用事例 -->
-            <section id="cases">
-                <h2>業界別・Gemini 3.0 活用事例</h2>
-
-                <div class="blog-figure">
-                    <div class="table-compare-wrapper" role="region" aria-labelledby="case-caption" tabindex="0">
-                        <table class="table-compare" aria-describedby="case-caption">
-                            <caption id="case-caption" class="table-compare-caption">Gemini 3.0 の主な活用領域</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">業界・職種</th>
-                                    <th scope="col">活用シナリオ</th>
-                                    <th scope="col">期待される効果</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">マーケティング</th>
-                                    <td>GenUIを用いたリッチなコンテンツ生成<br>トレンド分析と記事作成の自動化</td>
-                                    <td>制作時間の80%削減<br>CVRの向上</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">システム開発</th>
-                                    <td>Antigravityによる自律コーディング<br>レガシーコードの解析とリファクタリング</td>
-                                    <td>開発サイクルの高速化<br>バグ混入率の低下</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">経営企画</th>
-                                    <td>Deep Thinkによる市場シミュレーション<br>複雑な契約書のリーガルチェック</td>
-                                    <td>意思決定の精度向上<br>リスク管理の強化</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <h2 id="cases">3. 業界別・Gemini 3.0 活用事例</h2>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <caption>Gemini 3.0 の主な活用領域</caption>
+                        <thead>
+                            <tr>
+                                <th>業界・職種</th>
+                                <th>活用シナリオ</th>
+                                <th>期待される効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>マーケティング</th>
+                                <td>GenUIを用いたリッチなコンテンツ生成<br>トレンド分析と記事作成の自動化</td>
+                                <td>制作時間の80%削減<br>CVRの向上</td>
+                            </tr>
+                            <tr>
+                                <th>システム開発</th>
+                                <td>Antigravityによる自律コーディング<br>レガシーコードの解析とリファクタリング</td>
+                                <td>開発サイクルの高速化<br>バグ混入率の低下</td>
+                            </tr>
+                            <tr>
+                                <th>経営企画</th>
+                                <td>Deep Thinkによる市場シミュレーション<br>複雑な契約書のリーガルチェック</td>
+                                <td>意思決定の精度向上<br>リスク管理の強化</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <h3>マーケティング：GenUIによる体験革新</h3>
-                <p>Gemini 3.0は、単なるテキストだけでなく、ユーザーインターフェースそのものを生成する<strong>「GenUI」</strong>機能を備えています。</p>
-                <p>例えば、旅行の計画を相談すると、おすすめのスポットをリストアップするだけでなく、地図や予約ボタンが配置された「旅のしおり」のようなUIをその場で生成してくれます。これにより、顧客エンゲージメントが劇的に向上します。
+                <p>
+                    Gemini 3.0は、単なるテキストだけでなく、ユーザーインターフェースそのものを生成する<strong>「GenUI」</strong>機能を備えています。
+                </p>
+                <p>
+                    例えば、旅行の計画を相談すると、おすすめのスポットをリストアップするだけでなく、地図や予約ボタンが配置された「旅のしおり」のようなUIをその場で生成してくれます。これにより、顧客エンゲージメントが劇的に向上します。
                 </p>
 
                 <h3>システム開発：ペアプログラミングのその先へ</h3>
-                <p>エンジニアにとって、Gemini 3.0は最強のパートナーです。特に「Google Antigravity」と組み合わせることで、要件を伝えるだけで設計から実装、テストまでを半自動で行うことができます。
+                <p>
+                    エンジニアにとって、Gemini 3.0は最強のパートナーです。特に「Google
+                    Antigravity」と組み合わせることで、要件を伝えるだけで設計から実装、テストまでを半自動で行うことができます。
                 </p>
-                <p>「このバグを直して」と伝えるだけで、原因を特定し、修正コードを書き、テストを通すところまでやってくれる未来が、すでに始まっています。</p>
-            </section>
+                <p>
+                    「このバグを直して」と伝えるだけで、原因を特定し、修正コードを書き、テストを通すところまでやってくれる未来が、すでに始まっています。
+                </p>
 
-            <!-- セクション：料金プランと利用開始方法 -->
-            <section id="plans">
-                <h2>料金プランと利用開始方法</h2>
+                <h2 id="plans">4. 料金プランと利用開始方法</h2>
                 <p>Gemini 3.0は、以下の形態で提供されています。</p>
                 <ul>
                     <li><strong>Gemini Advanced</strong>: 個人向け有料プラン（Google One AI Premium）。最新のGemini 3.0 Ultraモデルが利用可能。
@@ -235,93 +231,132 @@
                     <li><strong>Gemini Business / Enterprise</strong>: 企業向けプラン。セキュリティと管理機能が強化されています。</li>
                     <li><strong>API利用</strong>: 開発者向けにVertex AIおよびGoogle AI Studio経由で提供。</li>
                 </ul>
-                <p>まずは無料版のGeminiで基本性能を試しつつ、本格的な業務利用にはAdvanced以上のプランを検討することをおすすめします。</p>
-            </section>
+                <p>
+                    まずは無料版のGeminiで基本性能を試しつつ、本格的な業務利用にはAdvanced以上のプランを検討することをおすすめします。
+                </p>
 
-            <!-- セクション：まとめ -->
-            <section id="summary">
-                <h2>まとめ</h2>
+                <h2 id="summary">5. まとめ</h2>
                 <p>Gemini 3.0は、AIの歴史における大きな転換点です。</p>
                 <ul>
                     <li><strong>Deep Think</strong>による深い推論</li>
                     <li><strong>Agentic</strong>な自律的タスク遂行</li>
                     <li><strong>マルチモーダル</strong>な実世界理解</li>
                 </ul>
-                <p>これらの機能は、私たちの働き方を根本から変える可能性を持っています。まだ触れていない方は、ぜひ今日からGemini 3.0を体験してみてください。</p>
-            </section>
+                <p>
+                    これらの機能は、私たちの働き方を根本から変える可能性を持っています。まだ触れていない方は、ぜひ今日からGemini 3.0を体験してみてください。
+                </p>
 
-            <section id="service">
-                <h2>AI導入・活用支援について</h2>
-                <p>MIRAINAでは、Gemini 3.0をはじめとする最新AIモデルのビジネス導入支援を行っています。</p>
-                <p>「自社データでGeminiをファインチューニングしたい」「社内ナレッジ検索にAIを活用したい」といったご相談は、お気軽にMIRAINAまでお問い合わせください。</p>
-                <p><a href="/contact.html" class="cta-button">お問い合わせはこちら</a></p>
-            </section>
+            </div>
 
-            <!-- 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <p class="reviewer-name">芝 優作（しば ゆうさく）</p>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">Gemini 3.0の導入支援・活用コンサルティング</h3>
+                    <p class="cta-text">
+                        MIRAINAでは、Gemini 3.0をはじめとする最新AIモデルの導入支援を行っています。<br>
+                        「自社データでGeminiを最適化したい」「社内業務にAIを組み込みたい」<br>
+                        そのようなご相談は、お気軽にお問い合わせください。
+                    </p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
 
-                        <p class="reviewer-bio">
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog012.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog012-1.png" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.21</div>
+                            <div class="related-text">【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説</div>
+                        </div>
+                    </a>
+                    <a href="blog002.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog002-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.05</div>
+                            <div class="related-text">Gemini活用で経営とマーケティングを革新する実践ガイド</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
         </article>
     </main>
 
-    <!-- =============================
-       共通フッター
-    ============================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="/index.html" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
             </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

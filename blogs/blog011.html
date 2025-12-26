@@ -2,192 +2,167 @@
 <html lang="ja">
 
 <head>
-    <!-- =============================
-       基本メタ
-    ============================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="MIRAINA" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- =============================
-       タイトル / ディスクリプション（SEO）
-    ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説 | MIRAINAブログ</title>
     <meta name="description"
-        content="AI時代に注目されるllms.txt（LLMs.txt）とは何かを、SEO・AIO・LLMOの観点から徹底解説。メリット、注意点、活用シーン、導入判断などを専門家視点でまとめた2025年最新ガイド。" />
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog011.html" />
-
-    <!-- =============================
-       OGP
-    ============================== -->
-    <meta property="og:title" content="【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説 | MIRAINAブログ" />
+        content="AI時代に注目されるllms.txt（LLMs.txt）とは何かを、SEO・AIO・LLMOの観点から徹底解説。メリット、注意点、活用シーン、導入判断などを専門家視点でまとめた2025年最新ガイド。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog011.html">
+    <meta property="og:image" content="/images/blogs_images/blog011-1.webp">
     <meta property="og:description"
-        content="AI時代に注目されるllms.txt（LLMs.txt）とは何か？役割・メリット・限界・SEOとの関係まで専門家視点でわかりやすく解説した完全版ガイド。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://miraina-ai.com/blogs/blog011.html" />
-    <meta property="og:site_name" content="MIRAINA" />
-    <meta property="og:image" content="https://miraina-ai.com/images/blog011-1.webp" />
-    <link rel="icon" href="/images/favicon.ico" />
+        content="AI時代に注目されるllms.txt（LLMs.txt）とは何か？役割・メリット・限界・SEOとの関係まで専門家視点でわかりやすく解説した完全版ガイド。">
 
-    <!-- =============================
-       CSS
-    ============================== -->
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/blog_article.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- =============================
-       構造化データ（Article）
-    ============================== -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Article",
-      "headline":"【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
-      "description":"AI時代に注目されるllms.txt（LLMs.txt）とは何か？役割・メリット・限界・SEOとの関係まで専門家視点でわかりやすく解説した完全版ガイド。",
-      "author":{"@type":"Person","name":"芝優作"},
-      "publisher":{
-        "@type":"Organization",
-        "name":"MIRAINA",
-        "logo":{"@type":"ImageObject","url":"https://miraina-ai.com/images/company-logo.webp","width":200,"height":50}
-      },
-      "image":"https://miraina-ai.com/images/blog011-1.webp",
-      "mainEntityOfPage":{"@type":"WebPage","@id":"https://miraina-ai.com/blogs/blog011.html"},
-      "url":"https://miraina-ai.com/blogs/blog011.html",
-      "datePublished":"2025-11-18",
-      "dateModified":"2025-11-18"
-    }
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
 </head>
 
 <body>
-    <!-- =============================
-       共通ヘッダー
-    ============================== -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="/index.html">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu"><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
 
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <!-- =============================
-       本文
-    ============================== -->
-    <main class="blog-article-main">
-
-        <!-- パンくず -->
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="/index.html">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説</li>
-                </ul>
-            </div>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説</li>
+            </ul>
         </div>
 
-        <article class="blog-article container">
-
-            <!-- 記事ヘッダー -->
-            <header class="blog-article-header">
-                <h1>【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説</h1>
-
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年11月18日</div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.11.18</span>
+                    <div class="article-tags">
+                        <p class="article-tag">llms.txt</p>
+                        <p class="article-tag">AIO</p>
+                        <p class="article-tag">LLMO</p>
+                    </div>
                 </div>
-
-                <figure class="blog-article-thumb">
-                    <img src="/images/blog011-1.webp" alt="llms.txtの解説サムネイル画像" width="1000" height="630"
-                        class="blog-article-thumb-img" />
-                </figure>
-
-                <p class="blog-article-lead">
-                    AIアシスタントが情報アクセスの中心になりつつある現在、ウェブサイトが“AIにどう理解されるか”は新たな競争軸になっています。本記事では、AI向けの新しいサイト案内ファイルとして注目される<strong>llms.txt</strong>について、概要・意義・限界・実務的な活用まで専門家視点で解説します。
-                </p>
+                <h1 class="article-title">【最新版】llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog011-1.webp" alt="llms.txtの解説サムネイル画像" width="800" height="450">
+                </div>
             </header>
 
-            <!-- 目次 -->
-            <nav class="blog-article-toc" aria-label="目次">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#intro">はじめに</a></li>
-                    <li><a href="#what">llms.txtとは何か</a></li>
-                    <li><a href="#reason">llms.txt が注目される理由（メリット）</a></li>
-                    <li><a href="#caution">llms.txt の限界・注意点</a></li>
-                    <li><a href="#position">AIO／LLMO 対策としての位置づけ（独自見解）</a></li>
-                    <li><a href="#summary">まとめ</a></li>
-                </ol>
-            </nav>
-
-            <!-- セクション：はじめに -->
-            <section id="intro">
-                <h2>はじめに</h2>
-                <p>生成AIが一般利用されるようになり、情報アクセスの流れは大きく変化しました。以前は検索エンジンで探し、必要なページへ移動するプロセスが主流でしたが、今は<strong>AIに直接質問して答えを得る</strong>スタイルが一般化しています。
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AIアシスタントが情報アクセスの中心になりつつある現在、ウェブサイトが“AIにどう理解されるか”は新たな競争軸になっています。本記事では、AI向けの新しいサイト案内ファイルとして注目される<strong>llms.txt</strong>について、概要・意義・限界・実務的な活用まで専門家視点で解説します。
                 </p>
-                <p>この変化に伴い、ウェブサイトは<strong>「AIにどう理解されるか」</strong>が非常に重要になりました。その文脈で登場した概念が<strong>llms.txt</strong>です。
-                </p>
-                <p>ただし、現時点で<strong>llms.txt は必須ではありません</strong>。効果や普及状況はまだ不透明であり、あくまで“やっておくと良いかもしれない”という位置付けです。</p>
-
-                <p>関連知識：</p>
-                <ul>
-                    <li><a href="https://miraina-ai.com/blogs/blog006.html">LLMOとは？</a></li>
-                    <li><a href="https://miraina-ai.com/blogs/blog007.html">AIOとは？</a></li>
-                </ul>
             </section>
 
-            <!-- セクション：llms.txtとは何か -->
-            <section id="what">
-                <h2>llms.txtとは何か</h2>
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#intro">1. はじめに</a></li>
+                    <li><a href="#what">2. llms.txtとは何か</a></li>
+                    <li><a href="#reason">3. llms.txt が注目される理由（メリット）</a></li>
+                    <li><a href="#caution">4. llms.txt の限界・注意点</a></li>
+                    <li><a href="#position">5. AIO／LLMO 対策としての位置づけ（独自見解）</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
 
-                <p>llms.txt（または
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="intro">1. はじめに</h2>
+                <p>
+                    生成AIが一般利用されるようになり、情報アクセスの流れは大きく変化しました。以前は検索エンジンで探し、必要なページへ移動するプロセスが主流でしたが、今は<strong>AIに直接質問して答えを得る</strong>スタイルが一般化しています。
+                </p>
+                <p>
+                    この変化に伴い、ウェブサイトは<strong>「AIにどう理解されるか」</strong>が非常に重要になりました。その文脈で登場した概念が<strong>llms.txt</strong>です。
+                </p>
+                <p>
+                    ただし、現時点で<strong>llms.txt は必須ではありません</strong>。効果や普及状況はまだ不透明であり、あくまで“やっておくと良いかもしれない”という位置付けです。
+                </p>
+
+                <h2 id="what">2. llms.txtとは何か</h2>
+                <p>
+                    llms.txt（または
                     LLMs.txt）は、AI（とくに大規模言語モデル）がサイトを参照する際に、<strong>重要情報</strong>や<strong>取り扱いルール</strong>を案内するためのファイルとして提案されています。
                 </p>
 
-                <h3>● ロボット向けの「説明書」のような位置づけ</h3>
+                <h3>ロボット向けの「説明書」のような位置づけ</h3>
                 <ul>
-                    <li>robots.txt：検索エンジン向け</li>
-                    <li>llms.txt：AIアシスタント／LLM向け</li>
+                    <li><strong>robots.txt</strong>：検索エンジン向け</li>
+                    <li><strong>llms.txt</strong>：AIアシスタント／LLM向け</li>
                 </ul>
-
                 <p>用途は異なり、AIに正しく理解してもらう役割を担います。</p>
 
-                <p>参照：</p>
-                <ul>
-                    <li><a href="https://www.llmo.help/blog/what-is-llms-txt">LLMs.txtとは？</a>
-                    </li>
-                    <li><a href="https://media-innovation.jp/article/2025/03/24/142294.html">Media
-                            Innovation</a></li>
-                    <li><a href="https://www.ai-alright.com/articles/1869/">AI-ALRIGHT</a></li>
-                </ul>
-
-                <h3>● 記述される内容の例</h3>
+                <h3>記述される内容の例</h3>
                 <ul>
                     <li>サイト概要・目的</li>
                     <li>最重要ページ</li>
@@ -196,17 +171,24 @@
                     <li>著作権ルール</li>
                 </ul>
 
-                <h3>● まだ公式標準ではない</h3>
-                <p>llms.txt は正式なWeb標準として確立されたものではなく、仕様変更の可能性があります。AI各社の対応状況もバラバラです。</p>
-            </section>
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog011-2.webp" alt="llms.txtの記述例"
+                        style="max-width: 700px; width: 100%; margin: 0 auto; display: block;">
+                    <figcaption>llms.txtの記述例</figcaption>
+                </figure>
 
-            <!-- セクション：メリット -->
-            <section id="reason">
-                <h2>llms.txt が注目される理由（メリット）</h2>
+                <h3>まだ公式標準ではない</h3>
+                <p>
+                    llms.txt は正式なWeb標準として確立されたものではなく、仕様変更の可能性があります。AI各社の対応状況もバラバラです。
+                </p>
+
+                <h2 id="reason">3. llms.txt が注目される理由（メリット）</h2>
 
                 <h3>AIに重要コンテンツを明示できる</h3>
-                <p>AIは大量のページを読み込みますが、何が重要なのかは推測で判断しています。これがズレると誤った解釈が生まれます。</p>
-                <p><strong>llms.txt によって「このページが公式情報」「ここを読んでほしい」を指定できます。</strong></p>
+                <p>
+                    AIは大量のページを読み込みますが、何が重要なのかは推測で判断しています。これがズレると誤った解釈が生まれます。<br>
+                    <strong>llms.txt によって「このページが公式情報」「ここを読んでほしい」を指定できます。</strong>
+                </p>
 
                 <h3>コンテンツの利用ポリシーを提示できる</h3>
                 <p>AIが回答にサイト内容を使う際の許可範囲を明示できます。</p>
@@ -216,64 +198,61 @@
 
                 <h3>将来のAI最適化（AIO／LLMO）の基盤になる</h3>
                 <p>AIに強いサイトは「構造が明確なサイト」です。llms.txt の考え方はAIOの本質に近く、将来有効となる可能性があります。</p>
-            </section>
 
-            <!-- セクション：注意点 -->
-            <section id="caution">
-                <h2>llms.txt の限界・注意点</h2>
+                <h2 id="caution">4. llms.txt の限界・注意点</h2>
 
                 <h3>標準化が未完成</h3>
-                <p>llms.txt
-                    はまだ正式なWeb標準として定義されておらず、あくまでコミュニティ主導で議論されている段階です。そのため、今後仕様が大きく変わる可能性がありますし、現在のルールが将来そのまま使えるとは限りません。特定のAIプラットフォームで独自解釈されるリスクもあります。
+                <p>
+                    llms.txt
+                    はまだ正式なWeb標準として定義されておらず、あくまでコミュニティ主導で議論されている段階です。今後仕様が大きく変わる可能性があり、特定のAIプラットフォームで独自解釈されるリスクもあります。
                 </p>
 
                 <h3>AI各社の対応がバラバラ</h3>
-                <p>現状、AIサービスごとに参照有無や扱い方が異なります。特に Google
-                    系AIがどう扱うかは明確なポリシーが公表されておらず、「参照しない可能性が高い」という意見も見られます。したがって、llms.txt
-                    を導入したからといって、すべてのAIに対して均一に効果があるわけではありません。</p>
+                <p>
+                    現状、AIサービスごとに参照有無や扱い方が異なります。特に Google 系AIがどう扱うかは明確なポリシーが公表されておらず、「参照しない可能性が高い」という意見も見られます。
+                </p>
 
                 <h3>運用コストが発生する</h3>
-                <p>llms.txt は一度作って終わりではなく、サイト構造や重要ページが変わるたびに更新する必要があります。特に、頻繁にページを追加・編集するメディアや企業サイトでは、運用フローの中に「llms.txt
-                    のメンテナンス」を組み込む必要があり、手間が増える点は考慮すべきです。</p>
+                <p>
+                    llms.txt は一度作って終わりではなく、サイト構造や重要ページが変わるたびに更新する必要があります。運用フローの中に「llms.txt
+                    のメンテナンス」を組み込む必要があり、手間が増える点は考慮すべきです。
+                </p>
 
                 <h3>効果がまだ不透明</h3>
-                <p>SEOのように「導入すると順位が上がる」「AIで引用されやすくなる」といった客観的データはまだ十分にありません。導入したことで定量的な成果が得られたという事例も少なく、投資対効果を判断しづらい状況です。現時点では試験的な施策として捉えるのが現実的です。
+                <p>
+                    SEOのように「導入すると順位が上がる」「AIで引用されやすくなる」といった客観的データはまだ十分にありません。現時点では試験的な施策として捉えるのが現実的です。
                 </p>
 
                 <h3>セキュリティ上の注意</h3>
-                <p>llms.txt は robots.txt
-                    と同様、公開領域に置くファイルです。そのため、内部情報や非公開URL、管理画面のパスなどを誤って記載すると、第三者に知られてしまうリスクがあります。特に「優先的に参照してほしいURL」を記載する際は、本当に公開して良い情報かどうか慎重に確認する必要があります。
-                </p>
-            </section>
-
-
-            <!-- セクション：AIO／LLMOとしての位置づけ -->
-            <section id="position">
-                <h2>AIO／LLMO 対策としての llms.txt の位置づけ（独自見解）</h2>
-
-                <h3>● 必須ではない</h3>
-                <p>現時点でllms.txtは、SEOにおけるサイトマップや構造化データのような「必須施策」ではありません。AI各社の対応状況が不透明で、そもそも参照されないケースがあるため、導入していないからといって大きな不利益が生じるものではないと考えられます。
+                <p>
+                    llms.txt は robots.txt と同様、公開領域に置くファイルです。内部情報や非公開URLを誤って記載すると、第三者に知られてしまうリスクがあります。
                 </p>
 
-                <h3>● ただし“やっておくと損はない”</h3>
-                <p>今後、AIがウェブの主要な情報流通経路として確立されていくと、サイト側がAI向けに情報を整理して提供する文化は広がる可能性があります。llms.txt
-                    はその初期段階の試みとして、未来のAI最適化に備えておくという意味で価値があります。特に、公式情報の明確化や使用ポリシー提示の観点ではメリットがあります。</p>
+                <h2 id="position">5. AIO／LLMO 対策としての位置づけ（独自見解）</h2>
 
-                <h3>● SEOの基礎が優先</h3>
-                <p>llms.txt を検討する前に、まずは基本的なSEO施策を固めることが先です。内部リンクの整理、E-E-A-T
-                    の強化、主要ページの更新、検索意図を満たすコンテンツ改善など、AI検索時代でも変わらず重要な基礎部分が整っていないと、llms.txt の効果を確認すること自体が難しくなります。</p>
-
-                <h3>● AIO・LLMO理解が深まるほど価値が見える</h3>
-                <p>AIに“選ばれるサイト”とは、情報構造が整理され、信頼性が高く、目的が明確なサイトです。llms.txt
-                    はその思想と相性がよく、AIOやLLMOの理解を深めていく中で「なぜAI向けに情報を明示する必要があるのか」という本質が見えてきます。長期的には、AI時代の情報提供のあり方を考える上で重要な要素のひとつとなる可能性があります。
+                <h3>必須ではない</h3>
+                <p>
+                    現時点でllms.txtは、SEOにおけるサイトマップや構造化データのような「必須施策」ではありません。AI各社の対応状況が不透明なため、導入していないからといって大きな不利益が生じるものではないと考えられます。
                 </p>
-            </section>
 
+                <h3>ただし“やっておくと損はない”</h3>
+                <p>
+                    今後、AIが主要な情報流通経路として確立されていくと、サイト側がAI向けに情報を整理して提供する文化は広がる可能性があります。llms.txt
+                    はその初期段階の試みとして、未来のAI最適化に備えておくという意味で価値があります。
+                </p>
 
-            <!-- セクション：まとめ -->
-            <section id="summary">
-                <h2>まとめ</h2>
+                <h3>SEOの基礎が優先</h3>
+                <p>
+                    llms.txt を検討する前に、まずは基本的なSEO施策を固めることが先です。内部リンクの整理、E-E-A-T
+                    の強化、主要ページの更新など、基礎部分が整っていないと効果を確認すること自体が難しくなります。
+                </p>
 
+                <h3>AIO・LLMO理解が深まるほど価値が見える</h3>
+                <p>
+                    AIに“選ばれるサイト”とは、情報構造が整理され、信頼性が高く、目的が明確なサイトです。llms.txt はその思想と相性がよく、AIOやLLMOの理解を深めていく中で本質が見えてきます。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
                 <p>llms.txt は AI向けの新しい“サイト案内書”です。</p>
                 <ul>
                     <li>メリットはあるが標準化が不十分</li>
@@ -281,85 +260,123 @@
                     <li>AIO／LLMOの未来を考えると価値が出る可能性</li>
                 </ul>
 
-                <p>あなたのサイトに合わせた<strong>最適な llms.txt の文章案</strong>も作成できます。必要であれば、サイトURLや主要ページをお知らせください。</p>
-            </section>
+                <div
+                    style="background-color: #f0f7ff; padding: 2rem; border-radius: 8px; text-align: center; margin: 2rem 0;">
+                    <p style="font-weight: bold; margin-bottom: 1rem;">llms.txtを実装したい方へ</p>
+                    <p style="margin-bottom: 2rem;">
+                        MIRAINAでは独自に開発したシステムを用いた分析結果に基づき、<br>
+                        AI検索において競合に勝てる最適なllms.txtの作成を支援します。
+                    </p>
+                    <a href="..//services/llmo_insight.html" class="btn btn-black-fill">llms.txt作成について相談する</a>
+                </div>
 
-            <section id="service">
-                <h2>llms.txtを実装したい方へ</h2>
-                <p>MIRAINAでは独自に開発したシステムを用いて、100個以上のllms.txtを分析し得られた知見に基づくllms.txtを作成しています。</p>
-                <p>クライアント様の業界で「どんなサイトが引用されているのか」「llms.txtはどのように設計されているか」を分析し、<strong>AI検索において競合に勝てるllms.txt</strong>を提供しております。
-                </p>
-                <blockquote>
-                    <p>自社サイトにllms.txtを実装したい事業者様は下のボタンよりお問い合わせください。</p>
-                </blockquote>
-                <p><a href="/services/llmo_insight.html" class="cta-button">llms.txt作成について相談する</a></p>
-            </section>
+            </div>
 
-            <!-- 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <p class="reviewer-name">芝 優作（しば ゆうさく）</p>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">AI導入・AIO対策でお悩みですか？</h3>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
 
-                        <p class="reviewer-bio">
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog007.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog007-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.15</div>
+                            <div class="related-text">AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略</div>
+                        </div>
+                    </a>
+                    <a href="blog006.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog006-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.15</div>
+                            <div class="related-text">LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
         </article>
     </main>
 
-    <!-- =============================
-       共通フッター
-    ============================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="/index.html" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
             </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

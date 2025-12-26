@@ -1,1594 +1,566 @@
-/* ====================
-    　　　共通部分
-   ====================*/
+@charset "UTF-8";
 
-.section-title {
-    font-size: var(--font-l);
-    font-weight: 600;
-    color: var(--primary-blue);
-    margin-bottom: 20px;
-    border-left: 4px solid var(--primary-blue);
-    padding-left: 12px;
-}
+/* ==========================================================================
+   LLMO Insight Styles - Bold Editorial Tech
+   ========================================================================== */
 
-/* ====================
-    ヒーローセクション
-   ====================*/
-
+/* 1. Hero: Horizontal Bold Layout */
 .llmo-hero {
-    background: var(--light-blue);
-    padding: var(--space-l) 0;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    position: relative;
+    border-bottom: 1px solid var(--color-miraina-black);
+    background-color: var(--color-white);
+    min-height: calc(100vh - var(--header-height) - 100px);
+    display: flex;
+    align-items: flex-start;
 }
 
-.llmo-hero__container {
-    max-width: var(--container-width);
-    padding: 0 var(--container-padding);
+.hero-inner-horizontal {
+    max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 48px;
+    text-align: center;
+    width: 100%;
+    padding-top: 2rem;
 }
 
-/* 左カラム（テキスト群） */
-.llmo-hero__left {
-    flex: 1 1 55%;
-    min-width: 0;
-    padding-left: 8px;
-}
-
-/* H1（大きめ） */
-.llmo-hero__title {
-    font-size: var(--font-xl);
-    font-weight: 700;
-    color: var(--primary-blue);
-    margin: 0 0 24px 0;
-    line-height: 1;
-    letter-spacing: -0.02em;
-}
-
-/* リード文 */
-.llmo-hero__lead {
-    font-size: var(--font-m);
-    color: var(--text-dark);
-    margin: 0 0 28px 0;
-    line-height: 1.7;
-    font-weight: 600;
-}
-
-/* --- ペア構造全体 --- */
-.llmo-hero__cta-pairs {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* --- 各ペア（注記＋ボタン） --- */
-.llmo-hero__pair {
+.hero-content-horizontal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
-/* --- 注記テキスト --- */
-.llmo-hero__note {
-    font-size: var(--font-s);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 8px;
-}
-
-/* 右カラム（ビジュアル） */
-.llmo-hero__right {
-    flex: 0 0 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.llmo-hero__visual {
-    width: 60%;
-    max-width: 60%;
-}
-
-
-/* ====================
-    課題提示セクション
-   ====================*/
-
-/* セクション全体 */
-.llmo-problems {
-    background: var(--white);
-    padding: var(--space-l) 0;
-}
-
-.llmo-problems-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-/* 3カラムグリッド（デスクトップ） */
-.llmo-problems-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    margin-bottom: 40px;
-}
-
-/* 個別カード */
-.llmo-problem {
-    background: transparent;
-    padding: 0;
-    min-height: 260px;
-}
-
-/* h3 は青系で太め */
-.llmo-problem-title {
-    font-size: var(--font-m);
-    font-weight: 700;
-    color: var(--primary-blue);
-    margin: 0 0 20px 0;
-    line-height: 1.2;
-}
-
-/* イラスト領域 */
-.llmo-problem-visual {
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 18px;
-}
-
-/* 画像の見た目（カード風） */
-.llmo-problem-visual img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    background: var(--primary-blue-light);
-    border-radius: 4px;
-    padding: 1px;
-}
-
-/* 小見出し（"文章1"） */
-.llmo-problem-lead {
-    font-size: var(--font-s);
-    color: var(--text-dark);
-    font-weight: 600;
-    margin: 0;
-}
-
-/* 長文説明部分 */
-.llmo-problems-body {
-    margin-top: 36px;
-    max-width: 1000px;
-    font-weight: 600;
-    font-size: var(--font-s);
-    color: var(--text-medium);
-    line-height: 1.9;
-}
-
-/* 最後の警告文（赤め） */
-.llmo-problems-warning {
-    margin-top: 14px;
-    color: #d94a4a;
-    /* 赤系強調 */
-    font-weight: 700;
-    line-height: 1.6;
-    font-size: var(--font-m);
-}
-
-/* ====================
-   課題深掘りセクション
-   ====================*/
-.llmo-depth {
-    background: var(--light-blue);
-    padding: var(--space-xl) 0;
-}
-
-.llmo-depth-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-/* 本文 */
-.llmo-depth-body {
-    font-size: var(--font-s);
-    color: var(--text-dark);
-    line-height: 1.9;
-    max-width: 980px;
-}
-
-.llmo-depth-answer-lead {
-    font-weight: 700;
-    margin: 0 0 6px 0;
-}
-
-.llmo-depth-mark {
-    color: #d94a4a;
-    font-weight: 700;
-}
-
-/* 太字メッセージ */
-.llmo-depth-turn {
-    margin: 42px 0 20px;
-    font-size: var(--font-m);
-    font-weight: 600;
-    color: var(--text-dark);
-    letter-spacing: -0.01em;
-}
-
-/* 水色バナー */
-.llmo-depth-banner {
-    display: block;
-    width: 100%;
-    max-width: 980px;
-    background: var(--primary-blue-light);
-    border-radius: 6px;
-    text-decoration: none;
-    padding: 22px 28px;
-    margin: 0;
-    transition: var(--transition-normal);
-}
-
-.llmo-depth-banner-text {
-    display: block;
-    text-align: center;
-    color: var(--white);
-    font-size: var(--font-l);
-    font-weight: 650;
-    line-height: 1.4;
-}
-
-/* ====================
-   解決策提案セクション
-   ====================*/
-.llmo-solution {
-    background: var(--white);
-    padding: var(--space-xl) 0;
-}
-
-.llmo-solution-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-/* ---- 見出し〜リード文をまとめた加工範囲 ---- */
-.llmo-solution-visual {
-    position: relative;
-    margin-bottom: 40px;
-    padding: 6px 0 8px;
-    /* 見出しバーの余白微調整 */
-    z-index: 0;
-    /* 背景(擬似要素)を背面に */
-}
-
-
-
-/* リード文（白の半透明で読みやすく） */
-.llmo-solution-lead {
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.78);
-    padding: 16px 20px;
-    border-radius: 6px;
-    max-width: 850px;
-    /* 少し細めに調整（元: 950px） */
-    margin-left: 0;
-    /* 左に詰める（元: auto） */
-}
-
-.llmo-solution-lead p {
-    font-size: var(--font-s);
-    color: var(--text-dark);
-    line-height: 1.8;
-    margin: 0 0 12px 0;
-}
-
-/* ---- 3ポイント ---- */
-.llmo-solution-points {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
-}
-
-.llmo-solution-point-title {
-    font-size: var(--font-m);
-    color: var(--text-dark);
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    line-height: 1.3;
-}
-
-.llmo-solution-point-lead {
-    font-size: var(--font-s);
-    color: var(--text-medium);
-    line-height: 1.7;
-}
-
-
-/* ====================
-   サービス概要セクション
-   ====================*/
-.llmo-overview {
-    background: var(--light-blue);
-    padding: var(--space-xl) 0;
-}
-
-.llmo-overview-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-/* ---- 上部：見出し〜リード（波線はここにのみ適用） ---- */
-.llmo-overview-visual {
-    position: relative;
-    margin-bottom: 40px;
-    padding: 6px 0 8px;
-    z-index: 0;
-}
-
-.llmo-overview-lead {
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.78);
-    padding: 18px 24px;
-    border-radius: 8px;
-    max-width: 980px;
-}
-
-.llmo-overview-lead p {
-    font-size: var(--font-s);
-    color: var(--text-dark);
-    line-height: 1.8;
-    margin: 0;
-}
-
-/* ---- 共有：ボックス ---- */
-.llmo-overview-box {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 18px;
-    padding: 26px 26px 28px;
-    margin: 18px 0 var(--space-l);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-}
-
-.llmo-overview-box-head {
-    margin-bottom: 16px;
-}
-
-.llmo-overview-kicker {
-    font-size: var(--font-m);
-    font-weight: 700;
-    color: var(--primary-blue-light);
-    margin: 0 0 6px 0;
-}
-
-.llmo-overview-box-title {
-    font-size: var(--font-m);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin: 0;
-    line-height: 1.4;
-}
-
-.llmo-overview-box-grid {
-    display: grid;
-    grid-template-columns: 1.6fr 1.2fr;
-    gap: 28px;
-    align-items: center;
-}
-
-.llmo-overview-box-alt .llmo-overview-box-grid {
-    grid-template-columns: 1.2fr 1.6fr;
-}
-
-.llmo-overview-box-text {
-    font-size: var(--font-m);
-}
-
-.llmo-overview-list {
-    display: block !important;
-    list-style: none !important;
-    padding-left: 0 !important;
-    margin: 0;
-    white-space: normal !important;
-    font-weight: 400;
-}
-
-.llmo-overview-list>li {
-    display: list-item !important;
-    line-height: 1.8;
-    margin-bottom: 8px;
-    font-size: var(--font-s);
-    /* font-weight: 400 !important;   */
-    font-weight: 400;  
-}
-
-
-.llmo-overview-box-visual {
-    margin: 0;
-    background: var(--primary-blue-light);
-    border-radius: 8px;
-    padding: 1px;
-    box-shadow: 0 10px 28px rgba(0, 114, 224, 0.10);
-}
-
-.llmo-overview-box-visual img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: cover;
-}
-
-.llmo-overview-figcap {
-    font-size: var(--font-xs);
-    color: var(--text-light);
-    margin-top: 6px;
-}
-
-.llmo-overview-figcap a {
-    color: var(--primary-blue);
-    text-decoration: underline;
-}
-
-/* --- 修正版：概要ボックス内テキストとリストのフォント調整 --- */
-.llmo-overview-box-text,
-.llmo-overview-box-text ul,
-.llmo-overview-box-text li {
-    font-size: var(--font-s);
-    line-height: 1.9;
-}
-
-
-/* ====================
-   メリット提示セクション（画像対応版）
-   ====================*/
-.llmo-benefits {
-    background: var(--light-blue);
-    padding: var(--space-xl) 0;
-}
-
-.llmo-benefits-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-
-
-/* リード文 */
-.llmo-benefits-lead {
-    font-size: var(--font-s);
-    color: var(--text-dark);
-    line-height: 1.9;
-    max-width: 980px;
-}
-
-.llmo-benefits-lead p {
-    margin: 0 0 12px 0;
-}
-
-.llmo-benefits-download a {
-    text-decoration: underline;
-    color: var(--primary-blue);
-}
-
-/* 4カード */
-.llmo-benefits-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin-top: 18px;
-}
-
-.llmo-benefit-card {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 18px;
-    padding: 22px 24px 24px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-}
-
-/* 見出し */
-.llmo-benefit-head {
-    margin-bottom: 10px;
-}
-
-.llmo-benefit-heading {
-    font-size: var(--font-m);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin: 0 0 12px 0;
-    line-height: 1.3;
-}
-
-/* 画像 */
-.llmo-benefit-visual {
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.llmo-benefit-visual img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    background: var(--primary-blue-light);
-    box-shadow: 0 8px 20px rgba(0, 114, 224, 0.08);
-}
-
-.llmo-benefit-card .llmo-benefit-list,
-.llmo-benefit-card .llmo-benefit-list li {
-    font-size: var(--font-s) !important;
-    /* ← var(--font-s)より大きくしてもOK */
-    line-height: 1.8;
-}
-
-
-/* ====================
-   導入フローセクション
-   ====================*/
-.llmo-flow {
-    background: var(--light-blue);
-    padding: var(--space-xl) 0;
-}
-
-.llmo-flow-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-    position: relative;
-}
-
-
-/* タイムライン（左寄せ） */
-.llmo-flow-list {
-    --flow-col: 76px;
-    /* 左の列幅（スクショに寄せてやや広め） */
-    --line-w: 4px;
-    --node-d: 56px;
-    /* ノード径を大きめに */
-    --node-b: 3px;
-    --item-pt: 16px;
-    --item-pb: 20px;
-
-    list-style: none;
-    margin: 6px 0 0;
-    padding: 0;
-    max-width: 560px;
-    /* 左側にコンパクト配置 */
-}
-
-.llmo-flow-item {
-    position: relative;
-    display: grid;
-    grid-template-columns: var(--flow-col) 1fr;
-    column-gap: 22px;
-    align-items: start;
-    padding: var(--item-pt) 0 var(--item-pb);
-}
-
-.llmo-flow-item::before {
-    content: "";
-    position: absolute;
-    left: calc(var(--flow-col)/2 - var(--line-w)/2);
-    top: 0;
-    bottom: 0;
-    width: var(--line-w);
-    background: var(--primary-blue-light);
-    opacity: .35;
-    border-radius: 2px;
-    z-index: 0;
-}
-
-.llmo-flow-item:first-child::before {
-    top: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
-}
-
-.llmo-flow-item:last-child::before {
-    bottom: calc(var(--item-pb) + var(--node-d)/2 + var(--node-b));
-}
-
-.llmo-flow-node {
-    grid-column: 1;
-    justify-self: center;
-    width: var(--node-d);
-    height: var(--node-d);
-    border-radius: 50%;
-    background: var(--primary-blue-light);
-    border: 3px solid #fff;
-    box-shadow: 0 8px 26px rgba(0, 114, 224, .16);
-    display: grid;
-    place-items: center;
-    z-index: 1;
-}
-
-.llmo-flow-node span {
-    color: var(--white);
-    font-weight: 700;
-    font-size: var(--font-s);
-    line-height: 1;
-}
-
-.llmo-flow-content {
-    grid-column: 2;
-}
-
-.llmo-flow-step {
-    margin: 4px 0 4px;
-    font-weight: 700;
-    color: var(--text-dark);
-    font-size: var(--font-s);
-}
-
-.llmo-flow-desc {
-    margin: 0;
-    font-size: var(--font-s);
-    line-height: 1.9;
-}
-
-/* CTA（右下） */
-.llmo-flow-cta {
-    position: absolute;
-    right: var(--container-padding);
-    bottom: 0;
-    display: flex;
-    gap: 18px;
-    transform: translateY(30%);
-}
-
-
-/* ====================
-   料金プランセクション
-   ====================*/
-.llmo-pricing {
-    background: var(--white);
-    padding: var(--space-xl) 0;
-}
-
-.llmo-pricing-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-/* テーブル（デスクトップ） */
-.llmo-pricing-tablewrap {
-    overflow-x: auto;
-    /* 万一の横溢れ対策 */
-}
-
-.llmo-pricing-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: #f6fdfd;
-    /* ほんのり淡い下地（スクショ寄せ） */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-}
-
-.llmo-pricing-table thead th {
-    background: #2a6382;
-    /* 見出し帯の濃いブルー（例） */
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-    font-size: var(--font-s);
-    padding: 18px 16px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.llmo-pricing-table thead th:last-child {
-    border-right: none;
-}
-
-/* 左端の見出し列（ラベル） */
-.llmo-pricing-th--label {
-    width: 22%;
-    background: #f9fefe;
-    color: var(--text-dark);
-    text-align: left;
-    font-weight: 600;
-}
-
-/* 本文セル */
-.llmo-pricing-table tbody th,
-.llmo-pricing-table tbody td {
-    padding: 24px 20px;
-    font-size: var(--font-s);
-    color: var(--text-dark);
-    border-right: 1px solid #e5eef2;
-    border-bottom: 1px solid #e5eef2;
-    vertical-align: top;
-    background: transparent;
-}
-
-.llmo-pricing-table tbody tr:last-child th,
-.llmo-pricing-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-.llmo-pricing-table tbody td:last-child,
-.llmo-pricing-table thead th:last-child {
-    border-right: none;
-}
-
-/* 契約期間の強調（中央・大きめ） */
-.llmo-pricing-term {
-    text-align: center !important;
-    background: #f9fefe;
-}
-
-.llmo-pricing-term span {
+.hero-tag-horizontal {
     display: inline-block;
-    font-size: var(--font-l);
-    font-weight: 700;
-    color: var(--primary-blue);
+    background-color: var(--color-intellect-blue);
+    color: var(--color-white);
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
-/* 箇条書き */
-.llmo-pricing-list {
-    margin: 0;
-    padding-left: 1.2em;
-    list-style: disc;
-    color: var(--text-medium);
-    line-height: 1.9;
+.hero-title-horizontal {
+    font-size: 4rem;
+    /* Mobile Size */
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
 }
 
-/* 注記・リンク */
-.llmo-pricing-note {
-    margin-top: 14px;
-    font-size: var(--font-s);
-    color: var(--text-light);
-}
-
-.llmo-pricing-note a {
-    color: var(--primary-blue);
-    text-decoration: underline;
-}
-
-.llmo-pricing-list {
-    display: block !important;
-    /* Flex/Grid/TableCellの影響を打ち消す */
-    list-style: disc outside;
-    /* 通常のリストスタイルを再適用 */
-    padding-left: 1.6em;
-    /* インデントを少し広めに */
-    margin: 0;
-    white-space: normal !important;
-    /* nowrap解除で改行有効化 */
-}
-
-.llmo-pricing-list>li {
-    display: list-item !important;
-    /* inlineリセット、縦方向に並べる */
-    margin-bottom: 8px;
-    /* 項目間に適度な間隔 */
-    line-height: 1.9;
-    /* 行間を広めに */
-    font-size: var(--font-s);
-    /* 表の文字サイズと統一 */
-    color: var(--text-medium);
-}
-
-/* 契約期間・共通費用（中央寄せセル） */
-.llmo-pricing-term {
-    text-align: center !important;
-    background: #f9fefe;
-    font-size: var(--font-s);
-    /* ← 月額費用と同じ大きさに */
-    color: var(--text-dark);
-    /* ← 月額費用と同じカラーに */
-    font-weight: 600;
-    /* ← 少し強調（他セルと統一） */
-}
-
-.llmo-pricing-term span {
-    display: inline-block;
-    font-size: var(--font-s);
-    /* ← var(--font-l) から変更 */
-    font-weight: 600;
-    /* ← boldすぎないように調整 */
-    color: var(--text-dark);
-    /* ← 統一 */
-}
-
-/* ====================
-   FAQセクション（ページ固有の微調整）
-   ※ベースのアコーディオンUIは common.css の ".faq-section ～" を使用
-   ====================*/
-.llmo-faq-header .section-title {
-    /* 共通の左バー見出しをそのまま採用 */
-    margin-bottom: var(--space-xs);
-}
-
-.llmo-faq-lead {
-    font-size: var(--font-s);
-    color: var(--text-medium);
-    margin: 0 auto;
-    max-width: 820px;
-    line-height: 1.8;
-    text-align: center;
-}
-
-/* モバイル微調整 */
-@media (max-width: 640px) {
-    .llmo-faq-lead {
-        font-size: var(--font-xs);
-        padding: 0 var(--space-s);
+@media (min-width: 768px) {
+    .hero-title-horizontal {
+        font-size: 7rem;
+        /* Big Desktop Size */
     }
 }
 
-
-/* ====================
-   FAQセクション 見出し位置調整（LLMO Insight専用）
-   ====================*/
-.faq-section .section-header {
-    text-align: left;
-    /* 共通のcenterを上書き */
-    max-width: var(--container-width);
-    margin: 0 auto var(--space-l);
-    padding: 0 var(--container-padding);
+.hero-subtitle-horizontal {
+    font-size: 1.5rem;
+    font-family: var(--font-gothic);
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
-.faq-section .section-header .section-title {
+@media (min-width: 768px) {
+    .hero-subtitle-horizontal {
+        font-size: 2rem;
+    }
+}
+
+.hero-desc-horizontal {
+    font-size: 1rem;
+    color: var(--color-text-gray);
+    margin-bottom: 3rem;
+    line-height: 2;
+}
+
+.hero-cta-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (min-width: 480px) {
+    .hero-cta-horizontal {
+        flex-direction: row;
+        width: auto;
+        max-width: none;
+        gap: 1.5rem;
+    }
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--color-miraina-black);
+    color: var(--color-miraina-black);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+}
+
+/* 2. Problems */
+.section-heading {
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-miraina-black);
+}
+
+.section-lead {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+    font-family: var(--font-mincho);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .problem-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.problem-card {
+    background-color: var(--color-paper-gray);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.problem-title {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-miraina-black);
+}
+
+.problem-text {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+.problem-statement {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-statement p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    background: linear-gradient(transparent 60%, rgba(0, 82, 204, 0.2) 60%);
+    font-weight: bold;
+}
+
+.problem-detail {
+    font-size: 1rem !important;
+    color: var(--color-text-gray);
+}
+
+.problem-punch {
+    font-family: var(--font-mincho);
+    font-size: 1.5rem !important;
+    margin-top: 3rem;
+}
+
+/* 3. Logic (Dark Section) */
+.bg-dark {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+}
+
+.logic-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logic-q {
+    font-size: 1.75rem;
+    font-family: var(--font-mincho);
+    color: var(--color-white);
+    /* override base */
+    margin-bottom: 2rem;
+}
+
+.logic-a {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.logic-text {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.logic-idea {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.logic-punchline {
+    font-size: 2.5rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    color: var(--color-white);
+    /* override base */
+}
+
+/* 4. Tech */
+.tech-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.tech-points-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .tech-points-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tech-point {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tech-point h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.tech-point p {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+}
+
+/* 5. Details */
+.bg-gray {
+    background-color: #fafafa;
+}
+
+.service-detail-block {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.detail-main-title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mincho);
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.detail-sub {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--color-text-gray);
+}
+
+.detail-features {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.detail-feature-item {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-left: 5px solid var(--color-intellect-blue);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detail-feature-item h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.detail-feature-item ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.detail-feature-item li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* 6. Benefits */
+.benefits-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    line-height: 2;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.benefit-card {
+    padding: 2.5rem;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-intellect-blue);
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 7. Flow (Timeline Reuse) */
+.timeline-container {
     position: relative;
-    padding-left: 16px;
-    margin-bottom: var(--space-xs);
+    max-width: 800px;
+    margin: 0 auto;
+    /* Removed border-left from container */
+    /* Removed padding-left from container, moved to item */
 }
 
-.faq-section .section-header .section-title::before {
-    content: "";
+.timeline-item {
+    margin-bottom: 0;
+    /* Remove margin to ensure continuous line if content touches */
+    padding-bottom: 3rem;
+    /* Use padding for spacing instead */
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--color-miraina-black);
+    /* Line belongs to item now */
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+    border-left: 2px solid transparent;
+    /* Hide line for last item */
+}
+
+.timeline-marker {
+    position: absolute;
+    /* Adjust left to center on the item's border */
+    /* Border is at left: 0 of content-box? No, border is border-left */
+    /* Center of border is -1px. Marker width 32. Center 16. Left should be -17px */
+    left: -17px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 1;
+    /* Ensure marker sits on top of line */
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    /* Better alignment with marker */
+    margin-top: -0.2rem;
+    /* Visually align text top with marker */
+}
+
+.timeline-content p {
+    color: var(--color-text-gray);
+}
+
+/* 8. Pricing Table (Plans) */
+.plan-table-wrapper {
+    overflow-x: auto;
+}
+
+.plan-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.plan-table th,
+.plan-table td {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    text-align: center;
+    vertical-align: top;
+}
+
+.plan-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.plan-table .highlight-th {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+}
+
+.plan-table td {
+    font-size: 1rem;
+}
+
+.tax-text {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.plan-content {
+    text-align: left;
+}
+
+.plan-list {
+    list-style: none;
+    /* override user agent */
+    padding-left: 0;
+}
+
+.plan-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.plan-list li::before {
+    content: '✔';
     position: absolute;
     left: 0;
-    top: 6px;
-    width: 8px;
-    height: 52px;
+    color: var(--color-intellect-blue);
+    font-weight: bold;
 }
 
-.llmo-faq-lead {
-    text-align: left;
-    margin-left: 16px;
-    color: var(--text-medium);
-    font-size: var(--font-s);
+/* 9. FAQ (Clean) */
+.faq-clean-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-clean-item {
+    margin-bottom: 2rem;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.faq-q::before {
+    content: 'Q.';
+    margin-right: 0.5rem;
+    color: var(--color-miraina-black);
+}
+
+.faq-a {
+    padding-left: 1.5rem;
+    color: var(--color-text-gray);
     line-height: 1.8;
 }
-/* ====================
-   最終CTAセクション（中央寄せ調整版）
-   ====================*/
-.llmo-final-cta {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(64px, 8vw, 120px) 0;
-  background: linear-gradient(180deg, #f7fbff 0%, #e8f4ff 100%);
+
+/* 10. Large CTA */
+.section-cta-large {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+    text-align: center;
 }
 
-/* 背景装飾ブロブ */
-.llmo-final-cta::before,
-.llmo-final-cta::after {
-  content: "";
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.2;
-  pointer-events: none;
+.cta-head {
+    font-size: 2.5rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
-.llmo-final-cta::before {
-  background: radial-gradient(closest-side, var(--primary-blue-light), transparent 70%);
-  top: -100px;
-  left: -150px;
+.cta-sub {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-gray);
+    line-height: 2;
 }
 
-.llmo-final-cta::after {
-  background: radial-gradient(closest-side, #9ee7ff, transparent 70%);
-  bottom: -120px;
-  right: -160px;
+.btn-black-fill {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-/* コンテナ：中央寄せ＋幅広め */
-.llmo-final-cta-container {
-  max-width: 1280px; /* 以前より広く */
-  margin: 0 auto;
-  padding: 0 clamp(20px, 5vw, 60px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(40px, 6vw, 80px);
-}
-
-/* 左側コピー（中央寄せバランス重視） */
-.llmo-final-cta-copy {
-  flex: 1 1 55%;
-  position: relative;
-  padding: clamp(24px, 3vw, 36px);
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75));
-  backdrop-filter: blur(10px) saturate(150%);
-  box-shadow: 0 20px 40px rgba(0, 114, 224, 0.08);
-}
-
-/* 右側ビジュアル */
-.llmo-final-cta-visual {
-  flex: 1 1 45%;
-  position: relative;
-  padding: 10px;
-  background: linear-gradient(180deg, rgba(106, 183, 255, 0.18), rgba(0, 114, 224, 0.08));
-  border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(0, 114, 224, 0.1);
-}
-
-/* テキスト中央寄せ気味の微調整 */
-.llmo-final-cta-title,
-.llmo-final-cta-lead,
-.llmo-final-cta-actions {
-  text-align: left;
-  max-width: 100%;
-}
-
-/* ボタンを少し広く配置 */
-.llmo-final-cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px 20px;
-}
-
-/* ====================
-   まとめ：@media (max-width: 1024px)
-   ==================== */
-
-/* ---------- ヒーローセクション ---------- */
-@media (max-width: 1024px) {
-    .llmo-hero__container {
-        gap: 28px;
-    }
-
-    .llmo-hero__title {
-        font-size: var(--font-xl);
-    }
-
-    .llmo-hero__lead {
-        font-size: var(--font-m);
-    }
-
-    .llmo-hero__visual {
-        max-width: 420px;
-        padding: 28px;
-    }
-
-    /* ---------- 課題提示セクション ---------- */
-    .llmo-problems-grid {
-        gap: 36px;
-    }
-
-
-    /* ---------- 解決策提案セクション ---------- */
-    .llmo-solution-points {
-        grid-template-columns: 1fr 1fr;
-        gap: 28px;
-    }
-
-
-    /* ---------- サービス概要セクション ---------- */
-    .llmo-overview-visual::after {
-        left: -40px;
-        right: -40px;
-        background-size: cover;
-    }
-
-    /* ---------- メリット提示セクション ---------- */
-    .llmo-benefit-visual img {
-        max-width: 400px;
-    }
-
-    /* ---------- 導入フローセクション ---------- */
-    .llmo-flow-list {
-        --node-d: 52px;
-    }
-
-    .llmo-flow-cta {
-        transform: translateY(20%);
-    }
-}
-
-
-/* ====================
-   まとめ：@media (max-width: 768px)
-   ==================== */
-
-/* ---------- ヒーローセクション ---------- */
-@media (max-width: 768px) {
-    .llmo-hero {
-        padding: 36px 0;
-    }
-
-    .llmo-hero__container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 0 18px;
-    }
-
-    .llmo-hero__left {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .llmo-hero__title {
-        font-size: var(--font-xl);
-        margin-bottom: 12px;
-    }
-
-    .llmo-hero__lead {
-        font-size: var(--font-m);
-        margin-bottom: 18px;
-    }
-
-    .llmo-hero__cta-pairs {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .llmo-hero__right {
-        width: 100%;
-    }
-
-    .llmo-hero__visual {
-        width: 70%;
-        max-width: 70%;
-        padding: 20px;
-        box-shadow: none;
-        border-radius: 8px;
-    }
-
-    /* ---------- 課題提示セクション ---------- */
-    .llmo-problems {
-        padding: var(--space-m) 0;
-    }
-
-    .llmo-problems-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .llmo-problem-title {
-        font-size: var(--font-m);
-        margin-bottom: 12px;
-    }
-
-    .llmo-problem-visual img {
-        width: 100%;
-        max-width: 420px;
-        height: auto;
-        padding: 1px;
-        border-radius: 8px;
-    }
-
-    .llmo-problems-body {
-        font-size: var(--font-s);
-        margin-top: 20px;
-    }
-
-    .llmo-problems-warning {
-        font-size: var(--font-m);
-    }
-
-    /* ---------- 課題深掘りセクション ---------- */
-    .llmo-depth {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-depth-body {
-        font-size: var(--font-s);
-    }
-
-    .llmo-depth-turn {
-        font-size: var(--font-m);
-        margin: 28px 0 14px;
-    }
-
-    .llmo-depth-banner {
-        padding: 16px 18px;
-        border-radius: 4px;
-    }
-
-    .llmo-depth-banner-text {
-        font-size: var(--font-l);
-    }
-
-    /* ---------- 解決策提案セクション ---------- */
-    .llmo-solution {
-        padding: var(--space-l) 0;
-    }
-
-
-    .llmo-solution-lead {
-        max-width: 100%;
-        margin-left: 0;
-        padding: 12px 16px;
-    }
-
-    .llmo-solution-points {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .llmo-solution-point-title {
-        font-size: var(--font-m);
-    }
-
-    .llmo-solution-point-lead {
-        font-size: var(--font-s);
-    }
-
-    /* ---------- サービス概要セクション ---------- */
-    .llmo-overview {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-overview-lead {
-        padding: 14px 16px;
-        background: rgba(255, 255, 255, 0.88);
-        max-width: 100%;
-    }
-
-    .llmo-overview-box {
-        padding: 18px;
-        border-radius: 14px;
-    }
-
-    .llmo-overview-box-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        align-items: start;
-    }
-
-    .llmo-overview-box-visual {
-        padding: 1px;
-    }
-
-    .llmo-overview-kicker {
-        font-size: var(--font-m);
-    }
-
-    .llmo-overview-box-title {
-        font-size: var(--font-m);
-    }
-
-    .llmo-overview-box-text {
-        font-size: var(--font-s);
-    }
-
-    /* ---------- メリット提示セクション ---------- */
-    .llmo-benefits {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-benefits-lead {
-        font-size: var(--font-s);
-    }
-
-    .llmo-benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .llmo-benefit-card {
-        padding: 18px;
-        border-radius: 14px;
-    }
-
-    .llmo-benefit-heading {
-        font-size: var(--font-m);
-    }
-
-    .llmo-benefit-visual img {
-        max-width: 100%;
-        border-radius: 6px;
-    }
-
-    .llmo-benefit-list {
-        font-size: var(--font-s);
-    }
-
-    /* ---------- 導入フローセクション ---------- */
-    .llmo-flow {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-flow-list {
-        --flow-col: 64px;
-        --node-d: 48px;
-        max-width: 100%;
-    }
-
-    .llmo-flow-step {
-        font-size: var(--font-m);
-    }
-
-    .llmo-flow-desc {
-        font-size: var(--font-s);
-    }
-
-  .llmo-pricing {
-    padding: var(--space-l) 0;
-  }
-
-  /* テーブル非表示 → 各行をカード化 */
-  .llmo-pricing-table thead {
-    display: none;
-  }
-
-  .llmo-pricing-table,
-  .llmo-pricing-table tbody,
-  .llmo-pricing-table tr,
-  .llmo-pricing-table td,
-  .llmo-pricing-table th {
-    display: block;
-    width: 100%;
-    border-right: none !important;
-  }
-
-  /* カード全体の見た目 */
-  .llmo-pricing-table tbody tr {
-    margin: 18px 0;
-    background: #f6fdfd;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #e5eef2;
-  }
-
-  /* 左端ラベル */
-  .llmo-pricing-table tbody th.llmo-pricing-th--label {
-    background: #eef8fb;
-    border-bottom: 1px solid #e5eef2;
-    padding: 12px 14px;
-    font-size: var(--font-s);
-  }
-
-  /* セル全般 */
-  .llmo-pricing-table tbody td {
-    position: relative;
-    padding: 40px 14px 14px;
-    font-size: var(--font-s);
-    border-bottom: 1px solid #e5eef2;
-    background: #fff;
-  }
-
-  .llmo-pricing-table tbody tr:last-child td {
-    border-bottom: none;
-  }
-
-  /* プラン名ラベル（通常の2列） */
-  .llmo-pricing-table tbody td:nth-child(2)::before,
-  .llmo-pricing-table tbody td:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    left: 14px;
-    top: 10px;
-    font-weight: 700;
-    font-size: var(--font-s);
-    color: var(--primary-blue);
-    letter-spacing: .01em;
-  }
-
-  .llmo-pricing-table tbody td:nth-child(2)::before {
-    content: "LITEプラン";
-  }
-
-  .llmo-pricing-table tbody td:nth-child(3)::before {
-    content: "コミットプラン";
-  }
-
-  /* colspanセル（初期費用・契約期間）にも両プラン名を表示 */
-  .llmo-pricing-table tbody td[colspan="2"] {
-    padding-top: 60px; /* 2つのラベル分の余白 */
-  }
-
-  .llmo-pricing-table tbody td[colspan="2"]::before {
-    content: "LITEプラン";
-    position: absolute;
-    left: 14px;
-    top: 10px;
-    font-weight: 700;
-    font-size: var(--font-s);
-    color: var(--primary-blue);
-    letter-spacing: .01em;
-  }
-
-  .llmo-pricing-table tbody td[colspan="2"]::after {
-    content: "コミットプラン";
-    position: absolute;
-    left: 14px;
-    top: 34px;
-    font-weight: 700;
-    font-size: var(--font-s);
-    color: var(--primary-blue);
-    letter-spacing: .01em;
-  }
-
-  /* 共通項目（契約期間・初期費用など）内テキスト */
-  .llmo-pricing-term span {
-    font-size: var(--font-m);
-  }
-
-  /* リストの調整 */
-  .llmo-pricing-list {
-    margin-top: 4px;
-    padding-left: 1.4em;
-    line-height: 1.8;
-  }
-
-  .llmo-pricing-list li {
-    margin-bottom: 6px;
-  }
-
-    /* ---------- FAQセクション ---------- */
-    .llmo-faq-lead {
-        font-size: var(--font-s);
-        padding: 0 var(--space-s);
-    }
-
-    /* ---------- 最終CTAセクション ---------- */
-      .llmo-final-cta-container {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .llmo-final-cta-copy,
-  .llmo-final-cta-visual {
-    width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-    .llmo-hero {
-        padding: 36px 0;
-    }
-
-    .llmo-hero__container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 0 18px;
-    }
-
-    .llmo-hero__left {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .llmo-hero__title {
-        font-size: var(--font-xl);
-        /* h1 を1段階小さくして調整 */
-        margin-bottom: 12px;
-    }
-
-    .llmo-hero__lead {
-        font-size: var(--font-m);
-        margin-bottom: 18px;
-    }
-
-    .llmo-hero__cta-pairs {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .llmo-hero__right {
-        width: 100%;
-    }
-
-    .llmo-hero__visual {
-        width: 70%;
-        max-width: 70%;
-        padding: 20px;
-        box-shadow: none;
-        border-radius: 8px;
-    }
-
-    /* ---------- 課題提示セクション ---------- */
-    .llmo-problems {
-        padding: var(--space-m) 0;
-    }
-
-    .llmo-problems-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .llmo-problem-title {
-        font-size: var(--font-m);
-        margin-bottom: 12px;
-    }
-
-    .llmo-problem-visual img {
-        width: 100%;
-        max-width: 420px;
-        height: auto;
-        padding: 1px;
-        border-radius: 8px;
-    }
-
-    .llmo-problems-body {
-        font-size: var(--font-s);
-        margin-top: 20px;
-    }
-
-    .llmo-problems-warning {
-        font-size: var(--font-m);
-    }
-
-    /* ---------- 課題深掘りセクション ---------- */
-    .llmo-depth {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-depth-body {
-        font-size: var(--font-s);
-    }
-
-    .llmo-depth-turn {
-        font-size: var(--font-m);
-        margin: 28px 0 14px;
-    }
-
-    .llmo-depth-banner {
-        padding: 16px 18px;
-        border-radius: 4px;
-    }
-
-    .llmo-depth-banner-text {
-        font-size: var(--font-l);
-    }
-
-    /* ---------- 解決策提案セクション ---------- */
-    .llmo-solution {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-solution-lead {
-        max-width: 100%;
-        margin-left: 0;
-        padding: 12px 16px;
-    }
-
-    .llmo-solution-points {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .llmo-solution-point-title {
-        font-size: var(--font-m);
-    }
-
-    .llmo-solution-point-lead {
-        font-size: var(--font-s);
-    }
-
-    /* ---------- サービス概要セクション ---------- */
-    .llmo-overview {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-overview-lead {
-        padding: 14px 16px;
-        background: rgba(255, 255, 255, 0.88);
-        max-width: 100%;
-    }
-
-    .llmo-overview-box {
-        padding: 18px;
-        border-radius: 14px;
-    }
-
-    .llmo-overview-box-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        align-items: start;
-    }
-
-    .llmo-overview-box-visual {
-        padding: 1px;
-    }
-
-    .llmo-overview-kicker {
-        font-size: var(--font-m);
-    }
-
-    .llmo-overview-box-title {
-        font-size: var(--font-m);
-    }
-
-    .llmo-overview-box-text {
-        font-size: var(--font-s);
-    }
-
-    /* ---------- メリット提示セクション ---------- */
-    .llmo-benefits {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-benefits-lead {
-        font-size: var(--font-s);
-    }
-
-    .llmo-benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .llmo-benefit-card {
-        padding: 18px;
-        border-radius: 14px;
-    }
-
-    .llmo-benefit-heading {
-        font-size: var(--font-m);
-    }
-
-    .llmo-benefit-visual img {
-        max-width: 100%;
-        border-radius: 6px;
-    }
-
-    .llmo-benefit-list {
-        font-size: var(--font-s);
-    }
-
-    /* ---------- 導入フローセクション ---------- */
-    .llmo-flow {
-        padding: var(--space-l) 0;
-    }
-
-    .llmo-flow-list {
-        --flow-col: 64px;
-        --node-d: 48px;
-        max-width: 100%;
-    }
-
-    .llmo-flow-step {
-        font-size: var(--font-m);
-    }
-
-    .llmo-flow-desc {
-        font-size: var(--font-s);
-    }
-
-   .llmo-pricing-table tbody td {
-    padding-top: 34px;
-    font-size: var(--font-s);
-  }
-
-  .llmo-pricing-table tbody td[colspan="2"] {
-    padding-top: 56px;
-  }
-
-  .llmo-pricing-table tbody td::before,
-  .llmo-pricing-table tbody td::after {
-    font-size: var(--font-s);
-  }
-
-  .llmo-pricing-term span {
-    font-size: var(--font-s);
-  }
-
-    /* ---------- FAQセクション ---------- */
-    .llmo-faq-lead {
-        font-size: var(--font-s);
-        padding: 0 var(--space-s);
-    }
-
+.btn-black-fill:hover {
+    background-color: #333;
+    transform: scale(1.05);
 }

@@ -4,334 +4,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
-    <title>サービス | MIRAINA（ミライナ） - 生成AI導入支援・研修・AI開発</title>
+    <title>AI活用サービス | MIRAINA</title>
     <meta name="description"
-        content="MIRAINAは中小企業向けに最適な生成AI導入支援、AIトレーニング、カスタムAI開発サービスを提供しています。貴社のビジネスに合わせたAIソリューションで業務効率化と競争力向上を実現します。">
-    <meta name="keywords" content="生成AI導入,AI研修,AI開発,LLM活用,業務効率化,中小企業AI">
-    <meta property="og:title" content="サービス | MIRAINA - 生成AI導入支援・研修・AI開発">
-    <meta property="og:description"
-        content="MIRAINAは中小企業向けに最適な生成AI導入支援、AIトレーニング、カスタムAI開発サービスを提供しています。貴社のビジネスに合わせたAIソリューションで業務効率化と競争力向上を実現します。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://miraina-ai.com/services">
+        content="MIRAINAの提供するAI活用サービス一覧。生成AI活用支援から、AI人材育成、AIチャットボット開発、LLMO Insightまで、企業の成長をサポートします。">
+    <link rel="canonical" href="https://miraina-ai.com/services.html">
+
+    <!-- Design System: Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="//images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/services.css">
+
+    <!-- OGP -->
+    <meta property="og:title" content="AI活用サービス | MIRAINA">
+    <meta property="og:description" content="MIRAINAの提供するAI活用サービス一覧。生成AI活用支援、AI開発、AI人材育成。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/services.html">
     <meta property="og:site_name" content="MIRAINA">
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/services.css">
+    <meta property="og:image" content="https://miraina-ai.com//images/ogp.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI活用サービス | MIRAINA">
+    <meta name="twitter:description" content="MIRAINAの提供するAI活用サービス一覧。">
+    <meta name="twitter:image" content="https://miraina-ai.com//images/ogp.jpg">
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-    <main class="services-page">
-        <div class="breadcrumb">
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li>サービス</li>
+            </ul>
+        </div>
+
+        <!-- Page Hero -->
+        <section class="page-hero fade-in-section">
             <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li>サービス</li>
+                <h1 class="page-hero-title">AI活用サービス</h1>
+                <p class="page-hero-desc">生成AI活用支援から運用までを一貫してサポートします</p>
+            </div>
+        </section>
+
+        <!-- Service Intro/Summary -->
+        <section class="py-section fade-in-section">
+            <div class="container">
+                <div class="service-intro">
+                    <h2 class="section-title mb-4">MIRAINAのサービス</h2>
+                    <p class="mb-8">
+                        MIRAINAは企業のAI導入から実運用まで、総合的なサポートを提供します。<br>
+                        最新の生成AI技術とビジネス課題を結びつけ、貴社の成長戦略をサポートします。
+                    </p>
+                </div>
+
+                <div class="service-summary-grid">
+                    <a href="#consulting" class="service-summary-card">
+                        <h3>生成AI活用支援</h3>
+                        <p>貴社の業務課題に最適な生成AI活用支援を提案します。</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="#training" class="service-summary-card">
+                        <h3>AI人材育成研修</h3>
+                        <p>社員のAIリテラシー向上と実践的な活用スキルを育成します。</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="#chatbot" class="service-summary-card">
+                        <h3>AIチャットボット開発</h3>
+                        <p>貴社独自の業務に特化したAIチャットボットを開発します。</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="#llmo" class="service-summary-card">
+                        <h3>LLMO Insight</h3>
+                        <p>AI検索で“自社がどう見られているか”を数値で可視化。<br>データドリブンな施策立案を支援します。</p>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: Consulting -->
+        <section id="consulting" class="service-detail-section py-section fade-in-section">
+            <div class="container service-detail-container">
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">生成AI活用支援</h2>
+                    <p class="service-detail-desc">
+                        生成AIの可能性を最大限に引き出し、貴社のビジネスに最適な形で導入するためのコンサルティングサービスです。<br>
+                        既存の業務フローを崩さないような導入を行い、社内へのAI定着の高速化を実現します。
+                    </p>
+                    <ul class="service-feature-list">
+                        <li>ビジネス課題・業務フロー分析</li>
+                        <li>導入計画の策定・ロードマップ作成</li>
+                        <li>最適なAIツール・モデル選定</li>
+                        <li>小規模導入による効果測定</li>
+                        <li>セキュリティ・コンプライアンスに配慮</li>
+                    </ul>
+                    <a href="/services/ai_consulting.html" class="btn">詳しく見る</a>
+                </div>
+                <div class="service-detail-image">
+                    <!-- Placeholder -->
+                    <img src="/images/service-card001.webp" alt="生成AI活用支援">
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: Training -->
+        <section id="training" class="service-detail-section py-section fade-in-section bg-paper">
+            <div class="container service-detail-container reverse">
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">AI人材育成研修</h2>
+                    <p class="service-detail-desc">
+                        社員のAIリテラシーを高め、業務効率化を実現するための実践的なトレーニングプログラムです。<br>
+                        座学だけでなく、実際の業務に即した演習を通じて確実なスキル定着を図ります。
+                    </p>
+                    <ul class="service-feature-list">
+                        <li>生成AI基礎知識習得</li>
+                        <li>ChatGPT入門講座</li>
+                        <li>プロンプトエンジニアリング実践</li>
+                        <li>業務別AI活用ワークショップ</li>
+                        <li>AI倫理・セキュリティ教育</li>
+                        <li>カスタマイズ可能なカリキュラム</li>
+                    </ul>
+                    <a href="/services/ai_training.html" class="btn">詳しく見る</a>
+                </div>
+                <div class="service-detail-image">
+                    <!-- Placeholder -->
+                    <img src="/images/service-card002.webp" alt="AI人材育成研修">
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: Chatbot -->
+        <section id="chatbot" class="service-detail-section py-section fade-in-section">
+            <div class="container service-detail-container">
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">AIチャットボット開発</h2>
+                    <p class="service-detail-desc">
+                        貴社の特有の業務課題や要件に合わせたカスタムAIチャットボットを開発します。<br>
+                        社内マニュアルや顧客対応履歴などの各社内ナレッジに合わせた柔軟な対応が可能です。
+                    </p>
+                    <ul class="service-feature-list">
+                        <li>カスタムAIチャットボット</li>
+                        <li>業務特化型AIアシスタント開発</li>
+                        <li>新人育成質問用チャットボット</li>
+                        <li>自動問い合わせ対応チャットボット</li>
+                        <li>継続的な改善・メンテナンス</li>
+                    </ul>
+                    <a href="/services/ai_develop.html" class="btn">詳しく見る</a>
+                </div>
+                <div class="service-detail-image">
+                    <!-- Placeholder -->
+                    <img src="/images/service-card003.webp" alt="AIチャットボット開発">
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: LLMO -->
+        <section id="llmo" class="service-detail-section py-section fade-in-section bg-paper">
+            <div class="container service-detail-container reverse">
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">LLMO Insight<br>（AI検索レポーティング）</h2>
+                    <p class="service-detail-desc">
+                        AI検索で“自社がどう見られているか”を数値で可視化。<br>
+                        ChatGPTなどのAIが引用・評価する情報をデータとして把握し、
+                        データドリブンなLLMO施策へとつなげる分析レポートサービスです。
+                    </p>
+                    <ul class="service-feature-list">
+                        <li>AI検索上の自社・競合の表示状況を可視化</li>
+                        <li>ChatGPTの回答内容・引用傾向の分析</li>
+                        <li>行動再現技術によるプロンプト生成・実行</li>
+                        <li>AI検索シェアの定量化・競合比較</li>
+                        <li>レポート＋改善施策提案をワンセットで提供</li>
+                    </ul>
+                    <a href="/services/llmo_insight.html" class="btn">詳しく見る</a>
+                </div>
+                <div class="service-detail-image">
+                    <!-- Placeholder -->
+                    <img src="/images/service-card004.webp" alt="LLMO Insight">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-faq py-section">
+            <div class="container">
+                <div class="section-header fade-in-section">
+                    <h2 class="section-title">よくある質問</h2>
+                    <p class="section-desc">導入検討時によくいただくご質問にお答えします</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item fade-in-section">
+                        <h3 class="faq-question">他社と比べて、MIRAINAの強みは何ですか？</h3>
+                        <div class="faq-answer">
+                            <p>MIRAINA（ミライナ）の強みは以下の２つです。</p>
+                            <ol
+                                style="list-style: decimal; padding-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                <li>単なる技術提供だけでなく、社内での生成AI活用が定着までサポートする伴走型の生成AI活用支援が強みです。</li>
+                                <li>AI研究に従事した経験から得られた圧倒的な専門性が強みです。</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in-section">
+                        <h3 class="faq-question">研修対象者のレベルや役職に応じて内容を調整できますか？</h3>
+                        <div class="faq-answer">
+                            <p>
+                                可能です。MIRAINAではAI研究の知見を活かし、未経験者から実務レベルまで受講者のスキルや職務に応じた研修を柔軟に提供します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in-section">
+                        <h3 class="faq-question">社内マニュアルやFAQをもとにAIチャットボットを作れますか？</h3>
+                        <div class="faq-answer">
+                            <p>
+                                はい、貴社が保有されているマニュアル、FAQ、過去の問い合わせ履歴等を活用して、AIチャットボットを構築できます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
                 </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
-        <section class="page-hero page-hero--services">
-            <div class="page-hero-content">
-                <h1 class="page-hero-title">AI活用サービスサービス</h1>
-                <p class="page-hero-subtitle">生成AI活用支援から運用までを一貫してサポートします</p>
-            </div>
-        </section>
-        <section class="services-overview">
-            <div class="container">
-                <h2 class="section-title">MIRAINAのサービス</h2>
-                <p class="section-description">
-                    MIRAINAは企業のAI導入から実運用まで、総合的なサポートを提供します。<br>
-                    最新の生成AI技術とビジネス課題を結びつけ、貴社の成長戦略をサポートします。
-                </p>
-                <div class="service-categories">
 
-                    <a href="/services/ai_consulting.html" class="category-item">
-                        <div class="category-icon">
-                            <img src="/images/service-card001.webp" alt="AI導入コンサルティングアイコン">
-                        </div>
-                        <p class="service-name">生成AI活用支援</p>
-                        <p>貴社の業務課題に最適な生成AI活用支援を提案します。</p>
-                    </a>
-
-                    <a href="/services/ai_training.html" class="category-item">
-                        <div class="category-icon">
-                            <img src="/images/service-card002.webp" alt="AI研修アイコン">
-                        </div>
-                        <p class="service-name">AI人材育成研修</p>
-                        <p>社員のAIリテラシー向上と実践的な活用スキルを育成します。</p>
-                    </a>
-
-                    <a href="/services/ai_develop.html" class="category-item">
-                        <div class="category-icon">
-                            <img src="/images/service-card003.webp" alt="AI開発アイコン">
-                        </div>
-                        <p class="service-name">AIチャットボット開発</p>
-                        <p>貴社独自の業務に特化したAIチャットボットを開発します。</p>
-                    </a>
-                    <a href="/services/llmo_insight.html" class="category-item">
-                        <div class="category-icon">
-                            <img src="/images/service-card004.webp" alt="LLMO Insight（AI検索レポーティング）アイコン">
-                        </div>
-                        <p class="service-name">LLMO Insight</p>
-                        <p>AI検索で“自社がどう見られているか”を数値で可視化。<br>データドリブンな施策立案を支援します。</p>
-                    </a>
-
-
-                </div>
-            </div>
-        </section>
-        <section class="service-details" id="ai-consulting">
-            <div class="container">
-                <div class="service-card">
-                    <div class="service-content">
-                        <h2 class="service-title">生成AI活用支援</h2>
-                        <p class="service-description">
-                            生成AIの可能性を最大限に引き出し、貴社のビジネスに最適な形で導入するためのコンサルティングサービスです。
-                            既存の業務フローを崩さないような導入を行い、社内へのAI定着の高速化を実現します。
-                        </p>
-                        <ul class="service-features">
-                            <li>ビジネス課題・業務フロー分析</li>
-                            <li>導入計画の策定・ロードマップ作成</li>
-                            <li>最適なAIツール・モデル選定</li>
-                            <li>小規模導入による効果測定</li>
-                            <li>セキュリティ・コンプライアンスに配慮</li>
-                        </ul>
-                        <a href="/services/ai_consulting.html" class="service-detail-link left-bottom">詳しく見る</a>
-                    </div>
-                    <div class="service-image">
-                        <img src="/images/service-card001.webp" alt="AI活用支援のイメージ画像">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="service-details" id="ai-training">
-            <div class="container">
-                <div class="service-card reverse">
-                    <div class="service-content">
-                        <h2 class="service-title">AI人材育成研修</h2>
-                        <p class="service-description">
-                            社員のAIリテラシーを高め、業務効率化を実現するための実践的なトレーニングプログラムです。
-                            座学だけでなく、実際の業務に即した演習を通じて確実なスキル定着を図ります。
-                        </p>
-                        <ul class="service-features">
-                            <li>生成AI基礎知識習得</li>
-                            <li>ChatGPT入門講座</li>
-                            <li>プロンプトエンジニアリング実践</li>
-                            <li>業務別AI活用ワークショップ</li>
-                            <li>AI倫理・セキュリティ教育</li>
-                            <li>カスタマイズ可能なカリキュラム</li>
-                        </ul>
-                        <a href="/services/ai_training.html" class="service-detail-link">詳しく見る</a>
-                    </div>
-                    <div class="service-image">
-                        <img src="/images/service-card002.webp" alt="企業向けAI研修の講義イメージ">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="service-details" id="ai-development">
-            <div class="container">
-                <div class="service-card">
-                    <div class="service-content">
-                        <h2 class="service-title">AIチャットボット開発</h2>
-                        <p class="service-description">
-                            貴社の特有の業務課題や要件に合わせたカスタムAIチャットボットを開発します。
-                            社内マニュアルや顧客対応履歴などの各社内ナレッジに合わせた柔軟な対応が可能です。
-                        </p>
-                        <ul class="service-features">
-                            <li>カスタムAIチャットボット</li>
-                            <li>業務特化型AIアシスタント開発</li>
-                            <li>新人育成質問用チャットボット</li>
-                            <li>自動問い合わせ対応チャットボット</li>
-                            <li>継続的な改善・メンテナンス</li>
-                        </ul>
-                        <a href="/services/ai_develop.html" class="service-detail-link left-bottom">詳しく見る</a>
-                    </div>
-                    <div class="service-image">
-                        <img src="/images/service-card003.webp" alt="AIチャットボットのUIモックアップ">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="service-details" id="llmo-insight">
-            <div class="container">
-                <div class="service-card">
-                    <div class="service-content">
-                        <h2 class="service-title">LLMO Insight（AI検索レポーティング）</h2>
-                        <p class="service-description">
-                            AI検索で“自社がどう見られているか”を数値で可視化。<br>
-                            ChatGPTなどのAIが引用・評価する情報をデータとして把握し、<br>
-                            データドリブンなLLMO施策へとつなげる分析レポートサービスです。
-                        </p>
-                        <ul class="service-features">
-                            <li>AI検索上の自社・競合の表示状況を可視化</li>
-                            <li>ChatGPTの回答内容・引用傾向の分析</li>
-                            <li>行動再現技術によるプロンプト生成・実行</li>
-                            <li>AI検索シェアの定量化・競合比較</li>
-                            <li>レポート＋改善施策提案をワンセットで提供</li>
-                        </ul>
-                        <a href="/services/llmo_insight.html" class="service-detail-link">詳しく見る</a>
-                    </div>
-                    <div class="service-image">
-                        <img src="/images/service-card004.webp" alt="AI検索レポーティング（LLMO Insight）の分析レポートイメージ">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section (共通) -->
-        <section class="faq-section" id="faq">
-            <div class="section-header">
-                <h2 class="section-title">よくある質問</h2>
-                <p class="section-description-faq">導入検討時によくいただくご質問にお答えします</p>
-            </div>
-
-            <div class="faq" role="list">
-                <!-- Q1 -->
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">
-                        他社と比べて、MIRAINAの強みは何ですか？
-                        <span class="faq-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="faq-a" id="faq-a1">
-                        <p>
-                            MIRAINA（ミライナ）の強みは以下の２つです。<br>
-                            1. 単なる技術提供だけでなく、社内での生成AI活用が定着までサポートする伴走型の生成AI活用支援が強みです。<br>
-                            2. AI研究に従事した経験から得られた圧倒的な専門性が強みです。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Q2 -->
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">
-                        研修対象者のレベルや役職に応じて内容を調整できますか？
-                        <span class="faq-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="faq-a" id="faq-a2">
-                        <p>
-                            可能です。MIRAINAではAI研究の知見を活かし、未経験者から実務レベルまで受講者のスキルや職務に応じた研修を柔軟に提供します。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Q3 -->
-                <div class="faq-item" role="listitem">
-                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">
-                        社内マニュアルやFAQをもとにAIチャットボットを作れますか？
-                        <span class="faq-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="faq-a" id="faq-a3">
-                        <p>
-                            はい、貴社が保有されているマニュアル、FAQ、過去の問い合わせ履歴等を活用して、AIチャットボットを構築できます。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
-            </div>
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="/js/common.js" defer></script>
-    <script src="/js/services.js" defer></script>
-    <!-- Google tag (gtag.js) -->
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        // Simple script for hamburger if common.js is not yet fully linked/functional
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
 
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                var script = document.createElement('script');
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4';
-                script.async = true;
-                document.head.appendChild(script);
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                    // Toggle hamburger animation state if needed
+                });
+            }
 
-                gtag('js', new Date());
-                gtag('config', 'G-W9BLFVJ8E4');
-            }, 1000); // 1000ms（1秒）後に読み込む → 適宜調整可能
+            // Fade in Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
         });
     </script>
-
 </body>
 
 </html>

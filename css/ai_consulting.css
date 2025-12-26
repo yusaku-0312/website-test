@@ -1,481 +1,377 @@
-/* ====================
-      ヒーローセクション
-   ====================*/
-.ai-consulting-hero {
-  padding: 60px 20px;
-  background: #edf5ff;
+@charset "UTF-8";
+
+/* ==========================================================================
+   AI Consulting Redesign - Bold Editorial
+   ========================================================================== */
+
+/* 1. Hero: Split Layout & Vertical Text */
+.consulting-hero {
+    padding-top: 1rem;
+    padding-bottom: var(--space-8);
+    position: relative;
+    border-bottom: 1px solid var(--color-miraina-black);
+    min-height: calc(100vh - var(--header-height) - 100px);
+    display: flex;
+    align-items: flex-start;
 }
 
-.ai-consulting-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.ai-consulting-hero-left {
-  flex: 0 0 50%;
-  padding-left: 20px;
-}
-
-.ai-consulting-hero-right {
-  flex: 0 0 40%;
-}
-
-.ai-consulting-hero-right img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 90%;
-}
-
-.ai-consulting-title {
-  font-size: var(--font-xl);
-  font-weight: 800;
-  color: var(--primary-blue);
-  margin-bottom: 16px;
-}
-
-.ai-consulting-subtitle {
-  font-size: var(--font-m);
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 16px;
-}
-
-.ai-consulting-lead {
-  font-size: var(--font-s);
-  color: var(--text-medium);
-  margin-bottom: 24px;
-  line-height: 1.6;
-}
-
-/* ====================
-    サービス概要セクション
-   ====================*/
-.service-overview {
-  background: var(--light-blue);
-  padding: 60px 20px;
-}
-
-.service-overview-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: var(--font-l);
-  font-weight: 700;
-  color: var(--primary-blue);
-  margin-bottom: 20px;
-  border-left: 4px solid var(--primary-blue);
-  padding-left: 12px;
-}
-
-.service-overview-text {
-  font-size: var(--font-s);
-  color: var(--text-dark);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-/* ====================
-    サービス内容セクション
-   ====================*/
-.service-contents {
-  background: var(--white);
-  padding: 64px 20px;
-}
-
-.service-contents-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.service-points {
-  margin: 0 0 20px 0;
-  padding-left: 1.2em;
-  color: var(--text-dark);
-  line-height: 1.8;
-  font-size: var(--font-s);
-}
-
-.service-points li+li {
-  margin-top: 6px;
-}
-
-.works-intro {
-  margin: 8px 0 20px;
-}
-
-.link-inline {
-  color: var(--primary-blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* ====================
-    サービス特徴セクション
-   ====================*/
-.ai-feature {
-  background: var(--light-blue);
-  padding: 64px 20px;
-}
-
-.ai-feature-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.ai-feature-text {
-  flex: 1 1 55%;
-  min-width: 0;
-}
-
-.ai-feature-subtitle {
-  font-size: var(--font-m);
-  font-weight: 700;
-  color: var(--primary-blue);
-  margin: 16px 0 10px;
-}
-
-.ai-feature-lead {
-  font-size: var(--font-s);
-  color: var(--text-dark);
-  line-height: 1.8;
-  margin-top: 12px;
-}
-
-.ai-feature-list {
-  margin: 0;
-  padding-left: 1.2em;
-  list-style: decimal;
-  color: var(--text-dark);
-  line-height: 1.8;
-  font-size: var(--font-s);
-}
-
-.ai-feature-list li+li {
-  margin-top: 6px;
-}
-
-.ai-feature-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ai-feature-visual img {
-  width: min(100%, 420px);
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  display: block;
-  border-radius: 50%;
-  background: var(--light-blue);
-  padding: 16px;
-  box-shadow: 0 6px 24px rgba(0, 114, 224, 0.12);
-}
-
-/* ====================
-   導入の流れ（タイムライン）
-   ====================*/
-.onboarding-flow {
-  background: var(--white);
-  padding: 64px 20px;
-}
-
-.onboarding-flow-container {
-  max-width: var(--container-max, 1100px);
-  margin: 0 auto;
-}
-
-.flow-list {
-  /* ここを縮小用に可変化しておく（ブレークポイントで上書き） */
-  --flow-col: 72px;
-  /* 左の縦ライン列幅 */
-  --line-w: 4px;
-  /* 縦ライン太さ */
-  --node-d: 44px;
-  /* 丸ノード直径 */
-  --node-b: 3px;
-  /* ノードの外枠（border） */
-  --item-pt: 14px;
-  /* アイテム上パディング */
-  --item-pb: 18px;
-  /* アイテム下パディング */
-
-  list-style: none;
-  margin: 20px 0 0;
-  padding: 0;
-}
-
-.flow-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: var(--flow-col) 1fr;
-  column-gap: 24px;
-  align-items: start;
-  padding: var(--item-pt) 0 var(--item-pb);
-}
-
-.flow-item::before {
-  content: "";
-  position: absolute;
-  left: calc(var(--flow-col)/2 - var(--line-w)/2);
-  top: 0;
-  bottom: 0;
-  width: var(--line-w);
-  background: var(--primary-blue-light);
-  opacity: .35;
-  border-radius: 2px;
-  z-index: 0;
-}
-
-/* 最初/最後の項目でライン端をノード半径分だけ内側に調整 */
-.flow-item:first-child::before {
-  top: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
-}
-
-.flow-item:last-child::before {
-  bottom: calc(var(--item-pb) + var(--node-d)/2 + var(--node-b));
-}
-
-.flow-node {
-  grid-column: 1;
-  justify-self: center;
-  width: var(--node-d);
-  height: var(--node-d);
-  border-radius: 50%;
-  background: var(--primary-blue-light);
-  border: 3px solid #fff;
-  box-shadow: 0 6px 22px rgba(0, 114, 224, .15);
-  display: grid;
-  place-items: center;
-  z-index: 1;
-}
-
-.flow-node span {
-  color: var(--white);
-  font-weight: 700;
-  font-size: var(--font-xs);
-  line-height: 1;
-}
-
-.flow-content {
-  grid-column: 2;
-}
-
-.flow-step {
-  margin: 4px 0;
-  font-weight: 700;
-  color: var(--text-dark);
-  font-size: var(--font-s);
-}
-
-.flow-desc {
-  margin: 0;
-  color: var(--text-medium);
-  font-size: var(--font-s);
-  line-height: 1.8;
-}
-
-/* ====================
-        FAQ
-   ====================*/
-.qa-section {
-  background: var(--light-blue);
-  padding: 64px 20px;
-}
-
-.qa-header,
-.qa-section .faq {
-  max-width: var(--container-max, 1100px);
-  margin: 0 auto;
-}
-
-.qa-lead {
-  color: var(--text-medium);
-  margin: 6px 0 16px;
-  line-height: 1.7;
-  font-size: var(--font-s);
-}
-
-/* =========================
-  ここからレスポンシブ一括管理
-   1024 / 768 / 640
-========================= */
-
-/* ====== ≤1024px（タブレット横〜） ====== */
-@media (max-width: 1024px) {
-
-  /* カード2列など、共通UIの縮小 */
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card-image {
-    height: 170px;
-  }
-}
-
-/* ====== ≤768px（タブレット縦・小型端末） ====== */
-@media (max-width: 768px) {
-
-  /* ヒーローは縦積み */
-  .ai-consulting-container {
+.hero-layout {
+    display: flex;
     flex-direction: column;
-    gap: 24px;
-  }
-
-  .ai-consulting-hero-right,
-  .ai-consulting-hero-left {
-    flex: 0 0 auto;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .ai-consulting-hero-right img {
-    width: 60%;          /* 80% → 60% に縮小 */
-    max-width: 260px;    /* 上限を明示して調整 */
-    margin: 0 auto;      /* 中央配置 */
-    display: block;
-  }
-
-  /* 特徴セクションも縦積み */
-  .ai-feature-container {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .ai-feature-text,
-  .ai-feature-visual {
-    flex: 0 0 auto;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .ai-feature-visual img {
-    width: min(60vw, 360px);
-  }
+    gap: 3rem;
+    padding-top: 2rem;
 }
 
-/* ====== ≤640px（スマホ） ====== */
-@media (max-width: 640px) {
+@media (min-width: 960px) {
+    .hero-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 60vh;
+    }
+}
 
-  /* 余白・文字サイズの微調整 */
-  .service-contents {
-    padding: 48px 16px;
-  }
+.hero-left {
+    flex: 0 0 auto;
+}
 
-  .qa-section {
-    padding: 48px 16px;
-  }
+.vertical-title-container {
+    border-left: 5px solid var(--color-miraina-black);
+    padding-left: 2rem;
+    height: 100%;
+}
 
-  .section-title {
-    font-size: var(--font-l);
-  }
+.vertical-title {
+    font-size: 3.5rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    /* Vertical writing for desktop */
+    writing-mode: horizontal-tb;
+}
 
-  /* カード1列 */
-  .card-grid {
+@media (min-width: 960px) {
+    .vertical-title {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        height: 400px;
+        /* Fixed height for visual impact */
+        font-size: 5rem;
+    }
+}
+
+.hero-right {
+    flex: 1;
+    max-width: 600px;
+    padding-top: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--color-text-gray);
+    margin-bottom: 3rem;
+}
+
+.hero-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.link-arrow::after {
+    content: '↓';
+}
+
+/* 2. Overview: Clean List */
+.section-heading {
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-miraina-black);
+}
+
+.section-lead {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+    font-family: var(--font-mincho);
+}
+
+.service-list {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.service-list-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.service-list-item:hover {
+    background-color: #fafafa;
+}
+
+.list-number {
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color-miraina-black);
+}
+
+.list-title {
+    font-family: var(--font-mincho);
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+/* 3. Cases */
+.section-cases {
+    padding-top: var(--space-8);
+    /* Reduced from py-section default */
+}
+
+.works-grid {
+    display: grid;
     grid-template-columns: 1fr;
-  }
+    gap: 2rem;
+}
 
-  .card-image {
-    height: 160px;
-  }
+@media (min-width: 768px) {
+    .works-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-  .flow-list {
-    --flow-col: 56px;
-    --line-w: 3px;
-    --node-d: 36px;
-  }
+.work-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s ease;
+}
 
-  .flow-item {
-    column-gap: 16px;
-  }
+.work-card:hover {
+    transform: translateY(-5px);
+}
 
-  .flow-item::before {
-    /* 既存の bottom:0; を無効化して「上半分」だけ描く */
-    left: calc(var(--flow-col)/2 - var(--line-w)/2);
-    width: var(--line-w);
-    background: var(--primary-blue-light);
-    opacity: .35;
-    border-radius: 2px;
-    top: 0;
-    bottom: auto;
-    height: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
-    content: "";
-  }
+.work-image-wrapper {
+    overflow: hidden;
+    margin-bottom: 1rem;
+    aspect-ratio: 16/9;
+}
 
-  /* 先頭は上半分の線を非表示 */
-  .flow-item:first-child::before {
-    display: none;
-  }
+.work-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
 
-  /* 下半分は ::after で描く（最後の項目は非表示） */
-  .flow-item::after {
-    content: "";
+.work-card:hover .work-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.client-name {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.case-title {
+    font-family: var(--font-mincho);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.case-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-gray);
+}
+
+/* 4. Reasons: Columns */
+.section-lead-bold {
+    font-size: 2rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.reasons-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .reasons-content {
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--color-miraina-black);
+        padding-top: 3rem;
+    }
+}
+
+.reason-block {
+    padding-right: 1rem;
+}
+
+.reason-num {
+    display: block;
+    font-size: 4rem;
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.05);
+    line-height: 0.8;
+    margin-bottom: -1rem;
+    /* Overlap effect */
+    position: relative;
+    z-index: -1;
+}
+
+.reason-head {
+    font-size: 1.5rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* 5. Flow: Vertical Timeline Style */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    border-left: 2px solid var(--color-miraina-black);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+    border-left: 2px solid transparent;
+}
+
+.timeline-marker {
     position: absolute;
-    left: calc(var(--flow-col)/2 - var(--line-w)/2);
-    top: calc(var(--item-pt) + var(--node-d)/2 + var(--node-b));
-    bottom: 0;
-    /* アイテム下端まで（次のノード中心まで繋がる） */
-    width: var(--line-w);
-    background: var(--primary-blue-light);
-    opacity: .35;
-    border-radius: 2px;
-  }
-
-  .flow-item:last-child::after {
-    display: none;
-  }
-}
-/* ====================
-   無料相談CTAセクション
-   ====================*/
-.consultation-cta {
-  background: var(--primary-blue);
-  color: var(--white);
-  padding: 80px 20px;
-  text-align: center;
+    left: -17px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
 }
 
-.consultation-cta-container {
-  max-width: 900px;
-  margin: 0 auto;
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin-top: -0.2rem;
 }
 
-.consultation-cta-title {
-  font-size: var(--font-l);
-  font-weight: 800;
-  margin-bottom: 16px;
-  color: var(--white);
+.timeline-content p {
+    font-size: 1rem;
+    color: var(--color-text-gray);
 }
 
-.consultation-cta-lead {
-  font-size: var(--font-s);
-  line-height: 1.8;
-  margin-bottom: 32px;
-  color: var(--white);
+/* 6. FAQ Clean */
+.bg-light-gray {
+    background-color: #fafafa;
 }
 
-.cta-button--primary {
-  background: var(--white);
-  color: var(--primary-blue);
-  font-weight: 700;
-  padding: 14px 36px;
-  border-radius: 50px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
+.faq-clean-list {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.cta-button--primary:hover {
-  background: var(--primary-blue-light);
-  color: var(--white);
+.faq-clean-item {
+    margin-bottom: 2rem;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.faq-q::before {
+    content: 'Q.';
+    margin-right: 0.5rem;
+    color: var(--color-miraina-black);
+}
+
+.faq-a {
+    padding-left: 1.5rem;
+    color: var(--color-text-gray);
+}
+
+/* 7. Large CTA */
+.section-cta-large {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.cta-head {
+    font-size: 3rem;
+    /* Massive */
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cta-sub {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-gray);
+}
+
+.btn-black-fill {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.1rem;
+}
+
+.btn-black-fill:hover {
+    background-color: #333;
+    transform: scale(1.05);
 }

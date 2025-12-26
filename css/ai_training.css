@@ -1,167 +1,320 @@
-.ai-training-hero {
-  background: linear-gradient(120deg, var(--primary-blue-light), var(--neo-green-light));
-  color: var(--white);
-  padding: 64px 0 40px 0;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 114, 224, 0.08);
+@charset "UTF-8";
+
+/* ==========================================================================
+   AI Training Page Styles - Bold Editorial
+   ========================================================================== */
+
+/* Reuse Hero Variables or Common patterns as base */
+/* (We are writing a standalone file, so we define what we need, maintaining consistency) */
+
+/* 1. Hero: Split Layout & Vertical Text */
+.training-hero {
+    padding-top: 1rem;
+    padding-bottom: var(--space-8);
+    position: relative;
+    border-bottom: 1px solid var(--color-miraina-black);
+    min-height: calc(100vh - var(--header-height) - 100px);
+    display: flex;
+    align-items: flex-start;
 }
 
-.ai-training-title {
-  font-size: var(--font-l);
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  margin-bottom: 0;
-  color: var(--white);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.ai-training-section {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(30, 144, 255, 0.07);
-  margin: -40px auto 40px auto;
-  max-width: 900px;
-  padding: 48px 32px 32px 32px;
-  position: relative;
-  z-index: 2;
-}
-
-.ai-training-section h2 {
-  color: var(--neo-green-dark);
-  font-size: var(--font-m);
-  font-weight: 700;
-  margin-top: 32px;
-  margin-bottom: 12px;
-  border-left: 6px solid var(--primary-blue);
-  padding-left: 16px;
-  background: linear-gradient(90deg, #f0fff0 60%, transparent 100%);
-}
-
-.ai-training-section ul {
-  margin-left: 2em;
-  margin-bottom: 1.5em;
-  color: var(--text-dark);
-  font-size: var(--font-s);
-  line-height: 2;
-}
-
-.implementation-flow {
-  margin: 48px 0 32px 0;
-  background: var(--light-gray);
-  border-radius: 12px;
-  padding: 32px 16px;
-  box-shadow: 0 2px 12px rgba(0, 114, 224, 0.06);
-}
-
-.implementation-flow .section-title {
-  color: var(--primary-blue-dark);
-  font-size: var(--font-s);
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.implementation-flow .section-description {
-  color: var(--text-medium);
-  margin-bottom: 24px;
-  font-size: var(--font-s);
-}
-
-.flow-steps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: space-between;
-}
-
-.flow-step {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 114, 224, 0.07);
-  flex: 1 1 220px;
-  min-width: 180px;
-  max-width: 240px;
-  padding: 24px 16px;
-  text-align: center;
-  position: relative;
-  transition: transform 0.2s;
-}
-
-.flow-step:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(0, 114, 224, 0.13);
-}
-
-.step-number {
-  font-size: var(--font-l);
-  font-weight: 800;
-  color: var(--neo-green);
-  margin-bottom: 8px;
-}
-
-.step-content h3 {
-  font-size: var(--font-s);
-  color: var(--primary-blue);
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.step-content p {
-  font-size: var(--font-s);
-  color: var(--text-medium);
-}
-
-.faq-block {
-  margin-top: 40px;
-  background: linear-gradient(90deg, #f0fff0 60%, transparent 100%);
-  border-left: 6px solid var(--neo-green-dark);
-  border-radius: 8px;
-  padding: 24px 20px;
-  box-shadow: 0 2px 8px rgba(0, 114, 224, 0.06);
-}
-
-.faq-question {
-  font-weight: 700;
-  color: var(--primary-blue-dark);
-  font-size: var(--font-s);
-  margin-bottom: 10px;
-}
-
-.faq-answer {
-  color: var(--text-dark);
-  font-size: var(--font-s);
-  line-height: 1.8;
-}
-
-@media (max-width: 900px) {
-  .ai-training-section {
-    padding: 32px 8vw 24px 8vw;
-  }
-
-  .flow-steps {
+.hero-layout {
+    display: flex;
     flex-direction: column;
-    gap: 16px;
-  }
-
-  .flow-step {
-    max-width: 100%;
-    min-width: 0;
-  }
+    gap: 3rem;
+    padding-top: 2rem;
 }
 
-@media (max-width: 600px) {
-  .ai-training-hero {
-    padding: 36px 0 18px 0;
-  }
+@media (min-width: 960px) {
+    .hero-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 50vh;
+    }
+}
 
-  .ai-training-title {
-    font-size: var(--font-m);
-  }
+.hero-left {
+    flex: 0 0 auto;
+}
 
-  .ai-training-section {
-    padding: 18px 2vw 12px 2vw;
-  }
+.vertical-title-container {
+    border-left: 5px solid var(--color-miraina-black);
+    padding-left: 2rem;
+    height: 100%;
+}
 
-  .faq-block {
-    padding: 14px 8px;
-  }
+.vertical-title {
+    font-size: 3rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    writing-mode: horizontal-tb;
+}
+
+@media (min-width: 960px) {
+    .vertical-title {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        height: auto;
+        min-height: auto;
+        font-size: 4rem;
+        white-space: nowrap;
+    }
+}
+
+.hero-right {
+    flex: 1;
+    max-width: 600px;
+    padding-top: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--color-text-gray);
+    margin-bottom: 3rem;
+}
+
+.hero-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+
+/* 2. Service Content (Grid) */
+.section-heading {
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-miraina-black);
+}
+
+.section-lead {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+    font-family: var(--font-mincho);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.content-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    background-color: var(--color-white);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-card:hover {
+    border-color: var(--color-miraina-black);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+    /* Editorial offset shadow */
+    transform: translateY(-5px);
+}
+
+.content-card-num {
+    font-size: 2rem;
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.content-card-title {
+    font-size: 1.5rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.content-card-text {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 3. Features (List Style) */
+.feature-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .feature-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.feature-item {
+    background-color: var(--color-paper-gray);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.feature-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--color-miraina-black);
+    font-weight: bold;
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+
+/* 4. Flow (Vertical Timeline - Consistent with Consulting) */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    border-left: 2px solid var(--color-miraina-black);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+    border-left: 2px solid transparent;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -17px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin-top: -0.2rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: var(--color-text-gray);
+}
+
+
+/* 5. FAQ */
+.bg-light-gray {
+    background-color: #fafafa;
+}
+
+.faq-clean-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-clean-item {
+    margin-bottom: 2rem;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.faq-q::before {
+    content: 'Q.';
+    margin-right: 0.5rem;
+    color: var(--color-miraina-black);
+}
+
+.faq-a {
+    padding-left: 1.5rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 6. Large CTA */
+.section-cta-large {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.cta-head {
+    font-size: 3rem;
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cta-sub {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-gray);
+}
+
+.btn-black-fill {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-black-fill:hover {
+    background-color: #333;
+    transform: scale(1.05);
 }

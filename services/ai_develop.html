@@ -1,195 +1,332 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
-    <title>AI開発 | MIRAINA（ミライナ）</title>
-    <meta name="description" content="MIRAINAのAI開発サービス。業務特化型AIチャットボットやカスタムAIソリューション開発をサポート。">
-    <meta name="keywords" content="AI開発,AIチャットボット,カスタムAI,業務効率化,AIソリューション">
-    <link rel="canonical" href="https://miraina-ai.com/services/ai_develop.html">
-    <meta property="og:title" content="AI開発 | MIRAINA">
-    <meta property="og:description" content="MIRAINAのAI開発サービス。業務特化型AIチャットボットやカスタムAIソリューション開発をサポート。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://miraina-ai.com/services/ai_develop.html">
-    <meta property="og:site_name" content="MIRAINA">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI開発 | MIRAINA">
-    <meta name="twitter:description" content="MIRAINAのAI開発サービス。業務特化型AIチャットボットやカスタムAIソリューション開発をサポート。">
-    <meta name="twitter:image" content="/images/ogp.jpg">
+    <title>AI開発サービス | MIRAINA</title>
+    <meta name="description" content="MIRAINAのAI開発サービス。業務特化型チャットボットやカスタムAIソリューションの開発を通じて、貴社のDXと業務効率化を強力にサポートします。">
+    <link rel="canonical" href="https://miraina-ai.com//services/ai_develop.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/ai_develop.css">
 </head>
+
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50" loading="eager" decoding="async">
-                    <h1>MIRAINA（ミライナ）</h1>
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-    <main class="ai-develop-page">
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li><a href="/services.html">サービス</a></li>
-                    <li>AI開発サービス</li>
-                </ul>
-            </div>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="../services.html">サービス</a></li>
+                <li>AI開発サービス</li>
+            </ul>
         </div>
-        <section class="ai-develop-hero">
-            <div class="container">
-                <h1 class="ai-develop-title">AI開発サービス</h1>
+
+        <!-- Hero: Split Layout / Vertical Title -->
+        <section class="develop-hero fade-in-section">
+            <div class="container hero-layout">
+                <div class="hero-left">
+                    <div class="vertical-title-container">
+                        <h1 class="vertical-title">AI開発</h1>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <h2 class="hero-subtitle">ビジネスに最適化した<br>独自のAIソリューションを。</h2>
+                    <p class="hero-desc">
+                        汎用的なツールでは解決できない課題に。<br>
+                        業務フローに深く組み込まれたカスタムAIシステムを開発し、<br>
+                        貴社の競争力を飛躍的に高めます。
+                    </p>
+                    <div class="hero-cta-wrapper">
+                        <a href="..//contact.html" class="btn">お問い合わせ</a>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="ai-develop-section">
+
+        <!-- Service Content: Cards -->
+        <section class="section-content py-section">
             <div class="container">
-                <h2>1. サービス内容</h2>
-                <ul>
-                    <li>業務特化型AIチャットボット開発</li>
-                    <li>カスタムAIソリューション開発</li>
-                    <li>社内ナレッジ活用AIの構築</li>
-                    <li>継続的な改善・メンテナンス</li>
-                </ul>
-                <h2>2. 特徴</h2>
-                <ul>
-                    <li>業務フローに合わせた柔軟な開発</li>
-                    <li>セキュリティ・コンプライアンス重視</li>
-                    <li>UI/UXにも配慮した設計</li>
-                    <li>導入後のサポートも充実</li>
-                </ul>
-                <h2>3. 導入フロー</h2>
-                <section class="implementation-flow">
-                    <h2 class="section-title">導入フロー</h2>
-                    <p class="section-description">AI開発サービス導入の流れをご紹介します。</p>
-                    <div class="flow-steps">
-                        <div class="flow-step">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h3>無料相談</h3>
-                                <p>ご要望や課題をヒアリングします。</p>
-                            </div>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h3>要件定義・ご提案</h3>
-                                <p>最適なAI開発プランをご提案します。</p>
-                            </div>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h3>ご契約・開発開始</h3>
-                                <p>ご契約後、開発をスタートします。</p>
-                            </div>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h3>テスト・検証</h3>
-                                <p>実際の業務環境でテスト・検証を行います。</p>
-                            </div>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-number">05</div>
-                            <div class="step-content">
-                                <h3>本番導入</h3>
-                                <p>本番環境へ導入し、運用を開始します。</p>
-                            </div>
-                        </div>
-                        <div class="flow-step">
-                            <div class="step-number">06</div>
-                            <div class="step-content">
-                                <h3>運用・サポート</h3>
-                                <p>導入後も継続的なサポート・改善を行います。</p>
-                            </div>
+                <div class="section-intro fade-in-section">
+                    <h2 class="section-heading">CONTENTS</h2>
+                    <p class="section-lead">サービス内容</p>
+                </div>
+
+                <div class="content-grid fade-in-section">
+                    <div class="content-card">
+                        <div class="content-card-num">01</div>
+                        <h3 class="content-card-title">業務特化型<br>AIチャットボット開発</h3>
+                        <p class="content-card-text">社内問い合わせ対応や顧客サポートなど、貴社の特定業務に特化した高精度なチャットボットを開発します。</p>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card-num">02</div>
+                        <h3 class="content-card-title">カスタムAI<br>ソリューション開発</h3>
+                        <p class="content-card-text">データ分析、自動生成、予測モデルなど、企業の独自のニーズに合わせたAIシステムをスクラッチで構築します。</p>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card-num">03</div>
+                        <h3 class="content-card-title">社内ナレッジ活用AIの<br>構築</h3>
+                        <p class="content-card-text">社内に眠る膨大なドキュメントやデータをAIに学習させ、即座に必要な情報を引き出せるナレッジベースを構築します。</p>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card-num">04</div>
+                        <h3 class="content-card-title">継続的な<br>改善・メンテナンス</h3>
+                        <p class="content-card-text">導入後もAIの回答精度をモニタリングし、チューニングとメンテナンスを行うことで、システムの陳腐化を防ぎます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features: Bullet Points / List -->
+        <section class="section-features py-section bg-light-gray">
+            <div class="container">
+                <div class="section-intro fade-in-section">
+                    <h2 class="section-heading">FEATURES</h2>
+                    <p class="section-lead">特徴</p>
+                </div>
+
+                <div class="feature-list fade-in-section">
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-body">
+                            <h3>業務フローに合わせた柔軟な開発</h3>
+                            <p>既存のシステムやワークフローを阻害せず、滑らかに連携するAIを設計します。</p>
                         </div>
                     </div>
-                </section>
-                <h2>4. よくある質問</h2>
-                <div class="faq-block">
-                    <div class="faq-question">自社の業務に合わせたカスタマイズは可能ですか？</div>
-                    <div class="faq-answer">はい、業務内容やご要望に合わせて柔軟にカスタマイズ開発が可能です。お気軽にご相談ください。</div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-body">
+                            <h3>セキュリティ・コンプライアンス重視</h3>
+                            <p>エンタープライズレベルのセキュリティ基準を満たした、安全な開発環境と設計を提供します。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-body">
+                            <h3>UI/UXにも配慮した設計</h3>
+                            <p>AIの機能だけでなく、現場のユーザーが直感的に使える使いやすいインターフェースを実現します。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-body">
+                            <h3>導入後のサポートも充実</h3>
+                            <p>技術的な保守だけでなく、運用の定着化まで長期的なパートナーとして伴走します。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
+
+        <!-- Flow: Vertical Timeline -->
+        <section class="section-flow py-section">
+            <div class="container">
+                <div class="section-intro text-center fade-in-section">
+                    <h2 class="section-heading">FLOW</h2>
+                    <p class="section-lead">導入フロー</p>
                 </div>
 
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
+                <div class="timeline-container fade-in-section">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">01</div>
+                        <div class="timeline-content">
+                            <h3>無料相談</h3>
+                            <p>ご要望や課題をヒアリングします。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">02</div>
+                        <div class="timeline-content">
+                            <h3>要件定義・ご提案</h3>
+                            <p>最適なAI開発プランをご提案します。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">03</div>
+                        <div class="timeline-content">
+                            <h3>ご契約・開発開始</h3>
+                            <p>ご契約後、開発をスタートします。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">04</div>
+                        <div class="timeline-content">
+                            <h3>テスト・検証</h3>
+                            <p>実際の業務環境でテスト・検証を行います。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">05</div>
+                        <div class="timeline-content">
+                            <h3>本番導入</h3>
+                            <p>本番環境へ導入し、運用を開始します。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">06</div>
+                        <div class="timeline-content">
+                            <h3>運用・サポート</h3>
+                            <p>導入後も継続的なサポート・改善を行います。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-faq py-section">
+            <div class="container">
+                <div class="section-intro text-center fade-in-section">
+                    <h2 class="section-heading">FAQ</h2>
+                </div>
+
+                <div class="faq-clean-list fade-in-section">
+                    <div class="faq-clean-item">
+                        <h3 class="faq-q">自社の業務に合わせたカスタマイズは可能ですか？</h3>
+                        <p class="faq-a">はい、業務内容やご要望に合わせて柔軟にカスタマイズ開発が可能です。<br>お気軽にご相談ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-cta-large fade-in-section">
+            <div class="container">
+                <div class="cta-inner">
+                    <h2 class="cta-head">Build Your AI</h2>
+                    <p class="cta-sub">あなたの会社だけの、特別なAIを。<br>開発のご相談はこちらから。</p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('is-visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
+
 </html>

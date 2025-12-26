@@ -4,300 +4,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
     <title>【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる | MIRAINAブログ</title>
     <meta name="description"
         content="Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。">
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog019.html">
-    <meta property="og:title" content="【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる | MIRAINAブログ">
-    <meta property="og:description"
-        content="Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://miraina-ai.com/blogs/blog019.html">
-    <meta property="og:site_name" content="MIRAINA">
+    <meta property="og:image" content="/images/blogs_images/blog019-1.webp">
+    <meta property="og:description"
+        content="Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/blog_article.css">
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
-        "description": "Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。",
-        "author": {
-            "@type": "Person",
-            "name": "芝優作"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "MIRAINA",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://miraina-ai.com/images/company-logo.webp",
-            "width": 200,
-            "height": 50
-            }
-        },
-        "image": "https://miraina-ai.com/images/blog019-1.webp",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://miraina-ai.com/blogs/blog019.html"
-        },
-        "url": "https://miraina-ai.com/blogs/blog019.html",
-        "datePublished": "2025-12-05",
-        "dateModified": "2025-12-05"
-        }
-    </script>
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-    <main class="blog-article-main">
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる</li>
-                </ul>
-            </div>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる</li>
+            </ul>
         </div>
-        <article class="blog-article container">
-            <header class="blog-article-header">
-                <h1>【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる</h1>
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年12月05日</div>
+
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.12.05</span>
+                    <div class="article-tags">
+                        <p class="article-tag">GoogleWorkspace</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">業務自動化</p>
+                    </div>
                 </div>
-                <img src="/images/blog019-1.webp" alt="Google Workspace Studioのイメージ" width="1200" height="630"
-                    style="width:100%; height:auto; border-radius:10px; margin-bottom:20px;">
-                <p class="blog-article-lead">
+                <h1 class="article-title">【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog019-1.webp" alt="Google Workspace Studioのイメージ" width="800"
+                        height="450">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
                     Googleが満を持してリリースした「<strong>Google Workspace Studio（GWS）</strong>」。<br>
                     これは、誰もが簡単に「AIエージェント」を作成し、日々の業務を劇的に自動化できる新しいプラットフォームです。<br>
                     最新のGemini 3モデルを搭載し、GmailやGoogleドライブと深く連携するこのツールは、私たちの働き方をどう変えるのでしょうか？<br>
                     本記事では、GWSの基本機能から具体的な活用シーン、そして他社ツールとの違いまでを徹底解説します。
                 </p>
-            </header>
-            <nav class="blog-article-toc">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#what-is-gws">Google Workspace Studio (GWS) とは？</a></li>
-                    <li><a href="#features">GWSの3つの大きな特徴</a></li>
-                    <li><a href="#use-cases">ビジネスでの具体的な活用シーン</a></li>
-                    <li><a href="#comparison">競合サービス（Copilot Studio, Custom GPTs）との違い</a></li>
-                    <li><a href="#summary">まとめ</a></li>
-                </ol>
-            </nav>
-            <section>
-                <h2 id="what-is-gws">Google Workspace Studioとは</h2>
-                <p>Google Workspace Studio（以下、Studio）は、2025年12月に正式リリースされたGoogleの新ツールで、Google
-                    Workspace（Gmail、Drive、Sheets、Calendar、Meetなど）のアプリをAI（Geminiモデル）で連携させ、ノーコードで業務自動化を実現するプラットフォームです。<br>従来のルールベースの自動化を超え、AIエージェントを作成して複雑なタスクを柔軟に処理します。<br>主にビジネスユーザー向けで、BusinessやEnterpriseなどの法人向けGoogle
-                    Workspaceプラン（一部のEducationエディションを含む）で利用可能です。<br>エージェントに定型業務を任せることで、メール処理やレポート作成などの作業時間を大きく削減し、ヒューマンエラーの低減も期待できます。
-                </p>
-                <p>詳細な機能や最新情報は、<a href="https://workspace.google.com/studio/" target="_blank" rel="noopener">Google
-                        Workspace Studio 公式サイト</a>をご確認ください。</p>
             </section>
 
-            <section>
-                <h2 id="features">GWSの3つの大きな特徴</h2>
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#what-is-gws">1. Google Workspace Studio (GWS) とは？</a></li>
+                    <li><a href="#features">2. GWSの3つの大きな特徴</a></li>
+                    <li><a href="#use-cases">3. ビジネスでの具体的な活用シーン</a></li>
+                    <li><a href="#comparison">4. 競合サービス（Copilot Studio, Custom GPTs）との違い</a></li>
+                    <li><a href="#summary">5. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="what-is-gws">1. Google Workspace Studio (GWS) とは？</h2>
+                <p>
+                    Google Workspace Studio（以下、Studio）は、2025年12月に正式リリースされたGoogleの新ツールで、Google
+                    Workspace（Gmail、Drive、Sheets、Calendar、Meetなど）のアプリをAI（Geminiモデル）で連携させ、ノーコードで業務自動化を実現するプラットフォームです。<br>
+                    従来のルールベースの自動化を超え、AIエージェントを作成して複雑なタスクを柔軟に処理します。<br>
+                    主にビジネスユーザー向けで、BusinessやEnterpriseなどの法人向けGoogle
+                    Workspaceプラン（一部のEducationエディションを含む）で利用可能です。<br>
+                    エージェントに定型業務を任せることで、メール処理やレポート作成などの作業時間を大きく削減し、ヒューマンエラーの低減も期待できます。
+                </p>
+                <p>
+                    詳細な機能や最新情報は、<a href="https://workspace.google.com/studio/" target="_blank" rel="noopener">Google
+                        Workspace Studio 公式サイト</a>をご確認ください。
+                </p>
+
+                <h2 id="features">2. GWSの3つの大きな特徴</h2>
                 <p>なぜ今、GWSが注目されているのでしょうか。その理由は主に3つの特徴にあります。</p>
-                <div class="blog-figure">
-                    <img src="/images/blog019-2.webp" alt="GWSのエージェント作成フロー" width="800" height="450"
-                        style="width:100%; height:auto; border-radius:10px;">
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog019-2.webp" alt="GWSのエージェント作成フロー">
                 </div>
 
                 <h3>1. 自然言語でAIエージェントを作成できる（ノーコード）</h3>
-                <p>「毎週届く請求書メールを読み取って、スプレッドシートにまとめておいて」<br>
-                    このようにやりたいことをチャットで伝えるだけで、GWSが裏側で必要なフローを構築し、エージェント化してくれます。<br>複雑なスクリプトを書く必要がないため、非エンジニアの現場担当者でも業務改善を主導できます。
+                <p>
+                    「毎週届く請求書メールを読み取って、スプレッドシートにまとめておいて」<br>
+                    このようにやりたいことをチャットで伝えるだけで、GWSが裏側で必要なフローを構築し、エージェント化してくれます。<br>
+                    複雑なスクリプトを書く必要がないため、非エンジニアの現場担当者でも業務改善を主導できます。
                 </p>
 
                 <h3>2. Google Workspace アプリとのシームレスな連携</h3>
-                <p>Gmail、Googleドキュメント、スプレッドシート、Googleドライブ、カレンダーなど、普段使っているGoogleアプリと深く統合されています。<br>
-                    外部ツールを経由せずに、直接データを読み書きできるため、セキュリティ面でも安心感があり、動作も高速です。</p>
+                <p>
+                    Gmail、Googleドキュメント、スプレッドシート、Googleドライブ、カレンダーなど、普段使っているGoogleアプリと深く統合されています。<br>
+                    外部ツールを経由せずに、直接データを読み書きできるため、セキュリティ面でも安心感があり、動作も高速です。
+                </p>
 
                 <h3>3. 最新モデル「Gemini 3」による高度な推論</h3>
-                <p>GWSのエージェントは、Googleの最新AIモデル「Gemini 3」を頭脳として持っています。<br>
+                <p>
+                    GWSのエージェントは、Googleの最新AIモデル「Gemini 3」を頭脳として持っています。<br>
                     単なるキーワードマッチングではなく、文脈を理解し、「このメールは緊急度が高いからSlackにも通知しよう」といった高度な判断（推論）が可能です。
+                </p>
+                <p>
+                    ※Gemini 3の性能については、競合となるClaude Opus 4.5の記事も参考にしてください。
                     <br>
-                    ※Gemini 3の性能については、競合となるClaude Opus 4.5の記事も参考にしてください。<br>
-                <div class="related-article">
-                    <a href="/blogs/blog018.html">関連記事：【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット</a>
-                </div>
-                </p>
-            </section>
-
-            <section>
-                <h2 id="use-cases">実務に役立つ活用事例</h2>
-                <p>情報収集の結果、Studioの活用事例は主にリリース直後（2025年12月）の公式発表や導入企業事例から見つかりました。<br>実務寄りのものを中心に、業務効率化に直結するものをピックアップ。<br>テンプレートベースの即時活用やカスタムエージェントの事例が中心です。以下で整理します。
+                    <a href="blog018.html">関連記事：【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット</a>
                 </p>
 
-                <div class="blog-figure">
-                    <img src="/images/blog019-3.webp" alt="AIエージェントとの協働イメージ" width="800" height="450"
-                        style="width:100%; height:auto; border-radius:10px;">
+                <h2 id="use-cases">3. ビジネスでの具体的な活用シーン</h2>
+                <p>
+                    情報収集の結果、Studioの活用事例は主にリリース直後（2025年12月）の公式発表や導入企業事例から見つかりました。<br>
+                    実務寄りのものを中心に、業務効率化に直結するものをピックアップ。<br>
+                    テンプレートベースの即時活用やカスタムエージェントの事例が中心です。以下で整理します。
+                </p>
+
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog019-3.webp" alt="AIエージェントとの協働イメージ">
                 </div>
 
                 <h3>メール管理・通知自動化</h3>
-                <p>未読メールの日次ダイジェスト配信や、アクションが必要なメールの自動ラベル付け、質問メールの要約などを自動化します。<br>これにより、メール処理時間を大幅に短縮し、重要な連絡の見落としを防ぐことができます。
+                <p>
+                    未読メールの日次ダイジェスト配信や、アクションが必要なメールの自動ラベル付け、質問メールの要約などを自動化します。<br>
+                    これにより、メール処理時間を大幅に短縮し、重要な連絡の見落としを防ぐことができます。
                 </p>
 
                 <h3>会議・スケジュール支援</h3>
-                <p>会議前のアジェンダ要約の送信や、会議後の議事録要約・タスク割り当てを自動化します。<br>準備や振り返りの時間を削減し、アクション漏れを防ぐことで、チームの意思決定を高速化します。</p>
+                <p>
+                    会議前のアジェンダ要約の送信や、会議後の議事録要約・タスク割り当てを自動化します。<br>
+                    準備や振り返りの時間を削減し、アクション漏れを防ぐことで、チームの意思決定を高速化します。
+                </p>
 
                 <h3>プロジェクト・タスク管理</h3>
-                <p>Google
-                    Chatでのアイデア出しから、AIによる評価、AsanaやJiraへのタスク登録までを連携させます。<br>アイデアから実行計画までの時間を劇的に短縮し、クリエイティブな業務に集中できる環境を作ります。
+                <p>
+                    Google Chatでのアイデア出しから、AIによる評価、AsanaやJiraへのタスク登録までを連携させます。<br>
+                    アイデアから実行計画までの時間を劇的に短縮し、クリエイティブな業務に集中できる環境を作ります。
                 </p>
 
                 <h3>データ集計・レポート生成</h3>
-                <p>Googleフォームの回答集計やドキュメントの更新内容をスプレッドシートに自動追記したり、毎朝のニュース要約を配信したりします。<br>手動集計の手間をなくし、リアルタイムな分析と意思決定を支援します。
+                <p>
+                    Googleフォームの回答集計やドキュメントの更新内容をスプレッドシートに自動追記したり、毎朝のニュース要約を配信したりします。<br>
+                    手動集計の手間をなくし、リアルタイムな分析と意思決定を支援します。
                 </p>
 
                 <h3>CRM/マーケティング連携</h3>
-                <p>Gmailに来た顧客データをSalesforceやMailchimpに自動同期したり、法的通知を優先順位付けしたりします。<br>ツール間の転記ミスをなくし、コンプライアンス向上と業務効率化を同時に実現します。
+                <p>
+                    Gmailに来た顧客データをSalesforceやMailchimpに自動同期したり、法的通知を優先順位付けしたりします。<br>
+                    ツール間の転記ミスをなくし、コンプライアンス向上と業務効率化を同時に実現します。
                 </p>
 
                 <h3>ニュース/情報監視</h3>
-                <p>Web上の関連ニュースを収集・要約して配信したり、チャットでのメンションを監視して通知したりします。<br>情報収集を自動化することで、市場トレンドを逃さずキャッチアップできます。</p>
+                <p>
+                    Web上の関連ニュースを収集・要約して配信したり、チャットでのメンションを監視して通知したりします。<br>
+                    情報収集を自動化することで、市場トレンドを逃さずキャッチアップできます。
+                </p>
 
                 <h3>導入のポイントと注意</h3>
                 <ul>
-                    <li><strong>始め方</strong>:
+                    <li>
+                        <strong>始め方</strong>:
                         Workspaceコンソールからアクセス。自然言語で「未読メールを要約してSheetsに追加」と記述するだけでエージェント作成可能。テンプレートライブラリ（メールダイジェスト、会議要約など）からカスタマイズスタート。
                     </li>
-                    <li><strong>対象</strong>:
-                        中小企業やDX推進企業に適し、日本企業ではExcel/メール中心の業務を自動化しやすい。サードパーティ（Salesforce、Asanaなど）連携で拡張性高め。</li>
-                    <li><strong>制限</strong>:
+                    <li>
+                        <strong>対象</strong>:
+                        中小企業やDX推進企業に適し、日本企業ではExcel/メール中心の業務を自動化しやすい。サードパーティ（Salesforce、Asanaなど）連携で拡張性高め。
+                    </li>
+                    <li>
+                        <strong>制限</strong>:
                         2026年初頭までは段階的なロールアウト期間で、ドメインのリリースチャネル（Rapid /
                         Scheduled）によって利用開始時期が異なります。2025年12月時点で公式にサポートされているプロンプト言語は英語ですが、日本語でもある程度の利用は可能です。実行回数や利用制限は契約しているGoogle
                         WorkspaceエディションやAIアドオンによって異なるため、最新情報は公式ドキュメントや管理コンソールで確認する必要があります。
                     </li>
-                    <li><strong>前提知識</strong>:
+                    <li>
+                        <strong>前提知識</strong>:
                         Studioを使い始める前に、Google Workspace自体の基本的な設定や管理について理解しておくとスムーズです。初期設定については、<a
                             href="https://googleworkspace.tscloud.co.jp/google-workspace/initial-setup" target="_blank"
                             rel="noopener">Google Workspaceの初期設定ガイド</a>などが参考になります。
                     </li>
                 </ul>
-            </section>
 
-            <section>
-                <h2 id="comparison">競合サービス（Copilot Studio, Custom GPTs）との違い</h2>
+                <h2 id="comparison">4. 競合サービス（Copilot Studio, Custom GPTs）との違い</h2>
                 <p>Microsoft Copilot StudioやOpenAIのCustom GPTsと比較して、GWSの強みはどこにあるのでしょうか。</p>
                 <ul>
-                    <li><strong>対 Microsoft Copilot Studio</strong>: Office製品（Excel,
-                        PowerPoint）中心ならCopilotが有利ですが、<br>Google
-                        Workspace中心の組織であれば、GWSの方が圧倒的に導入ハードルが低く、連携もスムーズです。</li>
-                    <li><strong>対 Custom GPTs (OpenAI)</strong>: Custom
-                        GPTsは手軽ですが、企業内の実データ（メールや社内文書）との連携にはAPI設定などの手間がかかります。<br>GWSは最初から社内データへのアクセス権限管理（ACL）が組み込まれているため、ガバナンスを効かせやすいのが特徴です。
+                    <li>
+                        <strong>対 Microsoft Copilot Studio</strong>:
+                        Office製品（Excel, PowerPoint）中心ならCopilotが有利ですが、<br>
+                        Google Workspace中心の組織であれば、GWSの方が圧倒的に導入ハードルが低く、連携もスムーズです。
+                    </li>
+                    <li>
+                        <strong>対 Custom GPTs (OpenAI)</strong>:
+                        Custom GPTsは手軽ですが、企業内の実データ（メールや社内文書）との連携にはAPI設定などの手間がかかります。<br>
+                        GWSは最初から社内データへのアクセス権限管理（ACL）が組み込まれているため、ガバナンスを効かせやすいのが特徴です。
                     </li>
                 </ul>
-            </section>
 
-            <section>
-                <h2 id="summary">まとめ：自律型エージェント導入の第一歩として</h2>
-                <p>Google Workspace Studioは、AIを「使う」時代から、AIに「働いてもらう」時代へのシフトを加速させるツールです。<br>
-                    まずは身近な「メール転記作業」や「日程調整」からエージェントに任せてみてはいかがでしょうか。</p>
-                <p>「自社でどう活用すればいいかわからない」「セキュリティ設定に不安がある」という場合は、MIRAINAの<a
-                        href="/services/ai_consulting.html">AIコンサルティング</a>をご利用ください。
-                    最新のGWS活用事例を含め、貴社に最適なDX推進をサポートいたします。</p>
-
-                <p style="text-align:center; margin-top: 2em;">
-                    <a href="/contact.html" class="cta-button">AI導入について相談する</a>
+                <h2 id="summary">5. まとめ：自律型エージェント導入の第一歩として</h2>
+                <p>
+                    Google Workspace Studioは、AIを「使う」時代から、AIに「働いてもらう」時代へのシフトを加速させるツールです。<br>
+                    まずは身近な「メール転記作業」や「日程調整」からエージェントに任せてみてはいかがでしょうか。
                 </p>
-            </section>
+                <p>
+                    「自社でどう活用すればいいかわからない」「セキュリティ設定に不安がある」という場合は、MIRAINAの<a
+                        href="..//services/ai_consulting.html">AIコンサルティング</a>をご利用ください。
+                    最新のGWS活用事例を含め、貴社に最適なDX推進をサポートいたします。
+                </p>
 
-            <!-- Reviewer / 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <h3 class="reviewer-name">芝 優作（しば ゆうさく）</h3>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
-                        <p class="reviewer-bio">
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">Google Workspace Studio導入・活用支援</h3>
+                    <p class="cta-text">
+                        MIRAINAでは、Google Workspace Studioを活用した業務自動化の支援を行っています。<br>
+                        「どの業務を自動化できるかわからない」「導入の進め方を知りたい」<br>
+                        という方は、ぜひお気軽にご相談ください。
+                    </p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog013.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog013-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.23</div>
+                            <div class="related-text">【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</div>
+                        </div>
+                    </a>
+                    <a href="blog018.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog018-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.12.04</div>
+                            <div class="related-text">【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
         </article>
     </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -101,3 +101,83 @@ AIを通じて企業の利益と効率を両立させる
 - Judicious Efficiency  
 - Empathy & Respect  
 - Passionate Learning  
+
+---
+
+## ブログ
+
+- [AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法](https://miraina-ai.com/blogs/blog001.html)
+  - **更新日**: 2025.11.20
+  - **概要**: AI開発の基本プロセス、手法、ビジネスへの導入ステップを初心者向けに解説。AI活用の基礎理解に最適。
+
+- [Gemini活用で経営とマーケティングを革新する実践ガイド](https://miraina-ai.com/blogs/blog002.html)
+  - **更新日**: 2025.11.20
+  - **概要**: GoogleのAIモデルGeminiを用いた経営戦略策定やマーケティング施策の立案方法、プロンプト活用術を紹介。
+
+- [Aristとの業務提携のお知らせ](https://miraina-ai.com/blogs/blog003.html)
+  - **更新日**: 2025.11.20
+  - **概要**: 家庭教師・個別学習支援を行うArist（アリスト）との業務提携を発表。教育分野でのAI活用と共同事業の展望について。
+
+- [AI研修おすすめ7選！選び方や費用について解説](https://miraina-ai.com/blogs/blog004.html)
+  - **更新日**: 2025.11.29
+  - **概要**: 目的別・レベル別のAI研修の選び方とおすすめ講座7選を紹介。費用相場や法人研修導入のポイントも解説。
+
+- [LLMO（大規模言語モデル最適化）が“本当に”重要な理由](https://miraina-ai.com/blogs/blog005.html)
+  - **更新日**: 2025.10.14
+  - **概要**: AI検索時代に求められるLLMO（Large Language Model Optimization）の重要性と、SEO担当者が取り組むべき実践的施策。
+
+- [LLMOとは？生成AI時代に求められる“次世代SEO”](https://miraina-ai.com/blogs/blog006.html)
+  - **更新日**: 2025.10.15
+  - **概要**: LLMOの定義、SEOとの違い、具体的な最適化手法（Entity、Citationsなど）を専門的な視点で解説。
+
+- [AIO（AI検索最適化）とは？SEOマーケターが知っておくべき戦略](https://miraina-ai.com/blogs/blog007.html)
+  - **更新日**: 2025.10.15
+  - **概要**: AIO（Artificial Intelligence Optimization）の概念と、SGEなどのAI検索エンジンに対する最適化戦略の全体像。
+
+- [AIモード（AI Mode）とは？──検索が“会話”に変わる新時代](https://miraina-ai.com/blogs/blog008.html)
+  - **更新日**: 2025.10.16
+  - **概要**: ユーザーが検索エンジンではなく「AIモード」で情報探索を行う行動変容と、それに向けたコンテンツ戦略について。
+
+- [【2025年版】AIおすすめツール完全ガイド](https://miraina-ai.com/blogs/blog009.html)
+  - **更新日**: 2025.10.17
+  - **概要**: テキスト生成、画像生成、動画作成、業務自動化など、目的別に厳選した最新AIツールの特徴と料金を比較。
+
+- [AIコンサルタントの選び方｜失敗しない発注のポイント](https://miraina-ai.com/blogs/blog010.html)
+  - **更新日**: 2025.10.18
+  - **概要**: AI導入を成功させるためのコンサルタント選定基準、依頼前の準備、期待できる効果と費用感について。
+
+- [【最新版】llms.txtとは？AI時代に求められる新しい解説ファイル](https://miraina-ai.com/blogs/blog011.html)
+  - **更新日**: 2025.11.18
+  - **概要**: AIエージェントに向けたサイト案内ファイル「llms.txt」の役割、メリット、記述内容、SEO/AIOとの関係を解説。
+
+- [【最新版】Google Antigravityとは？次世代AIエディターの全貌](https://miraina-ai.com/blogs/blog012.html)
+  - **更新日**: 2025.11.21
+  - **概要**: Google DeepMindが開発したAgentic AIエディター「Antigravity」の特徴、機能、開発プロセスへの影響を解説。
+
+- [【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例](https://miraina-ai.com/blogs/blog013.html)
+  - **更新日**: 2025.11.23
+  - **概要**: Deep ThinkモードやAgentic機能を搭載したGemini 3.0の新機能と、マーケティングや開発での具体的な活用事例。
+
+- [LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略](https://miraina-ai.com/blogs/blog014.html)
+  - **更新日**: 2025.11.24
+  - **概要**: LLMOとSEOの構造的な違いを整理し、信頼性（E-E-A-T）を中心とした統合的なマーケティング戦略を提言。
+
+- [【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ](https://miraina-ai.com/blogs/blog015.html)
+  - **更新日**: 2025.11.23
+  - **概要**: AIエージェントと画像生成AIを活用した、広告クリエイティブの自動化・最適化とブランド一貫性の担保について。
+
+- [AI活用事例5選：業界別・職種別の成功事例と導入の基本](https://miraina-ai.com/blogs/blog016.html)
+  - **更新日**: 2025.11.30
+  - **概要**: 製造、サービス、医療、金融、マーケティングなど各業界でのAI導入成功事例と、導入の具体的ステップを解説。
+
+- [LLMOの導入効果とは？─AI流入増加の事例と具体的な対策](https://miraina-ai.com/blogs/blog017.html)
+  - **更新日**: 2025.12.02
+  - **概要**: LLMO導入による検索流入増加の実例と、AIに参照されるための具体的なコンテンツ対策（構造化データなど）。
+
+- [【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌](https://miraina-ai.com/blogs/blog018.html)
+  - **更新日**: 2025.12.04
+  - **概要**: Anthropic社の最新モデルClaude Opus 4.5の機能（コーディング、Effortパラメータ等）とビジネス活用メリット。
+
+- [【2025年最新】Google Workspace Studio（GWS）とは？](https://miraina-ai.com/blogs/blog019.html)
+  - **更新日**: 2025.12.05
+  - **概要**: Gemini 3搭載の業務自動化プラットフォームGWSの機能解説と、ノーコードでのAIエージェント作成事例。

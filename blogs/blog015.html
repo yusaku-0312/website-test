@@ -2,299 +2,328 @@
 <html lang="ja">
 
 <head>
-    <!-- =============================
-       基本メタ
-    ============================== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="MIRAINA" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- =============================
-       タイトル / ディスクリプション（SEO）
-    ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来 | MIRAINAブログ</title>
     <meta name="description"
-        content="広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。" />
-
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog015.html" />
-
-    <!-- =============================
-       OGP
-    ============================== -->
-    <meta property="og:title" content="【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来 | MIRAINAブログ" />
+        content="広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog015.html">
+    <meta property="og:image" content="/images/blogs_images/blog015-1.webp">
     <meta property="og:description"
-        content="広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://miraina-ai.com/blogs/blog015.html" />
-    <meta property="og:site_name" content="MIRAINA" />
-    <meta property="og:image" content="https://miraina-ai.com/images/blog015-1.webp" />
-    <link rel="icon" href="/images/favicon.ico" />
+        content="広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。">
 
-    <!-- =============================
-       CSS
-    ============================== -->
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/blog_article.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- =============================
-       構造化データ（Article）
-    ============================== -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Article",
-      "headline":"【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
-      "description":"広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。",
-      "author":{"@type":"Person","name":"芝優作"},
-      "publisher":{
-        "@type":"Organization",
-        "name":"MIRAINA",
-        "logo":{"@type":"ImageObject","url":"https://miraina-ai.com/images/company-logo.webp","width":200,"height":50}
-      },
-      "image":"https://miraina-ai.com/images/blog015-1.webp",
-      "mainEntityOfPage":{"@type":"WebPage","@id":"https://miraina-ai.com/blogs/blog015.html"},
-      "url":"https://miraina-ai.com/blogs/blog015.html",
-      "datePublished":"2025-11-23",
-      "dateModified":"2025-11-23"
-    }
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
 </head>
 
 <body>
-    <!-- =============================
-       共通ヘッダー
-    ============================== -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="/index.html">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu"><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
 
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <!-- =============================
-       本文
-    ============================== -->
-    <main class="blog-article-main">
-
-        <!-- パンくずリスト -->
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="/index.html">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来</li>
-                </ul>
-            </div>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来</li>
+            </ul>
         </div>
 
-        <article class="blog-article container">
-
-            <!-- 記事ヘッダー -->
-            <header class="blog-article-header">
-                <h1>【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来</h1>
-
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年11月23日</div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.11.23</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">Nanobanana</p>
+                        <p class="article-tag">クリエイティブ</p>
+                    </div>
                 </div>
+                <h1 class="article-title">【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog015-1.webp" alt="Gemini 3.0とNanobanana Proの活用イメージ" width="800"
+                        height="450">
+                </div>
+            </header>
 
-                <!-- サムネイル画像
-                     Prompt: A futuristic and professional blog thumbnail representing 'AI in Advertising'. A sleek dashboard interface showing 'Gemini 3.0' and 'Nanobanana Pro' analyzing ad performance and generating creative assets. High-tech, data-driven, vibrant colors (blue, purple, neon). High quality, 4k, 3d render.
-                -->
-                <figure class="blog-article-thumb">
-                    <img src="/images/blog015-1.webp" alt="Gemini 3.0とNanobanana Proの活用イメージ" width="1000" height="630"
-                        class="blog-article-thumb-img" />
-                </figure>
-
-                <p class="blog-article-lead">
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
                     「パーソナライズされた広告を大量に作りたいが、リソースが足りない」「AIで作った画像はブランドイメージに合わない」——広告業界が抱えるこれらの課題を、Googleの最新AI<strong>「Gemini
                         3.0」</strong>と画像生成AI<strong>「Nanobanana Pro」</strong>が解決しようとしています。
                     本記事では、クリエイティブ制作の現場がどう変わるのか、具体的な活用事例を交えて解説します。
                 </p>
-            </header>
-
-            <!-- 目次 -->
-            <nav class="blog-article-toc" aria-label="目次">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#intro">はじめに：広告業界が直面する「クリエイティブの壁」</a></li>
-                    <li><a href="#gemini">Gemini 3.0がもたらす変革：エージェント型マーケティング</a></li>
-                    <li><a href="#nanobanana">Nanobanana Pro活用事例：「生成」から「制作」へ</a></li>
-                    <li><a href="#scenario">具体的な活用シナリオ（Before/After）</a></li>
-                    <li><a href="#summary">まとめ：AIは「ツール」から「パートナー」へ</a></li>
-                </ol>
-            </nav>
-
-            <!-- セクション：はじめに -->
-            <section id="intro">
-                <h2>はじめに：広告業界が直面する「クリエイティブの壁」</h2>
-                <p>デジタル広告の主流が「マス」から「個」へとシフトする中で、求められるクリエイティブの量は爆発的に増加しています。しかし、人の手による制作には限界があり、「質と量のトレードオフ」に悩む現場は少なくありません。
-                </p>
-                <p>そこで注目されているのが、単なる自動化を超えた<strong>「自律的なAI（Agentic AI）」</strong>の活用です。</p>
             </section>
 
-            <!-- セクション：Gemini 3.0 -->
-            <section id="gemini">
-                <h2>Gemini 3.0がもたらす変革：エージェント型マーケティング</h2>
-                <p>Gemini 3.0の最大の特徴は、その高度な推論能力とマルチモーダル理解、そして自律的にタスクを遂行する「エージェント機能」です。</p>
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#intro">1. はじめに：広告業界が直面する「クリエイティブの壁」</a></li>
+                    <li><a href="#gemini">2. Gemini 3.0がもたらす変革：エージェント型マーケティング</a></li>
+                    <li><a href="#nanobanana">3. Nanobanana Pro活用事例：「生成」から「制作」へ</a></li>
+                    <li><a href="#scenario">4. 具体的な活用シナリオ（Before/After）</a></li>
+                    <li><a href="#summary">5. まとめ：AIは「ツール」から「パートナー」へ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="intro">1. はじめに：広告業界が直面する「クリエイティブの壁」</h2>
+                <p>
+                    デジタル広告の主流が「マス」から「個」へとシフトする中で、求められるクリエイティブの量は爆発的に増加しています。しかし、人の手による制作には限界があり、「質と量のトレードオフ」に悩む現場は少なくありません。
+                </p>
+                <p>
+                    そこで注目されているのが、単なる自動化を超えた<strong>「自律的なAI（Agentic AI）」</strong>の活用です。
+                </p>
+
+                <h2 id="gemini">2. Gemini 3.0がもたらす変革：エージェント型マーケティング</h2>
+                <p>
+                    Gemini 3.0の最大の特徴は、その高度な推論能力とマルチモーダル理解、そして自律的にタスクを遂行する「エージェント機能」です。
+                </p>
 
                 <h3>自律的なキャンペーン運用</h3>
-                <p>従来、ターゲットごとのコピー作成や入札調整はマーケターの手作業でした。Gemini 3.0を活用したエージェントは、以下のようなタスクを自律的に行います。</p>
+                <p>
+                    従来、ターゲットごとのコピー作成や入札調整はマーケターの手作業でした。Gemini 3.0を活用したエージェントは、以下のようなタスクを自律的に行います。
+                </p>
                 <ul>
                     <li><strong>トレンド分析</strong>: SNSやニュースからリアルタイムでトレンドを把握。</li>
                     <li><strong>ターゲット設定</strong>: 複雑なデータから最適なペルソナを生成。</li>
                     <li><strong>クリエイティブ生成</strong>: ターゲットに刺さるコピーと画像を自動生成し、A/Bテストを実行。</li>
                 </ul>
-                <p>詳しくは<a href="/blogs/blog013.html">Gemini 3.0の解説記事</a>でも触れていますが、AIが単なる「道具」から「運用担当者」へと進化しているのです。</p>
+                <p>
+                    詳しくは<a href="blog013.html">Gemini 3.0の解説記事</a>でも触れていますが、AIが単なる「道具」から「運用担当者」へと進化しているのです。
+                </p>
 
-                <!-- 挿入画像
-                     Prompt: A conceptual illustration of 'Brand Consistency in AI'. A central glowing product bottle (generic luxury perfume) connected to multiple different ad formats (Instagram post, billboard, magazine ad) where the product looks identical but the background varies. Demonstrates AI's ability to maintain brand identity. Clean, modern, infographic style.
-                -->
-                <figure class="blog-article-figure">
-                    <img src="/images/blog015-2.webp" alt="AIによる自律的なマーケティング運用のイメージ" width="800" height="450">
-                </figure>
-            </section>
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog015-2.webp" alt="AIによる自律的なマーケティング運用のイメージ">
+                    <p class="figure-caption">AIによる自律的なマーケティング運用のイメージ</p>
+                </div>
 
-            <!-- セクション：Nanobanana Pro -->
-            <section id="nanobanana">
-                <h2>Nanobanana Pro活用事例：「生成」から「制作」へ</h2>
-                <p>画像生成AIは「面白い絵」を作るおもちゃから、プロの現場で使える「制作ツール」へと進化しました。その筆頭が<strong>Nanobanana Pro</strong>です。</p>
+                <h2 id="nanobanana">3. Nanobanana Pro活用事例：「生成」から「制作」へ</h2>
+                <p>
+                    画像生成AIは「面白い絵」を作るおもちゃから、プロの現場で使える「制作ツール」へと進化しました。その筆頭が<strong>Nanobanana Pro</strong>です。
+                </p>
 
                 <h3>1. テキストレンダリングの進化</h3>
-                <p>これまでのAIは画像内の文字（看板やパッケージの文字）が崩れることが課題でした。Nanobanana
-                    Proは多言語での正確なテキストレンダリングが可能になり、バナー広告やポスターの制作が劇的に効率化されました。</p>
+                <p>
+                    これまでのAIは画像内の文字（看板やパッケージの文字）が崩れることが課題でした。Nanobanana
+                    Proは多言語での正確なテキストレンダリングが可能になり、バナー広告やポスターの制作が劇的に効率化されました。
+                </p>
 
                 <h3>2. ブランドの一貫性（Brand Consistency）</h3>
-                <p>「AIで作ると毎回違う顔になる」「ロゴが歪む」という問題も解消されつつあります。参照画像（Reference
-                    Image）機能を使うことで、商品画像やブランドカラーを厳密に守った上での背景生成やバリエーション展開が可能になりました。</p>
-            </section>
+                <p>
+                    「AIで作ると毎回違う顔になる」「ロゴが歪む」という問題も解消されつつあります。参照画像（Reference
+                    Image）機能を使うことで、商品画像やブランドカラーを厳密に守った上での背景生成やバリエーション展開が可能になりました。
+                </p>
 
-            <!-- セクション：活用シナリオ -->
-            <section id="scenario">
-                <h2>具体的な活用シナリオ（Before/After）</h2>
+                <h2 id="scenario">4. 具体的な活用シナリオ（Before/After）</h2>
 
                 <h3>シナリオ1：グローバルキャンペーンのローカライズ</h3>
-                <div class="comparison-box">
-                    <p><strong>Before:</strong> 国ごとに現地の代理店に依頼し、翻訳と画像修正に数週間かかる。</p>
-                    <p><strong>After:</strong> Gemini 3.0が各国の文化背景を考慮してコピーを翻訳し、Nanobanana
+                <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>Before:</strong> 国ごとに現地の代理店に依頼し、翻訳と画像修正に数週間かかる。</p>
+                    <p style="margin-bottom: 0;"><strong>After:</strong> Gemini 3.0が各国の文化背景を考慮してコピーを翻訳し、Nanobanana
                         Proが現地の風景に合わせてビジュアルを自動調整。数時間で全地域のクリエイティブが完成。</p>
                 </div>
 
                 <h3>シナリオ2：100パターンのA/Bテスト</h3>
-                <div class="comparison-box">
-                    <p><strong>Before:</strong> デザイナーが徹夜でバナーのサイズ違いや色違いを作成。</p>
-                    <p><strong>After:</strong> AIエージェントが「成果の出る要素」を分析し、100パターンのバリエーションを即座に生成・配信開始。</p>
+                <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>Before:</strong> デザイナーが徹夜でバナーのサイズ違いや色違いを作成。</p>
+                    <p style="margin-bottom: 0;"><strong>After:</strong>
+                        AIエージェントが「成果の出る要素」を分析し、100パターンのバリエーションを即座に生成・配信開始。</p>
                 </div>
-            </section>
 
-            <!-- セクション：まとめ -->
-            <section id="summary">
-                <h2>まとめ：AIは「ツール」から「パートナー」へ</h2>
-                <p>Gemini 3.0とNanobanana Proの登場により、広告クリエイティブの現場は「手作業による制作」から「AIへのディレクション」へとシフトしています。</p>
-                <p>重要なのは、AIに任せる部分と、人間が担う「戦略・感情・倫理」の部分をどう線引きするかです。<a
-                        href="/blogs/blog014.html">LLMO（大規模言語モデル最適化）</a>の重要性が高まる中、AIに選ばれ、AIを使いこなす企業こそが、次世代の広告市場をリードしていくでしょう。
+                <h2 id="summary">5. まとめ：AIは「ツール」から「パートナー」へ</h2>
+                <p>
+                    Gemini 3.0とNanobanana Proの登場により、広告クリエイティブの現場は「手作業による制作」から「AIへのディレクション」へとシフトしています。
                 </p>
-            </section>
+                <p>
+                    重要なのは、AIに任せる部分と、人間が担う「戦略・感情・倫理」の部分をどう線引きするかです。<a
+                        href="blog014.html">LLMO（大規模言語モデル最適化）</a>の重要性が高まる中、AIに選ばれ、AIを使いこなす企業こそが、次世代の広告市場をリードしていくでしょう。
+                </p>
 
-            <!-- CTA -->
-            <section id="cta">
-                <h2>AI導入・クリエイティブ支援について</h2>
-                <p>MIRAINAでは、Gemini 3.0や画像生成AIを活用したマーケティング支援を行っています。</p>
-                <p>「AIで広告制作を効率化したい」「自社ブランドに合ったAI活用法を知りたい」という企業様は、ぜひお気軽にご相談ください。</p>
-                <p><a href="/contact.html" class="cta-button">お問い合わせはこちら</a></p>
-            </section>
+            </div>
 
-            <!-- 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <p class="reviewer-name">芝 優作（しば ゆうさく）</p>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">AI導入・クリエイティブ支援について</h3>
+                    <p class="cta-text">
+                        MIRAINAでは、Gemini 3.0や画像生成AIを活用したマーケティング支援を行っています。<br>
+                        「AIで広告制作を効率化したい」「自社ブランドに合ったAI活用法を知りたい」<br>
+                        という企業様は、ぜひお気軽にご相談ください。
+                    </p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
 
-                        <p class="reviewer-bio">
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog013.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog013-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.23</div>
+                            <div class="related-text">【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</div>
+                        </div>
+                    </a>
+                    <a href="blog004.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog004-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.08</div>
+                            <div class="related-text">AI研修おすすめ7選！選び方や費用について解説</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
         </article>
     </main>
 
-    <!-- =============================
-       共通フッター
-    ============================== -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="/index.html" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
             </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

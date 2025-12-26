@@ -4,260 +4,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
     <title>【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット | MIRAINAブログ</title>
     <meta name="description"
         content="2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。">
-    <link rel="canonical" href="https://miraina-ai.com/blogs/blog018.html">
-    <meta property="og:title" content="【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット | MIRAINAブログ">
-    <meta property="og:description"
-        content="2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://miraina-ai.com/blogs/blog018.html">
-    <meta property="og:site_name" content="MIRAINA">
+    <meta property="og:image" content="/images/blogs_images/blog018-1.webp">
+    <meta property="og:description"
+        content="2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/blog_article.css">
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌と活用メリット",
-        "description": "2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。",
-        "author": {
-            "@type": "Person",
-            "name": "芝優作"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "MIRAINA",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://miraina-ai.com/images/company-logo.webp",
-            "width": 200,
-            "height": 50
-            }
-        },
-        "image": "https://miraina-ai.com/images/blog018-1.webp",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://miraina-ai.com/blogs/blog018.html"
-        },
-        "url": "https://miraina-ai.com/blogs/blog018.html",
-        "datePublished": "2025-12-04",
-        "dateModified": "2025-12-04"
-        }
-    </script>
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-    <main class="blog-article-main">
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li><a href="/blogs.html">ブログ一覧</a></li>
-                    <li>Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット</li>
-                </ul>
-            </div>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="..//">ホーム</a></li>
+                <li><a href="..//blogs.html">ブログ</a></li>
+                <li>Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット</li>
+            </ul>
         </div>
-        <article class="blog-article container">
-            <header class="blog-article-header">
-                <h1>【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット</h1>
-                <div class="blog-article-meta"
-                    style="text-align:right; font-size:1.25rem; color:#666; margin-bottom:10px;">
-                    <div>更新日：2025年12月04日</div>
+
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.12.04</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Claude</p>
+                        <p class="article-tag">生成AI</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
                 </div>
-                <img src="/images/blog018-1.webp" alt="Claude Opus 4.5のイメージ" width="1200" height="630"
-                    style="width:100%; height:auto; border-radius:10px; margin-bottom:20px;">
-                <p class="blog-article-lead">
+                <h1 class="article-title">【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog018-1.webp" alt="Claude Opus 4.5のイメージ" width="800" height="450">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
                     2025年11月24日、Anthropic社からフラッグシップモデル「<strong>Claude Opus 4.5</strong>」がリリースされました。
                     コーディングや自律型エージェント分野で世界トップクラスと評価されるこのモデルは、業務の自動化や高度な意思決定支援に大きなインパクトを与える可能性があります。
                     本記事では、Opus 4.5の主な新機能と、それがビジネスにもたらす具体的なメリットについて、現場目線で分かりやすく解説します。
                 </p>
-            </header>
-            <nav class="blog-article-toc">
-                <h2>目次</h2>
-                <ol>
-                    <li><a href="#opus45-features">Claude Opus 4.5の3つの注目ポイント</a></li>
-                    <li><a href="#comparison">他モデル（GPT-5, Gemini 2.0）との比較</a></li>
-                    <li><a href="#business-use">ビジネス活用シーン：自律型エージェントの時代へ</a></li>
-                    <li><a href="#summary">まとめ</a></li>
-                </ol>
-            </nav>
-            <section>
-                <h2 id="opus45-features">Claude Opus 4.5の3つの注目ポイント</h2>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#opus45-features">1. Claude Opus 4.5の3つの注目ポイント</a></li>
+                    <li><a href="#comparison">2. 他モデル（GPT-5, Gemini 2.0）との比較</a></li>
+                    <li><a href="#business-use">3. ビジネス活用シーン：自律型エージェントの時代へ</a></li>
+                    <li><a href="#summary">4. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="opus45-features">1. Claude Opus 4.5の3つの注目ポイント</h2>
                 <p>Claude Opus 4.5は、単なるスコアの底上げにとどまらず、実務での使い勝手に直結する機能が強化されています。ここでは、特に押さえておきたい3つのポイントを紹介します。</p>
 
-                <div class="blog-figure">
-                    <img src="/images/blog018-2.webp" alt="Effortパラメータの概念図" width="800" height="450"
-                        style="width:100%; height:auto; border-radius:10px;">
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog018-2.webp" alt="Effortパラメータの概念図">
                 </div>
 
                 <h3>1. 思考深度を調整できる「Effort」パラメータ</h3>
-                <p>従来の多くのLLMでは、「どれくらい時間とトークンを使って深く考えるか」をユーザー側から直接コントロールすることはできませんでした。Opus
-                    4.5では、新たに「Effort（思考量）」パラメータが導入されています。</p>
-                <p>「Low」に設定すると比較的ライトに・高速に回答し、「High」に設定すると、より多くのステップを踏んで慎重に推論・検証を行い、丁寧な回答を返すように動作します。OpenAIのo1シリーズと同じく、「簡単な質問はサクッと、難しい相談はじっくり」といった使い分けがしやすくなっており、難解な課題や複雑な設計検討などでの活用が想定されています。
+                <p>
+                    従来の多くのLLMでは、「どれくらい時間とトークンを使って深く考えるか」をユーザー側から直接コントロールすることはできませんでした。Opus
+                    4.5では、新たに「Effort（思考量）」パラメータが導入されています。
+                </p>
+                <p>
+                    「Low」に設定すると比較的ライトに・高速に回答し、「High」に設定すると、より多くのステップを踏んで慎重に推論・検証を行い、丁寧な回答を返すように動作します。OpenAIのo1シリーズと同じく、「簡単な質問はサクッと、難しい相談はじっくり」といった使い分けがしやすくなっており、難解な課題や複雑な設計検討などでの活用が想定されています。
                 </p>
 
                 <h3>2. コーディング・エージェント分野での高い性能</h3>
-                <p>Opus 4.5は、ソフトウェアエンジニアリングのベンチマーク「SWE-bench
+                <p>
+                    Opus 4.5は、ソフトウェアエンジニアリングのベンチマーク「SWE-bench
                     Verified」において、約80.9%という非常に高いスコアを記録しています。これは、既存のコードベースを読み解き、バグ修正や機能追加の提案まで含めて、かなり実務に近いタスクをこなせるレベルに到達していることを示します。
                 </p>
-                <p>特に、大きめのコードベースや複雑な依存関係を含むプロジェクトでも、仕様の整理や実装方針のドラフト作成を任せやすく、<a
-                        href="/services/ai_develop.html">AI開発・導入支援</a>の現場でも、エンジニアのパートナーとして心強い存在になり得ます。</p>
+                <p>
+                    特に、大きめのコードベースや複雑な依存関係を含むプロジェクトでも、仕様の整理や実装方針のドラフト作成を任せやすく、<a
+                        href="..//services/ai_develop.html">AI開発・導入支援</a>の現場でも、エンジニアのパートナーとして心強い存在になり得ます。
+                </p>
 
                 <h3>3. 進化した「Computer Use（PC操作）」機能</h3>
-                <p>Sonnet 3.5でベータ提供されていた「Computer Use（PC操作）」機能は、Opus
-                    4.5でさらに精度が高まりました。画面のスクリーンショットからUIを認識し、マウスカーソルの移動、クリック、テキスト入力などの操作手順を自分で考えて実行できるのが特徴です。</p>
-                <p>これにより、APIが用意されていないレガシー画面の操作や、ブラウザ・スプレッドシート・チャットツールなど複数のアプリケーションにまたがる事務作業（例：WebでリサーチしてExcelに整理し、Slackで報告する）を、設計次第では高いレベルで自動化できるようになってきました。
+                <p>
+                    Sonnet 3.5でベータ提供されていた「Computer Use（PC操作）」機能は、Opus
+                    4.5でさらに精度が高まりました。画面のスクリーンショットからUIを認識し、マウスカーソルの移動、クリック、テキスト入力などの操作手順を自分で考えて実行できるのが特徴です。
                 </p>
-            </section>
+                <p>
+                    これにより、APIが用意されていないレガシー画面の操作や、ブラウザ・スプレッドシート・チャットツールなど複数のアプリケーションにまたがる事務作業（例：WebでリサーチしてExcelに整理し、Slackで報告する）を、設計次第では高いレベルで自動化できるようになってきました。
+                </p>
 
-            <section>
-                <h2 id="comparison">他モデル（GPT-5, Gemini 2.0）との比較</h2>
+                <h2 id="comparison">2. 他モデル（GPT-5, Gemini 2.0）との比較</h2>
                 <p>2025年は、各社が「深い推論」にフォーカスしたモデルを次々とリリースした年でもあります。GPT-5やGemini 2.0といった競合モデルと比べたとき、Opus
                     4.5の立ち位置はどのあたりなのでしょうか。</p>
 
                 <h3>「推論」と「長文脈」に強い有力候補</h3>
-                <p>ざっくり言うと、GPT-5はマルチモーダル対応やエコシステムの広さが強みとされる一方で、Opus
+                <p>
+                    ざっくり言うと、GPT-5はマルチモーダル対応やエコシステムの広さが強みとされる一方で、Opus
                     4.5は「長い文脈を保ったまま、筋の通った議論を続けやすいモデル」として評価されています。最大で約200kトークンという大きなコンテキストウィンドウに対応しており、長期のプロジェクトログや大量の資料をまとめて読み込ませて検討させる、といった用途に向いています。
                 </p>
-                <p>また、Gemini
+                <p>
+                    また、Gemini
                     2.0と比較した場合も、特にコーディングやエージェント用途における提案の的確さを評価する声が多く、セキュリティや安全性のポリシー面も含めて「業務システムと組み合わせやすいモデル」として選ばれるケースが増えています。
                 </p>
-            </section>
 
-            <section>
-                <h2 id="business-use">ビジネス活用シーン：自律型エージェントの時代へ</h2>
-                <p>Opus
+                <h2 id="business-use">3. ビジネス活用シーン：自律型エージェントの時代へ</h2>
+                <p>
+                    Opus
                     4.5のようなモデルの登場により、AIは単なる「チャットボット」から、業務フローの一部を継続的に任せられる「自律型エージェント」へと進化しつつあります。ビジネスの現場では、例えば次のような活用が考えられます。
                 </p>
-                <div class="blog-figure">
-                    <img src="/images/blog018-3.webp" alt="自律型エージェントの活用イメージ" width="800" height="450"
-                        style="width:100%; height:auto; border-radius:10px;">
+                <div class="article-figure">
+                    <img src="/images/blogs_images/blog018-3.webp" alt="自律型エージェントの活用イメージ">
                 </div>
 
                 <h3>準自律型の社内ヘルプデスク</h3>
-                <p>社内Wikiやマニュアルを読み込ませたOpus
+                <p>
+                    社内Wikiやマニュアルを読み込ませたOpus
                     4.5のエージェントは、社員からの問い合わせに答えるだけでなく、適切な権限と連携環境を整えれば、社内システムにログインしてパスワードリセット手続きのガイドを行ったり、申請書類の下書きを自動で作成したりするように設計することも可能です。
                 </p>
 
                 <h3>データ分析とレポート作成のアシスタント</h3>
-                <p>「今月の売上が落ちている要因を整理してほしい」といった指示に対しても、CRMやWeb解析ツールなどからデータを連携しておけば、数字の集計だけでなく、傾向の言語化や改善案のドラフトまで含めたレポート作成を支援できます。Effortパラメータを高めに設定すれば、より多角的に仮説を検討させるといった使い分けも考えられます。
+                <p>
+                    「今月の売上が落ちている要因を整理してほしい」といった指示に対しても、CRMやWeb解析ツールなどからデータを連携しておけば、数字の集計だけでなく、傾向の言語化や改善案のドラフトまで含めたレポート作成を支援できます。Effortパラメータを高めに設定すれば、より多角的に仮説を検討させるといった使い分けも考えられます。
+                </p>
+                <p>
+                    MIRAINAでは、こうした最新モデルを活用した<a
+                        href="..//services/ai_consulting.html">AIコンサルティング</a>を行っており、貴社の業務フローに合わせたAIエージェントの設計・導入を支援しています。
                 </p>
 
-                <p>MIRAINAでは、こうした最新モデルを活用した<a
-                        href="/services/ai_consulting.html">AIコンサルティング</a>を行っており、貴社の業務フローに合わせたAIエージェントの設計・導入を支援しています。
-                </p>
-            </section>
-
-            <section>
-                <h2 id="summary">まとめ</h2>
-                <p>Claude Opus
+                <h2 id="summary">4. まとめ</h2>
+                <p>
+                    Claude Opus
                     4.5は、生成AIの進化が「単に速く答える」段階から、「深く考え、長い文脈を踏まえて答える」段階へ移りつつあることを象徴するモデルのひとつです。高い推論能力と進化したComputer
-                    Use機能は、ホワイトカラー業務のやり方を大きく変えうるポテンシャルを持っています。</p>
-                <p>「AIを触ってはいるが、まだ業務に本格的に組み込めていない」「最新モデルをどこから導入すべきか迷っている」という方は、ぜひ一度MIRAINAにご相談ください。技術トレンドと現場のリアルを踏まえた、実践的なAI導入プランをご提案いたします。
+                    Use機能は、ホワイトカラー業務のやり方を大きく変えうるポテンシャルを持っています。
                 </p>
-                <p style="text-align:center; margin-top: 2em;">
-                    <a href="/contact.html" class="cta-button">AI導入について相談する</a>
+                <p>
+                    「AIを触ってはいるが、まだ業務に本格的に組み込めていない」「最新モデルをどこから導入すべきか迷っている」という方は、ぜひ一度MIRAINAにご相談ください。技術トレンドと現場のリアルを踏まえた、実践的なAI導入プランをご提案いたします。
                 </p>
-            </section>
 
-            <!-- Reviewer / 監修者情報 -->
-            <section class="reviewer-section" aria-labelledby="reviewer-heading">
-                <div class="reviewer-card no-avatar">
-                    <div class="reviewer-content">
-                        <p class="reviewer-title">この記事の監修者</p>
-                        <h3 class="reviewer-name">芝 優作（しば ゆうさく）</h3>
-                        <p class="reviewer-roles">
-                            MIRAINA 代表／生成AIコンサルタント
-                        </p>
-                        <p class="reviewer-bio">
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">生成AIの導入・構築支援</h3>
+                    <p class="cta-text">
+                        MIRAINAでは、Claude Opus 4.5をはじめとする最新モデルの導入支援や、<br>
+                        貴社専用のAIエージェント開発を承っております。<br>
+                        「自社の業務に最適なAIはどれか」といったご相談から、お気軽にお問い合わせください。
+                    </p>
+                    <a href="..//contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/company-logo.webp" alt="MIRAINA" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
                             中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
                             九州大学大学院でLLMに関する研究にも従事。
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="blog013.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog013-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.11.23</div>
+                            <div class="related-text">【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例を徹底解説</div>
+                        </div>
+                    </a>
+                    <a href="blog009.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog009-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.17</div>
+                            <div class="related-text">【2025年版】AIおすすめツール完全ガイド｜目的別に最適なAIを徹底比較</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
         </article>
     </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                    </ul>
-                </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -1,242 +1,155 @@
-/* about.html専用: Vision, Mission, Values セクション */
-.about-section-block {
-  text-align: center;
-  margin: var(--space-xl) 0 var(--space-l) 0;
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Vision & Mission
+   ========================================================================== */
+.vision-header {
+    display: inline-block;
+    border-bottom: 1px solid var(--color-miraina-black);
+    padding-bottom: 0.5rem;
 }
 
-.about-section-block .about-section-title {
-  font-size: var(--font-l);
-  color: var(--primary-blue);
-  margin-bottom: var(--space-s);
+.eng-heading {
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-gray);
 }
 
-.about-section-block .about-section-catch {
-  font-size: var(--font-m);
-  color: var(--dark-gray);
-  font-weight: bold;
+.vision-title,
+.mission-title {
+    font-size: var(--font-size-2xl);
+    line-height: 1.6;
+    font-weight: bold;
 }
 
-.about-section-block .about-section-desc {
-  font-size: var(--font-s);
-  color: var(--text-medium);
-  margin-top: 0.7em;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 768px) {
+
+    .vision-title,
+    .mission-title {
+        font-size: var(--font-size-3xl);
+    }
 }
 
-.about-section-block .about-section-message {
-  text-align: left;
+.vision-desc,
+.mission-desc {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--font-size-lg);
+    line-height: 2;
 }
 
-.about-values-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-l);
+.section-vision,
+.section-mission {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
 }
 
-.about-values-card {
-  background: var(--white);
-  border-radius: var(--space-l);
-  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.08);
-  width: 340px;
-  padding: var(--space-l) var(--space-m);
-  text-align: left;
+/* ==========================================================================
+   2. Values
+   ========================================================================== */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
-.about-values-card-title {
-  color: var(--primary-blue);
-  font-size: var(--font-m);
-  margin-bottom: var(--space-xs);
+@media (min-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.about-values-card-strong {
-  font-size: var(--font-s);
+.value-card {
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border for structure */
+    transition: transform var(--transition-normal);
+    height: 100%;
 }
 
-.about-values-card-list {
-  font-size: var(--font-xs);
-  margin: 0.7em 0 0 1.1em;
-  color: var(--text-medium);
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.about-main-visual {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  display: block;
-  margin: 0 auto var(--space-l) auto;
-  border-radius: var(--space-l);
-  box-shadow: 0 8px 32px rgba(30, 144, 255, 0.10);
+.value-card-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 0.5rem;
+    color: var(--color-intellect-blue);
+    font-weight: bold;
 }
 
-/* 会社概要ブロック - コンテンツ幅を最適化 */
-.about-company-block {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: var(--space-s);
-  margin: var(--space-xxl) auto var(--space-xl) auto;
-  max-width: 1000px;
-  padding: var(--space-l) var(--space-l);
+.value-card-sub {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--color-miraina-black);
 }
 
-/* 左側：会社情報ブロック - 幅をコンテンツに合わせて最小化 */
-.about-company-content {
-  flex: 0 0 auto;
-  width: auto;
-  min-width: 200px;
-  max-width: 300px;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+.value-card-list {
+    list-style: none;
+    /* Custom bullets */
 }
 
-.about-company-title {
-  font-size: var(--font-m);
-  font-weight: 700;
-  color: var(--text-dark);
-  margin: 0 0 var(--space-m) 0;
-  text-align: left;
-  white-space: nowrap;
+.value-card-list li {
+    font-size: var(--font-size-base);
+    color: var(--color-text-gray);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
 }
 
-.about-company-table {
-  width: auto;
-  border-collapse: separate;
-  border-spacing: 0 12px;
-  font-size: var(--font-s);
-  margin: 0;
+.value-card-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.about-company-table th {
-  text-align: left;
-  font-weight: 600;
-  padding: 0 var(--space-m) 0 0;
-  color: var(--medium-gray);
-  white-space: nowrap;
-  margin: 0;
+/* ==========================================================================
+   3. CEO Message
+   ========================================================================== */
+.bg-paper {
+    background-color: #fff;
+    /* Flip background context if body is gray */
 }
 
-.about-company-table td {
-  font-weight: 500;
-  color: var(--text-dark);
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
+/* Wait, body is #f4f4f4 (paper-gray). So bg-paper here probably means WHITE to look like a sheet of paper on a desk?
+   Or if the body is paper, then sections can be white.
+   Let's assume standard sections are transparent (paper gray) and some are white cards.
+   Design-wise:
+   Section Vision: Transparent (Gray)
+   Section Mission: White
+   Section Values: Transparent (Gray) Cards are White.
+   Section Message: White
+*/
+.section-mission {
+    background-color: var(--color-white);
 }
 
-/* 右側：会社写真ブロック */
-.about-company-image {
-  flex: 1 1 350px;
-  max-width: 400px;
-  min-width: 250px;
-  margin: 0;
-  padding: 0;
+.section-message {
+    background-color: var(--color-white);
 }
 
-.about-company-image img {
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  border-radius: var(--space-m);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-  display: block;
-  margin: 0;
-}
-
-.sns-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  /* 縦並び */
-  gap: var(--space-xxs);
-}
-
-.sns-list a {
-  color: var(--primary-blue);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-normal);
-}
-
-.sns-list a:hover {
-  color: var(--primary-blue-dark);
-}
-
-/* レスポンシブ対応 - タブレット */
-@media (max-width: 900px) {
-  .about-company-block {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin: 60px auto 40px auto;
-    text-align: center;
-  }
-
-  .about-company-content {
-    max-width: 100%;
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
-
-  .about-company-title {
-    font-size: var(--font-l);
-    text-align: center;
-    margin: 0 0 1.2rem 0;
-    white-space: normal;
-    /* レスポンシブでは改行を許可 */
-  }
-
-  .about-company-table {
-    font-size: var(--font-s);
+.message-layout {
+    max-width: 800px;
     margin: 0 auto;
-    width: auto;
-  }
-
-  .about-company-table th {
-    padding-right: 1.5rem;
-  }
-
-  .about-company-image {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .about-message-block {
-    margin: var(--space-xl) auto var(--space-l) auto;
-    padding: 0 var(--space-s);
-  }
-
-  .about-message-title {
-    font-size: var(--font-m);
-  }
-
-  .about-message-text {
-    font-size: var(--font-xs);
-  }
 }
 
-/* レスポンシブ対応 - モバイル */
-@media (max-width: 600px) {
-  .about-company-title {
-    font-size: var(--font-l);
-    margin: 0 0 1rem 0;
-  }
+.message-body p {
+    margin-bottom: 1.5rem;
+    font-size: var(--font-size-base);
+    line-height: 2;
+    color: var(--color-text-gray);
+}
 
-  .about-company-table {
-    font-size: var(--font-s);
-  }
-
-  .about-company-block {
-    gap: 12px;
-    margin: 40px auto 30px auto;
-  }
+/* ==========================================================================
+   4. Company Overview
+   ========================================================================== */
+.section-overview .dl-horizontal {
+    max-width: 800px;
+    margin: 0 auto;
 }

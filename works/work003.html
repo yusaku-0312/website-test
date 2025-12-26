@@ -4,275 +4,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
     <meta name="robots" content="index, follow">
-    <title>マーケティングのLP最適化（LPO）分析をn8nで効率化 | MIRAINA（ミライナ） - AI導入支援・研修・AI開発事業</title>
-    <meta name="description"
-        content="n8nを用いてLPO分析のための要素抽出を自動化。株式会社たなぼた様でLP１件あたり約40分・既存業務にかかる約70時間の業務時間削減を実現した事例。ワークフロー構成や効果、その他n8n × マーケティングの活用例も掲載。">
-    <meta property="og:title" content="マーケティングのLP最適化（LPO）分析をn8nで効率化 | MIRAINA（ミライナ） - AI導入支援・研修・AI開発事業">
-    <meta property="og:description"
-        content="n8nを用いてLPO分析のための要素抽出を自動化。株式会社たなぼた様でLP１件あたり約40分・既存業務にかかる約70時間の業務時間削減を実現した事例。ワークフロー構成や効果、その他n8n × マーケティングの活用例も掲載。">
+    <title>【導入事例】株式会社たなぼた様 | MIRAINA works</title>
+    <meta name="description" content="株式会社たなぼた様の導入事例。n8nとChatGPTを活用し、LP分析（要素抽出）業務を自動化。月間70時間以上の業務時間削減に成功しました。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【導入事例】株式会社たなぼた様：LP分析自動化で70時間削減">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://miraina.com/works/work003.html">
-    <meta property="og:image" content="https://miraina.com/images/works_images/work003-1.webp">
-    <meta property="og:site_name" content="MIRAINA">
-    <meta name="twitter:title" content="マーケティングのLP最適化（LPO）分析をn8nで効率化 | MIRAINA（ミライナ） - AI導入支援・研修・AI開発事業">
-    <meta name="twitter:description"
-        content="n8nを用いてLPO分析のための要素抽出を自動化。株式会社たなぼた様でLP１件あたり約40分・既存業務にかかる約70時間の業務時間削減を実現した事例。ワークフロー構成や効果、その他n8n × マーケティングの活用例も掲載。">
-    <meta name="twitter:image" content="https://miraina.com/images/works_images/work003-1.webp">
+    <meta property="og:url" content="https://miraina-ai.com/works/work003.html">
+    <meta property="og:image" content="/images/work_thum.jpg">
+    <meta property="og:description" content="n8nとChatGPT活用でLP分析を自動化。70時間以上の工数削減を実現。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/company-logo.webp">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/work_article.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "マーケティングのLP最適化（LPO）分析をn8nで効率化",
-        "author": {
-            "@type": "Person",
-            "name": "芝優作"
-        },
-        "image": [
-            "https://miraina.com/images/works_images/work003-1.webp",
-            "https://miraina.com/images/works_images/work003-2.webp",
-            "https://miraina.com/images/works_images/work003-3.webp",
-            "https://miraina.com/images/works_images/work003-4.webp",
-            "https://miraina.com/images/works_images/work003-5.webp",
-            "https://miraina.com/images/works_images/work003-6.webp"
-        ],
-        "url": "https://miraina.com/works/work003.html",
-        "datePublished": "2025-08-19",
-        "dateModified": "2025-09-16",
-        "description": "n8nを用いてLPO分析のための要素抽出を自動化。株式会社たなぼた様でLP１件あたり約40分・既存業務にかかる約70時間の業務時間削減を実現した事例。ワークフロー構成や効果、その他n8n × マーケティングの活用例も掲載。"
-    }
-    </script>
-
+    <link rel="stylesheet" href="/css/work_detail.css">
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img src="/images/company-logo.webp" alt="MIRAINAロゴ" class="logo-img" width="200" height="50"
-                        loading="eager" decoding="async">
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム </a></li>
-                    <li><a href="/works.html"> 事例紹介 </a></li>
-                    <li> n8n × SlackでDM送信自動化</li>
-                </ul>
-            </div>
-        </div>
-        <article class="work-detail-article">
-            <div class="work-detail-meta-container">
-                <div class="work-detail-meta">
-                    <span class="work-detail-update">更新日：2025年9月16日</span>
-                </div>
-            </div>
-            <div class="work-detail-header-container">
-                <div class="work-detail-header-left">
-                    <p class="work-detail-eyebrow">MIRAINA（ミライナ）は中小企業のAI導入を支援します</p>
-                    <h1 class="work-detail-title">n8nを用いた『マーケティングのLP最適化（LPO）分析』システムを導入</h1>
-                    <p class="work-detail-lead">〜100件以上のLP分析（要素抽出）を自動化・70時間以上の業務時間削減に成功〜</p>
-                    <div class="work-detail-contact-row">
-                        <div class="work-detail-contact">
-                            <p class="consultation-text">＼ 自動化について相談してみる ／</p>
-                            <a href="/contact.html" class="cta-button">お問い合わせはこちらから</a>
-                        </div>
 
-                        <div class="work-detail-contact">
-                            <p class="consultation-text">＼ n8nを学んでみる ／</p>
-                            <a href="/contact.html" class="cta-button">資料ダウンロードはこちらから</a>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>株式会社たなぼた様</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. Header: Title, Update Date, Categories -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2025.09.16 更新</span>
+                    <span class="work-cat">AI開発 / 業務自動化</span>
+                </div>
+                <h1 class="work-title">n8nを用いた『マーケティングのLP最適化（LPO）分析』システムを導入</h1>
+                <p class="work-subtitle"
+                    style="font-family: var(--font-gothic); font-weight: bold; margin-top: -1rem; margin-bottom: 2rem;">
+                    〜100件以上のLP分析（要素抽出）を自動化・70時間以上の業務時間削減に成功〜</p>
+            </header>
+
+            <!-- 5. Thumbnail -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work003-1.webp" alt="事例メインビジュアル" width="1200" height="675">
+            </div>
+
+            <!-- 4. Summary -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            <strong>n8n × ChatGPT でLP最適化（LPO）分析のための要素抽出作業を自動化</strong><br><br>
+                            株式会社たなぼた様へ、n8n × ChatGPT によるLP最適化（LPO）分析のための要素抽出自動化システムを導入いたしました。
+                            導入前の時点で100件以上抱えていた分析対象LPの要素抽出を自動化し、業務効率化を実現しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Table of Contents -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#background">2. 導入背景・課題</a></li>
+                    <li><a href="#process">3. 自動化ワークフローについて</a></li>
+                    <li><a href="#effect">4. 自動化による効果</a></li>
+                    <li><a href="#other-cases">5. その他 マーケティング × n8nの活用事例</a></li>
+                </ul>
+            </div>
+
+            <!-- 15. Client Info -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">株式会社たなぼた様について</h3>
+                    <dl class="client-data-list">
+                        <div class="data-row">
+                            <dt>企業名</dt>
+                            <dd>株式会社たなぼた 様</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>業種</dt>
+                            <dd>スクール事業・マーケティング事業等</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>導入部門</dt>
+                            <dd>マーケティング部門</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- 14. Introduction Background -->
+            <section id="background" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BACKGROUND</h2>
+                    <h3 class="work-subheading">手動分析による膨大な作業量と、<br>本来の業務への圧迫。</h3>
+                    <p class="work-text">
+                        貴社では、マーケティングのLP最適化（LPO）分析のための要素抽出作業を手動で行っていました。
+                        しかし、抽出する要素は9項目もあり、１つ１つのLPに手動で目を通して分析していくには作業量が膨大で、多大な手間がかかっていました。
+                    </p>
+                    <p class="work-text">
+                        さらに、導入前の時点で分析対象となるLPを100件以上抱えており、今後の要素抽出にも膨大な時間が割かれることが予想されたため、自動化ツールを導入することにしました。
+                    </p>
+                    <p class="work-text">
+                        また、今後貴社内で他業務の業務効率化や内製化、ChatGPTを始めとした生成AIとの連携を進めていくために、非エンジニアでも扱いやすいノーコードツールの導入を検討しており、今回
+                        <strong>n8nによる『LP要素抽出作業自動化ツール』</strong>を導入するという方針に決定しました。
+                    </p>
+
+                    <figure class="work-figure">
+                        <img src="/images/works_/images/work003-2.webp" alt="自動化イメージ" width="600" height="340">
+                        <figcaption>自動化前の課題イメージ</figcaption>
+                    </figure>
+
+                    <!-- Comparison Diagram (Added from template/work001 style for consistency) -->
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">導入前（手動）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>9項目の要素を目視で確認</li>
+                                        <li>100件以上のLP在庫</li>
+                                        <li>1件あたり約40分の作業時間</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">導入後（自動化）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>n8n × ChatGPTで完全自動化</strong></li>
+                                        <li>URL一覧から一括処理</li>
+                                        <li>エラー検知も自動ログ保存</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：導入前後の業務フロー比較</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 8. Process Flow -->
+            <section id="process" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">WORKFLOW</h2>
+                    <h3 class="work-subheading">自動化ワークフローについて</h3>
+                    <p class="work-text">
+                        今回導入した自動化ツールでは、まずGoogleスプレッドシートに保存されたLPのURLをn8n側で読み込みます。
+                        その後LPのHTMLコードを取得し、そのHTMLコードをChatGPTに入力することで、そのLPの要素抽出を自動化するという仕組みとなっています。
+                    </p>
+
+                    <figure class="work-figure">
+                        <img src="/images/works_/images/work003-3.webp" alt="n8nワークフロー図" width="800" height="450">
+                        <figcaption>実装したn8nワークフロー全体図</figcaption>
+                    </figure>
+
+                    <div class="work-text"
+                        style="background: #f9f9f9; padding: 2rem; margin-top: 2rem; border-radius: 4px;">
+                        <strong>具体的な処理フロー</strong>
+                        <ol style="list-style: decimal; margin-left: 1.5rem; margin-top: 1rem; line-height: 1.8;">
+                            <li>GoogleスプレッドシートからLPのURLを取得</li>
+                            <li>HTTPリクエストでURLのHTMLコードを取得</li>
+                            <li>LP内に存在する画像を取得し、画像解析や文字起こしを行う</li>
+                            <li>解析結果から個々の抽出対象要素を取得</li>
+                            <li>画像解析結果と取得したHTMLコードをChatGPTに入力し、分析対象９項目を抽出</li>
+                            <li>抽出した結果をスプレッドシートに保存</li>
+                            <li>エラーが発生した場合、スプレッドシートにエラーログを保存</li>
+                            <li>正常に要素抽出が行われたURLには「要素抽出完了」フラグを立てる</li>
+                            <li>次に抽出された各項目ごとに、ChatGPTに差分分析を実施</li>
+                            <li>差分分析の結果をスプレッドシートに保存</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Results -->
+            <section id="effect" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">自動化による効果</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">削減作業時間</div>
+                            <div class="metric-value">70<span class="metric-unit">時間以上</span></div>
+                            <div class="metric-down">（既存業務分）</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">1件あたりの削減</div>
+                            <div class="metric-value">40<span class="metric-unit">分以上</span></div>
                         </div>
                     </div>
+
+                    <p class="work-text">
+                        業務効率化で創出した70時間で別業務に取り組むことで、さらなる利益創出や見込み顧客への接触回数の増加、マーケティング業務における分析の高度化なども実現します。
+                    </p>
                 </div>
-                <div class="work-detail-header-right">
-                    <img src="/images/works_images/work003-1.webp" alt="MIRAINA（ミライナ）が株式会社たなぼた様へn8n自動化ツールを導入"
-                        class="work-detail-mainimg" width="600" height="340">
+            </section>
+
+            <!-- Other Cases -->
+            <section id="other-cases" class="work-section fade-in-section bg-paper">
+                <div class="section-inner">
+                    <h3 class="work-subheading">その他 マーケティング × n8nの活用事例</h3>
+                    <p class="work-text">
+                        n8n と マーケティング を連携したそのほかの活用事例を紹介します。
+                    </p>
+
+                    <div class="diagram-container" style="text-align: left; background: #fff;">
+                        <h4
+                            style="font-weight: bold; margin-bottom: 1rem; font-size: 1.1rem; border-bottom: 2px solid var(--color-intellect-blue); display: inline-block;">
+                            活用事例１：n8n × Webフォーム × Gmailで一次応答を5分以内に</h4>
+                        <p style="margin-bottom: 1rem;">
+                            フォームからのお問い合わせを受信後、メールアドレスのドメイン情報をもとにChatGPTで企業情報を取得。その情報を活用して最適な一次返信を自動生成・送信します。</p>
+                        <ul class="diagram-process" style="margin-bottom: 0;">
+                            <li class="process-step" style="font-size: 0.8rem;">フォーム受信<br>(Webhook)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">企業情報収集<br>(ChatGPT)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">資料自動挿入<br>(AI)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">一次返信送信<br>(Gmail)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">結果通知<br>(Slack)</li>
+                        </ul>
+                        <figure class="work-figure" style="margin-top: 1.5rem;">
+                            <img src="/images/works_/images/work003-4.webp" alt="事例1イメージ"
+                                style="max-height: 300px; object-fit: contain;">
+                        </figure>
+                    </div>
+
+                    <div class="diagram-container" style="text-align: left; background: #fff; margin-top: 2rem;">
+                        <h4
+                            style="font-weight: bold; margin-bottom: 1rem; font-size: 1.1rem; border-bottom: 2px solid var(--color-intellect-blue); display: inline-block;">
+                            活用事例２：n8n × クロールで競合の更新点を差分抽出＆示唆通知</h4>
+                        <p style="margin-bottom: 1rem;">競合サイト・価格表・LP見出しを定期取得し、変更点を差分抽出。要点サマリーと改善示唆をSlackへ自動配信します。</p>
+                        <ul class="diagram-process" style="margin-bottom: 0;">
+                            <li class="process-step" style="font-size: 0.8rem;">定期クロール</li>
+                            <li class="process-step" style="font-size: 0.8rem;">差分抽出<br>(価格・訴求)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">サマリー生成<br>(AI)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">通知・起票<br>(Slack)</li>
+                        </ul>
+                        <figure class="work-figure" style="margin-top: 1.5rem;">
+                            <img src="/images/works_/images/work003-5.webp" alt="事例2イメージ"
+                                style="max-height: 300px; object-fit: contain;">
+                        </figure>
+                    </div>
+
+                    <div class="diagram-container" style="text-align: left; background: #fff; margin-top: 2rem;">
+                        <h4
+                            style="font-weight: bold; margin-bottom: 1rem; font-size: 1.1rem; border-bottom: 2px solid var(--color-intellect-blue); display: inline-block;">
+                            活用事例３：n8nで「SEO対策記事」を自動生成</h4>
+                        <p style="margin-bottom: 1rem;">ターゲットキーワードと検索意図を入力するだけで、構成案から本文下書き、CMS投稿まで自動化。</p>
+                        <ul class="diagram-process" style="margin-bottom: 0;">
+                            <li class="process-step" style="font-size: 0.8rem;">KW入力</li>
+                            <li class="process-step" style="font-size: 0.8rem;">情報収集<br>(共起語など)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">構成・執筆<br>(AI)</li>
+                            <li class="process-step" style="font-size: 0.8rem;">下書き投稿<br>(CMS)</li>
+                        </ul>
+                        <figure class="work-figure" style="margin-top: 1.5rem;">
+                            <img src="/images/works_/images/work003-6.webp" alt="事例3イメージ"
+                                style="max-height: 300px; object-fit: contain;">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. CTA Button -->
+            <div class="work-cta fade-in-section">
+                <!-- CTA 1: Contact -->
+                <div class="cta-box" style="margin-bottom: 2rem;">
+                    <h3 class="cta-title">＼ 自動化について相談してみる ／</h3>
+                    <p class="cta-text">MIRAINAは、貴社の状況に合わせた最適なAI導入・自動化プランをご提案します。</p>
+                    <a href="..//contact.html" class="btn btn-black-fill">お問い合わせはこちらから</a>
+                </div>
+
+                <!-- CTA 2: Download -->
+                <div class="cta-box"
+                    style="background-color: var(--color-paper-gray); color: var(--color-miraina-black); border: 2px solid var(--color-miraina-black);">
+                    <h3 class="cta-title">＼ n8nを学んでみる ／</h3>
+                    <p class="cta-text">n8nの活用事例や導入ガイドブックを無料で配布しています。</p>
+                    <a href="..//contact.html" class="btn btn-black-fill"
+                        style="background-color: var(--color-miraina-black); color: var(--color-white);">資料ダウンロードはこちらから</a>
                 </div>
             </div>
-            <section class="work-detail-summary">
-                <h2 class="work-detail-section-title">n8n × ChatGPT でLP最適化（LPO）分析のための要素抽出作業を自動化</h2>
-                <p>この度、株式会社たなぼた様へ、<strong>n8n × ChatGPT によるLP最適化（LPO）分析のための要素抽出自動化</strong>システムを導入いたしました。</p>
-                <p class="client-info-title"><a href="https://sushitabi.jp/">株式会社たなぼた様について</a></p>
-                <ul class="work-detail-info">
-                    <li>業種：スクール事業・マーケティング事業等</li>
-                    <li>今回自動化ツールを導入した部門：マーケティング部門</li>
-                </ul>
-            </section>
-            <section class="work-detail-subimg">
-                <img src="/images/works_images/work003-2.webp" alt="Slack内でのDM送信自動化システムのイメージ図"
-                    class="work-detail-subimg-1" width="600" height="340">
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">導入背景</h2>
-                <p>貴社では、マーケティングのLP最適化（LPO）分析のための要素抽出作業を手動で行っていました。</p>
-                <p>しかし、抽出する要素は9項目もあり、１つ１つのLPに手動で目を通して分析していくには作業量が膨大で、手間がかかります。</p>
-                <p>さらに、導入前の時点で分析対象となるLPを100件以上抱えており、今後の要素抽出にも膨大な時間が割かれることが予想されたため、自動化ツールを導入することにしました。</p>
-                <p>また、今後貴社内で他業務の業務効率化や内製化、ChatGPTを始めとした生成AIとの連携を進めていくために、非エンジニアでも扱いやすいノーコードツールの導入を検討しており、今回
-                    <strong>n8nによる『LP要素抽出作業自動化ツール</strong>』を導入するという方針に決定しました。
-                </p>
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">自動化ワークフローについて</h2>
-                <p>今回導入した自動化ツールでは、まずGoogleスプレッドシートに保存されたLPのURLをn8n側で読み込みます。その後LPのHTMLコードを取得し、そのHTMLコードをChatGPTに入力することで、そのLPの要素抽出を自動化するという仕組みとなっています。
-                </p>
-                <p>具体的には、以下のようなワークフローを設定しました。</p>
-                <ol>
-                    <li>1. GoogleスプレッドシートからLPのURLを取得</li>
-                    <li>2. HTTPリクエストでURLのHTMLコードを取得</li>
-                    <li>3. LP内に存在する画像を取得し、画像解析や文字起こしを行う</li>
-                    <li>4. 解析結果から個々の抽出対象要素を取得</li>
-                    <li>5. 画像解析結果と取得したHTMLコードをChatGPTに入力し、分析対象９項目を抽出（下図データ分析１を参照）</li>
-                    <li>6. 抽出した結果をスプレッドシートに保存</li>
-                    <li>7. エラーが発生した場合、スプレッドシートにエラーログ（エラー発生時刻 / エラー詳細/ エラー発生対象LPリンク）を保存</li>
-                    <li>8. 正常に要素抽出が行われたURLには、スプレッドシートに「要素抽出完了」というフラグを立てる</li>
-                    <li>9. 次に抽出された各項目ごとに、ChatGPTにその項目の差分分析を実施（下図データ分析２を参照）</li>
-                    <li>10. 差分分析の結果をスプレッドシートに保存</li>
-                </ol>
-            </section>
-            <section class="work-detail-subimg">
-                <img src="/images/works_images/work003-3.webp" alt="LP最適化（LPO）分析のための要素抽出自動化システムのn8nワークフロー"
-                    class="work-detail-subimg-1" width="600" height="340">
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">自動化による効果</h2>
-                <p>自動化により、以下のような効果が得られました。</p>
-                <ul>
-                    <li>・既存業務の約70時間の作業時間の削減</li>
-                    <li>・LP１件あたり約40分以上の作業時間を削減</li>
-                </ul>
-                <br>
-                <p><strong>業務効率化</strong>で創出した70時間で別業務に取り組むことで、さらなる利益創出や見込み顧客への接触回数の増加、マーケティング業務における分析の高度化なども実現します。
-                </p>
-            </section>
-            <section class="work-detail-content">
-                <h2 class="work-detail-section-title">その他 マーケティング × n8nの活用事例</h2>
-                <p><strong>n8n</strong> と <strong>マーケティング</strong> を連携したそのほかの活用事例を紹介します。</p>
-                <h3 class="work-sample-section-title">活用事例１：n8n × Webフォーム × Gmailで一次応答を5分以内に</h3>
-                <div class="work-detail-two-col-block">
-                    <div class="work-detail-two-col-text">
-                        <p>フォームからのお問い合わせを受信したら、フォームのメールアドレスからドメインを元にChatGPTで相手の企業情報を取得。次に、その情報を参考に最適な一次返信を自動作成・送付。予約リンクや資料添付まで自動化し、初動対応の速度と体験を両立します。
-                        </p>
-                        <ul class="work-detail-list">
-                            <li>1. Webhookでフォーム送信を受信し、メールアドレスのドメインからChatGPTが相手の企業情報を収集</li>
-                            <li>2. AIエージェントの判断でCalendly／Googleカレンダーの予約リンクや資料PDFを自動挿入</li>
-                            <li>3. パーソナライズした一次返信をGmailで送信</li>
-                            <li>4. 一次返信が完了したことを担当者のSlackへ通知し、対応ステータスをスプレッドシートへ記録</li>
-                        </ul>
-                    </div>
-                    <img src="/images/works_images/work003-4.webp" alt="n8n・Webフォーム・Gmail連携による一次応答自動化の構成図"
-                        class="work-detail-two-col-img" width="600" height="380">
-                </div>
-                <h3 class="work-sample-section-title">活用事例２：n8n × クロールで競合の更新点を差分抽出＆示唆通知</h3>
-                <div class="work-detail-two-col-block">
-                    <div class="work-detail-two-col-text">
-                        <p>競合サイトや価格表、LPの見出しを定期取得し、差分を抽出。要点サマリーと改善示唆をSlackに配信して、打ち手までのリードタイムを短縮します。</p>
-                        <ul class="work-detail-list">
-                            <li>1. RSS/サイト/価格ページを定期クロールし、HTML→テキストを正規化</li>
-                            <li>2. 直近との差分（価格/機能/訴求文/FAQ）を抽出</li>
-                            <li>3. 要点サマリーと示唆（自社LP/広告での活用案）を自動生成</li>
-                            <li>4. Slackで通知し、必要に応じてBacklog/Jiraへチケット自動起票</li>
-                        </ul>
-                    </div>
-                    <img src="/images/works_images/work003-5.webp" alt="n8nによる競合差分監視と示唆アラートの構成図"
-                        class="work-detail-two-col-img" width="600" height="380">
-                </div>
-                <h3 class="work-sample-section-title">活用事例３：n8nで“SEO対策記事”を自動生成</h3>
-                <div class="work-detail-two-col-block">
-                    <div class="work-detail-two-col-text">
-                        <p>ターゲットキーワードと検索意図を入力すると、競合見出しとユーザー課題を踏まえた構成案→本文下書き→CMS下書き投稿まで自動化。編集者は最終品質の担保に集中できます。</p>
-                        <ul class="work-detail-list">
-                            <li>1. キーワード/検索意図/ペルソナをCSVまたはフォームで投入</li>
-                            <li>2. 競合上位の見出し・FAQ・共起語を収集し、構成案を自動生成</li>
-                            <li>3. 本文下書き（E-E-A-T観点の注意書き／出典リンクプレースホルダ付き）を作成</li>
-                            <li>4. CMS（WordPress/Headless）に下書き投稿し、編集チェックをSlackで促進</li>
-                        </ul>
-                    </div>
-                    <img src="/images/works_images/work003-6.webp" alt="n8nによるSEO記事自動生成のイメージ図"
-                        class="work-detail-two-col-img" width="600" height="380">
+
+            <!-- 11. Related Articles -->
+            <section class="work-related fade-in-section">
+                <h3 class="related-title">その他の事例</h3>
+                <div class="related-grid">
+                    <a href="work002.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/work_thum.jpg" alt="関連事例">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AI開発 / 業務自動化</div>
+                            <div class="related-txt">n8nを用いた『Slack内でのDM送信自動化』システムを導入</div>
+                        </div>
+                    </a>
                 </div>
             </section>
+
         </article>
     </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
 
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

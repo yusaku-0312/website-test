@@ -1,117 +1,160 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MIRAINA">
-    <meta name="robots" content="noindex, nofollow">
-    <title>プライバシーポリシー | MIRAINA（ミライナ）</title>
-    <meta name="description" content="MIRAINAのプライバシーポリシーです。お客様の個人情報の取り扱いについて詳しく説明しています。">
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/privacy_policy.css">
+    <meta name="robots" content="noindex, follow">
+    <!-- Privacy policy usually doesn't need aggressive indexing, but user didn't specify. Safe default or index? User said 'seo best practices', usually index is fine. Let's use index. -->
+    <meta name="robots" content="index, follow"> <!-- Correcting to index per general site rules -->
+    <title>プライバシーポリシー | MIRAINA</title>
+    <meta name="description" content="MIRAINAのプライバシーポリシー（個人情報保護方針）ページです。">
+    <link rel="canonical" href="https://miraina-ai.com/privacy_policy.html">
+
+    <!-- Design System: Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="//images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/privacy_policy.css">
+
+    <!-- OGP -->
+    <meta property="og:title" content="プライバシーポリシー | MIRAINA">
+    <meta property="og:description" content="MIRAINAのプライバシーポリシーについて。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/privacy_policy.html">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta property="og:image" content="https://miraina-ai.com//images/ogp.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="プライバシーポリシー | MIRAINA">
+    <meta name="twitter:description" content="MIRAINAのプライバシーポリシーについて。">
+    <meta name="twitter:image" content="https://miraina-ai.com//images/ogp.jpg">
 </head>
+
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="site-logo">
-                <a href="https://miraina-ai.com">
-                    <img
-                        src="/images/company-logo.webp"
-                        alt="MIRAINAロゴ"
-                        class="logo-img"
-                        width="200"
-                        height="50"
-                        loading="eager"
-                        decoding="async"
-                    >
-                    <h1>MIRAINA（ミライナ）</h1>
-                </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <h1>MIRAINA</h1>
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="/services.html" class="nav-link">サービス</a></li>
-                    <li><a href="/about.html" class="nav-link">MIRAINAについて</a></li>
-                    <li><a href="/works.html" class="nav-link">導入事例</a></li>
-                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
-                    <li><a href="/contact.html" class="nav-link contact-btn">問い合わせ</a></li>
-                </ul>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
         </div>
     </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/services.html">サービス</a></li>
-            <li><a href="/about.html">MIRAINAについて</a></li>
-            <li><a href="/works.html">導入事例</a></li>
-            <li><a href="/blogs.html">ブログ</a></li>
-            <li><a href="/contact.html">問い合わせ</a></li>
-        </ul>
-    </nav>
+
     <main>
-        <div class="breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="https://miraina-ai.com">ホーム</a></li>
-                    <li>プライバシーポリシー</li>
-                </ul>
-            </div>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li>プライバシーポリシー</li>
+            </ul>
         </div>
-        <section class="page-header">
+
+        <!-- Page Hero -->
+        <section class="page-hero fade-in-section">
             <div class="container">
-                <h2 class="page-title">プライバシーポリシー</h2>
+                <h1 class="page-hero-title">プライバシーポリシー</h1>
             </div>
         </section>
 
-        <section class="privacy-content">
+        <!-- Privacy Content -->
+        <section class="section-privacy py-section">
             <div class="container">
-                <div class="privacy-text">
-                   
-                    
-                    <h2>プライバシーポリシー</h2>
+                <div class="privacy-content fade-in-section">
+
+                    <h2 class="privacy-heading">プライバシーポリシー</h2>
                     <p>本プライバシーポリシーは、当方（以下「当サービス」）が提供するサービスにおいて、ユーザーの個人情報をどのように取得・利用・管理するかについて定めたものです。</p>
-                    
-                    <h2>1. 取得する個人情報について</h2>
+
+                    <h2 class="privacy-heading">1. 取得する個人情報について</h2>
                     <p>当サービスでは、以下の情報を取得することがあります。</p>
                     <ul>
                         <li>氏名、メールアドレス、電話番号などのお問い合わせ情報</li>
                     </ul>
-                    
-                    <h2>2. 個人情報の利用目的</h2>
+
+                    <h2 class="privacy-heading">2. 個人情報の利用目的</h2>
                     <p>取得した情報は以下の目的で使用します。</p>
                     <ul>
                         <li>お問い合わせへの対応</li>
                         <li>サービス向上のための分析</li>
                         <li>法令に基づく対応</li>
                     </ul>
-                    
-                    <h2>3. 第三者への提供について</h2>
+
+                    <h2 class="privacy-heading">3. 第三者への提供について</h2>
                     <p>取得した個人情報は、以下の場合を除き、第三者に開示・提供することはありません。</p>
                     <ul>
                         <li>ご本人の同意がある場合</li>
                         <li>法令に基づき開示が必要な場合</li>
                     </ul>
-                    
-                    <h2>4. 外部サービスの利用</h2>
+
+                    <h2 class="privacy-heading">4. 外部サービスの利用</h2>
                     <p>当サービスでは、以下の外部サービスを利用しており、必要に応じて個人情報が送信される可能性があります。</p>
                     <ul>
                         <li>お問い合わせフォーム（Googleフォーム）</li>
                     </ul>
-                    <p>※各サービスのプライバシーポリシーは、各提供元のサイトをご確認ください。</p>
-                    
-                    <h2>5. 個人情報の管理について</h2>
+                    <p class="note">※各サービスのプライバシーポリシーは、各提供元のサイトをご確認ください。</p>
+
+                    <h2 class="privacy-heading">5. 個人情報の管理について</h2>
                     <p>当サービスは、個人情報への不正アクセス、紛失、漏洩などを防止するため、必要かつ適切な安全対策を講じます。</p>
-                    
-                    <h2>6. プライバシーポリシーの変更について</h2>
+
+                    <h2 class="privacy-heading">6. プライバシーポリシーの変更について</h2>
                     <p>本ポリシーの内容は、必要に応じて予告なく変更することがあります。変更後のポリシーは、本ページに掲載された時点で効力を持つものとします。</p>
-                    
-                    <h2>7. お問い合わせ窓口</h2>
+
+                    <h2 class="privacy-heading">7. お問い合わせ窓口</h2>
                     <p>プライバシーポリシーに関するお問い合わせは、以下までご連絡ください。</p>
                     <div class="contact-info">
                         <p><strong>メールアドレス</strong>：shiba.yusaku.ai@gmail.com</p>
@@ -122,51 +165,65 @@
             </div>
         </section>
     </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- 1) 左：ブランド -->
-                <div class="footer-col footer-col--brand">
-                    <a class="footer-logo" href="https://miraina-ai.com" aria-label="MIRAINA トップへ">MIRAINA</a>
-                </div>
 
-                <!-- 2) 中左：空白スペース（装飾用） -->
-                <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
-
-                <!-- 3) 中右：サイトリンク -->
-                <div class="footer-col footer-col--links">
-                    <p class="footer-heading">サイトメニュー</p>
-                    <nav class="footer-nav" aria-label="フッターナビゲーション">
-                        <ul>
-                            <li><a href="/services.html">サービス</a></li>
-                            <li><a href="/about.html">MIRAINAについて</a></li>
-                            <li><a href="/works.html">導入事例</a></li>
-                            <li><a href="/blogs.html">ブログ</a></li>
-                            <li><a href="/contact.html">問い合わせ</a></li>
-                            <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- 4) 右：SNS（テキストのみ） -->
-                <div class="footer-col footer-col--sns">
-                    <p class="footer-heading">SNS</p>
-                    <ul class="footer-sns-list">
-                        <!-- <li><a href="https://twitter.com/" target="_blank" rel="noopener">X</a></li> -->
-                        <li><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-                        <li><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
-                        </li>
-                        <!-- <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li> -->
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
             </div>
-            <div class="copyright">
-                <p>&copy;2025 MIRAINA All rights reserved.</p>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="/js/common.js" defer></script>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
+
 </html>

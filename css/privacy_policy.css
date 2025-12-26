@@ -1,182 +1,77 @@
-/*
-* Privacy Policy Page Styles
-* MIRAINA website
-*/
+@charset "UTF-8";
 
-/* Page Header */
-.page-header {
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
-    color: var(--white);
-    padding: var(--space-xl) 0;
-    margin-bottom: var(--space-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-}
+/* ==========================================================================
+   Privacy Policy Styles
+   ========================================================================== */
 
-.page-title {
-    font-size: var(--font-xl);
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-}
-
-/* Privacy Content */
 .privacy-content {
-    padding: var(--space-xl) 0;
-    background-color: var(--white);
-}
-
-.privacy-text {
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.8;
+    background-color: var(--color-white);
+    padding: 3rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.last-updated {
-    padding: var(--space-s);
-    border-radius: 4px;
-    margin-bottom: var(--space-l);
-    font-weight: 600;
-    color: var(--text-medium);
-    text-align: center;
+@media (min-width: 768px) {
+    .privacy-content {
+        padding: 4rem;
+    }
 }
 
-.privacy-text h2 {
-    font-size: var(--font-l);
-    font-weight: 700;
-    color: var(--primary-blue);
-    margin: var(--space-l) 0 var(--space-s) 0;
-    padding-bottom: var(--space-xxs);
-    border-bottom: 2px solid var(--primary-blue-light);
+.privacy-heading {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
 }
 
-.privacy-text h2:first-of-type {
+.privacy-heading:first-of-type {
     margin-top: 0;
 }
 
-.privacy-text p {
-    margin-bottom: var(--space-s);
-    color: var(--text-dark);
-    font-size: var(--font-s);
+.privacy-content p {
+    font-size: var(--font-size-base);
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-gray);
 }
 
-.privacy-text ul {
-    margin: var(--space-s) 0 var(--space-m) var(--space-m);
-    padding-left: var(--space-s);
-    list-style-type: disc;
+.privacy-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.privacy-text li {
-    margin-bottom: var(--space-xxs);
-    color: var(--text-dark);
-    font-size: var(--font-s);
-    line-height: 1.6;
+.privacy-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
 }
 
 .contact-info {
-    background-color: var(--light-gray);
-    padding: var(--space-m);
-    border-radius: 8px;
-    margin: var(--space-m) 0;
-    border-left: 4px solid var(--primary-blue);
+    background-color: var(--color-paper-gray);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 2rem 0;
 }
 
 .contact-info p {
-    margin-bottom: var(--space-xxs);
-    font-size: var(--font-s);
+    margin-bottom: 0.5rem;
 }
 
 .contact-info p:last-child {
     margin-bottom: 0;
 }
 
-.contact-info strong {
-    color: var(--primary-blue);
-    font-weight: 700;
+.last-updated {
+    text-align: right;
+    font-size: var(--font-size-sm);
+    color: #999;
+    margin-top: 4rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .page-title {
-        font-size: var(--font-l);
-    }
-
-    .privacy-text {
-        padding: 0 var(--space-s);
-    }
-}
-
-@media (max-width: 900px) {
-    .page-header {
-        padding: var(--space-l) 0;
-        margin-bottom: var(--space-l);
-        min-height: 150px;
-    }
-
-    .page-title {
-        font-size: var(--font-l);
-    }
-
-    .privacy-content {
-        padding: var(--space-l) 0;
-    }
-
-    .privacy-text h2 {
-        font-size: var(--font-m);
-    }
-
-    .privacy-text p,
-    .privacy-text li {
-        font-size: 1.4rem;
-    }
-
-    .contact-info {
-        padding: var(--space-s);
-    }
-}
-
-@media (max-width: 480px) {
-    .page-header {
-        padding: var(--space-m) 0;
-        margin-bottom: var(--space-m);
-        min-height: 120px;
-    }
-
-    .page-title {
-        font-size: var(--font-m);
-    }
-
-    .privacy-content {
-        padding: var(--space-m) 0;
-    }
-
-    .privacy-text {
-        padding: 0 var(--space-xs);
-    }
-
-    .privacy-text h2 {
-        font-size: 1.6rem;
-        margin: var(--space-m) 0 var(--space-xs) 0;
-    }
-
-    .privacy-text p,
-    .privacy-text li {
-        font-size: 1.3rem;
-    }
-
-    .last-updated {
-        padding: var(--space-xs);
-        font-size: 1.3rem;
-    }
-
-    .contact-info {
-        padding: var(--space-xs);
-        margin: var(--space-s) 0;
-    }
-
-    .contact-info p {
-        font-size: 1.3rem;
-    }
+.note {
+    font-size: var(--font-size-sm);
+    color: #666;
 }
