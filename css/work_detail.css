@@ -697,7 +697,7 @@
 .related-card {
     text-decoration: none;
     color: inherit;
-    group: inline;
+    display: block;
 }
 
 .related-img {
@@ -735,4 +735,65 @@
 
 .related-card:hover .related-txt {
     color: var(--color-intellect-blue);
+}
+
+/* Client Voice Component */
+.client-voice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.client-voice-item {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 2rem;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.voice-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voice-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-intellect-blue);
+}
+
+.voice-content {
+    flex: 1;
+}
+
+.voice-header {
+    font-weight: bold;
+    color: var(--color-intellect-blue);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    font-family: var(--font-gothic);
+}
+
+.voice-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-miraina-black);
+}
+
+@media (max-width: 600px) {
+    .client-voice-item {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
 }

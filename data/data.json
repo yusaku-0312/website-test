@@ -186,7 +186,7 @@
             "id": 2,
             "title": "株式会社Niarail様：n8n × SlackでDM送信自動化",
             "description": "n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。約15時間の作業削減・約3万円のコスト削減を実現。",
-            "thumbnail": "./images/work-card002.webp",
+            "thumbnail": "./images/works_images/work-card002.webp",
             "alt": "株式会社Niarail様：n8n × SlackでDM送信自動化",
             "link": "/works/work002.html",
             "date": "2025-08-10"
@@ -195,7 +195,7 @@
             "id": 3,
             "title": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
             "description": "n8nを用いてLP分析のための要素抽出を自動化。LP１件あたり約40分・合計約70時間以上の業務時間削減を実現。",
-            "thumbnail": "/images/work-card003.webp",
+            "thumbnail": "/images/works_images/work-card003.webp",
             "alt": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
             "link": "/works/work003.html",
             "date": "2025-09-15"
@@ -208,6 +208,24 @@
             "alt": "株式会社LiaN様：応募メール自動転記システム導入",
             "link": "/works/work004.html",
             "date": "2025-10-20"
+        },
+        {
+            "id": 5,
+            "title": "AIエージェント開発会社A様：n8n勉強会を実施",
+            "description": "JSONと配列の基礎学習からn8nでのワークフロー実装まで、座学とワークショップで開発チームの基礎力を底上げ。",
+            "thumbnail": "./images/works_images/work-card005.webp",
+            "alt": "AIエージェント開発会社A様：n8n勉強会",
+            "link": "/works/work005.html",
+            "date": "2025-11-25"
+        },
+        {
+            "id": 6,
+            "title": "AIエージェント開発会社A様：第2回n8n勉強会を実施",
+            "description": "n8nのノードを体系化し、実装の限界値を学習。実務を想定したメール自動化フロー構築のワークショップを実施。",
+            "thumbnail": "./images/works_images/work-card006.webp",
+            "alt": "AIエージェント開発会社A様：第2回n8n勉強会",
+            "link": "/works/work006.html",
+            "date": "2025-12-20"
         }
     ]
 }

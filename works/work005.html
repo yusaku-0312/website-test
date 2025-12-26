@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【導入事例】AIエージェント開発会社A様 | MIRAINA works</title>
+    <meta name="description"
+        content="AIエージェント開発会社A様の導入事例。n8n勉強会を実施し、JSONと配列の基礎学習、座学とワークショップを組み合わせることで開発チーム全体の基礎理解を促進しました。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【導入事例】AIエージェント開発会社A様：n8n・JSON勉強会実施">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work005.html">
+    <meta property="og:image" content="/images/work_thum.jpg">
+    <meta property="og:description" content="n8n勉強会を実施し、JSONと配列の基礎学習で開発チームのスキルアップを実現。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <!-- Assuming logo exists or using text fallback for now if image broken -->
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items from spec usually go here, but focusing on user content mapping -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>AIエージェント開発会社A様</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. Header: Title, Update Date, Categories -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2025.11.25 更新</span>
+                    <span class="work-cat">AI研修 / 人材育成</span>
+                </div>
+                <!-- 1. Title -->
+                <h1 class="work-title">AIエージェント開発会社にてn8n勉強会を実施</h1>
+                <p class="work-subtitle"
+                    style="font-family: var(--font-gothic); font-weight: bold; margin-top: -1rem; margin-bottom: 2rem;">
+                    〜JSONと配列の基礎学習、座学とワークショップを組み合わせることで基礎理解を促進〜</p>
+            </header>
+
+            <!-- 5. Thumbnail -->
+            <div class="work-main-image fade-in-section">
+                <!-- Using a generic placeholder or work_main.jpg if available, or I should use a new one described in json. 
+                     For now, using work_main.jpg as a placeholder. -->
+                <img src="/images/works_images/work005-1.webp" alt="事例メインビジュアル" width="1200" height="675">
+            </div>
+
+            <!-- 4. Summary -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            <strong>n8n勉強会を実施し、JSONと配列の基礎学習、座学とワークショップを組み合わせることで基礎理解を促進しました。</strong><br><br>
+                            AIエージェント開発会社A様において、開発チーム全体の開発力の底上げを目的としたn8n勉強会を実施しました。
+                            JSONと配列の本質的な考え方と使い分け、実際にコードを書く際の記述ルールなどを学び、n8n開発における基礎体力を向上させました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Table of Contents -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#background">2. 導入背景・課題</a></li>
+                    <li><a href="#contents">3. 勉強会の内容</a></li>
+                    <li><a href="#result">4. 実施後の成果</a></li>
+                </ul>
+            </div>
+
+            <!-- 15. Client Info -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">AIエージェント開発会社A様について</h3>
+                    <dl class="client-data-list">
+                        <div class="data-row">
+                            <dt>企業名</dt>
+                            <dd>AIエージェント開発会社A 様（都合により詳細を省略）</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>業種</dt>
+                            <dd>教育系・IT（特にAI）</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>事業内容</dt>
+                            <dd>システム開発・e-learning</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- 14. Introduction Background -->
+            <section id="background" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BACKGROUND</h2>
+                    <h3 class="work-subheading">感覚的な開発によるエラー対応の遅れと、<br>基礎理解不足によるスピード低下。</h3>
+                    <p class="work-text">
+                        こちらの会社様では、AIエージェントや業務効率化ツールの受託開発を行っています。
+                        しかし、主にバイブコーディングでの開発がメインとなっており、基礎理解のないまま実務を進めていっている状態でした。
+                    </p>
+                    <p class="work-text">
+                        これによって、エラーが出た際の対応の遅れや、適切なデバッグができずに開発スピードが上がらないことが課題となっていました。
+                    </p>
+                    <p class="work-text">
+                        こうした中で、<strong>開発チーム全体の開発力の底上げをしていくこと</strong>が目的としてありました。
+                    </p>
+
+                    <!-- Comparison Diagram -->
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">実施前（課題）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>基礎理解のないままの実務</li>
+                                        <li>エラー対応の遅れ</li>
+                                        <li>開発スピードの低下</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">実施後（解決）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>JSON・配列の基礎習得</strong></li>
+                                        <li>体系的な理解による効率化</li>
+                                        <li>自走できる開発力の育成</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：勉強会による課題解決イメージ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contents details -->
+            <section id="contents" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CONTENTS</h2>
+                    <h3 class="work-subheading">勉強会のステップと内容</h3>
+                    <p class="work-text">
+                        今回のn8n勉強会では、「<strong>JSONと配列を扱いながら、n8n開発を進められるようになる</strong>」ことをゴールに設定しました。
+                    </p>
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">基本概念の理解<br>(JSON・配列)</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">記述方法・<br>ルールの習得</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">n8nでの実装<br>(ワークショップ)</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：勉強会の3ステップ</p>
+                    </div>
+
+                    <div class="work-text"
+                        style="background: #f9f9f9; padding: 2rem; margin-top: 2rem; border-radius: 4px;">
+                        <strong>具体的な実施内容</strong>
+                        <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 1rem; line-height: 1.8;">
+                            <li>JSONと配列の本質的な考え方と使い分けの解説</li>
+                            <li>実際にコードを書く際の記述ルールの学習</li>
+                            <li>n8nでのJSON・配列の理解を促進するハンズオンワークショップ</li>
+                            <li>実務で遭遇するエラーへの対処法などの実践的な知見共有</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Results -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">受講者の声・成果</h3>
+
+                    <p class="work-text">
+                        この勉強会を通して、参加メンバーはJSONと配列の基礎理解を達成しました。
+                        実際の受講者からは、以下のような高い評価をいただいております。
+                    </p>
+
+                    <div class="client-voice-container">
+                        <div class="client-voice-item">
+                            <div class="voice-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <div class="voice-content">
+                                <div class="voice-header">受講者の声</div>
+                                <div class="voice-text">
+                                    「基礎理解ができてよかった。今までなんとなくでやっていた部分がクリアになった。」
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-voice-item">
+                            <div class="voice-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <div class="voice-content">
+                                <div class="voice-header">受講者の声</div>
+                                <div class="voice-text">
+                                    「わかりやすかった。座学だけでなくワークショップがあったので、実際に手を動かして理解を深めることができた。」
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. CTA Button -->
+            <div class="work-cta fade-in-section">
+                <!-- CTA 1: Contact -->
+                <div class="cta-box" style="margin-bottom: 2rem;">
+                    <h3 class="cta-title">＼ AI人材育成・研修について相談してみる ／</h3>
+                    <p class="cta-text">MIRAINAは、貴社のレベルや課題に合わせた最適なAI研修プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">お問い合わせはこちらから</a>
+                </div>
+            </div>
+
+            <!-- 11. Related Articles -->
+            <section class="work-related fade-in-section">
+                <h3 class="related-title">その他の事例</h3>
+                <div class="related-grid">
+                    <a href="work001.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work001-1.webp" alt="関連事例">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AIリテラシー講演</div>
+                            <div class="related-txt">保護者向けAIリテラシー講演</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.htm">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

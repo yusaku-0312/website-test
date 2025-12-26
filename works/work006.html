@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【導入事例】AIエージェント開発会社A様 | MIRAINA works</title>
+    <meta name="description"
+        content="AIエージェント開発会社A様の導入事例（第2回）。n8n勉強会にて、ノードの6タ基本概念と実装の限界値を学習。実務を想定したワークショップで要件定義から実装までのプロセスを習得しました。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【導入事例】AIエージェント開発会社A様：第2回n8n勉強会を実施">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work006.html">
+    <meta property="og:image" content="/images/work_thum.jpg">
+    <meta property="og:description" content="ノードの体系化理解と限界値の学習により、適切な設計スキルを向上。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <!-- Other required items form spec usually go here -->
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>AIエージェント開発会社A様</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. Header: Title, Update Date, Categories -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2025.12.20 更新</span>
+                    <span class="work-cat">AI研修 / 人材育成</span>
+                </div>
+                <!-- 1. Title -->
+                <h1 class="work-title">AIエージェント開発会社にて第２回n8n勉強会を実施</h1>
+                <p class="work-subtitle"
+                    style="font-family: var(--font-gothic); font-weight: bold; margin-top: -1rem; margin-bottom: 2rem;">
+                    〜ノードの体系化と実装の限界値を学び、実務要件を適切に設計するスキルを習得〜</p>
+            </header>
+
+            <!-- 5. Thumbnail -->
+            <div class="work-main-image fade-in-section">
+                <!-- Placeholder, reusing same image or default -->
+                <img src="/images/works_images/work006-1.webp" alt="事例メインビジュアル" width="1200" height="675">
+            </div>
+
+            <!-- 4. Summary -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>n8nのノードを6つの基本概念に体系化して理解し、ノーコードツールならではの「実装の限界値」を学ぶ勉強会を実施しました。</p>
+                        <p>座学での概念理解に加え、実務を想定したメール自動化フローを構築するワークショップを行い、要件定義から実装までのプロセスを習得しました。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Table of Contents -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#background">2. 導入背景・課題</a></li>
+                    <li><a href="#contents">3. 勉強会の内容</a></li>
+                    <li><a href="#result">4. 実施後の成果</a></li>
+                </ul>
+            </div>
+
+            <!-- 15. Client Info -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">AIエージェント開発会社A様について</h3>
+                    <dl class="client-data-list">
+                        <div class="data-row">
+                            <dt>企業名</dt>
+                            <dd>AIエージェント開発会社A 様（都合により詳細を省略）</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>業種</dt>
+                            <dd>教育系・IT（特にAI）</dd>
+                        </div>
+                        <div class="data-row">
+                            <dt>事業内容</dt>
+                            <dd>システム開発・e-learning</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- 14. Introduction Background -->
+            <section id="background" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BACKGROUND</h2>
+                    <h3 class="work-subheading">実際の業務フロー構築における課題解決能力の向上と、ツールの「限界値」の理解。</h3>
+                    <p class="work-text">
+                        前回の基礎学習（JSON・配列）が大変好評をいただき、「ぜひ実践編も開催してほしい」との熱いご要望を受けて第2回の開催が決定しました。<br><br>
+                        前回の学習を経て、実際の業務フロー構築における課題解決能力の向上が求められていました。
+                        特に、n8nで「何ができて、何ができないのか（限界点）」の理解が曖昧なままだと、実装後のエラーやタイムアウト、過度な複雑化を招くリスクがありました。
+                    </p>
+                    <p class="work-text">
+                        そこで今回は、開発チーム全体が適切に要件を分解し、ツールの限界を考慮した設計ができるようになること</p>
+                    </p>
+
+                    <!-- Comparison Diagram -->
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">実施前（課題）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>ツールの限界が曖昧</li>
+                                        <li>実装後のエラーやタイムアウト</li>
+                                        <li>過度な複雑化のリスク</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">実施後（解決）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>実装可能範囲の体系化理解</strong></li>
+                                        <li>限界値を考慮した設計</li>
+                                        <li>論理的な要件分解スキル</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：勉強会による課題解決イメージ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contents details -->
+            <section id="contents" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CONTENTS</h2>
+                    <h3 class="work-subheading">勉強会のステップと内容</h3>
+                    <p class="work-text">
+                        今回の勉強会では、「<strong>n8nの実装可能範囲とノードを体系化して理解する</strong>」ことをゴール設定とし、以下の3つのパートで進行しました。
+                    </p>
+
+                    <div class="work-text"
+                        style="background: #f9f9f9; padding: 2rem; margin-top: 2rem; border-radius: 4px;">
+                        <h4 style="font-weight: bold; margin-bottom: 1rem; font-size: 1.1em;">1. ノードの6つの基本概念の理解</h4>
+                        <div class="work-box" style="margin-bottom: 2rem;">
+                            <ul style="list-style: disc; margin-left: 1.5rem; line-height: 1.8;">
+                                <li>データ取得（API / Webhook / スクレイピング）</li>
+                                <li>構造化（JSON加工 / 配列展開）</li>
+                                <li>判定（If / Switch）</li>
+                                <li>AI連携（生成 / 分類 / エージェント化）</li>
+                                <li>ループ処理（繰り返し処理）</li>
+                                <li>外部出力（Slack / Gmail / Sheets / DB）</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="font-weight: bold; margin-bottom: 1rem; font-size: 1.1em;">2. n8nの限界値（4つの壁）の把握</h4>
+                        <div class="work-box" style="margin-bottom: 2rem;">
+                            <ul style="list-style: disc; margin-left: 1.5rem; line-height: 1.8;">
+                                <li>API非提供による限界</li>
+                                <li>API制限（レートリミット等）による限界</li>
+                                <li>n8n自体の制限（メモリ不足・実行時間）</li>
+                                <li>要件の複雑化（多重ループ・深いネスト）</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="font-weight: bold; margin-bottom: 1rem; font-size: 1.1em;">3. 実務要件の分解ワークショップ</h4>
+                        <p class="work-text" style="margin-top: 0;">
+                            「資料請求メールから企業情報をAIで調査し、提案メールを作成する」というシナリオを用い 、ステップ１、２で学習した内容を参考にしながら要件を分解・設計する方法を実践しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Results -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">体系的な理解と、設計スキルの向上</h3>
+
+                    <!-- RESULT text -->
+                    <p class="work-text">
+                        この勉強会を通して、参加者はn8nのノードを機能ごとに体系的に捉えられるようになりました。
+                        また、単に動くものを作るだけでなく、API制限やデータ量によるタイムアウトなどの「限界値」を事前に考慮した設計スキルの向上が見られました。
+                        ワークショップでは、複雑な業務フローを5つのステップで論理的に分解し、実装に落とし込むプロセスを体得することができました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 9. CTA Button -->
+            <div class="work-cta fade-in-section">
+                <!-- CTA 1: Contact -->
+                <div class="cta-box" style="margin-bottom: 2rem;">
+                    <h3 class="cta-title">＼ AI人材育成・研修について相談してみる ／</h3>
+                    <p class="cta-text">MIRAINAは、貴社のレベルや課題に合わせた最適なAI研修プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">お問い合わせはこちらから</a>
+                </div>
+            </div>
+
+            <!-- 11. Related Articles -->
+            <section class="work-related fade-in-section">
+                <h3 class="related-title">その他の事例</h3>
+                <div class="related-grid">
+                    <a href="work005.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card005.webp" alt="関連事例">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AI研修</div>
+                            <div class="related-txt">AIエージェント開発会社A様：n8n勉強会（第1回）</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.htm">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
