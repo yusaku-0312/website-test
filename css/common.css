@@ -232,6 +232,13 @@ img {
     width: 100%;
 }
 
+@media (max-width: 767px) {
+    .header .container.header-inner {
+        width: 100%;
+        padding: 0 2.5rem;
+    }
+}
+
 .header-logo img {
     height: 40px;
     /* Adjust based on logo aspect ratio */
