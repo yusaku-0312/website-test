@@ -116,6 +116,54 @@
 /* Removed .hero-visual styles */
 
 /* ==========================================================================
+   1.5. Concept Section
+   ========================================================================== */
+.section-concept {
+    /* bg color inherited from body/wrapper to match other sections */
+}
+
+.concept-content {
+    margin-top: 2rem;
+}
+
+.concept-text {
+    font-size: var(--font-size-base);
+    line-height: 2;
+    margin-bottom: 2rem;
+    color: var(--color-text-gray);
+    text-align: justify;
+}
+
+.concept-text:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+    .section-concept .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .section-concept .section-header {
+        width: 360px;
+        /* Slightly wider for the long title */
+        flex-shrink: 0;
+        margin-bottom: 0;
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+    }
+
+    .concept-content {
+        margin-top: 0;
+        flex: 1;
+        max-width: 800px;
+    }
+}
+
+/* ==========================================================================
    2. Services Section
    ========================================================================== */
 .section-header {
