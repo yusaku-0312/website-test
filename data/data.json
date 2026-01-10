@@ -67,7 +67,7 @@
             "id": 8,
             "title": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
             "description": "Google検索に導入されたAIモード（AI Mode）とは何かを、特徴・AI Overviewsとの違い・日本語対応の背景・企業が直面する課題・LLMO最適化の考え方まで体系的に解説。AI検索時代に備える実務ガイドです。",
-            "thumbnail": "/images/blogs_images/blog008-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card008.webp",
             "alt": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
             "link": "/blogs/blog008.html",
             "date": "2025-10-05"
@@ -76,7 +76,7 @@
             "id": 9,
             "title": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
             "description": "総合対話・文章生成・画像生成・動画生成・業務効率化まで、用途別に“本当に使える”AIを厳選紹介。 選び方の6基準、導入時の注意点、研究動向と今後の展望もまとめた実務ガイドです。",
-            "thumbnail": "/images/blogs_images/blog009-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card009.webp",
             "alt": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
             "link": "/blogs/blog009.html",
             "date": "2025-10-10"
@@ -112,7 +112,7 @@
             "id": 13,
             "title": "【2026年最新】Gemini3.0とは？料金や特徴、活用事例を徹底解説",
             "description": "Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。",
-            "thumbnail": "/images/blogs_images/blog013-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card013.webp",
             "alt": "【2026年最新】Gemini3.0とは？料金や特徴、活用事例を徹底解説",
             "link": "/blogs/blog013.html",
             "date": "2025-10-30"
@@ -121,7 +121,7 @@
             "id": 14,
             "title": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
             "description": "LLMO（大規模言語モデル最適化）とSEOは対立するものではなく、相互に補完し合う関係です。本記事では、両者の構造的な違い、共通点、そしてこれからのマーケティングに求められる統合的な戦略について、中級者向けに深掘り解説します。",
-            "thumbnail": "/images/blogs_images/blog014-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card014-1.webp",
             "alt": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
             "link": "/blogs/blog014.html",
             "date": "2025-11-05"
@@ -130,7 +130,7 @@
             "id": 15,
             "title": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
             "description": "広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。",
-            "thumbnail": "/images/blogs_images/blog015-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card015.webp",
             "alt": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
             "link": "/blogs/blog015.html",
             "date": "2025-11-10"
@@ -157,7 +157,7 @@
             "id": 18,
             "title": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
             "description": "2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。",
-            "thumbnail": "/images/blogs_images/blog018-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card018.webp",
             "alt": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
             "link": "/blogs/blog018.html",
             "date": "2025-11-28"
@@ -166,7 +166,7 @@
             "id": 19,
             "title": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
             "description": "Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。",
-            "thumbnail": "/images/blogs_images/blog019-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card019.webp",
             "alt": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
             "link": "/blogs/blog019.html",
             "date": "2025-12-05"
@@ -177,7 +177,7 @@
             "id": 1,
             "title": "保護者向けAIリテラシー講演",
             "description": "福岡市で開催。AI時代の子どもたちの危険性や安全なAI活用法について、保護者様向けに分かりやすく解説しました。",
-            "thumbnail": "./images/works_images/work001-1.webp",
+            "thumbnail": "./images/works_images/work-card001.webp",
             "alt": "保護者向けAIリテラシー講演",
             "link": "/works/work001.html",
             "date": "2026-01-10"
@@ -204,7 +204,7 @@
             "id": 4,
             "title": "株式会社LiaN様：応募メール自動転記",
             "description": "Gmailに届く応募メールを自動解析し、スプレッドシートに転記。対応スピード向上と手作業削減を実現しました。",
-            "thumbnail": "./images/works_images/work004-1.webp",
+            "thumbnail": "./images/works_images/work-card004.webp",
             "alt": "株式会社LiaN様：応募メール自動転記システム導入",
             "link": "/works/work004.html",
             "date": "2025-10-20"
