@@ -121,7 +121,7 @@
             "id": 14,
             "title": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
             "description": "LLMO（大規模言語モデル最適化）とSEOは対立するものではなく、相互に補完し合う関係です。本記事では、両者の構造的な違い、共通点、そしてこれからのマーケティングに求められる統合的な戦略について、中級者向けに深掘り解説します。",
-            "thumbnail": "/images/blogs_images/blog-card014-1.webp",
+            "thumbnail": "/images/blogs_images/blog-card014.webp",
             "alt": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
             "link": "/blogs/blog014.html",
             "date": "2025-11-05"
@@ -164,12 +164,12 @@
         },
         {
             "id": 19,
-            "title": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
+            "title": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
             "description": "Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。",
             "thumbnail": "/images/blogs_images/blog-card019.webp",
-            "alt": "【2025年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
+            "alt": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
             "link": "/blogs/blog019.html",
-            "date": "2025-12-05"
+            "date": "2026-01-10"
         }
     ],
     "works": [
