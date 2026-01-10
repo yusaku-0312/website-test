@@ -6,7 +6,7 @@
 
 /* Layout */
 .work-container {
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
 }
 
 .section-inner {
@@ -17,7 +17,7 @@
 
 /* Work Header Updated */
 .work-header {
-    padding: 1rem 0 3rem;
+    padding: 1rem 0 1rem;
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-family: var(--font-gothic);
     font-size: 0.9rem;
     color: var(--color-text-gray);
@@ -44,7 +44,7 @@
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -54,8 +54,8 @@
 }
 
 .work-main-image {
-    max-width: 1000px;
-    margin: 0 auto 4rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
     width: 90%;
 }
 
@@ -73,8 +73,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto 6rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
     padding: 2rem;
     border-top: 1px solid var(--color-miraina-black);
     border-bottom: 1px solid var(--color-miraina-black);
@@ -117,7 +117,7 @@
 
 /* Content Sections */
 .work-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .work-section.bg-paper {
@@ -129,7 +129,7 @@
     font-size: 1rem;
     letter-spacing: 0.2em;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #999;
 }
 
@@ -137,7 +137,7 @@
     font-family: var(--font-mincho);
     font-size: 2rem;
     line-height: 1.4;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
@@ -145,16 +145,17 @@
     font-size: 1.05rem;
     line-height: 2;
     color: var(--color-miraina-black);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .work-figure {
-    margin: 3rem 0;
+    margin: 1.5rem 0;
     text-align: center;
 }
 
 .work-figure img {
-    max-width: 100%;
+    max-width: 800px;
+    width: 100%;
     height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -168,7 +169,7 @@
 /* 4. Summary box */
 .work-summary-box {
     background-color: var(--color-paper-gray);
-    padding: 3rem;
+    padding: 2rem;
     /* Increase padding for breathability */
     border-radius: 4px;
     font-size: 1.05rem;
@@ -179,7 +180,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -200,7 +201,7 @@
 .work-toc {
     max-width: 800px;
     width: 90%;
-    margin: 4rem auto;
+    margin: 2rem auto;
     border: 1px solid #ddd;
     padding: 2rem;
     background-color: var(--color-white);
@@ -243,7 +244,7 @@
 .data-row {
     display: flex;
     border-bottom: 1px solid #ddd;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 .data-row dt {
@@ -261,7 +262,7 @@
     overflow-x: auto;
     max-width: 800px;
     width: 100%;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
 }
 
 .work-table {
@@ -286,7 +287,7 @@
 .diagram-container {
     max-width: 800px;
     width: 100%;
-    margin: 3rem auto;
+    margin: 2rem auto;
     padding: 2rem;
     background-color: #fafafa;
     border-radius: 8px;
