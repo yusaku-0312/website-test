@@ -85,7 +85,7 @@
         <div class="container breadcrumbs">
             <ul>
                 <li><a href="/">ホーム</a></li>
-                <li><a href="../services.html">サービス</a></li>
+                <li><a href="./services.html">サービス</a></li>
                 <li>LLMO Insight</li>
             </ul>
         </div>
@@ -472,24 +472,7 @@
         </div>
     </footer>
 
-    <script src="../js/common.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('js-hamburger');
-            const mobileMenu = document.getElementById('js-mobile-menu');
-            if (hamburger && mobileMenu) {
-                hamburger.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('is-active');
-                });
-            }
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('is-visible');
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
-        });
-    </script>
+    <script src="/js/common.js"></script>
 </body>
 
 </html>
