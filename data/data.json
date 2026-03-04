@@ -226,6 +226,15 @@
             "alt": "AIエージェント開発会社A様：第2回n8n勉強会",
             "link": "/works/work006.html",
             "date": "2025-12-20"
+        },
+        {
+            "id": 7,
+            "title": "美容業界マーケターとAI・LLMO対策を深掘りするセミナーに登壇",
+            "description": "美容師歴10年のマーケター・岩田良介氏と共催。AIの仕組みからRAG・LLMO対策まで専門家視点で解説し、サロン集客のアルゴリズムレベルの戦略を提示。",
+            "thumbnail": "/images/works_images/work-card007.webp",
+            "alt": "美容業界マーケターとAI・LLMO対策を深掘りするセミナー登壇",
+            "link": "/works/work007.html",
+            "date": "2026-01-17"
         }
     ]
 }

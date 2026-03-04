@@ -267,6 +267,19 @@
                 </div>
 
                 <div class="works-grid">
+                    <a href="/works/work007.html" class="work-card fade-in-section">
+                        <div class="work-image">
+                            <img src="/images/works_images/work-card007.webp" alt="美容業界マーケターとAI・LLMO対策を深掘りするセミナー登壇">
+                        </div>
+                        <div class="work-content">
+                            <div class="work-cat" style="color: #666; font-size: 0.8rem; margin-bottom: 0.5rem;">セミナー /
+                                登壇</div>
+                            <h3 class="work-title">美容業界マーケターとAI・LLMO対策を深掘りするセミナーに登壇</h3>
+                            <p class="work-desc">
+                                美容師歴10年のマーケター・岩田良介氏と共催。AIの仕組みからRAG・LLMO対策まで専門家視点で解説し、サロン集客のアルゴリズムレベルの戦略を提示。
+                            </p>
+                        </div>
+                    </a>
                     <a href="/works/work006.html" class="work-card fade-in-section">
                         <div class="work-image">
                             <img src="/images/works_images/work-card006.webp" alt="AIエージェント開発会社A様：第2回n8n勉強会">
@@ -290,20 +303,6 @@
                             <h3 class="work-title">AIエージェント開発会社A様：n8n勉強会を実施</h3>
                             <p class="work-desc">
                                 JSONと配列の基礎学習からn8nでのワークフロー実装まで、座学とワークショップで開発チームの基礎力を底上げ。
-                            </p>
-                        </div>
-                    </a>
-                    <a href="/works/work004.html" class="work-card fade-in-section">
-                        <div class="work-image">
-                            <img src="/images/works_images/work-card004.webp" alt="Gmail求人応募自動転記システム">
-                        </div>
-                        <div class="work-content">
-                            <div class="work-cat" style="color: #666; font-size: 0.8rem; margin-bottom: 0.5rem;">業務自動化
-                            </div>
-                            <h3 class="work-title">Gmail × n8nで求人応募メールをスプレッドシートへ自動転記</h3>
-                            <p class="work-desc">
-                                Gmailに届く求人応募メールをn8nで解析し、スプレッドシートに自動転記するシステムを導入。<br>
-                                月間500件以上の応募情報転記を自動化しました。
                             </p>
                         </div>
                     </a>
@@ -475,31 +474,7 @@
 
     <!-- JavaScript -->
     <script src="js/common.js"></script>
-    <script>
-        // Simple script to handle hamburger menu and fade-ins for now if common.js doesn't exist yet
-        // In a real scenario, this would be in common.js
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('js-hamburger');
-            const mobileMenu = document.getElementById('js-mobile-menu');
 
-            if (hamburger && mobileMenu) {
-                hamburger.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('is-active');
-                });
-            }
-
-            // Fade in Observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 
 </html>
