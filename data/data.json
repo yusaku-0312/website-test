@@ -170,6 +170,24 @@
             "alt": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
             "link": "/blogs/blog019.html",
             "date": "2026-01-10"
+        },
+        {
+            "id": 20,
+            "title": "【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット",
+            "description": "OpenAIが2026年2月に発表した企業向けAIプラットフォーム「OpenAI Frontier」を徹底解説。AIエージェントの一元管理、SaaSへの影響、導入企業の成功事例、日本企業が取るべきアクションまで詳しく紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card020.webp",
+            "alt": "【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット",
+            "link": "/blogs/blog020.html",
+            "date": "2026-03-04"
+        },
+        {
+            "id": 21,
+            "title": "【2026年3月最新】Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法とビジネス活用ガイド",
+            "description": "Anthropicが2026年3月3日、ClaudeのAI記憶機能を無料プランに開放。ChatGPT・Gemini・Copilotから設定を1分以内でインポートする方法、ビジネス活用のポイントを徹底解説します。",
+            "thumbnail": "/images/blogs_images/blog-card021.webp",
+            "alt": "Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法",
+            "link": "/blogs/blog021.html",
+            "date": "2026-03-04"
         }
     ],
     "works": [
