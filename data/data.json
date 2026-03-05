@@ -206,6 +206,15 @@
             "alt": "MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準",
             "link": "/blogs/blog023.html",
             "date": "2026-03-05"
+        },
+        {
+            "id": 24,
+            "title": "【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則",
+            "description": "AI導入が失敗する最大の原因は「AIでできること」から考えるAI起点の発想にある。業務フローを棚卸しして課題を特定する「業務課題ベース」の3ステップで、中小企業でも導入を成功に導く方法を解説します。",
+            "thumbnail": "/images/blogs_images/blog-card024.webp",
+            "alt": "AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則",
+            "link": "/blogs/blog024.html",
+            "date": "2026-03-05"
         }
     ],
     "works": [
