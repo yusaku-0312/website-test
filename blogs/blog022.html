@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール | MIRAINAブログ</title>
+    <meta name="description" content="Googleが公開したオープンソースCLI「Google Workspace CLI（gws）」を徹底解説。npm一発でインストールし、ターミナルからGmail・Drive・Calendarを操作できる仕組みや、MCPサーバーとしてClaude・Gemini CLIと連携する方法を実例付きで紹介します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog022.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog-card022.webp">
+    <meta property="og:description" content="Googleが公開したオープンソースCLI「Google Workspace CLI（gws）」を徹底解説。npm一発でインストールし、ターミナルからGmail・Drive・Calendarを操作できる仕組みや、MCPサーバーとしてClaude・Gemini CLIと連携する方法を実例付きで紹介します。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年最新】Google Workspace CLIとは？</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.05</span>
+                    <div class="article-tags">
+                        <a href="#" class="article-tag">#GoogleWorkspace</a>
+                        <a href="#" class="article-tag">#CLI</a>
+                        <a href="#" class="article-tag">#AIエージェント</a>
+                        <a href="#" class="article-tag">#MCP</a>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog-card022.webp" alt="Google Workspace CLIのイメージ" width="800" height="450">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    Googleが公式GitHubリポジトリで公開したオープンソースツール「Google Workspace CLI（コマンド名：<code>gws</code>）」が話題を集めています。
+                    Gmail・Drive・Calendar・Sheets・Docs・Chatなど、あらゆるWorkspaceサービスをターミナル1行で操作できるだけでなく、
+                    40以上のAIエージェントスキルとMCPサーバー機能を標準搭載し、ClaudeやGemini CLIとシームレスに連携できます。
+                    本記事では、その仕組み・インストール方法・具体的なユースケースを徹底解説します。
+                </p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Google Workspace CLIとは？</a></li>
+                    <li><a href="#section2">2. Discovery Serviceによる動的コマンド生成の仕組み</a></li>
+                    <li><a href="#section3">3. インストールと認証のセットアップ</a></li>
+                    <li><a href="#section4">4. 主なコマンドと使い方</a></li>
+                    <li><a href="#section5">5. MCPサーバーとしてClaudeやGemini CLIと連携する方法</a></li>
+                    <li><a href="#section6">6. 類似ツール「gogcli」との比較</a></li>
+                    <li><a href="#section7">7. ビジネス活用シーン3選</a></li>
+                    <li><a href="#section8">8. まとめ：CLIがAIエージェント時代の"のり"になる</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="section1">1. Google Workspace CLIとは？</h2>
+                <p>
+                    <strong>Google Workspace CLI</strong>（GitHubリポジトリ名：<code>googleworkspace/cli</code>、コマンド名：<code>gws</code>）は、
+                    Googleが公式に開発・公開しているオープンソースのコマンドラインインターフェースです。
+                    Drive・Gmail・Calendar・Sheets・Docs・Chat・Adminなど、Google Workspaceのほぼすべてのサービスを
+                    <strong>1つのコマンドツールから操作できる</strong>ことが最大の特徴です。
+                </p>
+                <p>
+                    「CLIなんてエンジニアだけのもの」と思うかもしれませんが、このツールの真価はAIエージェントとの親和性にあります。
+                    すべてのレスポンスが構造化JSONで返ってくるため、Claude・Geminiなどの大規模言語モデルが
+                    Workspaceのデータを「読んで・判断して・操作する」エージェントとして機能できるようになります。
+                </p>
+
+                <!-- Comparison -->
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のWorkspace操作</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>ブラウザで各サービスを個別に開く</li>
+                                    <li>GAS（Apps Script）の知識が必要</li>
+                                    <li>自動化に複雑な設定が必要</li>
+                                    <li>AIとの連携は別途実装が必要</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Google Workspace CLI</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>ターミナル1行で全サービス操作</strong></li>
+                                    <li>npm一発でインストール完了</li>
+                                    <li>スクリプト・CI/CDと即座に連携</li>
+                                    <li><strong>Claude・Gemini CLIとMCP連携標準搭載</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：従来のWorkspace操作とCLIの比較</p>
+                </div>
+
+                <h2 id="section2">2. Discovery Serviceによる動的コマンド生成の仕組み</h2>
+                <p>
+                    <code>gws</code>の設計で特に革新的なのが、<strong>Google Discovery Serviceと連携した動的コマンド生成</strong>です。
+                    多くのCLIツールは「APIが増えたら手動でコマンドを追加する」という作業が発生しますが、
+                    <code>gws</code>は実行時にGoogleのDiscovery Serviceを読み込み、
+                    <strong>コマンドの全体構造を自動的に構築します。</strong>
+                </p>
+                <p>
+                    つまり、GoogleがWorkspace APIに新しいエンドポイントを追加した瞬間に、
+                    <code>gws</code>も自動的にそのコマンドをサポートするようになります。
+                    開発者がツールを更新するのを待つ必要がなく、常に最新のAPIを利用できるのです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">gws コマンド実行</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">Discovery Service読み込み</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">コマンド体系を動的生成</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">Google Workspace APIを呼び出し</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">構造化JSONで結果を返す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：gwsのコマンド実行フロー</p>
+                </div>
+
+                <h2 id="section3">3. インストールと認証のセットアップ</h2>
+                <p>
+                    <code>gws</code>はnpmパッケージとして提供されており、Node.jsがインストールされていれば1行でセットアップできます。
+                    なお、ソースからビルドするCargoオプションや、Nixフレークも用意されています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>手順</th>
+                                <th>コマンド</th>
+                                <th>説明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>インストール</th>
+                                <td><code>npm install -g @googleworkspace/cli</code></td>
+                                <td>グローバルにインストール</td>
+                            </tr>
+                            <tr>
+                                <th>認証セットアップ</th>
+                                <td><code>gws auth setup</code></td>
+                                <td>Google CloudプロジェクトとOAuth設定を対話的に構成</td>
+                            </tr>
+                            <tr>
+                                <th>動作確認</th>
+                                <td><code>gws drive files list --params '{"pageSize": 5}'</code></td>
+                                <td>Driveの最新5件のファイル一覧を取得</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>認証方式の選択肢</h3>
+                <p>
+                    <code>gws</code>は多様な認証方式をサポートしており、個人利用からCI/CDパイプラインまで幅広いシーンに対応しています。
+                </p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>認証方式</th>
+                                <th>適したシーン</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>インタラクティブ（OSキーリング）</th>
+                                <td>個人開発・日常業務での利用</td>
+                            </tr>
+                            <tr>
+                                <th>手動OAuth</th>
+                                <td>Google Cloud Consoleから認証情報をDL</td>
+                            </tr>
+                            <tr>
+                                <th>サービスアカウント</th>
+                                <td>サーバー間通信・自動化スクリプト</td>
+                            </tr>
+                            <tr>
+                                <th>CI/ヘッドレス環境</th>
+                                <td>GitHub Actions・Docker等のブラウザなし環境</td>
+                            </tr>
+                            <tr>
+                                <th>既存トークン継承</th>
+                                <td>gcloudコマンドのアクセストークンを流用</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 主なコマンドと使い方</h2>
+                <p>
+                    基本的な文法は <code>gws [サービス名] [リソース] [操作] [オプション]</code> の形式です。
+                    <code>--dry-run</code> フラグで実際に変更を加えずにリクエスト内容を確認でき、
+                    タブ補完も利用可能なため、エンジニアでなくても直感的に操作できます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>サービス</th>
+                                <th>コマンド例</th>
+                                <th>操作内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Drive</th>
+                                <td><code>gws drive files list --params '{"pageSize":10}'</code></td>
+                                <td>ファイル一覧を最新10件取得</td>
+                            </tr>
+                            <tr>
+                                <th>Gmail</th>
+                                <td><code>gws gmail users messages list --params '{"q":"is:unread"}'</code></td>
+                                <td>未読メール一覧を取得</td>
+                            </tr>
+                            <tr>
+                                <th>Calendar</th>
+                                <td><code>gws calendar events list --params '{"calendarId":"primary"}'</code></td>
+                                <td>プライマリカレンダーのイベント一覧</td>
+                            </tr>
+                            <tr>
+                                <th>Admin</th>
+                                <td><code>gws admin directory users list</code></td>
+                                <td>組織内ユーザー一覧を取得（管理者権限）</td>
+                            </tr>
+                            <tr>
+                                <th>Chat</th>
+                                <td><code>gws chat spaces list</code></td>
+                                <td>参加中のチャットスペース一覧</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. MCPサーバーとしてClaudeやGemini CLIと連携する方法</h2>
+                <p>
+                    <code>gws</code>最大の特徴の一つが、<strong>MCP（Model Context Protocol）サーバーとして起動できること</strong>です。
+                    MCPはAIエージェントが外部ツールを呼び出すための標準プロトコルであり、
+                    Claude Desktop・Gemini CLI・VS Codeなど多数のクライアントが対応しています。
+                </p>
+                <p>
+                    以下のコマンドでMCPサーバーを起動すると、対応するAIクライアントがWorkspaceのAPIを
+                    <strong>構造化ツールとして直接呼び出せるようになります。</strong>
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>コマンド</th>
+                                <th>公開するサービス</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>gws mcp -s drive</code></td>
+                                <td>Driveのみ</td>
+                            </tr>
+                            <tr>
+                                <td><code>gws mcp -s drive,gmail,calendar</code></td>
+                                <td>Drive・Gmail・Calendarの3サービス</td>
+                            </tr>
+                            <tr>
+                                <td><code>gws mcp -s all</code></td>
+                                <td>サポートされる全サービス</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Gemini CLIとの連携（エクステンション方式）</h3>
+                <p>
+                    Gemini CLIユーザーは、専用エクステンションを1行でインストールするだけでWorkspace操作が可能になります。
+                    認証は<code>gws</code>が一括管理するため、Gemini側での追加設定は不要です。
+                </p>
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">terminal</span>
+                    </div>
+                    <pre><code><span class="prompt">$ </span>gemini extensions install https://github.com/gemini-cli-extensions/workspace</code></pre>
+                </div>
+
+                <h3>AIエージェントが実現できること</h3>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Drive を検索・読み込み</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">AI が内容を要約・分析</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">Docs に結果を書き出し</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">Calendar にスケジュール登録</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図3：gws × AIエージェントの自動化サイクル例（① → ② → ③ → ④ → ① でループ）</p>
+                </div>
+
+                <h2 id="section6">6. 類似ツール「gogcli」との比較</h2>
+                <p>
+                    <code>gws</code>と並んでよく語られるのが、Peterstein Berger氏が開発したオープンソースツール
+                    <strong>「gogcli（コマンド名：gog）」</strong>です。
+                    2026年1月にv0.9.0がアップデートされ、注目を集めています。
+                    両者の違いを整理します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>gws（Google公式）</th>
+                                <th>gogcli（サードパーティ）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>開発元</th>
+                                <td>Google公式（googleworkspace/cli）</td>
+                                <td>Peter Steinberger氏（steipete/gogcli）</td>
+                            </tr>
+                            <tr>
+                                <th>インストール</th>
+                                <td><code>npm install -g @googleworkspace/cli</code></td>
+                                <td><code>brew install steipete/tap/gogcli</code></td>
+                            </tr>
+                            <tr>
+                                <th>カバー範囲</th>
+                                <td>Discovery Service経由で全Workspace API</td>
+                                <td>Gmail・Calendar・Drive・Contacts・Tasks・Sheets・Docs・Slides・People</td>
+                            </tr>
+                            <tr>
+                                <th>出力形式</th>
+                                <td>構造化JSON（AI連携に最適）</td>
+                                <td>JSON・テーブル・プレーンテキスト（人間視認性が高い）</td>
+                            </tr>
+                            <tr>
+                                <th>MCP対応</th>
+                                <td>標準搭載（<code>gws mcp</code>）</td>
+                                <td>非搭載</td>
+                            </tr>
+                            <tr>
+                                <th>AIエージェントスキル</th>
+                                <td>40以上のスキル・100以上のSKILL.mdファイル</td>
+                                <td>非搭載</td>
+                            </tr>
+                            <tr>
+                                <th>マルチアカウント</th>
+                                <td>対応</td>
+                                <td>対応（<code>gog auth manage</code>）</td>
+                            </tr>
+                            <tr>
+                                <th>ステータス</th>
+                                <td>開発中（v1.0以前・破壊的変更あり）</td>
+                                <td>v0.9.0（安定版）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    <strong>AIエージェント連携・自動化パイプラインを構築したい場合は<code>gws</code></strong>、
+                    人間が日常業務で直感的に使いたい場合は<code>gogcli</code>が適していると言えるでしょう。
+                    なお<code>gws</code>はv1.0前のため、本番環境への導入は変更内容を慎重に追いながら行うことを推奨します。
+                </p>
+
+                <h2 id="section7">7. ビジネス活用シーン3選</h2>
+
+                <h3>①　定期レポートの自動生成</h3>
+                <p>
+                    毎週月曜日にGmailの特定ラベルのメールをgwsで取得し、AI（Claude・Gemini）に要約させてDocに書き出す、という処理をCron＋シェルスクリプト数行で実現できます。
+                    従来はGASやn8nなどが必要だった処理が、CLIとAIの組み合わせでシンプルに完結します。
+                </p>
+
+                <h3>②　会議スケジュールの一括最適化</h3>
+                <p>
+                    <code>gws calendar events list</code>で今週の全予定を取得し、AIに「重複・移動すべき会議」を分析させた上で、
+                    <code>gws calendar events update</code>で修正を適用するワークフローが構築できます。
+                    複数メンバーのカレンダーを横断的に管理するシーンで特に威力を発揮します。
+                </p>
+
+                <h3>③　Driveドキュメントのナレッジベース化</h3>
+                <p>
+                    社内Driveにあるドキュメントをgwsでバッチ取得し、ベクトルDBに格納してRAGシステムを構築する用途にも適しています。
+                    MCPサーバー経由でAIエージェントがリアルタイムにDriveを検索・参照できる構成も可能です。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://github.com/googleworkspace/cli" target="_blank" rel="noopener">GitHub - googleworkspace/cli（公式リポジトリ）</a></li>
+                        <li><a href="https://github.com/steipete/gogcli" target="_blank" rel="noopener">GitHub - steipete/gogcli</a></li>
+                        <li><a href="https://github.com/gemini-cli-extensions/workspace" target="_blank" rel="noopener">GitHub - gemini-cli-extensions/workspace</a></li>
+                    </ul>
+                </div>
+
+                <h2 id="section8">8. まとめ：CLIがAIエージェント時代の"のり"になる</h2>
+                <p>
+                    Google Workspace CLIは、単なる「ブラウザ操作のCLI版」ではありません。
+                    <strong>Discovery Serviceによる動的コマンド生成・MCP標準搭載・40以上のAIエージェントスキル</strong>という3つの特徴が組み合わさることで、
+                    GoogleのエコシステムとAIエージェントをつなぐ"のり"として機能します。
+                </p>
+                <p>
+                    特にClaudeやGeminiをAIエージェントとして活用する企業にとって、
+                    gwsは「AIがWorkspaceを操作できる実装コストを劇的に下げる」ツールです。
+                    現時点ではv1.0未満でAPIの安定性に注意が必要ですが、今後の正式リリースに向けて
+                    今から仕組みを理解・検証しておくことをお勧めします。
+                </p>
+                <p>
+                    MIRAINAでは、Google WorkspaceとAIエージェントを組み合わせた業務自動化支援を提供しています。
+                    「自社でも活用できるか試したい」という方は、ぜひ無料相談からお問い合わせください。
+                </p>
+
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIと業務ツールの連携でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、Google WorkspaceとAIエージェントを組み合わせた<br>業務自動化の設計・実装支援を行っています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog019.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card019.webp" alt="Google Workspace Studio関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.12.05</div>
+                            <div class="related-text">【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog021.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card021.webp" alt="Claudeメモリ機能関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.04</div>
+                            <div class="related-text">【2026年3月最新】Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法とビジネス活用ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog012.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card012.png" alt="Google Antigravity関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.25</div>
+                            <div class="related-text">【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+                <!-- Empty -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

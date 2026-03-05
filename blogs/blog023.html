@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Anthropicが開発し2025年12月にLinux Foundation配下で業界標準となったMCP（Model Context Protocol）を徹底解説。OpenAI・Google・Microsoftが採用した理由、AIエージェントとの連携方法、中小企業が今すぐ押さえておくべき活用ポイントを紹介します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog023.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog-card023.webp">
+    <meta property="og:description"
+        content="Anthropicが開発し2025年12月にLinux Foundation配下で業界標準となったMCP（Model Context Protocol）を徹底解説。OpenAI・Google・Microsoftが採用した理由、AIエージェントとの連携方法、中小企業が今すぐ押さえておくべき活用ポイントを紹介します。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.05</span>
+                    <div class="article-tags">
+                        <p class="article-tag">MCP</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">AI導入</p>
+                        <p class="article-tag">業務自動化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog023-1.webp" alt="MCP（Model Context Protocol）のイメージ" width="800" height="450">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「AIを使いたいが、既存の業務システムとうまくつながらない」——そんな悩みを根本から解決しようとしているのが、<strong>MCP（Model Context Protocol：モデルコンテキストプロトコル）</strong>です。Anthropicが2024年11月に公開したこの規格は、2025年12月にLinux Foundationの新組織「Agentic AI Foundation（AAIF）」に移管され、OpenAI・Google・Microsoft・AWSがこぞって採用するAI業界の事実上の標準プロトコルとなりました。日経クロステック主催の専門家選定でも「2026年ブレイクスルー技術グランプリ」に選出されるほど注目されているMCPとは何か？なぜ今これほど重要なのか？中小企業はどう活用すればいいのか？本記事で徹底解説します。
+                </p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#what-is-mcp">1. MCPとは？"AIのUSB-C"と呼ばれるその正体</a></li>
+                    <li><a href="#aaif">2. MCPが業界標準に：2025年12月の歴史的転換点</a></li>
+                    <li><a href="#why-adopted">3. なぜOpenAI・Google・Microsoftが競合他社の規格を採用したのか</a></li>
+                    <li><a href="#use-cases">4. MCPで何ができる？ビジネス活用シーン5選</a></li>
+                    <li><a href="#for-sme">5. 中小企業がMCPを活用するための3ステップ</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="what-is-mcp">1. MCPとは？"AIのUSB-C"と呼ばれるその正体</h2>
+                <p>
+                    MCP（Model Context Protocol）は、<strong>AIモデルと外部ツール・データソースをつなぐための標準プロトコル</strong>です。Anthropicが2024年11月にオープンソースで公開しました。
+                </p>
+                <p>
+                    わかりやすく言えば、<strong>"AIのUSB-C"</strong>です。USB-Cが登場する以前、周辺機器をつなぐためのコネクタはメーカーや製品ごとにバラバラでした。USB-Cという標準規格ができたことで、どのデバイスでも同じケーブル1本で接続できるようになりました。MCPはこれと同じ役割をAIの世界で果たします。
+                </p>
+                <p>
+                    これまで、AIと業務システム（CRM・ERP・チャットツール・データベースなど）を連携させるには、システムごとに専用の実装が必要でした。Slack連携にはSlack用のコードを、Notion連携にはNotion用のコードを、それぞれゼロから書かなければなりませんでした。MCPはこの問題を解決する共通の「接続口」です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">MCP以前（個別実装）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>システムごとに個別開発が必要</li>
+                                    <li>AI乗り換えのたびに作り直し</li>
+                                    <li>開発コストが高く、中小企業には困難</li>
+                                    <li>保守・管理が複雑化</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">MCP導入後（標準化）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>1つの規格で全システムに接続</strong></li>
+                                    <li>AI乗り換えてもツールはそのまま</li>
+                                    <li>既製のMCPサーバーを組み合わせるだけ</li>
+                                    <li>導入・保守コストが大幅に低減</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：MCP導入前後のAI連携コストの変化</p>
+                </div>
+
+                <p>
+                    MCPには大きく3つのコンポーネントがあります。<strong>MCPホスト</strong>（ClaudeやChatGPTなどのAIクライアント）、<strong>MCPクライアント</strong>（AIとサーバーをつなぐ中間処理）、<strong>MCPサーバー</strong>（SlackやGoogleカレンダーなどの業務ツール側の接続口）です。AIはMCPサーバーを通じて外部ツールを「ツール」として呼び出し、データを取得・操作できるようになります。
+                </p>
+
+                <h2 id="aaif">2. MCPが業界標準に：2025年12月の歴史的転換点</h2>
+                <p>
+                    MCPが公開されてからわずか1年後の2025年12月9日、AI業界に歴史的な出来事が起きました。Anthropicが<strong>MCPをLinux Foundation傘下の新組織「Agentic AI Foundation（AAIF）」に移管する</strong>と発表したのです。
+                </p>
+                <p>
+                    AAIFはAnthropicとBlock（旧Square）、OpenAIの3社が共同設立し、Google・Microsoft・AWS・Cloudflare・Bloombergがプラチナメンバーとして参加する組織です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>組織</th>
+                                <th>役割</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Anthropic</th>
+                                <td>MCP開発元・AAIF共同設立</td>
+                            </tr>
+                            <tr>
+                                <th>OpenAI</th>
+                                <td>AAIF共同設立・MCP採用済み</td>
+                            </tr>
+                            <tr>
+                                <th>Block（旧Square）</th>
+                                <td>AAIF共同設立・gooseをMCPで公開</td>
+                            </tr>
+                            <tr>
+                                <th>Google・Microsoft・AWS</th>
+                                <td>プラチナメンバー・MCP採用済み</td>
+                            </tr>
+                            <tr>
+                                <th>Cloudflare・Bloomberg</th>
+                                <td>プラチナメンバー</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    このAAIF移管は、MCPが単なる「Anthropic製の規格」ではなく、<strong>AI業界全体が共同で管理・発展させていくオープンスタンダード</strong>になったことを意味します。MCP SDKのダウンロード数は月間9,700万件を超え、対応するMCPサーバーは1万以上。Claude・ChatGPT・Gemini・Microsoft Copilot・VS Codeなど主要AIクライアントすべてが対応済みです。
+                </p>
+                <p>
+                    日経クロステック主催の専門家選定でも<strong>「2026年ブレイクスルー技術グランプリ」に全員一致で選出</strong>されており、「AIエージェントと業務システムをつなぐ共通基盤」として業界の確信が固まっています。
+                </p>
+
+                <h2 id="why-adopted">3. なぜOpenAI・Google・Microsoftが競合他社の規格を採用したのか</h2>
+                <p>
+                    ビジネス的に見れば、競合他社が開発した規格をそのまま採用するのは珍しいことです。OpenAIやGoogleがなぜAnthropicのMCPを採用したのか、その背景には3つの理由があります。
+                </p>
+
+                <h3>① エコシステムの力が圧倒的だった</h3>
+                <p>
+                    MCPはAnthropicが公開した2024年11月から、わずか数か月で爆発的に普及しました。Claude Desktopがいち早くMCP対応したことで、世界中の開発者がMCPサーバーを作り始め、Slack・Notion・GitHub・Figma・Salesforceなど主要ビジネスツールのほぼすべてにMCPサーバーが整備されました。独自規格を作るより、このエコシステムに乗った方が合理的と各社が判断したのです。
+                </p>
+
+                <h3>② 相互運用性がAI業界全体の利益になる</h3>
+                <p>
+                    AI競争において、モデルの性能差はどんどん縮まっています。今や各社の差別化ポイントは「モデルそのもの」から「どれだけ多くのツール・データと連携できるか」に移っています。共通規格を採用することで、ユーザーが「どのAIを使っても同じツールが使える」環境が整い、AIツール市場全体の拡大につながります。
+                </p>
+
+                <h3>③ Linux Foundation移管による信頼性の担保</h3>
+                <p>
+                    Linuxカーネル・Kubernetes・Androidベースを擁するLinux Foundationが管理主体になることで、<strong>特定企業による囲い込みリスクがなくなり</strong>、企業がMCPを安心して採用できる環境が整いました。「Anthropicが方針を変えてもMCPは続く」という確信が、業界全体の採用を加速させました。
+                </p>
+
+                <h2 id="use-cases">4. MCPで何ができる？ビジネス活用シーン5選</h2>
+                <p>
+                    MCPの普及により、AIエージェントが「情報を取得するだけ」から「実際に業務を実行する」存在へと進化しています。具体的にどのような活用が可能か、ビジネスシーンで想像しやすい事例を5つ紹介します。
+                </p>
+
+                <h3>① Gmailの未読メールを自動要約・返信案作成</h3>
+                <p>
+                    Gmail MCPサーバーを使えば、AIが未読メールを取得して優先度順に並べ替え、重要メールへの返信案を自動作成できます。「今日の重要メールをSlackに通知して」という1文の指示で、メール確認からSlack投稿まで一連の作業が完結します。
+                </p>
+
+                <h3>② カレンダー・会議メモの自動連携</h3>
+                <p>
+                    Google Calendar MCPとNotion MCPを組み合わせることで、会議後に「今日の打ち合わせ内容をNotionの議事録ページに整理して、次のカレンダーにフォローアップを追加して」という指示が実行できます。これまで手作業で30分かかっていた会議後処理が数分で完了します。
+                </p>
+
+                <h3>③ CRM・営業データを横断した顧客分析</h3>
+                <p>
+                    SalesforceやHubSpot対応のMCPサーバーを使えば、AIが顧客データ・商談履歴・メール往来を横断して分析し、「今月フォローすべき優先顧客トップ10と提案内容」をレポート出力できます。
+                </p>
+
+                <h3>④ Slackチャンネルの情報をナレッジベース化</h3>
+                <p>
+                    Slack MCPを使えば、社内Slackに流れている議論や決定事項をAIが収集・整理してドキュメント化できます。「先週の#マーケティングチャンネルでの議論をまとめてNotionに保存して」という指示だけで実行可能です。属人化しがちな社内ナレッジが自動で蓄積されます。
+                </p>
+
+                <h3>⑤ コードリポジトリ操作・PRレビュー自動化</h3>
+                <p>
+                    GitHub MCPを使えば、AIがコードを読んでPRにコメントしたり、指定した修正を直接コミットしたりできます。エンジニアがいない中小企業でも、ノーコードツールをAIエージェントが操作して業務システムを改修するといったユースケースが現実になっています。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">連携 01</span>
+                            <span class="step-text">Gmail<br>メール自動処理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">連携 02</span>
+                            <span class="step-text">Calendar<br>スケジュール管理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">連携 03</span>
+                            <span class="step-text">Slack<br>ナレッジ蓄積</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">連携 04</span>
+                            <span class="step-text">CRM<br>顧客分析</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：MCPで連携できる主要ビジネスツールの例（2026年3月時点で1万以上のMCPサーバーが公開中）</p>
+                </div>
+
+                <p>あわせて読みたい：<a href="blog022.html">【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール</a></p>
+
+                <h2 id="for-sme">5. 中小企業がMCPを活用するための3ステップ</h2>
+                <p>
+                    「MCPは技術者向けの話で、自社には関係ない」と思った方もいるかもしれません。しかし2026年現在、ノーコードのMCPクライアントが充実してきており、<strong>プログラミング知識なしでもMCPを活用できる環境が整い始めています</strong>。中小企業が今すぐ取り組める3つのステップを紹介します。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">MCP対応AIツールを<br>試してみる</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">使っているツールの<br>MCPサーバーを確認</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">自動化したい業務を<br>1つ決めてPoC実施</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図3：中小企業がMCPを活用するための3ステップ</p>
+                </div>
+
+                <h3>Step 01：MCP対応AIツールを試してみる</h3>
+                <p>
+                    まずはMCPに対応しているAIクライアントを使ってみることが第一歩です。Claude Desktop・ChatGPT・Microsoft Copilot・VS Codeはすでにデフォルトでお対応しています。特にClaude Desktopは設定ファイルにMCPサーバーの接続先を書き込むだけで、ビジネスツールとの連携が始まります。
+                </p>
+
+                <h3>Step 02：使っているツールのMCPサーバーを確認する</h3>
+                <p>
+                    自社が日常的に使っているSlack・Gmail・Notionなどに対応したMCPサーバーが公開されていないか確認します。公式の「MCP Registry」や GitHubで検索すると、主要ツールのMCPサーバーはほぼ見つかります。既製のMCPサーバーを使えば、開発コストゼロでAIと業務ツールを連携できます。
+                </p>
+
+                <h3>Step 03：自動化したい業務を1つ決めてPoCを実施する</h3>
+                <p>
+                    最初から全業務の自動化を目指さず、「週次レポート作成」「問い合わせメールへの初回返信案作成」など、<strong>具体的な1業務だけで試す</strong>のが成功の鍵です。小さな成功体験を積み重ねながら範囲を広げていく進め方が、中小企業にとってリスクを抑えながら効果を実感できる最善策です。
+                </p>
+                <p>
+                    MIRAINAでは、MCPを活用したAIエージェント導入の設計・実装支援を提供しています。「自社ではどう使えばいいかわからない」「まず何から始めればいいか相談したい」という方は、ぜひ無料相談をご利用ください。
+                </p>
+
+                <p>関連記事：<a href="blog020.html">【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット</a></p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    MCP（Model Context Protocol）は、AIと業務システムをつなぐ「共通のコネクタ」として、2026年に事実上の業界標準となりました。AnthropicからLinux Foundation傘下のAAIFに移管されたことで、OpenAI・Google・Microsoft・AWSが全社採用するオープンスタンダードとして確立されています。
+                </p>
+                <p>
+                    MCPが重要な理由を3点まとめます。
+                </p>
+                <ul>
+                    <li><strong>開発コストの大幅削減</strong>：ツールごとの個別実装が不要になり、既製MCPサーバーを組み合わせるだけでAI連携が実現</li>
+                    <li><strong>ベンダーロックインからの解放</strong>：AIを別のモデルに乗り換えても、MCPサーバーはそのまま流用できる</li>
+                    <li><strong>AIエージェント活用の基盤</strong>：単なる情報取得を超えて、AIが業務を「実行」できる環境の根幹になる技術</li>
+                </ul>
+                <p>
+                    ガートナーは「2027年までにAIエージェントプロジェクトの40%以上がROI不明確・ガバナンス問題で中止になる可能性がある」と警告しています。MCPを正しく理解した上で、明確な業務課題に絞って活用することが、中小企業が2026年にAIエージェントで成果を出す最短ルートです。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener">Anthropic: Donating the Model Context Protocol and establishing the Agentic AI Foundation</a></li>
+                        <li><a href="https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation" target="_blank" rel="noopener">Linux Foundation: Formation of the Agentic AI Foundation (AAIF)</a></li>
+                        <li><a href="https://openai.com/index/agentic-ai-foundation/" target="_blank" rel="noopener">OpenAI: OpenAI co-founds the Agentic AI Foundation</a></li>
+                        <li><a href="https://xtech.nikkei.com/atcl/nxt/column/18/03423/120200002/" target="_blank" rel="noopener">日経クロステック: グランプリはMCP、AIエージェントと業務システムをつなぐ共通基盤に</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">MCPを活用したAI導入のご相談はMIRAINAへ</h2>
+                    <p class="cta-text">
+                        MCPを活用したAIエージェントの設計・実装支援を行っています。<br>
+                        「自社のツールとAIをつなぎたい」「どこから手をつければいいかわからない」<br>
+                        という方は、まずはお気軽に無料相談をご利用ください。
+                    </p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="blog022.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card022.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール</div>
+                        </div>
+                    </a>
+                    <a href="blog020.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card020.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.04</div>
+                            <div class="related-text">【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+                <!-- Empty as requested -->
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

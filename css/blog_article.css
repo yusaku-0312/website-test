@@ -603,3 +603,78 @@
     font-size: 0.95rem;
     transition: color 0.3s;
 }
+
+
+/* ==========================================================================
+   Code / Terminal UI
+   ========================================================================== */
+
+/* インラインコード */
+.article-body code,
+.article-table code {
+    font-family: 'SFMono-Regular', 'Consolas', 'Menlo', monospace;
+    background-color: #f0f0f0;
+    color: #c7254e;
+    padding: 0.15em 0.45em;
+    border-radius: 3px;
+    font-size: 0.875em;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* エディター風コードブロック */
+.code-block {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.code-block-header {
+    background-color: #3a3a3a;
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.code-block-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.code-block-dot.red    { background-color: #ff5f57; }
+.code-block-dot.yellow { background-color: #ffbd2e; }
+.code-block-dot.green  { background-color: #28c840; }
+
+.code-block-label {
+    margin-left: auto;
+    font-family: 'SFMono-Regular', 'Consolas', 'Menlo', monospace;
+    font-size: 0.72rem;
+    color: #888;
+    letter-spacing: 0.03em;
+}
+
+.code-block pre {
+    margin: 0;
+    background-color: #1e1e1e;
+    padding: 1.4rem 1.6rem;
+    overflow-x: auto;
+}
+
+.code-block pre code {
+    background: none;
+    color: #9cdcfe;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-family: 'SFMono-Regular', 'Consolas', 'Menlo', monospace;
+    word-break: normal;
+}
+
+/* $ プロンプト記号を薄くハイライト */
+.code-block pre code .prompt {
+    color: #569cd6;
+    user-select: none;
+}
