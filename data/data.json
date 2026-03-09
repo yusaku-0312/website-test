@@ -242,6 +242,15 @@
             "alt": "Nano Banana 2とは？初代から進化した5つのポイントと活用法",
             "link": "/blogs/blog027.html",
             "date": "2026-03-08"
+        },
+        {
+            "id": 28,
+            "title": "【2026年3月最新】GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線",
+            "description": "OpenAIが2026年3月5日にリリースしたGPT-5.4を徹底解説。ネイティブPC操作・105万トークン・ChatGPT for Excelなど、ビジネスを変える新機能と中小企業向けの活用法を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card028.webp",
+            "alt": "GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線",
+            "link": "/blogs/blog028.html",
+            "date": "2026-03-09"
         }
     ],
     "works": [
