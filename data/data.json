@@ -233,6 +233,15 @@
             "alt": "AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例",
             "link": "/blogs/blog026.html",
             "date": "2026-03-08"
+        },
+        {
+            "id": 27,
+            "title": "【2026年最新】Nano Banana 2とは？初代から進化した5つのポイントと活用法",
+            "description": "GoogleのAI画像生成モデル「Nano Banana 2」が2026年2月リリース。初代より3倍速・コスト75%削減・テキスト精度向上など5つの進化ポイントを解説。中小企業・マーケターがすぐ使える活用法も紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card027.webp",
+            "alt": "Nano Banana 2とは？初代から進化した5つのポイントと活用法",
+            "link": "/blogs/blog027.html",
+            "date": "2026-03-08"
         }
     ],
     "works": [
