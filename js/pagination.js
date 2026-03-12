@@ -62,13 +62,16 @@ function renderItems(container, items, type) {
         return;
     }
 
-    const html = items.map(item => {
+    const priorityItemCount = 3;
+    const html = items.map((item, index) => {
+        const loading = index < priorityItemCount ? 'eager' : 'lazy';
+        const fetchPriorityAttr = index === 0 ? ' fetchpriority="high"' : '';
         if (type === 'blogs') {
             return `
                 <article class="blog-card fade-in-section">
                     <a href="${item.link}" class="blog-link">
                         <div class="blog-image">
-                            <img src="${item.thumbnail}" alt="${item.alt}" loading="lazy">
+                            <img src="${item.thumbnail}" alt="${item.alt}" loading="${loading}" decoding="async"${fetchPriorityAttr}>
                         </div>
                         <div class="blog-body">
                             <div class="blog-meta">
@@ -88,7 +91,7 @@ function renderItems(container, items, type) {
             return `
                 <a href="${item.link}" class="work-card fade-in-section">
                     <div class="work-image">
-                        <img src="${item.thumbnail}" alt="${item.alt}" loading="lazy">
+                        <img src="${item.thumbnail}" alt="${item.alt}" loading="${loading}" decoding="async"${fetchPriorityAttr}>
                     </div>
                     <div class="work-content">
                         <div class="work-cat" style="color: #666; font-size: 0.8rem; margin-bottom: 0.5rem;">
