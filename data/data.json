@@ -287,6 +287,15 @@
             "alt": "【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方",
             "link": "/blogs/blog032.html",
             "date": "2026-03-11"
+        },
+        {
+            "id": 33,
+            "title": "【2026年3月最新】Google Workspace Geminiとは？新機能を解説",
+            "description": "Google Workspace Geminiの新機能を解説。Docsの文書生成、Sheetsの自動入力、DriveのAI検索など、2026年3月発表の業務効率化ポイントと注意点を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card033.webp",
+            "alt": "Google Workspace Gemini新機能のイメージ",
+            "link": "/blogs/blog033.html",
+            "date": "2026-03-12"
         }
     ],
     "works": [
