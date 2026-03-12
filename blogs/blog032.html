@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Google Geminiに待望の音楽生成機能（Lyria 3）が登場！テキストから30秒の楽曲を自動生成する方法や、プロモーション動画のBGM作成など、ビジネスでの具体的な活用法をわかりやすく解説します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog032.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog032-1.webp">
+    <meta property="og:description"
+        content="Google Geminiに待望の音楽生成機能（Lyria 3）が登場！テキストから30秒の楽曲を自動生成する方法や、ビジネスでの具体的な活用法をわかりやすく解説します。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.11</span>
+                    <div class="article-tags">
+                        <p class="article-tag">生成AI</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog032-1.webp" alt="Geminiの音楽生成のイメージ" width="800" height="450">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年2月、GoogleのAIモデル「Gemini」に待望の音楽生成機能が導入されました。<br>
+                    最新の「Lyria 3」モデルを搭載し、テキストや画像から簡単に高品質な30秒の楽曲を生成することが可能です。<br>
+                    本記事では、この新機能の特徴から、企業のプロモーションやコンテンツ制作における具体的なビジネス活用法までをわかりやすく解説します。
+                </p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Geminiの音楽生成機能「Lyria 3」とは？</a></li>
+                    <li><a href="#section2">2. ビジネスにおける3つの具体的な活用法</a></li>
+                    <li><a href="#section3">3. 音楽生成機能の始め方・使い方</a></li>
+                    <li><a href="#section4">4. 著作権と安全性（SynthID）について</a></li>
+                    <li><a href="#section5">5. まとめ：AIが広げるクリエイティブの可能性</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="section1">1. Geminiの音楽生成機能「Lyria 3」とは？</h2>
+                <p>
+                    Googleが提供するAIアシスタント「Gemini」に、音楽や音声をゼロから作り出すことができる画期的な機能が追加されました。
+                    その中核を担うのが、Google DeepMindが開発した最先端の音楽生成モデル<strong>「Lyria 3」</strong>です。
+                </p>
+                <p>
+                    Lyria 3の最大の特徴は、単なるテキストプロンプト（指示文）だけでなく、<strong>画像や動画といったマルチモーダルな入力にも対応している点</strong>です。
+                </p>
+                <ul>
+                    <li><strong>生成時間：</strong> 約30秒の楽曲を瞬時に生成</li>
+                    <li><strong>詳細なカスタマイズ：</strong> ジャンル、ムード、テンポ、楽器の指定が可能</li>
+                    <li><strong>ボーカル対応：</strong> 自然な歌声を含む楽曲（歌詞も自動生成可能）の作成</li>
+                </ul>
+                <p>
+                    これにより、音楽制作の専門知識が全くない人でも、頭の中にあるイメージをそのまま音楽として形にすることができるようになりました。
+                </p>
+
+                <!-- 比較図解 -->
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のBGM探し</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>フリー素材サイトを何時間も探す</li>
+                                    <li>イメージに完全に合う曲が見つからない</li>
+                                    <li>他社とBGMが被ってしまう</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Geminiでの音楽生成</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>テキスト指示で数秒で完成</strong></li>
+                                    <li><strong>動画や画像に合わせた完璧な雰囲気</strong></li>
+                                    <li><strong>世界に一つだけのオリジナル楽曲</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：従来の手法との比較</p>
+                </div>
+
+                <h2 id="section2">2. ビジネスにおける3つの具体的な活用法</h2>
+                <p>
+                    では、この強力な機能をビジネスシーンでどう活用できるのでしょうか。
+                    特にインハウス（社内）でコンテンツを制作するマーケターやSNS担当者にとって、非常に心強い武器となります。
+                </p>
+
+                <h3>① YouTube・TikTok用のオリジナルBGM作成</h3>
+                <p>
+                    動画プロモーションにおいて、BGMは視聴者の感情を動かす重要な要素です。
+                    Geminiに「アップテンポで、テクノ風の、新製品発表に向けたワクワクする30秒の音楽」と指示するだけで、商材のトーン＆マナーにぴったりのBGMが完成します。
+                    著作権フリーな独自音源のため、SNSのミュート対策にも有効です。
+                </p>
+
+                <h3>② 店舗やイベントの空間デザイン（アンビエント音楽）</h3>
+                <p>
+                    カフェやアパレル店舗、展示会のブース展開などで、「雨の日の落ち着いたジャズ」「朝の爽やかなアコースティックギター」など、時間帯や天候にマッチした環境音楽を用意することができます。
+                    ブランドの世界観を音で表現することが容易になります。
+                </p>
+
+                <h3>③ ポッドキャストやプレゼン動画のジングル</h3>
+                <p>
+                    企業が発信する音声コンテンツのオープニングやエンディング、あるいは社内向けプレゼン動画の切り替わりで使う短いジングル（アイキャッチ音）も、数秒のプロンプトで多数のバリエーションを生成できます。
+                </p>
+
+                <h2 id="section3">3. 音楽生成機能の始め方・使い方</h2>
+                <p>
+                    Geminiでの音楽生成は非常に直感的です。（※現在は18歳以上のユーザーを対象に段階的に提供されています）
+                </p>
+
+                <!-- フロー図解 -->
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Geminiにアクセス</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">プロンプトを入力</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">プレビューと微調整</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">ダウンロード・活用</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：音楽生成の基本ステップ</p>
+                </div>
+
+                <p>
+                    <strong>プロンプトのコツ：</strong><br>
+                    「ジャンル（J-POP、シネマティック等）」「ムード（悲しい、元気な）」「使用する楽器（ピアノ主体、シンセサイザー）」を具体的に言語化することが、イメージ通りの曲を作る秘訣です。<br>
+                    また、生成の元となる画像をアップロードして「この画像の風景に合う音楽を作って」と指示するマルチモーダル機能もぜひ試してみてください。
+                </p>
+                <p>
+                    ※無料版でも利用可能ですが、「Gemini Advanced (Google One AI Premium)」などの有料プランでは、より多くの生成ツール機能や制限の緩和が受けられます。
+                </p>
+
+                <h2 id="section4">4. 著作権と安全性（SynthID）について</h2>
+                <p>
+                    企業利用において最も気になるのが「著作権」と「安全性」です。<br>
+                    Googleは責任あるAIの開発を掲げており、Gemini（Lyria
+                    3）で生成されたすべての楽曲には、人間の耳には聞こえない電子透かし技術<strong>「SynthID」</strong>が埋め込まれています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>セキュリティ・安全面</th>
+                                <th>詳細</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>SynthIDの導入</th>
+                                <td>生成された音声が「AIによって作られたもの」であることを追跡・識別でき、ディープフェイク等の悪用を防ぐ仕組み。</td>
+                            </tr>
+                            <tr>
+                                <th>既存アーティストの保護</th>
+                                <td>特定の有名アーティストの声やスタイルを露骨に模倣するようなプロンプトは、Googleのポリシーによって制限・ブロックされる場合があります。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    商用利用の可否についてはGoogleの最新の利用規約（Terms of Service）を必ず確認し、コンプライアンスを遵守した範囲で利用するようにしましょう。
+                </p>
+
+                <h2 id="section5">5. まとめ：AIが広げるクリエイティブの可能性</h2>
+                <p>
+                    Geminiの音楽生成機能「Lyria 3」は、一部の専門家だけのものであった音楽制作を、すべてのビジネスパーソンに解放しました。<br>
+                    文章を生成するように、数秒でオリジナル楽曲を用意できる時代において、自社のコンテンツをどう彩るかは担当者のアイデア次第です。
+                </p>
+                <p>
+                    まずは実際にGeminiを開いて、「自社のサービスをイメージしたBGM」を作ってみることから始めてみてはいかがでしょうか？
+                </p>
+
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">最新AIのビジネス活用についてのご相談</h2>
+                    <p class="cta-text">
+                        MIRAINAでは、GeminiやChatGPTをはじめとする生成AIの<br>
+                        インハウスでの業務活用支援や、社員向けAI研修を提供しています。<br>
+                        「自社の業務でどうAIを活用できるか知りたい」という方はお気軽にご相談ください。
+                    </p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" style="object-fit: contain;">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="blog030.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog030-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.11</div>
+                            <div class="related-text">【2026年最新】GPT-4.5対Gemini 1.5 Pro！中小企業が選ぶべきAIは？</div>
+                        </div>
+                    </a>
+                    <a href="blog026.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog026-1.webp" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.08</div>
+                            <div class="related-text">【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
