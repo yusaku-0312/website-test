@@ -296,6 +296,15 @@
             "alt": "Google Workspace Gemini新機能のイメージ",
             "link": "/blogs/blog033.html",
             "date": "2026-03-12"
+        },
+        {
+            "id": 34,
+            "title": "【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能",
+            "description": "Agent 365とは何かを解説。Microsoft 365 Copilot Wave 3で発表されたAIエージェント管理機能の特徴、料金、活用法、導入時の注意点を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card034.webp",
+            "alt": "Agent 365によるAIエージェント管理のイメージ",
+            "link": "/blogs/blog034.html",
+            "date": "2026-03-13"
         }
     ],
     "works": [

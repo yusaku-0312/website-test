@@ -268,3 +268,7 @@ AIを通じて企業の利益と効率を両立させる
 - [【2026年3月最新】Google Workspace Geminiとは？新機能を解説](https://miraina-ai.com/blogs/blog033.html)
   - **更新日**: 2026.03.12
   - **概要**: Google Workspace Geminiの新機能を整理し、Docsの下書き生成、Sheetsの自動入力、DriveのAI検索など、2026年3月発表の業務効率化ポイントと導入前の注意点を解説します。
+
+- [【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能](https://miraina-ai.com/blogs/blog034.html)
+  - **更新日**: 2026.03.13
+  - **概要**: Agent 365とは何かを解説。Microsoft 365 Copilot Wave 3で発表されたAIエージェント管理機能の特徴、料金、活用法、導入時の注意点を中小企業向けに整理します。
