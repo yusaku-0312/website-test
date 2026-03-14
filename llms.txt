@@ -1,278 +1,59 @@
-# MIRAINA（ミライナ）— サイト概要ドキュメント
+# MIRAINA（ミライナ）
+> MIRAINAは、生成AI・LLM活用による業務効率化支援、AI人材育成、AI開発、LLMO分析を提供する福岡発のAI活用支援事業です。中小企業を中心に、AI導入の企画・実装・定着まで伴走します。
 
-This document provides a structured, AI-friendly overview of the site for https://miraina-ai.com/ to assist generative AI models in accurate understanding and referencing.
+## 概要 (Summary)
 
----
+MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九州から全国へ広げることを掲げるAI活用支援サイトです。ChatGPT、Claude、Geminiなどの生成AI活用支援、n8nやAPI連携による業務自動化、社内FAQやナレッジ向けAIチャットボット開発、AI検索時代の可視化サービス「LLMO Insight」を提供しています。サイト内には、サービス紹介、事例、AI解説ブログ、企業情報、お問い合わせ導線が整理されています。
 
-## サイト基本情報
+## 主要セクション (Core Content)
 
-**サイト名:** MIRAINA（ミライナ）  
-**概要:**  
-MIRAINAは、生成AI・LLMを活用した業務効率化支援、AIリテラシー教育、AI導入伴走を行う福岡発のAIコンサルティング企業。  
-ChatGPT・Claude・Geminiなどを使った業務改善、n8nを用いた自動化ツール開発、AIチャットボット開発など、中小企業がAIを組織レベルで運用できるよう支援。
-**公式サイトHP:**https://miraina-ai.com/
+- [トップページ](https://miraina-ai.com/)
+- サイト内パス: `/`
+- 内容: MIRAINAの概要、主要サービス導線、導入事例、最新ブログ、FAQ、お問い合わせ導線。
 
----
+- [AI活用サービス一覧](https://miraina-ai.com/services.html)
+- サイト内パス: `/services.html`
+- 内容: 生成AI活用支援、AI研修、AI開発、LLMO Insightの全体像を整理したサービス総合ページ。
 
-## 主要サービス
+- [MIRAINAについて](https://miraina-ai.com/about.html)
+- サイト内パス: `/about.html`
+- 内容: 理念、ビジョン、ミッション、価値観、代表挨拶、事業者概要。
 
-### 生成AI活用支援
-**概要:**  
-業務課題のヒアリングから、AIツール選定、プロトタイピング、導入、社員研修までを一気通貫でサポート。  
-短期導入ではなく「AIが継続して活用される組織づくり」に重点を置く。
+- [事例紹介](https://miraina-ai.com/works.html)
+- サイト内パス: `/works.html`
+- 内容: AI導入、自動化、研修、講演、セミナー登壇などの支援実績一覧。個別事例は `/works/workXXX.html`。
 
-**特徴:**  
-- 現場の業務フローに合わせた導入設計  
-- 部門横断で使えるAIプロンプト設計  
-- セキュリティ・権限・情報管理を考慮した運用ルール構築  
-- 伴走型で継続的な改善を支援  
+- [ブログ一覧](https://miraina-ai.com/blogs.html)
+- サイト内パス: `/blogs.html`
+- 内容: 生成AI、LLMO/AIO、SEO、AI導入、n8n、MCP、AIニュースなどの解説記事一覧。個別記事は `/blogs/blogXXX.html`。
 
-**詳細リンク:**https://miraina-ai.com/services/ai_consulting.html
+- [お問い合わせ](https://miraina-ai.com/contact.html)
+- サイト内パス: `/contact.html`
+- 内容: AI導入相談、研修相談、開発相談、その他問い合わせ窓口。
 
----
+- [LLMO無料診断ツール](https://miraina-ai.com/llmo_search.html)
+- サイト内パス: `/llmo_search.html`
+- 内容: AI検索・LLMO観点の無料診断導線。LLMO Insightへの関心が高い読者向け。
 
-### 生成AIリテラシー研修
-**概要:**  
-社員が業務でAIを活用できるようになる教育プログラム。  
-ChatGPT/Claude の実演、活用事例、プロンプト設計、情報管理まで体系的に提供。
+## 提供サービス (Services)
 
-**対象:**  
-中小企業／自治体／教育機関／スタートアップ
+- [生成AI活用支援](https://miraina-ai.com/services/ai_consulting.html): 業務課題の整理、AI活用設計、導入伴走、運用定着支援。中小企業のAI導入を実務レベルで支援。
+- [AI研修サービス](https://miraina-ai.com/services/ai_training.html): ChatGPT、Claude、Gemini等を活用したリテラシー向上と実務トレーニング。組織の自走力向上が主目的。
+- [AI開発サービス](https://miraina-ai.com/services/ai_develop.html): 業務特化型AIチャットボット、RAG、ナレッジベース、社内FAQ、カスタムAIソリューションの開発。
+- [LLMO Insight](https://miraina-ai.com/services/llmo_insight.html): AI検索で自社がどのように認識・引用されるかを可視化するAI検索レポーティングサービス。AIO/LLMO施策の分析と改善に活用。
 
-**詳細リンク:**https://miraina-ai.com/services/ai_training.html
+## 実績・知見リソース (Secondary Resources)
 
----
+- [事例紹介一覧](https://miraina-ai.com/works.html): 保護者向けAIリテラシー講演、n8n×SlackのDM自動送信、n8n×ChatGPTによるLP分析自動化、応募メール自動転記、n8n勉強会、美容業界向けAI・LLMOセミナー登壇などの実績を掲載。
+- [ブログ一覧](https://miraina-ai.com/blogs.html): AIエージェント、MCP、Gemini、Claude、GPT、補助金、AIガイドライン、LLMO/AIO/SEOなどのテーマを継続的に更新。
+- [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
-### AIチャットボット開発
-**概要:**  
-社内ナレッジやFAQをもとにした独自AIチャットボットを開発。  
-問い合わせ対応や社内ヘルプデスクの工数削減を実現。
+## 補足情報 (Metadata)
 
-**技術要素:**  
-- Embedding検索  
-- RAG  
-- ナレッジベース構築  
-- n8n連携  
-
-**詳細リンク:**https://miraina-ai.com/services/ai_develop.html
-
----
-
-### 自動化ツール開発（n8n / API連携）
-**概要:**  
-申請、報告、転記、レポート作成などの反復作業を自動化。
-
-**事例:**  
-- Slack DMの自動送信
-- LP分析の自動化
-- 問い合わせメール → スプレッドシート自動転記  
-
----
-
-### LLMO Insight（AI検索分析）
-**概要:**  
-AIモデルが自社をどのように認識・引用しているかを分析するサービス。  
-AI時代の新しいSEO指標を可視化し、LLMOやAIO施策の効果検証に利用可能。
-
-**目的:**  
-AI検索時代のブランド露出最適化を支援。
-
-**詳細リンク:**https://miraina-ai.com/services/llmo_insight.html
-
----
-
-## 実績・事例
-
-### [保護者向けAIリテラシー講演](https://miraina-ai.com/works/work001.html)
-- 更新日: 2025-07-05
-- 概要: 福岡市で開催された保護者向け講演会。AI時代における子供たちのAI利用のリスク管理や、安全かつ効果的な活用方法について解説。
-- 成果: 参加者のAIリテラシー向上、家庭での安全なAI活用ルールの策定支援。
-
-### [株式会社Niarail様：n8n × SlackでDM送信自動化](https://miraina-ai.com/works/work002.html)
-- 更新日: 2025-08-10
-- 概要: n8nを用いてSlackの新規参加者を検知し、Googleフォームの案内DMを自動送信するシステムを構築。
-- 成果: 月間約15時間の作業削減、約3万円のコスト削減を実現。
-
-### [株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化](https://miraina-ai.com/works/work003.html)
-- 更新日: 2025-09-15
-- 概要: n8nとChatGPTを活用し、LP（ランディングページ）の要素抽出・分析業務（9項目）を自動化。導入前は100件以上の未処理LPを抱えていた。
-- 成果: 月間70時間以上の業務工数削減、1件あたり40分の短縮、人的ミスの削減。
-
-### [株式会社LiaN様：応募メール自動転記](https://miraina-ai.com/works/work004.html)
-- 更新日: 2025-10-20
-- 概要: Gmailに届く求人応募メールをn8nで解析し、スプレッドシートへ自動転記するフローを構築。月間500件以上の応募情報を処理。
-- 成果: 対応スピードの向上、手作業による転記ミスの撲滅、採用業務の効率化。
-
-### [AIエージェント開発会社A様：n8n勉強会を実施](https://miraina-ai.com/works/work005.html)
-- 更新日: 2025-11-25
-- 概要: 開発チーム向けにn8n勉強会（第1回）を実施。JSONと配列の基礎概念の理解、記述ルールの習得、ハンズオンワークショップを提供。
-- 成果: 開発チーム全体の基礎スキル底上げ、なんとなくの実装からの脱却、基礎理解の定着。
-
-### [AIエージェント開発会社A様：第2回n8n勉強会を実施](https://miraina-ai.com/works/work006.html)
-- 更新日: 2025-12-20
-- 概要: n8nのノードを6つの概念に体系化し、ツールの「限界値」や適切な設計方法を学ぶ第2回勉強会を実施。実務を想定したメール自動化フローの設計ワークショップも開催。
-- 成果: 実装可能範囲の体系的理解、限界値を考慮した設計スキルの習得、論理的な要件分解能力の向上。
-
-### [美容業界マーケターとAI・LLMO対策を深掘りするセミナーに登壇](https://miraina-ai.com/works/work007.html)
-- 実施日: 2026-01-17
-- 概要: 美容師歴10年を経てマーケターに転身した岩田良介氏（300店舗規模サロン集客支援）と共催。AIの基本的な仕組み・ChatGPTウェブ検索の動作原理・RAGの解説・LLMOにおけるRAG知識の重要性・サロン集客向けアルゴリズムレベルの対策をLLM専門家として解説。
-- 成果: 参加者から「有料級の内容」「専門家視点でわかりやすい」「AIの奥深さを実感できた」との声が多数寄せられた。
-
----
-
-## 企業情報
-
-**ビジョン:**  
-AIによって「週休4日制」が当たり前になる未来を創る  
-
-**ミッション:**  
-AIを通じて企業の利益と効率を両立させる  
-
-**バリュー:**  
-- Judicious Efficiency  
-- Empathy & Respect  
-- Passionate Learning  
-
----
-
-## ブログ
-
-- [AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法](https://miraina-ai.com/blogs/blog001.html)
-  - **更新日**: 2025.11.20
-  - **概要**: AI開発の基本プロセス、手法、ビジネスへの導入ステップを初心者向けに解説。AI活用の基礎理解に最適。
-
-- [Gemini活用で経営とマーケティングを革新する実践ガイド](https://miraina-ai.com/blogs/blog002.html)
-  - **更新日**: 2025.11.20
-  - **概要**: GoogleのAIモデルGeminiを用いた経営戦略策定やマーケティング施策の立案方法、プロンプト活用術を紹介。
-
-- [Aristとの業務提携のお知らせ](https://miraina-ai.com/blogs/blog003.html)
-  - **更新日**: 2025.11.20
-  - **概要**: 家庭教師・個別学習支援を行うArist（アリスト）との業務提携を発表。教育分野でのAI活用と共同事業の展望について。
-
-- [AI研修おすすめ7選！選び方や費用について解説](https://miraina-ai.com/blogs/blog004.html)
-  - **更新日**: 2025.11.29
-  - **概要**: 目的別・レベル別のAI研修の選び方とおすすめ講座7選を紹介。費用相場や法人研修導入のポイントも解説。
-
-- [LLMO（大規模言語モデル最適化）が“本当に”重要な理由](https://miraina-ai.com/blogs/blog005.html)
-  - **更新日**: 2025.10.14
-  - **概要**: AI検索時代に求められるLLMO（Large Language Model Optimization）の重要性と、SEO担当者が取り組むべき実践的施策。
-
-- [LLMOとは？生成AI時代に求められる“次世代SEO”](https://miraina-ai.com/blogs/blog006.html)
-  - **更新日**: 2025.10.15
-  - **概要**: LLMOの定義、SEOとの違い、具体的な最適化手法（Entity、Citationsなど）を専門的な視点で解説。
-
-- [AIO（AI検索最適化）とは？SEOマーケターが知っておくべき戦略](https://miraina-ai.com/blogs/blog007.html)
-  - **更新日**: 2025.10.15
-  - **概要**: AIO（Artificial Intelligence Optimization）の概念と、SGEなどのAI検索エンジンに対する最適化戦略の全体像。
-
-- [AIモード（AI Mode）とは？──検索が“会話”に変わる新時代](https://miraina-ai.com/blogs/blog008.html)
-  - **更新日**: 2025.10.16
-  - **概要**: ユーザーが検索エンジンではなく「AIモード」で情報探索を行う行動変容と、それに向けたコンテンツ戦略について。
-
-- [【2025年版】AIおすすめツール完全ガイド](https://miraina-ai.com/blogs/blog009.html)
-  - **更新日**: 2025.10.17
-  - **概要**: テキスト生成、画像生成、動画作成、業務自動化など、目的別に厳選した最新AIツールの特徴と料金を比較。
-
-- [AIコンサルタントの選び方｜失敗しない発注のポイント](https://miraina-ai.com/blogs/blog010.html)
-  - **更新日**: 2025.10.18
-  - **概要**: AI導入を成功させるためのコンサルタント選定基準、依頼前の準備、期待できる効果と費用感について。
-
-- [【最新版】/llms.txtとは？AI時代に求められる新しい解説ファイル](https://miraina-ai.com/blogs/blog011.html)
-  - **更新日**: 2025.11.18
-  - **概要**: AIエージェントに向けたサイト案内ファイル「/llms.txt」の役割、メリット、記述内容、SEO/AIOとの関係を解説。
-
-- [【最新版】Google Antigravityとは？次世代AIエディターの全貌](https://miraina-ai.com/blogs/blog012.html)
-  - **更新日**: 2025.11.21
-  - **概要**: Google DeepMindが開発したAgentic AIエディター「Antigravity」の特徴、機能、開発プロセスへの影響を解説。
-
-- [【2025年最新】Gemini 3.0とは？新機能とビジネス活用事例](https://miraina-ai.com/blogs/blog013.html)
-  - **更新日**: 2025.11.23
-  - **概要**: Deep ThinkモードやAgentic機能を搭載したGemini 3.0の新機能と、マーケティングや開発での具体的な活用事例。
-
-- [LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略](https://miraina-ai.com/blogs/blog014.html)
-  - **更新日**: 2025.11.24
-  - **概要**: LLMOとSEOの構造的な違いを整理し、信頼性（E-E-A-T）を中心とした統合的なマーケティング戦略を提言。
-
-- [【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ](https://miraina-ai.com/blogs/blog015.html)
-  - **更新日**: 2025.11.23
-  - **概要**: AIエージェントと画像生成AIを活用した、広告クリエイティブの自動化・最適化とブランド一貫性の担保について。
-
-- [AI活用事例5選：業界別・職種別の成功事例と導入の基本](https://miraina-ai.com/blogs/blog016.html)
-  - **更新日**: 2025.11.30
-  - **概要**: 製造、サービス、医療、金融、マーケティングなど各業界でのAI導入成功事例と、導入の具体的ステップを解説。
-
-- [LLMOの導入効果とは？─AI流入増加の事例と具体的な対策](https://miraina-ai.com/blogs/blog017.html)
-  - **更新日**: 2025.12.02
-  - **概要**: LLMO導入による検索流入増加の実例と、AIに参照されるための具体的なコンテンツ対策（構造化データなど）。
-
-- [【2025年最新】Claude Opus 4.5とは？最強AIモデルの全貌](https://miraina-ai.com/blogs/blog018.html)
-  - **更新日**: 2025.12.04
-  - **概要**: Anthropic社の最新モデルClaude Opus 4.5の機能（コーディング、Effortパラメータ等）とビジネス活用メリット。
-
-- [【2025年最新】Google Workspace Studio（GWS）とは？](https://miraina-ai.com/blogs/blog019.html)
-  - **更新日**: 2025.12.05
-  - **概要**: Gemini 3搭載の業務自動化プラットフォームGWSの機能解説と、ノーコードでのAIエージェント作成事例。
-
-- [【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット](https://miraina-ai.com/blogs/blog020.html)
-  - **更新日**: 2026.03.04
-  - **概要**: OpenAIが2026年2月に発表した企業向けAIプラットフォーム「Frontier」の全機能・導入事例・SaaSへの影響・日本企業の取るべきアクションを解説。
-
-- [【2026年3月最新】Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法とビジネス活用ガイド](https://miraina-ai.com/blogs/blog021.html)
-  - **更新日**: 2026.03.04
-  - **概要**: Anthropicが2026年3月3日にClaudeのAI記憶機能を無料プランへ開放。ChatGPT・Gemini・Copilotからの設定インポート方法とビジネス活用のポイントを解説。
-
-- [【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール](https://miraina-ai.com/blogs/blog022.html)
-  - **更新日**: 2026.03.05
-  - **概要**: Googleが公式公開したCLIツール「gws」の仕組み・インストール方法・MCPサーバーとしてClaude・Gemini CLIと連携しWorkspaceを自動操作する方法を解説。
-
-- [【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革](https://miraina-ai.com/blogs/blog023.html)
-  - **更新日**: 2026.03.05
-  - **概要**: Anthropicが開発しLinux Foundation傘下で業界標準となったMCPを徹底解説。OpenAI・Google・Microsoftが採用した理由、AIエージェントとの連携方法、中小企業向け活用3ステップを紹介。
-
-- [【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則](https://miraina-ai.com/blogs/blog024.html)
-  - **更新日**: 2026.03.05
-  - **概要**: AI導入失敗の根本原因はAI起点の思考にある。業務フロー棚卸し→課題特定→AIツール選定の「業務課題ベース3ステップ」で中小企業が失敗しないAI導入を実現する方法を解説。
-
-- [【2026年3月最新】AI事業者ガイドライン改定とは？AIエージェント時代に企業が押さえるべき新ルール](https://miraina-ai.com/blogs/blog025.html)
-  - **更新日**: 2026.03.08
-  - **概要**: AI事業者ガイドラインが2026年3月に改定。AIエージェントとフィジカルAIに「Human-in-the-Loop（人間の判断必須）」ルールが追加。改定の3つのポイントと中小企業が取るべき3つのアクションを解説。
-
-- [【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例](https://miraina-ai.com/blogs/blog026.html)
-  - **更新日**: 2026.03.08
-  - **概要**: AIエージェントとは自律的に業務を遂行するAI。Gartnerが「2026年末に企業アプリ40%にエージェント搭載」と予測。生成AIとの違い・中小企業の活用事例4選・導入3ステップをわかりやすく解説。
-
-- [【2026年最新】Nano Banana 2とは？初代から進化した5つのポイントと活用法](https://miraina-ai.com/blogs/blog027.html)
-  - **更新日**: 2026.03.08
-  - **概要**: GoogleのAI画像生成モデルNano Banana 2（Gemini 3.1 Flash Image）が2026年2月リリース。初代より3倍速・コスト75%削減・日本語テキスト描画精度向上・最大5人キャラクター一貫性など5つの進化ポイントと中小企業向け活用法を解説。
-
-- [【2026年3月最新】GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線](https://miraina-ai.com/blogs/blog028.html)
-  - **更新日**: 2026.03.09
-  - **概要**: OpenAIが2026年3月5日にリリースしたGPT-5.4を徹底解説。ネイティブPC操作（Computer Use）・105万トークンコンテキスト・ChatGPT for Excel（精度87.3%）・金融データ連携・エージェント型ワークフローの5大新機能と、Claude・Geminiとの使い分けを解説。
-
-- [【2026年最新】デジタル化・AI導入補助金とは？中小企業が最大450万円を活用する申請ガイド](https://miraina-ai.com/blogs/blog029.html)
-  - **更新日**: 2026.03.10
-  - **概要**: 2026年にIT導入補助金から名称変更された「デジタル化・AI導入補助金」を徹底解説。最大450万円の補助額、5つの申請枠（通常枠・インボイス枠・セキュリティ枠等）、申請スケジュール、AI導入で補助金を最大限活用するポイントを中小企業向けに紹介。
-
-- [【2026年最新】n8n構築・開発のおすすめ会社5選！自社に最適なパートナーの選び方](https://miraina-ai.com/blogs/blog030.html)
-  - **更新日**: 2026.03.11
-  - **概要**: オープンソースの自動化ツール「n8n」の導入やワークフロー構築を依頼できるおすすめの会社5選をご紹介します。MIRAINAなどの専門企業を中心に、各社の強みや選定ポイントをわかりやすく解説します。
-
-- [【2026年最新】美容サロン向け生成AI活用ガイド！業務効率化と売上アップの具体策](https://miraina-ai.com/blogs/blog031.html)
-  - **更新日**: 2026.03.11
-  - **概要**: 美容サロン向けの生成AI活用法を解説。予約の自動化やSNSの画像生成など、業務効率化のヒントが満載です。
-
-- [【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方](https://miraina-ai.com/blogs/blog032.html)
-  - **更新日**: 2026.03.11
-  - **概要**: Google Geminiに待望の音楽生成機能（Lyria 3）が登場。テキストから30秒の楽曲を自動生成する方法や、プロモーション動画のBGM作成など、ビジネスでの具体的な活用法をわかりやすく解説します。
-
-- [【2026年3月最新】Google Workspace Geminiとは？新機能を解説](https://miraina-ai.com/blogs/blog033.html)
-  - **更新日**: 2026.03.12
-  - **概要**: Google Workspace Geminiの新機能を整理し、Docsの下書き生成、Sheetsの自動入力、DriveのAI検索など、2026年3月発表の業務効率化ポイントと導入前の注意点を解説します。
-
-- [【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能](https://miraina-ai.com/blogs/blog034.html)
-  - **更新日**: 2026.03.13
-  - **概要**: Agent 365とは何かを解説。Microsoft 365 Copilot Wave 3で発表されたAIエージェント管理機能の特徴、料金、活用法、導入時の注意点を中小企業向けに整理します。
-
-- [【2026年3月最新】MetaのAI詐欺対策とは？なりすまし広告を防ぐ新機能](https://miraina-ai.com/blogs/blog035.html)
-  - **更新日**: 2026.03.14
-  - **概要**: MetaのAI詐欺対策を解説。顔認識や本人確認、注意喚起の強化から、なりすまし広告を防ぐ実務ポイントまで中小企業向けに整理します。
+- **対象読者:** 中小企業経営者、事業責任者、マーケティング担当者、広報担当者、DX推進担当者、教育機関、自治体、AI導入を検討する事業者。
+- **キーワード:** 生成AI, ChatGPT, Claude, Gemini, n8n, AI導入, AI研修, AI開発, AIチャットボット, RAG, LLMO, AIO, SEO, AI検索, 業務自動化, 業務効率化。
+- **方向性:** AI導入で「週休4日制」が当たり前になる未来を、九州から全国へ。
+- **代表:** 芝 優作
+- **コンテンツの厚み:** 2026-03-14時点でブログ35本、事例7件を掲載。AIニュースの解説だけでなく、導入実務、LLMO/AIO、業務改善、n8n活用などの長文記事を含みます。
+- **詳細ページのパターン:** ブログは `/blogs/blogXXX.html`、事例は `/works/workXXX.html`、サービス詳細は `/services/*.html`。
+- **信頼情報:** `/about.html` に理念・代表情報、`/works.html` に具体的実績、`/blogs.html` に専門解説記事が集約されています。
