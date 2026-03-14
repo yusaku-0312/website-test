@@ -305,6 +305,15 @@
             "alt": "Agent 365によるAIエージェント管理のイメージ",
             "link": "/blogs/blog034.html",
             "date": "2026-03-13"
+        },
+        {
+            "id": 35,
+            "title": "【2026年3月最新】MetaのAI詐欺対策とは？なりすまし広告を防ぐ新機能",
+            "description": "MetaのAI詐欺対策を解説。Facebook・Instagram・WhatsAppで進む顔認証、本人確認、注意喚起の強化と、中小企業が取るべき対策を整理します。",
+            "thumbnail": "/images/blogs_images/blog-card035.webp",
+            "alt": "MetaのAI詐欺対策のイメージ",
+            "link": "/blogs/blog035.html",
+            "date": "2026-03-14"
         }
     ],
     "works": [
