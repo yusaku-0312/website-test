@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Codexとは何かを解説。OpenAIが2026年3月11日に公開した楽天事例をもとに、AIコーディング導入の効果、使い方、注意点を紹介します。">
+    <meta property="og:title" content="【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog036.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog036-1.webp">
+    <meta property="og:description"
+        content="Codexとは何かを解説。OpenAIが2026年3月11日に公開した楽天事例をもとに、AIコーディング導入の効果、使い方、注意点を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.15</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">Codex</p>
+                        <p class="article-tag">AI開発</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog036-1.webp" alt="Codexと楽天のAI開発導入イメージ" width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月11日、OpenAIは <strong>Rakuten</strong> のCodex活用事例を公開しました。<br>
+                    事例では、課題解決のスピードが<strong>25%向上</strong>し、本番障害時の復旧も<strong>50%以上高速化</strong>したと紹介されています。<br>
+                    本記事では、Codexとは何か、楽天はどこで効果を出したのか、日本企業が導入前に何を整えるべきかを実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. Codexとは？楽天の最新事例で何がわかったか</a></li>
+                    <li><a href="#rakuten">2. 楽天はCodexをどう使っているのか</a></li>
+                    <li><a href="#use-cases">3. 日本企業で活かしやすい活用シーン</a></li>
+                    <li><a href="#considerations">4. 導入前に押さえたい注意点</a></li>
+                    <li><a href="#summary">5. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. Codexとは？楽天の最新事例で何がわかったか</h2>
+                <p>
+                    <strong>Codex</strong> は、OpenAIが2025年5月16日に公開したクラウドベースのソフトウェアエンジニアリングエージェントです。単なるコード補完ではなく、リポジトリを読み、複数ファイルを編集し、テストや修正を進める前提で設計されている点が特徴です。さらに2026年2月5日には <strong>GPT-5.3 Codex</strong> が公開され、OpenAIは front-end / back-end / bug fixes で前世代比25%の速度向上をうたっています。
+                </p>
+                <p>
+                    そして2026年3月11日に公開された楽天の事例で、Codexが「個人の開発支援ツール」ではなく、<strong>チームの開発速度と運用品質を同時に押し上げる実務基盤</strong>になり始めていることが見えてきました。OpenAIによると、楽天は約3万人規模、うち約1万5000人がエンジニアという大きな技術組織です。その中でCodexを使い、課題解決を25%速くし、本番障害時の復旧時間を50%以上縮めたとされています。
+                </p>
+                <p>
+                    ここで重要なのは、成果が「コードを書く速度」だけに閉じていないことです。MIRAINAが <a href="/blogs/blog026.html">AIエージェントの記事</a> でも整理した通り、今の生成AIは単発の回答より、<strong>複数工程をまたいで仕事を前に進める力</strong> が価値になります。Codexの意味も同じで、設計、実装、レビュー、運用の流れにどう組み込めるかが勝負になります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAIコーディング</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>個人が補完や質問に使う</li>
+                                    <li>生成結果を手作業で貼り戻す</li>
+                                    <li>レビューや運用は別工程のまま</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Codex活用後</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>実装から検証まで一連で進める</strong></li>
+                                    <li><strong>CI/CDやレビューへ接続しやすい</strong></li>
+                                    <li><strong>運用復旧や改善にも効く</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：補完中心のAI活用と、Codexによる開発フロー統合の違い</p>
+                </div>
+
+                <h2 id="rakuten">2. 楽天はCodexをどう使っているのか</h2>
+                <p>
+                    OpenAIの事例ページでは、楽天の活用を <strong>Faster / Safer / Smarter</strong> の3軸で紹介しています。単に「開発が速くなった」ではなく、速度・品質・役割分担が同時に変わっている点が参考になります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>楽天での使い方</th>
+                                <th>実務インパクト</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Faster</th>
+                                <td>障害対応、調査、実装修正の前工程をCodexで圧縮</td>
+                                <td>課題解決が25%高速化し、本番障害時の復旧も50%以上短縮</td>
+                            </tr>
+                            <tr>
+                                <th>Safer</th>
+                                <td>CI/CDのコードレビューや脆弱性確認に活用</td>
+                                <td>速度だけでなく、レビュー品質の下支えにつながる</td>
+                            </tr>
+                            <tr>
+                                <th>Smarter</th>
+                                <td>既存Web型AIエージェントを、Python / FastAPI と Swift / SwiftUI でモバイル化</td>
+                                <td>四半期単位の案件が数週間に圧縮され、PMはより上位判断へ集中できる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    特に注目すべきは、Codexが「速く書くための道具」に留まっていないことです。楽天は本番障害の復旧やCI/CDレビューにも使っており、<strong>開発と運用の境界</strong> にAIを入れています。これは、日本の開発組織でも応用しやすい考え方です。新機能開発だけでなく、障害初動、修正パッチ、レビュー待ちの圧縮といった、日々の摩擦が大きい領域から効果を出しやすいからです。
+                </p>
+                <p>
+                    もう1つの示唆は、プロダクトマネージャーの役割が変わることです。楽天の事例では、PMが細かな実装調整から離れ、より高いレベルの方向づけへ移れたと紹介されています。MIRAINAが <a href="/blogs/blog024.html">AI導入が失敗する理由</a> で繰り返し強調している通り、AI導入は「人を減らす話」ではなく、<strong>人の時間をどこへ再配分するか</strong> の設計が成否を分けます。
+                </p>
+
+                <h2 id="use-cases">3. 日本企業で活かしやすい活用シーン</h2>
+                <p>
+                    「楽天ほど大きな会社の話は参考にならない」と感じるかもしれませんが、学ぶべきポイントは規模ではなく順番です。CodexのようなAIコーディングエージェントは、まず<strong>繰り返し発生し、ルールがあり、評価しやすい仕事</strong>から入れると定着しやすくなります。
+                </p>
+
+                <h3>内製開発チーム：小さな実装案件を前倒しする</h3>
+                <p>
+                    管理画面の改善、社内ツール、API連携、モバイル画面の一部追加など、「仕様は比較的明確だが人手が足りず後回しになる仕事」はCodexと相性が良いです。まずは1つのリポジトリ、1つの機能、1つのチームに絞ることで、どこまで任せられるかを測りやすくなります。AI開発の進め方そのものを相談したい場合は、<a href="/services/ai_develop.html">AI開発サービス</a> で要件整理から伴走できます。
+                </p>
+
+                <h3>運用保守・SRE：障害復旧の初動を速くする</h3>
+                <p>
+                    事例の中でも再現性が高いのが、障害対応の初動支援です。ログの整理、影響範囲の確認、修正候補の洗い出し、テストケースの下書きは、AIが先に進めるだけでも大きな差になります。特に専任SREが少ない企業ほど、夜間や週末の復旧負荷を下げる余地があります。
+                </p>
+
+                <h3>情シス・業務改善部門：コードを書く人が少ない組織でも使える</h3>
+                <p>
+                    全員がフルタイムのエンジニアでなくても、情シスや業務改善担当が軽量なツールを作る場面は増えています。フォーム連携、CSV処理、簡易ダッシュボード、既存SaaSの補助ツールなど、社内の小さな不便を解消する領域でCodexは有効です。ただし、便利だから広げるのではなく、<strong>何を速くしたいのか</strong> を先に決めることが重要です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">まず1つのリポジトリと1種類のタスクに絞る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">レビュー基準と人の承認ポイントを決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">復旧時間やレビュー時間など指標を測る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">効果が出た工程から横展開する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Codex導入を小さく始めて広げるための基本ステップ</p>
+                </div>
+
+                <h2 id="considerations">4. 導入前に押さえたい注意点</h2>
+                <p>
+                    Codexは強力ですが、入れれば自動的に成果が出るわけではありません。少なくとも次の3点は、導入前に整えておくべきです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>注意点</th>
+                                <th>なぜ重要か</th>
+                                <th>最初にやること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>評価指標</th>
+                                <td>「便利そう」で終わると定着しない</td>
+                                <td>レビュー時間、リードタイム、MTTRなど1〜2指標に絞る</td>
+                            </tr>
+                            <tr>
+                                <th>権限と検証</th>
+                                <td>誤修正や機密情報の扱いが事故になる</td>
+                                <td>テスト必須、PR経由、人の承認必須など境界線を決める</td>
+                            </tr>
+                            <tr>
+                                <th>チーム教育</th>
+                                <td>指示が曖昧だと品質も再現性も落ちる</td>
+                                <td>コーディング規約、命名、レビュー観点を文章化する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここで効くのが、リポジトリごとのルールの明文化です。例えばテスト方針、禁止変更、レビュー観点、使ってよいライブラリ、PRの出し方などを先に揃えると、AIは安定しやすくなります。逆に、ルールが属人的なままだと、AIの品質ブレがそのままチームの混乱になります。
+                </p>
+                <p>
+                    MIRAINA視点では、Codex導入は「AIにどこまで書かせるか」よりも、<strong>人がどこで判断し、何を基準に良し悪しを決めるか</strong> を整えることが本質です。開発組織だけで閉じず、情シス、事業責任者、現場担当の期待値を揃えることが必要です。AIリテラシーの土台づくりには <a href="/services/ai_training.html">AI研修</a> も有効です。
+                </p>
+
+                <h2 id="summary">5. まとめ</h2>
+                <p>
+                    Codexは、AIコーディングを「個人の補助」から「チームの開発運用基盤」へ押し上げる存在として注目されています。2026年3月11日に公開された楽天の事例では、課題解決の高速化、本番障害からの復旧短縮、CI/CDレビューの効率化といった、経営に近い効果まで見え始めました。
+                </p>
+                <p>
+                    日本企業が真似すべきなのは、いきなり全面導入することではありません。まずは、効果を測りやすい工程に絞り、人の承認点と評価基準を決め、小さく回して広げることです。CodexのようなAIエージェントは、正しく入れれば開発組織の余白を増やし、より重要な判断へ時間を戻せます。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/rakuten/" target="_blank" rel="noopener">OpenAI: Rakuten fixes issues twice as fast with Codex</a></li>
+                        <li><a href="https://openai.com/index/introducing-codex/" target="_blank" rel="noopener">OpenAI: Introducing Codex</a></li>
+                        <li><a href="https://openai.com/index/introducing-gpt-5-3-codex/" target="_blank" rel="noopener">OpenAI: Introducing GPT-5.3 Codex</a></li>
+                        <li><a href="https://global.rakuten.com/corp/news/update/2025/0602_01.html" target="_blank" rel="noopener">Rakuten Group: AI Optimism 2025 demonstrates how humans and AI can create a better future</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI開発の導入設計を実務に落とし込みたい方へ</h2>
+                    <p class="cta-text">
+                        MIRAINAでは、生成AIを使った開発体制づくりから、社内ルール整備、AI研修、業務への定着支援まで一気通貫で支援しています。<br>
+                        「AIコーディングを試したいが、どこから始めるべきかわからない」という方は、お気軽にご相談ください。
+                    </p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" style="object-fit: contain;" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="blog026.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog026-1.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.08</div>
+                            <div class="related-text">【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例</div>
+                        </div>
+                    </a>
+                    <a href="blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog024-1.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                    <a href="blog020.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog020-1.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.04</div>
+                            <div class="related-text">【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

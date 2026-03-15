@@ -314,6 +314,15 @@
             "alt": "MetaのAI詐欺対策のイメージ",
             "link": "/blogs/blog035.html",
             "date": "2026-03-14"
+        },
+        {
+            "id": 36,
+            "title": "【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法",
+            "description": "Codexとは何かを解説。OpenAIが2026年3月11日に公開した楽天事例をもとに、AIコーディング導入の効果、使い方、注意点を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card036.webp",
+            "alt": "Codexと楽天のAI開発導入イメージ",
+            "link": "/blogs/blog036.html",
+            "date": "2026-03-15"
         }
     ],
     "works": [
