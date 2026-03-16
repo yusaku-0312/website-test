@@ -415,6 +415,15 @@
             "alt": "美容業界マーケターとAI・LLMO対策を深掘りするセミナー登壇",
             "link": "/works/work007.html",
             "date": "2026-01-17"
+        },
+        {
+            "id": 8,
+            "title": "LLMO Insightのプレスリリースを公開",
+            "description": "MIRAINAが2026年3月16日にAI検索レポーティングサービス「LLMO Insight」のプレスリリースを公開。表示シェア可視化、競合比較、GA4連携の考え方を整理した発表です。",
+            "thumbnail": "/images/works_images/work-card008.webp",
+            "alt": "LLMO Insightのプレスリリースキービジュアル",
+            "link": "/works/work008.html",
+            "date": "2026-03-16"
         }
     ]
 }
