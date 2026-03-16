@@ -332,6 +332,15 @@
             "alt": "Claude Partner NetworkとAnthropicの企業AI導入支援",
             "link": "/blogs/blog037.html",
             "date": "2026-03-15"
+        },
+        {
+            "id": 38,
+            "title": "【2026年3月最新】Promptfooとは？OpenAI買収で進むAIエージェント評価とセキュリティ",
+            "description": "Promptfooとは何かを解説。OpenAIが2026年3月9日に買収した背景をもとに、AIエージェントの評価、レッドチーミング、セキュリティ対策がなぜ重要になるのかを紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card038.webp",
+            "alt": "PromptfooとAIエージェント評価基盤のイメージ",
+            "link": "/blogs/blog038.html",
+            "date": "2026-03-16"
         }
     ],
     "works": [
