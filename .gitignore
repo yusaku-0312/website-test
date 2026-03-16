@@ -1,5 +1,6 @@
 .claude/
 .codex
+CLAUDE.md
 llms-v1.txt
 template.html
 blog_generator.md
@@ -8,3 +9,13 @@ requirements_specification.md
 how_to_create_blog.md
 works/work_template.html
 blogs/blog_template.html
+press_release_llmo_insight.md
+press_release_llmo_insight.pdf
+node_modules/
+package.json
+package-lock.json
+miraina_capture_refs.mjs
+miraina_ui_check.mjs
+miraina_ref_*.png
+miraina_check_*.png
+.playwright-cli/
