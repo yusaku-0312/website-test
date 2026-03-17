@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Gemini Embedding 2とは何かを解説。Googleが2026年3月10日に公開したマルチモーダル埋め込みモデルの特徴、RAG・社内検索への効果、導入時の注意点を紹介します。">
+    <meta property="og:title" content="【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog040.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog040-1.webp">
+    <meta property="og:description"
+        content="Gemini Embedding 2とは何かを解説。Googleが2026年3月10日に公開したマルチモーダル埋め込みモデルの特徴、RAG・社内検索への効果、導入時の注意点を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.17</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">RAG</p>
+                        <p class="article-tag">AI開発</p>
+                        <p class="article-tag">セマンティック検索</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog040-1.webp" alt="Gemini Embedding 2でマルチモーダルRAGと社内検索を最適化するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月10日、Googleは<strong>Gemini Embedding 2</strong> を公開しました。これは、テキストだけでなく画像・動画・音声・PDFを
+                    <strong>1つの埋め込み空間</strong>にマッピングできる、Google初のネイティブなマルチモーダル埋め込みモデルです。<br>
+                    生成AIの話題はチャット応答に集まりがちですが、実務で本当に効くのは「社内の情報を正しく探せるか」「必要な知識を取り出せるか」という検索基盤の品質です。<br>
+                    本記事では、Gemini Embedding 2の特徴、RAGや社内検索に与えるインパクト、そして中小企業が導入前に押さえるべき注意点を整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. Gemini Embedding 2とは？まず押さえたい全体像</a></li>
+                    <li><a href="#features">2. Gemini Embedding 2の主な特徴と何が新しいのか</a></li>
+                    <li><a href="#impact">3. RAG・社内検索・ナレッジ活用でどう効くか</a></li>
+                    <li><a href="#caution">4. 導入前に押さえたい注意点</a></li>
+                    <li><a href="#miraina">5. MIRAINA視点で見る、中小企業の始め方</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. Gemini Embedding 2とは？まず押さえたい全体像</h2>
+                <p>
+                    <strong>Gemini Embedding 2</strong> は、Googleが2026年3月10日にパブリックプレビューで公開した埋め込みモデルです。埋め込みとは、文章や画像などの情報を
+                    「意味の近さ」で比較できる数値ベクトルへ変換する技術で、<strong>RAG、社内検索、レコメンド、クラスタリング</strong>の土台になります。
+                </p>
+                <p>
+                    従来は、テキスト検索ならテキスト埋め込み、画像検索なら別の画像モデル、音声なら文字起こし経由というように、モダリティごとに処理を分ける構成が一般的でした。Gemini Embedding 2は、
+                    テキスト・画像・動画・音声・PDFを同じ空間に配置できるため、「議事録PDF」「商品写真」「研修動画」「音声メモ」といった異なる形式の情報を横断して扱いやすくなります。
+                </p>
+                <p>
+                    これは単なる新モデル追加ではありません。検索やRAGの精度を左右するのは、LLM本体よりも<strong>どの情報を取り出せるか</strong>です。つまりGemini Embedding 2は、
+                    生成AIの回答品質を裏側から底上げする基盤技術として注目すべき存在です。
+                </p>
+
+                <h2 id="features">2. Gemini Embedding 2の主な特徴と何が新しいのか</h2>
+                <p>
+                    Googleの公式発表で特に重要なのは、「ネイティブなマルチモーダル対応」と「そのまま業務データに適用しやすい入力範囲」です。要点を表に整理すると次の通りです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Gemini Embedding 2の内容</th>
+                                <th>実務への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>対応モダリティ</th>
+                                <td>テキスト・画像・動画・音声・PDF</td>
+                                <td>社内の散在データを1つの検索基盤に寄せやすい</td>
+                            </tr>
+                            <tr>
+                                <th>多言語対応</th>
+                                <td>100以上の言語に対応</td>
+                                <td>日本語資料と英語資料が混在する環境でも使いやすい</td>
+                            </tr>
+                            <tr>
+                                <th>テキスト入力</th>
+                                <td>最大8,192トークン</td>
+                                <td>長めの仕様書や議事録も扱いやすい</td>
+                            </tr>
+                            <tr>
+                                <th>画像・動画・文書入力</th>
+                                <td>画像は最大6枚、動画は最大120秒、PDFは最大6ページ</td>
+                                <td>写真付き手順書や短い研修動画も検索対象にしやすい</td>
+                            </tr>
+                            <tr>
+                                <th>提供形態</th>
+                                <td>Gemini API と Vertex AI でパブリックプレビュー</td>
+                                <td>PoCから本番移行までGoogle基盤上でつなぎやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    重要なのは、「複数のファイル形式を扱える」こと自体より、<strong>意味理解の土台を統一できる</strong>ことです。たとえば、営業資料のPDFと商談音声メモと商品画像を別々のシステムで持っていると、
+                    どれか1つしか検索に引っかからない状態が起きます。Gemini Embedding 2は、この断絶を減らしやすい設計になっています。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の埋め込み構成</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>テキスト・画像・音声でモデルが分かれる</li>
+                                    <li>前処理や変換処理が増える</li>
+                                    <li>検索結果の統合ロジックが複雑</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Gemini Embedding 2</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>単一の埋め込み空間で横断検索しやすい</strong></li>
+                                    <li>前処理の分岐を減らしやすい</li>
+                                    <li><strong>RAGや社内検索の設計をシンプルにできる</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：モダリティごとに分断された検索基盤と、統一埋め込み基盤の違い</p>
+                </div>
+
+                <h2 id="impact">3. RAG・社内検索・ナレッジ活用でどう効くか</h2>
+                <p>
+                    Gemini Embedding 2の価値が最も出やすいのは、<strong>社内に情報はあるのに、探せない・再利用できない</strong>領域です。中小企業でも、規程類はPDF、現場写真はスマホ、研修は動画、問い合わせ履歴はテキストと、
+                    データ形式がすでにバラバラになっています。
+                </p>
+
+                <h3>社内ナレッジ検索・RAGチャットボット</h3>
+                <p>
+                    たとえば就業規則PDF、製品マニュアル、施工写真、会議の録音メモを横断検索できれば、社内問い合わせの自己解決率は大きく上がります。MIRAINAが提供する
+                    <a href="/services/ai_develop.html">AI開発サービス</a>でも、RAGチャットボットの成否は「モデル選定」より「検索対象の設計」で決まるケースが多くあります。
+                    Gemini Embedding 2は、その検索基盤をマルチモーダル前提で組み直す選択肢になります。
+                </p>
+
+                <h3>Drive・業務文書・画像資産の横断検索</h3>
+                <p>
+                    既存の<a href="/blogs/blog022.html">Google Workspace CLIの記事</a>でも触れた通り、DriveやドキュメントをベクトルDBに取り込む流れはすでに実務で現実的です。そこに画像や短い動画まで検索対象として加えられると、
+                    「この部品写真に近い過去案件」「この説明に近い研修動画」まで同じ発想で探せるようになります。文章検索だけでは見つからなかったナレッジにアクセスできる点が大きな変化です。
+                </p>
+
+                <h3>問い合わせ対応・レコメンドの高度化</h3>
+                <p>
+                    FAQの回答候補提示、商品レコメンド、コンテンツ分類などでも、マルチモーダル埋め込みは効きます。ユーザーが送ってきた画像や音声を含めて類似情報を探せれば、問い合わせ一次対応の精度や対応速度を高めやすくなります。
+                    AIエージェントの活用を検討している企業にとっても、<a href="/blogs/blog026.html">AIエージェントの記事</a>で解説した「実行前に正しい情報を取り出す」工程の品質向上につながります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">対象業務を1つ決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">PDF・画像・動画など検索対象を整理する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">埋め込みと検索精度を小さく評価する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">RAGやFAQ、自動応答に段階導入する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Gemini Embedding 2を業務活用へつなぐ最小導入ステップ</p>
+                </div>
+
+                <h2 id="caution">4. 導入前に押さえたい注意点</h2>
+                <p>
+                    ただし、Gemini Embedding 2を入れれば自動的に検索精度が上がるわけではありません。埋め込みモデルは強力ですが、成果はデータ設計と評価設計に大きく左右されます。
+                </p>
+
+                <h3>注意点1：データの整理不足はモデルで解決できない</h3>
+                <p>
+                    古い版の規程と新しい版が混在していたり、ファイル名だけで中身が判断できなかったりすると、どんな高性能な埋め込みでも検索の土台が不安定になります。まずは「何を検索対象にするか」「正本はどれか」を決める必要があります。
+                </p>
+
+                <h3>注意点2：権限設計を後回しにしない</h3>
+                <p>
+                    社内検索の対象が広がるほど、見えてはいけない情報まで拾うリスクも増えます。部署ごとの閲覧権限、顧客情報や人事情報の扱い、アップロード制限などは初期設計に含めるべきです。これは、
+                    <a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a> でも触れた「ツール起点ではなく業務課題起点で考える」姿勢そのものです。
+                </p>
+
+                <h3>注意点3：検索評価を必ず先に回す</h3>
+                <p>
+                    実運用では、LLMの回答文よりも「検索で正しい候補が上位に出るか」が先に問われます。質問パターンを10〜20件でも用意し、期待する資料が本当に上位に出るかを確認してからチャットUIや自動化に広げるべきです。
+                    モデル差し替えより前に、評価の仕組みを持つことが重要です。
+                </p>
+
+                <h2 id="miraina">5. MIRAINA視点で見る、中小企業の始め方</h2>
+                <p>
+                    MIRAINAでは、Gemini Embedding 2のような新技術を導入するときほど、<strong>全社一斉ではなく「1業務・1部門・1KPI」</strong>で始めることを推奨しています。たとえば「総務問い合わせの自己解決率を上げる」「営業資料を探す時間を減らす」といった、
+                    検索価値が明確なテーマから始めると成果を測りやすくなります。
+                </p>
+                <p>
+                    そのうえで、対象データの棚卸し、権限ルール、検索評価、RAG実装までを段階的につなぐのが現実的です。MIRAINAの
+                    <a href="/services/ai_consulting.html">AI活用支援サービス</a>では業務課題の整理からPoC設計まで伴走し、
+                    <a href="/services/ai_develop.html">AI開発サービス</a>では社内ナレッジ検索やFAQチャットボットの構築まで一貫して支援しています。
+                </p>
+                <p>
+                    Gemini Embedding 2は、Googleの新機能というより、<strong>「社内データをどう意味検索の土台に変えるか」</strong>という設計論の進化として捉えるべきです。モデル名だけを追うのではなく、自社のどの情報資産に当てると価値が出るのかを見極めることが成功の分かれ目です。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    Gemini Embedding 2の要点を整理すると、次の5つです。
+                </p>
+                <ul>
+                    <li>Googleが2026年3月10日に公開した、ネイティブなマルチモーダル埋め込みモデルである</li>
+                    <li>テキスト・画像・動画・音声・PDFを同じ埋め込み空間で扱える</li>
+                    <li>RAG、社内検索、FAQ、レコメンドなど検索基盤の品質向上に効きやすい</li>
+                    <li>成果はモデル性能だけでなく、データ整理・権限設計・検索評価で決まる</li>
+                    <li>中小企業は全社展開より、検索価値が明確な1業務から始めるのが現実的</li>
+                </ul>
+                <p>
+                    生成AI活用の競争は、これから「どのモデルで答えるか」だけでなく、「どの情報を正しく探し出せるか」に移っていきます。Gemini Embedding 2は、その変化を象徴する基盤技術です。RAGや社内検索の精度に課題を感じている企業ほど、いま注目しておく価値があります。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/" target="_blank" rel="noopener">Google Blog: Gemini Embedding 2: Our first natively multimodal embedding model</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">社内検索やRAG構築でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の業務に合った<br>AI検索基盤と活用方法をご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog022.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card022.webp" alt="Google Workspace CLI関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗の原因関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog026.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card026.webp" alt="AIエージェント関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.08</div>
+                            <div class="related-text">【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

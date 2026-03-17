@@ -350,6 +350,15 @@
             "alt": "管理職のAI活用遅れと組織課題・解決策のイメージ",
             "link": "/blogs/blog039.html",
             "date": "2026-03-16"
+        },
+        {
+            "id": 40,
+            "title": "【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤",
+            "description": "Gemini Embedding 2とは何かを解説。Googleが2026年3月10日に公開したマルチモーダル埋め込みモデルの特徴、RAG・社内検索への効果、導入時の注意点を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card040.webp",
+            "alt": "Gemini Embedding 2で社内検索とマルチモーダルRAGを強化するイメージ",
+            "link": "/blogs/blog040.html",
+            "date": "2026-03-17"
         }
     ],
     "works": [
