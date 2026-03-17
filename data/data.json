@@ -359,6 +359,15 @@
             "alt": "Gemini Embedding 2で社内検索とマルチモーダルRAGを強化するイメージ",
             "link": "/blogs/blog040.html",
             "date": "2026-03-17"
+        },
+        {
+            "id": 41,
+            "title": "【2026年3月最新】NVIDIA GTC 2026とは？Vera Rubin発表でわかるAIエージェント時代の到来と企業への影響",
+            "description": "NVIDIA GTC 2026（3月16〜19日開催）の主要発表を解説。Vera Rubin GPUの性能・NemoClawによるエージェントAI・日本企業への影響と、中小企業が今すぐ押さえるべきポイントを紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card041.webp",
+            "alt": "NVIDIA GTC 2026 Vera Rubin発表とAIエージェント時代の到来イメージ",
+            "link": "/blogs/blog041.html",
+            "date": "2026-03-17"
         }
     ],
     "works": [
