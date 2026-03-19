@@ -368,6 +368,15 @@
             "alt": "NVIDIA GTC 2026 Vera Rubin発表とAIエージェント時代の到来イメージ",
             "link": "/blogs/blog041.html",
             "date": "2026-03-17"
+        },
+        {
+            "id": 42,
+            "title": "【2026年3月最新】OpenAI・Anthropic「企業向けAI合弁会社」とは？法人AI市場争奪戦と中小企業への影響",
+            "description": "OpenAIがTPG・Bain等と約1.5兆円の企業向けAI合弁会社を協議。AnthropicもBlackstoneと法人展開で交渉中。2大AIが「法人市場」に本格参入する背景と、中小企業が今知るべき対応策を解説します。",
+            "thumbnail": "/images/blogs_images/blog-card042.webp",
+            "alt": "OpenAI・Anthropicの企業向けAI合弁会社と法人AI市場争奪戦のイメージ",
+            "link": "/blogs/blog042.html",
+            "date": "2026-03-18"
         }
     ],
     "works": [
