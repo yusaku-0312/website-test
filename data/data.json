@@ -386,6 +386,15 @@
             "alt": "物理AIとABB×NVIDIA提携で変わる工場自動化のイメージ",
             "link": "/blogs/blog043.html",
             "date": "2026-03-20"
+        },
+        {
+            "id": 44,
+            "title": "【2026年最新】新型Siri（LLM Siri）とは？iOS 26.4で実現するApple史上最大のAIアップデート",
+            "description": "AppleがiOS 26.4で提供予定の新型Siri（LLM Siri）を徹底解説。Google Gemini搭載で画面認識・アプリ横断操作が可能に。3つの新機能と中小企業が押さえるべきビジネス活用のポイントを紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card044.webp",
+            "alt": "新型Siri（LLM Siri）iOS 26.4 Apple AIアップデートのイメージ",
+            "link": "/blogs/blog044.html",
+            "date": "2026-03-20"
         }
     ],
     "works": [
