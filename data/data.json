@@ -377,6 +377,15 @@
             "alt": "OpenAI・Anthropicの企業向けAI合弁会社と法人AI市場争奪戦のイメージ",
             "link": "/blogs/blog042.html",
             "date": "2026-03-18"
+        },
+        {
+            "id": 43,
+            "title": "【2026年3月最新】物理AIとは？ABB×NVIDIA提携で変わる工場自動化の新常識",
+            "description": "物理AIとは何かを解説。ABB RoboticsとNVIDIAが2026年3月9日に発表した提携をもとに、デジタルツイン、工場自動化、導入時の注意点を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card043.webp",
+            "alt": "物理AIとABB×NVIDIA提携で変わる工場自動化のイメージ",
+            "link": "/blogs/blog043.html",
+            "date": "2026-03-20"
         }
     ],
     "works": [
