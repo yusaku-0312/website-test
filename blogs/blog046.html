@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代 | MIRAINAブログ</title>
+    <meta name="description"
+        content="カスタマイズAIとは何かを解説。Thinking Machines LabとNVIDIAの2026年3月10日の提携、Tinkerの学習APIをもとに、自社専用AIの作り方と導入判断を紹介します。">
+    <meta property="og:title" content="【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog046.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog046-1.webp">
+    <meta property="og:description"
+        content="カスタマイズAIとは何かを解説。Thinking Machines LabとNVIDIAの2026年3月10日の提携、Tinkerの学習APIをもとに、自社専用AIの作り方と導入判断を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.22</span>
+                    <div class="article-tags">
+                        <p class="article-tag">カスタマイズAI</p>
+                        <p class="article-tag">自社専用AI</p>
+                        <p class="article-tag">AI開発</p>
+                        <p class="article-tag">Thinking Machines</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog046-1.webp" alt="カスタマイズAIとThinking Machines×NVIDIAが示す自社専用AI時代のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月10日、<strong>Thinking Machines Lab</strong> は <strong>NVIDIA</strong> と複数年の戦略提携を発表し、
+                    少なくとも <strong>1ギガワット規模</strong> の次世代 NVIDIA Vera Rubin システムを導入して、<strong>カスタマイズAI</strong> を大規模に届ける方針を示しました。
+                    さらに同社の <strong>Tinker</strong> では、LoRA によるオープンソースモデルのファインチューニング、学習データの非再利用、チェックポイントのダウンロードまでを一体で扱えます。<br>
+                    これは「汎用AIを使う」段階から「<strong>自社専用AIを育てる</strong>」段階へ移り始めたシグナルです。本記事では、カスタマイズAIの基本、
+                    Thinking Machines×NVIDIA提携の意味、中小企業がどこから始めるべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. カスタマイズAIとは？まず押さえたい全体像</a></li>
+                    <li><a href="#partnership">2. Thinking Machines×NVIDIA提携の何が新しいのか</a></li>
+                    <li><a href="#tinker">3. Tinkerでできること</a></li>
+                    <li><a href="#business">4. 中小企業ではどんな業務に向くのか</a></li>
+                    <li><a href="#caution">5. 導入前に押さえたい注意点</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. カスタマイズAIとは？まず押さえたい全体像</h2>
+                <p>
+                    <strong>カスタマイズAI</strong> とは、汎用モデルをそのまま使うのではなく、自社の業務ルール、専門用語、出力トーン、評価基準に合わせて調整したAIのことです。
+                    ChatGPT や Gemini に「うまい聞き方」をするだけでも多くのことはできますが、毎回同じ品質で、同じ判断基準で、同じ文体で返してほしい業務では、それだけでは限界があります。
+                </p>
+                <p>
+                    特に営業メール、問い合わせ返信、提案書、業界特化の分類作業、社内ナレッジ活用のように、「正解の形」がある程度決まっている仕事では、AIを自社仕様に寄せる価値が大きくなります。
+                    これは <a href="/blogs/blog001.html">AI開発とは何かを解説した記事</a> で触れた「業務要件に合わせてAIを設計する」考え方の延長線上にあります。
+                </p>
+                <p>
+                    一方で、すべてをカスタマイズAIにすべきではありません。最新情報を参照したいなら <a href="/blogs/blog040.html">RAGや社内検索基盤</a> が向く場面も多く、
+                    「知識を足したい」のか、「振る舞いを変えたい」のかを切り分けることが重要です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">汎用AIの使い方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>すぐ試せる</li>
+                                    <li>幅広い質問に対応できる</li>
+                                    <li>出力品質が人や指示でぶれやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">カスタマイズAI</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>自社ルールに寄せやすい</strong></li>
+                                    <li>専門用語や文体を固定しやすい</li>
+                                    <li><strong>評価と改善を回しやすい</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：汎用AIの利用と、カスタマイズAI導入で狙う価値の違い</p>
+                </div>
+
+                <h2 id="partnership">2. Thinking Machines×NVIDIA提携の何が新しいのか</h2>
+                <p>
+                    今回の発表で重要なのは、「カスタマイズ可能なAI」を理念レベルで語るだけではなく、それを支える<strong>計算資源・提供対象・公開モデル戦略</strong>まで同時に示した点です。
+                    Thinking Machines Lab は公式サイトで、現在のAIは人それぞれのニーズや価値観に合わせて調整しにくいと問題提起していました。そこに対し、NVIDIAとの提携で実運用の基盤を一気に固めにきた形です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>公式発表の内容</th>
+                                <th>実務への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>発表日</th>
+                                <td>2026年3月10日</td>
+                                <td>カスタマイズAI基盤が「構想」ではなく実装フェーズに入った</td>
+                            </tr>
+                            <tr>
+                                <th>インフラ規模</th>
+                                <td>少なくとも1ギガワットの次世代 NVIDIA Vera Rubin システム</td>
+                                <td>自社専用モデルを大量に回せる前提が整い始めている</td>
+                            </tr>
+                            <tr>
+                                <th>提供時期</th>
+                                <td>Vera Rubin 基盤への展開は翌年初頭を目標</td>
+                                <td>2026年内にPoCや評価指標を整える意味が大きい</td>
+                            </tr>
+                            <tr>
+                                <th>対象</th>
+                                <td>企業、研究機関、科学コミュニティ向けにアクセス拡大</td>
+                                <td>トップ研究所専用だった環境が外部にも開き始める</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    つまり今回の提携は、「巨大モデル競争」そのものよりも、<strong>AIを人や組織が自分仕様にできる時代をどう量産するか</strong> に焦点があります。
+                    中小企業にとって重要なのは、自社が1ギガワットを持つことではありません。大規模インフラを前提にしたサービスが整うことで、これまで大企業しか扱いづらかった
+                    カスタム学習が、より現実的な外部サービスとして選べるようになる点です。
+                </p>
+
+                <h2 id="tinker">3. Tinkerでできること</h2>
+                <p>
+                    Thinking Machines Lab の <strong>Tinker</strong> は、オープンソースモデルを LoRA で効率よくファインチューニングするための API です。
+                    ポイントは、モデル学習の中身を触れる柔軟性を持ちながら、スケジューリングやチューニング、リソース管理、インフラ信頼性といった重い部分はサービス側が吸収することです。
+                </p>
+                <p>
+                    2026年3月22日時点の公式サイトでは、Llama、Qwen、DeepSeek、GPT-OSS、Kimi、Nemotron など幅広いオープンモデルに対応し、
+                    小型の Llama-3.2-1B から大規模な Qwen3.5-397B-A17B まで学習対象として案内されています。これは「モデル選定の自由度」が高いことを意味します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Tinkerの仕様</th>
+                                <th>中小企業にとっての意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>学習方式</th>
+                                <td>LoRA による効率的なファインチューニング</td>
+                                <td>全重み更新より低コストで試しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>データ利用</th>
+                                <td>学習データは自社モデルの調整のみに使用。提供者自身の学習には不使用</td>
+                                <td>機密情報を含む業務データでも判断しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>成果物</th>
+                                <td>保存したチェックポイントを API でダウンロード可能</td>
+                                <td>ベンダーロックインを抑えやすい</td>
+                            </tr>
+                            <tr>
+                                <th>料金例</th>
+                                <td>2026年3月22日時点で Llama-3.2-1B の学習は100万トークンあたり0.09ドル、Qwen3.5-35B-A3Bは1.07ドル</td>
+                                <td>PoCの概算を立てやすい</td>
+                            </tr>
+                            <tr>
+                                <th>ストレージ</th>
+                                <td>0.10ドル / GB-month</td>
+                                <td>実験を重ねる際の固定費も計算しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここで見るべきなのは、単に「安いか高いか」ではありません。重要なのは、<strong>どのデータで、どのモデルを、どれくらいの単位で試すか</strong> が明確になることです。
+                    これまでのカスタムAI開発は、GPU調達やMLOpsの前提が重く、PoCの前に止まりやすい領域でした。Tinkerのような形は、その入口をかなり下げています。
+                </p>
+
+                <h2 id="business">4. 中小企業ではどんな業務に向くのか</h2>
+                <p>
+                    カスタマイズAIが向くのは、「最新情報を探す仕事」よりも、「判断基準や出力形式を安定させたい仕事」です。
+                    たとえば、営業提案のドラフト、問い合わせ返信、社内ナレッジに沿った一次回答、専門文書の分類や要約など、毎回のばらつきがコストになる業務で効果が出やすくなります。
+                </p>
+
+                <h3>向くケース1：出力トーンを固定したい業務</h3>
+                <p>
+                    企業によって、メールや提案書の言い回し、禁止表現、推奨表現は違います。こうした「書き方の基準」は、単なる検索よりもモデルの振る舞いに近い領域です。
+                    カスタマイズAIは、ブランドトーンや業界特有の表現を安定させたい場面に向いています。
+                </p>
+
+                <h3>向くケース2：社内固有の分類・判定をさせたい業務</h3>
+                <p>
+                    問い合わせを緊急度で仕分ける、見積もり内容をカテゴリ分類する、監査観点で文章をチェックする、といった業務では「自社ルールに沿った判定」が重要です。
+                    汎用AIだけだと判断基準がぶれやすいため、学習データと評価セットを用意してカスタマイズした方が安定します。
+                </p>
+
+                <h3>向くケース3：RAGだけでは足りない業務</h3>
+                <p>
+                    RAGは知識を足すのに強いですが、出力スタイルや判定傾向そのものを変えるのは得意ではありません。社内文書を読ませるだけでなく、「この会社らしい返答」「この業界らしい整理」に寄せたい場合、
+                    RAGとカスタマイズAIの併用が現実的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>目的</th>
+                                <th>まず検討すべき手法</th>
+                                <th>カスタマイズAIが必要になる条件</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>最新マニュアルの参照</th>
+                                <td>RAG / 社内検索</td>
+                                <td>回答トーンや判定基準も固定したいとき</td>
+                            </tr>
+                            <tr>
+                                <th>メール・提案書の下書き</th>
+                                <td>プロンプト運用</td>
+                                <td>部署や担当者で品質差が大きいとき</td>
+                            </tr>
+                            <tr>
+                                <th>問い合わせ・文書分類</th>
+                                <td>ルール + 汎用AI</td>
+                                <td>自社独自ルールを安定して守らせたいとき</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINAの視点では、最初のテーマは「会社全体の万能モデル」ではなく、<strong>1部署・1業務・1指標</strong> に絞るのが現実的です。
+                    いきなり大きく始めるより、1つの反復業務で精度と工数削減を確認した方が、投資判断も社内合意も進めやすくなります。
+                </p>
+
+                <h2 id="caution">5. 導入前に押さえたい注意点</h2>
+                <p>
+                    カスタマイズAIは魅力的ですが、導入順序を誤ると成果が出にくくなります。<a href="/blogs/blog024.html">AI導入が失敗する理由を整理した記事</a> と同じく、
+                    まずは業務課題起点で考えることが前提です。
+                </p>
+
+                <h3>注意点1：学習前に評価基準を決める</h3>
+                <p>
+                    「なんとなく良くなった」では運用できません。分類精度、返信時間、修正回数、商談化率など、改善したい指標を先に決めるべきです。
+                    評価セットなしに学習を始めると、良し悪しを判断できず、PoCが終わりません。
+                </p>
+
+                <h3>注意点2：毎日変わる情報は学習ではなく接続で補う</h3>
+                <p>
+                    価格、在庫、法令、日次レポートのように更新頻度が高い情報は、モデルに焼き込むより外部データを参照させる方が安全です。
+                    カスタマイズAIは「振る舞い」を寄せる手段、RAGやAPI連携は「最新情報」を取る手段、と役割を分ける必要があります。
+                </p>
+
+                <h3>注意点3：モデル管理と安全設計を後回しにしない</h3>
+                <p>
+                    チェックポイントを保存・配布できるなら、それを誰が承認し、どの版を本番に出すかまで決めておく必要があります。
+                    本番前の評価やレッドチーミングは、<a href="/blogs/blog038.html">AIエージェント評価の記事</a> で触れた考え方と同じです。学習したから安心ではなく、
+                    むしろ評価と監視の仕組みが重要になります。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    カスタマイズAIと Thinking Machines×NVIDIA 提携の要点を整理します。
+                </p>
+                <ul>
+                    <li>カスタマイズAIは、汎用AIを自社の業務ルール、文体、判断基準に寄せる考え方である</li>
+                    <li>Thinking Machines Lab は2026年3月10日に NVIDIA との複数年提携を発表し、少なくとも1ギガワット規模の Vera Rubin 基盤でカスタマイズAIを拡大する方針を示した</li>
+                    <li>Tinker は LoRA ベースのファインチューニング API で、データ非再利用、チェックポイントのダウンロード、従量課金を公式に明示している</li>
+                    <li>中小企業は「最新情報検索」より、「出力品質と判断基準を安定させたい業務」から始めると成果につながりやすい</li>
+                    <li>導入時は、評価指標、RAGとの役割分担、モデル運用ルールを先に決めるべきである</li>
+                </ul>
+                <p>
+                    これからのAI活用は、単に高性能モデルを使う競争ではなく、「自社に合わせてどこまで形を変えられるか」の競争に移っていきます。
+                    自社専用AIを検討するなら、まずは1つの反復業務で、どの判断をAIに寄せたいのかを明確にするところから始めるのが現実的です。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://thinkingmachines.ai/news/nvidia-partnership/" target="_blank" rel="noopener">Thinking Machines Lab: Thinking Machines Lab and NVIDIA Announce Long-Term Gigawatt-Scale Strategic Partnership</a></li>
+                        <li><a href="https://thinkingmachines.ai/" target="_blank" rel="noopener">Thinking Machines Lab: Home</a></li>
+                        <li><a href="https://thinkingmachines.ai/tinker/" target="_blank" rel="noopener">Thinking Machines Lab: Tinker</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">自社専用AIや業務特化AIを検討していますか？</h2>
+                    <p class="cta-text">MIRAINAでは、業務課題の整理から<br>RAG・カスタムAI開発・運用定着まで一貫してご支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog001.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card001.webp" alt="AI開発関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.09.01</div>
+                            <div class="related-text">AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog040.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card040.webp" alt="Gemini Embedding 2関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.17</div>
+                            <div class="related-text">【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

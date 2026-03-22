@@ -404,6 +404,15 @@
             "alt": "エージェントコマースとVisa Agentic ReadyによるAI決済時代のイメージ",
             "link": "/blogs/blog045.html",
             "date": "2026-03-21"
+        },
+        {
+            "id": 46,
+            "title": "【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代",
+            "description": "カスタマイズAIとは何かを解説。Thinking Machines LabとNVIDIAの2026年3月10日の提携、Tinkerの学習APIをもとに、自社専用AIの作り方と導入判断を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card046.webp",
+            "alt": "カスタマイズAIとThinking Machines×NVIDIAが示す自社専用AI時代のイメージ",
+            "link": "/blogs/blog046.html",
+            "date": "2026-03-22"
         }
     ],
     "works": [
