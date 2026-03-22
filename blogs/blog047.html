@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法 | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。料金・ベンチマーク・速度比較から、サブエージェント構成での活用法と中小企業が押さえるべきポイントを紹介します。">
+    <meta property="og:title" content="【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog047.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog047-1.webp">
+    <meta property="og:description"
+        content="OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。料金・ベンチマーク・速度比較から、サブエージェント構成での活用法と中小企業が押さえるべきポイントを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.22</span>
+                    <div class="article-tags">
+                        <p class="article-tag">GPT-5.4 mini</p>
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">AIモデル</p>
+                        <p class="article-tag">コスト最適化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog047-1.webp" alt="GPT-5.4 MiniとNanoの高速・低コスト小型AIモデル活用法のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月17日、<strong>OpenAI</strong>はGPT-5.4の軽量版となる<strong>「GPT-5.4 Mini」</strong>と<strong>「GPT-5.4 Nano」</strong>を発表しました。
+                    Miniは前世代のGPT-5 miniと比べて<strong>2倍以上高速</strong>、Nanoは入力100万トークンあたり<strong>わずか0.20ドル（約32円）</strong>で利用できます。
+                    いずれも<strong>400Kトークン</strong>のコンテキストウィンドウを持ち、コーディング・推論・ツール利用で大幅な性能向上を実現しています。<br>
+                    本記事では、GPT-5.4 MiniとNanoの料金・性能・活用法を整理し、中小企業がAIコストを最適化しながら成果を出すためのポイントを解説します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. GPT-5.4 MiniとNanoとは？まず押さえたい全体像</a></li>
+                    <li><a href="#specs">2. 料金・スペック・ベンチマークを比較する</a></li>
+                    <li><a href="#subagent">3. サブエージェント構成とは？小型モデルの真価</a></li>
+                    <li><a href="#business">4. 中小企業でどう活用する？具体的なシーン</a></li>
+                    <li><a href="#caution">5. 導入前に押さえたい注意点</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. GPT-5.4 MiniとNanoとは？まず押さえたい全体像</h2>
+                <p>
+                    <strong>GPT-5.4 Mini</strong>と<strong>GPT-5.4 Nano</strong>は、OpenAIが2026年3月17日にリリースした、フラッグシップモデルGPT-5.4の軽量バージョンです。
+                    GPT-5.4（3月5日リリース）の強みであるコーディング・推論・マルチモーダル理解を引き継ぎつつ、速度とコストを大幅に最適化しています。
+                </p>
+                <p>
+                    ポイントは「性能を犠牲にしすぎずに、速く安くする」という設計思想です。
+                    たとえばMiniのSWE-Bench Pro（コーディングベンチマーク）は54.4%で、フラッグシップの57.7%に迫る水準です。
+                    一方でNanoは性能よりも速度とコストに振り切った設計で、分類・データ抽出・ランキングのような単純タスクに特化しています。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のモデル選び</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>フラッグシップ1本で全タスク処理</li>
+                                    <li>簡単な処理にも高コストがかかる</li>
+                                    <li>速度がボトルネックになりやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">モデル使い分け時代</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>タスクの難度に応じてモデルを選択</strong></li>
+                                    <li>簡単な処理はNano、中程度はMini</li>
+                                    <li><strong>コストと速度を最適化しやすい</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：フラッグシップ一本から「モデル使い分け」へ</p>
+                </div>
+
+                <p>
+                    この流れは、<a href="/blogs/blog028.html">GPT-5.4の解説記事</a>で紹介したフラッグシップモデルの進化と対になるトレンドです。
+                    高性能モデルが進化する一方で、そこから「適材適所」に切り出した小型モデルが同時に提供されることで、企業はコストを抑えながらAI活用の幅を広げられるようになっています。
+                </p>
+
+                <h2 id="specs">2. 料金・スペック・ベンチマークを比較する</h2>
+                <p>
+                    GPT-5.4 Mini・Nano・フラッグシップの主要スペックを並べて比較します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>GPT-5.4</th>
+                                <th>GPT-5.4 Mini</th>
+                                <th>GPT-5.4 Nano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>リリース日</th>
+                                <td>2026年3月5日</td>
+                                <td>2026年3月17日</td>
+                                <td>2026年3月17日</td>
+                            </tr>
+                            <tr>
+                                <th>入力料金（100万トークン）</th>
+                                <td>$2.50（約400円）</td>
+                                <td>$0.75（約120円）</td>
+                                <td>$0.20（約32円）</td>
+                            </tr>
+                            <tr>
+                                <th>出力料金（100万トークン）</th>
+                                <td>$15.00</td>
+                                <td>$4.50（約715円）</td>
+                                <td>$1.25（約198円）</td>
+                            </tr>
+                            <tr>
+                                <th>コンテキストウィンドウ</th>
+                                <td>200K</td>
+                                <td>400K</td>
+                                <td>400K</td>
+                            </tr>
+                            <tr>
+                                <th>速度（トークン/秒）</th>
+                                <td>約55〜60</td>
+                                <td>約180〜190</td>
+                                <td>約200</td>
+                            </tr>
+                            <tr>
+                                <th>SWE-Bench Pro</th>
+                                <td>57.7%</td>
+                                <td>54.4%</td>
+                                <td>52.4%</td>
+                            </tr>
+                            <tr>
+                                <th>OSWorld-Verified</th>
+                                <td>75.0%</td>
+                                <td>72.1%</td>
+                                <td>39.0%</td>
+                            </tr>
+                            <tr>
+                                <th>GPQA Diamond</th>
+                                <td>93.0%</td>
+                                <td>88.0%</td>
+                                <td>82.8%</td>
+                            </tr>
+                            <tr>
+                                <th>利用可能環境</th>
+                                <td>ChatGPT / API / Codex</td>
+                                <td>ChatGPT / API / Codex</td>
+                                <td>APIのみ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    注目すべきは<strong>MiniのコストパフォーマンスとNanoの価格破壊</strong>です。
+                    Miniはフラッグシップ比で入力コスト70%削減ながら、コーディングベンチマークでわずか3.3ポイント差。
+                    NanoはGoogleのGemini 3.1 Flash-Liteより入力コストが20%安く、大量APIコール向けの最安クラスです。
+                </p>
+                <p>
+                    また、MiniのOSWorld-Verified（PC操作ベンチマーク）は72.1%とフラッグシップに迫る水準ですが、Nanoは39.0%と大きく落ちます。
+                    つまり<strong>Nanoはテキスト処理特化、MiniはPC操作やツール利用も含む幅広いタスク向け</strong>と考えるのが適切です。
+                </p>
+
+                <h2 id="subagent">3. サブエージェント構成とは？小型モデルの真価</h2>
+                <p>
+                    OpenAIが今回のリリースで特に強調しているのが<strong>サブエージェントアーキテクチャ</strong>での活用です。
+                    これは、大型モデルが全体の計画を立て、小型モデルが個別タスクを並列に処理する構成のことです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">親エージェント</span>
+                            <span class="step-text">GPT-5.4がタスク全体を計画・分割・最終判断を担う</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">サブエージェント A</span>
+                            <span class="step-text">GPT-5.4 Miniがコードベースの検索やファイルレビューを並列処理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">サブエージェント B</span>
+                            <span class="step-text">GPT-5.4 Nanoがデータ抽出・分類・ランキングを高速処理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">統合</span>
+                            <span class="step-text">親エージェントが結果を統合し、最終出力を生成</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：サブエージェント構成のイメージ（GPT-5.4 + Mini + Nano）</p>
+                </div>
+
+                <p>
+                    実際にOpenAIの<strong>Codex</strong>（自律型コーディングエージェント）では、この構成がすでに動いています。
+                    GPT-5.4が全体の設計・判断を担い、Miniがサブタスク（コード検索、ドキュメント解析など）を処理します。
+                    CodexではMiniの利用はGPT-5.4クォータの30%としてカウントされるため、コスト面でもメリットがあります。
+                </p>
+                <p>
+                    この考え方は、<a href="/blogs/blog026.html">AIエージェントの記事</a>で紹介した「自律型AIが複数のツールを連携させる」トレンドと合致します。
+                    サブエージェント構成は、1つの万能モデルに頼るのではなく、タスクの難度に応じてモデルを使い分ける「チーム型AI」の実現形です。
+                </p>
+
+                <h2 id="business">4. 中小企業でどう活用する？具体的なシーン</h2>
+                <p>
+                    GPT-5.4 MiniとNanoは開発者向けのAPIモデルですが、中小企業にとっても間接的に大きな恩恵があります。
+                </p>
+
+                <h3>シーン1：ChatGPTの無料・低価格プランで使える</h3>
+                <p>
+                    GPT-5.4 MiniはChatGPTの無料プランおよびGoプランで「Thinking」機能から利用可能です。
+                    つまり、月額課金なしでもフラッグシップに近い性能を体験できます。
+                    まだChatGPTの有料プランに踏み出せていない企業にとって、Miniは「まず試す」ハードルを大幅に下げます。
+                </p>
+
+                <h3>シーン2：社内ツールのAPI費用を削減する</h3>
+                <p>
+                    すでにOpenAI APIを組み込んだ社内ツール（チャットボット、ドキュメント要約、問い合わせ分類など）を運用している企業は、モデルをMiniやNanoに切り替えるだけでコストを大幅に削減できます。
+                    たとえば、問い合わせの一次分類はNano（入力$0.20/1M）で処理し、複雑な回答生成だけMiniに回す構成にすれば、全体コストを数分の1に抑えられます。
+                </p>
+
+                <h3>シーン3：大量データの処理が現実的になる</h3>
+                <p>
+                    Nanoの価格帯（入力$0.20/1Mトークン、キャッシュ利用で$0.02/1M）では、数万件の顧客レビュー分析、商品カタログの分類、議事録の要約といった大量バッチ処理が現実的なコストで実行できます。
+                    Batch APIを使えばさらに50%のコスト削減が可能です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>活用シーン</th>
+                                <th>推奨モデル</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>まずAIを試したい</th>
+                                <td>Mini（ChatGPT無料/Go）</td>
+                                <td>月額不要でフラッグシップに近い性能を体験</td>
+                            </tr>
+                            <tr>
+                                <th>社内チャットボット</th>
+                                <td>Mini（API）</td>
+                                <td>ツール利用・長文理解に強くコスト70%削減</td>
+                            </tr>
+                            <tr>
+                                <th>問い合わせ分類</th>
+                                <td>Nano（API）</td>
+                                <td>分類精度が十分で最安コスト</td>
+                            </tr>
+                            <tr>
+                                <th>大量データ分析</th>
+                                <td>Nano（Batch API）</td>
+                                <td>さらに50%割引、24時間非同期処理</td>
+                            </tr>
+                            <tr>
+                                <th>コーディング支援</th>
+                                <td>Mini（Codex / API）</td>
+                                <td>SWE-Bench 54.4%でClaude Haiku 4.5を上回る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="caution">5. 導入前に押さえたい注意点</h2>
+                <p>
+                    小型モデルにはフラッグシップにない制約があります。切り替え前に以下を確認しましょう。
+                </p>
+
+                <h3>注意点1：長文コンテキストの精度低下</h3>
+                <p>
+                    MiniのMRCR v2（長文理解ベンチマーク）は47.7%で、フラッグシップの86.0%と大きな差があります。
+                    128Kトークンを超える長文で多数の情報を追跡する必要があるタスクでは、Miniではなくフラッグシップを使うべきです。
+                    契約書の全文分析や、大量の議事録を横断比較するような業務は注意が必要です。
+                </p>
+
+                <h3>注意点2：NanoはPC操作系タスクに不向き</h3>
+                <p>
+                    NanoのOSWorld-Verified（PC操作ベンチマーク）は39.0%で、前世代GPT-5 miniの42.0%を下回ります。
+                    Computer Use（画面を見てマウスやキーボードを操作する機能）を活用したい場合は、Mini以上を選択してください。
+                </p>
+
+                <h3>注意点3：前世代からの値上げに注意</h3>
+                <p>
+                    GPT-5.4 Miniは前世代GPT-5 mini（入力$0.25/1M）と比べて入力3倍の値上げです。
+                    「フラッグシップから見れば安い」のは事実ですが、前世代の小型モデルからの乗り換えではコストが上がる場合があります。
+                    移行前に現在の利用量と料金を必ず試算しましょう。
+                    <a href="/blogs/blog024.html">AI導入の失敗を防ぐ記事</a>で触れた「業務課題ベース」の考え方で、性能向上分がコスト増に見合うかを判断するのが重要です。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    GPT-5.4 MiniとNanoの要点を整理します。
+                </p>
+                <ul>
+                    <li>OpenAIは2026年3月17日に、GPT-5.4の小型版である<strong>GPT-5.4 Mini</strong>と<strong>GPT-5.4 Nano</strong>をリリース</li>
+                    <li>Miniはフラッグシップ比で入力コスト<strong>70%削減</strong>、速度<strong>3倍以上</strong>ながら、コーディングベンチマークでわずか3.3ポイント差</li>
+                    <li>Nanoは入力<strong>$0.20/1Mトークン</strong>の最安クラス。分類・抽出・ランキングに特化</li>
+                    <li>OpenAIが推進する<strong>サブエージェント構成</strong>（大型モデル＋小型モデルのチーム運用）が実用段階に入った</li>
+                    <li>ChatGPTの無料プランでもMiniが利用可能。中小企業にとってAI体験の入口がさらに広がった</li>
+                </ul>
+                <p>
+                    AIモデルは「高性能1本」で使う時代から、タスクの難度に応じて「使い分ける」時代に移行しています。
+                    GPT-5.4 MiniとNanoは、その使い分けを現実的にする重要なピースです。
+                    まだAI APIを活用していない企業は、まずChatGPTの無料プランでMiniを体験するところから始めてみてください。
+                    すでにAPIを利用中なら、タスクごとのモデル最適化で大幅なコスト削減が見込めます。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank" rel="noopener">OpenAI: Introducing GPT-5.4 mini and nano</a></li>
+                        <li><a href="https://gigazine.net/news/20260318-openai-gpt-5-4-mini-nano/" target="_blank" rel="noopener">GIGAZINE: OpenAIが高速かつ低コストな軽量モデル「GPT-5.4 mini」「nano」を発表</a></li>
+                        <li><a href="https://www.datacamp.com/blog/gpt-5-4-mini-nano" target="_blank" rel="noopener">DataCamp: GPT-5.4 mini and nano: Benchmarks, Access, and Reactions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIモデルの選定やコスト最適化でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、業務に最適なAIモデルの選定から<br>API活用・自動化構築まで一貫してご支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog028.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card028.webp" alt="GPT-5.4関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.09</div>
+                            <div class="related-text">【2026年3月最新】GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog026.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card026.webp" alt="AIエージェント関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.08</div>
+                            <div class="related-text">【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

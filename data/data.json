@@ -413,6 +413,15 @@
             "alt": "カスタマイズAIとThinking Machines×NVIDIAが示す自社専用AI時代のイメージ",
             "link": "/blogs/blog046.html",
             "date": "2026-03-22"
+        },
+        {
+            "id": 47,
+            "title": "【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法",
+            "description": "OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。料金・ベンチマーク・速度比較から、サブエージェント構成での活用法と中小企業が押さえるべきポイントを紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card047.webp",
+            "alt": "GPT-5.4 MiniとNanoの高速・低コスト小型AIモデル活用法のイメージ",
+            "link": "/blogs/blog047.html",
+            "date": "2026-03-22"
         }
     ],
     "works": [
