@@ -422,6 +422,15 @@
             "alt": "GPT-5.4 MiniとNanoの高速・低コスト小型AIモデル活用法のイメージ",
             "link": "/blogs/blog047.html",
             "date": "2026-03-22"
+        },
+        {
+            "id": 48,
+            "title": "【2026年3月最新】Agentforce Contact Centerとは？AIコンタクトセンターで顧客対応はどう変わる",
+            "description": "Agentforce Contact Centerとは何かを解説。Salesforceが2026年3月10日に発表したAIコンタクトセンターの特徴、料金、活用法、導入時の注意点を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card048.webp",
+            "alt": "Agentforce Contact CenterでAIコンタクトセンターの顧客対応が変わるイメージ",
+            "link": "/blogs/blog048.html",
+            "date": "2026-03-23"
         }
     ],
     "works": [
