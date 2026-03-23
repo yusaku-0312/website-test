@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化 | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenClawとは何かを解説。GitHub24万スター超のオープンソースAIエージェント、NVIDIAのNemoClaw、Jensen Huang「次のChatGPT」発言の背景と、中小企業が今知るべきポイントを紹介します。">
+    <meta property="og:title" content="【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog049.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog049-1.webp">
+    <meta property="og:description"
+        content="OpenClawとは何かを解説。GitHub24万スター超のオープンソースAIエージェント、NVIDIAのNemoClaw、Jensen Huang「次のChatGPT」発言の背景と、中小企業が今知るべきポイントを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.23</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenClaw</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">オープンソースAI</p>
+                        <p class="article-tag">NemoClaw</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog049-1.webp"
+                        alt="OpenClawとNVIDIA NemoClawによるオープンソースAIエージェントの業務自動化イメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月、NVIDIA GTC 2026の基調講演でJensen Huang CEOが<strong>「次のChatGPTだ」</strong>と評したオープンソースAIエージェント<strong>「OpenClaw」</strong>が世界的に注目を集めています。
+                    GitHubで<strong>24万スター超</strong>を獲得し、NVIDIAはエンタープライズ向けセキュリティ基盤<strong>「NemoClaw」</strong>まで用意しました。<br>
+                    OpenClawは、自分のPCで動くAIエージェントをWhatsAppやTelegramなどのチャットアプリから操作でき、ファイル管理、メール処理、ブラウザ操作まで自律的にこなします。
+                    本記事では、OpenClawの仕組みと主な機能、NemoClawの位置づけ、中小企業が今知っておくべきポイントを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. OpenClawとは？まず押さえたい全体像</a></li>
+                    <li><a href="#growth">2. なぜ話題なのか？GitHub史上最速クラスの成長とNVIDIAの評価</a></li>
+                    <li><a href="#functions">3. OpenClawで何ができるのか：主な機能と特徴</a></li>
+                    <li><a href="#nemoclaw">4. NemoClawとは？NVIDIAが用意したエンタープライズ向けセキュリティ</a></li>
+                    <li><a href="#business">5. 中小企業が今押さえるべきポイント</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. OpenClawとは？まず押さえたい全体像</h2>
+                <p>
+                    <strong>OpenClaw</strong>は、オーストリアの開発者<strong>Peter Steinberger</strong>氏（PSPDFKit創設者）が2025年11月に公開した<strong>オープンソースのAIエージェント</strong>プラットフォームです。
+                    自分のPCやサーバー上でAIエージェントを動かし、<strong>Signal、Telegram、Discord、WhatsApp</strong>などのメッセージアプリを通じて操作します。
+                </p>
+                <p>
+                    一般的なチャットボットとの大きな違いは、<strong>「質問に答える」ではなく「タスクを実行する」</strong>点にあります。
+                    OpenClawのAIエージェントは、ファイル操作、Web検索、ブラウザ自動操作、コード実行、スケジュール管理など、複数のステップをまたぐ業務を自律的にこなせます。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog049-2.webp" alt="OpenClaw公式サイトのトップページ" width="800" height="450" loading="lazy">
+                    <figcaption>OpenClaw公式サイト。「THE AI THAT ACTUALLY DOES THINGS（実際に仕事をするAI）」がキャッチコピー</figcaption>
+                </figure>
+
+                <p>
+                    名称は当初「Clawdbot」でしたが、Anthropic社の商標との関連で2026年1月に「Moltbot」、その後すぐに<strong>「OpenClaw」</strong>に改名されました。
+                    2026年2月14日にSteinberger氏はOpenAIへ参加し、プロジェクトはオープンソース財団に移管されています。
+                    つまり、OpenClawは特定企業の製品ではなく、<strong>コミュニティ主導で進化するオープンプラットフォーム</strong>です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>開発者</th>
+                                <td>Peter Steinberger氏（オーストリア、PSPDFKit創設者）</td>
+                            </tr>
+                            <tr>
+                                <th>初回公開</th>
+                                <td>2025年11月（当時の名称は「Clawdbot」）</td>
+                            </tr>
+                            <tr>
+                                <th>GitHubスター数</th>
+                                <td>24万超（2026年3月時点）</td>
+                            </tr>
+                            <tr>
+                                <th>動作環境</th>
+                                <td>自分のPC（macOS / Windows / Linux）でローカル実行</td>
+                            </tr>
+                            <tr>
+                                <th>対応LLM</th>
+                                <td>Claude、GPTシリーズ、DeepSeek、ローカルモデルなど</td>
+                            </tr>
+                            <tr>
+                                <th>操作インターフェース</th>
+                                <td>WhatsApp、Telegram、Signal、Discord等のチャットアプリ</td>
+                            </tr>
+                            <tr>
+                                <th>ライセンス</th>
+                                <td>オープンソース（OSS財団に移管済み）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="growth">2. なぜ話題なのか？GitHub史上最速クラスの成長とNVIDIAの評価</h2>
+                <p>
+                    OpenClawが急激に注目された理由は、主に3つあります。
+                </p>
+
+                <h3>理由1：GitHub史上最速クラスのスター獲得</h3>
+                <p>
+                    OpenClawは公開から<strong>わずか60日間で15万スター</strong>を獲得しました。2026年3月時点では24万スターを超え、
+                    オープンソースプロジェクトとして歴史的な速度で広がっています。
+                    中国を中心にエンジニアや一般ユーザーの間で爆発的に利用が広がり、中古MacBookの価格が高騰するほどの需要を生んでいるとCNBCが報じています。
+                </p>
+
+                <h3>理由2：Jensen Huang CEOの「次のChatGPT」発言</h3>
+                <p>
+                    2026年3月のNVIDIA GTC 2026で、Jensen Huang CEOはCNBCのインタビューに対し、OpenClawを<strong>「人類史上最も人気のあるオープンソースプロジェクト」</strong>と表現し、
+                    <strong>「これは間違いなく次のChatGPTだ」</strong>と評価しました。
+                    NVIDIAのCEO自らが名前を挙げたことで、個人プロジェクトだったOpenClawが一気にエンタープライズレベルの注目を集めるきっかけになりました。
+                </p>
+
+                <h3>理由3：AIモデルの「コモディティ化」を象徴する存在</h3>
+                <p>
+                    CNBCは2026年3月21日、<strong>「OpenClawのChatGPTモーメントがAIモデルのコモディティ化への懸念を引き起こしている」</strong>と報じました。
+                    OpenClawは特定のAIモデルに依存せず、Claude、GPT、DeepSeekなど複数のLLMを切り替えて使えます。
+                    つまり「どのAIモデルを使うか」より「AIをどう業務に組み込むか」のほうが重要になる時代の象徴として注目されているのです。
+                    これは<a href="/blogs/blog026.html">AIエージェントの記事</a>で解説した「AIがツールから同僚へ進化する」流れと一致しています。
+                </p>
+
+                <h2 id="functions">3. OpenClawで何ができるのか：主な機能と特徴</h2>
+                <p>
+                    OpenClawの機能を5つの軸で整理します。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">機能 1</span>
+                            <span class="step-text">エージェント自律実行：ファイル操作、Web検索、ブラウザ操作、コード実行を自ら判断して遂行</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">機能 2</span>
+                            <span class="step-text">スキルシステム：「SKILL.md」で新しいスキル（プラグイン）を追加可能。コミュニティ製スキルも利用可</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">機能 3</span>
+                            <span class="step-text">cronジョブ：「毎朝9時に受信メールを整理」など、定期タスクの自動実行が可能</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">機能 4</span>
+                            <span class="step-text">サブエージェント：複数のAIエージェントを並列で動かし、複雑なタスクを分担処理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">機能 5</span>
+                            <span class="step-text">ローカル実行・プライバシー重視：データは自分のマシンに留まり、外部にデータを渡さずに運用可能</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：OpenClawの5つの主要機能</p>
+                </div>
+
+                <p>
+                    特にビジネス視点で重要なのは、<strong>ローカル実行によるプライバシー保護</strong>と<strong>スキルシステムによる拡張性</strong>です。
+                    クラウド型AIサービスと異なり、社内文書や顧客データを外部サーバーに送る必要がないため、情報管理に厳しい業種でも導入検討がしやすくなります。
+                </p>
+                <p>
+                    スキルシステムは、<a href="/blogs/blog023.html">MCP（Model Context Protocol）の記事</a>で紹介した「AIと外部ツールをつなぐ仕組み」と考え方が似ています。
+                    業務システムとの連携ポイントを個別に設定でき、自社の業務に合った自動化をカスタマイズできます。
+                </p>
+
+                <h2 id="nemoclaw">4. NemoClawとは？NVIDIAが用意したエンタープライズ向けセキュリティ</h2>
+                <p>
+                    NVIDIAは2026年3月16日のGTC 2026で<strong>「NemoClaw」</strong>を発表しました。
+                    OpenClawをそのまま企業で使うには、セキュリティ面の不安が残ります。NemoClawは、その課題を解決するためにNVIDIAが提供する<strong>エンタープライズ向けセキュリティ基盤</strong>です。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog049-3.webp" alt="NVIDIA NemoClaw公式プレスリリース" width="800" height="450" loading="lazy">
+                    <figcaption>NVIDIA Newsroom：NemoClaw発表のプレスリリース（2026年3月16日）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>NemoClawの内容</th>
+                                <th>企業にとっての意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>導入方法</th>
+                                <td>1コマンドでOpenClawに追加インストール</td>
+                                <td>既存のOpenClaw環境に後付けできる</td>
+                            </tr>
+                            <tr>
+                                <th>サンドボックス</th>
+                                <td>NVIDIA OpenShellで隔離実行環境を提供</td>
+                                <td>AIの操作範囲を制限し、誤操作を防止</td>
+                            </tr>
+                            <tr>
+                                <th>ガードレール</th>
+                                <td>ポリシーベースのプライバシー・セキュリティ制御</td>
+                                <td>機密データの取り扱いルールを強制適用できる</td>
+                            </tr>
+                            <tr>
+                                <th>モデル選択</th>
+                                <td>ローカルモデル（Nemotron等）＋クラウドモデルの併用</td>
+                                <td>機密情報はローカル処理、一般処理はクラウドで効率化</td>
+                            </tr>
+                            <tr>
+                                <th>対応ハードウェア</th>
+                                <td>NVIDIA RTX PC、DGX Station、DGX Spark</td>
+                                <td>個人PCからサーバーまでスケーラブル</td>
+                            </tr>
+                            <tr>
+                                <th>提供状況</th>
+                                <td>2026年3月16日よりアーリープレビュー</td>
+                                <td>本番運用前のテスト段階。今後の正式版を注視</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    NemoClawのポイントは、<strong>「ローカルモデルとクラウドモデルのハイブリッド運用」</strong>を企業レベルで実現しようとしている点です。
+                    機密性の高い処理はNVIDIA Nemotron等のローカルモデルで処理し、一般的な処理はクラウドの高性能モデルを使う。
+                    このアプローチは<a href="/blogs/blog046.html">カスタマイズAIの記事</a>で触れた「自社専用AI」の考え方と通じます。
+                </p>
+                <p>
+                    ただし、2026年3月23日時点でNemoClawは<strong>アーリープレビュー段階</strong>であり、本番環境での運用は推奨されていません。
+                    導入を検討する場合は、正式版のリリース動向を注視してください。
+                </p>
+
+                <h2 id="business">5. 中小企業が今押さえるべきポイント</h2>
+                <p>
+                    OpenClawは現時点では技術者向けのツールですが、中小企業の経営者やマーケターにとっても見逃せない動きです。
+                    なぜなら、<strong>AIエージェントが「高額なSaaS契約をしなくても自社で動かせる」時代の入口</strong>になるからです。
+                </p>
+
+                <h3>ポイント1：AIモデルのコモディティ化は「使い方」勝負の時代を意味する</h3>
+                <p>
+                    OpenClawがどのLLMでも動く設計は、AIモデル自体の差が縮まっていることを示しています。
+                    企業の差別化は「どのAIを選ぶか」ではなく、<strong>「自社のどの業務にAIを組み込むか」</strong>で決まります。
+                    <a href="/blogs/blog024.html">AI導入が失敗する理由の記事</a>でも触れましたが、業務課題を明確にしてからAIを選ぶ順序がますます重要になります。
+                </p>
+
+                <h3>ポイント2：オープンソースAIエージェントは「試す」ハードルが低い</h3>
+                <p>
+                    OpenClawは無料で始められ、データを自社内に保持できます。
+                    まず社内の定型業務（日報整理、メール分類、リサーチ補助など）でPoCを行い、効果を確認してからスケールする戦略が取りやすいのが利点です。
+                    ただし、技術的な導入にはエンジニアの関与が必要です。
+                </p>
+
+                <h3>ポイント3：セキュリティの判断基準を持っておく</h3>
+                <p>
+                    OpenClawはローカル実行が基本ですが、LLMへの入力内容がクラウドに送信される場合はデータ漏洩のリスクがあります。
+                    NemoClawのガードレール機能はこの課題への一つの解決策ですが、自社で「何をローカルで処理し、何をクラウドに送るか」の判断基準を先に決めることが大切です。
+                    <a href="/blogs/blog025.html">AI事業者ガイドライン改定の記事</a>で解説した「人間の判断を残す」原則とも重なる論点です。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    本記事のポイントを整理します。
+                </p>
+                <ul>
+                    <li>OpenClawはオープンソースのAIエージェントプラットフォーム。自分のPCで動かし、チャットアプリ経由でタスクを自律実行する</li>
+                    <li>GitHubで<strong>24万スター超</strong>を獲得。NVIDIA Jensen Huang CEOが<strong>「次のChatGPT」</strong>と評価</li>
+                    <li>NVIDIAはGTC 2026で<strong>NemoClaw</strong>を発表。エンタープライズ向けにセキュリティとガードレールを提供</li>
+                    <li>AIモデルのコモディティ化が進み、<strong>「どう使うか」が競争優位を決める時代</strong>に突入</li>
+                    <li>中小企業は、まず業務課題の棚卸しと、データ処理のローカル／クラウドの判断基準を整理しておくことが重要</li>
+                </ul>
+                <p>
+                    MIRAINAでは、AIエージェントの導入検討から業務フロー設計、技術選定まで一貫してサポートしています。
+                    OpenClawのようなオープンソースツールの評価や、NemoClawの活用可能性についても、お気軽にご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openclaws.io/" target="_blank" rel="noopener">OpenClaw公式サイト</a></li>
+                        <li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw" target="_blank" rel="noopener">NVIDIA: Announces NemoClaw for the OpenClaw Community</a></li>
+                        <li><a href="https://www.cnbc.com/2026/03/21/openclaw-chatgpt-moment-sparks-concern-ai-models-becoming-commodities.html" target="_blank" rel="noopener">CNBC: OpenClaw's ChatGPT moment sparks concern that AI models are becoming commodities</a></li>
+                        <li><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">GitHub: openclaw/openclaw</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIエージェントの導入や業務自動化でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog026.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card026.webp" alt="AIエージェント関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.08</div>
+                            <div class="related-text">【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog023.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card023.webp" alt="MCP関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog046.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card046.webp" alt="カスタマイズAI関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.22</div>
+                            <div class="related-text">【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

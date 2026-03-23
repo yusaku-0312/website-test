@@ -431,6 +431,15 @@
             "alt": "Agentforce Contact CenterでAIコンタクトセンターの顧客対応が変わるイメージ",
             "link": "/blogs/blog048.html",
             "date": "2026-03-23"
+        },
+        {
+            "id": 49,
+            "title": "【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化",
+            "description": "OpenClawとは何かを解説。GitHub24万スター超のオープンソースAIエージェント、NVIDIAのNemoClaw、Jensen Huang「次のChatGPT」発言の背景と、中小企業が今知るべきポイントを紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card049.webp",
+            "alt": "OpenClawとNVIDIA NemoClawによるオープンソースAIエージェントの業務自動化イメージ",
+            "link": "/blogs/blog049.html",
+            "date": "2026-03-23"
         }
     ],
     "works": [
