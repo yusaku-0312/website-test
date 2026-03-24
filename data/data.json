@@ -440,6 +440,15 @@
             "alt": "OpenClawとNVIDIA NemoClawによるオープンソースAIエージェントの業務自動化イメージ",
             "link": "/blogs/blog049.html",
             "date": "2026-03-23"
+        },
+        {
+            "id": 50,
+            "title": "【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み",
+            "description": "Work IQとは何かを解説。Microsoftが2026年3月9日に発表したCopilotの知識レイヤーの仕組み、CoworkやE7との関係、中小企業での活用ポイントを紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card050.webp",
+            "alt": "Work IQでCopilotが社内文脈を理解する仕組みのイメージ",
+            "link": "/blogs/blog050.html",
+            "date": "2026-03-24"
         }
     ],
     "works": [

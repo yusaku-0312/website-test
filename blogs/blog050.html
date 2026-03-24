@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み | MIRAINAブログ</title>
+    <meta name="description"
+        content="Work IQとは何かを解説。Microsoftが2026年3月9日に発表したCopilotの知識レイヤーの仕組み、CoworkやE7との関係、中小企業での活用ポイントを紹介します。">
+    <meta property="og:title" content="【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog050.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog050-1.webp">
+    <meta property="og:description"
+        content="Work IQとは何かを解説。Microsoftが2026年3月9日に発表したCopilotの知識レイヤーの仕組み、CoworkやE7との関係、中小企業での活用ポイントを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.24</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Work IQ</p>
+                        <p class="article-tag">Microsoft 365 Copilot</p>
+                        <p class="article-tag">Copilot Cowork</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog050-1.webp" alt="Work IQでCopilotが社内文脈を理解する仕組みのイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月9日、Microsoftは <strong>Microsoft 365 Copilot Wave 3</strong> の中で、
+                    Copilotを支える知識レイヤー <strong>Work IQ</strong> を前面に打ち出しました。
+                    メール、会議、チャット、ファイル、業務データ、さらに個人の好みや仕事の進め方までつなぎ、
+                    単発の質問応答ではなく「今の仕事文脈に合った実行」を支える設計です。<br>
+                    本記事では、Work IQの基本、<strong>Copilot Cowork</strong> や <strong>Microsoft 365 E7</strong> との関係、
+                    既存の <a href="/blogs/blog034.html">Agent 365の記事</a> とどう違うのか、
+                    中小企業がどこから活用を考えるべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. Work IQとは？まず押さえたい全体像</a></li>
+                    <li><a href="#wave3">2. 何が新しいのか？Wave 3とCopilot Coworkの関係</a></li>
+                    <li><a href="#structure">3. Work IQは何をつないでいるのか</a></li>
+                    <li><a href="#business">4. 中小企業でどう活用できるのか</a></li>
+                    <li><a href="#caution">5. 導入前に押さえたい注意点</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. Work IQとは？まず押さえたい全体像</h2>
+                <p>
+                    <strong>Work IQ</strong> は、Microsoft 365 Copilot の裏側で動く「仕事文脈の統合レイヤー」です。
+                    Microsoftの製品ページでは、Work IQは <strong>「あなた、あなたの仕事、あなたの会社を理解する独自のインテリジェンス層」</strong> と説明されており、
+                    個人の知識と組織の知識をつなげて、仕事の流れに合ったAIを実現する役割を持つとされています。
+                </p>
+                <p>
+                    ここで重要なのは、Work IQそのものが単体アプリではないことです。
+                    たとえば Word や Excel に新しいボタンが増える話ではなく、Copilot が社内のメール、会議メモ、Teams チャット、OneDrive や SharePoint 上のファイル、
+                    さらに業務データの関係性をまたいで判断するための <strong>共通の理解基盤</strong> だと考えるとわかりやすいです。
+                </p>
+                <p>
+                    既存の <a href="/blogs/blog033.html">Google Workspace Geminiの記事</a> では、
+                    Google側も仕事文脈の理解を深めていますが、Work IQの特徴は「社内データだけでなく、
+                    個人の仕事スタイルや利用中ツールまで含めて、Copilot とエージェント全体に共通文脈を与える」と明言している点にあります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAI補助</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>その場のプロンプト中心</li>
+                                    <li>参照データが断片的</li>
+                                    <li>アプリごとに文脈が切れやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Work IQ型</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>メール・会議・文書を横断</strong></li>
+                                    <li><strong>個人と組織の知識を統合</strong></li>
+                                    <li>実行に必要な文脈を保ったまま動く</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：単発回答型のAIと、Work IQで文脈を持つCopilotの違い</p>
+                </div>
+
+                <h2 id="wave3">2. 何が新しいのか？Wave 3とCopilot Coworkの関係</h2>
+                <p>
+                    Microsoftが2026年3月9日に発表した <strong>Wave 3</strong> では、
+                    Copilot が Word、Excel、PowerPoint、Outlook、Copilot Chat の中により深く入り込み、
+                    1回の回答ではなく <strong>複数ステップの実行</strong> を担う方向が明確になりました。
+                    その中心にある新体験が <strong>Copilot Cowork</strong> です。
+                </p>
+                <p>
+                    Microsoft 365 Blog によると、Cowork は要求をタスク計画に分解し、
+                    メール、会議、メッセージ、ファイル、データを土台にしながら、バックグラウンドで仕事を進めます。
+                    途中経過を確認したり、修正したり、一時停止したりできるため、
+                    「AIに丸投げする」よりも、<strong>人が監督しながら委任する</strong> 使い方に近い設計です。
+                </p>
+                <p>
+                    ここで Work IQ が効いてきます。Microsoftは公式ブログで、
+                    Cowork は <strong>Anthropic の技術を活用しつつ、Work IQ によって仕事の全体文脈を持てる</strong> と説明しています。
+                    つまり Cowork の価値は推論モデルそのものより、<strong>社内文脈をどこまで正確に引き出せるか</strong> にかかっています。
+                    これは <a href="/blogs/blog026.html">AIエージェントの記事</a> で触れた「自律実行」の次の段階、
+                    つまり <strong>文脈付き実行</strong> の話です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Microsoftの説明</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>発表日</th>
+                                <td>2026年3月9日</td>
+                                <td>Copilotが「会話補助」から「実行補助」へ進んだ節目</td>
+                            </tr>
+                            <tr>
+                                <th>Cowork</th>
+                                <td>長時間・複数ステップの仕事を委任できる新体験</td>
+                                <td>調査、資料作成、整理業務をまとめて任せやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Work IQ</th>
+                                <td>仕事の全体文脈を使って Copilot を接地させる</td>
+                                <td>古い情報や断片データだけで判断するリスクを下げる</td>
+                            </tr>
+                            <tr>
+                                <th>提供状況</th>
+                                <td>Coworkは2026年3月時点でFrontier program経由の研究プレビュー</td>
+                                <td>今すぐ全社展開より、先行検証向けと見るのが妥当</td>
+                            </tr>
+                            <tr>
+                                <th>E7</th>
+                                <td>5月1日に月額99ドルで販売開始予定</td>
+                                <td>AI、ID、セキュリティをまとめて導入する選択肢が出てきた</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    なお、同じ Wave 3 発表でも <a href="/blogs/blog034.html">Agent 365の記事</a> が扱っているのは
+                    「エージェントをどう管理するか」という統制側の話です。
+                    一方、Work IQ は「AIが判断材料をどう持つか」という知識側の話で、両者は役割が違います。
+                    <strong>Work IQ が頭脳、Agent 365 が管制塔</strong> と整理すると混同しにくくなります。
+                </p>
+
+                <h2 id="structure">3. Work IQは何をつないでいるのか</h2>
+                <p>
+                    Microsoftの製品ページでは、Work IQの構成を大きく <strong>Data</strong>、<strong>Memory</strong>、<strong>Inference</strong> の3要素で説明しています。
+                    これは中小企業が導入判断するときにも使いやすい整理です。
+                </p>
+
+                <h3>Data：業務で発生する知識を集約する</h3>
+                <p>
+                    Data には、メール、ファイル、会議、チャット、取引情報など、
+                    組織に分散している仕事データが含まれます。ポイントは「文章だけ」でなく、
+                    仕事の履歴そのものを対象にしている点です。
+                    たとえば営業提案を作る場面なら、過去提案書、顧客メール、会議の決定事項、最新の売上表が同時に関係します。
+                    Work IQ はその前提で設計されています。
+                </p>
+
+                <h3>Memory：その人らしい進め方を反映する</h3>
+                <p>
+                    Microsoftは、Work IQ がメモリを使って個人のスタイル、好み、習慣を学ぶと説明しています。
+                    これは単に「口調を覚える」だけではありません。
+                    どの資料形式を好むか、会議後に何を先に処理するか、誰に先に共有するかといった
+                    <strong>仕事の型</strong> を学習することで、出力の実用性を上げる狙いがあります。
+                </p>
+
+                <h3>Inference：データと記憶から次の一手を導く</h3>
+                <p>
+                    Data と Memory だけでは、まだ「情報が豊富なAI」に留まります。
+                    Microsoftがいう Inference は、この2つを組み合わせて関係性を見つけ、
+                    洞察を引き出し、次に取るべき行動を予測する層です。
+                    ここに Copilot やエージェント、外部ツール連携が乗ることで、
+                    AIは単なる検索補助ではなく実務支援に近づきます。
+                    その意味では、<a href="/blogs/blog023.html">MCPの記事</a> で説明した
+                    「AIとツールをつなぐ考え方」とも相性が良い領域です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Layer 1</span>
+                            <span class="step-text">Data: メール、ファイル、会議、チャット、取引情報を横断して業務材料を集める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Layer 2</span>
+                            <span class="step-text">Memory: 個人の好み、進め方、過去の振る舞いを加味する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Layer 3</span>
+                            <span class="step-text">Inference: データと記憶を組み合わせ、関係性や次の一手を導く</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Output</span>
+                            <span class="step-text">Copilotやエージェントが、今の仕事に合った判断と実行を返す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Work IQの基本構造を中小企業向けに整理した流れ</p>
+                </div>
+
+                <p>
+                    MIRAINA視点で見ると、Work IQの価値は「高性能モデルを増やすこと」ではなく、
+                    <strong>社内に散らばった仕事文脈を、AIが再利用できる形に変えること</strong> にあります。
+                    逆に言えば、データが散乱している会社では Work IQ の効果も頭打ちになります。
+                    AI導入前に <a href="/blogs/blog024.html">業務課題ベースで進めるべきだと解説した記事</a> と同じく、
+                    まず整理すべきは業務情報の置き場と責任者です。
+                </p>
+
+                <h2 id="business">4. 中小企業でどう活用できるのか</h2>
+                <p>
+                    Work IQ は大企業向けの抽象概念に見えますが、中小企業でも活用余地は十分あります。
+                    むしろ人数が少なく情報共有が属人化しやすい組織ほど、文脈の統合価値は大きくなります。
+                </p>
+
+                <h3>営業・提案業務：過去提案と商談文脈をつないで初稿を速くする</h3>
+                <p>
+                    過去の提案書、商談メモ、見積もり条件、顧客メールが別々に保管されていると、
+                    担当者は毎回それらを探し直します。Work IQ 型の考え方が浸透すると、
+                    Copilot が関連資料を横断しながら、今の顧客文脈に合う提案の叩き台を作りやすくなります。
+                </p>
+
+                <h3>バックオフィス：会議・メール・規程の情報ずれを減らす</h3>
+                <p>
+                    人事、総務、経理では「最新ルール」と「現場への共有内容」がずれると事故になります。
+                    Work IQ のように複数の情報源をまとめて参照できる前提があると、
+                    AIが古いテンプレートだけで回答するリスクを下げられます。
+                </p>
+
+                <h3>経営層・管理職：判断材料の集約時間を減らす</h3>
+                <p>
+                    既存の <a href="/blogs/blog039.html">管理職のAI活用遅れの記事</a> でも触れた通り、
+                    管理職ほど情報量が多く、AI活用の遅れが組織全体のボトルネックになります。
+                    Work IQ は「会議ごと、部門ごとに散らばった状況」をまとめて扱えるため、
+                    報告整理や判断材料の収集時間を削減しやすい設計です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>部門</th>
+                                <th>Work IQで期待できること</th>
+                                <th>先に整えるべきこと</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業</th>
+                                <td>提案、商談整理、追客メールの初稿作成を高速化</td>
+                                <td>顧客情報と提案書の保管場所をそろえる</td>
+                            </tr>
+                            <tr>
+                                <th>管理部門</th>
+                                <td>規程、会議、問い合わせ回答の整合性を保ちやすい</td>
+                                <td>最新版ルールの管理責任者を決める</td>
+                            </tr>
+                            <tr>
+                                <th>経営層</th>
+                                <td>報告資料と会議内容を横断した要約や論点整理</td>
+                                <td>重要会議の記録と資料置き場を固定する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ただし、最初から全社に広げる必要はありません。1部署で
+                    「AIが参照すべきデータは何か」「更新責任者は誰か」「人が承認すべき工程はどこか」を決め、
+                    小さく回すほうが現実的です。これは新しい仕組みの話に見えて、実際には
+                    <strong>情報設計と運用設計の問題</strong> です。
+                </p>
+
+                <h2 id="caution">5. 導入前に押さえたい注意点</h2>
+                <p>
+                    Work IQ は魅力的ですが、導入しただけで精度が上がるわけではありません。少なくとも次の3点は先に整理すべきです。
+                </p>
+
+                <h3>注意点1：Work IQは「散らかった情報」を自動で正しくしてくれるわけではない</h3>
+                <p>
+                    参照元データが古い、重複している、責任者がいない場合、AIはそれをもとに判断します。
+                    Work IQ は文脈を増やす仕組みであって、情報の品質保証そのものではありません。
+                </p>
+
+                <h3>注意点2：Work IQ単体の導入商品ではなく、Copilot全体設計の一部である</h3>
+                <p>
+                    Microsoft 365 E7 は 2026年5月1日に月額99ドルで販売予定ですが、
+                    これは Copilot、Agent 365、Entra Suite、Microsoft 365 E5 を束ねたパッケージです。
+                    つまり Work IQ だけを個別に買う発想ではなく、<strong>AI、ID、ガバナンスをどう一体で設計するか</strong> が導入判断になります。
+                </p>
+
+                <h3>注意点3：人の監督を前提にした運用が必要</h3>
+                <p>
+                    Microsoftも Cowork を「進捗確認、変更、停止ができる」前提で設計しています。
+                    これは、AIが自動で動くほど監督プロセスの重要性が増すことを意味します。
+                    特に顧客向け文書、契約、採用、人事評価に関わる業務では、
+                    最終判断を人が持つ運用を崩さないことが重要です。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    本記事のポイントを整理します。
+                </p>
+                <ul>
+                    <li>Work IQは、Microsoft 365 Copilotとエージェントを支える仕事文脈の統合レイヤー</li>
+                    <li>メール、会議、ファイル、チャット、取引情報に加え、個人の好みや仕事の進め方も含めてAIを接地させる</li>
+                    <li>Wave 3 と Copilot Cowork によって、Copilotは単発回答から複数ステップ実行へ進み始めた</li>
+                    <li>Agent 365が管理側、Work IQが知識側で、両者は役割が異なる</li>
+                    <li>中小企業では、営業提案、管理部門、経営判断の情報集約に特に効果を出しやすい</li>
+                    <li>成果を出すには、AI導入より先にデータの置き場、更新責任、承認フローを整える必要がある</li>
+                </ul>
+                <p>
+                    MIRAINAでは、生成AIを「とりあえず入れる」のではなく、どの業務データをどう整理すれば成果につながるかまで含めて支援しています。
+                    Copilot のようなツール導入前に情報設計を見直したい場合も、お気軽にご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/powering-frontier-transformation-with-copilot-and-agents/" target="_blank" rel="noopener">Microsoft 365 Blog: Powering Frontier Transformation with Copilot and agents</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/microsoft-365/copilot/copilot-for-work" target="_blank" rel="noopener">Microsoft: Microsoft 365 Copilot, powered by Work IQ</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/microsoft-365/blog/?p=280887" target="_blank" rel="noopener">Microsoft 365 Blog: Copilot Cowork: A new way of getting work done</a></li>
+                        <li><a href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/" target="_blank" rel="noopener">The Official Microsoft Blog: Introducing the First Frontier Suite built on Intelligence + Trust</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">社内データを活かすAI導入でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の業務フローに合わせた<br>生成AI活用設計と定着支援をご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog034.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card034.webp" alt="Agent 365関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.13</div>
+                            <div class="related-text">【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog033.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card033.webp" alt="Google Workspace Gemini関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.12</div>
+                            <div class="related-text">【2026年3月最新】Google Workspace Geminiとは？新機能を解説</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
