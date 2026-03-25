@@ -449,6 +449,15 @@
             "alt": "Work IQでCopilotが社内文脈を理解する仕組みのイメージ",
             "link": "/blogs/blog050.html",
             "date": "2026-03-24"
+        },
+        {
+            "id": 51,
+            "title": "【2026年3月最新】GPT-4o終了とは？ChatGPTモデル移行で企業が確認すべき3つのこと",
+            "description": "GPT-4o終了の時期と影響範囲を解説。OpenAI公式情報をもとに、2026年2月13日の退役、4月3日のCustom GPT完全終了、企業が進めるべきモデル移行対応を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card051.webp",
+            "alt": "GPT-4o終了とChatGPTモデル移行で企業が確認すべきポイントのイメージ",
+            "link": "/blogs/blog051.html",
+            "date": "2026-03-25"
         }
     ],
     "works": [
