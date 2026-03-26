@@ -458,6 +458,15 @@
             "alt": "GPT-4o終了とChatGPTモデル移行で企業が確認すべきポイントのイメージ",
             "link": "/blogs/blog051.html",
             "date": "2026-03-25"
+        },
+        {
+            "id": 52,
+            "title": "【2026年3月最新】ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる",
+            "description": "ChatGPT File Libraryとは何かを解説。2026年3月23日の新機能と25日のGoogle Drive統合をもとに、社内資料の再利用、管理上の注意点、中小企業での活用法を紹介します。",
+            "thumbnail": "/images/blogs_images/blog-card052.webp",
+            "alt": "ChatGPT File LibraryとGoogle Drive統合で社内資料の再利用が変わるイメージ",
+            "link": "/blogs/blog052.html",
+            "date": "2026-03-26"
         }
     ],
     "works": [
