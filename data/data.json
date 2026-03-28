@@ -476,6 +476,24 @@
             "alt": "ChatGPT shopping updatesとAI検索で商品が売れる条件のイメージ",
             "link": "/blogs/blog053.html",
             "date": "2026-03-26"
+        },
+        {
+            "id": 54,
+            "title": "【2026年3月最新】ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法",
+            "description": "ChatGPT Workspace Analyticsとは何かを解説。OpenAI公式情報をもとに、3月12日の新機能公開とImpact surveyの考え方から、社内AI活用の定着度を見える化する方法を紹介します。",
+            "link": "/blogs/blog054.html",
+            "thumbnail": "/images/blogs_images/blog-card054.webp",
+            "alt": "ChatGPT Workspace Analyticsで社内AI活用の定着度を見える化するイメージ",
+            "date": "2026-03-27"
+        },
+        {
+            "id": 55,
+            "title": "【2026年3月最新】Claude Computer Useとは？スマホからPC操作を任せるAI自動化の始め方",
+            "description": "Claude Computer Useとは何かを解説。Anthropicが2026年3月23日に公開したPC操作機能の仕組み、Dispatchによるスマホ遠隔指示、ビジネス活用のポイントと注意点を紹介します。",
+            "link": "/blogs/blog055.html",
+            "thumbnail": "/images/blogs_images/blog-card055.webp",
+            "alt": "Claude Computer UseでスマホからPC操作を任せるAI自動化のイメージ",
+            "date": "2026-03-29"
         }
     ],
     "works": [
