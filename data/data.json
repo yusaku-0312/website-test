@@ -494,6 +494,15 @@
             "thumbnail": "/images/blogs_images/blog-card055.webp",
             "alt": "Claude Computer UseでスマホからPC操作を任せるAI自動化のイメージ",
             "date": "2026-03-29"
+        },
+        {
+            "id": 56,
+            "title": "【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法",
+            "description": "Codex Pluginsとは何かを解説。OpenAI公式情報をもとに、2026年3月26日の新機能、プラグイン構成、チーム開発で再利用ワークフローを標準化する実践手順を紹介します。",
+            "link": "/blogs/blog056.html",
+            "thumbnail": "/images/blogs_images/blog-card056.webp",
+            "alt": "Codex Pluginsでチーム開発のAIワークフローを標準化するイメージ",
+            "date": "2026-03-29"
         }
     ],
     "works": [

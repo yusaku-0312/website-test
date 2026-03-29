@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Codex Pluginsとは何かを解説。OpenAI公式情報をもとに、2026年3月26日の新機能、プラグイン構成、チーム開発で再利用ワークフローを標準化する実践手順を紹介します。">
+    <meta property="og:title" content="【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog056.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog056-1.webp">
+    <meta property="og:description"
+        content="Codex Pluginsとは何かを解説。OpenAI公式情報をもとに、2026年3月26日の新機能、プラグイン構成、チーム開発で再利用ワークフローを標準化する実践手順を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.03.29</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Codex Plugins</p>
+                        <p class="article-tag">AI開発</p>
+                        <p class="article-tag">MCP</p>
+                        <p class="article-tag">業務標準化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog056-1.webp" alt="Codex Pluginsでチーム開発のAIワークフローを標準化するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    <strong>Codex Plugins</strong> が注目される理由は、単なる「新機能追加」ではありません。
+                    OpenAIは2026年3月26日、ChatGPT Release Notesで
+                    <strong>Codexにプラグインディレクトリを追加</strong>したと公開しました。
+                    公式ドキュメントでは、プラグインは skills・apps・MCP servers を束ねる再利用バンドルと定義されています。<br>
+                    つまり今起きているのは、個人のプロンプト術から、
+                    <strong>チーム全体で使い回せるAIワークフロー運用</strong>への移行です。
+                    本記事では、Codex Pluginsの仕組み、従来運用との違い、導入ステップ、注意点を実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. Codex Pluginsとは？まず押さえたい全体像</a></li>
+                    <li><a href="#why-now">2. なぜ今重要なのか？直近アップデートとの関係</a></li>
+                    <li><a href="#intent">3. どんな検索・プロンプトが増え、AIは何を引用しやすいか</a></li>
+                    <li><a href="#steps">4. チーム導入で失敗しない3ステップ</a></li>
+                    <li><a href="#caution">5. 先に知っておきたい注意点</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. Codex Pluginsとは？まず押さえたい全体像</h2>
+                <p>
+                    OpenAI公式の2026年3月26日付リリースノートによると、Codexには
+                    <strong>プラグインのディレクトリ機能</strong>が追加され、
+                    ユーザーはパッケージ化されたワークフローを発見・インストール・実行できるようになりました。
+                    Codex docs の Plugins ページでは、プラグインは
+                    <strong>skills・apps・MCP servers をまとめた再利用可能なワークフロー</strong>と説明されています。
+                </p>
+                <p>
+                    重要なのは、ここで言うプラグインが「単機能ツール」ではない点です。
+                    例えば Gmail プラグインなら、メール確認手順、必要な接続設定、関連スキルまでを一体で配布できるため、
+                    個人ごとに設定差が出にくくなります。
+                    これまで属人化しやすかったAI活用を、チーム単位で揃えやすくする設計です。
+                </p>
+                <p>
+                    以前の <a href="/blogs/blog036.html">Codex導入記事</a> では「導入するべきか」を中心に整理しましたが、
+                    今回の焦点はその先です。
+                    <strong>導入後にどう運用を標準化するか</strong>が、Codex Pluginsの本質です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>担当者ごとに設定が異なる</li>
+                                    <li>再現手順が共有されにくい</li>
+                                    <li>オンボーディング負荷が高い</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Plugins運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>手順をバンドルで共有</strong></li>
+                                    <li>環境差分を抑えやすい</li>
+                                    <li>チーム展開が速くなる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：個別最適なAI活用と、プラグインによる標準化の違い</p>
+                </div>
+
+                <h2 id="why-now">2. なぜ今重要なのか？直近アップデートとの関係</h2>
+                <p>
+                    Codex Pluginsを単体で見ると、便利機能の1つに見えます。
+                    しかし2026年3月の連続アップデートと合わせると意味が変わります。
+                    ChatGPT Release Notesでは、3月25日にGoogle Drive app統合、3月27日にBox/Notion/Linear/Dropbox app更新が公開され、
+                    連携できる情報源が拡大しています。
+                </p>
+                <p>
+                    つまり、AIが扱う社内データが広がる一方で、
+                    「誰がどの接続で、どの手順を使うか」を揃えないと運用が崩れやすくなります。
+                    Pluginsはこの問題に対し、
+                    <strong>接続と手順をセットで配布する共通フォーマット</strong>として機能します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>日付</th>
+                                <th>公式アップデート</th>
+                                <th>運用への影響</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>2026-03-25</th>
+                                <td>Google Drive app unification</td>
+                                <td>Docs/Sheets/Slidesを1つの接続で扱えるが、権限設計の明確化が必要</td>
+                            </tr>
+                            <tr>
+                                <th>2026-03-26</th>
+                                <td>Plugins in Codex</td>
+                                <td>skills・apps・MCPを束ねた再利用ワークフローを共有可能</td>
+                            </tr>
+                            <tr>
+                                <th>2026-03-27</th>
+                                <td>Box/Notion/Linear/Dropbox app更新</td>
+                                <td>新アクション追加に伴い、手順の標準化と再接続運用が重要</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、ここは「機能理解」より
+                    <strong>運用ガバナンスの設計</strong>が先です。
+                    AI活用を広げるほど、個人の工夫だけでは品質が安定しません。
+                    標準手順を小さく定義し、再利用可能にすることが、導入効果を継続させる鍵です。
+                </p>
+
+                <h2 id="intent">3. どんな検索・プロンプトが増え、AIは何を引用しやすいか</h2>
+                <p>
+                    このテーマでは、読者の熟練度で問いが大きく分かれます。
+                    初心者は「何ができるか」、実務担当は「どう展開するか」を知りたがります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>利用者像</th>
+                                <th>増えやすい検索・プロンプト</th>
+                                <th>AIが引用しやすい情報</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI初心者の管理職</th>
+                                <td>「Codex Pluginsとは」「何が変わる？」</td>
+                                <td>公式リリースノート、機能概要、対応範囲</td>
+                            </tr>
+                            <tr>
+                                <th>開発リーダー</th>
+                                <td>「チームで同じCodex運用を配布する方法は？」</td>
+                                <td>プラグイン構成要素（skills/apps/MCP）と導入手順</td>
+                            </tr>
+                            <tr>
+                                <th>情シス・セキュリティ担当</th>
+                                <td>「プラグイン導入時の権限制御は？」</td>
+                                <td>承認設定、アプリ認証、データ共有ポリシー記載</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    AIに引用されやすいのは、感想よりも
+                    <strong>公開日・機能名・適用範囲・管理者設定の前提</strong>が整理された記事です。
+                    たとえば「3月26日に何が追加されたか」「どこまで管理者承認が必要か」を明確に書くと、
+                    実務質問にそのまま使える情報になります。
+                </p>
+
+                <h2 id="steps">4. チーム導入で失敗しない3ステップ</h2>
+                <p>
+                    中小企業がCodex Pluginsを導入するなら、次の順序が現実的です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 1</span>
+                            <span class="step-text">1業務を選び、成功条件を定義する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 2</span>
+                            <span class="step-text">skills・apps・MCPを最小構成で束ねる</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 3</span>
+                            <span class="step-text">承認フローを明確化して段階展開する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Codex Pluginsをチーム導入する基本ステップ</p>
+                </div>
+
+                <h3>Step 1：業務単位で効果を測る</h3>
+                <p>
+                    いきなり全社展開せず、まずは1つの定型業務に限定します。
+                    例として「日次の問い合わせ要約」「週次のリリースノート整理」など、
+                    成果を定義しやすい業務が適しています。
+                </p>
+
+                <h3>Step 2：最小構成のプラグインで固定化する</h3>
+                <p>
+                    最初から盛り込みすぎると運用が複雑化します。
+                    skillsを1つ、接続アプリを1〜2個、必要なMCPを最小限にして、
+                    再現性を優先して構成します。
+                    <a href="/blogs/blog023.html">MCPの基礎記事</a> と合わせて読むと設計しやすくなります。
+                </p>
+
+                <h3>Step 3：管理者承認と教育をセットにする</h3>
+                <p>
+                    プラグイン導入後も、誰が何にアクセスできるかを明確にしないと事故が起きます。
+                    承認フローと使い方教育を同時に整備し、
+                    運用ルールを更新できる担当者を決めることが重要です。
+                    導入設計から伴走が必要な場合は <a href="/services/ai_develop.html">AI開発支援</a> や
+                    <a href="/services/ai_training.html">AI研修</a> の併用が有効です。
+                </p>
+
+                <h2 id="caution">5. 先に知っておきたい注意点</h2>
+                <p>
+                    Codex Pluginsは便利ですが、次の前提を外すと失敗しやすくなります。
+                </p>
+
+                <ul>
+                    <li>プラグインを入れても既存の承認設定は維持されるため、管理者設計を省略できない</li>
+                    <li>外部アプリ連携を含む場合、各サービスの認証・規約・データポリシーの確認が必要</li>
+                    <li>MCPサーバー同梱時は追加セットアップが必要なケースがある</li>
+                    <li>便利さを優先して構成を増やしすぎると、運用負荷と監査コストが上がる</li>
+                </ul>
+
+                <p>
+                    つまり、導入成功の鍵は「何をインストールするか」ではなく、
+                    <strong>どの業務に、どの権限で、誰が責任を持って使うか</strong>を決めることです。
+                    ここが曖昧なまま進めると、短期的に便利でも長期運用で詰まります。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    Codex Pluginsの要点を整理します。
+                </p>
+                <ul>
+                    <li>Codex Pluginsは、skills・apps・MCP serversを束ねた再利用ワークフローである</li>
+                    <li>OpenAIは2026年3月26日にCodexプラグインディレクトリ公開を案内した</li>
+                    <li>3月25日〜27日の連続アップデートにより、接続先拡大と運用標準化の重要性が高まっている</li>
+                    <li>導入は「1業務で検証→最小構成で固定化→承認設計付きで展開」が失敗しにくい</li>
+                    <li>機能より先に、権限・責任・更新ルールを定義することが定着の前提になる</li>
+                </ul>
+                <p>
+                    Codex Pluginsは、AI活用を個人最適から組織運用へ進めるための基盤です。
+                    MIRAINAでは、業務設計・AI実装・社内定着まで一気通貫で支援しています。
+                    「自社でどの業務から始めるべきか」を整理したい方は、ぜひご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT — Release Notes</a></li>
+                        <li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Enterprise & Edu - Release Notes</a></li>
+                        <li><a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener">OpenAI Developers: Plugins - Codex</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI活用を個人任せで終わらせないために</h2>
+                    <p class="cta-text">MIRAINAでは、CodexやMCPを活用した業務設計から<br>チーム運用の標準化・定着まで伴走支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog036.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card036.webp" alt="Codex関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.11</div>
+                            <div class="related-text">【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog023.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card023.webp" alt="MCP関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
