@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAI Model Specをもとに、AIがどんな指示を優先し、どんな記事を引用しやすいかを解説。AI初心者の検索行動と、企業サイトが整えるべき構造化ポイントを紹介します。">
+    <meta property="og:title" content="【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog061.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog061-1.webp">
+    <meta property="og:description"
+        content="OpenAI Model Specをもとに、AIがどんな指示を優先し、どんな記事を引用しやすいかを解説。AI初心者の検索行動と、企業サイトが整えるべき構造化ポイントを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.01</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI Model Spec</p>
+                        <p class="article-tag">AI検索</p>
+                        <p class="article-tag">プロンプト設計</p>
+                        <p class="article-tag">LLMO</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog061-1.webp" alt="OpenAI Model SpecとAIに引用される記事作りの考え方" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月25日、OpenAIは
+                    <strong>Inside our approach to the Model Spec</strong> を公開し、
+                    AIがどの指示を優先し、どう振る舞うべきかを説明しました。<br>
+                    これは「AIに何て聞けばいいのか分からない」という初心者だけでなく、
+                    <strong>自社サイトがAIにどう読まれ、どんな記事が引用されやすいのか</strong>を考える企業にも重要な論点です。<br>
+                    本記事では、OpenAI Model Specの要点を押さえつつ、
+                    AIが苦手な人の検索行動、AIに投げがちなプロンプト、そして企業が整えるべき記事構造を実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. OpenAI Model Specとは？まず押さえるべき全体像</a></li>
+                    <li><a href="#priority">2. AIはどんな指示を優先するのか？Chain of Commandの要点</a></li>
+                    <li><a href="#search-behavior">3. AIが苦手な人はどう検索し、どんなプロンプトを投げるのか</a></li>
+                    <li><a href="#citation">4. AIに引用されやすい記事はどんな構造か</a></li>
+                    <li><a href="#actions">5. 企業が今すぐやるべき3つの改善</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. OpenAI Model Specとは？まず押さえるべき全体像</h2>
+                <p>
+                    OpenAI Model Specは、OpenAIが
+                    <strong>「モデルにどう振る舞ってほしいか」</strong>を公開文書として整理したフレームワークです。
+                    2026年3月25日の公式記事では、これを単なる社内ルールではなく、
+                    ユーザー・開発者・研究者・政策担当者も読める
+                    <strong>公開された行動基準</strong>として位置づけています。
+                </p>
+                <p>
+                    重要なのは、Model Specが
+                    <strong>現在のAIの完全な実態説明ではなく、OpenAIが目指す振る舞いの目標</strong>だと明言されている点です。
+                    つまり、AIの答えが日によって揺れる背景には「モデル性能」だけでなく、
+                    どの指示を優先するか、どこまで断定するか、どれだけ率直に不確実性を伝えるかという
+                    行動設計の問題があります。
+                </p>
+                <p>
+                    MIRAINA視点で見ると、これはAI活用支援だけでなく
+                    <a href="/services/llmo_insight.html">LLMO Insight</a> の文脈にも直結します。
+                    AI検索時代は「SEOで上位を取る」だけでなく、
+                    <strong>AIが理解しやすい構造で情報を提示する</strong>ことが競争力になります。
+                </p>
+
+                <h2 id="priority">2. AIはどんな指示を優先するのか？Chain of Commandの要点</h2>
+                <p>
+                    2026年3月25日のOpenAI公式記事が強調したのが、
+                    AIはすべての指示を同列に扱うのではなく、
+                    <strong>優先順位をつけて解釈する</strong>という考え方です。
+                    OpenAI・開発者・ユーザーから来る指示が衝突したとき、
+                    モデルはより上位の指示を優先して判断します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>レイヤー</th>
+                                <th>意味</th>
+                                <th>実務で起こること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>OpenAI側のルール</th>
+                                <td>安全性・法令順守・重大リスク回避</td>
+                                <td>危険行為や違法行為は、ユーザーが求めても拒否されやすい</td>
+                            </tr>
+                            <tr>
+                                <th>開発者の設定</th>
+                                <td>アプリやワークフローの目的、制約、出力形式</td>
+                                <td>同じ質問でもツールごとに答え方が変わる</td>
+                            </tr>
+                            <tr>
+                                <th>ユーザーの指示</th>
+                                <td>知りたいこと、トーン、用途、条件</td>
+                                <td>指示が曖昧だと、AIは無難で一般的な答えに寄りやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここで見落とされがちなのが、
+                    <strong>「AIの回答品質は、質問の上手さだけではなく、質問がどの文脈で処理されるか」</strong>
+                    に左右される点です。
+                    たとえば社内向けボットと一般向けChatGPTでは、同じ「営業メールを書いて」でも、
+                    参照できる情報、守るべきルール、答えの粒度が違います。
+                    これは <a href="/blogs/blog054.html">ChatGPT Workspace Analyticsの記事</a> で触れた
+                    社内活用の定着度分析ともつながる論点です。
+                </p>
+
+                <h2 id="search-behavior">3. AIが苦手な人はどう検索し、どんなプロンプトを投げるのか</h2>
+                <p>
+                    AIが苦手な人は、いきなり高度なプロンプトを書きません。
+                    実際には、従来のGoogle検索に近い短文から入り、
+                    うまく答えが出ないと「もっと分かりやすく」「初心者向けに」と重ねる傾向があります。
+                    その後、AIに対しては「これを読んで要約して」「おすすめを比較して」と
+                    <strong>検索と依頼の中間のようなプロンプト</strong>を投げがちです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>場面</th>
+                                <th>想定される検索語</th>
+                                <th>AIに投げがちなプロンプト</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI導入の初期検討</th>
+                                <td>「ChatGPT 仕事 何ができる」「AI導入 何から始める」</td>
+                                <td>「中小企業向けにAI活用例を3つ教えて」</td>
+                            </tr>
+                            <tr>
+                                <th>比較検討</th>
+                                <td>「Claude ChatGPT 違い」「AIツール 比較 初心者」</td>
+                                <td>「営業チーム向けならどれがいい？理由も」</td>
+                            </tr>
+                            <tr>
+                                <th>具体施策の検討</th>
+                                <td>「AI検索 引用される方法」「LLMO 対策 何をする」</td>
+                                <td>「AIに引用されやすい記事構成を教えて」</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    このときAIが参照しやすいのは、
+                    <strong>定義が明確で、更新日と一次情報が見え、見出しごとに論点が整理された記事</strong>です。
+                    逆に、抽象論だけのコラムや、出典不明の断定、1ページに複数論点を詰め込みすぎた記事は、
+                    AIの要約・引用対象として扱いにくくなります。
+                    <a href="/blogs/blog053.html">ChatGPT shopping updatesの記事</a> でも触れた通り、
+                    AI検索は「見つける」だけでなく「説明できる」情報を優先しやすいのが特徴です。
+                </p>
+
+                <h2 id="citation">4. AIに引用されやすい記事はどんな構造か</h2>
+                <p>
+                    ここから先は、OpenAIが
+                    <strong>直接「この構造なら引用する」と明言したものではなく</strong>、
+                    Model Specが重視する truthfulness、legibility、instruction-following と、
+                    近年のAI検索体験からのMIRAINAの実務推論です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">引用されにくい記事</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>見出しが抽象的</li>
+                                    <li>更新日や出典がない</li>
+                                    <li>結論が本文の奥にある</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">引用されやすい記事</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>冒頭で定義と要点を提示</li>
+                                    <li>一次情報と日付を明記</li>
+                                    <li>質問ごとに答えが分かれている</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：AIが扱いやすい記事構造の違い</p>
+                </div>
+
+                <p>
+                    AIは「ページ全体の雰囲気」よりも、
+                    <strong>質問に対する答えがどこにあるかを切り出しやすいか</strong>を重視します。
+                    そのため、企業サイトで有効なのは次の3点です。
+                    1つ目は、H2ごとに問いを分けること。
+                    2つ目は、要点を段落冒頭で言い切ること。
+                    3つ目は、根拠となる一次情報をリンク付きで置くことです。
+                </p>
+                <p>
+                    これはSEOの記事作法と似ていますが、完全には同じではありません。
+                    SEOは検索順位を取りに行く設計が中心ですが、
+                    AI検索や対話型回答では
+                    <strong>「そのまま要約しても意味が崩れない粒度」</strong>がより重要になります。
+                    つまり、AIに引用されたいなら、
+                    長文1本勝負ではなく「質問単位で再利用できる情報設計」が必要です。
+                </p>
+
+                <h2 id="actions">5. 企業が今すぐやるべき3つの改善</h2>
+                <p>
+                    OpenAI Model Specの考え方を踏まえると、
+                    企業サイト側でまず着手すべき改善は3つです。
+                    特別な技術より、情報の並べ方を変えるほうが先です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Action 1</span>
+                            <span class="step-text">検索意図ごとに<br>記事を分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Action 2</span>
+                            <span class="step-text">一次情報と日付を<br>明記する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Action 3</span>
+                            <span class="step-text">AIが抜き出しやすい<br>答え方にする</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：AI検索時代に先に整えるべき3つの改善</p>
+                </div>
+
+                <h3>Action 1：検索意図ごとに記事を分ける</h3>
+                <p>
+                    「AI導入とは」「比較」「費用」「成功事例」を1本の記事に詰め込むと、
+                    人間にもAIにも読み取りにくくなります。
+                    まずは
+                    <strong>初心者の検索語ごとに記事テーマを分割</strong>してください。
+                    「とは記事」「比較記事」「実務手順記事」を分けるだけで、
+                    AIが回答時に引用しやすい塊になります。
+                </p>
+
+                <h3>Action 2：一次情報と日付を明記する</h3>
+                <p>
+                    OpenAIのように仕様更新が速い分野では、
+                    <strong>更新日がない記事はAIにも人にも扱いづらい</strong>です。
+                    公式発表日、リリース日、どのページを根拠にしたかを見える形で残してください。
+                    「2026年3月25日の公式発表では」と書くだけでも、
+                    情報の鮮度と責任範囲が明確になります。
+                </p>
+
+                <h3>Action 3：AIが抜き出しやすい答え方にする</h3>
+                <p>
+                    たとえば「OpenAI Model Specとは？」という問いに対して、
+                    1文目で定義、2文目で重要性、3文目で実務影響を示す形にすると、
+                    AIは要約しやすくなります。
+                    MIRAINAでも、記事設計時には
+                    <strong>「この段落だけ切り出しても意味が通るか」</strong>を基準に構成しています。
+                    これはSEOだけでなく、AI検索での可視化にも効きます。
+                </p>
+
+                <p>
+                    MIRAINA視点で補足すると、これからは
+                    <strong>プロンプト設計と記事設計を別物として扱わない</strong>ことが重要です。
+                    ユーザーがAIに投げる質問を先に想定し、
+                    その質問にそのまま答えられる見出しと本文を用意する。
+                    この考え方が、AI活用が苦手な層にも届きやすいコンテンツを作ります。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    OpenAI Model Specを起点に、AIに引用される記事作りのポイントを整理すると次の通りです。
+                </p>
+                <ul>
+                    <li>2026年3月25日のOpenAI公式記事は、AIの振る舞いを公開ルールとして説明した</li>
+                    <li>AIはすべての指示を同列に扱わず、優先順位をつけて解釈する</li>
+                    <li>AIが苦手な人は短い検索語から入り、その延長でAIに比較や要約を頼みやすい</li>
+                    <li>AIに引用されやすいのは、定義・更新日・一次情報・問いごとの構造がある記事</li>
+                    <li>企業は検索意図別の記事分割、日付明記、抜き出しやすい段落設計から着手すべき</li>
+                </ul>
+                <p>
+                    MIRAINAでは、AI初心者の検索行動の分析から、
+                    AIに拾われやすいコンテンツ設計、LLMOの可視化まで一気通貫で支援しています。
+                    「自社サイトがAIにどう見られているか分からない」という方は、
+                    ぜひご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/our-approach-to-the-model-spec/" target="_blank" rel="noopener">OpenAI：Inside our approach to the Model Spec</a></li>
+                        <li><a href="https://openai.com/index/introducing-the-model-spec//" target="_blank" rel="noopener">OpenAI：Introducing the Model Spec</a></li>
+                        <li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank" rel="noopener">OpenAI Help Center：ChatGPT Enterprise &amp; Edu Release Notes</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI検索で、自社サイトがどう引用されているか見えていますか？</h2>
+                    <p class="cta-text">MIRAINAでは、AI初心者の検索行動の再現から、<br>LLMO対策・記事設計・改善提案まで一気通貫で支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog054.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card054.webp" alt="ChatGPT Workspace Analytics関連記事画像" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.27</div>
+                            <div class="related-text">【2026年3月最新】ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog053.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card053.webp" alt="ChatGPT shopping updates関連記事画像" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.26</div>
+                            <div class="related-text">【2026年3月最新】ChatGPT shopping updatesとは？AI検索で商品が売れる条件</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog052.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card052.webp" alt="ChatGPT File Library関連記事画像" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.26</div>
+                            <div class="related-text">【2026年3月最新】ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

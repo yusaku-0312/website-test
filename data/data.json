@@ -539,6 +539,15 @@
             "thumbnail": "/images/blogs_images/blog-card060.webp",
             "alt": "AIエージェント導入で失敗する企業の5つのパターンと対策",
             "date": "2026-04-01"
+        },
+        {
+            "id": 61,
+            "title": "【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方",
+            "description": "OpenAI Model Specをもとに、AIがどんな指示を優先し、どんな記事を引用しやすいかを解説。AI初心者の検索行動と、企業サイトが整えるべき構造化ポイントを紹介します。",
+            "link": "/blogs/blog061.html",
+            "thumbnail": "/images/blogs_images/blog-card061.webp",
+            "alt": "OpenAI Model SpecとAIに引用される記事作りの考え方",
+            "date": "2026-04-01"
         }
     ],
     "works": [
