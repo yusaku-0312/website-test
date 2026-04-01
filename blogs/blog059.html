@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策 | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAI Safety Bug Bounty（2026年3月25日公開）を解説。MCP経由のprompt injectionやデータ流出リスクを前提に、中小企業が実装すべきAIエージェント運用と防御策を紹介します。">
+    <meta property="og:title" content="【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog059.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog059-1.webp">
+    <meta property="og:description"
+        content="OpenAI Safety Bug Bounty（2026年3月25日公開）を解説。MCP経由のprompt injectionやデータ流出リスクを前提に、中小企業が実装すべきAIエージェント運用と防御策を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.01</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">Safety Bug Bounty</p>
+                        <p class="article-tag">MCPセキュリティ</p>
+                        <p class="article-tag">AIガバナンス</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog059-1.webp" alt="OpenAI Safety Bug BountyとMCP時代のAIセキュリティ対策"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月25日、OpenAIは
+                    <strong>Safety Bug Bounty</strong> を公開し、
+                    従来のセキュリティ脆弱性だけでなく
+                    <strong>AI悪用・安全性リスク</strong>の報告を正式対象に加えました。<br>
+                    特に注目は、MCPを含むエージェント環境での
+                    prompt injectionとデータ流出です。
+                    これは「便利に使う」段階から「安全に運用する」段階へ移ったサインでもあります。<br>
+                    本記事では、公式情報をもとに
+                    Safety Bug Bountyの要点、Security Bug Bountyとの違い、
+                    中小企業が今すぐ実装すべき防御策を実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#overview">1. OpenAI Safety Bug Bountyとは？まず押さえるべき背景</a></li>
+                    <li><a href="#scope">2. どこまでが対象か？公式スコープの読み解き</a></li>
+                    <li><a href="#impact">3. 中小企業への影響：MCP時代の運用責任はどう変わるか</a></li>
+                    <li><a href="#actions">4. 企業が実装すべき3つの防御策</a></li>
+                    <li><a href="#caution">5. 先に知っておきたい注意点</a></li>
+                    <li><a href="#summary">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="overview">1. OpenAI Safety Bug Bountyとは？まず押さえるべき背景</h2>
+                <p>
+                    OpenAIは2026年3月25日、
+                    <strong>Safety Bug Bounty</strong> を公開しました。
+                    目的は、急速に普及するAI製品で生じる
+                    「従来の脆弱性定義だけでは拾いきれない悪用リスク」を
+                    外部研究者と協力して早期に検知することです。
+                </p>
+                <p>
+                    同日更新のCoordinated Vulnerability Disclosure Policyでも、
+                    OpenAIのBug Bountyは
+                    <strong>security issueだけでなく、safety and abuse issue</strong> まで対象にすると明記されました。
+                    これは、AI導入における評価軸が
+                    「侵入されるか」だけでなく「誤操作・悪用を誘発しないか」まで広がったことを意味します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>従来の認識</th>
+                                <th>2026年3月以降の実務</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>報告対象</th>
+                                <td>技術的脆弱性中心</td>
+                                <td>安全性・悪用シナリオも対象</td>
+                            </tr>
+                            <tr>
+                                <th>リスク評価</th>
+                                <td>CVE的観点が中心</td>
+                                <td>実害（material harm）の有無まで評価</td>
+                            </tr>
+                            <tr>
+                                <th>AIエージェント運用</th>
+                                <td>利便性重視で接続拡張</td>
+                                <td>権限境界・監視・停止手順を先に設計</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    すでに多くの現場で、<a href="/blogs/blog023.html">MCP連携</a>や
+                    <a href="/blogs/blog026.html">AIエージェント運用</a>が進み、
+                    AIは「回答するだけ」の存在ではなく、
+                    業務ツールへ実行権限を持つ存在になっています。
+                    だからこそ、セーフティ評価を開発初期から組み込む必要があります。
+                </p>
+
+                <h2 id="scope">2. どこまでが対象か？公式スコープの読み解き</h2>
+                <p>
+                    OpenAIのSafety Bug Bountyページでは、
+                    AI特有の安全性シナリオが具体的に示されています。
+                    中でも重要なのが、Agentic Risks including MCPの項目です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>カテゴリ</th>
+                                <th>公式に例示された論点</th>
+                                <th>現場での解釈</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Agentic Risks（MCP含む）</th>
+                                <td>prompt injectionでエージェントが乗っ取られ、情報漏えい・有害操作が起きるケース。再現率50%以上が要件</td>
+                                <td>単発の挙動より、再現可能な業務リスクを重視</td>
+                            </tr>
+                            <tr>
+                                <th>OpenAI Proprietary Information</th>
+                                <td>推論関連を含むOpenAI独自情報の露出</td>
+                                <td>機密情報漏えいは安全性問題としても扱われる</td>
+                            </tr>
+                            <tr>
+                                <th>Account and Platform Integrity</th>
+                                <td>自動化対策回避、trust signal改ざん、制限回避など</td>
+                                <td>アカウント運用ルールと監査ログ管理が必須</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    もう1つ重要なのは、Safety Bug Bountyが
+                    Security Bug Bountyを置き換えるのではなく、
+                    <strong>補完関係</strong>として設計されている点です。
+                    公式ページでも「権限外アクセス」はSecurity Bug Bountyへ報告するよう明記されています。
+                </p>
+                <p>
+                    つまり実務では、「危険な実行シナリオ」と「技術的脆弱性」を
+                    切り分けて報告・対応する運用設計が必要になります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAI監査</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>脆弱性診断が中心</li>
+                                    <li>モデル出力の安全性は後追い</li>
+                                    <li>運用権限の監査が曖昧</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">今後のAI監査</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>悪用シナリオを先に洗い出す</strong></li>
+                                    <li>再現率と実害を評価軸にする</li>
+                                    <li>運用停止手順まで含めて設計</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：脆弱性中心の監査から、AI悪用リスクを含む監査への転換</p>
+                </div>
+
+                <h2 id="impact">3. 中小企業への影響：MCP時代の運用責任はどう変わるか</h2>
+                <p>
+                    Safety Bug Bountyを「OpenAIの話」として見るだけでは不十分です。
+                    本質は、AIエージェントを導入するすべての企業に
+                    セーフティ運用の成熟が求められている点にあります。
+                </p>
+                <p>
+                    例えば、営業支援でAIにメール送信やCRM更新を任せる場合、
+                    prompt injectionにより誤送信や不正操作が起きれば、
+                    直接的な業務損失につながります。
+                    「回答品質」よりも先に「誤実行の上限」を定義しないと、
+                    導入効果よりリスクが先に顕在化します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>業務領域</th>
+                                <th>想定されるリスク</th>
+                                <th>先に決めるべき統制</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業・CS</th>
+                                <td>誤返信、誤提案、顧客データ流出</td>
+                                <td>高リスク操作の人間承認</td>
+                            </tr>
+                            <tr>
+                                <th>バックオフィス</th>
+                                <td>誤入力、誤送金、権限逸脱</td>
+                                <td>権限最小化と実行ログ監査</td>
+                            </tr>
+                            <tr>
+                                <th>ナレッジ検索</th>
+                                <td>機密文書の過剰参照・外部共有</td>
+                                <td>参照範囲制御とDLPルール</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、<a href="/blogs/blog056.html">Codex Pluginsのような再利用運用</a>を
+                    進めるほど、テンプレート化されたセーフティルールが重要になります。
+                    担当者ごとの運用差を残したまま接続先だけ増やすと、
+                    事故の再現性まで高まってしまうためです。
+                </p>
+
+                <h2 id="actions">4. 企業が実装すべき3つの防御策</h2>
+                <p>
+                    OpenAIのSafety Bug Bountyが示した評価軸を、
+                    そのまま社内運用に落とし込むと、次の3ステップになります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">悪用シナリオを<br>業務単位で定義</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">権限境界と<br>承認フローを実装</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">再現テストと<br>監視運用を定着</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Safety Bug Bountyの考え方を社内実装する3ステップ</p>
+                </div>
+
+                <h3>Step 01：悪用シナリオを業務単位で定義する</h3>
+                <p>
+                    「この業務でAIが誤操作すると何が起きるか」を先に定義します。
+                    例として、請求関連なら「誤請求」「宛先違い」「未承認送信」など、
+                    事故パターンを3〜5個に絞って明文化します。
+                </p>
+                <p>
+                    この段階で重要なのは、脅威名ではなく
+                    <strong>業務上の実害</strong>です。
+                    Safety Bug Bountyでも「plausible and material harm」が重視されており、
+                    実務で再現できる損害シナリオが対策の起点になります。
+                </p>
+
+                <h3>Step 02：権限境界と承認フローを実装する</h3>
+                <p>
+                    次に、AIエージェントへ渡す権限を最小化します。
+                    送信・更新・削除などの高リスク操作は、
+                    自動実行ではなく「人間承認必須」に分けてください。
+                </p>
+                <p>
+                    MCP連携では、接続先が増えるほど意図しない横断操作が起きやすくなります。
+                    そのため「読取専用」「下書きのみ」「実行可能」の3段階に分け、
+                    役職ごとに上限を固定する設計が有効です。
+                </p>
+
+                <h3>Step 03：再現テストと監視運用を定着させる</h3>
+                <p>
+                    公式スコープでは、prompt injectionなどの挙動に
+                    「再現率50%以上」という条件が置かれています。
+                    社内検証でも、単発失敗ではなく
+                    「何回中何回で発生するか」を計測してください。
+                </p>
+                <p>
+                    さらに、異常実行時の停止手順をRunbook化し、
+                    監査ログのレビュー担当を固定します。
+                    「事故が起きない設計」と「起きた後の初動」をセットで持つことが、
+                    セーフティ運用の実効性を高めます。
+                </p>
+
+                <h2 id="caution">5. 先に知っておきたい注意点</h2>
+                <ul>
+                    <li>Safety Bug Bountyでは、一般的な「jailbreak」だけでは対象外になるケースがある（実害との紐付けが必要）</li>
+                    <li>MCPリスク検証は、接続先となる第三者サービスの利用規約を遵守する必要がある</li>
+                    <li>権限外アクセスのような典型的セキュリティ脆弱性は、Security Bug Bounty側へ報告する整理になる</li>
+                    <li>AI運用は機能追加が速いため、評価基準を四半期ごとに見直さないと統制が形骸化しやすい</li>
+                </ul>
+
+                <p>
+                    重要なのは、外部の評価基準を「読む」だけで終わらせないことです。
+                    事故が起きる前提で業務設計し、運用ルールとして定着させる企業ほど、
+                    AI導入の成果が安定します。
+                </p>
+
+                <h2 id="summary">6. まとめ</h2>
+                <p>
+                    OpenAI Safety Bug Bountyの要点を整理します。
+                </p>
+                <ul>
+                    <li>OpenAIは2026年3月25日にSafety Bug Bountyを公開し、AI悪用・安全性リスクを正式対象に加えた</li>
+                    <li>Agentic Risks including MCPとして、prompt injectionやデータ流出シナリオが明示された</li>
+                    <li>再現率50%以上など、実害に結びつく再現可能性が評価軸として重視されている</li>
+                    <li>中小企業は「悪用シナリオ定義」「権限境界実装」「再現テスト運用」の3点を優先すべき</li>
+                    <li>機能拡張の速度に合わせて、セーフティ運用の見直しを継続することが競争力になる</li>
+                </ul>
+                <p>
+                    MIRAINAでは、AI活用の設計段階から
+                    「業務成果」と「セーフティ統制」を同時に設計し、
+                    導入後の運用定着まで伴走しています。
+                    「AIエージェントを導入したいが、権限設計や監視運用に不安がある」という方は、ぜひご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/safety-bug-bounty/" target="_blank" rel="noopener">OpenAI: Introducing the OpenAI Safety Bug Bounty program（2026-03-25）</a></li>
+                        <li><a href="https://openai.com/policies/coordinated-vulnerability-disclosure-policy/" target="_blank" rel="noopener">OpenAI: Coordinated vulnerability disclosure policy（Updated: 2026-03-25）</a></li>
+                        <li><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI News（Safetyカテゴリの公開情報）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIエージェント導入、セーフティ設計までできていますか？</h2>
+                    <p class="cta-text">MIRAINAでは、業務課題の整理からAI導入・<br>社内研修・定着支援まで一気通貫で伴走します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog056.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card056.webp" alt="Codex Plugins関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.29</div>
+                            <div class="related-text">【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog023.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card023.webp" alt="MCP関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog025.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card025.webp" alt="AIガイドライン関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.08</div>
+                            <div class="related-text">【2026年3月最新】AI事業者ガイドライン改定とは？AIエージェント時代に企業が押さえるべき新ルール</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

@@ -521,6 +521,15 @@
             "thumbnail": "/images/blogs_images/blog-card058.webp",
             "alt": "ジェネシス・ミッションと米AI国家計画24社参画が日本企業に与える影響のイメージ",
             "date": "2026-03-31"
+        },
+        {
+            "id": 59,
+            "title": "【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策",
+            "description": "OpenAI Safety Bug Bountyを解説。MCP経由のprompt injection・データ流出リスクと、企業が実装すべきAIエージェントの防御策を整理します。",
+            "link": "/blogs/blog059.html",
+            "thumbnail": "/images/blogs_images/blog-card059.webp",
+            "alt": "OpenAI Safety Bug BountyとMCP時代のAIセキュリティ対策のイメージ",
+            "date": "2026-04-01"
         }
     ],
     "works": [
