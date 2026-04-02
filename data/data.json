@@ -548,6 +548,15 @@
             "thumbnail": "/images/blogs_images/blog-card061.webp",
             "alt": "OpenAI Model SpecとAIに引用される記事作りの考え方",
             "date": "2026-04-01"
+        },
+        {
+            "id": 62,
+            "title": "【2026年4月最新】LLMO対策で企業が埋もれない戦略｜AI Overviews対策・llms.txt・E-E-A-T強化ガイド",
+            "description": "AI Overviewsのクリック率34%低下への対応策を解説。LLMO対策57項目チェックリスト、llms.txt設置方法、E-E-A-T強化など、今から実装すべき3ステップを紹介。",
+            "link": "/blogs/blog062.html",
+            "thumbnail": "/images/blogs_images/blog-card062.webp",
+            "alt": "LLMO対策：AI検索時代のSEO戦略",
+            "date": "2026-04-02"
         }
     ],
     "works": [
