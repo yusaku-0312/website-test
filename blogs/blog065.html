@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド | MIRAINAブログ</title>
+    <meta name="description"
+        content="RAGの仕組み・メリット・失敗事例を図解。生成AIのハルシネーション対策、自社データ活用、企業導入事例（LINEヤフー・アサヒビール・JR東日本）を わかりやすく解説します。">
+    <meta property="og:title" content="【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog065.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog065-1.webp">
+    <meta property="og:description"
+        content="RAGの仕組み・メリット・失敗事例を図解。生成AIのハルシネーション対策、自社データ活用、企業導入事例（LINEヤフー・アサヒビール・JR東日本）を わかりやすく解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.03</span>
+                    <div class="article-tags">
+                        <p class="article-tag">RAG</p>
+                        <p class="article-tag">生成AI</p>
+                        <p class="article-tag">データ活用</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog065-1.webp" alt="RAGの仕組みと企業活用のイメージ" width="800" height="450" loading="lazy">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    生成AIが企業に浸透する中、「ChatGPTやClaudeに自社データを学習させたい」という要望が急増しています。
+                    その実現手段が「RAG（検索拡張生成）」です。本記事では、非エンジニア向けに RAG の仕組み、メリット、失敗事例、そして企業導入事例をわかりやすく解説します。
+                    AI導入を検討している経営者・マーケター・事業企画担当者は必見です。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. RAG（検索拡張生成）とは？図でわかる基本的な仕組み</a></li>
+                    <li><a href="#section2">2. なぜ今RAGが必要か？ハルシネーション問題と解決方法</a></li>
+                    <li><a href="#section3">3. RAGのメリット：自社データ活用・信頼性・常時最新情報対応</a></li>
+                    <li><a href="#section4">4. RAGのデメリット＆失敗事例：導入時に注意すべき5つのポイント</a></li>
+                    <li><a href="#section5">5. 企業の実践導入事例：LINEヤフー・アサヒビール・JR東日本</a></li>
+                    <li><a href="#section6">6. RAG vs Fine-tuning：企業が選ぶべき技術と導入ステップ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. RAG（検索拡張生成）とは？図でわかる基本的な仕組み</h2>
+                <p>
+                    RAGは「Retrieval-Augmented Generation」の略で、日本語では「検索拡張生成」と訳されます。
+                    【公式情報】これはAWS、Google、OpenAI、Anthropic など主要なAI企業が公式に採用・推奨している技術です。
+                </p>
+                <p>
+                    簡潔に言えば、RAGは「生成AI に外部データベースから関連情報を検索させ、その情報を参照しながら回答を生成する仕組み」です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の生成AI</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>学習済みデータからのみ回答</li>
+                                    <li>最新情報が反映されない</li>
+                                    <li>ハルシネーションの可能性</li>
+                                    <li>企業秘密の保護が容易</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">RAG導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>リアルタイムに外部データを参照</strong></li>
+                                    <li>常に最新情報を反映</li>
+                                    <li>回答の正確性を大幅向上</li>
+                                    <li>自社データのみ活用（セキュア）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：従来の生成AIとRAGの違い</p>
+                </div>
+
+                <h3>RAGの3ステップの流れ</h3>
+                <p>
+                    【公式情報】RAGの基本的な流れは、AWS公式ドキュメントや Anthropic の実装ガイドで標準化されています。
+                    非エンジニア向けに説明すると、以下のように動作します。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">ユーザが質問を入力</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">データベースを検索→関連情報を取得</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">検索結果＋質問を生成AIに送信→回答生成</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：RAGの3ステップフロー</p>
+                </div>
+
+                <p>
+                    要するに、「生成AIに『この資料を参考にして答えてね』と情報を提示する」というイメージです。
+                    学校の試験で、資料を見ながら答える「持ち込み可能な試験」と同じです。
+                </p>
+
+                <h2 id="section2">2. なぜ今RAGが必要か？ハルシネーション問題と解決方法</h2>
+                <p>
+                    生成AIの最大の課題は「ハルシネーション」です。
+                    これは、生成AIが実在しない情報や間違った情報を、あたかも本当のように生成する現象です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ハルシネーション事例</th>
+                                <th>具体例</th>
+                                <th>RAGでの対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>架空の製品情報</th>
+                                <td>「当社の新製品XXXの価格は5万円です」（実際に存在しない）</td>
+                                <td>社内の公式資料からのみ情報取得</td>
+                            </tr>
+                            <tr>
+                                <th>古い情報の提示</th>
+                                <td>「料金は昨年の価格のままです」（既に改定）</td>
+                                <td>常に最新のデータベースを参照</td>
+                            </tr>
+                            <tr>
+                                <th>信頼性の低い情報</th>
+                                <td>「この治療法は100%有効です」（根拠なし）</td>
+                                <td>医学論文など信頼できる情報源のみ利用</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】RAGが解決するのは、単なる「情報の正確性」ではなく、「回答の信頼性と出所の明確化」です。
+                    回答に「これは◯◯という公式資料に基づいています」という出典を付けられるため、利用者が情報の信頼度を判断しやすくなります。
+                </p>
+
+                <h2 id="section3">3. RAGのメリット：自社データ活用・信頼性・常時最新情報対応</h2>
+                <p>
+                    企業がRAG導入を急速に進めている理由は、以下のメリットにあります。
+                </p>
+
+                <h3>メリット① 自社データを活用した専門的な回答</h3>
+                <p>
+                    生成AIの学習データは、2023年や2024年など過去の一時点で止まっています。
+                    【公式情報】Claude、ChatGPT、Gemini いずれも、最新の社内規定、昨月改定された営業資料、今週発表の新商品情報などは知りません。
+                </p>
+                <p>
+                    RAGを導入すれば、これらの社内データをすべて参照させることが可能です。
+                    例えば、営業が「現在の利用規約では、こうした場合どう対応する？」と質問すれば、生成AIが社内の最新版利用規約を参照して回答します。
+                </p>
+
+                <h3>メリット② 情報漏洩のリスク低減</h3>
+                <p>
+                    【解釈】一般的な生成AIに機密データをそのまま入力すると、そのデータが学習に使われる懸念があります。
+                    しかしRAGなら、データをAI企業のサーバに送らず、自社のデータベースに保管したまま、必要に応じてだけ参照されます。
+                    つまり、「社外秘のデータを見ながら回答する」が実現できるわけです。
+                </p>
+
+                <h3>メリット③ 常に最新情報を反映できる</h3>
+                <p>
+                    Fine-tuning（モデル再学習）では、新しい情報を追加するたびに機械学習を実行する必要があり、手間とコストがかかります。
+                    一方、RAGなら「データベースを更新するだけ」で済むため、導入後の運用が圧倒的に簡単です。
+                </p>
+
+                <h2 id="section4">4. RAGのデメリット＆失敗事例：導入時に注意すべき5つのポイント</h2>
+                <p>
+                    RAGは万能ではありません。【仮説】「RAG導入すれば完全に安心」という誤解は、多くの企業の失敗につながっています。
+                </p>
+
+                <h3>失敗ポイント① データの品質が低い</h3>
+                <p>
+                    RAGの精度は「参照するデータの質」に 100% 依存します。
+                    たとえば、営業資料の中に「既に廃止された商品」が混在していたり、規約が更新されないまま古い版が残されていたりすると、
+                    生成AIはそれを参照して不正確な回答を生成してしまいます。
+                </p>
+                <p>
+                    【失敗例】ある企業では、社内の Google Drive に散在する複数バージョンの資料をすべてRAGのデータベースに入れてしまい、
+                    「古い価格表を参照して顧客に昨年の料金を提示してしまった」というインシデントが発生しました。
+                </p>
+
+                <h3>失敗ポイント② 検索キーが不適切</h3>
+                <p>
+                    ユーザの質問から「どういう検索キーワードを使うか」を自動判定する段階で失敗することがあります。
+                    例えば、「当社のおすすめサービスは何か」という曖昧な質問では、
+                    どの資料を検索すればいいのか判定できず、関連のない情報を参照してしまう可能性があります。
+                </p>
+
+                <h3>失敗ポイント③ データベースに存在しない情報を聞かれるとハルシネーションが発生</h3>
+                <p>
+                    RAGでも、「データベースに存在しない情報」を聞かれると、生成AIは推測で答えてしまいます。
+                    例えば、「2026年5月の市場トレンドは？」と聞かれても、データベースに2026年5月のデータがなければ、
+                    AIが過去のデータから推測して「この傾向が続くと思われます」と答えてしまう可能性があります。
+                </p>
+
+                <h3>失敗ポイント④ 導入コストを過小評価</h3>
+                <p>
+                    【仮説】多くの企業は「ChatGPT の有料プランを契約すれば RAG が使える」と思い込んでいます。
+                    実際には、社内データの準備（整理・クレンジング）、検索システムの構築、テスト・検証に数ヶ月要することがほとんどです。
+                </p>
+
+                <h3>失敗ポイント⑤ 導入後の運用体制が不明確</h3>
+                <p>
+                    RAG導入後、「データベースの情報が古くなった時に誰が更新するのか」「ハルシネーションが発生した場合の報告体制は」など、
+                    運用ルールを事前に決めておかないと、現場の混乱につながります。
+                </p>
+
+                <h2 id="section5">5. 企業の実践導入事例：LINEヤフー・アサヒビール・JR東日本</h2>
+                <p>
+                    では、実際にRAGを導入している企業はどんな使い方をしているのでしょうか。
+                    【公式情報】日本国内の主要企業の事例を3つ紹介します。
+                </p>
+
+                <h3>事例① LINEヤフー「SeekAI」</h3>
+                <p>
+                    【公式情報】LINEヤフーは、RAG技術を活用した独自ツール「SeekAI」を開発し、全従業員に本格導入しました。
+                    社員が社内資料やナレッジベースを検索・質問することで、営業資料作成やプロジェクト企画の時間が大幅に短縮されました。
+                </p>
+                <p>
+                    【解釈】この事例が示唆するのは、「RAGの真の価値は、定型業務ではなく『社内知識へのアクセス時間短縮』にある」ということです。
+                </p>
+
+                <h3>事例② アサヒビール「生成AI検索システム」</h3>
+                <p>
+                    【公式情報】アサヒビールは、生成AIを用いた社内情報検索システムを導入し、
+                    営業が商品情報や営業資料にすぐアクセスできる環境を構築しました。
+                </p>
+                <p>
+                    【失敗例との対比】同社は導入時に「データクレンジングに3ヶ月要した」と公言しており、
+                    不正確なデータが混在していては RAG が機能しないという教訓を示しています。
+                </p>
+
+                <h3>事例③ JR東日本「AI搭載チャットボット」</h3>
+                <p>
+                    【公式情報】JR東日本は、生成AI搭載のチャットボットで顧客サポートに対応し始めました。
+                    このシステムは、鉄道運行情報、駅の案内情報、券種ガイドなど膨大な社内データを参照しながら、
+                    顧客の質問に的確に答えます。
+                </p>
+                <p>
+                    【解釈】この事例から学べるのは、「RAGは『24時間対応』と『一貫した品質』の両立を可能にする」ということです。
+                    従来は人間のオペレーターが対応していたため、時間帯や個人差で品質が変動していました。
+                </p>
+
+                <h2 id="section6">6. RAG vs Fine-tuning：企業が選ぶべき技術と導入ステップ</h2>
+                <p>
+                    「自社データを活用したい」となった時、企業は「RAGにするか、Fine-tuning（モデルの再学習）にするか」の選択を迫られます。
+                    【トレードオフ解決】この判断基準を明確にしておきましょう。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>RAG</th>
+                                <th>Fine-tuning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>導入期間</th>
+                                <td>1〜3ヶ月</td>
+                                <td>3〜6ヶ月</td>
+                            </tr>
+                            <tr>
+                                <th>初期コスト</th>
+                                <td>低い（50万〜200万）</td>
+                                <td>高い（500万〜）</td>
+                            </tr>
+                            <tr>
+                                <th>更新の容易さ</th>
+                                <td><strong>容易（データ更新のみ）</strong></td>
+                                <td>困難（再学習が必要）</td>
+                            </tr>
+                            <tr>
+                                <th>実装の複雑さ</th>
+                                <td>シンプル</td>
+                                <td>技術要件が高い</td>
+                            </tr>
+                            <tr>
+                                <th>最適なユースケース</th>
+                                <td>最新情報・変動データ</td>
+                                <td>固定的なスタイル・話し方</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【判断基準】以下の流れで判断することをお勧めします。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">データの更新頻度は高いか？</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">YES → RAG を選択 / NO → Step 2へ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">AI が話す「スタイル」を統一したいか？</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">YES → Fine-tuning / NO → RAG</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図3：RAG vs Fine-tuning の選択フロー</p>
+                </div>
+
+                <h3>RAG導入の3ステップ</h3>
+                <p>
+                    2026年時点で、RAG導入はほぼ一般的になっています。
+                    【公式情報】Claude、ChatGPT、Google Workspace Gemini いずれも「Projects」機能でRAGを提供しています。
+                </p>
+
+                <p>
+                    導入ステップは以下の通りです：
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 1</span>
+                            <span class="step-text">データ整理・クレンジング</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 2</span>
+                            <span class="step-text">RAGシステムの構築（クラウドサービスor自社構築）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 3</span>
+                            <span class="step-text">テスト・運用開始・ルール策定</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図4：RAG導入フロー</p>
+                </div>
+
+                <p>
+                    【注意点】「とりあえずデータをアップロードしてみよう」という軽い気持ちでの導入は禁物です。
+                    Step 1 のデータクレンジングが全体の成功を左右します。
+                </p>
+
+                <h2 id="conclusion">まとめ</h2>
+                <p>
+                    RAGは、生成AIを企業の「本当の武器」に変える技術です。
+                    最新情報への対応、ハルシネーション対策、自社データの活用——これらが同時に実現できます。
+                </p>
+                <p>
+                    ただし、「導入すれば完全に安心」ではなく、データの品質管理、運用体制の整備、継続的な改善が必須です。
+                    【解釈】2026年の今だからこそ、正しい理解に基づいた導入を検討することをお勧めします。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク・出典</div>
+                    <ul>
+                        <li><a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" target="_blank">AWS: RAG（検索拡張生成）について</a></li>
+                        <li><a href="https://www.araya.org/projects/rag_kousei_zukai/" target="_blank">アラヤ: RAGの構成を図解</a></li>
+                        <li><a href="https://www.softbank.jp/business/content/blog/202409/rag-usecases" target="_blank">ソフトバンク: RAG活用事例4選</a></li>
+                        <li><a href="https://cat-ai.jp/blog/20250828/" target="_blank">CAT.AI: RAGとハルシネーション対策</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI導入・RAG構築でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なRAG活用プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog064.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card064.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.03</div>
+                            <div class="related-text">OpenAI 1220億ドル調達とは？中小企業のAI導入コストと選定基準</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog063.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card063.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.02</div>
+                            <div class="related-text">AIエージェント導入失敗パターン徹底解説｜成功企業との5つの差</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog062.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card062.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.02</div>
+                            <div class="related-text">LLMO対策で企業が埋もれない戦略｜AI Overviews対策・llms.txt設置</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

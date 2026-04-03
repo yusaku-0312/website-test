@@ -569,11 +569,20 @@
         },
         {
             "id": 64,
-            "title": "【2026年4月最新】OpenAI 1220億ドル調達とは？中小企業のAI導入コストと選定基準が変わる理由",
-            "description": "OpenAIの1220億ドル調達と1M企業利用の広がりをもとに、AI導入コスト・内製化・ベンダー選定の見直しポイントを解説します。",
+            "title": "【2026年4月最新】OpenAIが1220億ドルを調達、中小企業のAI導入コストと選定基準が変わる理由",
+            "description": "OpenAIが1220億ドルを調達した発表と1M企業利用の広がりをもとに、AI導入コスト・内製化・ベンダー選定の見直しポイントを解説します。",
             "link": "/blogs/blog064.html",
             "thumbnail": "/images/blogs_images/blog-card064.webp",
             "alt": "OpenAIの大型資金調達と中小企業のAI導入判断の変化",
+            "date": "2026-04-03"
+        },
+        {
+            "id": 65,
+            "title": "【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド",
+            "description": "RAGの仕組み・メリット・失敗事例を図解。生成AIのハルシネーション対策、自社データ活用、企業導入事例（LINEヤフー・アサヒビール・JR東日本）を わかりやすく解説します。",
+            "link": "/blogs/blog065.html",
+            "thumbnail": "/images/blogs_images/blog-card065.webp",
+            "alt": "RAGの仕組みと企業活用のイメージ",
             "date": "2026-04-03"
         }
     ],
