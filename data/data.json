@@ -620,6 +620,15 @@
             "thumbnail": "/images/blogs_images/blog-card069.webp",
             "alt": "AIエージェント元年2026のイメージ",
             "date": "2026-04-03"
+        },
+        {
+            "id": 70,
+            "title": "【2026年4月最新】ソフトバンクがOpenAIへ100億ドル実行｜追加出資300億ドル計画を企業はどう読むべきか",
+            "description": "ソフトバンクのOpenAI向け100億ドル実行を公式開示ベースで整理。300億ドル追加出資と400億ドルブリッジ枠の構造から、中小企業のAI投資判断で見るべき条件を解説します。",
+            "link": "/blogs/blog070.html",
+            "thumbnail": "/images/blogs_images/blog-card070.webp",
+            "alt": "ソフトバンクによるOpenAI追加出資100億ドル実行のイメージ",
+            "date": "2026-04-03"
         }
     ],
     "works": [
