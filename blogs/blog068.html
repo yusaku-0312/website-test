@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド | MIRAINAブログ</title>
+    <meta name="description"
+        content="AIメモリとは何かを、Googleが2026年3月26日に発表したGeminiの会話履歴・メモリ移行機能をもとに解説。AI初心者の検索意図、乗り換え時の注意点、企業の運用ルールを整理します。">
+    <meta property="og:title" content="【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog068.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog068-1.webp">
+    <meta property="og:description"
+        content="AIメモリとは何かを、Googleが2026年3月26日に発表したGeminiの会話履歴・メモリ移行機能をもとに解説。AI初心者の検索意図、乗り換え時の注意点、企業の運用ルールを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.03</span>
+                    <div class="article-tags">
+                        <p class="article-tag">AIメモリ</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog068-1.webp" alt="AIメモリとGeminiの会話履歴引き継ぎイメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月26日、Googleは<strong>Geminiに他社AIアプリのメモリと会話履歴を持ち込める新機能</strong>を発表しました。
+                    これでAIツールの比較軸は「どのモデルが賢いか」だけでなく、
+                    <strong>自分の文脈をどこまで引き継げるか</strong>へ広がります。
+                    本記事では、AIメモリの意味、Googleの公式発表の中身、
+                    AI初心者が実際にしそうな検索と、AIを使い慣れた人が投げそうなプロンプトを踏まえて、
+                    企業がどう使い分けるべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. AIメモリとは？Googleが示した新しい前提</a></li>
+                    <li><a href="#section2">2. Googleは何を発表したのか</a></li>
+                    <li><a href="#section3">3. AI初心者は何を検索し、AI利用者は何をAIに聞くか</a></li>
+                    <li><a href="#section4">4. 企業が勘違いしやすい3つのポイント</a></li>
+                    <li><a href="#section5">5. 中小企業が今すぐやるべき3つの整理</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. AIメモリとは？Googleが示した新しい前提</h2>
+                <p>
+                    AIメモリとは、AIがあなたの好み、過去の会話、繰り返し使う指示、関係性の情報を覚え、
+                    次回以降の応答に反映する仕組みのことです。
+                    これまでは「同じAIを使い続ける人向けの便利機能」と見られがちでしたが、
+                    Googleの今回の発表は、<strong>メモリが他サービスから持ち運ばれる前提</strong>に変わり始めたことを示しています。
+                </p>
+                <p>
+                    この変化が重要なのは、AI初心者が最初につまずく理由が
+                    「毎回同じ説明をしないといけない」ことだからです。
+                    一方で、すでにAIを業務で使っている人にとっては、
+                    ChatGPT、Gemini、Claudeなどを比較するときの乗り換えコストを下げる意味があります。
+                    つまりAIメモリは、単なる便利機能ではなく、<strong>AI定着率を左右するUX要素</strong>になってきました。
+                </p>
+
+                <h2 id="section2">2. Googleは何を発表したのか</h2>
+                <p>
+                    Google公式ブログによると、2026年3月26日に公開された新機能のポイントは大きく3つです。
+                    1つ目は、他社AIに入っている好みや個人コンテキストを、Geminiの設定画面から取り込めること。
+                    2つ目は、他社AIのチャット履歴を ZIP ファイルでアップロードできること。
+                    3つ目は、これまでの「past chats」機能を「memory」に統合する方向が明確になったことです。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog068-2.webp" alt="Google公式ブログのGemini memory import説明画面" loading="lazy"
+                        decoding="async">
+                    <figcaption>図1：Google公式ブログが案内した memory import の説明画面（出典：Google, 2026年3月26日）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>Googleの案内内容</th>
+                                <th>実務で見るべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Memory import</th>
+                                <td>他社AIで作った要約をコピーして Gemini に貼り付ける</td>
+                                <td>好みや前提条件の再入力コストが下がる</td>
+                            </tr>
+                            <tr>
+                                <th>Chat history import</th>
+                                <td>ZIP ファイルで会話履歴を持ち込める</td>
+                                <td>過去の議論を起点に比較検証しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Memory 統合</th>
+                                <td>「past chats」を「memory」へ名称整理</td>
+                                <td>保存される文脈の考え方が広がっている</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここで注意したいのは、Googleの案内が<strong>consumer accounts 向け</strong>だという点です。
+                    公式ページでは企業向け・教育向けアカウントでは未対応で、
+                    一部地域でも段階提供だと案内されています。
+                    つまり「すぐ社内標準機能として使える」とは限らず、
+                    まずは個人利用の文脈で体験し、そこから業務ルールへ落とし込む順番が現実的です。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog068-3.webp" alt="Google公式ブログのGemini chat history import画面" loading="lazy"
+                        decoding="async">
+                    <figcaption>図2：Google公式ブログでは ZIP による chat history import も案内された（出典：Google, 2026年3月26日）</figcaption>
+                </figure>
+
+                <h2 id="section3">3. AI初心者は何を検索し、AI利用者は何をAIに聞くか</h2>
+                <p>
+                    ここからは Google の公式発表を踏まえた<strong>MIRAINAの実務推論</strong>です。
+                    AI活用が苦手な人は、技術名そのものよりも
+                    「ChatGPTの会話って引き継げる？」「AIが自分のことを覚えるのは大丈夫？」「Geminiに乗り換えると何が楽？」のように、
+                    <strong>作業負荷と不安</strong>をそのまま検索する傾向があります。
+                </p>
+                <p>
+                    一方で、すでにAIを使っている人はAIに対して
+                    <code>ChatGPTの会話履歴をGeminiに移す方法を公式情報ベースで整理して</code>、
+                    <code>Geminiのmemoryとpast chatsの違いを3行で説明して</code>、
+                    <code>個人アカウント機能と企業運用ルールの違いを比較表にして</code>
+                    といったプロンプトを投げやすいはずです。
+                    そのとき AI が引用しやすいのは、Googleの切替ガイド、Gemini Drop、Gemini Help のような
+                    <strong>一次情報で構造が明快なページ</strong>です。
+                </p>
+                <p>
+                    この構図は、以前の <a href="/blogs/blog061.html">OpenAI Model Specの記事</a> で触れた
+                    「AIは構造が明快な一次情報を優先しやすい」という傾向と一致します。
+                    つまり企業側は、AIメモリの機能そのものを追うだけでなく、
+                    <strong>自社の情報もAIに説明されやすい形で整理できているか</strong>を同時に考えるべきです。
+                </p>
+
+                <h2 id="section4">4. 企業が勘違いしやすい3つのポイント</h2>
+                <p>
+                    第一に、AIメモリは RAG や社内ナレッジ基盤の代わりではありません。
+                    AIメモリが得意なのは、個人の好みや会話の文脈を引き継ぐことです。
+                    社内規程、商品マスタ、FAQ のような共有情報を正確に扱いたいなら、
+                    <a href="/blogs/blog065.html">RAG（検索拡張生成）の設計</a> が引き続き重要です。
+                </p>
+                <p>
+                    第二に、便利だからといって個人アカウントと会社利用を混ぜるのは危険です。
+                    どこまでを個人のメモリに保存してよいか、
+                    顧客名、見積もり条件、未公開情報を入力してよいかは別問題です。
+                    ここを曖昧にすると、AIが便利になる前に現場が不安になります。
+                </p>
+                <p>
+                    第三に、乗り換えコストが下がることと、運用ガバナンスが整うことは同義ではありません。
+                    記憶機能が強くなるほど、プロンプト資産、保存ルール、削除ルール、説明責任の設計が必要です。
+                    MIRAINAでは、この部分を <a href="/services/ai_consulting.html">生成AI活用支援</a> や
+                    <a href="/services/ai_training.html">AI研修</a> で先に整理することを推奨しています。
+                </p>
+
+                <h2 id="section5">5. 中小企業が今すぐやるべき3つの整理</h2>
+                <p>
+                    重要なのは、いきなり全社で「どのAIに統一するか」を決めることではありません。
+                    先に、何を記憶させ、何を記憶させないかを決めることです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Action 01</span>
+                            <span class="step-text">個人利用と会社利用の<br>境界を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Action 02</span>
+                            <span class="step-text">よく使う指示を<br>共有資産化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Action 03</span>
+                            <span class="step-text">保存・削除ルールを<br>明文化する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図3：AIメモリ時代に先に決めるべき3つの整理</p>
+                </div>
+
+                <h3>Action 01：個人利用と会社利用の境界を決める</h3>
+                <p>
+                    「個人の好み」「文章トーン」「学習中のテーマ」は保存してよい一方、
+                    顧客情報や機密条件は保存禁止にするなど、入力範囲を最初に区切るべきです。
+                </p>
+
+                <h3>Action 02：よく使う指示を共有資産化する</h3>
+                <p>
+                    AIメモリが便利でも、属人化したままでは再現性が出ません。
+                    社内でよく使うプロンプト、文章ルール、確認観点はドキュメント化し、
+                    誰でも再利用できる形にしておく必要があります。
+                </p>
+
+                <h3>Action 03：保存・削除ルールを明文化する</h3>
+                <p>
+                    メモリ機能が強くなるほど、何を残し、いつ消すかが重要になります。
+                    利用ログ、保存情報、定期見直しの担当者を決めておくと、現場の不安が減ります。
+                    これは AI を「使うかどうか」の議論より先にやるべき運用設計です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Googleの発表で分かったのは、AIの競争が「どのAIが賢いか」だけではなく、
+                    <strong>どれだけ文脈を引き継げるか</strong>へ進んでいることです。
+                </p>
+                <ul>
+                    <li>AIメモリは、好み・前提・過去会話を次回応答へ反映する仕組み</li>
+                    <li>Googleは2026年3月26日、Geminiへの memory import と chat history import を発表した</li>
+                    <li>公式案内は consumer accounts が中心で、企業運用は別途ルール整理が必要</li>
+                    <li>AI初心者は「引き継げるか」「覚えられるか」を検索し、AI利用者は公式情報ベースの比較をAIに依頼しやすい</li>
+                    <li>企業はツール選定より先に、記憶させる情報の境界と運用ルールを決めるべき</li>
+                </ul>
+                <p>
+                    MIRAINAでは、AIツール選定だけでなく、社内への定着、入力ルール設計、プロンプト共有、ガバナンス整備まで支援しています。
+                    「便利そうだが、どこから社内ルールに落とせばいいか分からない」という場合は、ぜひご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app/" target="_blank"
+                                rel="noopener">Google：How to switch to Gemini: Import your chats and data from other AI apps</a></li>
+                        <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/" target="_blank"
+                                rel="noopener">Google：Find out what’s new in the Gemini app in March's Gemini Drop.</a></li>
+                        <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/" target="_blank"
+                                rel="noopener">Google：The latest AI news we announced in March 2026</a></li>
+                        <li><a href="https://support.google.com/gemini/answer/13666746" target="_blank" rel="noopener">Google Help：Find and manage your recent chats in Gemini Apps</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIメモリ時代の運用ルール、整理できていますか？</h2>
+                    <p class="cta-text">MIRAINAでは、AIツールの比較だけでなく、<br>社内定着・入力ルール・教育設計までまとめて支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog061.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card061.webp" alt="OpenAI Model Spec関連記事画像" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.01</div>
+                            <div class="related-text">OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog054.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card054.webp" alt="ChatGPT Workspace Analytics関連記事画像" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.27</div>
+                            <div class="related-text">ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog065.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card065.webp" alt="RAG関連記事画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.03</div>
+                            <div class="related-text">RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

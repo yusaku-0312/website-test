@@ -602,6 +602,15 @@
             "thumbnail": "/images/blogs_images/blog-card067.webp",
             "alt": "経営層がClaude Codeを学ぶべき理由のイメージ",
             "date": "2026-04-03"
+        },
+        {
+            "id": 68,
+            "title": "【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド",
+            "description": "AIメモリとは何かを、Googleが2026年3月26日に発表したGeminiの会話履歴・メモリ移行機能をもとに解説。AI初心者の検索意図、乗り換え時の注意点、企業の運用ルールを整理します。",
+            "link": "/blogs/blog068.html",
+            "thumbnail": "/images/blogs_images/blog-card068.webp",
+            "alt": "AIメモリとGeminiの会話履歴引き継ぎイメージ",
+            "date": "2026-04-03"
         }
     ],
     "works": [
