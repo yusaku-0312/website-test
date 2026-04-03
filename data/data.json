@@ -611,6 +611,15 @@
             "thumbnail": "/images/blogs_images/blog-card068.webp",
             "alt": "AIメモリとGeminiの会話履歴引き継ぎイメージ",
             "date": "2026-04-03"
+        },
+        {
+            "id": 69,
+            "title": "【2026年4月最新】AIエージェント元年：自動化される業務と経営戦略の完全ガイド",
+            "description": "AIエージェント（agentic workflow）が2026年に本格化する理由と、日本企業の導入事例・課題を解説。Model Context Protocolなど実装基盤も整理します。",
+            "link": "/blogs/blog069.html",
+            "thumbnail": "/images/blogs_images/blog-card069.webp",
+            "alt": "AIエージェント元年2026のイメージ",
+            "date": "2026-04-03"
         }
     ],
     "works": [
