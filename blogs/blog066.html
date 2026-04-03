@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド：研修・開発支援・LLMO対策の最適な組み合わせ | MIRAINAブログ</title>
+    <meta name="description"
+        content="PoC失敗40%の理由と対策。AI導入成功企業の体制・研修・開発支援を整理。MIRAINAの4つのサービスを段階別に比較ガイド。自社の段階に応じた最適なサービス選択を解説します。">
+    <meta property="og:title" content="【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド：研修・開発支援・LLMO対策の最適な組み合わせ">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog066.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog066-1.webp">
+    <meta property="og:description"
+        content="PoC失敗40%の理由と対策。AI導入成功企業の体制・研修・開発支援を整理。MIRAINAの4つのサービスを段階別に比較ガイド。自社の段階に応じた最適なサービス選択を解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.03</span>
+                    <div class="article-tags">
+                        <p class="article-tag">AI導入</p>
+                        <p class="article-tag">サービス選択</p>
+                        <p class="article-tag">PoC</p>
+                        <p class="article-tag">研修</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド：研修・開発支援・LLMO対策の最適な組み合わせ</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog066-1.webp" alt="AI導入サービス選択ガイドのイメージ" width="800" height="450" loading="lazy">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI導入に着手した企業の約40%が「PoC（概念実証）」で止まってしまい、本番実装に進めていません。
+                    研修の不足、体制構築の曖昧さ、開発スキルの不足が主な原因です。
+                    本記事では、AI導入成功企業に共通する「段階別サービス選択」の考え方を解説し、
+                    MIRAINAの4つのサービス（生成AI活用支援、AI研修、AI開発、LLMO Insight）を
+                    どの段階でどう組み合わせるべきかを実践的にガイドします。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. AI導入がPoC止まりになる3つの原因</a></li>
+                    <li><a href="#section2">2. 成功企業に共通する「段階別サービス選択」の考え方</a></li>
+                    <li><a href="#section3">3. 段階1：AI基礎理解と全社体制構築</a></li>
+                    <li><a href="#section4">4. 段階2：PoC実装から本番化への橋渡し</a></li>
+                    <li><a href="#section5">5. 段階3：本番展開と継続的な最適化</a></li>
+                    <li><a href="#section6">6. 自社の段階を診断する3つのチェックリスト</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. AI導入がPoC止まりになる3つの原因</h2>
+                <p>
+                    AI導入プロジェクトが失敗する最大の理由は、「検証はできたが、ここから先をどう作ればいいのか分からない」という状態です。
+                    2026年の企業調査では、PoC着手企業の約40%がプロジェクト中止やPoC停滞に直面していることが明らかになっています。
+                </p>
+
+                <h3>原因① 経営層・現場の AI リテラシー不足</h3>
+                <p>
+                    PoC開始時、AI初心者の現場担当者がAIの可能性と限界を正しく理解していないため、
+                    「AIで全て自動化できると期待していたが、実際には手調整が大量に必要」という落差が生まれます。
+                    結果として、PoC結果の評価が曖昧になり、本番化の判断が先送りされます。
+                </p>
+
+                <h3>原因② 専任体制の欠如</h3>
+                <p>
+                    PoC責任者、実装エンジニア、現場部門の3者の役割が不明確で、
+                    実装担当者1名に全てが集中している企業が失敗しやすいです。
+                    複数人での並行実行と責任分離が成功の鍵になります。
+                </p>
+
+                <h3>原因③ 本番化に必要な技術・予算計画の不足</h3>
+                <p>
+                    PoC での低予算・低コストアプローチが、本番化時に「スケーラビリティ不足」「セキュリティ不対応」
+                    「運用コスト予測の誤り」につながり、プロジェクト継続が困難になるケースが多くあります。
+                </p>
+
+                <h2 id="section2">2. 成功企業に共通する「段階別サービス選択」の考え方</h2>
+                <p>
+                    AI導入を成功させている企業には、ある共通パターンがあります。
+                    それは「段階ごとに必要なサービス・支援を切り替える」という戦略的アプローチです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">段階 1</span>
+                            <span class="step-text">基礎理解・体制構築（研修と方針決定）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">段階 2</span>
+                            <span class="step-text">PoC実装・選定（開発支援とコンサル）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">段階 3</span>
+                            <span class="step-text">本番展開・最適化（LLMO対策と継続支援）</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：AI導入の3段階と必要なサービス</p>
+                </div>
+
+                <p>
+                    各段階で「研修」「開発」「コンサルティング」「LLMO対策」をどう組み合わせるかが、
+                    PoC止まり回避の鍵になります。
+                </p>
+
+                <h2 id="section3">3. 段階1：AI基礎理解と全社体制構築</h2>
+                <p>
+                    最初の3〜6ヶ月は「経営層・現場のAIリテラシー向上」と「推進体制の確立」に専注すべき段階です。
+                    この段階で研修と基本方針の決定が成功を大きく左右します。
+                </p>
+
+                <h3>段階1で必要なサービス</h3>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>サービス名</th>
+                                <th>目的</th>
+                                <th>期間</th>
+                                <th>対象者</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI研修</th>
+                                <td>経営層・現場のリテラシー向上、AI活用パターンの理解</td>
+                                <td>3～6ヶ月</td>
+                                <td>全社（段階的に展開）</td>
+                            </tr>
+                            <tr>
+                                <th>生成AI活用支援</th>
+                                <td>自社課題とAIの適合性を診断、推進体制の構築方針決定</td>
+                                <td>1～2ヶ月</td>
+                                <td>経営層・推進部門</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    具体例：メーカーA社では、生成AI活用支援で「営業資料作成業務のAI化」を優先課題として特定し、
+                    その後AI研修で営業担当者全員に ChatGPT の使用方法を教育してから PoC に着手しました。
+                    結果、PoC 段階で現場の「AI への期待値」と「実現可能性」のギャップが事前に調整され、
+                    スムーズに本番化に進むことができました。
+                </p>
+
+                <h2 id="section4">4. 段階2：PoC実装から本番化への橋渡し</h2>
+                <p>
+                    段階2では、実際の AI 導入の具体化が始まります。
+                    この段階では「開発スキルの不足」と「意思決定の遅延」が最大のリスクになります。
+                </p>
+
+                <h3>段階2で必要なサービス</h3>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>サービス名</th>
+                                <th>役割</th>
+                                <th>組み合わせ方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI開発</th>
+                                <td>PoC用のプロトタイプ・実装構築、本番仕様への最適化</td>
+                                <td>実装担当者が不足する場合は外注、社内ナレッジ構築を並行</td>
+                            </tr>
+                            <tr>
+                                <th>生成AI活用支援（継続）</th>
+                                <td>PoC結果の評価、本番化GO/NO-GO の判断支援</td>
+                                <td>定期的なコンサルで意思決定をサポート</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    重要なポイント：「内製vs外注」では、単純な選択ではなく「ハイブリッド」が推奨されます。
+                    開発は外注して実装を加速し、同時に社内チームが外注企業から学ぶことで、
+                    段階3以降の自走化につながります。
+                </p>
+
+                <h2 id="section5">5. 段階3：本番展開と継続的な最適化</h2>
+                <p>
+                    段階3は「本番運用の開始」と「AI検索対策（LLMO）」が中心になります。
+                    この段階では、単なる「機能提供」ではなく「継続的な改善体制」が必須です。
+                </p>
+
+                <h3>段階3で必要なサービス</h3>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>サービス名</th>
+                                <th>対象企業</th>
+                                <th>効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>LLMO Insight</th>
+                                <td>BtoBサービス・コンテンツビジネス企業</td>
+                                <td>AI検索での可視性向上、新規顧客層へのリーチ拡大</td>
+                            </tr>
+                            <tr>
+                                <th>生成AI活用支援（運用フェーズ）</th>
+                                <td>全社導入企業</td>
+                                <td>運用中のトラブル対応、改善提案、新機能検討</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    実例：SaaS企業B社では、PoC段階で顧客対応チャットボットの精度が60%だったため、
+                    本番化を躊躇していました。しかし LLMO Insight による「AI検索引用率の向上戦略」と組み合わせることで、
+                    チャットボットの精度向上だけでなく、新規顧客の獲得経路も拡大し、
+                    結果として ROI が 初期投資から1年で 250% に達しました。
+                </p>
+
+                <h2 id="section6">6. 自社の段階を診断する3つのチェックリスト</h2>
+                <p>
+                    以下のチェックリストで、貴社が今どの段階にいるか、
+                    次に何が必要かを診断できます。
+                </p>
+
+                <h3>段階1チェックリスト（基礎理解・体制構築）</h3>
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">段階1への対応が必要な企業</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>□ AI導入プロジェクトをまだ開始していない</li>
+                                    <li>□ 経営層がAIの具体的な活用シーンを未検討</li>
+                                    <li>□ 推進体制が決まっていない</li>
+                                    <li>□ 現場からは「AIの話は難しい」との声</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">→ 必要なサービス</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>生成AI活用支援</strong></li>
+                                    <li>課題診断・体制構築コンサル</li>
+                                    <li><strong>AI研修</strong></li>
+                                    <li>全社リテラシー向上</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>段階2チェックリスト（PoC実装・選定）</h3>
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">段階2への対応が必要な企業</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>□ PoC実装開始から3ヶ月以上経過</li>
+                                    <li>□ 開発リソースが不足している</li>
+                                    <li>□ PoC結果の評価が曖昧で本番化を判断できない</li>
+                                    <li>□ 「ここから先どうする？」という質問が多い</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">→ 必要なサービス</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>AI開発</strong></li>
+                                    <li>プロトタイプ・本番化設計</li>
+                                    <li><strong>生成AI活用支援</strong></li>
+                                    <li>GO/NO-GO判定支援</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>段階3チェックリスト（本番展開・最適化）</h3>
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">段階3への対応が必要な企業</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>□ 本番システムの運用を開始している</li>
+                                    <li>□ 継続的な改善方法が未定</li>
+                                    <li>□ BtoB/コンテンツビジネス企業で新規顧客獲得を課題としている</li>
+                                    <li>□ AI導入のROI測定ができていない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">→ 必要なサービス</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>LLMO Insight</strong></li>
+                                    <li>AI検索での可視化・最適化</li>
+                                    <li><strong>生成AI活用支援</strong></li>
+                                    <li>運用・改善サポート</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    上記の複数項目に該当する場合、そのステップでの「段階的な支援」が必要です。
+                    一度に全ての課題を解決しようとせず、今最も優先度の高いサービスから導入することをお勧めします。
+                </p>
+
+                <h2 id="conclusion">まとめ</h2>
+                <p>
+                    AI導入のPoC止まりを回避するために最も重要なのは、「段階ごとに適切なサービス・支援を選択する」という戦略的な判断です。
+                </p>
+                <p>
+                    段階1では「理解と体制」、段階2では「実装と判断」、段階3では「運用と最適化」という異なるニーズが生まれます。
+                    MIRAINAの4つのサービス（生成AI活用支援、AI研修、AI開発、LLMO Insight）は、
+                    段階ごとのニーズに応える形で設計されています。
+                </p>
+                <p>
+                    貴社の現在地を認識し、次に必要なステップを明確にすることから、AI導入成功は始まります。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク・引用元</div>
+                    <ul>
+                        <li><a href="https://ai-keiei.shift-ai.co.jp/generative-ai-poc-stopped-reasons/" target="_blank">AI経営総合研究所：PoC止まりになる3つの壁</a></li>
+                        <li><a href="https://www.serverworks.co.jp/blog/ai/what_is_poc_for_implementing_generative_ai.html" target="_blank">サーバーワークス：PoCの失敗しない進め方</a></li>
+                        <li><a href="https://business.youseful.jp/blog/c242" target="_blank">ユースフルビジネス：生成AI研修の選び方と成功事例</a></li>
+                        <li><a href="https://digitalidentity.co.jp/blog/generative-ai/llmo-company-recommend.html" target="_blank">デジタルアイデンティティ：LLMO対策会社の選び方</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI導入での段階別サービス選択でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の現在地を診断し、<br>最適な段階別サービス戦略をご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog065.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card065.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.03</div>
+                            <div class="related-text">RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog064.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card064.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.03</div>
+                            <div class="related-text">OpenAIが1220億ドルを調達。中小企業のAI導入コストと選定基準</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog063.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card063.webp" alt="関連画像" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.02</div>
+                            <div class="related-text">AIエージェント導入失敗パターン徹底解説｜成功企業との5つの差</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -584,6 +584,15 @@
             "thumbnail": "/images/blogs_images/blog-card065.webp",
             "alt": "RAGの仕組みと企業活用のイメージ",
             "date": "2026-04-03"
+        },
+        {
+            "id": 66,
+            "title": "【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド：研修・開発支援・LLMO対策の最適な組み合わせ",
+            "description": "PoC失敗40%の理由と対策。AI導入成功企業の体制・研修・開発支援を整理。MIRAINAの4つのサービスを段階別に比較ガイド。自社の段階に応じた最適なサービス選択を解説します。",
+            "link": "/blogs/blog066.html",
+            "thumbnail": "/images/blogs_images/blog-card066.webp",
+            "alt": "AI導入サービス選択ガイドのイメージ",
+            "date": "2026-04-03"
         }
     ],
     "works": [
