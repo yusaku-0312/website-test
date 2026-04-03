@@ -629,6 +629,15 @@
             "thumbnail": "/images/blogs_images/blog-card070.webp",
             "alt": "ソフトバンクによるOpenAI追加出資100億ドル実行のイメージ",
             "date": "2026-04-03"
+        },
+        {
+            "id": 71,
+            "title": "【2026年4月最新】エージェンティックマーケティングとは？AIが自律的に推進する次世代戦略",
+            "description": "エージェンティックマーケティング（agentic marketing）の定義から、AIが自律的に推進するマーケティング自動化、企業導入事例、失敗事例や導入課題、中小企業が今すぐ取り組むべき実装ステップまでを実務的に解説します。",
+            "link": "/blogs/blog071.html",
+            "thumbnail": "/images/blogs_images/blog-card071.webp",
+            "alt": "エージェンティックマーケティングとAI自動化のイメージ",
+            "date": "2026-04-03"
         }
     ],
     "works": [
