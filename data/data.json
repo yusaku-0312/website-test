@@ -566,6 +566,15 @@
             "thumbnail": "/images/blogs_images/blog-card063.webp",
             "alt": "AIエージェント導入失敗パターンと成功企業の対策",
             "date": "2026-04-02"
+        },
+        {
+            "id": 64,
+            "title": "【2026年4月最新】OpenAI 1220億ドル調達とは？中小企業のAI導入コストと選定基準が変わる理由",
+            "description": "OpenAIの1220億ドル調達と1M企業利用の広がりをもとに、AI導入コスト・内製化・ベンダー選定の見直しポイントを解説します。",
+            "link": "/blogs/blog064.html",
+            "thumbnail": "/images/blogs_images/blog-card064.webp",
+            "alt": "OpenAIの大型資金調達と中小企業のAI導入判断の変化",
+            "date": "2026-04-03"
         }
     ],
     "works": [
