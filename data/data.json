@@ -638,6 +638,15 @@
             "thumbnail": "/images/blogs_images/blog-card071.webp",
             "alt": "エージェンティックマーケティングとAI自動化のイメージ",
             "date": "2026-04-03"
+        },
+        {
+            "id": 72,
+            "title": "【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド",
+            "description": "Gemma 4とは何かをGoogle DeepMindの2026年4月2日発表をもとに解説。4サイズ構成、Apache 2.0、オンデバイス導入の判断基準を整理します。",
+            "link": "/blogs/blog072.html",
+            "thumbnail": "/images/blogs_images/blog-card072.webp",
+            "alt": "Gemma 4でオンデバイスAIを実装するイメージ",
+            "date": "2026-04-04"
         }
     ],
     "works": [

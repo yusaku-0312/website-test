@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド | MIRAINAブログ</title>
+    <meta name="description"
+        content="Gemma 4とは何かをGoogle DeepMindの2026年4月2日発表をもとに解説。4サイズ構成、Apache 2.0、オンデバイス導入の判断基準を整理します。">
+    <meta property="og:title" content="【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog072.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog072-1.webp">
+    <meta property="og:description"
+        content="Gemma 4とは何かをGoogle DeepMindの2026年4月2日発表をもとに解説。4サイズ構成、Apache 2.0、オンデバイス導入の判断基準を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.04</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemma 4</p>
+                        <p class="article-tag">オンデバイスAI</p>
+                        <p class="article-tag">Google DeepMind</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog072-1.webp" alt="Gemma 4でオンデバイスAIを実装するイメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年4月2日、Google DeepMindはオープンモデル新世代の<strong>Gemma 4</strong>を発表しました。
+                    単なる「軽量モデルの更新」ではなく、<strong>Apache 2.0ライセンス</strong>、
+                    <strong>最大256Kコンテキスト</strong>、
+                    <strong>function-callingと構造化JSON出力の標準対応</strong>を備え、
+                    中小企業でもオンデバイスAIを現実的に検討できる水準に到達した点が重要です。
+                    本記事では、公式情報に基づいてGemma 4の要点、モデル選定の判断軸、導入時の実務ステップを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Gemma 4で確定した事実</a></li>
+                    <li><a href="#section2">2. なぜ今Gemma 4なのか</a></li>
+                    <li><a href="#section3">3. 4モデルの選び方（E2B/E4B/26B/31B）</a></li>
+                    <li><a href="#section4">4. 中小企業の導入シナリオ3選</a></li>
+                    <li><a href="#section5">5. 導入前に決めるべき運用ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Gemma 4で確定した事実</h2>
+                <p>
+                    【公式情報】Google DeepMindは2026年4月2日、Gemma 4を「最も高性能なオープンモデル群」として公開しました。
+                    公式発表では、Gemmaシリーズ累計ダウンロード数が<strong>4億回超</strong>、
+                    派生モデルが<strong>10万超</strong>に達したことも明示されています。
+                </p>
+                <p>
+                    【公式情報】今回のGemma 4は、<strong>E2B / E4B / 26B A4B / 31B</strong>の4サイズ構成です。
+                    小型モデルはエッジ寄り運用、大型モデルはワークステーションやGPU環境での高精度推論を想定し、
+                    同一ファミリーでスケール設計できる点が特徴です。
+                </p>
+                <p>
+                    【公式情報】ライセンスはApache 2.0で、
+                    function-calling、構造化JSON出力、system instructionsにネイティブ対応。
+                    さらに小型は128K、大型は256Kの長文コンテキスト、140以上の言語学習を掲げています。
+                    これは「日本語業務の一部をローカル寄りに置く」検討に直結する仕様です。
+                </p>
+
+                <h2 id="section2">2. なぜ今Gemma 4なのか</h2>
+                <p>
+                    【解釈】Gemma 4の本質は、単なるモデル精度よりも
+                    <strong>運用の選択肢を増やしたこと</strong>にあります。
+                    これまで中小企業のAI導入は「SaaS API一択」になりやすく、
+                    情報管理・継続コスト・応答速度でトレードオフを抱えていました。
+                </p>
+                <p>
+                    【解釈】Gemma 4は、同一系列で小型から大型まで用意されているため、
+                    「まず社内限定タスクで小さく試す→成果が出た業務だけ拡張する」という
+                    段階導入に向きます。これは
+                    <a href="/blogs/blog066.html">AI導入PoC止まりを回避する段階別サービス選択ガイド</a>で示した
+                    実装原則とも一致します。
+                </p>
+                <p>
+                    【引用可能ユニット】
+                    Gemma 4は、モデルの賢さそのものよりも、
+                    「小さく始めて拡張できる設計」を企業側に返したことが価値です。
+                </p>
+
+                <h2 id="section3">3. 4モデルの選び方（E2B/E4B/26B/31B）</h2>
+                <p>
+                    【公式情報】Hugging Face上のGoogle公式モデルカードでは、
+                    E2B/E4Bは128K、26B A4B/31Bは256Kのコンテキスト長を案内しています。
+                    また31Bは高精度、26B A4Bはアクティブパラメータを抑えた高速推論寄りという位置づけです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>モデル</th>
+                                <th>向いている用途</th>
+                                <th>目安環境</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>E2B / E4B</th>
+                                <td>FAQ下書き、議事録整理、一次分類など軽量業務</td>
+                                <td>ノートPC・小規模GPU・エッジ端末</td>
+                            </tr>
+                            <tr>
+                                <th>26B A4B</th>
+                                <td>長文要約、社内ナレッジ検索、半自動ワークフロー</td>
+                                <td>ワークステーションGPU</td>
+                            </tr>
+                            <tr>
+                                <th>31B</th>
+                                <td>高精度推論、複雑な業務ルール判断、開発補助</td>
+                                <td>80GB級GPUを含む上位環境</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【条件付き結論】
+                    個人情報や機微データを扱う業務で「外部送信量を減らしたい」ならE2B/E4Bから、
+                    既存SaaSの回答品質に不満があり「精度を上げたい」なら26B以上の検証から始めるのが現実的です。
+                </p>
+
+                <h2 id="section4">4. 中小企業の導入シナリオ3選</h2>
+                <p>
+                    【解釈】Gemma 4の導入は、全社一斉よりも業務単位の切り出しが成功しやすいです。
+                    ここでは現場で着手しやすい3パターンを示します。
+                </p>
+
+                <h3>シナリオ1：営業の提案準備を半自動化</h3>
+                <p>
+                    過去提案書、FAQ、競合比較表を入力にして、商談前のたたき台を自動生成。
+                    最終編集は人間が行う前提にすれば、品質と速度のバランスを取りやすくなります。
+                </p>
+
+                <h3>シナリオ2：社内ナレッジ検索（RAG）を小さく運用</h3>
+                <p>
+                    ドキュメント検索と組み合わせることで、ハルシネーションを抑えつつ回答根拠を提示できます。
+                    設計の基本は
+                    <a href="/blogs/blog065.html">RAG（検索拡張生成）の完全ガイド</a>
+                    と同じです。
+                </p>
+
+                <h3>シナリオ3：開発チームのローカル補助</h3>
+                <p>
+                    【公式情報】Google発表はGemma 4のコード生成能力とagentic workflow適性を強調しています。
+                    API利用が制約される開発環境でも、ローカル実行を前提に補助用途へ組み込みやすい点が実務メリットです。
+                </p>
+
+                <h2 id="section5">5. 導入前に決めるべき運用ルール</h2>
+                <p>
+                    【解釈】Gemma 4で失敗しやすいのは、モデル選定より「運用設計の欠落」です。
+                    特に次の3点を先に決めると、PoC止まりを避けやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">対象業務と
+                                禁止データを
+                                明文化</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">評価KPIを
+                                3つに固定</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">人間承認の
+                                境界を設計</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：Gemma 4導入前の実務ルール設計</p>
+                </div>
+
+                <p>
+                    【公式情報】Gemma 4は機能面で「使える」段階に入っています。
+                    一方で、業務に適用するにはガバナンス設計が不可欠です。
+                    MIRAINAでは
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>
+                    と
+                    <a href="/services/ai_develop.html">AI開発</a>
+                    を分けて提供し、評価指標と実装を同時に設計する体制を推奨しています。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    【解釈】Gemma 4は「高性能なオープンモデルが出た」というニュースで終わりません。
+                    中小企業にとっては、
+                    <strong>クラウド依存100%から、業務に応じて配置を選べる段階に入った</strong>ことが実務上の変化です。
+                </p>
+                <p>
+                    【仮説】2026年は、SaaS API一辺倒の導入から、
+                    「機密性が高い処理はローカル寄り、外部連携はクラウド寄り」という
+                    ハイブリッド構成が標準化していく可能性があります。
+                    その初手としてGemma 4を小さく検証する価値は十分にあります。
+                </p>
+
+                <h3>参考リンク（一次情報）</h3>
+                <ul>
+                    <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener">Google: Gemma 4: Byte for byte, the most capable open models（2026-04-02）</a></li>
+                    <li><a href="https://deepmind.google/models/" target="_blank" rel="noopener">Google DeepMind Models: Gemma 4 model overview</a></li>
+                    <li><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank" rel="noopener">Hugging Face: google/gemma-4-31B-it model card</a></li>
+                    <li><a href="https://ai.google.dev/gemma/docs" target="_blank" rel="noopener">Google AI for Developers: Gemma documentation</a></li>
+                </ul>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">Gemma 4の業務導入を検討中ですか？</h2>
+                    <p class="cta-text">MIRAINAでは、要件整理からPoC設計・実装まで<br>中小企業向けに伴走支援しています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
