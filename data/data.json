@@ -640,6 +640,15 @@
             "date": "2026-04-03"
         },
         {
+            "id": 74,
+            "title": "【2026年4月最新】LLMO対策とは？中小企業がAI検索で引用されるための実装ガイド",
+            "description": "LLMO（大規模言語モデル最適化）とは何かを、AIクリック率61%減の現状から解説。llms.txt、構造化データ、中小企業の実装ステップを整理します。",
+            "link": "/blogs/blog074.html",
+            "thumbnail": "/images/blogs_images/blog-card074.webp",
+            "alt": "LLMO対策でAI検索に引用されるイメージ",
+            "date": "2026-04-04"
+        },
+        {
             "id": 73,
             "title": "【2026年4月最新】Anthropic Coworkとは？非エンジニアもAIエージェント自動化を始める実装ガイド",
             "description": "Coworkとは何かをAnthropicの2026年1月リリース・3月自動承認拡張から解説。非エンジニア向けAIエージェント機能、導入トレードオフ、中小企業の実装ステップを整理します。",
