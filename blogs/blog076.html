@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>美容室に常時稼働AIエージェントが来たら何が変わるか―Conway記事を書いて思ったこと | MIRAINAブログ</title>
+    <meta name="description"
+        content="美容室に常時稼働AIエージェントを導入したら何が変わるか、AIコンサルタント・芝優作が推測。指名客の失客防止・薬剤発注・シフト管理・次回予約取得率への影響と、温かみとのトレードオフを考察します。">
+    <meta property="og:title" content="美容室に常時稼働AIエージェントが来たら何が変わるか―Conway記事を書いて思ったこと">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog076.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog076-1.webp">
+    <meta property="og:description"
+        content="美容室に常時稼働AIエージェントを導入したら何が変わるか、AIコンサルタント・芝優作が推測。指名客の失客防止・薬剤発注・シフト管理・次回予約取得率への影響と、温かみとのトレードオフを考察します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>美容室に常時稼働AIエージェントが来たら何が変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.05</span>
+                    <div class="article-tags">
+                        <p class="article-tag">美容室</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">AI自動化</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">美容室に常時稼働AIエージェントが来たら何が変わるか―Conway記事を書いて思ったこと</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog076-1.webp" alt="美容室と常時稼働AIエージェントのイメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    先日、<a href="/blogs/blog075.html">AnthropicのConwayについての記事</a>を書いていたとき、
+                    頭の中にある業種の顔が浮かんだ。美容室だ。
+                    常時稼働のAIエージェントが普及したとき、最も劇的に変わる可能性がある業種のひとつが
+                    美容室だと、僕は思っている。
+                    これは確定情報ではなく、あくまで僕の推測と考察だ。
+                    でも、サロンのAI導入に関わってきた経験から、
+                    かなりリアルなシナリオとして描けると思っているので書いてみた。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. なぜ美容室を例に選んだのか</a></li>
+                    <li><a href="#section2">2. 今のサロンが抱えている「見えにくい重労働」</a></li>
+                    <li><a href="#section3">3. AIエージェントが常駐したら①：指名客の失客防止・次回予約取得率</a></li>
+                    <li><a href="#section4">4. AIエージェントが常駐したら②：薬剤発注・シフト・物販フォロー</a></li>
+                    <li><a href="#section5">5. スタイリストとアシスタントの仕事はどう変わるか</a></li>
+                    <li><a href="#section6">6. 僕が一番気になること：指名の温度感とのトレードオフ</a></li>
+                    <li><a href="#section7">7. まとめ：AIは「技術」を奪わない、でも「雑務」は奪う</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. なぜ美容室を例に選んだのか</h2>
+                <p>
+                    AIコンサルタントをしていると、さまざまな業種の方から相談を受ける。
+                    その中で美容室は、「AI活用の必要性が高いのに、なかなか進まない」という
+                    典型的な業種だと感じている。
+                </p>
+                <p>
+                    理由はシンプルで、<strong>現場が忙しすぎて「AI導入を考える時間」すら取れない</strong>のだ。
+                    施術中はお客様と話し、合間にホットペッパービューティーの予約を確認し、
+                    上がったらカルテを更新して、薬剤の在庫チェックをして、Instagramを更新する。
+                    そのすべてが「一人のスタイリスト」に乗っかっているケースも珍しくない。
+                </p>
+                <p>
+                    Conwayの記事を書きながら思ったのは、「これ、サロンのためにあるような仕組みじゃないか」
+                    ということだった。外部のイベントで自動起動して、ブラウザを操作して、
+                    通知を送って、常駐する。そのまま美容室のバックオフィスに置いたら、どうなるか。
+                </p>
+
+                <h2 id="section2">2. 今のサロンが抱えている「見えにくい重労働」</h2>
+                <p>
+                    まず、今の美容室の現実を整理したい。
+                    外から見ると「カットとカラーをやる仕事」だが、
+                    実際にスタイリストが1日にこなしている業務はもっと多岐にわたる。
+                </p>
+                <p>
+                    僕がサロンの方々と話してきた中で出てきた、
+                    「地味だけど時間を取られる業務」をリストにしてみる。
+                </p>
+                <ul>
+                    <li>LINEやInstagram DMに来る予約変更・キャンセルへの返信</li>
+                    <li>ホットペッパービューティーの予約管理と空き枠調整</li>
+                    <li>施術後のアフターフォロー（「今日はどうでしたか？」の一言）</li>
+                    <li><strong>次回予約の打診</strong>（会計のタイミングで取れなかったとき）</li>
+                    <li>カラー剤・ブリーチ・トリートメント剤の在庫確認と発注</li>
+                    <li>アシスタントを含めたシフト調整と通知</li>
+                    <li>Googleマップや各媒体のクチコミ返信</li>
+                    <li>物販（シャンプー・トリートメントなど）の購入後フォロー</li>
+                    <li>失客しているリピーターへの復活アプローチ</li>
+                </ul>
+                <p>
+                    ひとつひとつは大した作業ではないように見える。でも積み重なると、
+                    1日1〜2時間を軽く消費する。しかも施術の合間に「飛び込みで発生する」という点が厄介で、
+                    集中したいときに割り込んでくる。
+                </p>
+
+                <h2 id="section3">3. AIエージェントが常駐したら①：指名客の失客防止・次回予約取得率</h2>
+                <p>
+                    では、Conwayのような常時稼働AIエージェントがサロンに入ったら何が変わるか。
+                    まず「指名客の失客防止」から考えてみたい。
+                    ここが一番、美容室の売上に直結する部分だと思う。
+                </p>
+
+                <h3>失客アラートが「自動」になる</h3>
+                <p>
+                    指名のリピーターが来なくなるとき、多くの場合は「気づいたときにはもう遅い」という
+                    パターンになる。カルテを見ると前回来店から4ヶ月が経過していた、というやつだ。
+                </p>
+                <p>
+                    常時稼働エージェントなら、<strong>前回来店から2ヶ月が過ぎた指名客を自動で検知して、
+                    担当スタイリストに通知できる</strong>。「山田様、2ヶ月未来店です。フォローしますか？」
+                    という通知がスタイリストのスマホに届き、「する」と返したらメッセージの下書きも自動生成。
+                    確認して送信するだけでいい。
+                </p>
+                <p>
+                    このフローは今でも頑張れば作れるが、常時稼働が前提になることで
+                    「設定した条件に合った客が出た瞬間に動く」という即時性が生まれる。
+                </p>
+
+                <h3>次回予約の未取得客に自動アプローチ</h3>
+                <p>
+                    会計時に次回予約を取れなかった客（次回予約未取得）は、
+                    ホットペッパーや各予約システムのデータに記録されている。
+                    この情報をWebhookで受け取ったエージェントが、
+                    「施術から1週間後にフォローメッセージを送る」という動作を自動でセットする。
+                </p>
+                <p>
+                    <strong>次回予約取得率は、客単価と同じくらいリピート売上に効く指標だ。</strong>
+                    これをシステムが勝手にフォローしてくれるなら、スタイリストは会計時に
+                    「次回のご予約はいかがですか？」と一言言えばいいだけになる。
+                </p>
+
+                <h2 id="section4">4. AIエージェントが常駐したら②：薬剤発注・シフト・物販フォロー</h2>
+                <p>
+                    次にバックオフィス系の業務を考える。ここが「地味に大きな変化」が来ると僕は思っている。
+                </p>
+
+                <h3>薬剤・ケミカルの在庫管理と自動発注</h3>
+                <p>
+                    カラー剤やブリーチ、パーマ液などのケミカルは、
+                    施術メニューの傾向によって消費ペースが変わる。
+                    週によってはハイライト・ブリーチ施術が集中して、
+                    ブリーチの在庫が想定より早く切れることがある。
+                </p>
+                <p>
+                    エージェントが予約データと施術内容の傾向を読んで、
+                    「今週はハイライト予約が6件→ブリーチの消費量が通常の2倍→在庫が3日後に切れる」
+                    という予測を立てて、自動で発注をかける。
+                    スタイリストは翌日の朝に「ブリーチ2本発注しました」という通知を受け取るだけでいい。
+                </p>
+                <p>
+                    サロン専売品（物販用のシャンプー・トリートメント）の在庫管理も同じ発想で動く。
+                    棚の前に立って数えるという作業が、そのうち消えるかもしれない。
+                </p>
+
+                <h3>アシスタントを含めたシフト自動調整</h3>
+                <p>
+                    複数名が在籍するサロンでのシフト管理は、オーナーや店長の時間を相当食う。
+                    アシスタントからの「来月の○日は休みたい」という申請が来るたびに、
+                    その日の予約状況・スタイリスト・アシスタントの配置を頭の中で調整して、
+                    全員に通知する、というプロセスが発生する。
+                </p>
+                <p>
+                    エージェントが常駐していれば、申請が来た瞬間に予約状況・各スタッフのシフトを確認して、
+                    「その日はアシスタントが田中さんだけになります。午前の施術2件に影響します。
+                    調整しますか？」という確認をLINEで送る。オーナーが「OK」と返したら、
+                    スタッフへの通知と予約システムへの反映を自動でやる。
+                </p>
+
+                <h3>物販購入後のアフターフォロー</h3>
+                <p>
+                    会計時に物販（ホームケア用のシャンプーやトリートメント）を購入した客に対して、
+                    <strong>1〜2週間後に「使い心地はいかがですか？」というフォローを送れているサロンは少ない。</strong>
+                    忙しいから忘れるし、誰がやるかも決まっていないことが多い。
+                </p>
+                <p>
+                    物販購入が予約システムに記録された瞬間をWebhookで検知して、
+                    フォローメッセージのタスクを自動セット。カルテの施術内容に合わせた文章を生成して、
+                    指定日時に送る。物販のリピート購入率が上がるかどうか、試してみたい仕組みだ。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">今</span>
+                            <span class="step-text">人間が<br>気づいたとき<br>に動く</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">近未来</span>
+                            <span class="step-text">エージェントが<br>イベントを検知<br>して動く</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">変化</span>
+                            <span class="step-text">スタイリストは<br>「確認・判断」<br>だけすればいい</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：常時稼働エージェントが変える「動くタイミング」の主体</p>
+                </div>
+
+                <h2 id="section5">5. スタイリストとアシスタントの仕事はどう変わるか</h2>
+                <p>
+                    ここが一番大事なところだ。
+                    AIエージェントが入ったとき、スタイリストとアシスタントは何をするのか。
+                </p>
+                <p>
+                    僕の見立てでは、<strong>時間配分の構造が変わる</strong>。
+                    今は「施術6割、バックオフィス4割」くらいになっているスタイリストが多い。
+                    エージェントが入ると、バックオフィスの多くが自動化されて
+                    「施術8〜9割、確認1割」に近づく。
+                </p>
+                <p>
+                    スタイリストにとっては、<strong>本来のクリエイティブな仕事に集中できる時間が増える</strong>
+                    ということだ。
+                    お客様との施術中の会話の質が上がる。
+                    新しいデザインや技術のインプットに時間を使える。
+                    体力的・精神的な余裕が生まれれば、離職率にも影響するかもしれない。
+                </p>
+                <p>
+                    アシスタントにとっては変化がより大きいかもしれない。
+                    薬剤の在庫管理、シャンプー後の記録入力、フォローメッセージの下書き作成といった
+                    ルーティン業務がエージェントに移るなら、アシスタントが技術練習に使える時間が増える。
+                    <strong>スタイリスト昇格までの道のりが、少し短くなる可能性がある</strong>と思っている。
+                </p>
+
+                <h2 id="section6">6. 僕が一番気になること：指名の温度感とのトレードオフ</h2>
+                <p>
+                    ここからは少し慎重な話をしたい。
+                </p>
+                <p>
+                    美容室というのは、<strong>「指名」という文化がある業種だ</strong>。
+                    「あの担当の人に切ってもらいたい」という感情が来店動機になっているサロンでは、
+                    スタイリストとお客様の関係は単なるサービス提供者と消費者ではない。
+                    そのスタイリストの人柄・世界観がそのままサロンの価値になっている。
+                </p>
+                <p>
+                    そこに自動化されたメッセージが届いたとき、お客様はどう感じるか。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>自動化の対象</th>
+                                <th>指名の温度感への影響</th>
+                                <th>僕のスタンス</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>予約変更・キャンセル返信</th>
+                                <td>低い（事務的なやり取りで許容されやすい）</td>
+                                <td>自動化OK</td>
+                            </tr>
+                            <tr>
+                                <th>来店リマインド通知</th>
+                                <td>低い（ホットペッパーの自動通知と同じ認識）</td>
+                                <td>自動化OK</td>
+                            </tr>
+                            <tr>
+                                <th>失客アラート→フォロー打診</th>
+                                <td>中程度（スタイリストがレビューして送ることで解決）</td>
+                                <td>下書きAI生成・最終送信は人間</td>
+                            </tr>
+                            <tr>
+                                <th>施術後のアフターフォロー</th>
+                                <td>中〜高（文章の「人っぽさ」が重要になる）</td>
+                                <td>パーソナライズ度を高めて・必ず確認してから送信</td>
+                            </tr>
+                            <tr>
+                                <th>クレーム・トラブルの初動</th>
+                                <td>極めて高い（判断ミスで指名を失う）</td>
+                                <td>絶対に人間が最終判断する設計に</td>
+                            </tr>
+                            <tr>
+                                <th>初めてのフリー客への返信</th>
+                                <td>高い（第一印象を決める）</td>
+                                <td>テンプレート使用でも人の目を通す</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    自動化することで「手が回らなかった丁寧さ」が実現できるケースと、
+                    「指名されているスタイリストだからこそ意味がある」ケースは、
+                    明確に設計して分けなければいけない。
+                </p>
+                <p>
+                    僕が一番懸念しているのは、「AIに全部やらせたら効率が上がる」という発想で設計された
+                    自動化が、気づかないうちに指名客との関係を劣化させることだ。
+                    客単価や来店頻度が下がりはじめても、「施術の問題なのか、コミュニケーションの問題なのか」
+                    を見分けにくい分、シュリンクが起きてから気づくパターンになりやすい。
+                </p>
+
+                <h2 id="section7">7. まとめ：AIは「技術」を奪わない、でも「雑務」は奪う</h2>
+                <p>
+                    僕の結論はシンプルだ。
+                </p>
+                <p>
+                    <strong>常時稼働AIエージェントは、スタイリストの「技術」も「指名」も奪わない。
+                    でも「雑務」は確実に奪っていく。そして、それは悪いことではない。</strong>
+                </p>
+                <p>
+                    美容師という職業が「忙しすぎる」「続けられない」という理由で
+                    人材が離れていく現状がある。スタイリスト昇格前に辞めていくアシスタントも後を絶たない。
+                    そこに「雑務を肩代わりする常駐AI」が入ることは、
+                    職業としての持続可能性を高める可能性がある。
+                </p>
+                <p>
+                    ただし、Conwayはまだ内部テスト段階だ。
+                    今すぐ「美容室に常時稼働エージェントを入れましょう」とは言えない。
+                    でも方向性は決まっていると思っている。
+                </p>
+                <p>
+                    AIが「ツール」から「バックオフィスに常駐するチームメンバー」に変わっていく中で、
+                    美容室という場所はその変化を最もリアルに体感できる業種のひとつになるはずだ。
+                    僕は、そのタイミングに備えて動いているサロンと一緒に仕事がしたいと思っている。
+                </p>
+                <p>
+                    「うちのサロンで試してみたい」という方がいれば、気軽に連絡してほしい。
+                    予約システムとの連携設計から、スタッフへの説明まで、伴走できる自信がある。
+                </p>
+
+                <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">
+                    ※本記事は2026年4月5日時点の情報と筆者の推測をもとに書いています。
+                    AnthropicのConwayはまだ公式リリース前のテスト段階であり、仕様は変わる可能性があります。
+                </p>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">サロンのAI導入を検討していますか？</h2>
+                    <p class="cta-text">MIRAINAでは、小規模サロンから複数店舗展開まで<br>現場に合ったAI活用プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を書いた人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。美容業界のデジタル化支援にも関わる。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

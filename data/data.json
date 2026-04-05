@@ -674,6 +674,15 @@
             "thumbnail": "/images/blogs_images/blog-card075.webp",
             "alt": "Anthropic Conwayによる常時稼働AIエージェントのイメージ",
             "date": "2026-04-05"
+        },
+        {
+            "id": 76,
+            "title": "美容室に常時稼働AIエージェントが来たら何が変わるか―Conway記事を書いて思ったこと",
+            "description": "美容室に常時稼働AIエージェントを導入したら何が変わるか、AIコンサルタント・芝優作が推測。指名客の失客防止・薬剤発注・シフト管理・次回予約取得率への影響と、温かみとのトレードオフを考察します。",
+            "link": "/blogs/blog076.html",
+            "thumbnail": "/images/blogs_images/blog-card076.webp",
+            "alt": "美容室と常時稼働AIエージェントのイメージ",
+            "date": "2026-04-05"
         }
     ],
     "works": [
