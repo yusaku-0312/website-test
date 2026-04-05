@@ -701,6 +701,15 @@
       "alt": "Claude Opus 4.6 1Mトークン Agent Teams 中小企業AI活用",
       "link": "/blogs/blog078.html",
       "date": "2026-04-05"
+    },
+    {
+      "id": 79,
+      "title": "【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準",
+      "description": "2026年2月19日にGoogle DeepMindが公開したGemini 3.1 Proの性能と料金を解説。GPQA Diamond 94.3%・ARC-AGI-2 77.1%・SWE-Bench 80.6%の数値の意味と、Claude・GPT-5との使い分け判断基準を中小企業向けに整理しました。",
+      "thumbnail": "/images/blogs_images/blog-card079.webp",
+      "alt": "Gemini 3.1 Pro 16ベンチマーク13冠 AIモデル比較",
+      "link": "/blogs/blog079.html",
+      "date": "2026-04-05"
     }
   ],
   "works": [
