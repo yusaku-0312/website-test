@@ -665,6 +665,15 @@
             "thumbnail": "/images/blogs_images/blog-card072.webp",
             "alt": "Gemma 4でオンデバイスAIを実装するイメージ",
             "date": "2026-04-04"
+        },
+        {
+            "id": 75,
+            "title": "【2026年4月最新】Anthropic Conwayとは？常時稼働AIエージェントの仕組みと中小企業への影響",
+            "description": "ConwayとはAnthropicが2026年4月にテスト中の常時稼働AIエージェント。独立UI・Webhook起動・CNW ZIP拡張の仕組み、Claude Codeとの違い、中小企業への活用ポイントを整理します。",
+            "link": "/blogs/blog075.html",
+            "thumbnail": "/images/blogs_images/blog-card075.webp",
+            "alt": "Anthropic Conwayによる常時稼働AIエージェントのイメージ",
+            "date": "2026-04-05"
         }
     ],
     "works": [

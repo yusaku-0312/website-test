@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】Anthropic Conwayとは？常時稼働AIエージェントの仕組みと中小企業への影響 | MIRAINAブログ</title>
+    <meta name="description"
+        content="ConwayとはAnthropicが2026年4月にテスト中の常時稼働AIエージェント。独立UI・Webhook起動・CNW ZIP拡張の仕組み、Claude Codeとの違い、中小企業への活用ポイントを整理します。">
+    <meta property="og:title" content="【2026年4月最新】Anthropic Conwayとは？常時稼働AIエージェントの仕組みと中小企業への影響">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog075.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog075-1.webp">
+    <meta property="og:description"
+        content="ConwayとはAnthropicが2026年4月にテスト中の常時稼働AIエージェント。独立UI・Webhook起動・CNW ZIP拡張の仕組み、Claude Codeとの違い、中小企業への活用ポイントを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>【2026年4月最新】Anthropic Conwayとは？常時稼働AIエージェントの仕組みと中小企業への影響</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.05</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Anthropic</p>
+                        <p class="article-tag">Claude</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">AI自動化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】Anthropic Conwayとは？常時稼働AIエージェントの仕組みと中小企業への影響</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog075-1.webp" alt="Anthropic Conwayによる常時稼働AIエージェントのイメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年4月1日、AIテスト情報メディアのTestingCatalogが独占報道したAnthropicの内部テスト環境
+                    <strong>「Conway」</strong>が業界で注目を集めています。
+                    ConwayはClaudeを「都度呼び出すツール」から<strong>常時稼働する自律型AIエージェント</strong>へと転換させる、
+                    Anthropicの次期プラットフォーム構想です。
+                    独立UI・Webhookによる外部起動・CNW ZIP形式の拡張機能という3つの柱を持ち、
+                    AIエージェントのApp Storeとも評されています。
+                    本記事では、Conwayの仕組み、Claude Code・Coworkとの位置づけの違い、
+                    そして中小企業が今押さえるべき活用ポイントを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Conwayとは何か―Anthropicが内部テスト中の常時稼働エージェント</a></li>
+                    <li><a href="#section2">2. なぜ今Conwayなのか―AIツールから「常駐AI」への転換</a></li>
+                    <li><a href="#section3">3. 3つの核心機能（Extensions / Webhooks / Connectors）</a></li>
+                    <li><a href="#section4">4. Claude Code・Coworkとの違いと位置づけ</a></li>
+                    <li><a href="#section5">5. 中小企業・ビジネスパーソンへの影響と活用ポイント</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Conwayとは何か―Anthropicが内部テスト中の常時稼働エージェント</h2>
+                <p>
+                    【公式情報】ConwayはAnthropicが社内でテスト中の、Claudeの新しい動作環境です。
+                    2026年4月1日にTestingCatalog（Alexey Shabanov 氏）が独占報道し、情報が表面化しました。
+                    Anthropicはこの情報が「リリースパッケージングの人的ミスにより流出したもの」と認め、
+                    セキュリティ上の問題ではないと説明しています。
+                </p>
+                <p>
+                    【解釈】Conwayの本質は「チャットのように都度起動するAI」ではなく、
+                    <strong>ユーザーのPC・ブラウザ環境に常駐し、外部イベントを受けて自律的にタスクを実行するAIプラットフォーム</strong>です。
+                    Anthropicのインターフェース内でサイドバーオプションとして現れ、
+                    Search / Chat / System の3つのエリアを持つ独立したConwayインスタンスとして動作します。
+                </p>
+                <p>
+                    【引用可能ユニット】
+                    Conwayは「AIを使う」から「AIが常にそこにいる」へのパラダイムシフトを象徴するプロジェクトです。
+                    現時点ではまだ内部テスト段階で、機能フラグの変更により開発中止になる可能性も存在します。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog075-2.webp" alt="Anthropic Conway常時稼働AIエージェントの報道ページ（TestingCatalog）" width="800" height="450" loading="lazy">
+                    <figcaption>TestingCatalog による Conway の独占報道（2026年4月1日）</figcaption>
+                </figure>
+
+                <h2 id="section2">2. なぜ今Conwayなのか―AIツールから「常駐AI」への転換</h2>
+                <p>
+                    【解釈】これまでのClaude（claude.ai）は、ユーザーがブラウザを開いてメッセージを送り、
+                    回答を受け取るという「反応型」の設計でした。
+                    Claude CodeやCoworkが「自律的なタスク実行」を実現しつつも、
+                    実行のトリガーはあくまでユーザー起点です。
+                </p>
+                <p>
+                    【解釈】Conwayはその前提を崩します。
+                    <strong>「人間がAIに声をかける」のではなく、「外部システムからのイベントがAIを起こす」</strong>という設計は、
+                    AIが24時間365日、業務プロセスの一部として組み込まれることを意味します。
+                    例えばSlackに特定キーワードが投稿されたら調査を開始する、GitHubにPRが来たらレビューを自動で始めるといった
+                    自動化フローが、コードなしで構築できるようになる可能性があります。
+                </p>
+                <p>
+                    【引用可能ユニット】
+                    AIエージェントが「ツール」から「インフラ」になる流れは2026年の業界全体のトレンドです。
+                    Conwayはその中でAnthropicが独自エコシステムを構築する意図を示した動きといえます。
+                </p>
+
+                <h2 id="section3">3. 3つの核心機能（Extensions / Webhooks / Connectors）</h2>
+                <p>
+                    【公式情報】TestingCatalogの報道によると、Conwayは以下の3機能を柱として設計されています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>概要</th>
+                                <th>具体的な動き</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Extensions</th>
+                                <td>CNW ZIP形式の独自拡張パッケージ</td>
+                                <td>開発者がカスタムツール、UIタブ、コンテキストハンドラを構築・配布できる「App Store」的エコシステム</td>
+                            </tr>
+                            <tr>
+                                <th>Webhooks</th>
+                                <td>外部サービスによるConway起動</td>
+                                <td>Slackの通知・GitHubのPR・外部APIのイベントなど、人間以外のシステムからConwayを呼び出せる</td>
+                            </tr>
+                            <tr>
+                                <th>Connectors</th>
+                                <td>Chrome・Claude Code・外部APIの統合</td>
+                                <td>ブラウザ操作、コード実行、通知送信を1つの常駐エージェントとして一体化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】Extensions（CNW ZIP）の仕組みは、ブラウザの拡張機能やVSCodeのプラグインに近い概念です。
+                    サードパーティの開発者が機能を追加でき、Anthropicのエコシステムが外部へ開かれる設計になっています。
+                    これはOpenAIのGPTsやMicrosoftのCopilot Extensionsと競合する構図です。
+                </p>
+                <p>
+                    【境界例】Webhook起動は強力な反面、トリガー設計を誤ると意図しないタイミングでAIが動作するリスクがあります。
+                    サービスレベルのトグルで個別制御できる仕様が含まれていることが報告されており、
+                    全自動化と人間の承認のバランス設計が引き続き重要になります。
+                </p>
+
+                <h2 id="section4">4. Claude Code・Coworkとの違いと位置づけ</h2>
+                <p>
+                    【解釈】Anthropicは現在、複数のAIエージェント関連機能を展開しています。
+                    Conwayはそのどれとも異なる位置づけにあります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>製品</th>
+                                <th>主な対象</th>
+                                <th>起動方式</th>
+                                <th>常時稼働</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Claude.ai</th>
+                                <td>全ユーザー</td>
+                                <td>人間がメッセージ送信</td>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <th>Claude Code</th>
+                                <td>エンジニア</td>
+                                <td>ターミナルから呼び出し</td>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <th>Cowork</th>
+                                <td>非エンジニア</td>
+                                <td>Claude Desktopから指示</td>
+                                <td>スケジュール実行あり</td>
+                            </tr>
+                            <tr>
+                                <th>Conway（テスト中）</th>
+                                <td>全ユーザー・開発者</td>
+                                <td>Webhook・外部イベントから自動起動</td>
+                                <td>常時稼働</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【条件付き結論】
+                    「定型業務の自動化」が目的で今すぐ導入するなら<strong>Cowork</strong>が選択肢です。
+                    Conwayはまだ内部テスト段階であり、正式リリース時期・機能範囲ともに不確定です。
+                    ただし、Conwayが正式リリースされた場合、外部システムと連携した
+                    <strong>ノーコードAI自動化</strong>の選択肢が大きく広がります。
+                </p>
+
+                <h2 id="section5">5. 中小企業・ビジネスパーソンへの影響と活用ポイント</h2>
+                <p>
+                    【解釈】Conwayが正式公開された場合、中小企業に何が変わるかを3点で整理します。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">変化01</span>
+                            <span class="step-text">人が起動しなくても<br>AIが動く</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">変化02</span>
+                            <span class="step-text">外部サービスと<br>AIが直結する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">変化03</span>
+                            <span class="step-text">拡張機能で<br>用途が無限化</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：Conwayが中小企業の業務にもたらす変化</p>
+                </div>
+
+                <h3>変化01：「AIを呼ぶ」手間がなくなる</h3>
+                <p>
+                    現在のAI活用では、担当者が毎回ChatGPTやClaudeを開いてプロンプトを打つ必要があります。
+                    ConwayのWebhook機能が実現すれば、<strong>「問い合わせが届いたら自動で初回対応文を生成する」</strong>
+                    「受注データが更新されたら自動で報告書を作成する」といった
+                    ルーティン業務を、設定後は人の介在なしに動かせます。
+                </p>
+
+                <h3>変化02：既存のツールとAIが自動連携する</h3>
+                <p>
+                    ConnectorsによるChrome・外部APIとの統合は、
+                    現在ZapierやMakeなどのノーコード自動化ツールが担っている「サービス間の橋渡し」を、
+                    AIが意味理解を持ちながら担う可能性を示しています。
+                    【仮説】ルールベースの自動化ではなく「状況を判断して動く自動化」が、
+                    より安価・シンプルに構築できるようになる可能性があります。
+                </p>
+
+                <h3>変化03：拡張機能エコシステムで用途が広がる</h3>
+                <p>
+                    CNW ZIP形式の拡張機能は、業界特化・業務特化のAIツールが外部開発者から提供される基盤になります。
+                    【境界例】ただし、サードパーティ拡張機能の品質・セキュリティ基準については現時点では不明であり、
+                    導入時には提供元の信頼性確認が必須になるでしょう。
+                </p>
+
+                <h3>今からできる準備</h3>
+                <p>
+                    Conwayは現時点でテスト段階のため、今すぐ導入することはできません。
+                    ただし、以下の準備を今から進めることで、リリース時に素早く活用できます。
+                </p>
+                <ul>
+                    <li><strong>自社の「繰り返し発生するイベント」を棚卸し</strong>：Webhook起動で自動化できる候補業務を特定する</li>
+                    <li><strong>Coworkで先行して自動化に慣れる</strong>：Conwayと設計思想が近く、スキル移行がしやすい</li>
+                    <li><strong>Anthropicの公式情報をフォロー</strong>：正式発表があれば即座に対応できる体制を整える</li>
+                </ul>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    【解釈】Conwayは、Claudeが「チャットツール」から
+                    <strong>「業務インフラとして常駐するAIプラットフォーム」</strong>へと進化する可能性を示した、
+                    Anthropic最大規模の野心的プロジェクトです。
+                    Extensions（CNW ZIP）・Webhooks・Connectorsの3機能が揃うことで、
+                    AIエージェントのApp Store的エコシステムが生まれる構図です。
+                </p>
+                <p>
+                    【仮説】2026年中にConwayが正式公開された場合、
+                    常時稼働エージェントを前提としたビジネスプロセス設計が、
+                    AI先行企業と後追い企業の間で明確な差を生み出す可能性が高いです。
+                    まずはCoworkで自動化の設計思想を理解し、Conway公開時に素早く移行できる準備を進めることが、
+                    中小企業にとっての現実的な対策です。
+                </p>
+
+                <h3>参考リンク（一次情報）</h3>
+                <ul>
+                    <li><a href="https://www.testingcatalog.com/exclusive-anthropic-tests-its-own-always-on-conway-agent/" target="_blank" rel="noopener">TestingCatalog：Exclusive: Anthropic tests its own always-on "Conway" agent（2026-04-01）</a></li>
+                    <li><a href="https://dataconomy.com/2026/04/03/anthropic-tests-conway-platform-for-continuous-claude/" target="_blank" rel="noopener">Dataconomy：Anthropic Tests Conway As A Persistent Agent Platform For Claude</a></li>
+                    <li><a href="https://techbriefly.com/2026/04/03/anthropic-explores-extension-based-agent-system-with-conway/" target="_blank" rel="noopener">TechBriefly：Anthropic explores extension based agent system with Conway</a></li>
+                    <li><a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic 公式サイト</a></li>
+                </ul>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIエージェント活用でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、AI自動化の要件整理から実装まで<br>中小企業向けに段階的にサポートします。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
