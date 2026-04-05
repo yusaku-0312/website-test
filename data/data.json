@@ -692,6 +692,15 @@
       "thumbnail": "/images/blogs_images/blog-card077.webp",
       "alt": "OpenAIスーパーアプリ ChatGPT Codex Atlas 統合イメージ",
       "date": "2026-04-05"
+    },
+    {
+      "id": 78,
+      "title": "【2026年4月最新】Claude Opus 4.6とは？1Mトークン・Agent Teamsが中小企業のAI活用を変える実装ガイド",
+      "description": "2026年2月にAnthropicが発表したClaude Opus 4.6とSonnet 4.6の新機能を解説。1Mトークンコンテキスト・Agent Teams・Adaptive Thinkingが中小企業のAI自動化にどう使えるかを実例とコスト比較で整理しました。",
+      "thumbnail": "/images/blogs_images/blog-card078.webp",
+      "alt": "Claude Opus 4.6 1Mトークン Agent Teams 中小企業AI活用",
+      "link": "/blogs/blog078.html",
+      "date": "2026-04-05"
     }
   ],
   "works": [
