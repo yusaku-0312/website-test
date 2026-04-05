@@ -784,6 +784,15 @@
       "alt": "LLMO Insightのプレスリリースキービジュアル",
       "link": "/works/work008.html",
       "date": "2026-03-16"
+    },
+    {
+      "id": 9,
+      "title": "大阪9店舗の美容室グループ様：LLMOコンサルティング初月でAI引用数47%増",
+      "description": "大阪府内9店舗を展開する美容室グループへのLLMOコンサルティング事例。独自ツール分析とNotionによる施策管理により、初月からAI検索引用数が約47%増加。2ヶ月目以降もさらに加速中。",
+      "thumbnail": "/images/works_images/work-card009.webp",
+      "alt": "大阪9店舗の美容室グループ様LLMOコンサルティング事例",
+      "link": "/works/work009.html",
+      "date": "2026-04-05"
     }
   ]
 }
