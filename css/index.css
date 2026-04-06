@@ -106,11 +106,90 @@
 .hero-description {
     font-size: var(--font-size-lg);
     /* Restored lg size */
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 2;
     color: var(--color-text-gray);
     max-width: 600px;
     font-weight: 500;
+}
+
+/* Hero Stats */
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .hero-stats {
+        justify-content: flex-start;
+    }
+}
+
+.hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.hero-stat-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+    bottom: 0.3em;
+    width: 1px;
+    background: var(--color-miraina-black);
+    opacity: 0.3;
+}
+
+.hero-stat-item:first-child::before {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hero-stat-item {
+        align-items: flex-start;
+    }
+}
+
+.hero-stat-num {
+    font-family: var(--font-gothic);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-miraina-black);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.hero-stat-num small {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.hero-stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-gray);
+    margin-top: 0.4rem;
+    white-space: nowrap;
+}
+
+/* Hero CTA (multiple buttons) */
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .hero-cta {
+        justify-content: flex-start;
+    }
 }
 
 /* Removed .hero-visual styles */
@@ -442,5 +521,198 @@
 
 .contact-cta .btn:hover {
     background-color: var(--color-white);
+    color: var(--color-miraina-black);
+}
+
+/* ==========================================================================
+   Works Result Badges (仮データ)
+   ========================================================================== */
+.work-result {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-top: 0.875rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.work-result-item {
+    font-size: 0.8rem;
+    color: var(--color-text-gray);
+    background: rgba(0, 82, 204, 0.06);
+    padding: 0.25rem 0.625rem;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.work-result-item b {
+    color: var(--color-intellect-blue);
+    font-weight: 700;
+    margin-right: 0.25rem;
+}
+
+/* ==========================================================================
+   LLMO Insight CTA Banner
+   ========================================================================== */
+.section-llmo-cta {
+    padding: var(--space-8) 0;
+}
+
+.llmo-cta-box {
+    background: var(--color-miraina-black);
+    color: var(--color-white);
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .llmo-cta-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        padding: 3.5rem 4rem;
+    }
+}
+
+.llmo-cta-label {
+    display: inline-block;
+    font-family: var(--font-gothic);
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.llmo-cta-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-white);
+    line-height: 1.5;
+    margin-bottom: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .llmo-cta-title {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+.llmo-cta-desc {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.9;
+}
+
+.llmo-cta-action {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .llmo-cta-action {
+        align-items: center;
+    }
+}
+
+.btn-llmo {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--color-white);
+    color: var(--color-miraina-black);
+    font-family: var(--font-gothic);
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.btn-llmo:hover {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.llmo-cta-note {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   Member Section
+   ========================================================================== */
+.member-list {
+    margin-top: 2rem;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 720px;
+}
+
+@media (min-width: 640px) {
+    .member-card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+}
+
+.member-photo {
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.member-role {
+    font-size: var(--font-size-sm);
+    color: var(--color-intellect-blue);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.member-name {
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-mincho);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-gray);
+    line-height: 1.9;
+    margin-bottom: 1.25rem;
+}
+
+.member-sns {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.member-sns-link {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-gray);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast);
+}
+
+.member-sns-link:hover {
     color: var(--color-miraina-black);
 }

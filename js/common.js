@@ -18,6 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
 
+    // Floating CTA visibility on scroll
+    const floatingCta = document.getElementById('js-floating-cta');
+    if (floatingCta) {
+        const toggleFloating = () => {
+            if (window.scrollY > 400) {
+                floatingCta.classList.add('is-visible');
+            } else {
+                floatingCta.classList.remove('is-visible');
+            }
+        };
+        window.addEventListener('scroll', toggleFloating, { passive: true });
+    }
+
     // Smooth Scroll for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
