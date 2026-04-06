@@ -1,0 +1,215 @@
+/* ==========================================================================
+   beauty-dx / services.css — Service Listing Page
+   ========================================================================== */
+
+.services-hero {
+    padding-top: calc(var(--header-height) + 3rem);
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.services-hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+    .services-hero-title {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+.services-hero-desc {
+    font-size: var(--font-size-lg);
+    color: var(--text-sub);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* Service Cards Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.services-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.services-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+}
+
+.services-card-img {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg-soft-pink);
+}
+
+.services-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.services-card:hover .services-card-img img {
+    transform: scale(1.04);
+}
+
+.services-card-body {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-card-number {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--accent-pink);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.services-card-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.services-card-desc {
+    font-size: var(--font-size-sm);
+    color: var(--text-sub);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.services-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line-soft);
+}
+
+.services-card-price {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+.services-card-price strong {
+    font-size: var(--font-size-lg);
+    color: var(--accent-pink);
+    font-weight: 700;
+}
+
+/* ─── Other Tools Subsection ─── */
+.index-other-tools {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line-soft);
+}
+
+.index-other-tools-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0;
+}
+
+.index-other-tools-header::before,
+.index-other-tools-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line-soft);
+}
+
+.index-other-tools-title {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--text-light);
+    white-space: nowrap;
+    background: none;
+    -webkit-text-fill-color: var(--text-light);
+    letter-spacing: 0.05em;
+}
+
+.index-tool-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+@media (min-width: 768px) {
+    .index-tool-item {
+        grid-template-columns: 7rem 1fr;
+        column-gap: 2rem;
+    }
+
+    .index-tool-item-label {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        padding-top: 0.1rem;
+    }
+
+    .index-tool-item-title {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .index-tool-item-desc {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+.index-tool-item-label {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--accent-pink);
+    letter-spacing: 0.05em;
+}
+
+.index-tool-item-title {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.index-tool-item-desc {
+    font-size: var(--font-size-sm);
+    color: var(--text-sub);
+    line-height: 1.75;
+}
+
+/* Bottom CTA */
+.services-cta {
+    text-align: center;
+    padding-top: 1rem;
+}

@@ -1,0 +1,35 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "slug": "blog001",
+            "title": "「DX化したい」が止まる理由と、サロンが最初に着手すべき1つのこと",
+            "excerpt": "「DX化したい」という言葉は聞くのに、なぜ動けないのか。現場支援から見えた本当の理由と、明日から動ける最初の一歩の見つけ方。",
+            "category": "DX入門",
+            "date": "2026-02-18",
+            "link": "/beauty-dx/blogs/blog001.html"
+        },
+        {
+            "id": 2,
+            "slug": "blog002",
+            "title": "ヘアサロンで使える生成AIツール5選——現場スタッフでも始めやすいものを厳選",
+            "excerpt": "「ChatGPT、アカウントは作ったんですけど何に使えばいいかわからなくて」——研修でほぼ毎回聞く言葉に、サロンの仕事の流れに沿って答えます。",
+            "category": "生成AI活用",
+            "date": "2026-03-03",
+            "link": "/beauty-dx/blogs/blog002.html"
+        },
+        {
+            "id": 3,
+            "slug": "blog003",
+            "title": "LLMOとは？サロン経営者向けにわかりやすく解説",
+            "excerpt": "ホットペッパーが登場した時と同じ変化が、AI検索で今起きています。ChatGPTに「おすすめサロン」として引用されるために知っておくべきこと。",
+            "category": "LLMO",
+            "date": "2026-03-15",
+            "link": "/beauty-dx/blogs/blog003.html"
+        }
+    ],
+    "meta": {
+        "perPage": 5,
+        "total": 3
+    }
+}
