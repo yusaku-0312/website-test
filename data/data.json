@@ -710,6 +710,15 @@
       "alt": "Gemini 3.1 Pro 16ベンチマーク13冠 AIモデル比較",
       "link": "/blogs/blog079.html",
       "date": "2026-04-05"
+    },
+    {
+      "id": 80,
+      "title": "【2026年4月最新】LLMO効果測定とは？AI引用シェアを可視化する3指標と実践ツール比較",
+      "description": "LLMO効果測定の3指標（AI言及シェア・引用ドメイン・CV率）と、Keywordmap「AI検索結果レポート（β版）」など2026年最新ツールを解説。8割超の企業が対策中のいま、中小企業が実践できる測定ステップも紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card080.webp",
+      "alt": "LLMO効果測定 AI引用シェア 可視化ツール比較 2026",
+      "link": "/blogs/blog080.html",
+      "date": "2026-04-06"
     }
   ],
   "works": [
