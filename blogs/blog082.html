@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド | MIRAINAブログ</title>
+    <meta name="description"
+        content="2026年4月2日にGoogleが公開したGemma 4の4モデル構成（E2B〜31B Dense）とApache 2.0商用無料化の意味を解説。AIME数学4.3倍・LiveCodeBench 2.7倍向上、256Kコンテキスト対応。中小企業がオープンAIを自社活用する実践ガイド。">
+    <meta property="og:title" content="【2026年4月最新】Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog082.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog082-1.webp">
+    <meta property="og:description"
+        content="2026年4月2日にGoogleが公開したGemma 4の4モデル構成（E2B〜31B Dense）とApache 2.0商用無料化の意味を解説。AIME数学4.3倍・LiveCodeBench 2.7倍向上、256Kコンテキスト対応。中小企業がオープンAIを自社活用する実践ガイド。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.06</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemma 4</p>
+                        <p class="article-tag">Google</p>
+                        <p class="article-tag">オープンAI</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog082-1.webp" alt="Gemma 4 Apache 2.0 商用解禁 オープンAI 中小企業活用" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年4月2日、GoogleはGoogle Cloud Nextにて新世代オープンモデル「Gemma 4」を正式発表した。
+                    最大の変化は<strong>Gemmaシリーズ初のApache 2.0ライセンス採用</strong>——これにより企業はユーザー数や商用利用の制限なく、
+                    Gemma 4を自社製品・サービスに組み込むことが可能になった。
+                    性能面でもGemma 3比でAIME数学推論が<strong>4.3倍（20.8%→89.2%）</strong>、
+                    LiveCodeBench（コーディング）が<strong>2.7倍（29.1%→80.0%）</strong>向上しており、
+                    31B DenseモデルはArena AIオープンモデル部門で世界3位を記録している。
+                    本記事では、Gemma 4の4モデル構成と商用解禁の意味、中小企業が今日から試せる活用ステップを解説する。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Gemma 4とは？2026年4月2日発表の概要と4モデル構成</a></li>
+                    <li><a href="#section2">2. Apache 2.0商用解禁の意味——中小企業がGemma 4を使う3つのメリット</a></li>
+                    <li><a href="#section3">3. ベンチマーク比較：Gemma 3比でAIME 4.3倍・LiveCodeBench 2.7倍向上の実力</a></li>
+                    <li><a href="#section4">4. 活用シーン別：オンプレミス・モバイル・エージェントでのGemma 4実装例</a></li>
+                    <li><a href="#section5">5. まとめ：Gemma 4を中小企業が試す3ステップ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Gemma 4とは？2026年4月2日発表の概要と4モデル構成</h2>
+
+                <p>
+                    【公式情報】GoogleはGemini 3の研究・技術を基盤としたオープンウェイトモデル群「Gemma 4」を
+                    2026年4月2日のGoogle Cloud Nextで正式公開した。
+                    著者はGoogle DeepMindで、ライセンスはApache 2.0。
+                    最大<strong>256Kトークンのコンテキストウィンドウ</strong>と<strong>140以上の言語</strong>に対応し、
+                    テキスト・画像・動画・音声のマルチモーダル入力をサポートする。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog082-2.webp" alt="Google AI for Developers Gemma 4 モデルカード 公式ページ Apache 2.0" width="800" height="450" loading="lazy">
+                    <figcaption>Google AI for Developers 公式 Gemma 4 モデルカードページ（ai.google.dev）。256Kコンテキストウィンドウ・Apache 2.0ライセンスが明記されている（出典：ai.google.dev）</figcaption>
+                </figure>
+
+                <p>
+                    Gemma 4は用途に応じた<strong>4種類のモデルサイズ</strong>で提供される。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>モデル名</th>
+                                <th>パラメータ数</th>
+                                <th>アーキテクチャ</th>
+                                <th>主な用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>E2B</th>
+                                <td>約20億</td>
+                                <td>Dense</td>
+                                <td>モバイル・IoTデバイス、エッジ推論</td>
+                            </tr>
+                            <tr>
+                                <th>E4B</th>
+                                <td>約40億</td>
+                                <td>Dense</td>
+                                <td>スマートフォン、オフライン動作</td>
+                            </tr>
+                            <tr>
+                                <th>26B MoE（A4B）</th>
+                                <td>26B（活性4B）</td>
+                                <td>Mixture of Experts</td>
+                                <td>ワークステーション、高速推論・コーディング</td>
+                            </tr>
+                            <tr>
+                                <th>31B Dense</th>
+                                <td>310億</td>
+                                <td>Dense</td>
+                                <td>ファインチューニング基盤、最高精度タスク</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】E2B・E4Bは<strong>スマートフォンやオフライン環境でそのまま動作</strong>するサイズ感だ。
+                    iPhoneアプリとしても提供が開始されており、インターネット接続なしにAI処理を完結できる。
+                    26B MoEは「26Bのパラメータを持ちながら推論時は4Bぶんしか使わない」設計で、
+                    31B Denseの約97%の性能をはるかに少ないリソースで引き出せる。
+                    中小企業がオンプレミスサーバーや開発者向けPCで動かすなら、26B MoEが費用対効果の最高点になることが多い。
+                </p>
+
+                <p>
+                    【仮説】Gemma 4にはエージェント型ワークフローを前提とした設計思想が色濃く反映されている。
+                    システムプロンプトや関数呼び出し（Function Calling）をネイティブでサポートし、
+                    「思考モード（Thinking mode）」でモデルが最終回答を出力する前に推論プロセスを展開できる。
+                    この設計は、従来の「一問一答型」から「自律的な多段階実行エージェント」への移行を念頭に置いたものだ。
+                </p>
+
+                <h2 id="section2">2. Apache 2.0商用解禁の意味——中小企業がGemma 4を使う3つのメリット</h2>
+
+                <p>
+                    【公式情報】Gemmaシリーズはこれまで、Googleが独自に定めたライセンス（Google Terms of Service）で提供されており、
+                    商用利用には「Googleが別途許可した場合」という条件が付いていた。
+                    Gemma 4からApache 2.0に変更したことで、<strong>改変・再配布・商用製品への組み込みが完全に自由</strong>になった。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">Gemma 3まで（旧ライセンス）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>商用利用に制約あり</li>
+                                    <li>Googleの許可が必要な場合も</li>
+                                    <li>製品組み込みに法務確認が必要</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Gemma 4（Apache 2.0）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>制限なし商用利用OK</strong></li>
+                                    <li>改変・再配布・製品組み込みが自由</li>
+                                    <li>ユーザー数・売上上限なし</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：Gemmaライセンス変更の比較（旧 vs Apache 2.0）</p>
+                </div>
+
+                <p>
+                    【解釈】Apache 2.0商用解禁が中小企業にとってもたらす実質的なメリットは主に3つある。
+                </p>
+
+                <p>
+                    <strong>メリット①：クラウドAPI費用をゼロにできる</strong><br>
+                    ChatGPT APIやClaude APIは従量課金だ。月間の生成量が増えると費用が青天井になる。
+                    Gemma 4をオンプレミスや自社VPSに展開すれば、モデル実行コストは<strong>インフラ固定費のみ</strong>になる。
+                    社内チャットボットや文書要約ツールなど、問い合わせ件数が多い用途ほど恩恵が大きい。
+                </p>
+
+                <p>
+                    <strong>メリット②：データを社外に出さなくてよい</strong><br>
+                    クラウドAPIに問い合わせを送信するとき、質問内容がサービス提供企業のサーバーに渡る可能性がある。
+                    医療・法務・人事など機密情報を扱う業種では、オンプレ動作のGemma 4で<strong>データを完全に自社内に留める</strong>ことができる。
+                </p>
+
+                <p>
+                    <strong>メリット③：自社ブランドの製品・サービスに組み込める</strong><br>
+                    Apache 2.0では改変・再配布も自由なため、Gemma 4をベースにファインチューニングした独自AIを
+                    <strong>そのまま自社製品として販売・提供</strong>することができる。
+                    「AIアシスタント内蔵のSaaS」や「AI機能付きの業務システム」を開発したい場合に、ライセンス面のハードルがなくなった。
+                </p>
+
+                <h2 id="section3">3. ベンチマーク比較：Gemma 3比でAIME 4.3倍・LiveCodeBench 2.7倍向上の実力</h2>
+
+                <p>
+                    【公式情報】Googleが公開したGemma 4のベンチマーク結果によると、Gemma 3 27Bとの比較で
+                    主要指標が大幅に改善している。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog082-3.webp" alt="ITmedia Enterprise Gemma 4発表 高度な推論とエージェント機能 4種のモデル" width="800" height="450" loading="lazy">
+                    <figcaption>ITmedia Enterprise「Google、"Gemma 4"を発表――高度な推論とエージェント機能を備える4種のモデル」（2026年4月6日、出典：itmedia.co.jp）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ベンチマーク</th>
+                                <th>Gemma 3（旧）</th>
+                                <th>Gemma 4（新）</th>
+                                <th>改善倍率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AIME（数学推論）</th>
+                                <td>20.8%</td>
+                                <td><strong>89.2%</strong></td>
+                                <td>約4.3倍</td>
+                            </tr>
+                            <tr>
+                                <th>LiveCodeBench（コーディング）</th>
+                                <td>29.1%</td>
+                                <td><strong>80.0%</strong></td>
+                                <td>約2.7倍</td>
+                            </tr>
+                            <tr>
+                                <th>Arena AI オープンモデル順位（31B）</th>
+                                <td>—</td>
+                                <td><strong>世界3位</strong></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <th>Arena AI オープンモデル順位（26B MoE）</th>
+                                <td>—</td>
+                                <td><strong>世界6位</strong></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】AIME 89.2%という数値は、競技数学（高校〜大学初等レベル）の問題を
+                    AIが9割近く解けるようになったことを意味する。
+                    ただしAIMEは「選択式の数値解答」形式で、実務の複雑な計算タスクとは異なる。
+                    「数学が得意なモデルになった」という事実の反映として受け取るのが正確だ。
+                </p>
+
+                <p>
+                    【解釈】LiveCodeBench 80.0%は、プログラミング課題に対する実践的なコーディング精度だ。
+                    Gemma 4でのコード生成・デバッグ補助・スクリプト作成が、
+                    前世代より格段に実用的なレベルに達したと評価できる。
+                    26B MoEがLMArenaでOpenAIの gpt-oss-120Bを上回ったという報告もあり、
+                    <strong>モデルサイズの割に突出したコーディング性能</strong>を持つことが注目点だ。
+                </p>
+
+                <p>
+                    【注意】ベンチマーク順位は数カ月単位で塗り替えられるサイクルになっている。
+                    「今のトップがすなわち自社ニーズに最適」とは限らない。
+                    Gemma 4の強みはあくまで「Apache 2.0で無料で使えるオープンモデル」としての総合評価であり、
+                    クラウドAPIトップモデルとのコスト対比で考えるのが実務上の判断基準となる。
+                </p>
+
+                <h2 id="section4">4. 活用シーン別：オンプレミス・モバイル・エージェントでのGemma 4実装例</h2>
+
+                <p>
+                    Gemma 4の4モデル構成に合わせて、実際のビジネスシーンへの適用例を整理する。
+                </p>
+
+                <h3>シーン1：社内ドキュメント検索・RAGシステム（26B MoE推奨）</h3>
+
+                <p>
+                    自社の社内規程・契約書・過去の提案書などをデータとして取り込み、
+                    従業員が自然言語で検索・質問できるRAG（Retrieval-Augmented Generation）チャットボットを構築する。
+                    26B MoEをオンプレミスに展開することで、<strong>機密文書をクラウドに送ることなく、月額固定コストで運用</strong>できる。
+                    目安：GPUサーバー（A100 1枚相当）があれば動作可能。クラウドAPIとの比較で月20〜30万円の削減が見込める案件も多い。
+                </p>
+
+                <h3>シーン2：スマートフォンオフラインAIアシスタント（E4B推奨）</h3>
+
+                <p>
+                    E4BはiPhoneアプリとして提供が開始されており、インターネット接続なしでAI処理が完結する。
+                    フィールドワーカー（工事現場・医療巡回・訪問営業など）が電波の届かない環境でも、
+                    <strong>マニュアル検索・報告書生成・作業手順のQ&Aをオフラインで利用できる</strong>。
+                    Apache 2.0のため、自社業務専用にカスタマイズしたアプリとして配布することも可能だ。
+                </p>
+
+                <h3>シーン3：エージェント型の業務自動化（31B Dense推奨）</h3>
+
+                <p>
+                    Gemma 4はシステムプロンプトと関数呼び出しをネイティブにサポートするため、
+                    「メール受信 → 内容分類 → CRM登録 → 担当者への自動転送」のような
+                    <strong>多段階の判断を含む業務フローをGemma 4が自律実行</strong>するエージェントを構築できる。
+                    思考モードを有効にすることで、単純な指示応答ではなくステップを踏んだ問題解決が可能になる。
+                    すでにDifyやLangChainでエージェント構築を検討しているチームには、
+                    Gemma 4のFunction Calling対応が統合コストを下げる選択肢になる。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">E2B/E4B</span>
+                            <span class="step-text">モバイル<br>オフライン<br>動作</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">26B MoE</span>
+                            <span class="step-text">社内サーバー<br>コスト効率<br>最良</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">31B Dense</span>
+                            <span class="step-text">エージェント<br>ファインチューン<br>ベース</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Gemma 4モデルの用途別使い分け</p>
+                </div>
+
+                <h2 id="section5">5. まとめ：Gemma 4を中小企業が試す3ステップ</h2>
+
+                <p>
+                    Gemma 4は、性能・ライセンスの両面でオープンモデルの新基準を打ち立てた。
+                    Apache 2.0商用解禁により、<strong>クラウドAPIへの従量課金なしにGemini 3技術の恩恵を受けられる</strong>
+                    という選択肢が初めて現実になった。
+                </p>
+
+                <p>
+                    ただし「オープンモデルは何でも自分で設定しなければならない」という面もある。
+                    クラウドAPIはAPIキー1枚で使い始められるが、Gemma 4を自社展開するには
+                    モデルのダウンロード・サーバー設定・推論フレームワークの構築が必要だ。
+                    社内にエンジニアがいない場合は、MIRAINAのようなAI導入支援会社のサポートを活用するのが現実的だ。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Google AI Studio<br>（無料）で<br>Gemma 4を体験</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">Ollama等で<br>ローカルPoC<br>（E4B or 26B MoE）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">自社環境へ<br>本番展開<br>（コスト比較後）</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図3：中小企業がGemma 4を試す3ステップ</p>
+                </div>
+
+                <p>
+                    まずGoogle AI Studioの無料枠でGemma 4の応答品質を確認し、
+                    自社業務に使えるレベルか体感するところから始めることを推奨する。
+                    クラウドAPIと同等の精度が得られると判断できてから、
+                    オンプレミス展開やファインチューニングの検討に進むのが失敗しない順序だ。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://ai.google.dev/gemma/docs/core/model_card_4" target="_blank" rel="noopener">Google AI for Developers：Gemma 4 モデルカード（Apache 2.0、2026年4月公開）</a></li>
+                        <li><a href="https://www.itmedia.co.jp/enterprise/articles/2604/06/news032.html" target="_blank" rel="noopener">ITmedia Enterprise：Google、"Gemma 4"を発表——高度な推論とエージェント機能を備える4種のモデル（2026年4月6日）</a></li>
+                        <li><a href="https://www.itmedia.co.jp/aiplus/articles/2604/03/news062.html" target="_blank" rel="noopener">ITmedia AI+：Google、エージェント特化の「Gemma 4」をApache 2.0で公開（2026年4月3日）</a></li>
+                        <li><a href="https://k-tai.watch.impress.co.jp/docs/news/2099333.html" target="_blank" rel="noopener">ケータイ Watch：Google、オープンな生成AIモデル「Gemma 4」発表 20倍のモデルに性能で匹敵</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">Gemma 4の自社活用でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、オープンモデルを活用した<br>オンプレミスAI導入・RAG構築をサポートします。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog079.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card079.webp" alt="Gemini 3.1 Pro関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog078.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card078.webp" alt="Claude Opus 4.6関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年4月最新】Claude Opus 4.6とは？1Mトークン・Agent Teamsが中小企業のAI活用を変える実装ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog081.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card081.webp" alt="AIエージェント導入関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.06</div>
+                            <div class="related-text">【2026年4月最新】AIエージェント導入ガイド：SOMPO30,000人導入に見る中小企業向け3つの成功パターン</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p class="footer-copy">&copy; 2025 MIRAINA All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

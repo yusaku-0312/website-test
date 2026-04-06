@@ -728,6 +728,15 @@
       "alt": "AIエージェント導入 SOMPO 中小企業 ノーコード実装",
       "link": "/blogs/blog081.html",
       "date": "2026-04-06"
+    },
+    {
+      "id": 82,
+      "title": "【2026年4月最新】Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド",
+      "description": "2026年4月2日にGoogleが公開したGemma 4の4モデル構成（E2B〜31B Dense）とApache 2.0商用無料化の意味を解説。AIME数学4.3倍・LiveCodeBench 2.7倍向上、256Kコンテキスト対応。中小企業がオープンAIを自社活用する実践ガイド。",
+      "thumbnail": "/images/blogs_images/blog-card082.webp",
+      "alt": "Gemma 4 Apache 2.0 商用解禁 オープンAI 中小企業活用",
+      "link": "/blogs/blog082.html",
+      "date": "2026-04-06"
     }
   ],
   "works": [
