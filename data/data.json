@@ -1,744 +1,825 @@
 {
-    "blogs": [
-        {
-            "id": 1,
-            "title": "AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法",
-            "description": "AI開発の基礎知識から実践的な開発手法まで、初心者向けにわかりやすく解説。",
-            "thumbnail": "/images/blogs_images/blog-card001.webp",
-            "alt": "AI開発とは？",
-            "link": "/blogs/blog001.html",
-            "date": "2025-09-01"
-        },
-        {
-            "id": 2,
-            "title": "Gemini活用で経営とマーケティングを革新する実践ガイド",
-            "description": "Googleが開発した高性能AIモデルであるGeminiを活用し、経営戦略の策定やマーケティング施策の立案を革新する実践的なガイドです。プロンプトエンジニアリングから他AIツールとの連携まで、ビジネスでの活用方法を詳しく解説します。",
-            "thumbnail": "/images/blogs_images/blog-card002.webp",
-            "alt": "Gemini活用で経営とマーケティングを革新する実践ガイド",
-            "link": "/blogs/blog002.html",
-            "date": "2025-09-05"
-        },
-        {
-            "id": 3,
-            "title": "パーソナルコーチ Arist 様との業務提携のお知らせ",
-            "description": "MIRAINAは、家庭教師・オンライン個別学習を行う「パーソナルコーチ Arist（アリスト）」様と業務提携いたしました。本提携により、MIRAINAのAI活用ノウハウを掛け合わせた学習体験の質向上を共同で推進します。",
-            "thumbnail": "/images/blogs_images/blog-card003.webp",
-            "alt": "パーソナルコーチ Arist 様との業務提携のお知らせ",
-            "link": "/blogs/blog003.html",
-            "date": "2025-09-10"
-        },
-        {
-            "id": 4,
-            "title": "【2026年版】AI研修おすすめ徹底比較！あなたの目的に合う講座を見つけよう",
-            "description": "最新のAI研修を徹底比較！学習目的や形式、サポート体制に応じたおすすめ講座をわかりやすく紹介。AI活用を加速させたい企業や個人必見の内容です。",
-            "thumbnail": "/images/blogs_images/blog-card004.webp",
-            "alt": "【2026年版】AI研修おすすめ徹底比較！あなたの目的に合う講座を見つけよう",
-            "link": "/blogs/blog004.html",
-            "date": "2025-09-15"
-        },
-        {
-            "id": 5,
-            "title": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
-            "description": "AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。SEO担当者が今日から動ける完全ガイドです。",
-            "thumbnail": "/images/blogs_images/blog-card005.webp",
-            "alt": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
-            "link": "/blogs/blog005.html",
-            "date": "2025-09-20"
-        },
-        {
-            "id": 6,
-            "title": "LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説",
-            "description": "ChatGPTやGemini以後に変化する情報設計の最前線。AIに“選ばれる”ための<strong>LLMO（大規模言語モデル最適化）</strong>を、研究と実務の両面からわかりやすく解説。SEO担当者の次の一手が見える内容です。",
-            "thumbnail": "/images/blogs_images/blog-card006.webp",
-            "alt": "LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説",
-            "link": "/blogs/blog006.html",
-            "date": "2025-09-25"
-        },
-        {
-            "id": 7,
-            "title": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
-            "description": "生成AIが検索の主役となる時代に必須のAIO（AI検索最適化）を解説。SEOとの違いから具体的ステップまで、AIに“引用される”ための実践ノウハウを体系的にまとめています。",
-            "thumbnail": "/images/blogs_images/blog-card007.webp",
-            "alt": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
-            "link": "/blogs/blog007.html",
-            "date": "2025-10-01"
-        },
-        {
-            "id": 8,
-            "title": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
-            "description": "Google検索に導入されたAIモード（AI Mode）とは何かを、特徴・AI Overviewsとの違い・日本語対応の背景・企業が直面する課題・LLMO最適化の考え方まで体系的に解説。AI検索時代に備える実務ガイドです。",
-            "thumbnail": "/images/blogs_images/blog-card008.webp",
-            "alt": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
-            "link": "/blogs/blog008.html",
-            "date": "2025-10-05"
-        },
-        {
-            "id": 9,
-            "title": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
-            "description": "総合対話・文章生成・画像生成・動画生成・業務効率化まで、用途別に“本当に使える”AIを厳選紹介。 選び方の6基準、導入時の注意点、研究動向と今後の展望もまとめた実務ガイドです。",
-            "thumbnail": "/images/blogs_images/blog-card009.webp",
-            "alt": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
-            "link": "/blogs/blog009.html",
-            "date": "2025-10-10"
-        },
-        {
-            "id": 10,
-            "title": "Sprout Design 工房 様との業務提携のお知らせ",
-            "description": "MIRAINAは、成果につながるホームページ制作を行うSprout Design 工房と業務提携しました。AI導入支援とWeb制作を組み合わせ、中小企業のデジタルマーケティングを強力にサポートします。",
-            "thumbnail": "/images/blogs_images/blog-card010.webp",
-            "alt": "Sprout Design 工房 様との業務提携のお知らせ",
-            "link": "/blogs/blog010.html",
-            "date": "2025-10-15"
-        },
-        {
-            "id": 11,
-            "title": "【最新版】/llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
-            "description": "AI時代に注目される/llms.txt（/llms.txt）とは何かを、SEO・AIO・LLMOの観点から徹底解説。メリット、注意点、活用シーン、導入判断などを専門家視点でまとめた2025年最新ガイド。",
-            "thumbnail": "/images/blogs_images/blog-card011.webp",
-            "alt": "【最新版】/llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
-            "link": "/blogs/blog011.html",
-            "date": "2025-10-20"
-        },
-        {
-            "id": 12,
-            "title": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
-            "description": "Google Deepmindが開発した次世代AIエディター「Antigravity」とは何かを徹底解説。Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。",
-            "thumbnail": "/images/blogs_images/blog-card012.png",
-            "alt": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
-            "link": "/blogs/blog012.html",
-            "date": "2025-10-25"
-        },
-        {
-            "id": 13,
-            "title": "【2026年最新】Gemini3.0とは？料金や特徴、活用事例を徹底解説",
-            "description": "Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。",
-            "thumbnail": "/images/blogs_images/blog-card013.webp",
-            "alt": "【2026年最新】Gemini3.0とは？料金や特徴、活用事例を徹底解説",
-            "link": "/blogs/blog013.html",
-            "date": "2025-10-30"
-        },
-        {
-            "id": 14,
-            "title": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
-            "description": "LLMO（大規模言語モデル最適化）とSEOは対立するものではなく、相互に補完し合う関係です。本記事では、両者の構造的な違い、共通点、そしてこれからのマーケティングに求められる統合的な戦略について、中級者向けに深掘り解説します。",
-            "thumbnail": "/images/blogs_images/blog-card014.webp",
-            "alt": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
-            "link": "/blogs/blog014.html",
-            "date": "2025-11-05"
-        },
-        {
-            "id": 15,
-            "title": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
-            "description": "広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。",
-            "thumbnail": "/images/blogs_images/blog-card015.webp",
-            "alt": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
-            "link": "/blogs/blog015.html",
-            "date": "2025-11-10"
-        },
-        {
-            "id": 16,
-            "title": "AI活用事例5選：業界別・職種別の成功事例と導入の基本",
-            "description": "AI活用の基本から、製造・サービス・医療・金融・マーケティングの業界別成功事例5選、そして導入の具体的ステップまでを徹底解説。ビジネスでのAI活用に役立つ情報満載です。",
-            "thumbnail": "/images/blogs_images/blog-card016.webp",
-            "alt": "AI活用事例5選：業界別・職種別の成功事例と導入の基本",
-            "link": "/blogs/blog016.html",
-            "date": "2025-11-15"
-        },
-        {
-            "id": 17,
-            "title": "LLMOの導入効果とは？─AI流入増加の事例と具体的な対策",
-            "description": "LLMO（大規模言語モデル最適化）を導入することで得られる具体的な効果、AI流入増加の事例、そして今すぐ始められる対策ステップを解説。AI検索時代に勝ち残るためのマーケティング戦略です。",
-            "thumbnail": "/images/blogs_images/blog-card017.webp",
-            "alt": "LLMOの導入効果とは？─AI流入増加の事例と具体的な対策",
-            "link": "/blogs/blog017.html",
-            "date": "2025-11-20"
-        },
-        {
-            "id": 18,
-            "title": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
-            "description": "2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card018.webp",
-            "alt": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
-            "link": "/blogs/blog018.html",
-            "date": "2025-11-28"
-        },
-        {
-            "id": 19,
-            "title": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
-            "description": "Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card019.webp",
-            "alt": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
-            "link": "/blogs/blog019.html",
-            "date": "2026-01-10"
-        },
-        {
-            "id": 20,
-            "title": "【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット",
-            "description": "OpenAIが2026年2月に発表した企業向けAIプラットフォーム「OpenAI Frontier」を徹底解説。AIエージェントの一元管理、SaaSへの影響、導入企業の成功事例、日本企業が取るべきアクションまで詳しく紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card020.webp",
-            "alt": "【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット",
-            "link": "/blogs/blog020.html",
-            "date": "2026-03-04"
-        },
-        {
-            "id": 21,
-            "title": "【2026年3月最新】Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法とビジネス活用ガイド",
-            "description": "Anthropicが2026年3月3日、ClaudeのAI記憶機能を無料プランに開放。ChatGPT・Gemini・Copilotから設定を1分以内でインポートする方法、ビジネス活用のポイントを徹底解説します。",
-            "thumbnail": "/images/blogs_images/blog-card021.webp",
-            "alt": "Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法",
-            "link": "/blogs/blog021.html",
-            "date": "2026-03-04"
-        },
-        {
-            "id": 22,
-            "title": "【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール",
-            "description": "Googleが公式公開したCLIツール「gws」を徹底解説。npm一発でインストールし、MCPサーバーとしてClaude・Gemini CLIと連携してGmail・Drive・Calendarを自動操作する方法を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card022.webp",
-            "alt": "Google Workspace CLIとは？gwsでAIエージェント連携",
-            "link": "/blogs/blog022.html",
-            "date": "2026-03-05"
-        },
-        {
-            "id": 23,
-            "title": "【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革",
-            "description": "Anthropicが開発し業界標準となったMCP（Model Context Protocol）を徹底解説。OpenAI・Google・Microsoftが採用した理由、AIエージェントとの連携方法、中小企業が今すぐ押さえておくべき活用ポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card023.webp",
-            "alt": "MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準",
-            "link": "/blogs/blog023.html",
-            "date": "2026-03-05"
-        },
-        {
-            "id": 24,
-            "title": "【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則",
-            "description": "AI導入が失敗する最大の原因は「AIでできること」から考えるAI起点の発想にある。業務フローを棚卸しして課題を特定する「業務課題ベース」の3ステップで、中小企業でも導入を成功に導く方法を解説します。",
-            "thumbnail": "/images/blogs_images/blog-card024.webp",
-            "alt": "AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則",
-            "link": "/blogs/blog024.html",
-            "date": "2026-03-05"
-        },
-        {
-            "id": 25,
-            "title": "【2026年3月最新】AI事業者ガイドライン改定とは？AIエージェント時代に企業が押さえるべき新ルール",
-            "description": "AI事業者ガイドラインが2026年3月に改定。AIエージェントとフィジカルAIに「人間の判断必須」のルールが追加されます。中小企業が知っておくべき改定ポイントと具体的な対応ステップを解説します。",
-            "thumbnail": "/images/blogs_images/blog-card025.webp",
-            "alt": "AI事業者ガイドライン改定 AIエージェント時代の新ルール",
-            "link": "/blogs/blog025.html",
-            "date": "2026-03-08"
-        },
-        {
-            "id": 26,
-            "title": "【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例",
-            "description": "AIエージェントとは自律的に業務を遂行するAIです。Gartnerは2026年末に企業アプリの40%がAIエージェント搭載と予測。中小企業向けの具体的な活用事例・始め方3ステップを解説します。",
-            "thumbnail": "/images/blogs_images/blog-card026.webp",
-            "alt": "AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例",
-            "link": "/blogs/blog026.html",
-            "date": "2026-03-08"
-        },
-        {
-            "id": 27,
-            "title": "【2026年最新】Nano Banana 2とは？初代から進化した5つのポイントと活用法",
-            "description": "GoogleのAI画像生成モデル「Nano Banana 2」が2026年2月リリース。初代より3倍速・コスト75%削減・テキスト精度向上など5つの進化ポイントを解説。中小企業・マーケターがすぐ使える活用法も紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card027.webp",
-            "alt": "Nano Banana 2とは？初代から進化した5つのポイントと活用法",
-            "link": "/blogs/blog027.html",
-            "date": "2026-03-08"
-        },
-        {
-            "id": 28,
-            "title": "【2026年3月最新】GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線",
-            "description": "OpenAIが2026年3月5日にリリースしたGPT-5.4を徹底解説。ネイティブPC操作・105万トークン・ChatGPT for Excelなど、ビジネスを変える新機能と中小企業向けの活用法を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card028.webp",
-            "alt": "GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線",
-            "link": "/blogs/blog028.html",
-            "date": "2026-03-09"
-        },
-        {
-            "id": 29,
-            "title": "【2026年最新】デジタル化・AI導入補助金とは？中小企業が最大450万円を活用する申請ガイド",
-            "description": "2026年にIT導入補助金から名称変更された「デジタル化・AI導入補助金」を徹底解説。最大450万円の補助額、5つの申請枠、スケジュール、AI導入で活用するポイントを中小企業向けに紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card029.webp",
-            "alt": "デジタル化・AI導入補助金2026の申請ガイド",
-            "link": "/blogs/blog029.html",
-            "date": "2026-03-10"
-        },
-        {
-            "id": 30,
-            "title": "【2026年最新】n8n構築・開発のおすすめ会社5選！自社に最適なパートナーの選び方",
-            "description": "オープンソースの自動化ツール「n8n」の導入やワークフロー構築を依頼できるおすすめの会社5選をご紹介します。MIRAINAなどの専門企業を中心に、各社の強みや選定ポイントをわかりやすく解説します。",
-            "thumbnail": "/images/blogs_images/blog-card030.webp",
-            "alt": "【2026年最新】n8n構築・開発のおすすめ会社5選！自社に最適なパートナーの選び方",
-            "link": "/blogs/blog030.html",
-            "date": "2026-03-11"
-        },
-        {
-            "id": 31,
-            "title": "【2026年最新】美容サロン向け生成AI活用ガイド！業務効率化と売上アップの具体策",
-            "description": "美容室やエステ・ネイルサロンなどの美容サロン向けに、最新の生成AI活用法を徹底解説。予約対応の自動化から、SNSの投稿文・画像生成まで、日々の業務をラクにして売上アップに繋げる具体策をご紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card031.webp",
-            "alt": "【2026年最新】美容サロン向け生成AI活用ガイド！業務効率化と売上アップの具体策",
-            "link": "/blogs/blog031.html",
-            "date": "2026-03-11"
-        },
-        {
-            "id": 32,
-            "title": "【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方",
-            "description": "Google Geminiに待望の音楽生成機能（Lyria 3）が登場。テキストから30秒の楽曲を自動生成する方法や、プロモーション動画のBGM作成など、ビジネスでの具体的な活用法をわかりやすく解説します。",
-            "thumbnail": "/images/blogs_images/blog-card032.webp",
-            "alt": "【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方",
-            "link": "/blogs/blog032.html",
-            "date": "2026-03-11"
-        },
-        {
-            "id": 33,
-            "title": "【2026年3月最新】Google Workspace Geminiとは？新機能を解説",
-            "description": "Google Workspace Geminiの新機能を解説。Docsの文書生成、Sheetsの自動入力、DriveのAI検索など、2026年3月発表の業務効率化ポイントと注意点を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card033.webp",
-            "alt": "Google Workspace Gemini新機能のイメージ",
-            "link": "/blogs/blog033.html",
-            "date": "2026-03-12"
-        },
-        {
-            "id": 34,
-            "title": "【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能",
-            "description": "Agent 365とは何かを解説。Microsoft 365 Copilot Wave 3で発表されたAIエージェント管理機能の特徴、料金、活用法、導入時の注意点を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card034.webp",
-            "alt": "Agent 365によるAIエージェント管理のイメージ",
-            "link": "/blogs/blog034.html",
-            "date": "2026-03-13"
-        },
-        {
-            "id": 35,
-            "title": "【2026年3月最新】MetaのAI詐欺対策とは？なりすまし広告を防ぐ新機能",
-            "description": "MetaのAI詐欺対策を解説。Facebook・Instagram・WhatsAppで進む顔認証、本人確認、注意喚起の強化と、中小企業が取るべき対策を整理します。",
-            "thumbnail": "/images/blogs_images/blog-card035.webp",
-            "alt": "MetaのAI詐欺対策のイメージ",
-            "link": "/blogs/blog035.html",
-            "date": "2026-03-14"
-        },
-        {
-            "id": 36,
-            "title": "【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法",
-            "description": "Codexとは何かを解説。OpenAIが2026年3月11日に公開した楽天事例をもとに、AIコーディング導入の効果、使い方、注意点を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card036.webp",
-            "alt": "Codexと楽天のAI開発導入イメージ",
-            "link": "/blogs/blog036.html",
-            "date": "2026-03-15"
-        },
-        {
-            "id": 37,
-            "title": "【2026年3月最新】Claude Partner Networkとは？Anthropicが1億ドル投資で企業AI導入を加速",
-            "description": "AnthropicがClaude Partner Networkを2026年3月12日に発表。1億ドル規模の投資でアクセンチュア等と協力し企業のAI導入を加速する新プログラムの特徴・特典・日本企業への影響を解説します。",
-            "thumbnail": "/images/blogs_images/blog-card037.webp",
-            "alt": "Claude Partner NetworkとAnthropicの企業AI導入支援",
-            "link": "/blogs/blog037.html",
-            "date": "2026-03-15"
-        },
-        {
-            "id": 38,
-            "title": "【2026年3月最新】Promptfooとは？OpenAI買収で進むAIエージェント評価とセキュリティ",
-            "description": "Promptfooとは何かを解説。OpenAIが2026年3月9日に買収した背景をもとに、AIエージェントの評価、レッドチーミング、セキュリティ対策がなぜ重要になるのかを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card038.webp",
-            "alt": "PromptfooとAIエージェント評価基盤のイメージ",
-            "link": "/blogs/blog038.html",
-            "date": "2026-03-16"
-        },
-        {
-            "id": 39,
-            "title": "【2026年最新調査】管理職のAI活用遅れが企業成長を阻む｜7割超の課題と解決策",
-            "description": "管理職・経営層のAI活用遅れによる業務支障が7割超の企業で発生。2026年管理職1,008名調査をもとに、課長・リーダー職がAIを使いこなせない原因と解決策を解説します。",
-            "thumbnail": "/images/blogs_images/blog-card039.webp",
-            "alt": "管理職のAI活用遅れと組織課題・解決策のイメージ",
-            "link": "/blogs/blog039.html",
-            "date": "2026-03-16"
-        },
-        {
-            "id": 40,
-            "title": "【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤",
-            "description": "Gemini Embedding 2とは何かを解説。Googleが2026年3月10日に公開したマルチモーダル埋め込みモデルの特徴、RAG・社内検索への効果、導入時の注意点を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card040.webp",
-            "alt": "Gemini Embedding 2で社内検索とマルチモーダルRAGを強化するイメージ",
-            "link": "/blogs/blog040.html",
-            "date": "2026-03-17"
-        },
-        {
-            "id": 41,
-            "title": "【2026年3月最新】NVIDIA GTC 2026とは？Vera Rubin発表でわかるAIエージェント時代の到来と企業への影響",
-            "description": "NVIDIA GTC 2026（3月16〜19日開催）の主要発表を解説。Vera Rubin GPUの性能・NemoClawによるエージェントAI・日本企業への影響と、中小企業が今すぐ押さえるべきポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card041.webp",
-            "alt": "NVIDIA GTC 2026 Vera Rubin発表とAIエージェント時代の到来イメージ",
-            "link": "/blogs/blog041.html",
-            "date": "2026-03-17"
-        },
-        {
-            "id": 42,
-            "title": "【2026年3月最新】OpenAI・Anthropic「企業向けAI合弁会社」とは？法人AI市場争奪戦と中小企業への影響",
-            "description": "OpenAIがTPG・Bain等と約1.5兆円の企業向けAI合弁会社を協議。AnthropicもBlackstoneと法人展開で交渉中。2大AIが「法人市場」に本格参入する背景と、中小企業が今知るべき対応策を解説します。",
-            "thumbnail": "/images/blogs_images/blog-card042.webp",
-            "alt": "OpenAI・Anthropicの企業向けAI合弁会社と法人AI市場争奪戦のイメージ",
-            "link": "/blogs/blog042.html",
-            "date": "2026-03-18"
-        },
-        {
-            "id": 43,
-            "title": "【2026年3月最新】物理AIとは？ABB×NVIDIA提携で変わる工場自動化の新常識",
-            "description": "物理AIとは何かを解説。ABB RoboticsとNVIDIAが2026年3月9日に発表した提携をもとに、デジタルツイン、工場自動化、導入時の注意点を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card043.webp",
-            "alt": "物理AIとABB×NVIDIA提携で変わる工場自動化のイメージ",
-            "link": "/blogs/blog043.html",
-            "date": "2026-03-20"
-        },
-        {
-            "id": 44,
-            "title": "【2026年最新】新型Siri（LLM Siri）とは？iOS 26.4で実現するApple史上最大のAIアップデート",
-            "description": "AppleがiOS 26.4で提供予定の新型Siri（LLM Siri）を徹底解説。Google Gemini搭載で画面認識・アプリ横断操作が可能に。3つの新機能と中小企業が押さえるべきビジネス活用のポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card044.webp",
-            "alt": "新型Siri（LLM Siri）iOS 26.4 Apple AIアップデートのイメージ",
-            "link": "/blogs/blog044.html",
-            "date": "2026-03-20"
-        },
-        {
-            "id": 45,
-            "title": "【2026年3月最新】エージェントコマースとは？Visa「Agentic Ready」で始まるAI決済時代と企業の備え",
-            "description": "エージェントコマースとは何かを解説。Visaが2026年3月17日に発表した「Agentic Ready」プログラムをもとに、AIエージェント決済の仕組み、市場規模、中小企業が今備えるべきポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card045.webp",
-            "alt": "エージェントコマースとVisa Agentic ReadyによるAI決済時代のイメージ",
-            "link": "/blogs/blog045.html",
-            "date": "2026-03-21"
-        },
-        {
-            "id": 46,
-            "title": "【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代",
-            "description": "カスタマイズAIとは何かを解説。Thinking Machines LabとNVIDIAの2026年3月10日の提携、Tinkerの学習APIをもとに、自社専用AIの作り方と導入判断を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card046.webp",
-            "alt": "カスタマイズAIとThinking Machines×NVIDIAが示す自社専用AI時代のイメージ",
-            "link": "/blogs/blog046.html",
-            "date": "2026-03-22"
-        },
-        {
-            "id": 47,
-            "title": "【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法",
-            "description": "OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。料金・ベンチマーク・速度比較から、サブエージェント構成での活用法と中小企業が押さえるべきポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card047.webp",
-            "alt": "GPT-5.4 MiniとNanoの高速・低コスト小型AIモデル活用法のイメージ",
-            "link": "/blogs/blog047.html",
-            "date": "2026-03-22"
-        },
-        {
-            "id": 48,
-            "title": "【2026年3月最新】Agentforce Contact Centerとは？AIコンタクトセンターで顧客対応はどう変わる",
-            "description": "Agentforce Contact Centerとは何かを解説。Salesforceが2026年3月10日に発表したAIコンタクトセンターの特徴、料金、活用法、導入時の注意点を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card048.webp",
-            "alt": "Agentforce Contact CenterでAIコンタクトセンターの顧客対応が変わるイメージ",
-            "link": "/blogs/blog048.html",
-            "date": "2026-03-23"
-        },
-        {
-            "id": 49,
-            "title": "【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化",
-            "description": "OpenClawとは何かを解説。GitHub24万スター超のオープンソースAIエージェント、NVIDIAのNemoClaw、Jensen Huang「次のChatGPT」発言の背景と、中小企業が今知るべきポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card049.webp",
-            "alt": "OpenClawとNVIDIA NemoClawによるオープンソースAIエージェントの業務自動化イメージ",
-            "link": "/blogs/blog049.html",
-            "date": "2026-03-23"
-        },
-        {
-            "id": 50,
-            "title": "【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み",
-            "description": "Work IQとは何かを解説。Microsoftが2026年3月9日に発表したCopilotの知識レイヤーの仕組み、CoworkやE7との関係、中小企業での活用ポイントを紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card050.webp",
-            "alt": "Work IQでCopilotが社内文脈を理解する仕組みのイメージ",
-            "link": "/blogs/blog050.html",
-            "date": "2026-03-24"
-        },
-        {
-            "id": 51,
-            "title": "【2026年3月最新】GPT-4o終了とは？ChatGPTモデル移行で企業が確認すべき3つのこと",
-            "description": "GPT-4o終了の時期と影響範囲を解説。OpenAI公式情報をもとに、2026年2月13日の退役、4月3日のCustom GPT完全終了、企業が進めるべきモデル移行対応を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card051.webp",
-            "alt": "GPT-4o終了とChatGPTモデル移行で企業が確認すべきポイントのイメージ",
-            "link": "/blogs/blog051.html",
-            "date": "2026-03-25"
-        },
-        {
-            "id": 52,
-            "title": "【2026年3月最新】ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる",
-            "description": "ChatGPT File Libraryとは何かを解説。2026年3月23日の新機能と25日のGoogle Drive統合をもとに、社内資料の再利用、管理上の注意点、中小企業での活用法を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card052.webp",
-            "alt": "ChatGPT File LibraryとGoogle Drive統合で社内資料の再利用が変わるイメージ",
-            "link": "/blogs/blog052.html",
-            "date": "2026-03-26"
-        },
-        {
-            "id": 53,
-            "title": "【2026年3月最新】ChatGPT shopping updatesとは？AI検索で商品が売れる条件",
-            "description": "ChatGPT shopping updatesの要点を解説。OpenAI公式情報をもとに、検索意図の変化、AIが引用しやすい商品情報、EC事業者が今やるべき対策を紹介します。",
-            "thumbnail": "/images/blogs_images/blog-card053.webp",
-            "alt": "ChatGPT shopping updatesとAI検索で商品が売れる条件のイメージ",
-            "link": "/blogs/blog053.html",
-            "date": "2026-03-26"
-        },
-        {
-            "id": 54,
-            "title": "【2026年3月最新】ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法",
-            "description": "ChatGPT Workspace Analyticsとは何かを解説。OpenAI公式情報をもとに、3月12日の新機能公開とImpact surveyの考え方から、社内AI活用の定着度を見える化する方法を紹介します。",
-            "link": "/blogs/blog054.html",
-            "thumbnail": "/images/blogs_images/blog-card054.webp",
-            "alt": "ChatGPT Workspace Analyticsで社内AI活用の定着度を見える化するイメージ",
-            "date": "2026-03-27"
-        },
-        {
-            "id": 55,
-            "title": "【2026年3月最新】Claude Computer Useとは？スマホからPC操作を任せるAI自動化の始め方",
-            "description": "Claude Computer Useとは何かを解説。Anthropicが2026年3月23日に公開したPC操作機能の仕組み、Dispatchによるスマホ遠隔指示、ビジネス活用のポイントと注意点を紹介します。",
-            "link": "/blogs/blog055.html",
-            "thumbnail": "/images/blogs_images/blog-card055.webp",
-            "alt": "Claude Computer UseでスマホからPC操作を任せるAI自動化のイメージ",
-            "date": "2026-03-29"
-        },
-        {
-            "id": 56,
-            "title": "【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法",
-            "description": "Codex Pluginsとは何かを解説。OpenAI公式情報をもとに、2026年3月26日の新機能、プラグイン構成、チーム開発で再利用ワークフローを標準化する実践手順を紹介します。",
-            "link": "/blogs/blog056.html",
-            "thumbnail": "/images/blogs_images/blog-card056.webp",
-            "alt": "Codex Pluginsでチーム開発のAIワークフローを標準化するイメージ",
-            "date": "2026-03-29"
-        },
-        {
-            "id": 57,
-            "title": "【2026年3月最新】Sora終了とは？OpenAI撤退の背景と企業が学ぶべきAIツール選定の教訓",
-            "description": "Sora終了とは何かを解説。OpenAIが2026年3月24日に発表した動画生成AI撤退の背景、Disney10億ドル契約の白紙化、代替ツール比較、企業がAI選定で失敗しないための判断基準を紹介します。",
-            "link": "/blogs/blog057.html",
-            "thumbnail": "/images/blogs_images/blog-card057.webp",
-            "alt": "Sora終了とOpenAI撤退の背景から学ぶAIツール選定の教訓のイメージ",
-            "date": "2026-03-30"
-        },
-        {
-            "id": 58,
-            "title": "【2026年3月最新】ジェネシス・ミッションとは？米AI国家計画24社参画が日本企業に与える影響",
-            "description": "ジェネシス・ミッションとは何かを解説。米エネルギー省がOpenAI・Google・NVIDIAなど24社と推進するAI国家計画の全容、日本の協力体制、中小企業が押さえるべき影響と準備を紹介します。",
-            "link": "/blogs/blog058.html",
-            "thumbnail": "/images/blogs_images/blog-card058.webp",
-            "alt": "ジェネシス・ミッションと米AI国家計画24社参画が日本企業に与える影響のイメージ",
-            "date": "2026-03-31"
-        },
-        {
-            "id": 59,
-            "title": "【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策",
-            "description": "OpenAI Safety Bug Bountyを解説。MCP経由のprompt injection・データ流出リスクと、企業が実装すべきAIエージェントの防御策を整理します。",
-            "link": "/blogs/blog059.html",
-            "thumbnail": "/images/blogs_images/blog-card059.webp",
-            "alt": "OpenAI Safety Bug BountyとMCP時代のAIセキュリティ対策のイメージ",
-            "date": "2026-04-01"
-        },
-        {
-            "id": 60,
-            "title": "【2026年4月最新】AIエージェント導入で失敗する企業の5つのパターン｜セキュリティ・ガバナンス・成功チェックリスト",
-            "description": "AIエージェント導入で失敗する5つのパターンとセキュリティリスクを解説。責任論・プロンプトインジェクション・野良エージェント対策、成功企業の3つのアクションを紹介します。",
-            "link": "/blogs/blog060.html",
-            "thumbnail": "/images/blogs_images/blog-card060.webp",
-            "alt": "AIエージェント導入で失敗する企業の5つのパターンと対策",
-            "date": "2026-04-01"
-        },
-        {
-            "id": 61,
-            "title": "【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方",
-            "description": "OpenAI Model Specをもとに、AIがどんな指示を優先し、どんな記事を引用しやすいかを解説。AI初心者の検索行動と、企業サイトが整えるべき構造化ポイントを紹介します。",
-            "link": "/blogs/blog061.html",
-            "thumbnail": "/images/blogs_images/blog-card061.webp",
-            "alt": "OpenAI Model SpecとAIに引用される記事作りの考え方",
-            "date": "2026-04-01"
-        },
-        {
-            "id": 62,
-            "title": "【2026年4月最新】LLMO対策で企業が埋もれない戦略｜AI Overviews対策・llms.txt・E-E-A-T強化ガイド",
-            "description": "AI Overviewsのクリック率34%低下への対応策を解説。LLMO対策57項目チェックリスト、llms.txt設置方法、E-E-A-T強化など、今から実装すべき3ステップを紹介。",
-            "link": "/blogs/blog062.html",
-            "thumbnail": "/images/blogs_images/blog-card062.webp",
-            "alt": "LLMO対策：AI検索時代のSEO戦略",
-            "date": "2026-04-02"
-        },
-        {
-            "id": 63,
-            "title": "【2026年4月最新】AIエージェント導入失敗パターン徹底解説｜成功企業との5つの差・ガバナンス対策・セキュリティチェックリスト",
-            "description": "AIエージェント導入成功率わずか25%。失敗パターン5つ（目的曖昧・データ未整備・現場不在・PoC止まり・ROI未測定）と成功企業の実装条件、セキュリティ・ガバナンス対策を実務チェックリスト付きで解説。",
-            "link": "/blogs/blog063.html",
-            "thumbnail": "/images/blogs_images/blog-card063.webp",
-            "alt": "AIエージェント導入失敗パターンと成功企業の対策",
-            "date": "2026-04-02"
-        },
-        {
-            "id": 64,
-            "title": "【2026年4月最新】OpenAIが1220億ドルを調達、中小企業のAI導入コストと選定基準が変わる理由",
-            "description": "OpenAIが1220億ドルを調達した発表と1M企業利用の広がりをもとに、AI導入コスト・内製化・ベンダー選定の見直しポイントを解説します。",
-            "link": "/blogs/blog064.html",
-            "thumbnail": "/images/blogs_images/blog-card064.webp",
-            "alt": "OpenAIの大型資金調達と中小企業のAI導入判断の変化",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 65,
-            "title": "【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド",
-            "description": "RAGの仕組み・メリット・失敗事例を図解。生成AIのハルシネーション対策、自社データ活用、企業導入事例（LINEヤフー・アサヒビール・JR東日本）を わかりやすく解説します。",
-            "link": "/blogs/blog065.html",
-            "thumbnail": "/images/blogs_images/blog-card065.webp",
-            "alt": "RAGの仕組みと企業活用のイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 66,
-            "title": "【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド：研修・開発支援・LLMO対策の最適な組み合わせ",
-            "description": "PoC失敗40%の理由と対策。AI導入成功企業の体制・研修・開発支援を整理。MIRAINAの4つのサービスを段階別に比較ガイド。自社の段階に応じた最適なサービス選択を解説します。",
-            "link": "/blogs/blog066.html",
-            "thumbnail": "/images/blogs_images/blog-card066.webp",
-            "alt": "AI導入サービス選択ガイドのイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 67,
-            "title": "【2026年4月最新】経営層こそClaude Codeを学ぶべき理由｜外注見積もりと意思決定の速度が変わる",
-            "description": "経営層こそClaude Codeを学ぶべき理由を、外注見積もり・採用難・意思決定速度の観点から解説。経営者が自分で触るべき理由を整理します。",
-            "link": "/blogs/blog067.html",
-            "thumbnail": "/images/blogs_images/blog-card067.webp",
-            "alt": "経営層がClaude Codeを学ぶべき理由のイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 68,
-            "title": "【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド",
-            "description": "AIメモリとは何かを、Googleが2026年3月26日に発表したGeminiの会話履歴・メモリ移行機能をもとに解説。AI初心者の検索意図、乗り換え時の注意点、企業の運用ルールを整理します。",
-            "link": "/blogs/blog068.html",
-            "thumbnail": "/images/blogs_images/blog-card068.webp",
-            "alt": "AIメモリとGeminiの会話履歴引き継ぎイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 69,
-            "title": "【2026年4月最新】AIエージェント元年：自動化される業務と経営戦略の完全ガイド",
-            "description": "AIエージェント（agentic workflow）が2026年に本格化する理由と、日本企業の導入事例・課題を解説。Model Context Protocolなど実装基盤も整理します。",
-            "link": "/blogs/blog069.html",
-            "thumbnail": "/images/blogs_images/blog-card069.webp",
-            "alt": "AIエージェント元年2026のイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 70,
-            "title": "【2026年4月最新】ソフトバンクがOpenAIへ100億ドル実行｜追加出資300億ドル計画を企業はどう読むべきか",
-            "description": "ソフトバンクのOpenAI向け100億ドル実行を公式開示ベースで整理。300億ドル追加出資と400億ドルブリッジ枠の構造から、中小企業のAI投資判断で見るべき条件を解説します。",
-            "link": "/blogs/blog070.html",
-            "thumbnail": "/images/blogs_images/blog-card070.webp",
-            "alt": "ソフトバンクによるOpenAI追加出資100億ドル実行のイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 71,
-            "title": "【2026年4月最新】エージェンティックマーケティングとは？AIが自律的に推進する次世代戦略",
-            "description": "エージェンティックマーケティング（agentic marketing）の定義から、AIが自律的に推進するマーケティング自動化、企業導入事例、失敗事例や導入課題、中小企業が今すぐ取り組むべき実装ステップまでを実務的に解説します。",
-            "link": "/blogs/blog071.html",
-            "thumbnail": "/images/blogs_images/blog-card071.webp",
-            "alt": "エージェンティックマーケティングとAI自動化のイメージ",
-            "date": "2026-04-03"
-        },
-        {
-            "id": 74,
-            "title": "【2026年4月最新】LLMO対策とは？中小企業がAI検索で引用されるための実装ガイド",
-            "description": "LLMO（大規模言語モデル最適化）とは何かを、AIクリック率61%減の現状から解説。llms.txt、構造化データ、中小企業の実装ステップを整理します。",
-            "link": "/blogs/blog074.html",
-            "thumbnail": "/images/blogs_images/blog-card074.webp",
-            "alt": "LLMO対策でAI検索に引用されるイメージ",
-            "date": "2026-04-04"
-        },
-        {
-            "id": 73,
-            "title": "【2026年4月最新】Anthropic Coworkとは？非エンジニアもAIエージェント自動化を始める実装ガイド",
-            "description": "Coworkとは何かをAnthropicの2026年1月リリース・3月自動承認拡張から解説。非エンジニア向けAIエージェント機能、導入トレードオフ、中小企業の実装ステップを整理します。",
-            "link": "/blogs/blog073.html",
-            "thumbnail": "/images/blogs_images/blog-card073.webp",
-            "alt": "Anthropic Coworkで実現するAIエージェント自動化のイメージ",
-            "date": "2026-04-04"
-        },
-        {
-            "id": 72,
-            "title": "【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド",
-            "description": "Gemma 4とは何かをGoogle DeepMindの2026年4月2日発表をもとに解説。4サイズ構成、Apache 2.0、オンデバイス導入の判断基準を整理します。",
-            "link": "/blogs/blog072.html",
-            "thumbnail": "/images/blogs_images/blog-card072.webp",
-            "alt": "Gemma 4でオンデバイスAIを実装するイメージ",
-            "date": "2026-04-04"
-        }
-    ],
-    "works": [
-        {
-            "id": 1,
-            "title": "保護者向けAIリテラシー講演",
-            "description": "福岡市で開催。AI時代の子どもたちの危険性や安全なAI活用法について、保護者様向けに分かりやすく解説しました。",
-            "thumbnail": "./images/works_images/work-card001.webp",
-            "alt": "保護者向けAIリテラシー講演",
-            "link": "/works/work001.html",
-            "date": "2026-01-10"
-        },
-        {
-            "id": 2,
-            "title": "株式会社Niarail様：n8n × SlackでDM送信自動化",
-            "description": "n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。約15時間の作業削減・約3万円のコスト削減を実現。",
-            "thumbnail": "./images/works_images/work-card002.webp",
-            "alt": "株式会社Niarail様：n8n × SlackでDM送信自動化",
-            "link": "/works/work002.html",
-            "date": "2025-08-10"
-        },
-        {
-            "id": 3,
-            "title": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
-            "description": "n8nを用いてLP分析のための要素抽出を自動化。LP１件あたり約40分・合計約70時間以上の業務時間削減を実現。",
-            "thumbnail": "/images/works_images/work-card003.webp",
-            "alt": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
-            "link": "/works/work003.html",
-            "date": "2025-09-15"
-        },
-        {
-            "id": 4,
-            "title": "株式会社LiaN様：応募メール自動転記",
-            "description": "Gmailに届く応募メールを自動解析し、スプレッドシートに転記。対応スピード向上と手作業削減を実現しました。",
-            "thumbnail": "./images/works_images/work-card004.webp",
-            "alt": "株式会社LiaN様：応募メール自動転記システム導入",
-            "link": "/works/work004.html",
-            "date": "2025-10-20"
-        },
-        {
-            "id": 5,
-            "title": "AIエージェント開発会社A様：n8n勉強会を実施",
-            "description": "JSONと配列の基礎学習からn8nでのワークフロー実装まで、座学とワークショップで開発チームの基礎力を底上げ。",
-            "thumbnail": "./images/works_images/work-card005.webp",
-            "alt": "AIエージェント開発会社A様：n8n勉強会",
-            "link": "/works/work005.html",
-            "date": "2025-11-25"
-        },
-        {
-            "id": 6,
-            "title": "AIエージェント開発会社A様：第2回n8n勉強会を実施",
-            "description": "n8nのノードを体系化し、実装の限界値を学習。実務を想定したメール自動化フロー構築のワークショップを実施。",
-            "thumbnail": "./images/works_images/work-card006.webp",
-            "alt": "AIエージェント開発会社A様：第2回n8n勉強会",
-            "link": "/works/work006.html",
-            "date": "2025-12-20"
-        },
-        {
-            "id": 7,
-            "title": "美容業界マーケターとAI・LLMO対策を深掘りするセミナーに登壇",
-            "description": "美容師歴10年のマーケター・岩田良介氏と共催。AIの仕組みからRAG・LLMO対策まで専門家視点で解説し、サロン集客のアルゴリズムレベルの戦略を提示。",
-            "thumbnail": "/images/works_images/work-card007.webp",
-            "alt": "美容業界マーケターとAI・LLMO対策を深掘りするセミナー登壇",
-            "link": "/works/work007.html",
-            "date": "2026-01-17"
-        },
-        {
-            "id": 8,
-            "title": "LLMO Insightのプレスリリースを公開",
-            "description": "MIRAINAが2026年3月16日にAI検索レポーティングサービス「LLMO Insight」のプレスリリースを公開。表示シェア可視化、競合比較、GA4連携の考え方を整理した発表です。",
-            "thumbnail": "/images/works_images/work-card008.webp",
-            "alt": "LLMO Insightのプレスリリースキービジュアル",
-            "link": "/works/work008.html",
-            "date": "2026-03-16"
-        }
-    ]
+  "blogs": [
+    {
+      "id": 1,
+      "title": "AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法",
+      "description": "AI開発の基礎知識から実践的な開発手法まで、初心者向けにわかりやすく解説。",
+      "thumbnail": "/images/blogs_images/blog-card001.webp",
+      "alt": "AI開発とは？",
+      "link": "/blogs/blog001.html",
+      "date": "2025-09-01"
+    },
+    {
+      "id": 2,
+      "title": "Gemini活用で経営とマーケティングを革新する実践ガイド",
+      "description": "Googleが開発した高性能AIモデルであるGeminiを活用し、経営戦略の策定やマーケティング施策の立案を革新する実践的なガイドです。プロンプトエンジニアリングから他AIツールとの連携まで、ビジネスでの活用方法を詳しく解説します。",
+      "thumbnail": "/images/blogs_images/blog-card002.webp",
+      "alt": "Gemini活用で経営とマーケティングを革新する実践ガイド",
+      "link": "/blogs/blog002.html",
+      "date": "2025-09-05"
+    },
+    {
+      "id": 3,
+      "title": "パーソナルコーチ Arist 様との業務提携のお知らせ",
+      "description": "MIRAINAは、家庭教師・オンライン個別学習を行う「パーソナルコーチ Arist（アリスト）」様と業務提携いたしました。本提携により、MIRAINAのAI活用ノウハウを掛け合わせた学習体験の質向上を共同で推進します。",
+      "thumbnail": "/images/blogs_images/blog-card003.webp",
+      "alt": "パーソナルコーチ Arist 様との業務提携のお知らせ",
+      "link": "/blogs/blog003.html",
+      "date": "2025-09-10"
+    },
+    {
+      "id": 4,
+      "title": "【2026年版】AI研修おすすめ徹底比較！あなたの目的に合う講座を見つけよう",
+      "description": "最新のAI研修を徹底比較！学習目的や形式、サポート体制に応じたおすすめ講座をわかりやすく紹介。AI活用を加速させたい企業や個人必見の内容です。",
+      "thumbnail": "/images/blogs_images/blog-card004.webp",
+      "alt": "【2026年版】AI研修おすすめ徹底比較！あなたの目的に合う講座を見つけよう",
+      "link": "/blogs/blog004.html",
+      "date": "2025-09-15"
+    },
+    {
+      "id": 5,
+      "title": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
+      "description": "AI要約でCTRが低下する時代に、SEOだけでは足りない理由と、生成AIに引用されるためのLLMO実践手順を体系的に解説。SEO担当者が今日から動ける完全ガイドです。",
+      "thumbnail": "/images/blogs_images/blog-card005.webp",
+      "alt": "LLMO（大規模言語モデル最適化）が“本当に”重要な理由：SEOマーケター向け完全ガイド",
+      "link": "/blogs/blog005.html",
+      "date": "2025-09-20"
+    },
+    {
+      "id": 6,
+      "title": "LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説",
+      "description": "ChatGPTやGemini以後に変化する情報設計の最前線。AIに“選ばれる”ための<strong>LLMO（大規模言語モデル最適化）</strong>を、研究と実務の両面からわかりやすく解説。SEO担当者の次の一手が見える内容です。",
+      "thumbnail": "/images/blogs_images/blog-card006.webp",
+      "alt": "LLMOとは？生成AI時代に求められる“次世代SEO”を研究と実務の両面から解説",
+      "link": "/blogs/blog006.html",
+      "date": "2025-09-25"
+    },
+    {
+      "id": 7,
+      "title": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
+      "description": "生成AIが検索の主役となる時代に必須のAIO（AI検索最適化）を解説。SEOとの違いから具体的ステップまで、AIに“引用される”ための実践ノウハウを体系的にまとめています。",
+      "thumbnail": "/images/blogs_images/blog-card007.webp",
+      "alt": "AIO（AI検索最適化）とは？SEOマーケターが知っておくべき次世代の最重要戦略",
+      "link": "/blogs/blog007.html",
+      "date": "2025-10-01"
+    },
+    {
+      "id": 8,
+      "title": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
+      "description": "Google検索に導入されたAIモード（AI Mode）とは何かを、特徴・AI Overviewsとの違い・日本語対応の背景・企業が直面する課題・LLMO最適化の考え方まで体系的に解説。AI検索時代に備える実務ガイドです。",
+      "thumbnail": "/images/blogs_images/blog-card008.webp",
+      "alt": "AIモード（AI Mode）とは？──検索が“会話”に変わる新時代のはじまり",
+      "link": "/blogs/blog008.html",
+      "date": "2025-10-05"
+    },
+    {
+      "id": 9,
+      "title": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
+      "description": "総合対話・文章生成・画像生成・動画生成・業務効率化まで、用途別に“本当に使える”AIを厳選紹介。 選び方の6基準、導入時の注意点、研究動向と今後の展望もまとめた実務ガイドです。",
+      "thumbnail": "/images/blogs_images/blog-card009.webp",
+      "alt": "【2025年版】AIおすすめツール完全ガイド — 目的別に最適なAIを徹底比較",
+      "link": "/blogs/blog009.html",
+      "date": "2025-10-10"
+    },
+    {
+      "id": 10,
+      "title": "Sprout Design 工房 様との業務提携のお知らせ",
+      "description": "MIRAINAは、成果につながるホームページ制作を行うSprout Design 工房と業務提携しました。AI導入支援とWeb制作を組み合わせ、中小企業のデジタルマーケティングを強力にサポートします。",
+      "thumbnail": "/images/blogs_images/blog-card010.webp",
+      "alt": "Sprout Design 工房 様との業務提携のお知らせ",
+      "link": "/blogs/blog010.html",
+      "date": "2025-10-15"
+    },
+    {
+      "id": 11,
+      "title": "【最新版】/llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
+      "description": "AI時代に注目される/llms.txt（/llms.txt）とは何かを、SEO・AIO・LLMOの観点から徹底解説。メリット、注意点、活用シーン、導入判断などを専門家視点でまとめた2025年最新ガイド。",
+      "thumbnail": "/images/blogs_images/blog-card011.webp",
+      "alt": "【最新版】/llms.txtとは？AI時代に求められる新しい最適化ファイルを徹底解説",
+      "link": "/blogs/blog011.html",
+      "date": "2025-10-20"
+    },
+    {
+      "id": 12,
+      "title": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
+      "description": "Google Deepmindが開発した次世代AIエディター「Antigravity」とは何かを徹底解説。Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。",
+      "thumbnail": "/images/blogs_images/blog-card012.png",
+      "alt": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
+      "link": "/blogs/blog012.html",
+      "date": "2025-10-25"
+    },
+    {
+      "id": 13,
+      "title": "【2026年最新】Gemini3.0とは？料金や特徴、活用事例を徹底解説",
+      "description": "Googleの最新AIモデル「Gemini 3.0」の全貌を解説。Deep ThinkモードやAgentic機能などの新機能から、マーケティング・開発・業務効率化への具体的な活用事例まで、ビジネスパーソン必見の情報を網羅。",
+      "thumbnail": "/images/blogs_images/blog-card013.webp",
+      "alt": "【2026年最新】Gemini3.0とは？料金や特徴、活用事例を徹底解説",
+      "link": "/blogs/blog013.html",
+      "date": "2025-10-30"
+    },
+    {
+      "id": 14,
+      "title": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
+      "description": "LLMO（大規模言語モデル最適化）とSEOは対立するものではなく、相互に補完し合う関係です。本記事では、両者の構造的な違い、共通点、そしてこれからのマーケティングに求められる統合的な戦略について、中級者向けに深掘り解説します。",
+      "thumbnail": "/images/blogs_images/blog-card014.webp",
+      "alt": "LLMOとSEOの違いとは？共通点と統合的なマーケティング戦略",
+      "link": "/blogs/blog014.html",
+      "date": "2025-11-05"
+    },
+    {
+      "id": 15,
+      "title": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
+      "description": "広告業界に革命を起こす「Gemini 3.0」と「Nanobanana Pro」。エージェント型マーケティングによる自動化や、AI画像生成によるブランド一貫性の担保など、最新の活用事例と具体的なメリットを徹底解説します。",
+      "thumbnail": "/images/blogs_images/blog-card015.webp",
+      "alt": "【広告業界必見】Gemini 3.0とNanobanana Proで変わるクリエイティブ制作の未来",
+      "link": "/blogs/blog015.html",
+      "date": "2025-11-10"
+    },
+    {
+      "id": 16,
+      "title": "AI活用事例5選：業界別・職種別の成功事例と導入の基本",
+      "description": "AI活用の基本から、製造・サービス・医療・金融・マーケティングの業界別成功事例5選、そして導入の具体的ステップまでを徹底解説。ビジネスでのAI活用に役立つ情報満載です。",
+      "thumbnail": "/images/blogs_images/blog-card016.webp",
+      "alt": "AI活用事例5選：業界別・職種別の成功事例と導入の基本",
+      "link": "/blogs/blog016.html",
+      "date": "2025-11-15"
+    },
+    {
+      "id": 17,
+      "title": "LLMOの導入効果とは？─AI流入増加の事例と具体的な対策",
+      "description": "LLMO（大規模言語モデル最適化）を導入することで得られる具体的な効果、AI流入増加の事例、そして今すぐ始められる対策ステップを解説。AI検索時代に勝ち残るためのマーケティング戦略です。",
+      "thumbnail": "/images/blogs_images/blog-card017.webp",
+      "alt": "LLMOの導入効果とは？─AI流入増加の事例と具体的な対策",
+      "link": "/blogs/blog017.html",
+      "date": "2025-11-20"
+    },
+    {
+      "id": 18,
+      "title": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
+      "description": "2025年11月にリリースされたAnthropic社の最新AI「Claude Opus 4.5」を徹底解説。圧倒的なコーディング能力、思考深度を調整できるEffortパラメータ、そして完成形に近づいたComputer Use機能など、ビジネスを変革する新機能を詳しく紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card018.webp",
+      "alt": "【2025年最新】Claude Opus 4.5とは？フラッグシップAIモデルの全貌と活用メリット",
+      "link": "/blogs/blog018.html",
+      "date": "2025-11-28"
+    },
+    {
+      "id": 19,
+      "title": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
+      "description": "Googleの最新AIエージェントサービス「Google Workspace Studio（GWS）」を徹底解説。Gemini 3搭載のノーコード開発環境で、業務自動化がどう変わるのか？具体的な活用事例や他社ツールとの比較も交えて紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card019.webp",
+      "alt": "【2026年最新】Google Workspace Studio（GWS）とは？AIエージェントで業務自動化が変わる",
+      "link": "/blogs/blog019.html",
+      "date": "2026-01-10"
+    },
+    {
+      "id": 20,
+      "title": "【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット",
+      "description": "OpenAIが2026年2月に発表した企業向けAIプラットフォーム「OpenAI Frontier」を徹底解説。AIエージェントの一元管理、SaaSへの影響、導入企業の成功事例、日本企業が取るべきアクションまで詳しく紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card020.webp",
+      "alt": "【2026年最新】OpenAI Frontierとは？企業向けAIエージェント基盤の全貌と活用メリット",
+      "link": "/blogs/blog020.html",
+      "date": "2026-03-04"
+    },
+    {
+      "id": 21,
+      "title": "【2026年3月最新】Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法とビジネス活用ガイド",
+      "description": "Anthropicが2026年3月3日、ClaudeのAI記憶機能を無料プランに開放。ChatGPT・Gemini・Copilotから設定を1分以内でインポートする方法、ビジネス活用のポイントを徹底解説します。",
+      "thumbnail": "/images/blogs_images/blog-card021.webp",
+      "alt": "Claudeのメモリ機能が無料開放！ChatGPTからの乗り換え方法",
+      "link": "/blogs/blog021.html",
+      "date": "2026-03-04"
+    },
+    {
+      "id": 22,
+      "title": "【2026年最新】Google Workspace CLIとは？ターミナルからGmail・Drive・CalendarをAIと操作する革新ツール",
+      "description": "Googleが公式公開したCLIツール「gws」を徹底解説。npm一発でインストールし、MCPサーバーとしてClaude・Gemini CLIと連携してGmail・Drive・Calendarを自動操作する方法を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card022.webp",
+      "alt": "Google Workspace CLIとは？gwsでAIエージェント連携",
+      "link": "/blogs/blog022.html",
+      "date": "2026-03-05"
+    },
+    {
+      "id": 23,
+      "title": "【2026年3月最新】MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準が中小企業にもたらす変革",
+      "description": "Anthropicが開発し業界標準となったMCP（Model Context Protocol）を徹底解説。OpenAI・Google・Microsoftが採用した理由、AIエージェントとの連携方法、中小企業が今すぐ押さえておくべき活用ポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card023.webp",
+      "alt": "MCP（Model Context Protocol）とは？AIと業務システムをつなぐ業界標準",
+      "link": "/blogs/blog023.html",
+      "date": "2026-03-05"
+    },
+    {
+      "id": 24,
+      "title": "【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則",
+      "description": "AI導入が失敗する最大の原因は「AIでできること」から考えるAI起点の発想にある。業務フローを棚卸しして課題を特定する「業務課題ベース」の3ステップで、中小企業でも導入を成功に導く方法を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card024.webp",
+      "alt": "AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則",
+      "link": "/blogs/blog024.html",
+      "date": "2026-03-05"
+    },
+    {
+      "id": 25,
+      "title": "【2026年3月最新】AI事業者ガイドライン改定とは？AIエージェント時代に企業が押さえるべき新ルール",
+      "description": "AI事業者ガイドラインが2026年3月に改定。AIエージェントとフィジカルAIに「人間の判断必須」のルールが追加されます。中小企業が知っておくべき改定ポイントと具体的な対応ステップを解説します。",
+      "thumbnail": "/images/blogs_images/blog-card025.webp",
+      "alt": "AI事業者ガイドライン改定 AIエージェント時代の新ルール",
+      "link": "/blogs/blog025.html",
+      "date": "2026-03-08"
+    },
+    {
+      "id": 26,
+      "title": "【2026年最新】AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例",
+      "description": "AIエージェントとは自律的に業務を遂行するAIです。Gartnerは2026年末に企業アプリの40%がAIエージェント搭載と予測。中小企業向けの具体的な活用事例・始め方3ステップを解説します。",
+      "thumbnail": "/images/blogs_images/blog-card026.webp",
+      "alt": "AIエージェントとは？中小企業が今すぐ始められる活用法と導入事例",
+      "link": "/blogs/blog026.html",
+      "date": "2026-03-08"
+    },
+    {
+      "id": 27,
+      "title": "【2026年最新】Nano Banana 2とは？初代から進化した5つのポイントと活用法",
+      "description": "GoogleのAI画像生成モデル「Nano Banana 2」が2026年2月リリース。初代より3倍速・コスト75%削減・テキスト精度向上など5つの進化ポイントを解説。中小企業・マーケターがすぐ使える活用法も紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card027.webp",
+      "alt": "Nano Banana 2とは？初代から進化した5つのポイントと活用法",
+      "link": "/blogs/blog027.html",
+      "date": "2026-03-08"
+    },
+    {
+      "id": 28,
+      "title": "【2026年3月最新】GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線",
+      "description": "OpenAIが2026年3月5日にリリースしたGPT-5.4を徹底解説。ネイティブPC操作・105万トークン・ChatGPT for Excelなど、ビジネスを変える新機能と中小企業向けの活用法を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card028.webp",
+      "alt": "GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線",
+      "link": "/blogs/blog028.html",
+      "date": "2026-03-09"
+    },
+    {
+      "id": 29,
+      "title": "【2026年最新】デジタル化・AI導入補助金とは？中小企業が最大450万円を活用する申請ガイド",
+      "description": "2026年にIT導入補助金から名称変更された「デジタル化・AI導入補助金」を徹底解説。最大450万円の補助額、5つの申請枠、スケジュール、AI導入で活用するポイントを中小企業向けに紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card029.webp",
+      "alt": "デジタル化・AI導入補助金2026の申請ガイド",
+      "link": "/blogs/blog029.html",
+      "date": "2026-03-10"
+    },
+    {
+      "id": 30,
+      "title": "【2026年最新】n8n構築・開発のおすすめ会社5選！自社に最適なパートナーの選び方",
+      "description": "オープンソースの自動化ツール「n8n」の導入やワークフロー構築を依頼できるおすすめの会社5選をご紹介します。MIRAINAなどの専門企業を中心に、各社の強みや選定ポイントをわかりやすく解説します。",
+      "thumbnail": "/images/blogs_images/blog-card030.webp",
+      "alt": "【2026年最新】n8n構築・開発のおすすめ会社5選！自社に最適なパートナーの選び方",
+      "link": "/blogs/blog030.html",
+      "date": "2026-03-11"
+    },
+    {
+      "id": 31,
+      "title": "【2026年最新】美容サロン向け生成AI活用ガイド！業務効率化と売上アップの具体策",
+      "description": "美容室やエステ・ネイルサロンなどの美容サロン向けに、最新の生成AI活用法を徹底解説。予約対応の自動化から、SNSの投稿文・画像生成まで、日々の業務をラクにして売上アップに繋げる具体策をご紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card031.webp",
+      "alt": "【2026年最新】美容サロン向け生成AI活用ガイド！業務効率化と売上アップの具体策",
+      "link": "/blogs/blog031.html",
+      "date": "2026-03-11"
+    },
+    {
+      "id": 32,
+      "title": "【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方",
+      "description": "Google Geminiに待望の音楽生成機能（Lyria 3）が登場。テキストから30秒の楽曲を自動生成する方法や、プロモーション動画のBGM作成など、ビジネスでの具体的な活用法をわかりやすく解説します。",
+      "thumbnail": "/images/blogs_images/blog-card032.webp",
+      "alt": "【2026年最新】Geminiの音楽生成（Lyria 3）完全ガイド！ビジネス活用法と始め方",
+      "link": "/blogs/blog032.html",
+      "date": "2026-03-11"
+    },
+    {
+      "id": 33,
+      "title": "【2026年3月最新】Google Workspace Geminiとは？新機能を解説",
+      "description": "Google Workspace Geminiの新機能を解説。Docsの文書生成、Sheetsの自動入力、DriveのAI検索など、2026年3月発表の業務効率化ポイントと注意点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card033.webp",
+      "alt": "Google Workspace Gemini新機能のイメージ",
+      "link": "/blogs/blog033.html",
+      "date": "2026-03-12"
+    },
+    {
+      "id": 34,
+      "title": "【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能",
+      "description": "Agent 365とは何かを解説。Microsoft 365 Copilot Wave 3で発表されたAIエージェント管理機能の特徴、料金、活用法、導入時の注意点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card034.webp",
+      "alt": "Agent 365によるAIエージェント管理のイメージ",
+      "link": "/blogs/blog034.html",
+      "date": "2026-03-13"
+    },
+    {
+      "id": 35,
+      "title": "【2026年3月最新】MetaのAI詐欺対策とは？なりすまし広告を防ぐ新機能",
+      "description": "MetaのAI詐欺対策を解説。Facebook・Instagram・WhatsAppで進む顔認証、本人確認、注意喚起の強化と、中小企業が取るべき対策を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card035.webp",
+      "alt": "MetaのAI詐欺対策のイメージ",
+      "link": "/blogs/blog035.html",
+      "date": "2026-03-14"
+    },
+    {
+      "id": 36,
+      "title": "【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法",
+      "description": "Codexとは何かを解説。OpenAIが2026年3月11日に公開した楽天事例をもとに、AIコーディング導入の効果、使い方、注意点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card036.webp",
+      "alt": "Codexと楽天のAI開発導入イメージ",
+      "link": "/blogs/blog036.html",
+      "date": "2026-03-15"
+    },
+    {
+      "id": 37,
+      "title": "【2026年3月最新】Claude Partner Networkとは？Anthropicが1億ドル投資で企業AI導入を加速",
+      "description": "AnthropicがClaude Partner Networkを2026年3月12日に発表。1億ドル規模の投資でアクセンチュア等と協力し企業のAI導入を加速する新プログラムの特徴・特典・日本企業への影響を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card037.webp",
+      "alt": "Claude Partner NetworkとAnthropicの企業AI導入支援",
+      "link": "/blogs/blog037.html",
+      "date": "2026-03-15"
+    },
+    {
+      "id": 38,
+      "title": "【2026年3月最新】Promptfooとは？OpenAI買収で進むAIエージェント評価とセキュリティ",
+      "description": "Promptfooとは何かを解説。OpenAIが2026年3月9日に買収した背景をもとに、AIエージェントの評価、レッドチーミング、セキュリティ対策がなぜ重要になるのかを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card038.webp",
+      "alt": "PromptfooとAIエージェント評価基盤のイメージ",
+      "link": "/blogs/blog038.html",
+      "date": "2026-03-16"
+    },
+    {
+      "id": 39,
+      "title": "【2026年最新調査】管理職のAI活用遅れが企業成長を阻む｜7割超の課題と解決策",
+      "description": "管理職・経営層のAI活用遅れによる業務支障が7割超の企業で発生。2026年管理職1,008名調査をもとに、課長・リーダー職がAIを使いこなせない原因と解決策を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card039.webp",
+      "alt": "管理職のAI活用遅れと組織課題・解決策のイメージ",
+      "link": "/blogs/blog039.html",
+      "date": "2026-03-16"
+    },
+    {
+      "id": 40,
+      "title": "【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤",
+      "description": "Gemini Embedding 2とは何かを解説。Googleが2026年3月10日に公開したマルチモーダル埋め込みモデルの特徴、RAG・社内検索への効果、導入時の注意点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card040.webp",
+      "alt": "Gemini Embedding 2で社内検索とマルチモーダルRAGを強化するイメージ",
+      "link": "/blogs/blog040.html",
+      "date": "2026-03-17"
+    },
+    {
+      "id": 41,
+      "title": "【2026年3月最新】NVIDIA GTC 2026とは？Vera Rubin発表でわかるAIエージェント時代の到来と企業への影響",
+      "description": "NVIDIA GTC 2026（3月16〜19日開催）の主要発表を解説。Vera Rubin GPUの性能・NemoClawによるエージェントAI・日本企業への影響と、中小企業が今すぐ押さえるべきポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card041.webp",
+      "alt": "NVIDIA GTC 2026 Vera Rubin発表とAIエージェント時代の到来イメージ",
+      "link": "/blogs/blog041.html",
+      "date": "2026-03-17"
+    },
+    {
+      "id": 42,
+      "title": "【2026年3月最新】OpenAI・Anthropic「企業向けAI合弁会社」とは？法人AI市場争奪戦と中小企業への影響",
+      "description": "OpenAIがTPG・Bain等と約1.5兆円の企業向けAI合弁会社を協議。AnthropicもBlackstoneと法人展開で交渉中。2大AIが「法人市場」に本格参入する背景と、中小企業が今知るべき対応策を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card042.webp",
+      "alt": "OpenAI・Anthropicの企業向けAI合弁会社と法人AI市場争奪戦のイメージ",
+      "link": "/blogs/blog042.html",
+      "date": "2026-03-18"
+    },
+    {
+      "id": 43,
+      "title": "【2026年3月最新】物理AIとは？ABB×NVIDIA提携で変わる工場自動化の新常識",
+      "description": "物理AIとは何かを解説。ABB RoboticsとNVIDIAが2026年3月9日に発表した提携をもとに、デジタルツイン、工場自動化、導入時の注意点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card043.webp",
+      "alt": "物理AIとABB×NVIDIA提携で変わる工場自動化のイメージ",
+      "link": "/blogs/blog043.html",
+      "date": "2026-03-20"
+    },
+    {
+      "id": 44,
+      "title": "【2026年最新】新型Siri（LLM Siri）とは？iOS 26.4で実現するApple史上最大のAIアップデート",
+      "description": "AppleがiOS 26.4で提供予定の新型Siri（LLM Siri）を徹底解説。Google Gemini搭載で画面認識・アプリ横断操作が可能に。3つの新機能と中小企業が押さえるべきビジネス活用のポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card044.webp",
+      "alt": "新型Siri（LLM Siri）iOS 26.4 Apple AIアップデートのイメージ",
+      "link": "/blogs/blog044.html",
+      "date": "2026-03-20"
+    },
+    {
+      "id": 45,
+      "title": "【2026年3月最新】エージェントコマースとは？Visa「Agentic Ready」で始まるAI決済時代と企業の備え",
+      "description": "エージェントコマースとは何かを解説。Visaが2026年3月17日に発表した「Agentic Ready」プログラムをもとに、AIエージェント決済の仕組み、市場規模、中小企業が今備えるべきポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card045.webp",
+      "alt": "エージェントコマースとVisa Agentic ReadyによるAI決済時代のイメージ",
+      "link": "/blogs/blog045.html",
+      "date": "2026-03-21"
+    },
+    {
+      "id": 46,
+      "title": "【2026年3月最新】カスタマイズAIとは？Thinking Machines×NVIDIAが示す自社専用AI時代",
+      "description": "カスタマイズAIとは何かを解説。Thinking Machines LabとNVIDIAの2026年3月10日の提携、Tinkerの学習APIをもとに、自社専用AIの作り方と導入判断を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card046.webp",
+      "alt": "カスタマイズAIとThinking Machines×NVIDIAが示す自社専用AI時代のイメージ",
+      "link": "/blogs/blog046.html",
+      "date": "2026-03-22"
+    },
+    {
+      "id": 47,
+      "title": "【2026年3月最新】GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法",
+      "description": "OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。料金・ベンチマーク・速度比較から、サブエージェント構成での活用法と中小企業が押さえるべきポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card047.webp",
+      "alt": "GPT-5.4 MiniとNanoの高速・低コスト小型AIモデル活用法のイメージ",
+      "link": "/blogs/blog047.html",
+      "date": "2026-03-22"
+    },
+    {
+      "id": 48,
+      "title": "【2026年3月最新】Agentforce Contact Centerとは？AIコンタクトセンターで顧客対応はどう変わる",
+      "description": "Agentforce Contact Centerとは何かを解説。Salesforceが2026年3月10日に発表したAIコンタクトセンターの特徴、料金、活用法、導入時の注意点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card048.webp",
+      "alt": "Agentforce Contact CenterでAIコンタクトセンターの顧客対応が変わるイメージ",
+      "link": "/blogs/blog048.html",
+      "date": "2026-03-23"
+    },
+    {
+      "id": 49,
+      "title": "【2026年3月最新】OpenClawとは？NVIDIAも本気のオープンソースAIエージェントが変える業務自動化",
+      "description": "OpenClawとは何かを解説。GitHub24万スター超のオープンソースAIエージェント、NVIDIAのNemoClaw、Jensen Huang「次のChatGPT」発言の背景と、中小企業が今知るべきポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card049.webp",
+      "alt": "OpenClawとNVIDIA NemoClawによるオープンソースAIエージェントの業務自動化イメージ",
+      "link": "/blogs/blog049.html",
+      "date": "2026-03-23"
+    },
+    {
+      "id": 50,
+      "title": "【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み",
+      "description": "Work IQとは何かを解説。Microsoftが2026年3月9日に発表したCopilotの知識レイヤーの仕組み、CoworkやE7との関係、中小企業での活用ポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card050.webp",
+      "alt": "Work IQでCopilotが社内文脈を理解する仕組みのイメージ",
+      "link": "/blogs/blog050.html",
+      "date": "2026-03-24"
+    },
+    {
+      "id": 51,
+      "title": "【2026年3月最新】GPT-4o終了とは？ChatGPTモデル移行で企業が確認すべき3つのこと",
+      "description": "GPT-4o終了の時期と影響範囲を解説。OpenAI公式情報をもとに、2026年2月13日の退役、4月3日のCustom GPT完全終了、企業が進めるべきモデル移行対応を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card051.webp",
+      "alt": "GPT-4o終了とChatGPTモデル移行で企業が確認すべきポイントのイメージ",
+      "link": "/blogs/blog051.html",
+      "date": "2026-03-25"
+    },
+    {
+      "id": 52,
+      "title": "【2026年3月最新】ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる",
+      "description": "ChatGPT File Libraryとは何かを解説。2026年3月23日の新機能と25日のGoogle Drive統合をもとに、社内資料の再利用、管理上の注意点、中小企業での活用法を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card052.webp",
+      "alt": "ChatGPT File LibraryとGoogle Drive統合で社内資料の再利用が変わるイメージ",
+      "link": "/blogs/blog052.html",
+      "date": "2026-03-26"
+    },
+    {
+      "id": 53,
+      "title": "【2026年3月最新】ChatGPT shopping updatesとは？AI検索で商品が売れる条件",
+      "description": "ChatGPT shopping updatesの要点を解説。OpenAI公式情報をもとに、検索意図の変化、AIが引用しやすい商品情報、EC事業者が今やるべき対策を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card053.webp",
+      "alt": "ChatGPT shopping updatesとAI検索で商品が売れる条件のイメージ",
+      "link": "/blogs/blog053.html",
+      "date": "2026-03-26"
+    },
+    {
+      "id": 54,
+      "title": "【2026年3月最新】ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法",
+      "description": "ChatGPT Workspace Analyticsとは何かを解説。OpenAI公式情報をもとに、3月12日の新機能公開とImpact surveyの考え方から、社内AI活用の定着度を見える化する方法を紹介します。",
+      "link": "/blogs/blog054.html",
+      "thumbnail": "/images/blogs_images/blog-card054.webp",
+      "alt": "ChatGPT Workspace Analyticsで社内AI活用の定着度を見える化するイメージ",
+      "date": "2026-03-27"
+    },
+    {
+      "id": 55,
+      "title": "【2026年3月最新】Claude Computer Useとは？スマホからPC操作を任せるAI自動化の始め方",
+      "description": "Claude Computer Useとは何かを解説。Anthropicが2026年3月23日に公開したPC操作機能の仕組み、Dispatchによるスマホ遠隔指示、ビジネス活用のポイントと注意点を紹介します。",
+      "link": "/blogs/blog055.html",
+      "thumbnail": "/images/blogs_images/blog-card055.webp",
+      "alt": "Claude Computer UseでスマホからPC操作を任せるAI自動化のイメージ",
+      "date": "2026-03-29"
+    },
+    {
+      "id": 56,
+      "title": "【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法",
+      "description": "Codex Pluginsとは何かを解説。OpenAI公式情報をもとに、2026年3月26日の新機能、プラグイン構成、チーム開発で再利用ワークフローを標準化する実践手順を紹介します。",
+      "link": "/blogs/blog056.html",
+      "thumbnail": "/images/blogs_images/blog-card056.webp",
+      "alt": "Codex Pluginsでチーム開発のAIワークフローを標準化するイメージ",
+      "date": "2026-03-29"
+    },
+    {
+      "id": 57,
+      "title": "【2026年3月最新】Sora終了とは？OpenAI撤退の背景と企業が学ぶべきAIツール選定の教訓",
+      "description": "Sora終了とは何かを解説。OpenAIが2026年3月24日に発表した動画生成AI撤退の背景、Disney10億ドル契約の白紙化、代替ツール比較、企業がAI選定で失敗しないための判断基準を紹介します。",
+      "link": "/blogs/blog057.html",
+      "thumbnail": "/images/blogs_images/blog-card057.webp",
+      "alt": "Sora終了とOpenAI撤退の背景から学ぶAIツール選定の教訓のイメージ",
+      "date": "2026-03-30"
+    },
+    {
+      "id": 58,
+      "title": "【2026年3月最新】ジェネシス・ミッションとは？米AI国家計画24社参画が日本企業に与える影響",
+      "description": "ジェネシス・ミッションとは何かを解説。米エネルギー省がOpenAI・Google・NVIDIAなど24社と推進するAI国家計画の全容、日本の協力体制、中小企業が押さえるべき影響と準備を紹介します。",
+      "link": "/blogs/blog058.html",
+      "thumbnail": "/images/blogs_images/blog-card058.webp",
+      "alt": "ジェネシス・ミッションと米AI国家計画24社参画が日本企業に与える影響のイメージ",
+      "date": "2026-03-31"
+    },
+    {
+      "id": 59,
+      "title": "【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策",
+      "description": "OpenAI Safety Bug Bountyを解説。MCP経由のprompt injection・データ流出リスクと、企業が実装すべきAIエージェントの防御策を整理します。",
+      "link": "/blogs/blog059.html",
+      "thumbnail": "/images/blogs_images/blog-card059.webp",
+      "alt": "OpenAI Safety Bug BountyとMCP時代のAIセキュリティ対策のイメージ",
+      "date": "2026-04-01"
+    },
+    {
+      "id": 60,
+      "title": "【2026年4月最新】AIエージェント導入で失敗する企業の5つのパターン｜セキュリティ・ガバナンス・成功チェックリスト",
+      "description": "AIエージェント導入で失敗する5つのパターンとセキュリティリスクを解説。責任論・プロンプトインジェクション・野良エージェント対策、成功企業の3つのアクションを紹介します。",
+      "link": "/blogs/blog060.html",
+      "thumbnail": "/images/blogs_images/blog-card060.webp",
+      "alt": "AIエージェント導入で失敗する企業の5つのパターンと対策",
+      "date": "2026-04-01"
+    },
+    {
+      "id": 61,
+      "title": "【2026年4月最新】OpenAI Model Specとは？AIに引用される記事とプロンプトの作り方",
+      "description": "OpenAI Model Specをもとに、AIがどんな指示を優先し、どんな記事を引用しやすいかを解説。AI初心者の検索行動と、企業サイトが整えるべき構造化ポイントを紹介します。",
+      "link": "/blogs/blog061.html",
+      "thumbnail": "/images/blogs_images/blog-card061.webp",
+      "alt": "OpenAI Model SpecとAIに引用される記事作りの考え方",
+      "date": "2026-04-01"
+    },
+    {
+      "id": 62,
+      "title": "【2026年4月最新】LLMO対策で企業が埋もれない戦略｜AI Overviews対策・llms.txt・E-E-A-T強化ガイド",
+      "description": "AI Overviewsのクリック率34%低下への対応策を解説。LLMO対策57項目チェックリスト、llms.txt設置方法、E-E-A-T強化など、今から実装すべき3ステップを紹介。",
+      "link": "/blogs/blog062.html",
+      "thumbnail": "/images/blogs_images/blog-card062.webp",
+      "alt": "LLMO対策：AI検索時代のSEO戦略",
+      "date": "2026-04-02"
+    },
+    {
+      "id": 63,
+      "title": "【2026年4月最新】AIエージェント導入失敗パターン徹底解説｜成功企業との5つの差・ガバナンス対策・セキュリティチェックリスト",
+      "description": "AIエージェント導入成功率わずか25%。失敗パターン5つ（目的曖昧・データ未整備・現場不在・PoC止まり・ROI未測定）と成功企業の実装条件、セキュリティ・ガバナンス対策を実務チェックリスト付きで解説。",
+      "link": "/blogs/blog063.html",
+      "thumbnail": "/images/blogs_images/blog-card063.webp",
+      "alt": "AIエージェント導入失敗パターンと成功企業の対策",
+      "date": "2026-04-02"
+    },
+    {
+      "id": 64,
+      "title": "【2026年4月最新】OpenAIが1220億ドルを調達、中小企業のAI導入コストと選定基準が変わる理由",
+      "description": "OpenAIが1220億ドルを調達した発表と1M企業利用の広がりをもとに、AI導入コスト・内製化・ベンダー選定の見直しポイントを解説します。",
+      "link": "/blogs/blog064.html",
+      "thumbnail": "/images/blogs_images/blog-card064.webp",
+      "alt": "OpenAIの大型資金調達と中小企業のAI導入判断の変化",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 65,
+      "title": "【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド",
+      "description": "RAGの仕組み・メリット・失敗事例を図解。生成AIのハルシネーション対策、自社データ活用、企業導入事例（LINEヤフー・アサヒビール・JR東日本）を わかりやすく解説します。",
+      "link": "/blogs/blog065.html",
+      "thumbnail": "/images/blogs_images/blog-card065.webp",
+      "alt": "RAGの仕組みと企業活用のイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 66,
+      "title": "【2026年4月最新】AI導入PoC止まりを回避する段階別サービス選択ガイド：研修・開発支援・LLMO対策の最適な組み合わせ",
+      "description": "PoC失敗40%の理由と対策。AI導入成功企業の体制・研修・開発支援を整理。MIRAINAの4つのサービスを段階別に比較ガイド。自社の段階に応じた最適なサービス選択を解説します。",
+      "link": "/blogs/blog066.html",
+      "thumbnail": "/images/blogs_images/blog-card066.webp",
+      "alt": "AI導入サービス選択ガイドのイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 67,
+      "title": "【2026年4月最新】経営層こそClaude Codeを学ぶべき理由｜外注見積もりと意思決定の速度が変わる",
+      "description": "経営層こそClaude Codeを学ぶべき理由を、外注見積もり・採用難・意思決定速度の観点から解説。経営者が自分で触るべき理由を整理します。",
+      "link": "/blogs/blog067.html",
+      "thumbnail": "/images/blogs_images/blog-card067.webp",
+      "alt": "経営層がClaude Codeを学ぶべき理由のイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 68,
+      "title": "【2026年4月最新】AIメモリとは？ChatGPTからGeminiへ会話履歴を引き継ぐ時代の使い分けガイド",
+      "description": "AIメモリとは何かを、Googleが2026年3月26日に発表したGeminiの会話履歴・メモリ移行機能をもとに解説。AI初心者の検索意図、乗り換え時の注意点、企業の運用ルールを整理します。",
+      "link": "/blogs/blog068.html",
+      "thumbnail": "/images/blogs_images/blog-card068.webp",
+      "alt": "AIメモリとGeminiの会話履歴引き継ぎイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 69,
+      "title": "【2026年4月最新】AIエージェント元年：自動化される業務と経営戦略の完全ガイド",
+      "description": "AIエージェント（agentic workflow）が2026年に本格化する理由と、日本企業の導入事例・課題を解説。Model Context Protocolなど実装基盤も整理します。",
+      "link": "/blogs/blog069.html",
+      "thumbnail": "/images/blogs_images/blog-card069.webp",
+      "alt": "AIエージェント元年2026のイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 70,
+      "title": "【2026年4月最新】ソフトバンクがOpenAIへ100億ドル実行｜追加出資300億ドル計画を企業はどう読むべきか",
+      "description": "ソフトバンクのOpenAI向け100億ドル実行を公式開示ベースで整理。300億ドル追加出資と400億ドルブリッジ枠の構造から、中小企業のAI投資判断で見るべき条件を解説します。",
+      "link": "/blogs/blog070.html",
+      "thumbnail": "/images/blogs_images/blog-card070.webp",
+      "alt": "ソフトバンクによるOpenAI追加出資100億ドル実行のイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 71,
+      "title": "【2026年4月最新】エージェンティックマーケティングとは？AIが自律的に推進する次世代戦略",
+      "description": "エージェンティックマーケティング（agentic marketing）の定義から、AIが自律的に推進するマーケティング自動化、企業導入事例、失敗事例や導入課題、中小企業が今すぐ取り組むべき実装ステップまでを実務的に解説します。",
+      "link": "/blogs/blog071.html",
+      "thumbnail": "/images/blogs_images/blog-card071.webp",
+      "alt": "エージェンティックマーケティングとAI自動化のイメージ",
+      "date": "2026-04-03"
+    },
+    {
+      "id": 74,
+      "title": "【2026年4月最新】LLMO対策とは？中小企業がAI検索で引用されるための実装ガイド",
+      "description": "LLMO（大規模言語モデル最適化）とは何かを、AIクリック率61%減の現状から解説。llms.txt、構造化データ、中小企業の実装ステップを整理します。",
+      "link": "/blogs/blog074.html",
+      "thumbnail": "/images/blogs_images/blog-card074.webp",
+      "alt": "LLMO対策でAI検索に引用されるイメージ",
+      "date": "2026-04-04"
+    },
+    {
+      "id": 73,
+      "title": "【2026年4月最新】Anthropic Coworkとは？非エンジニアもAIエージェント自動化を始める実装ガイド",
+      "description": "Coworkとは何かをAnthropicの2026年1月リリース・3月自動承認拡張から解説。非エンジニア向けAIエージェント機能、導入トレードオフ、中小企業の実装ステップを整理します。",
+      "link": "/blogs/blog073.html",
+      "thumbnail": "/images/blogs_images/blog-card073.webp",
+      "alt": "Anthropic Coworkで実現するAIエージェント自動化のイメージ",
+      "date": "2026-04-04"
+    },
+    {
+      "id": 72,
+      "title": "【2026年4月最新】Gemma 4とは？中小企業がオンデバイスAIを始める実装ガイド",
+      "description": "Gemma 4とは何かをGoogle DeepMindの2026年4月2日発表をもとに解説。4サイズ構成、Apache 2.0、オンデバイス導入の判断基準を整理します。",
+      "link": "/blogs/blog072.html",
+      "thumbnail": "/images/blogs_images/blog-card072.webp",
+      "alt": "Gemma 4でオンデバイスAIを実装するイメージ",
+      "date": "2026-04-04"
+    },
+    {
+      "id": 75,
+      "title": "【2026年4月最新】Anthropic Conwayとは？常時稼働AIエージェントの仕組みと中小企業への影響",
+      "description": "ConwayとはAnthropicが2026年4月にテスト中の常時稼働AIエージェント。独立UI・Webhook起動・CNW ZIP拡張の仕組み、Claude Codeとの違い、中小企業への活用ポイントを整理します。",
+      "link": "/blogs/blog075.html",
+      "thumbnail": "/images/blogs_images/blog-card075.webp",
+      "alt": "Anthropic Conwayによる常時稼働AIエージェントのイメージ",
+      "date": "2026-04-05"
+    },
+    {
+      "id": 76,
+      "title": "美容室に常時稼働AIエージェントが来たら何が変わるか―Conway記事を書いて思ったこと",
+      "description": "美容室に常時稼働AIエージェントを導入したら何が変わるか、AIコンサルタント・芝優作が推測。指名客の失客防止・薬剤発注・シフト管理・次回予約取得率への影響と、温かみとのトレードオフを考察します。",
+      "link": "/blogs/blog076.html",
+      "thumbnail": "/images/blogs_images/blog-card076.webp",
+      "alt": "美容室と常時稼働AIエージェントのイメージ",
+      "date": "2026-04-05"
+    },
+    {
+      "id": 77,
+      "title": "【2026年4月最新】OpenAIスーパーアプリとは？ChatGPT・Codex・Atlas統合が中小企業に与える影響",
+      "description": "OpenAIが2026年4月に完了した史上最大1220億ドル調達とデスクトップ統合スーパーアプリ戦略を解説。ChatGPT・Codex・Atlasブラウザが一本化されると何が変わるか、中小企業が今準備すべきことをまとめました。",
+      "link": "/blogs/blog077.html",
+      "thumbnail": "/images/blogs_images/blog-card077.webp",
+      "alt": "OpenAIスーパーアプリ ChatGPT Codex Atlas 統合イメージ",
+      "date": "2026-04-05"
+    },
+    {
+      "id": 78,
+      "title": "【2026年4月最新】Claude Opus 4.6とは？1Mトークン・Agent Teamsが中小企業のAI活用を変える実装ガイド",
+      "description": "2026年2月にAnthropicが発表したClaude Opus 4.6とSonnet 4.6の新機能を解説。1Mトークンコンテキスト・Agent Teams・Adaptive Thinkingが中小企業のAI自動化にどう使えるかを実例とコスト比較で整理しました。",
+      "thumbnail": "/images/blogs_images/blog-card078.webp",
+      "alt": "Claude Opus 4.6 1Mトークン Agent Teams 中小企業AI活用",
+      "link": "/blogs/blog078.html",
+      "date": "2026-04-05"
+    },
+    {
+      "id": 79,
+      "title": "【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準",
+      "description": "2026年2月19日にGoogle DeepMindが公開したGemini 3.1 Proの性能と料金を解説。GPQA Diamond 94.3%・ARC-AGI-2 77.1%・SWE-Bench 80.6%の数値の意味と、Claude・GPT-5との使い分け判断基準を中小企業向けに整理しました。",
+      "thumbnail": "/images/blogs_images/blog-card079.webp",
+      "alt": "Gemini 3.1 Pro 16ベンチマーク13冠 AIモデル比較",
+      "link": "/blogs/blog079.html",
+      "date": "2026-04-05"
+    },
+    {
+      "id": 80,
+      "title": "【2026年4月最新】LLMO効果測定とは？AI引用シェアを可視化する3指標と実践ツール比較",
+      "description": "LLMO効果測定の3指標（AI言及シェア・引用ドメイン・CV率）と、Keywordmap「AI検索結果レポート（β版）」など2026年最新ツールを解説。8割超の企業が対策中のいま、中小企業が実践できる測定ステップも紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card080.webp",
+      "alt": "LLMO効果測定 AI引用シェア 可視化ツール比較 2026",
+      "link": "/blogs/blog080.html",
+      "date": "2026-04-06"
+    },
+    {
+      "id": 81,
+      "title": "【2026年4月最新】AIエージェント導入ガイド：SOMPO30,000人導入に見る中小企業向け3つの成功パターン",
+      "description": "SOMPOが2026年1月に開始した30,000人規模のAIエージェント導入から見える、中小企業向けの3つの成功パターンを解説。ノーコード実装、営業・マーケティング自動化、ROI測定の実践ステップを網羅。2026年の企業競争力強化に必須の実装ガイドです。",
+      "thumbnail": "/images/blogs_images/blog-card081.webp",
+      "alt": "AIエージェント導入 SOMPO 中小企業 ノーコード実装",
+      "link": "/blogs/blog081.html",
+      "date": "2026-04-06"
+    },
+    {
+      "id": 82,
+      "title": "【2026年4月最新】Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド",
+      "description": "2026年4月2日にGoogleが公開したGemma 4の4モデル構成（E2B〜31B Dense）とApache 2.0商用無料化の意味を解説。AIME数学4.3倍・LiveCodeBench 2.7倍向上、256Kコンテキスト対応。中小企業がオープンAIを自社活用する実践ガイド。",
+      "thumbnail": "/images/blogs_images/blog-card082.webp",
+      "alt": "Gemma 4 Apache 2.0 商用解禁 オープンAI 中小企業活用",
+      "link": "/blogs/blog082.html",
+      "date": "2026-04-06"
+    }
+  ],
+  "works": [
+    {
+      "id": 1,
+      "title": "保護者向けAIリテラシー講演",
+      "description": "福岡市で開催。AI時代の子どもたちの危険性や安全なAI活用法について、保護者様向けに分かりやすく解説しました。",
+      "thumbnail": "./images/works_images/work-card001.webp",
+      "alt": "保護者向けAIリテラシー講演",
+      "link": "/works/work001.html",
+      "date": "2026-01-10"
+    },
+    {
+      "id": 2,
+      "title": "株式会社Niarail様：n8n × SlackでDM送信自動化",
+      "description": "n8nを用いてSlackの新規参加を検知し、Googleフォームの案内DMを自動送信。約15時間の作業削減・約3万円のコスト削減を実現。",
+      "thumbnail": "./images/works_images/work-card002.webp",
+      "alt": "株式会社Niarail様：n8n × SlackでDM送信自動化",
+      "link": "/works/work002.html",
+      "date": "2025-08-10"
+    },
+    {
+      "id": 3,
+      "title": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
+      "description": "n8nを用いてLP分析のための要素抽出を自動化。LP１件あたり約40分・合計約70時間以上の業務時間削減を実現。",
+      "thumbnail": "/images/works_images/work-card003.webp",
+      "alt": "株式会社たなぼた様：n8n × ChatGPTでLP分析の業務効率化",
+      "link": "/works/work003.html",
+      "date": "2025-09-15"
+    },
+    {
+      "id": 4,
+      "title": "株式会社LiaN様：応募メール自動転記",
+      "description": "Gmailに届く応募メールを自動解析し、スプレッドシートに転記。対応スピード向上と手作業削減を実現しました。",
+      "thumbnail": "./images/works_images/work-card004.webp",
+      "alt": "株式会社LiaN様：応募メール自動転記システム導入",
+      "link": "/works/work004.html",
+      "date": "2025-10-20"
+    },
+    {
+      "id": 5,
+      "title": "AIエージェント開発会社A様：n8n勉強会を実施",
+      "description": "JSONと配列の基礎学習からn8nでのワークフロー実装まで、座学とワークショップで開発チームの基礎力を底上げ。",
+      "thumbnail": "./images/works_images/work-card005.webp",
+      "alt": "AIエージェント開発会社A様：n8n勉強会",
+      "link": "/works/work005.html",
+      "date": "2025-11-25"
+    },
+    {
+      "id": 6,
+      "title": "AIエージェント開発会社A様：第2回n8n勉強会を実施",
+      "description": "n8nのノードを体系化し、実装の限界値を学習。実務を想定したメール自動化フロー構築のワークショップを実施。",
+      "thumbnail": "./images/works_images/work-card006.webp",
+      "alt": "AIエージェント開発会社A様：第2回n8n勉強会",
+      "link": "/works/work006.html",
+      "date": "2025-12-20"
+    },
+    {
+      "id": 7,
+      "title": "美容業界マーケターとAI・LLMO対策を深掘りするセミナーに登壇",
+      "description": "美容師歴10年のマーケター・岩田良介氏と共催。AIの仕組みからRAG・LLMO対策まで専門家視点で解説し、サロン集客のアルゴリズムレベルの戦略を提示。",
+      "thumbnail": "/images/works_images/work-card007.webp",
+      "alt": "美容業界マーケターとAI・LLMO対策を深掘りするセミナー登壇",
+      "link": "/works/work007.html",
+      "date": "2026-01-17"
+    },
+    {
+      "id": 8,
+      "title": "LLMO Insightのプレスリリースを公開",
+      "description": "MIRAINAが2026年3月16日にAI検索レポーティングサービス「LLMO Insight」のプレスリリースを公開。表示シェア可視化、競合比較、GA4連携の考え方を整理した発表です。",
+      "thumbnail": "/images/works_images/work-card008.webp",
+      "alt": "LLMO Insightのプレスリリースキービジュアル",
+      "link": "/works/work008.html",
+      "date": "2026-03-16"
+    },
+    {
+      "id": 9,
+      "title": "大阪9店舗の美容室グループ様：LLMOコンサルティング初月でAI引用数47%増",
+      "description": "大阪府内9店舗を展開する美容室グループへのLLMOコンサルティング事例。独自ツール分析とNotionによる施策管理により、初月からAI検索引用数が約47%増加。2ヶ月目以降もさらに加速中。",
+      "thumbnail": "/images/works_images/work-card009.webp",
+      "alt": "大阪9店舗の美容室グループ様LLMOコンサルティング事例",
+      "link": "/works/work009.html",
+      "date": "2026-04-05"
+    }
+  ]
 }

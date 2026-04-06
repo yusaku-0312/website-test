@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準 | MIRAINAブログ</title>
+    <meta name="description"
+        content="2026年2月19日にGoogle DeepMindが公開したGemini 3.1 Proの性能と料金を解説。GPQA Diamond 94.3%・ARC-AGI-2 77.1%・SWE-Bench 80.6%の数値の意味と、Claude・GPT-5との使い分け判断基準を中小企業向けに整理しました。">
+    <meta property="og:title" content="【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog079.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog079-1.webp">
+    <meta property="og:description"
+        content="2026年2月19日にGoogle DeepMindが公開したGemini 3.1 Proの性能と料金を解説。GPQA Diamond 94.3%・ARC-AGI-2 77.1%・SWE-Bench 80.6%の数値の意味と、Claude・GPT-5との使い分け判断基準を中小企業向けに整理しました。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.05</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">Google</p>
+                        <p class="article-tag">AI活用</p>
+                        <p class="article-tag">AIモデル比較</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog079-1.webp" alt="Gemini 3.1 Pro 16ベンチマーク13冠 AIモデル比較 中小企業" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年2月19日、Google DeepMindがGemini 3.1 Proを正式公開した。
+                    16の主要ベンチマーク中13冠を達成し、特に博士レベルの科学問題を問う
+                    <strong>GPQA Diamond で人間専門家を超える94.3%</strong>、
+                    コーディング評価の<strong>SWE-Bench Verified で80.6%</strong>を記録した。
+                    数字だけ見れば「最強モデル」だが、中小企業が実際に使うかどうかは別の話だ。
+                    コスト・用途・既存システムとの相性を踏まえて、Claude・GPT-5とどう使い分けるべきかを整理した。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Gemini 3.1 Proとは？2026年2月19日発表の概要と主要スペック</a></li>
+                    <li><a href="#section2">2. 16ベンチマーク13冠の実力——3つの数値が示すAI能力の現在地</a></li>
+                    <li><a href="#section3">3. コストと速度の比較：Gemini 3.1 Pro vs Claude vs GPT-5、どちらを選ぶか</a></li>
+                    <li><a href="#section4">4. 失敗事例から学ぶ：Gemini導入で陥りやすい3つの落とし穴</a></li>
+                    <li><a href="#section5">5. まとめ：Gemini 3.1 Proを中小企業が試す3ステップ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Gemini 3.1 Proとは？2026年2月19日発表の概要と主要スペック</h2>
+
+                <p>
+                    【公式情報】Google DeepMindは2026年2月19日、Gemini 3.1 Proをモデルカードとともに正式公開した。
+                    Gemini 3.1シリーズはFlash・Pro・Ultraの3グレード構成で、
+                    Proは「高精度」と「実用コスト」のバランス点として位置づけられている。
+                    コンテキストウィンドウは1Mトークン（約75万語）、
+                    生成速度は131.4トークン/秒とGemini 2.0 Pro比で大幅に改善されている。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">性能</span>
+                            <span class="step-text">16ベンチ<br>中13冠<br>（Feb 2026）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">速度</span>
+                            <span class="step-text">131.4<br>tok/s<br>（高速推論）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">文脈</span>
+                            <span class="step-text">1M<br>トークン<br>コンテキスト</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">利用</span>
+                            <span class="step-text">Google AI Pro<br>¥2,900/月<br>API対応</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：Gemini 3.1 Proの主要スペック（2026年2月時点）</p>
+                </div>
+
+                <p>
+                    【解釈】一般ユーザー向けの入り口としては、Google AI Pro（旧Google One AI Premium）が月額¥2,900で
+                    Gemini 3.1 Proを含むサービスへのアクセスを提供している。
+                    開発者・法人向けにはGoogle AI Studio / Vertex AI経由でAPIが利用可能だ。
+                    API料金の詳細はGoogleの公式料金ページで確認すべきだが、
+                    Flash（低コスト）→Pro（バランス）→Ultra（最高精度）という構成で、
+                    用途に応じたグレード選択が設計されている。
+                </p>
+
+                <p>
+                    【仮説】Gemini 3.1シリーズはGoogle WorkspaceやGmail、Docsとの統合が今後深化すると見られており、
+                    Google製品を主要ツールとして使っている中小企業には追加コストなしで恩恵を受けやすい環境が整いつつある。
+                    ただし、この統合はまだ段階的展開中であり、利用可能な機能は時期と地域によって異なる。
+                </p>
+
+                <h2 id="section2">2. 16ベンチマーク13冠の実力——3つの数値が示すAI能力の現在地</h2>
+
+                <p>
+                    【公式情報】Google DeepMindが公開したGemini 3.1 Proのモデルカード（Published 19 February 2026）によると、
+                    評価対象とした16の主要ベンチマークのうち13項目でトップ評価を獲得している。
+                    特に注目すべき3指標は以下のとおりだ。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog079-2.webp" alt="Google DeepMind Gemini 3.1 Proモデルカード 公式発表ページ" width="800" height="450" loading="lazy">
+                    <figcaption>Google DeepMind公式モデルカードページ（deepmind.google）：Gemini 3.1 Pro、2026年2月19日公開（出典：deepmind.google）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ベンチマーク名</th>
+                                <th>Gemini 3.1 Pro</th>
+                                <th>評価内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>GPQA Diamond</th>
+                                <td><strong>94.3%</strong></td>
+                                <td>博士レベルの科学・医学問題（人間専門家平均は65%）</td>
+                            </tr>
+                            <tr>
+                                <th>ARC-AGI-2</th>
+                                <td><strong>77.1%</strong></td>
+                                <td>パターン認識・抽象的推論（AIの汎用化度合いを測る）</td>
+                            </tr>
+                            <tr>
+                                <th>SWE-Bench Verified</th>
+                                <td><strong>80.6%</strong></td>
+                                <td>実際のGitHub issueをAIが自律的にコーディング解決</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】GPQA Diamond 94.3%という数値は、博士課程で専門的訓練を受けた人間（平均65%程度）を大幅に上回る。
+                    「AIが専門家を超えた」という表現が独り歩きしがちだが、
+                    これはあくまで「多肢選択型の科学問題テスト」における精度であり、
+                    実際の診断・法的判断のような責任を伴う場面での利用は別途検討が必要だ。
+                </p>
+
+                <p>
+                    【解釈】SWE-Bench 80.6%が示すことは、「AIがコードの仕様を理解して自律的にバグを修正できる」段階に来たということだ。
+                    ただし、残り約20%は失敗しており、コードレビューなしでの本番投入はまだリスクが伴う。
+                    「AIがコードを書く」のではなく「AIがドラフトを作り、人間がレビューする」という協働モデルが現時点での正解に近い。
+                </p>
+
+                <p>
+                    【仮説】ARC-AGI-2の77.1%は「汎用AI（AGI）に近づく指標」として注目される数値だが、
+                    ARC-AGI-2自体がGemini 3.1 Pro公開後に更新されており、
+                    将来モデルとの比較基準が変動する可能性がある。数値の読み方には注意が必要だ。
+                </p>
+
+                <h2 id="section3">3. コストと速度の比較：Gemini 3.1 Pro vs Claude vs GPT-5、どちらを選ぶか</h2>
+
+                <p>
+                    【公式情報】2026年2月時点で主要な高精度モデルのスペックを比較する。
+                    各モデルの料金は公式ページで随時更新されるため、導入前に必ず確認することを推奨する。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">Gemini 3.1 Pro</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>速度 131.4 tok/s</strong></li>
+                                    <li>1Mトークン対応</li>
+                                    <li>Google Workspace統合</li>
+                                    <li>マルチモーダル（動画・音声）</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Claude Opus 4.6</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>長文執筆・指示追従で高評価</li>
+                                    <li>1Mトークン対応</li>
+                                    <li>Agent Teams（複数AI協調）</li>
+                                    <li>API: $5/$25 per 1M tokens</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図2：Gemini 3.1 Pro vs Claude Opus 4.6 主要差異</p>
+                </div>
+
+                <p>
+                    【解釈】3つのモデルの使い分け判断基準を条件別に整理する。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>この条件なら</th>
+                                <th>推奨モデル</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Google Workspace（Gmail/Docs）を主要ツールとして使っている</th>
+                                <td><strong>Gemini 3.1 Pro</strong></td>
+                                <td>同一エコシステムで連携コストが低く、Google AI Proで月額¥2,900から利用可能</td>
+                            </tr>
+                            <tr>
+                                <th>長文レポート・提案書の作成精度を最優先したい</th>
+                                <td><strong>Claude Opus 4.6</strong></td>
+                                <td>長文での指示追従精度・文章品質でClaudeが高評価を受けている</td>
+                            </tr>
+                            <tr>
+                                <th>汎用エージェント（PCブラウザ操作・CUA）を使いたい</th>
+                                <td><strong>GPT-5系（OpenAI）</strong></td>
+                                <td>OpenAIのComputer Use Agent（CUA）は2026年時点でエコシステムが最も成熟している</td>
+                            </tr>
+                            <tr>
+                                <th>コーディング補助を低コストで大量に使いたい</th>
+                                <td><strong>Gemini 3.1 Flash</strong></td>
+                                <td>Proより安価で十分なSWE-Bench性能、速度も速い</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】「ベンチマーク1位だから乗り換える」という判断は避けたほうがいい。
+                    現在のベンチマーク最高値は数カ月で塗り替えられるサイクルになっており、
+                    「どのエコシステムにすでに投資しているか」「チームのリテラシー」が切り替えコストを大きく左右する。
+                    すでにAnthropicやOpenAIのAPIで自動化を構築している場合、
+                    Gemini 3.1 Proへの移行には APIエンドポイント・プロンプト・評価フローの再設計が必要になる。
+                </p>
+
+                <h2 id="section4">4. 失敗事例から学ぶ：Gemini導入で陥りやすい3つの落とし穴</h2>
+
+                <p>
+                    【解釈】Gemini 3.1 Pro（および前世代のGemini 2.0 Ultra）を実際に試した開発者・企業の報告から、
+                    繰り返し登場する3つの失敗パターンを整理する。
+                </p>
+
+                <p>
+                    <strong>落とし穴①：API負荷時の503エラーと104秒レイテンシ</strong><br>
+                    高トラフィック時間帯（日本時間の平日午前10〜12時など）に503エラーが頻発し、
+                    応答まで最大104秒かかるケースが報告されている。
+                    「ベンチマーク上は最速131.4 tok/s」でも、実運用ではインフラ負荷が品質を左右する。
+                    対策はVertex AIのプロビジョニング済みスループット（Provisioned Throughput）を契約するか、
+                    Flashとのフォールバック設計を組み込むことだ。
+                    ただし、プロビジョニング済みは最低契約量があり中小企業には割高になる場合がある。
+                </p>
+
+                <p>
+                    <strong>落とし穴②：長文コンテキストの「中抜け」問題（Lost in the Middle）</strong><br>
+                    1Mトークンを詰め込んだ際、文書の中央付近に置いた重要情報を見落とす現象が確認されている。
+                    コンテキストが長くなるほど「先頭と末尾の情報」に回答が引っ張られる傾向があり、
+                    重要な指示や数値は文書の先頭または末尾に配置するのが現時点でのワークアラウンドだ。
+                </p>
+
+                <p>
+                    <strong>落とし穴③：APIモデルIDの指定ミス</strong><br>
+                    GoogleのAPIではモデルIDが `gemini-3.1-pro-2502` のようにバージョン日付を含む形式になっており、
+                    古いモデルIDを指定したまま更新を怠るとモデルが切り替わらず、
+                    パフォーマンス改善を受けられないまま運用が続く。
+                    モデルID管理を環境変数で外部化し、変更を一元管理する設計が推奨される。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-cycle">
+                        <div class="cycle-item item-1">要件整理<br>（用途確定）</div>
+                        <div class="cycle-item item-2">小規模PoC<br>（Flash等で先行）</div>
+                        <div class="cycle-item item-3">負荷・精度検証<br>（エラー率計測）</div>
+                        <div class="cycle-item item-4">本番設計<br>（フォールバック）</div>
+                    </div>
+                    <p class="diagram-caption">図3：Gemini API導入の推奨サイクル</p>
+                </div>
+
+                <h2 id="section5">5. まとめ：Gemini 3.1 Proを中小企業が試す3ステップ</h2>
+
+                <p>
+                    Gemini 3.1 Proは、2026年2月時点でベンチマーク上位の実力を持つモデルだ。
+                    GPQA Diamond 94.3%・SWE-Bench 80.6%・ARC-AGI-2 77.1%という数値は
+                    「汎用的な高精度AI」としての実用水準に達していることを示している。
+                    ただし、「最強＝自社にベスト」ではない。
+                    Google Workspaceを主力とする企業には相性がよく、
+                    すでにClaude・GPT系でワークフローを構築している企業には移行コストが発生する。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Google AI Pro<br>（¥2,900/月）<br>で体験</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">Google AI Studio<br>（無料枠）で<br>API PoC</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">既存モデルと<br>品質・コスト<br>比較して判断</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図4：中小企業がGemini 3.1 Proを試す3ステップ</p>
+                </div>
+
+                <p>
+                    焦って乗り換える必要はない。
+                    まずGoogle AI Proで日常業務（メール文案・会議要約・資料翻訳）に使ってみて、
+                    現行ツールとの差が体感できてからAPIで自動化を検討するのが実務的なアプローチだ。
+                    MIRAINAでは、Gemini・Claude・GPTそれぞれの特性を踏まえた
+                    AIツール選定・導入設計のご相談を承っています。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://deepmind.google/models/gemini/pro/" target="_blank" rel="noopener">Google DeepMind：Gemini 3.1 Pro モデルカード（Published 19 February 2026）</a></li>
+                        <li><a href="https://ai.google.dev/" target="_blank" rel="noopener">Google AI Studio：Gemini API 開発者向けドキュメント</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIモデル選びでお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、Gemini・Claude・GPTの特性を踏まえた<br>最適なAI導入プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog078.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card078.webp" alt="Claude Opus 4.6関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年4月最新】Claude Opus 4.6とは？1Mトークン・Agent Teamsが中小企業のAI活用を変える実装ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog074.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card074.webp" alt="LLMO対策関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.24</div>
+                            <div class="related-text">AI検索時代のLLMO対策——クリック率61%減に対応する実装ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog077.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card077.webp" alt="OpenAIスーパーアプリ関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.04</div>
+                            <div class="related-text">OpenAIスーパーアプリとは？ChatGPT・Codex・Atlas統合が中小企業に与える影響</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
